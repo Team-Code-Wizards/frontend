@@ -5,6 +5,7 @@
 	"semi": true,
 	"trailingComma": "es5",
 	"singleQuote": true,
+	"jsxSingleQuote": false,
 	"endOfLine": "auto",
 	"plugins": ["@trivago/prettier-plugin-sort-imports"],
 	"importOrder": [
