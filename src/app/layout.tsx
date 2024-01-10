@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-
+console.log('ho')
 // import { Inter } from 'next/font/google'
 import './globals.scss';
 
