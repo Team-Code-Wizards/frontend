@@ -10,7 +10,7 @@
 		"lint-staged": "lint-staged",
 		"format": "prettier . --write",
 		"prepare": "husky install",
-		"commit": "git add -A && npm run lint-staged && git add -A && cz"
+		"commit": "git add -A && npm run lint-staged && git diff --quiet && git add -A && cz"
 	},
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^6.18.1",
@@ -35,6 +35,7 @@
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx,json,css,scss,md}": [
 			"prettier --write",
+			"eslint",
 			"git add"
 		]
 	},
