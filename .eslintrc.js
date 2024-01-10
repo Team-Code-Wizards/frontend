@@ -7,13 +7,11 @@ module.exports = {
 			jsx: true,
 		},
 	},
-
 	env: {
 		browser: true,
 		node: true,
 		es6: true,
 	},
-
 	settings: {
 		react: {
 			version: 'detect',
@@ -24,7 +22,6 @@ module.exports = {
 			},
 		},
 	},
-
 	plugins: ['@typescript-eslint'],
 	extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
 
@@ -52,4 +49,5 @@ module.exports = {
 		'no-nested-ternary': 'off',
 		'import/prefer-default-export': 'off',
 	},
+	ignorePatterns: ['**/*.scss'],
 };
