@@ -3,8 +3,9 @@ name: Build and Lint PR
 on:
   pull_request:
     branches:
-     - main
      - develop
+     - main
+     
 
 jobs:
   build-and-lint:
