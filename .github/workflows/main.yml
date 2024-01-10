@@ -3,7 +3,7 @@ name: Build and Lint PR
 on:
   pull_request:
     branches:
-      - develop 
+      - '*'
 
 jobs:
   build-and-lint:
