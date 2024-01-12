@@ -88,6 +88,7 @@
 ![foto10](https://i.ibb.co/YhL4s68/22222.png)
 
 // index.tsx
+
 ![foto9](https://i.ibb.co/Zmk6Gg2/11111.png)
 
 ## TypeScript
