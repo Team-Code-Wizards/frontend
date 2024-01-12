@@ -29,7 +29,8 @@
 		"husky": "^8.0.3",
 		"lint-staged": "^15.2.0",
 		"prettier": "^3.1.1",
-		"typescript": "^5"
+		"typescript": "^5",
+		"classnames": "^2.3.2"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx,json,css,scss,md}": [
