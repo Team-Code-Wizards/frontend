@@ -29,9 +29,15 @@
 
 	// Цвета
 
+	--Wizards-Text-white: rgb(255, 255, 255);
+
 	// Размеры и отступы
 
 	// ... остальное
+}
+
+* {
+	box-sizing: border-box;
 }
 
 .body {
