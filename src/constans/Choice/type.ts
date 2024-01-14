@@ -1,5 +1,5 @@
 export interface IChoiceItem {
-	title?: string;
+	title: string;
 	description?: string;
 	modifier: string;
 	iconFill?: string;

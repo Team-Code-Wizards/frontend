@@ -2,8 +2,7 @@
 	width: 100%;
 
 	&__title {
-		font-size: 48px;
-		font-weight: 600;
+		font: var(--font-block-title);
 		margin: 0;
 		margin-bottom: 46px;
 		color: var(--color-text);
@@ -14,8 +13,8 @@
 		min-height: 866px;
 		grid-template-columns: 1fr 0.45fr 1.55fr 1fr 0.7fr 1.3fr;
 		grid-template-rows: 20.6% 6.5% repeat(2, 10%) repeat(4, 9.2%);
-		grid-column-gap: 20px;
-		grid-row-gap: 20px;
+		grid-column-gap: var(--grid-gap);
+		grid-row-gap: var(--grid-gap);
 		margin: 0;
 		padding: 0;
 	}
