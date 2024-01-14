@@ -1,6 +1,6 @@
-import { IChooseItem } from './type';
+import { IChoiceItem } from './type';
 
-export const data: IChooseItem[] = [
+export const data: IChoiceItem[] = [
 	{
 		title: 'Уникальный дизайн и брендирование',
 		description:
