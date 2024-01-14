@@ -7,15 +7,17 @@ function GuaranteeCard({ item }: IGuaranteeCardProps) {
 	return (
 		<li className={styles['guarantee-card']}>
 			<Image
-				// src={`../../images/guaranteeIcons/${item.pathIcon}`}
 				src={item.pathIcon}
 				alt={item.title}
+				width={0}
+				height={0}
 				className={styles['guarantee-card__image']}
 			/>
-			{/* <img src={'../../images/guaranteeIcons/coherent.png'} /> */}
 			<div>
-				<h4>{item.title}</h4>
-				<p>{item.description}</p>
+				<h3 className={styles['guarantee-card__title']}>{item.title}</h3>
+				<p className={styles['guarantee-card__description']}>
+					{item.description}
+				</p>
 			</div>
 		</li>
 	);

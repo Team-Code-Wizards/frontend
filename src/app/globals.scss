@@ -1,35 +1,47 @@
+/* TODO: doesn't work normalize */
+@import 'normalize.css';
+
 @font-face {
-  font-family: 'RG-StandardSemibold';
-  src: url('../fonts/RG-StandardSemibold.woff2') format('woff2'),
-    url('../fonts/RG-StandardSemibold.woff') format('woff'),
-    url('../fonts/RG-StandardSemibold.ttf') format('ttf');
-  font-weight: 600;
-  font-style: normal;
+	font-family: 'RG-StandardSemibold';
+	src:
+		url('../fonts/RG-StandardSemibold.woff2') format('woff2'),
+		url('../fonts/RG-StandardSemibold.woff') format('woff'),
+		url('../fonts/RG-StandardSemibold.ttf') format('ttf');
+	font-weight: 600;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Cygre';
-  src: url('../fonts/Cygre.woff2') format('woff2'),
-    url('../fonts/Cygre.woff') format('woff'),
-    url('../fonts/Cygre.ttf') format('ttf'),
-    url('../fonts/Cygre-Bold.woff2') format('woff2'),
-    url('../fonts/Cygre-Bold.woff') format('woff'),
-    url('../fonts/Cygre-Bold.ttf') format('ttf');
-  font-style: normal;
+	font-family: 'Cygre';
+	src:
+		url('../fonts/Cygre.woff2') format('woff2'),
+		url('../fonts/Cygre.woff') format('woff'),
+		url('../fonts/Cygre.ttf') format('ttf'),
+		url('../fonts/Cygre-Bold.woff2') format('woff2'),
+		url('../fonts/Cygre-Bold.woff') format('woff'),
+		url('../fonts/Cygre-Bold.ttf') format('ttf');
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 :root {
-  --max-width: 1440px;
-  --rg-font: 'RG-StandardSemibold';
-  --cygre-font: 'Cygre';
+	--max-width: 1440px;
+	--rg-font: 'RG-StandardSemibold';
+	--cygre-font: 'Cygre';
 
-  // Цвета
-
-  // Размеры и отступы
-
-  // ... остальное
+	// Цвета
+	--white: #fff;
+	--background-color: #070606;
+	--wizards-light-blue: #8792fc;
+	// Размеры и отступы
+	--gap-small: 20px;
+	// ... остальное
 }
 
 .body {
-  font-family: 'Cygre';
+	margin: 0;
+	font-family: 'Cygre';
 }
