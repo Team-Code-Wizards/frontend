@@ -29,16 +29,43 @@
 
 :root {
 	--max-width: 1440px;
+
+	//  === Fonts ===
 	--rg-font: 'RG-StandardSemibold';
 	--cygre-font: 'Cygre';
 
-	// Цвета
-	--white: #fff;
-	--background-color: #070606;
-	--wizards-light-blue: #8792fc;
-	// Размеры и отступы
-	--gap-small: 20px;
-	// ... остальное
+	// === Font Sizes ===
+	--text-xs: 14px;
+	--text-sm: 16px;
+	--text-base: 20px;
+	--text-lg: 32px;
+	--text-xl: 48px;
+
+	//  === Наборы для шрифтов ===
+	// === Titles ===
+	--font-block-title: 600 var(--text-xl) var(--rg-font), sans-serif;
+	// === Descriptions ===
+	--font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
+	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
+
+	// Colors
+	--color-bg-black: #000000;
+	--color-bg-white: #ffffff;
+	--color-purple-gradient: linear-gradient(
+		93deg,
+		#362a64 18.25%,
+		#51259b 93.44%
+	);
+
+	--color-lilac: #8792fc;
+	--color-purple: #5b4dab;
+	--color-pink: #9b54d4;
+	--color-blue: #263694;
+
+	--color-green: #27ae60;
+	--color-red: #eb5757;
+
+	--color-text: #ffffff;
 }
 
 .body {

@@ -2,8 +2,8 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	gap: var(--gap-small);
-	width: calc(50% - var(--gap-small) / 2);
+	gap: 1.25rem;
+	width: calc(50% - 1.25rem / 2);
 	padding: 1.25rem;
 	border-radius: 10px;
 	border: 1px solid var(--white);
@@ -18,7 +18,7 @@
 	&__title {
 		margin: 0;
 		margin-bottom: 1.25rem;
-		color: var(--wizards-light-blue);
+		color: var(--color-lilac);
 		font-family: var(--rg-font);
 		font-size: 1.25rem;
 		font-weight: 600;
@@ -27,9 +27,8 @@
 
 	&__description {
 		margin: 0;
-		color: var(--white);
-		font-size: 1rem;
-		font-weight: 400;
+		color: var(--color-bg-white);
+		font: var(--font-description-main);
 		line-height: 130%;
 		letter-spacing: -0.03rem;
 	}
