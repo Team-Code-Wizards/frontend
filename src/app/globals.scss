@@ -25,21 +25,22 @@
 :root {
 	--max-width: 1440px;
 
-	//  === Fonts === 
+	//  === Fonts ===
 	--rg-font: 'RG-StandardSemibold';
 	--cygre-font: 'Cygre';
 
 	// === Font Sizes ===
-  --text-xs: 14px;
-  --text-sm: 16px;
-  --text-base: 20px;
-  --text-lg: 32px;
-  --text-xl: 48px;
+	--text-xs: 14px;
+	--text-sm: 16px;
+	--text-base: 20px;
+	--text-lg: 32px;
+	--text-xl: 48px;
 
 	//  === Наборы для шрифтов ===
-	
+
 	// === Titles ===
-  --font-block-title: 600 var(--text-xl) var(--rg-font), sans-serif;
+	--font-block-title: 600 var(--text-xl) var(--rg-font), sans-serif;
+	--font-title-description: 600 var(--text-base) var(--rg-font), sans-serif;
 
 	// === Descriptions ===
 	--font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
@@ -47,18 +48,22 @@
 
 	// Colors
 	--color-bg-black: #000000;
-	--color-bg-white: #FFFFFF;
-  --color-purple-gradient: linear-gradient(93deg, #362A64 18.25%, #51259B 93.44%);
+	--color-bg-white: #ffffff;
+	--color-purple-gradient: linear-gradient(
+		93deg,
+		#362a64 18.25%,
+		#51259b 93.44%
+	);
 
-	--color-lilac: #8792FC;
-	--color-purple: #5B4DAB;
-  --color-pink: #9B54D4;
+	--color-lilac: #8792fc;
+	--color-purple: #5b4dab;
+	--color-pink: #9b54d4;
 	--color-blue: #263694;
 
-	--color-green: #27AE60;
-	--color-red: #EB5757;
+	--color-green: #27ae60;
+	--color-red: #eb5757;
 
-	--color-text: #FFFFFF;
+	--color-text: #ffffff;
 
 	// Размеры и отступы
 }
