@@ -1,4 +1,4 @@
-import AboutUs from '@/components/about-us/page';
+import AboutUs from '@/components/about-us';
 
 import styles from './style.module.scss';
 
