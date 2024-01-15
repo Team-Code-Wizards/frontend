@@ -77,6 +77,20 @@
 
 Глобальные CSS переменные хранятся в файле *globals.scss*. Файл дополняется по мере проработки макета и создания новых компонентов. Синтаксис использования CSS переменных можно посмотреть [здесь](https://developer.mozilla.org/ru/docs/Web/CSS/--*).
 
+## Наименования БЭМ 
+
+Для именования класов тэгов разметки используем методологию БЭМ , block__element_modificator
+
+Так же удобнее использовать в связке с sass 
+
+// style.module.scss
+
+![foto10](https://i.ibb.co/YhL4s68/22222.png)
+
+// index.tsx
+
+![foto9](https://i.ibb.co/Zmk6Gg2/11111.png)
+
 ## TypeScript
 
 ### Interface
