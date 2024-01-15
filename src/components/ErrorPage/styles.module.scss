@@ -1,0 +1,103 @@
+@font-face {
+	font-family: 'Grotesque Standard Semibold';
+	src: url(../../fonts/RG-StandardSemibold.ttf);
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6rem;
+	min-height: 100vh;
+}
+
+.not-found {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 60vh;
+	position: relative;
+	background-image: url(../../images/errorPage/error-background-one.jpeg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.not-found__title {
+	font-family: 'Grotesque Standard Semibold';
+	color: #fff;
+	font-weight: 600;
+	font-size: 388px;
+	font-style: normal;
+	line-height: normal;
+	text-align: center;
+	margin: 0;
+}
+
+.second-part {
+	background-color: black;
+	background-size: 100%;
+	height: 40vh;
+}
+
+.not-found__description {
+	font-family: 'Grotesque Standart Semibold';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 19px;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 0px;
+	margin-bottom: 40px;
+	background: linear-gradient(180deg, #070606 0%, rgba(7, 6, 6, 0) 99.82%);
+}
+
+.not-found__back-link {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+	margin-top: 10px;
+	border: 0;
+	background-color: black;
+}
+
+.not-found__button {
+	background-color: rgba(135, 146, 252, 1);
+	color: #ffffff;
+	border-radius: 5px;
+	font-family: 'Grotesque Standard Semibold';
+	font-size: 20px;
+	font-style: normal;
+	line-height: 120%;
+	margin-top: 0px;
+	padding: 10px;
+}
+
+.not-found__button:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+@media (max-width: 460px) {
+	.not-found__title {
+		font-size: 80px;
+		line-height: 97px;
+	}
+
+	.not-found__description {
+		font-size: 12px;
+		line-height: 15px;
+		margin-top: 10px;
+	}
+
+	.not-found__back-link {
+		font-size: 12px;
+		line-height: 15px;
+		margin-top: 271px;
+	}
+}
