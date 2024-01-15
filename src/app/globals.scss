@@ -65,4 +65,8 @@
 
 .body {
 	font-family: 'Cygre';
+
+	& * {
+		box-sizing: border-box;
+	}
 }
