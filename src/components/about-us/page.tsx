@@ -25,12 +25,12 @@ export default function AboutUs() {
 					/>
 				</div>
 				<div>
-					<div className={styles['about-us__content__goals']}>
+					<div className={styles['about-us__content_goals']}>
 						<p>5 лет опыта</p>
 						<p>Внедрение инноваций</p>
 						<p>Современные технологии</p>
 					</div>
-					<div className={styles['about-us__content__resume']}>
+					<div className={styles['about-us__content_resume']}>
 						<h4>
 							Мы начали как группа энтузиастов, которые верили в силу креатива и
 							технологий. С течением времени наша страсть к веб-разработке

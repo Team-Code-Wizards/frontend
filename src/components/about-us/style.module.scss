@@ -38,7 +38,7 @@
 		font: var(--font-description-main);
 		text-align: justify;
 
-		&__goals {
+		&_goals {
 			display: flex;
 			margin-left: 20px;
 			max-width: 320px;
@@ -62,7 +62,7 @@
 			}
 		}
 
-		&__resume {
+		&_resume {
 			max-width: 506px;
 			margin: 0 25px 0 20px;
 			font: var(--font-description-main);
