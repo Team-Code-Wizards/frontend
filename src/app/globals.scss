@@ -51,7 +51,16 @@
 		#362a64 18.25%,
 		#51259b 93.44%
 	);
-
+	--color-purple-gradient-hovered: linear-gradient(
+		93deg,
+		#3f1c78 18.25%,
+		#6e259b 93.44%
+	);
+	--color-purple-gradient-active: linear-gradient(
+		93deg,
+		#a78ad5 18.25%,
+		#d3a6ee 93.44%
+	);
 	--color-lilac: #8792fc;
 	--color-purple: #5b4dab;
 	--color-pink: #9b54d4;
@@ -61,10 +70,14 @@
 	--color-red: #eb5757;
 
 	--color-text: #ffffff;
+	--color-input: #1b1c3380;
+	--color-input-active: #e1e1e1;
+	--color-text-input-active: #1b1c33;
 }
 
 * {
-	box-sizing: border-box;
+	box-sizing: border-box !important;
+	margin: 0;
 }
 
 .body {
