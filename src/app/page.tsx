@@ -1,12 +1,5 @@
-import AboutUs from '@/components/about-us';
+import MainPage from '@/components/MainPage';
 
-import styles from './style.module.scss';
-
-console.log();
 export default function Home() {
-	return (
-		<main className={styles['main']}>
-			<AboutUs />
-		</main>
-	);
+	return <MainPage />;
 }
