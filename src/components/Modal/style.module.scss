@@ -1,0 +1,24 @@
+.modal {
+	background-color: var(--color-bg-white);
+	border-radius: 20px;
+	padding: 40px;
+
+	&__title {
+		font: var(--font-block-title);
+		margin-bottom: 60px;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__btn {
+		font: var(--font-button-rg);
+		color: var(--color-text);
+		padding: 15px 25px;
+		background: var(--color-purple-gradient);
+		border-radius: 5px;
+		border: none;
+	}
+}

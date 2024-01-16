@@ -28,8 +28,8 @@
 		color: var(--color-text);
 		font: var(--font-description-main);
 		margin: 0;
-		line-height: 130%;
-		letter-spacing: -0.48px;
+		line-height: var(--font-description-line-height);
+		letter-spacing: var(--font-description-letter);
 	}
 
 	&_design {
