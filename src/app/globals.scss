@@ -37,10 +37,11 @@
 	--text-xl: 48px;
 	--line-height: 120%;
 	--line-height-big: 130%;
-  
+
 	//  === Наборы для шрифтов ===
 	// === Titles ===
-	--font-block-title: 600 var(--text-xl) var(--rg-font) / var(--line-height), sans-serif;
+	--font-block-title: 600 var(--text-xl) var(--rg-font) / var(--line-height),
+		sans-serif;
 	// === Descriptions ===
 	--font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
 	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
@@ -81,21 +82,13 @@
 	--color-text-input-active: #1b1c33;
 }
 
-* {
-	box-sizing: border-box !important;
-	margin: 0;
-}
-
 .body {
 	font-family: 'Cygre';
-
 }
 
-
 * {
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
-
