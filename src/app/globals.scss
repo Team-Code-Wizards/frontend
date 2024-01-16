@@ -49,6 +49,7 @@
 	// Colors
 	--color-bg-black: #000000;
 	--color-bg-white: #ffffff;
+	--color-ivory-bg: #ffffff1a;
 	--color-purple-gradient: linear-gradient(
 		93deg,
 		#362a64 18.25%,
@@ -65,9 +66,17 @@
 
 	--color-text: #ffffff;
 
-	// Размеры и отступы
+	// == Gap ==
+	--grid-gap: 20px;
 }
 
 .body {
 	font-family: 'Cygre';
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
