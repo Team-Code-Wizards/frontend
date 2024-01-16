@@ -1,31 +1,30 @@
 .about-us {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	padding: 0;
 	min-height: 100vh;
-	max-width: var(--max-width);
-	position: relative;
+	max-width: 1440px;
 	background-image: url('../../images/about-us-background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-color: #000000;
 	font-family: var(--rg-font);
-	overflow: hidden;
 
 	&__title {
 		margin-top: 80px;
 		margin-left: 80px;
 		color: var(--color-bg-white);
 
-		h2 {
-			font: var(--font-block-title);
+		h1 {
+			line-height: 57.6px;
+			font-family: var(--rg-font);
+			font-size: var(--text-xl);
+			margin-bottom: 10px;
 		}
 
 		h3 {
 			font-family: var(--rg-font);
 			font-size: var(--text-base);
+			line-height: 24px;
+			margin-bottom: 35px;
 		}
 	}
 
@@ -49,6 +48,7 @@
 				background-color: var(--color-lilac);
 				font-weight: 700;
 				font-size: var(--text-sm);
+				line-height: 20.8px;
 				color: var(--color-bg-black);
 				border-radius: 5px;
 
@@ -57,19 +57,23 @@
 				}
 
 				&:last-child {
-					margin-top: 0;
+					margin-top: 10px;
 				}
 			}
 		}
 
 		&_resume {
 			max-width: 506px;
-			margin: 0 25px 0 20px;
-			font: var(--font-description-main);
+			margin: 20px 25px 0 20px;
+			font-weight: 400;
+			font-size: 16px;
+			font-family: var(--cygre-font);
+			line-height: 20.8px;
 
-			h4 {
+			p {
 				&:nth-child(2) {
 					color: var(--color-lilac);
+					margin-top: 20px;
 				}
 			}
 		}
