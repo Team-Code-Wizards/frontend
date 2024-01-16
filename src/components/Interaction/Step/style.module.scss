@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	max-width: 413px;
 	min-width: 328px;
-	min-height: 499px;
+	height: 499px;
 	margin-inline-end: 20px;
 	margin-block-end: 20px;
 	padding: 28px;
@@ -12,23 +12,27 @@
 
 	&__number {
 		width: 64px;
-		padding: 10px;
+		max-height: 28px;
 		border-radius: 41px;
 		text-align: center;
 		font: var(--font-title-description);
 		color: #1b1c33;
 		background-color: var(--color-lilac);
+		line-height: 120%;
 	}
 
 	&__title {
-		margin-block-start: 10px;
-		margin-block-end: 40px;
+		margin-block-start: 8px;
+		margin-block-end: 30px;
 		font: var(--font-title-description);
+		line-height: 120%;
 	}
 
 	&__description {
 		margin-block-end: 40px;
 		font: var(--font-description-main);
+		line-height: 130%;
+    letter-spacing: -0.48px;
 	}
 
 	&__image {
@@ -46,4 +50,8 @@
 
 .step:nth-of-type(n + 4) {
 	margin-block-end: 0;
+}
+
+.step:last-of-type .step__description:last-of-type{
+	margin-block-end: 70px;
 }
