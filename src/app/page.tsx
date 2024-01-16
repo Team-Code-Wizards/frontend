@@ -1,15 +1,5 @@
-import Choice from '@/components/Сhoice';
-import Services from '@/components/Services';
-
-import styles from './style.module.scss';
+import MainPage from '@/components/MainPage';
 
 export default function Home() {
-	return (
-		(
-		<main className={styles['main']}>
-			<Choice />		
-			<Services />
-		</main>
-	)
-	);
+	return <MainPage />;
 }
