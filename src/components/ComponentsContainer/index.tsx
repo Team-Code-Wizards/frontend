@@ -2,12 +2,12 @@ import { ReactNode } from 'react';
 
 import styles from './styles.module.scss';
 
-interface ComponentContainerProps {
+interface ComponentsContainerProps {
 	children: ReactNode;
 }
 
-export default function ComponentContainer({
+export default function ComponentsContainer({
 	children,
-}: ComponentContainerProps) {
+}: ComponentsContainerProps) {
 	return <section className={styles['section']}>{children}</section>;
 }
