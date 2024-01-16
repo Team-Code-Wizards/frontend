@@ -46,6 +46,7 @@
 	// Colors
 	--color-bg-black: #000000;
 	--color-bg-white: #ffffff;
+	--color-ivory-bg: #ffffff1a;
 	--color-purple-gradient: linear-gradient(
 		93deg,
 		#362a64 18.25%,
@@ -70,6 +71,9 @@
 	--color-red: #eb5757;
 
 	--color-text: #ffffff;
+
+	// == Gap ==
+	--grid-gap: 20px;
 	--color-input: #1b1c3380;
 	--color-input-active: #e1e1e1;
 	--color-text-input-active: #1b1c33;
@@ -82,4 +86,11 @@
 
 .body {
 	font-family: 'Cygre';
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }

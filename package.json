@@ -33,7 +33,7 @@
 		"typescript": "^5"
 	},
 	"lint-staged": {
-		"*.{js,jsx,ts,tsx,json,css,scss}": [
+		"*.{js,jsx,ts,tsx,json,css}": [
 			"prettier --write",
 			"eslint",
 			"git add"
