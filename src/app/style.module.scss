@@ -1,10 +1,10 @@
 .main {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
-	padding: 6rem;
+	padding: 80px;
 	min-height: 100vh;
 	font-family: var(--rg-font);
+	line-height: var(--line-height);
 	background-color: var(--color-bg-black);
 }
