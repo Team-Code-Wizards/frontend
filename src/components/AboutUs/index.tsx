@@ -7,7 +7,7 @@ import styles from './style.module.scss';
 
 export default function AboutUs() {
 	return (
-		<div className={styles['AboutUs']}>
+		<div className={styles['about-us']}>
 			<div className={styles['about-us__title']}>
 				<h1>О нас</h1>
 				<h3>
