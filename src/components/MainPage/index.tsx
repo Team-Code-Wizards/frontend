@@ -9,7 +9,7 @@ export default function MainPage() {
 				<div
 					style={{
 						height: '200px',
-						width: '1440px',
+						width: '100vw',
 					}}
 				/>
 			</ComponentsContainer>
@@ -18,7 +18,7 @@ export default function MainPage() {
 				<div
 					style={{
 						height: '200px',
-						width: '1440px',
+						width: '100vw',
 					}}
 				/>
 			</ComponentsContainer>
