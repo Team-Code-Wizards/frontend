@@ -1,0 +1,51 @@
+.modal-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+
+	&__wrappper {
+		display: flex;
+
+		>span {
+			color: var(--color-red);
+		}
+	}
+
+	&__title {
+		font: var(--font-button-rg);
+		margin-bottom: var(--gap);
+		line-height: 120%;
+	}
+
+	&__item {
+		border: none;
+		font: var(--font-description-main);
+		border-radius: 10px;
+		padding: 15px 10px;
+		background-color: var(--color-gray-bg);
+		line-height: var(--line-height-big);
+		letter-spacing: var(--font-description-letter);
+
+		&:focus-visible {
+			outline: none;
+		}
+
+		&_message {
+			resize: none;
+			
+			&::placeholder {
+				line-height: 53px;
+				vertical-align: bottom;
+			}
+		}
+	}
+}
+
+.dropdown {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+	}
+}

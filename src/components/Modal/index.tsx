@@ -1,25 +1,19 @@
-import ModalInput from '../ModalInput';
+import { data } from '@/constans/Modal';
+
+import ModalItem from '../ModalItem';
 import styles from './style.module.scss';
 
 export default function Modal() {
 	return (
-		<div
-			style={{
-				position: 'fixed',
-				backgroundColor: '#33333399',
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				width: '100%',
-				height: '100%',
-			}}
-		>
+		<div className={styles['modal-back']}>
 			<div className={styles['modal']}>
 				<h2 className={styles['modal__title']}>Заявка на создание сайта</h2>
-				<form className={styles['modal__form']}>
-					<ModalInput />
+				<div className={styles['modal__wrapper']}>
+					{data.map((item) => {
+						return <ModalItem key={item.title} item={item} />;
+					})}
 					<button className={styles['modal__btn']}>Отправить</button>
-				</form>
+				</div>
 			</div>
 		</div>
 	);
