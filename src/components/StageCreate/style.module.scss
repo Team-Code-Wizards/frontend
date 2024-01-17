@@ -1,0 +1,85 @@
+.icon{
+    position: absolute;
+    left: 826px;
+    margin-top: 204px;
+}
+.stageCreate{ 
+    width: 1440px;
+    height: 820px;
+    background-image: url(../../images/StageCreate/background.png);
+    background-repeat: no-repeat;
+   
+    &__block{
+        margin-top: 60px;
+        margin-left: 80px;
+        color: var(--color-text);
+        font-family: var(--rg-font);
+
+        &_title{
+            font-size: 48px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 20px;
+        }
+
+        &_stages{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /*gap: 10px;*/
+        }
+
+        &_stage{
+            border-radius: 36px;
+            padding: 10px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.50);
+            color: rgba(255, 255, 255, 0.50);
+            font-family: var(--cygre-font);  
+            font-size: var(--text-xs);
+            font-weight: 700;
+        }
+        &_line{
+            width: 10px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.50);;
+        }
+        &_stage__one{
+            border: 1px solid var(--color-text);
+            color: var(--color-text);
+        }
+
+        &_stage__ten{
+            padding: 10px 11px;
+        }
+
+        &_plan{
+            font-size: var(--text-base);
+            font-weight: 600;
+            margin-top: 80px;
+            margin-bottom: 10px;
+            line-height: normal;
+        }
+
+        &_description{
+            width: 320px;
+            font-family: var(--cygre-font);            
+            font-size: var(--text-xs);
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.42px;
+            margin-bottom: 84px;
+        }
+
+        &_btn{
+            width: 225px;
+            height: 58px;
+            background: var(--color-purple-gradient);
+            border-radius: 5px;
+            padding: 15px 25px;
+            border: none;
+            color: var(--color-text);
+            font-size: var(--text-base);
+            font-weight: 600;
+        }
+    }
+}
