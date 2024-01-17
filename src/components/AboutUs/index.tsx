@@ -24,7 +24,7 @@ export default function AboutUs() {
 						style={{ position: 'absolute', top: '33%', left: '38%' }}
 					/>
 				</div>
-				<div>
+				<div style={{ marginTop: 30 }}>
 					<div className={styles['about-us__content_goals']}>
 						<p>5 лет опыта</p>
 						<p>Внедрение инноваций</p>

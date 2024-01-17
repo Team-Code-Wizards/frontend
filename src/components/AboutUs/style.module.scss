@@ -1,9 +1,6 @@
 .about-us {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	max-width: 1440px;
-	background-image: url('../../images/about-us-background.png');
+	width: 1440px;
+	background-image: url('../../images/components-container-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: var(--rg-font);
@@ -21,7 +18,6 @@
 		}
 
 		h3 {
-			font-family: var(--rg-font);
 			font-size: var(--text-base);
 			line-height: 24px;
 			margin-bottom: 35px;
@@ -32,7 +28,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-left: 80px;
+		margin: 0 80px 0 80px;
 		color: var(--color-bg-white);
 		font: var(--font-description-main);
 		text-align: justify;
@@ -42,6 +38,7 @@
 			margin-left: 20px;
 			max-width: 320px;
 			flex-wrap: wrap;
+			max-height: 72px;
 
 			p {
 				padding: 10px;
@@ -64,7 +61,7 @@
 
 		&_resume {
 			max-width: 506px;
-			margin: 20px 25px 0 20px;
+			margin: 40px 20px 0 20px;
 			font-weight: 400;
 			font-size: 16px;
 			font-family: var(--cygre-font);
@@ -73,7 +70,7 @@
 			p {
 				&:nth-child(2) {
 					color: var(--color-lilac);
-					margin-top: 20px;
+					margin-top: 10px;
 				}
 			}
 		}
