@@ -1,5 +1,5 @@
-import styles from './style.module.scss';
+import MainPage from '@/components/MainPage';
 
 export default function Home() {
-	return <main className={styles['.main']}>Hello world!</main>;
+	return <MainPage />;
 }
