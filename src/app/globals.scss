@@ -1,72 +1,75 @@
-@import 'normalize.css';
+@import "normalize.css";
 
 @font-face {
-	font-family: 'RG-StandardSemibold';
-	src:
-		url('../fonts/RG-StandardSemibold.woff2') format('woff2'),
-		url('../fonts/RG-StandardSemibold.woff') format('woff'),
-		url('../fonts/RG-StandardSemibold.ttf') format('ttf');
-	font-weight: 600;
-	font-style: normal;
+  font-family: "RG-StandardSemibold";
+  src:
+    url("../fonts/RG-StandardSemibold.woff2") format("woff2"),
+    url("../fonts/RG-StandardSemibold.woff") format("woff"),
+    url("../fonts/RG-StandardSemibold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Cygre';
-	src:
-		url('../fonts/Cygre.woff2') format('woff2'),
-		url('../fonts/Cygre.woff') format('woff'),
-		url('../fonts/Cygre.ttf') format('ttf'),
-		url('../fonts/Cygre-Bold.woff2') format('woff2'),
-		url('../fonts/Cygre-Bold.woff') format('woff'),
-		url('../fonts/Cygre-Bold.ttf') format('ttf');
-	font-style: normal;
+  font-family: "Cygre";
+  src:
+    url("../fonts/Cygre.woff2") format("woff2"),
+    url("../fonts/Cygre.woff") format("woff"),
+    url("../fonts/Cygre.ttf") format("ttf"),
+    url("../fonts/Cygre-Bold.woff2") format("woff2"),
+    url("../fonts/Cygre-Bold.woff") format("woff"),
+    url("../fonts/Cygre-Bold.ttf") format("ttf");
+  font-style: normal;
 }
 
 :root {
-	--max-width: 1440px;
+  --max-width: 1440px;
 
-	//  === Fonts ===
-	--rg-font: 'RG-StandardSemibold';
-	--cygre-font: 'Cygre';
+  //  === Fonts ===
+  --rg-font: "RG-StandardSemibold";
+  --cygre-font: "Cygre";
 
-	// === Font Sizes ===
-	--text-xs: 14px;
-	--text-sm: 16px;
-	--text-base: 20px;
-	--text-lg: 32px;
-	--text-xl: 48px;
+  // === Font Sizes ===
+  --text-xs: 14px;
+  --text-sm: 16px;
+  --text-base: 20px;
+  --text-lg: 32px;
+  --text-xl: 48px;
+  --line-height: 120%;
+  --line-height-big: 130%;
 
-	//  === Наборы для шрифтов ===
-	// === Titles ===
-	--font-block-title: 600 var(--text-xl) var(--rg-font), sans-serif;
-	// === Descriptions ===
-	--font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
-	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
+  //  === Наборы для шрифтов ===
+  // === Titles ===
+  --font-block-title: 600 var(--text-xl) var(--rg-font) / var(--line-height),
+    sans-serif;
+  // === Descriptions ===
+  --font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
+  --font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
 
-	// Colors
-	--color-bg-black: #000000;
-	--color-bg-white: #ffffff;
-	--color-ivory-bg: #ffffff1a;
-	--color-purple-gradient: linear-gradient(
-		93deg,
-		#362a64 18.25%,
-		#51259b 93.44%
-	);
+  // Colors
+  --color-bg-black: #070606;
+  --color-bg-white: #ffffff;
+  --color-ivory-bg: #ffffff1a;
+  --color-purple-gradient: linear-gradient(
+    93deg,
+    #362a64 18.25%,
+    #51259b 93.44%
+  );
 
-	--color-lilac: #8792fc;
-	--color-purple: #5b4dab;
-	--color-pink: #9b54d4;
-	--color-blue: #263694;
+  --color-lilac: #8792fc;
+  --color-purple: #5b4dab;
+  --color-pink: #9b54d4;
+  --color-blue: #263694;
 
-	--color-green: #27ae60;
-	--color-red: #eb5757;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
 
-	--color-text: #ffffff;
+  --color-text: #ffffff;
 
-	// == Gap ==
-	--grid-gap: 20px;
+  // == Gap ==
+  --grid-gap: 20px;
 }
 
 .body {
-	font-family: 'Cygre';
+  font-family: "Cygre";
 }
