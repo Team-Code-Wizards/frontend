@@ -7,13 +7,10 @@ import TelegramBgIcon from '@/images/icons/TelegramBgIcon';
 import ViberIcon from '@/images/icons/ViberIcon';
 import WhatsappIcon from '@/images/icons/WhatsappIcon';
 
+import ContactsForm from '../ContactsForm';
 import styles from './style.module.scss';
 
 //TODO добавить корректные ссылки для мессенджеров
-
-//TODO вынести форму в отдельный клиентский компонент
-
-//TODO добавить кнопку очистки инпутов когда они активны
 
 export default function Contacts() {
 	const sendingDataForFeedback = (event: FormEvent<HTMLFormElement>) => {
@@ -71,53 +68,7 @@ export default function Contacts() {
 						</a>
 					</li>
 				</ul>
-				<div className={styles['form-box']}>
-					<form className={styles['form']} onSubmit={sendingDataForFeedback}>
-						<input
-							className={styles['form__input']}
-							type="text"
-							name="clientName"
-							placeholder="Имя"
-						/>
-						<input
-							className={styles['form__input']}
-							type="tel"
-							name="clientTel"
-							placeholder="Телефон"
-						/>
-						<input
-							className={styles['form__input']}
-							type="email"
-							name="clientEmail"
-							placeholder="E-mail"
-						/>
-						<textarea
-							className={styles['form__input']}
-							name="clientMessage"
-							placeholder="Сообщение"
-						/>
-						<input
-							className={styles['form__input']}
-							type="file"
-							id="file"
-							name="clientFile"
-							accept=".doc"
-						/>
-						<label className={styles['label']} htmlFor="file">
-							Прикрепить ТЗ
-						</label>
-						<span className={styles['form__notice']}>
-							*В формате Документ Word
-						</span>
-						<button className={styles['form__button']} type="submit">
-							Отправить
-						</button>
-						<span className={styles['form__notice']}>
-							Нажимая кнопку «отправить», вы соглашаетесь с политикой обработки
-							персональных данных.
-						</span>
-					</form>
-				</div>
+				<ContactsForm onSubmit={sendingDataForFeedback} />
 			</div>
 		</section>
 	);
