@@ -35,6 +35,7 @@
 	--text-base: 20px;
 	--text-lg: 32px;
 	--text-xl: 48px;
+
 	--line-height: 120%;
 	--line-height-big: 130%;
 
@@ -51,8 +52,7 @@
 
   //  === Наборы для шрифтов ===
   // === Titles ===
-  --font-block-title: 600 var(--text-xl) var(--rg-font) / var(--line-height),
-    sans-serif;
+  --font-block-title: 600 var(--text-xl) var(--rg-font), sans-serif;
   // === Descriptions ===
   --font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
   --font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
@@ -74,6 +74,7 @@
 
   --color-green: #27ae60;
   --color-red: #eb5757;
+  --color-text: #ffffff;
 
 	// == Gap ==
 	--grid-gap: 20px;
