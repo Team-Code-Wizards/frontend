@@ -15,8 +15,9 @@ export default function Services() {
 								<p key={ind}>{text}</p>
 							))}
 							<span className={styles['service-card__prices']}>
+								<p className={styles['service-card__prices_pre']}>от</p>
 								<p className={styles['service-card__prices_new']}>
-									от {service.newPrice}$
+									{service.newPrice}$
 								</p>
 								<p className={styles['service-card__prices_old']}>
 									{service.oldPrice}$
