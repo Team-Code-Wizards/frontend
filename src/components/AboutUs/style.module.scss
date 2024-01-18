@@ -1,19 +1,15 @@
 .about-us {
-	width: 1440px;
+	width: 100%;
 	background-image: url('../../images/components-container-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: var(--rg-font);
+	color: var(--color-bg-white);
+	padding: 80px;
 
-	&__title {
-		margin-top: 80px;
-		margin-left: 80px;
-		color: var(--color-bg-white);
 
-		h1 {
-			line-height: 57.6px;
-			font-family: var(--rg-font);
-			font-size: var(--text-xl);
+		h2 {
+			font: var(--font-block-title);
 			margin-bottom: 10px;
 		}
 
@@ -22,13 +18,12 @@
 			line-height: 24px;
 			margin-bottom: 35px;
 		}
-	}
+
 
 	&__content {
+		width: 100%;
+		max-width: 1280px;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin: 0 80px 0 80px;
 		color: var(--color-bg-white);
 		font: var(--font-description-main);
 		text-align: justify;
@@ -54,18 +49,19 @@
 				}
 
 				&:last-child {
-					margin-top: 10px;
+					margin-top: 5px;
 				}
 			}
 		}
 
 		&_resume {
 			max-width: 506px;
-			margin: 40px 20px 0 20px;
+			margin: 25px 0 0 20px;
 			font-weight: 400;
 			font-size: 16px;
 			font-family: var(--cygre-font);
 			line-height: 20.8px;
+			text-align: justify;
 
 			p {
 				&:nth-child(2) {

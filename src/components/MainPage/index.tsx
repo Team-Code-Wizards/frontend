@@ -1,3 +1,5 @@
+import AboutUs from '@/components/AboutUs';
+
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Interaction from '../Interaction/index';
@@ -10,7 +12,7 @@ export default function MainPage() {
 			{/* Header */}
 			<main className={styles.main}>
 				{/* <ComponentsContainer > */}
-				{/* О нас */}
+				<AboutUs />
 				{/* Услуги */}
 				{/* Портфолио */}
 				{/* </ComponentsContainer> */}
