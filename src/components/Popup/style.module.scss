@@ -8,15 +8,7 @@
   border-radius: 20px;
 }
 
-.popup-message_success {
-  font-family: var(--rg-font);
-  font-size: 20px;
-  font-weight: 400;
-  position: absolute;
-  color: white;
-  margin-top: 260px;
-  margin-left: 175px;
-}
+.popup-message_success,
 .popup-message_failure {
   font-family: var(--rg-font);
   font-size: 20px;
@@ -24,25 +16,30 @@
   position: absolute;
   color: white;
   margin-top: 260px;
+}
+.popup-message_failure {
   margin-left: 220px;
+}
+.popup-message_success {
+  margin-left: 175px;
+}
+
+.popup-icon_success,
+.popup-icon_failure {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 175px;
+  padding: 10px;
 }
 
 .popup-icon {
   &_success {
-    position: absolute;
     margin-left: 265px;
-    margin-top: 175px;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 200px;
-    padding: 10px;
   }
   &_failure {
-    position: absolute;
     margin-left: 260px;
-    margin-top: 175px;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 100px;
-    padding: 10px;
   }
   &_close {
     position: absolute;

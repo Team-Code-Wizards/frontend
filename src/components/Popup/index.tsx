@@ -22,6 +22,7 @@ export default function Popup({ isSuccess }: { isSuccess: boolean }) {
 			<button
 				className={styles['popup-icon_close']}
 				aria-label="закрыть"
+				type="button"
 			></button>
 			<p
 				className={
