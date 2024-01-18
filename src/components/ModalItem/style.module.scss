@@ -1,10 +1,11 @@
 .modal-item {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 40px;
+	margin-bottom: 34px;
 
 	&__wrappper {
 		display: flex;
+		margin-bottom: 14px;
 
 		>span {
 			color: var(--color-red);
@@ -13,7 +14,6 @@
 
 	&__title {
 		font: var(--font-button-rg);
-		margin-bottom: var(--gap);
 		line-height: 120%;
 	}
 
@@ -21,7 +21,7 @@
 		border: none;
 		font: var(--font-description-main);
 		border-radius: 10px;
-		padding: 15px 10px;
+		padding: 17px 10px;
 		background-color: var(--color-gray-bg);
 		line-height: var(--line-height-big);
 		letter-spacing: var(--font-description-letter);
@@ -32,12 +32,17 @@
 
 		&_message {
 			resize: none;
+			padding: 14px 10px;
 			
 			&::placeholder {
-				line-height: 53px;
+				line-height: 61px;
 				vertical-align: bottom;
 			}
 		}
+	}
+
+	&:last-child {
+		margin-bottom: 39px;
 	}
 }
 
@@ -47,5 +52,6 @@
 		justify-content: space-between;
 		align-items: center;
 		cursor: pointer;
+		padding: 17px;
 	}
 }

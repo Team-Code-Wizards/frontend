@@ -21,23 +21,23 @@
     z-index: 10;
 	background-color: var(--color-bg-white);
 	border-radius: 20px;
-	padding: 40px;
+	padding: 74px 40px 40px;
 
 	&__title {
 		font: var(--font-block-title);
 		line-height: var(--line-height);
-		margin-bottom: 60px;
+		margin-bottom: 40px;
 	}
 
-	&__wrapper {
+	&__form {
 		display: flex;
 		flex-direction: column;
 	}
 
 	&__btn {
 		font: var(--font-button-rg);
-		color: var(--color-text);
-		padding: 15px 25px;
+		color: var(--color-white);
+		padding: 16.7px 25px;
 		background: var(--color-purple-gradient);
 		border-radius: 5px;
 		border: none;
