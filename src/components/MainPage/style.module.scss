@@ -2,10 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 80px;
+	margin: 0 auto;
 	min-height: 100vh;
-	max-width: var(--max-width);
 	font-family: var(--rg-font);
 	line-height: var(--line-height);
-	background-color: var(--color-bg-black);
 }

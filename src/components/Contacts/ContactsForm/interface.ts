@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
 
-export interface IContactsFormProps {
+export default interface IContactsFormProps {
 	onSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }

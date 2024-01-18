@@ -40,6 +40,14 @@
 
 	//  === Наборы для шрифтов ===
 	// === Titles ===
+	--font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
+		sans-serif;
+	// === Descriptions ===
+	--font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
+	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
+
+	//  === Наборы для шрифтов ===
+	// === Titles ===
 	--font-block-title: 600 var(--text-xl) var(--rg-font) / var(--line-height),
 		sans-serif;
 	// === Descriptions ===
@@ -47,6 +55,8 @@
 	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
 
 	// Colors
+
+	--color-text: #fff;
 	--color-bg-black: #070606;
 	--color-bg-white: #ffffff;
 	--color-ivory-bg: #ffffff1a;
@@ -55,16 +65,17 @@
 		#362a64 18.25%,
 		#51259b 93.44%
 	);
-	--color-purple-gradient-hovered: linear-gradient(
+
+	--color-gradient-button: linear-gradient(
 		93deg,
-		#3f1c78 18.25%,
-		#6e259b 93.44%
+		rgba(167, 138, 213, 1) 11%,
+		rgba(211, 166, 238, 1) 23%,
+		rgba(63, 28, 120, 1) 39%,
+		rgba(110, 37, 155, 1) 61%,
+		rgba(81, 37, 155, 1) 81%,
+		rgba(54, 42, 100, 1) 92%
 	);
-	--color-purple-gradient-active: linear-gradient(
-		93deg,
-		#a78ad5 18.25%,
-		#d3a6ee 93.44%
-	);
+
 	--color-lilac: #8792fc;
 	--color-purple: #5b4dab;
 	--color-pink: #9b54d4;
@@ -72,8 +83,6 @@
 
 	--color-green: #27ae60;
 	--color-red: #eb5757;
-
-	--color-text: #ffffff;
 
 	// == Gap ==
 	--grid-gap: 20px;
@@ -84,6 +93,7 @@
 
 .body {
 	font-family: 'Cygre';
+	background-color: var(--color-bg-black);
 }
 
 * {

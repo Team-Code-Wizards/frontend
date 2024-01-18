@@ -8,6 +8,7 @@
 	flex-wrap: wrap;
 	gap: 10px;
 	width: 100%;
+	position: relative;
 
 	textarea {
 		resize: none;
@@ -34,20 +35,25 @@
 		border: none;
 		cursor: pointer;
 		color: var(--color-text);
-		background: var(--color-purple-gradient);
+		background-image: var(--color-gradient-button);
+		background-size: 400%;
+		background-position: 99%;
 		font-family: var(--rg-font);
 		font-size: var(--text-base);
+
+		transition: 0.3s background-position ease-in-out;
 
 		&:focus {
 			outline: none;
 		}
 
 		&:hover {
-			background: var(--color-purple-gradient-hovered);
+			background-position: 50%;
 		}
 
 		&:active {
-			background: var(--color-purple-gradient-active);
+			transition: 0.1s background-position ease-in-out;
+			background-position: 10%;
 		}
 	}
 
@@ -65,15 +71,15 @@
 		}
 
 		&:first-of-type {
-			flex-basis: 100%;
+			width: 100%;
 		}
 
 		&:nth-of-type(2),
 		&:nth-of-type(3) {
-			flex-basis: calc(50% - 5px);
+			width: 100%;
 		}
 
-		&:nth-of-type(4) {
+		&[type='file'] {
 			width: 0.1px;
 			height: 0.1px;
 			opacity: 0;
