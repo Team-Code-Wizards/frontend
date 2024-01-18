@@ -1,0 +1,36 @@
+.footer {
+  * {
+    outline: 1px solid black;
+  }
+  width: 88.9%;
+  max-width: 1280px;
+  min-height: 314px;
+  margin: 93px auto 160px;
+  padding: 40px 23px 40px 40px;
+  border-radius: 30px;
+  font: var(--font-description-main);
+  letter-spacing: -0.03em;
+  line-height: 21px;
+  color: var(--color-text);
+  background-color: var(--color-purple);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image-no-text {
+    width: 8%;
+    align-self: flex-end;
+  }
+
+  &__image-text {
+    width: 28.67%;
+  }
+
+  &__social-group {
+    width: 8.91%;
+    // align-self: flex-start;
+  }
+}
+
