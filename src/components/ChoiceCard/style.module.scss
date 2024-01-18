@@ -18,16 +18,15 @@
 
 	&__title {
 		color: var(--color-text);
-		font: var(--font-button-rg);
-		line-height: var(--line-height);
+		font: var(--font-title-description);
+		margin: 0;
 	}
 
 	&__description {
 		color: var(--color-text);
 		font: var(--font-description-main);
 		margin: 0;
-		line-height: var(--line-height-big);
-		letter-spacing: var(--font-description-letter);
+		letter-spacing: -0.48px;
 	}
 
 	&_design {
@@ -44,7 +43,7 @@
 		}
 
 		&__column {
-			background-color: var(--color-ivory-bg);
+			background-color: var(--color-bg-ivory);
 			padding: 5px;
 		}
 	}
@@ -52,7 +51,7 @@
 	&_flexibility {
 		grid-area: 1 / 4 / 3 / 6;
 		align-items: flex-start;
-		background-color: var(--color-ivory-bg);
+		background-color: var(--color-bg-ivory);
 		padding: 3% 2% 2% 7%;
 
 		&__wrapper {
@@ -128,7 +127,7 @@
 
 		&__column {
 			padding: 5px;
-			background-color: var(--color-ivory-bg);
+			background-color: var(--color-bg-ivory);
 		}
 	}
 
@@ -183,7 +182,7 @@
 		}
 
 		&__column {
-			background-color: var(--color-ivory-bg);
+			background-color: var(--color-bg-ivory);
 			padding: 5px;
 		}
 	}
