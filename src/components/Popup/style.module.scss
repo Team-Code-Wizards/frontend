@@ -1,0 +1,57 @@
+.popup-background {
+  position: relative;
+  background-image: url(../../images/popup/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 582px;
+  height: 449px;
+  border-radius: 20px;
+}
+
+.popup-message_success,
+.popup-message_failure {
+  font-family: var(--rg-font);
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  color: white;
+  margin-top: 260px;
+}
+.popup-message_failure {
+  margin-left: 220px;
+}
+.popup-message_success {
+  margin-left: 175px;
+}
+
+.popup-icon_success,
+.popup-icon_failure {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 175px;
+  padding: 10px;
+}
+
+.popup-icon {
+  &_success {
+    margin-left: 265px;
+    border-radius: 200px;
+  }
+  &_failure {
+    margin-left: 260px;
+    border-radius: 100px;
+  }
+  &_close {
+    position: absolute;
+    margin-left: 528px;
+    margin-top: 20px;
+    background: rgba(135, 146, 252, 0.5);
+    border-radius: 200px;
+    border: none;
+    padding: 20px;
+    background-image: url("../../images/popup/close.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
