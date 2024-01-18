@@ -9,11 +9,15 @@
 	}
 
 	&__title {
-		margin: 0;
 		display: block;
-		all: unset;
-		line-height: 56%;
-		font-size: var(--text-xl);
+		font-size: 42px;
+	}
+
+	&__btn-group {
+		color: white;
+		display: flex;
+		margin-top: 20px;
+		column-gap: 10px;
 	}
 
 	&__card-box {
@@ -21,13 +25,6 @@
 		overflow: hidden;
 		column-gap: 20px;
 		margin-top: 40px;
-	}
-
-	&__btn-group {
-		color: white;
-		display: flex;
-		margin-top: 30px;
-		column-gap: 10px;
 	}
 }
 
