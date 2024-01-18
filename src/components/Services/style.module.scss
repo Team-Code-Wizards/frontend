@@ -1,18 +1,17 @@
+.wrapper {
+	width: 100vw;
+}
+
 .services {
 	width: var(--max-width);
 	padding: 80px;
 	margin: 0 auto;
-	background-color: var(--color-bg-black);
-	background-image: url('../../images/services-bg.png');
-	background-size: cover;
+	color: #ffffff;
 }
 
 .services__title {
-	font-family: var(--rg-font);
-	font-size: var(--text-xl);
-	color: var(--color-text);
 	margin-bottom: 40px;
-	font-weight: 600;
+	font: var(--font-block-title);
 	line-height: 130%;
 	letter-spacing: 1px;
 }
@@ -22,7 +21,6 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	gap: 20px;
-	color: var(--color-text);
 
 	div:nth-child(2 of div.service-card),
 	div:nth-child(4 of div.service-card) {
@@ -51,7 +49,7 @@
 
 	&__content {
 		position: relative;
-		padding: 10px 10px 30px;
+		padding: 9px 9px 30px 10px;
 		margin-bottom: 10px;
 		height: 276px;
 		border-radius: 5px;
@@ -62,18 +60,15 @@
 			font-size: var(--text-base);
 			font-style: normal;
 			font-weight: 600;
-			line-height: 80%;
-			margin: 0 0 14px;
+			margin: 0 0 15px;
 		}
 
 		& > p {
 			margin: 0 0 15px;
 			padding: 0;
-			font-family: var(--cygre-font);
-			font-size: var(--text-sm);
-			font-weight: 400;
-			letter-spacing: -0.55px;
-			line-height: 120%;
+			font: var(--font-description-main);
+			letter-spacing: -0.48px;
+			line-height: 114%;
 		}
 	}
 
@@ -83,6 +78,7 @@
 		bottom: 2px;
 		left: 10px;
 		align-items: baseline;
+		font-size: var(--text-base);
 
 		& > p {
 			font-weight: 600;
@@ -91,20 +87,16 @@
 		}
 
 		&_pre {
-			color: var(--color-text);
-			font-size: var(--text-base);
-			margin-right: 3px;
+			margin-right: 4px;
 		}
 
 		&_new {
-			color: var(--color-text);
 			font-size: var(--text-lg);
 			margin-right: 8px;
 		}
 
 		&_old {
 			color: rgba(255, 255, 255, 0.5);
-			font-size: var(--text-base);
 			margin: auto 0;
 			position: relative;
 			text-decoration: none;
@@ -129,24 +121,31 @@
 		&_order {
 			padding: 10px 0;
 			height: 40px;
-			width: calc(100% - 49px);
+			width: calc(100% - 48px);
 			border-radius: 5px;
 			border: none;
 			background: var(--color-lilac);
 			text-align: center;
-			color: var(--color-text);
 			font-family: var(--rg-font);
 			font-size: var(--text-base);
 			font-weight: 600;
+
+			&:hover {
+				background-color: #b3b9fc;
+			}
+
+			&:active {
+				background-color: #cbcffd;
+			}
 		}
 
 		&_ask {
 			display: grid;
 			place-items: center;
 			height: 40px;
-			width: 39px;
+			width: 37px;
 			border-radius: 5px;
-			border: 1px solid rgba(255, 255, 255, 0.7);
+			outline: 1px solid rgba(255, 255, 255, 0.7);
 		}
 	}
 }
