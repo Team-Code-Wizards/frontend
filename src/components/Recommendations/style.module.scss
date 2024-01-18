@@ -1,0 +1,63 @@
+.recommendations {
+  width: 100%;
+  max-width: 1280px;
+  background-image: url(../../images/recommendations/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-bg-white);
+
+  &__body {
+    display: flex;
+    column-gap: 105px;
+  }
+
+  .title {
+    padding: 3.125rem;
+    display: flex;
+    font-size: 48px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .arrows {
+    position: relative;
+  }
+  .carousel {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    &-cell {
+      align-self: center;
+      justify-items: center;
+      display: block;
+      width: 66%;
+      height: 200px;
+
+      &__left {
+        margin-top: 150px;
+        margin-left: 0px;
+      }
+      &_center {
+        margin-right: 10px;
+      }
+      &__right {
+        margin-top: 150px;
+        margin-right: 0px;
+        background-color: black;
+      }
+    }
+  }
+}
+.information {
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  &-picture {
+    display: block;
+  }
+  &-name {
+    display: block;
+  }
+}

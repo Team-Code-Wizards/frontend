@@ -1,53 +1,53 @@
 {
-	"name": "code-wizards",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint",
-		"lint-staged": "lint-staged",
-		"format": "prettier . --write",
-		"prepare": "husky install",
-		"commit": "git add -A && npm run lint-staged && git diff --quiet && git add -A && cz"
-	},
-	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.18.1",
-		"classnames": "^2.5.1",
-		"cz-conventional-changelog": "^3.3.0",
-		"next": "14.0.4",
-		"normalize.css": "^8.0.1",
-		"react": "^18",
-		"react-dom": "^18",
-		"sass": "^1.69.7"
-	},
-	"devDependencies": {
-		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"eslint-config-next": "14.0.4",
-		"husky": "^8.0.3",
-		"lint-staged": "^15.2.0",
-		"prettier": "^3.1.1",
-		"typescript": "^5"
-	},
-	"lint-staged": {
-		"*.{js,jsx,ts,tsx,json,css}": [
-			"prettier --write",
-			"eslint",
-			"git add"
-		]
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"config": {
-		"commitizen": {
-			"path": "cz-conventional-changelog"
-		}
-	}
+  "name": "code-wizards",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint-staged": "lint-staged",
+    "format": "prettier . --write",
+    "prepare": "husky install",
+    "commit": "git add -A && npm run lint-staged && git diff --quiet && git add -A && cz"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "classnames": "^2.5.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "next": "14.0.4",
+    "normalize.css": "^8.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.69.7"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint-config-next": "14.0.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
