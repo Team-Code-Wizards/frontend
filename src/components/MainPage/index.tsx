@@ -1,11 +1,13 @@
-import AboutUs from '@/components/AboutUs';
-
+import Interaction from '../Interaction/index';
+import Choice from '../Сhoice/index';
 import styles from './style.module.scss';
 
 export default function MainPage() {
 	return (
 		<main className={styles.main}>
-			<AboutUs />
+			{/* Подключаем свои компоненты тут */}
+			<Choice />
+			<Interaction />
 		</main>
 	);
 }

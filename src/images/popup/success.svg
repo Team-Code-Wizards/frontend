@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Warning / Circle_Check">
+<g id="Vector" filter="url(#filter0_b_913_4301)">
+<path d="M30 20L22 28L18 24M24 42C14.0589 42 6 33.9411 6 24C6 14.0589 14.0589 6 24 6C33.9411 6 42 14.0589 42 24C42 33.9411 33.9411 42 24 42Z" stroke="#27AE60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_b_913_4301" x="-10.5" y="-10.5" width="69" height="69" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="7.5"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_913_4301"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_913_4301" result="shape"/>
+</filter>
+</defs>
+</svg>
