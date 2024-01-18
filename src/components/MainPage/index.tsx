@@ -1,5 +1,4 @@
-import AboutUs from '@/components/AboutUs';
-
+import AboutUs from '../AboutUs';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Interaction from '../Interaction/index';

@@ -7,22 +7,21 @@ import styles from './style.module.scss';
 export default function AboutUs() {
 	return (
 		<div className={styles['about-us']}>
-			<div style={{ width: '88.9%', maxWidth: 1280, margin: '0 auto' }}>
+			<div className={styles['about-us__container']}>
 				<h2>О нас</h2>
 				<h3>
 					Мы – коллектив творческих умов, готовых воплощать <br /> ваши идеи в
 					цифровую реальность.
 				</h3>
-
-				<div className={styles['about-us__content']}>
+				<div className={styles['about-us__container_content']}>
 					<Image src={laptopImage} alt={'Laptop image'} />
-					<div style={{ marginTop: 60 }}>
-						<div className={styles['about-us__content_goals']}>
+					<div className={styles['about-us__container_content_text']}>
+						<div className={styles['about-us__container_content_text_goals']}>
 							<p>5 лет опыта</p>
 							<p>Внедрение инноваций</p>
 							<p>Современные технологии</p>
 						</div>
-						<div className={styles['about-us__content_resume']}>
+						<div className={styles['about-us__container_content_text_resume']}>
 							<p>
 								Мы начали как группа энтузиастов, которые верили в силу креатива
 								и технологий. С течением времени наша страсть к веб-разработке
