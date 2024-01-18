@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
-import laptopImage from '@/images/lap-top-image.png';
-import sparklesImage from '@/images/sparkles.png';
+import laptopImage from '@/images/laptop-image.png';
 
 import styles from './style.module.scss';
 
@@ -18,11 +17,6 @@ export default function AboutUs() {
 			<div className={styles['about-us__content']}>
 				<div style={{ position: 'relative' }}>
 					<Image src={laptopImage} alt={'Laptop image'} />
-					<Image
-						src={sparklesImage}
-						alt={'Sparkles'}
-						style={{ position: 'absolute', top: '33%', left: '38%' }}
-					/>
 				</div>
 				<div style={{ marginTop: 30 }}>
 					<div className={styles['about-us__content_goals']}>
