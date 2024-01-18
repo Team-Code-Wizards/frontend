@@ -1,3 +1,4 @@
+import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
@@ -6,12 +7,27 @@ import styles from './style.module.scss';
 
 export default function MainPage() {
 	return (
-		<main className={styles.main}>
-			{/* Подключаем свои компоненты тут */}
-			<Portfolio />
-			<Choice />
-			<Interaction />
-			<Contacts />
-		</main>
+		<>
+			{/* Header */}
+			<main className={styles.main}>
+				{/* <ComponentsContainer > */}
+				{/* О нас */}
+				{/* Услуги */}
+				{/* Портфолио */}
+				<Portfolio />
+				{/* </ComponentsContainer> */}
+				{/* Этапы создания */}
+				{/* Отзывы и рекомендации */}
+				<Choice />
+				{/* Гарантии */}
+				<Interaction />
+				{/* Тех арсенал */}
+				<ComponentsContainer>
+					{/* FAQ */}
+					<Contacts />
+					{/* Footer */}
+				</ComponentsContainer>
+			</main>
+		</>
 	);
 }

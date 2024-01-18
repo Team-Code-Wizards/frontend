@@ -44,7 +44,7 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="http://">
+						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
 								<ViberIcon />
 							</span>
@@ -52,7 +52,7 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="http://">
+						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
 								<TelegramBgIcon />
 							</span>
@@ -60,7 +60,7 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="http://">
+						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
 								<WhatsappIcon />
 							</span>
