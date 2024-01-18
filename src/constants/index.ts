@@ -1,2 +1,2 @@
-import './Choice/index';
-import './Modal/index';
+import './choice/index';
+import './modal/index';
