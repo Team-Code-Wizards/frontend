@@ -49,7 +49,6 @@
 	--font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
 	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
 
-
   //  === Наборы для шрифтов ===
   // === Titles ===
   --font-block-title: 600 var(--text-xl) var(--rg-font), sans-serif;
@@ -58,6 +57,8 @@
   --font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
 
 	// Colors
+
+	--color-text: #fff;
 	--color-bg-black: #070606;
 	--color-bg-white: #ffffff;
 	--color-ivory-bg: #ffffff1a;
@@ -65,6 +66,16 @@
 		93deg,
 		#362a64 18.25%,
 		#51259b 93.44%
+	);
+
+	--color-gradient-button: linear-gradient(
+		93deg,
+		rgba(167, 138, 213, 1) 11%,
+		rgba(211, 166, 238, 1) 23%,
+		rgba(63, 28, 120, 1) 39%,
+		rgba(110, 37, 155, 1) 61%,
+		rgba(81, 37, 155, 1) 81%,
+		rgba(54, 42, 100, 1) 92%
 	);
 
 	--color-lilac: #8792fc;
@@ -78,6 +89,9 @@
 
 	// == Gap ==
 	--grid-gap: 20px;
+	--color-input: #1b1c3380;
+	--color-input-active: #e1e1e1;
+	--color-text-input-active: #1b1c33;
 }
 
 .body {
@@ -86,7 +100,7 @@
 }
 
 * {
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 	padding: 0;
 	margin: 0;
 	list-style: none;

@@ -1,4 +1,5 @@
 import ComponentsContainer from '../ComponentsContainer';
+import Contacts from '../Contacts';
 import Interaction from '../Interaction/index';
 import Services from '../Services';
 import Choice from '../Сhoice/index';
@@ -10,8 +11,10 @@ export default function MainPage() {
 			<ComponentsContainer>
 				<Services />
 			</ComponentsContainer>
+
 			<Choice />
 			<Interaction />
+			<Contacts />
 		</main>
 	);
 }
