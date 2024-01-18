@@ -2,7 +2,6 @@ import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Interaction from '../Interaction/index';
 import Choice from '../Сhoice/index';
-import Modal from '../Modal';
 import styles from './style.module.scss';
 
 export default function MainPage() {
