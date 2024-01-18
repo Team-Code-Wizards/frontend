@@ -18,7 +18,7 @@ export default function Contacts() {
 	};
 
 	return (
-		<section className={styles['contacts']}>
+		<div className={styles['contacts']}>
 			<h1 className={styles['contacts__title']}>Контакты</h1>
 			<div className={styles['contacts__body']}>
 				<ul className={styles['link-group']}>
@@ -44,7 +44,7 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="http://">
+						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
 								<ViberIcon />
 							</span>
@@ -52,7 +52,7 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="http://">
+						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
 								<TelegramBgIcon />
 							</span>
@@ -60,7 +60,7 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="http://">
+						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
 								<WhatsappIcon />
 							</span>
@@ -70,6 +70,6 @@ export default function Contacts() {
 				</ul>
 				<ContactsForm onSubmit={sendingDataForFeedback} />
 			</div>
-		</section>
+		</div>
 	);
 }
