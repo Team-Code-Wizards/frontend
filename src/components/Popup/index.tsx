@@ -17,6 +17,7 @@ export default function Popup({ isSuccess }: { isSuccess: boolean }) {
 				src={isSuccess ? successImage : failureImage}
 				alt="icon"
 				className={className}
+				width={75}
 			/>
 			<button
 				className={styles['popup-icon_close']}
@@ -29,7 +30,7 @@ export default function Popup({ isSuccess }: { isSuccess: boolean }) {
 						: styles['popup-message_failure']
 				}
 			>
-				{isSuccess ? 'Успешно отправлено!' : 'Ошибка отправки!'}
+				{isSuccess ? 'Заявка успешно отправлена!' : 'Ошибка отправки!'}
 			</p>
 		</div>
 	);

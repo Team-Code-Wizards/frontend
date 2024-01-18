@@ -14,8 +14,8 @@
   font-weight: 400;
   position: absolute;
   color: white;
-  margin-top: 250px;
-  margin-left: 170px;
+  margin-top: 260px;
+  margin-left: 175px;
 }
 .popup-message_failure {
   font-family: var(--rg-font);
@@ -23,17 +23,17 @@
   font-weight: 400;
   position: absolute;
   color: white;
-  margin-top: 255px;
+  margin-top: 260px;
   margin-left: 220px;
 }
 
 .popup-icon {
   &_success {
     position: absolute;
-    margin-left: 260px;
+    margin-left: 265px;
     margin-top: 175px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 100px;
+    border-radius: 200px;
     padding: 10px;
   }
   &_failure {
