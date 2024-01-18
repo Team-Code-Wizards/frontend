@@ -1,6 +1,7 @@
 import ComponentsContainer from '../ComponentsContainer';
+import Interaction from '../Interaction/index';
 import Services from '../Services';
-import Choice from '../Сhoice';
+import Choice from '../Сhoice/index';
 import styles from './style.module.scss';
 
 export default function MainPage() {
@@ -10,14 +11,7 @@ export default function MainPage() {
 				<Services />
 			</ComponentsContainer>
 			<Choice />
-			<ComponentsContainer>
-				<div
-					style={{
-						height: '200px',
-						width: '100vw',
-					}}
-				/>
-			</ComponentsContainer>
+			<Interaction />
 		</main>
 	);
 }
