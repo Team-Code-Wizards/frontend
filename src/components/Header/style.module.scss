@@ -13,9 +13,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 251px;
+    max-width: 1280px;
     height: 48px;
     padding: 10px 20px;
-    margin: 20px 80px 0 80px;
+    margin: 20px auto 66px auto;
+    /*margin: 20px 80px 0 80px;*/
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0px 4px 46.7px 0px rgba(0, 0, 0, 0.25);
@@ -46,16 +48,18 @@
     }
 }
 .block{
+    max-width: 1280px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 398px;
     grid-template-rows: 100px;
     grid-template-areas: 'block-text block-form'  
     'block-icons block-form' ;
     gap: 351px;
-    padding: 66px 80px 0 80px;
+    /*padding: 66px 80px 0 80px;*/
 
     &__text{
-        width: 460px;
+        width: 530px;
         grid-area: block-text;
         color: var(--color-text);
         font-family: var(--rg-font);
@@ -83,7 +87,9 @@
 
     &__form{
         grid-area: block-form;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         border-radius: 20px;
         border: 1px solid var(--color-bg-white);
         background: var(--color-bg-white);
