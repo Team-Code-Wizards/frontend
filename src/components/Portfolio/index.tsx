@@ -7,7 +7,7 @@ import style from './style.module.scss';
 export default function Portfolio() {
 	return (
 		<section className={style['portfolio__container']}>
-			<span className={style['portfolio__title']}>Портфолио</span>
+			<h2 className={style['portfolio__title']}>Портфолио</h2>
 			<div className={style['portfolio__btn-group']}>
 				<button className={style['flipping-btn']} type="button">
 					<ArrwoChevronIcon direction="left" />

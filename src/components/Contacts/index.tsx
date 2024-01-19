@@ -19,7 +19,7 @@ export default function Contacts() {
 
 	return (
 		<section className={styles['contacts']}>
-			<span className={styles['contacts__title']}>Контакты</span>
+			<h2 className={styles['contacts__title']}>Контакты</h2>
 			<div className={styles['contacts__body']}>
 				<ul className={styles['link-group']}>
 					<li className={styles['link-box']}>
