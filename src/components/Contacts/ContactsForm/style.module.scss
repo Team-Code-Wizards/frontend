@@ -1,0 +1,117 @@
+.form-box {
+	flex-grow: 1;
+	font-family: var(--cygre-font);
+}
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	width: 100%;
+	position: relative;
+
+	textarea {
+		resize: none;
+		padding: 20px;
+		height: 161px;
+		overflow: hidden;
+	}
+
+	&__notice {
+		letter-spacing: -0.48px;
+		flex-basis: 100%;
+	}
+
+	&__button {
+		margin-top: 30px;
+		width: 100%;
+		padding: 15px 25px;
+		border-radius: 5px;
+		border: none;
+		cursor: pointer;
+		color: var(--color-text);
+		background-image: var(--color-gradient-button);
+		background-size: 400%;
+		background-position: 99%;
+		font-family: var(--rg-font);
+		font-size: var(--text-base);
+
+		transition: 0.3s background-position ease-in-out;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background-position: 50%;
+		}
+
+		&:active {
+			transition: 0.1s background-position ease-in-out;
+			background-position: 10%;
+		}
+	}
+
+	&__input {
+		padding: 20px 10px;
+		height: 65px;
+		border: none;
+		border-radius: 10px;
+		transition: all 0.3s ease-out;
+
+		&::placeholder {
+			font-size: var(--text-sm);
+			letter-spacing: -0.48px;
+			color: var(--color-input);
+		}
+
+		&:first-of-type {
+			width: 100%;
+		}
+
+		&:nth-of-type(2),
+		&:nth-of-type(3) {
+			width: 100%;
+		}
+
+		&[type='file'] {
+			width: 0.1px;
+			height: 0.1px;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			z-index: -1;
+		}
+
+		&:focus:not(input[type='file']) {
+			outline: 0;
+			background-color: var(--color-input-active);
+			color: var(--color-text-input-active);
+			transition: all 0.3s ease-out;
+
+			&::placeholder {
+				color: transparent;
+			}
+		}
+	}
+}
+
+.label {
+	cursor: pointer;
+	padding: 15px 25px;
+	border: 1px solid white;
+	border-radius: 10px;
+	width: 295px;
+
+	margin-block: 10px;
+	text-align: center;
+	margin-right: auto;
+	line-height: 39%;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		background-color: var(--color-lilac);
+		border: 1px solid rgba(255, 255, 255, 0);
+		transition: all 0.3s ease-out;
+	}
+}
