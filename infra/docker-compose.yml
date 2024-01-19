@@ -1,1 +1,7 @@
-# TODO
+services:
+  frontend:
+    image: deamanda/code_wizards_front
+    pull_policy: always
+    restart: always
+    ports:
+      - '3000:80'

@@ -1,8 +1,11 @@
-FROM node:20
+FROM node:20 as build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . ./
+COPY infra/next.config.js ./
 RUN npm run build
-#CMD cp -r build result_build
-CMD ["npx", "-y", "http-server", "-p", "3000", "/app"] 
+
+FROM nginx as static
+COPY ./infra/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/build /usr/share/nginx/html
