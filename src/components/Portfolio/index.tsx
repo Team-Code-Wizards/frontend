@@ -6,7 +6,7 @@ import style from './style.module.scss';
 
 export default function Portfolio() {
 	return (
-		<section className={style['portfolio__container']}>
+		<div className={style['portfolio__container']}>
 			<h2 className={style['portfolio__title']}>Портфолио</h2>
 			<div className={style['portfolio__btn-group']}>
 				<button className={style['flipping-btn']} type="button">
@@ -21,6 +21,6 @@ export default function Portfolio() {
 					<PortfolioCard key={crypto.randomUUID()} {...el} />
 				))}
 			</div>
-		</section>
+		</div>
 	);
 }
