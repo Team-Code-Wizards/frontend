@@ -1,0 +1,125 @@
+.contacts {
+	display: flex;
+	flex-direction: column;
+	row-gap: 65px;
+	width: 100%;
+	max-width: 1280px;
+	padding: 3.125rem;
+	border-radius: 30px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	color: var(--color-text);
+	margin: 0 auto;
+
+	&__title {
+		margin: 0;
+		display: block;
+		all: unset;
+		line-height: 56%;
+		font-size: 42px;
+	}
+
+	&__body {
+		display: flex;
+		column-gap: 105px;
+	}
+}
+
+.link-group {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-basis: 39%;
+	min-width: 39%;
+	max-height: 252px;
+	flex-wrap: wrap;
+	font-family: var(--cygre-font);
+	letter-spacing: -0.48px;
+	gap: 10px;
+}
+
+.link-box {
+	display: flex;
+
+	&:first-of-type,
+	&:nth-of-type(2),
+	&:nth-of-type(5) {
+		flex-grow: 1;
+	}
+
+	&:nth-of-type(2) {
+		line-height: 65%;
+	}
+
+	&:nth-of-type(3) {
+		flex-basis: 20%;
+	}
+
+	&:nth-of-type(4) {
+		flex-basis: 43%;
+	}
+}
+
+//TODO рефактор повторения кода
+
+.link {
+	all: unset;
+	display: flex;
+	padding: 20px;
+	cursor: pointer;
+	width: 100%;
+	border: 1px solid white;
+	border-radius: 10px;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		background-color: var(--color-lilac);
+		border: 1px solid rgba(255, 255, 255, 0);
+		transition: all 0.3s ease-out;
+	}
+
+	&_messenger {
+		all: unset;
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		cursor: pointer;
+		row-gap: 10px;
+		width: 100%;
+		border: 1px solid white;
+		border-radius: 10px;
+		line-height: 30%;
+		transition: all 0.3s ease-out;
+
+		&:hover {
+			background-color: var(--color-lilac);
+			border: 1px solid rgba(255, 255, 255, 0);
+			transition: all 0.3s ease-out;
+		}
+	}
+
+	&__item {
+		display: flex;
+		justify-items: flex-start;
+		align-items: flex-start;
+
+		&_no-margin {
+			margin: 0;
+		}
+
+		&_word-space {
+			word-spacing: 1.5rem;
+		}
+
+		&_tel {
+			display: flex;
+			flex-direction: column;
+			row-gap: 18px;
+		}
+
+		&:nth-child(2) {
+			margin-left: auto;
+		}
+	}
+}
