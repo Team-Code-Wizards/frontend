@@ -1,6 +1,7 @@
 import AboutUs from '../AboutUs';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
+import Header from '../Header';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
 import Choice from '../Сhoice/index';
@@ -9,7 +10,7 @@ import styles from './style.module.scss';
 export default function MainPage() {
 	return (
 		<>
-			{/* Header */}
+			<Header />
 			<main className={styles.main}>
 				{/* <ComponentsContainer > */}
 				<AboutUs />
