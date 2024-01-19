@@ -1,0 +1,17 @@
+.input-clear-btn,
+.textarea-clear-btn {
+	all: initial;
+	cursor: pointer;
+	color: #1b1c33;
+	position: absolute;
+}
+
+.textarea-clear-btn {
+	top: 20px;
+	right: 20px;
+}
+
+.input-clear-btn {
+	top: 25px;
+	right: 15px;
+}
