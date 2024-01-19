@@ -1,6 +1,7 @@
 import AboutUs from '../AboutUs';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
+import Footer from '../Footer';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
 import Services from '../Services';
@@ -26,7 +27,7 @@ export default function MainPage() {
 				<ComponentsContainer>
 					{/* FAQ */}
 					<Contacts />
-					{/* Footer */}
+					<Footer />
 				</ComponentsContainer>
 			</main>
 		</>
