@@ -1,5 +1,6 @@
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
+import Faq from '../Faq/index';
 import Interaction from '../Interaction/index';
 import Choice from '../Сhoice/index';
 import styles from './style.module.scss';
@@ -21,7 +22,7 @@ export default function MainPage() {
 				<Interaction />
 				{/* Тех арсенал */}
 				<ComponentsContainer>
-					{/* FAQ */}
+					<Faq />
 					<Contacts />
 					{/* Footer */}
 				</ComponentsContainer>

@@ -1,0 +1,21 @@
+.faq {
+	margin: 0 auto;
+	padding: 70px 0px 286px;
+	max-width: 1280px;
+	display: flex;
+	justify-content: space-between;
+
+	&__title {
+		width: 32.9%;
+		font: var(--font-block-title);
+		color: var(--color-bg-white);
+	}
+
+	&__list {
+		width: 738px;
+		display: flex;
+		flex-direction: column;
+		gap: 37px;
+		padding: 10px 0 0;
+	}
+}

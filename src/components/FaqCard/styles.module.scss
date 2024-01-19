@@ -1,0 +1,21 @@
+.faq-card {
+	color: var(--color-bg-white);
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0;
+		border-bottom: 1px solid var(--color-bg-white);
+	}
+
+	&__title {
+		width: 581px;
+		font: var(--font-title-description);
+	}
+
+	&__description {
+		font: var(--font-description-main);
+		letter-spacing: -0.48px;
+		display: none;
+	}
+}
