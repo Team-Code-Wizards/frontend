@@ -15,7 +15,7 @@ export default function MainPage() {
 			<main className={styles.main}>
 				<ComponentsContainer>
 					<AboutUs />
-					<Services />					
+					<Services />
 					<Portfolio />
 				</ComponentsContainer>
 				{/* Этапы создания */}

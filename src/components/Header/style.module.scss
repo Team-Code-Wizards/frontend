@@ -1,3 +1,41 @@
-.container {
-color: white;
+.header {
+  max-width: 1280px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 46.7px 0 rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur( 4px );
+  box-sizing: border-box;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 48px;
+    font: var(--font-description-main);
+    width: 100%;
+
+      a {
+        margin: 0 10px;
+        letter-spacing: -0.48px;
+        color: var(--color-text);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover{
+          color: var(--color-lilac);
+        }
+      }
+  }
 }
+
+
+
+
