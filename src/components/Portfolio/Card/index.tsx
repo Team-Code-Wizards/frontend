@@ -13,7 +13,7 @@ export default function PortfolioCard({ tag, title, image }: IPortfolioCard) {
 					src={image}
 					alt="portfolioIcon"
 					width={500}
-					style={{ position: 'absolute', left: '-47px', top: '-4px' }}
+					className={style['card__bg']}
 				/>
 				<span className={style['card__tag']}>{tag}</span>
 			</div>

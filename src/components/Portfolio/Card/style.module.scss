@@ -1,6 +1,5 @@
 .card {
 	&__container {
-		width: 413px;
 		min-width: 413px;
 		height: 360px;
 		background: transparent;
@@ -21,8 +20,14 @@
 		);
 	}
 
+	&__bg {
+		left: -47px;
+		top: -4px;
+	}
+
 	&__tag,
-	&__link {
+	&__link,
+	&__bg {
 		position: absolute;
 	}
 
@@ -32,8 +37,6 @@
 		border-radius: 28px;
 		font-family: var(--cygre-font);
 		text-align: center;
-		font-size: 16px;
-		font-weight: 400px;
 		line-height: 130%;
 		letter-spacing: -0.48px;
 		left: 9px;
