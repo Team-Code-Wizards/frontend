@@ -5,6 +5,7 @@ import styles from "./style.module.scss";
 export default function RecommendationPreview({
   title,
   image,
+  info,
 }: IRecommendationPreview) {
   return (
     <div className={styles["card__container"]}>
@@ -17,6 +18,7 @@ export default function RecommendationPreview({
         />
       </div>
       <h3 className={styles["card__title"]}>{title}</h3>
+      <h4 className={styles["card__information"]}>{info}</h4>
     </div>
   );
 }
