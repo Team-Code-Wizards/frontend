@@ -7,14 +7,26 @@ import styles from './style.module.scss';
 
 export default function MainPage() {
 	return (
-		<main className={styles.main}>
-			<ComponentsContainer>
-				<Services />
-			</ComponentsContainer>
-
-			<Choice />
-			<Interaction />
-			<Contacts />
-		</main>
+		<>
+			{/* Header */}
+			<main className={styles.main}>
+				{/* <ComponentsContainer > */}
+				{/* О нас */}
+				{/* Услуги */}
+				{/* Портфолио */}
+				{/* </ComponentsContainer> */}
+				{/* Этапы создания */}
+				{/* Отзывы и рекомендации */}
+				<Choice />
+				{/* Гарантии */}
+				<Interaction />
+				{/* Тех арсенал */}
+				<ComponentsContainer>
+					{/* FAQ */}
+					<Contacts />
+					{/* Footer */}
+				</ComponentsContainer>
+			</main>
+		</>
 	);
 }
