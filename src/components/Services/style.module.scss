@@ -6,7 +6,7 @@
 	width: var(--max-width);
 	padding: 80px;
 	margin: 0 auto;
-	color: #ffffff;
+	color: var(--color-text);
 }
 
 .services__title {
@@ -49,17 +49,15 @@
 
 	&__content {
 		position: relative;
-		padding: 9px 9px 30px 10px;
+		padding: 6px 9px 30px 10px;
 		margin-bottom: 10px;
 		height: 276px;
 		border-radius: 5px;
 		background: rgba(255, 255, 255, 0.1);
 
 		& > h4 {
-			font-family: var(--rg-font);
-			font-size: var(--text-base);
-			font-style: normal;
-			font-weight: 600;
+			font: var(--font-title-description);
+			line-height: 105%;
 			margin: 0 0 15px;
 		}
 
@@ -75,15 +73,15 @@
 	&__prices {
 		display: flex;
 		position: absolute;
-		bottom: 2px;
+		bottom: 5px;
 		left: 10px;
-		align-items: baseline;
-		font-size: var(--text-base);
+		vertical-align: bottom;
+		font: var(--font-title-description);
 
-		& > p {
-			font-weight: 600;
-			font-family: var(--rg-font);
-			line-height: var(--line-height);
+		& > * {
+			& > * {
+				display: inline-block;
+			}
 		}
 
 		&_pre {
@@ -97,7 +95,6 @@
 
 		&_old {
 			color: rgba(255, 255, 255, 0.5);
-			margin: auto 0;
 			position: relative;
 			text-decoration: none;
 
@@ -105,11 +102,11 @@
 				content: '';
 				border-bottom: 2px solid #eb5757;
 				position: absolute;
-				top: -2px;
+				top: -1px;
 				right: -4px;
 				width: 104%;
 				height: 50%;
-				transform: rotate(20deg);
+				transform: rotate(19deg);
 			}
 		}
 	}
@@ -142,7 +139,7 @@
 		&_ask {
 			display: grid;
 			place-items: center;
-			height: 40px;
+			height: 38px;
 			width: 37px;
 			border-radius: 5px;
 			outline: 1px solid rgba(255, 255, 255, 0.7);

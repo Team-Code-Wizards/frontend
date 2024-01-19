@@ -10,11 +10,11 @@ export default function MainPage() {
 		<>
 			{/* Header */}
 			<main className={styles.main}>
-				{/* <ComponentsContainer > */}
-				{/* О нас */}
-				{/* Услуги */}
-				{/* Портфолио */}
-				{/* </ComponentsContainer> */}
+				<ComponentsContainer>
+					{/* О нас */}
+					<Services />
+					{/* Портфолио */}
+				</ComponentsContainer>
 				{/* Этапы создания */}
 				{/* Отзывы и рекомендации */}
 				<Choice />

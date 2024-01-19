@@ -16,13 +16,15 @@ export default function Services() {
 									<p key={ind}>{text}</p>
 								))}
 								<span className={styles['service-card__prices']}>
-									<p className={styles['service-card__prices_pre']}>от</p>
-									<p className={styles['service-card__prices_new']}>
-										{service.newPrice}$
-									</p>
-									<p className={styles['service-card__prices_old']}>
+									<span>
+										<p className={styles['service-card__prices_pre']}>от</p>
+										<p className={styles['service-card__prices_new']}>
+											{service.newPrice}$
+										</p>
+									</span>
+									<span className={styles['service-card__prices_old']}>
 										{service.oldPrice}$
-									</p>
+									</span>
 								</span>
 							</div>
 							<span className={styles['service-card__btns']}>
