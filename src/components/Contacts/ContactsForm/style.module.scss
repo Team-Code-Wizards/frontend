@@ -18,13 +18,8 @@
 	}
 
 	&__notice {
-		margin-top: 10px;
 		letter-spacing: -0.48px;
 		flex-basis: 100%;
-
-		&:nth-of-type(2) {
-			margin-top: 0;
-		}
 	}
 
 	&__button {
@@ -107,7 +102,8 @@
 	border: 1px solid white;
 	border-radius: 10px;
 	width: 295px;
-	margin-top: 10px;
+
+	margin-block: 10px;
 	text-align: center;
 	margin-right: auto;
 	line-height: 39%;
