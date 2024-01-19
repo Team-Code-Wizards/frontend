@@ -35,45 +35,61 @@
 	--text-base: 20px;
 	--text-lg: 32px;
 	--text-xl: 48px;
+
 	--line-height: 120%;
 	--line-height-big: 130%;
-  
-	//  === Наборы для шрифтов ===
+
+	//  === Font sets ===
+
 	// === Titles ===
-	--font-block-title: 600 var(--text-xl) var(--rg-font) / var(--line-height), sans-serif;
+	--font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font), sans-serif;
+	--font-title-description: 600 var(--text-base) / var(--line-height) var(--rg-font), sans-serif;
+
 	// === Descriptions ===
-	--font-description-main: 400 var(--text-sm) var(--cygre-font), sans-serif;
+	--font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--cygre-font), sans-serif;
 	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
 
 	// Colors
 	--color-bg-black: #070606;
 	--color-bg-white: #ffffff;
-	--color-ivory-bg: #ffffff1a;
+	--color-bg-ivory: #ffffff1a;
+
+  --color-lilac: #8792fc;
+	--color-purple: #5b4dab;
+	--color-pink: #9b54d4;
+	--color-blue: #263694;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
+
+  --color-text: #ffffff;
+  
 	--color-purple-gradient: linear-gradient(
 		93deg,
 		#362a64 18.25%,
 		#51259b 93.44%
 	);
 
-	--color-lilac: #8792fc;
-	--color-purple: #5b4dab;
-	--color-pink: #9b54d4;
-	--color-blue: #263694;
-
-	--color-green: #27ae60;
-	--color-red: #eb5757;
-
-	--color-text: #ffffff;
+	--color-gradient-button: linear-gradient(
+		93deg,
+		rgba(167, 138, 213, 1) 11%,
+		rgba(211, 166, 238, 1) 23%,
+		rgba(63, 28, 120, 1) 39%,
+		rgba(110, 37, 155, 1) 61%,
+		rgba(81, 37, 155, 1) 81%,
+		rgba(54, 42, 100, 1) 92%
+	);
 
 	// == Gap ==
 	--grid-gap: 20px;
+	--color-input: #1b1c3380;
+	--color-input-active: #e1e1e1;
+	--color-text-input-active: #1b1c33;
 }
 
 .body {
-	font-family: 'Cygre';
-
+	font-family: var(--cygre-font);
+	background-color: var(--color-bg-black);
 }
-
 
 * {
 	box-sizing: border-box;
@@ -81,4 +97,3 @@
 	margin: 0;
 	list-style: none;
 }
-
