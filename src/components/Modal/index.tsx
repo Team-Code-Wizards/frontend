@@ -1,4 +1,4 @@
-import { data } from '@/constants/modal';
+import { data } from '@/constants/Modal';
 import IconClose from '@/images/modalicon/IconClose';
 
 import ModalItem from '../ModalItem';

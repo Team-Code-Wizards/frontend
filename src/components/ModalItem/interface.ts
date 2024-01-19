@@ -1,4 +1,4 @@
-import { IModalItem } from '@/constants/modal/type';
+import { IModalItem } from '@/constants/Modal/type';
 
 export interface IModalItemProps {
 	item: IModalItem;

@@ -1,4 +1,4 @@
-import { data } from '@/constants/choice/index';
+import { data } from '@/constants/Choice';
 
 import ChoiceCard from '../ChoiceCard';
 import styles from './style.module.scss';

@@ -1,4 +1,4 @@
-import { IChoiceItem } from '@/constants/choice/type';
+import { IChoiceItem } from '@/constants/Choice/type';
 
 export interface IChoiceItemProps {
 	item: IChoiceItem;
