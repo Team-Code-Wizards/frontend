@@ -3,6 +3,7 @@ import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
+import Services from '../Services';
 import Choice from '../Сhoice/index';
 import styles from './style.module.scss';
 
@@ -11,12 +12,11 @@ export default function MainPage() {
 		<>
 			{/* Header */}
 			<main className={styles.main}>
-				{/* <ComponentsContainer > */}
-				<AboutUs />
-				{/* Услуги */}
-				{/* Портфолио */}
-				<Portfolio />
-				{/* </ComponentsContainer> */}
+				<ComponentsContainer>
+					<AboutUs />
+					<Services />					
+					<Portfolio />
+				</ComponentsContainer>
 				{/* Этапы создания */}
 				{/* Отзывы и рекомендации */}
 				<Choice />
