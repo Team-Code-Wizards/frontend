@@ -21,17 +21,19 @@
   }
 
   &__image-no-text {
-    max-width: 8.1%;
+    max-width: 8.5%;
     align-self: flex-end;
   }
 
   &__image-text {
+    width: 35%;
+    max-width: 33%;
     margin-block-start: 10px;
-    max-width: 28.67%;
+    padding-inline-end: 9px;
   }
 
   &__social-group {
-    width: 8.91%;
+    width: 9%;
     display: flex;
     justify-content: space-between;
   }

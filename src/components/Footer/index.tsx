@@ -27,10 +27,14 @@ const Footer = (): React.ReactElement => {
 			<div className={styles['footer__row']}>
 				<Image
 					src={LogoNoText}
-					alt=""
+					alt="Логотип"
 					className={styles['footer__image-no-text']}
 				/>
-				<Image src={LogoText} alt="" className={styles['footer__image-text']} />
+				<Image
+					src={LogoText}
+					alt="Логотип Code Wizards"
+					className={styles['footer__image-text']}
+				/>
 				<div className={styles['footer__social-group']}>
 					<a href="#">
 						<TelegramIcon />
