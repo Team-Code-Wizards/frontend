@@ -2,10 +2,10 @@
 	position: relative;
 	margin: 0 auto;
 	max-width: var(--max-width);
-	padding: 5rem 5rem 5.75rem;
-	background-image: url('../../images/guarantee/background.jpg');
+	padding: 70px 80px 92px;
+	background-image: url('../../images/guarantee/background.png');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	backdrop-filter: blur(28px);
 
 	&__gradient {
@@ -28,7 +28,7 @@
 
 	&__title {
 		margin: 0;
-		margin-bottom: 2.5rem;
+		margin-bottom: 24px;
 		font: var(--font-block-title);
 		line-height: 120%;
 		color: var(--color-bg-white);
@@ -40,7 +40,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 1.25rem;
+		gap: 20px;
 		list-style: none;
 	}
 }

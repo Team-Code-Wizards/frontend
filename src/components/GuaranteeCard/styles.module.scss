@@ -2,9 +2,10 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 1.25rem;
-	width: calc(50% - 1.25rem / 2);
-	padding: 1.25rem;
+	gap: 20px;
+	width: calc(50% - 20px / 2);
+	min-height: 147px;
+	padding: 15px 10px 12px 20px;
 	border-radius: 10px;
 	border: 1px solid var(--color-bg-white);
 	background: rgba(255, 255, 255, 0.05);
@@ -17,10 +18,10 @@
 
 	&__title {
 		margin: 0;
-		margin-bottom: 1.25rem;
+		margin-bottom: 10px;
 		color: var(--color-lilac);
 		font-family: var(--rg-font);
-		font-size: 1.25rem;
+		font-size: 20px;
 		font-weight: 600;
 		line-height: 120%;
 	}

@@ -1,11 +1,5 @@
-import Guarantee from '@/components/Guarantee/index';
-
-import styles from './style.module.scss';
+import MainPage from '@/components/MainPage';
 
 export default function Home() {
-	return (
-		<main className={styles['.main']}>
-			<Guarantee />
-		</main>
-	);
+	return <MainPage />;
 }

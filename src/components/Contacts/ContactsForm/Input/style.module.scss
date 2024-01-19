@@ -1,0 +1,16 @@
+.textarea-box,
+.input-box {
+	position: relative;
+}
+
+.textarea-box,
+.input-box:first-of-type {
+	flex-basis: 100%;
+}
+
+.input-box {
+	&:nth-of-type(2),
+	&:nth-of-type(3) {
+		flex-basis: calc(50% - 5px);
+	}
+}
