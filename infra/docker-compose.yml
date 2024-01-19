@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: deamanda/code_wizards_front
+    image: govard/code_wizards
     pull_policy: always
     restart: always
     ports:
