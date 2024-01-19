@@ -4,6 +4,7 @@ import Contacts from '../Contacts';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
 import Services from '../Services';
+import TechStack from '../TechStack';
 import Choice from '../Сhoice/index';
 import styles from './style.module.scss';
 
@@ -14,7 +15,7 @@ export default function MainPage() {
 			<main className={styles.main}>
 				<ComponentsContainer>
 					<AboutUs />
-					<Services />					
+					<Services />
 					<Portfolio />
 				</ComponentsContainer>
 				{/* Этапы создания */}
@@ -23,6 +24,7 @@ export default function MainPage() {
 				{/* Гарантии */}
 				<Interaction />
 				{/* Тех арсенал */}
+				<TechStack />
 				<ComponentsContainer>
 					{/* FAQ */}
 					<Contacts />

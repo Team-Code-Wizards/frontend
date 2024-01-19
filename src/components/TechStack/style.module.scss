@@ -1,0 +1,63 @@
+.tech-stack {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 60px;
+		width: 100%;
+		padding: 80px;
+		background-image: url('../../images/techStack/tech-stack-background.png');
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		color: var(--color-text);
+	}
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1280px;
+	}
+
+	&__banner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		font-family: var(--rg-font);
+		line-height: 120%;
+	}
+
+	&__title {
+		font-size: 48px;
+	}
+
+	&__subtitle {
+		font-size: 20px;
+	}
+
+	&__short-description {
+		display: flex;
+		column-gap: 10px;
+		font-family: var(--cygre-font);
+		font-size: 16px;
+		color: var(--color-lilac);
+		line-height: 130%;
+		letter-spacing: -0.48px;
+		flex-basis: 50%;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(7.5px);
+		border-radius: 10px;
+		padding: 40px 20px;
+
+		svg {
+			min-width: 24px;
+		}
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		max-width: 1280px;
+		row-gap: 40px;
+	}
+}
