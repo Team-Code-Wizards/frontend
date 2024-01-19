@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import laptopImage from '@/images/laptop-image.png';
+import laptopImage from '@/images/aboutUs/laptop-image.png';
 
 import styles from './style.module.scss';
 
