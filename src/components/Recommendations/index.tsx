@@ -1,57 +1,38 @@
 import styles from "./style.module.scss";
-import Image from "next/image";
 import firstSlide from "../../images/recommendations/slide-left.jpg";
 import secondSlide from "../../images/recommendations/slide-center.jpg";
 import thirdSlide from "../../images/recommendations/видео 1.jpg";
-import circle from "../../images/recommendations/circle.svg";
-import arrows from "../../images/recommendations/arrows.svg";
+import RecommendationPreview from "../Recommendations";
+import IReccomendationPreview from "./RecommendationPreview/interface";
+import ArrowChevronIcon from "@/images/icons/ArrowChevronIcon";
 
 export default function Recommendations() {
+  const recommendationsPreviews: IReccomendationPreview[] = [
+    { title: "", info: "", image: firstSlide },
+    {
+      title: "Рент-зона",
+      info: "Аренда строительной техники",
+      image: secondSlide,
+    },
+    { title: "", info: "", image: thirdSlide },
+  ];
   return (
-    <section className={styles["recommendations"]}>
-      <div className={styles["title"]}>
+    <section className={styles["recommendations__container"]}>
+      <span className={styles["recommendations__title"]}>
         Отзывы и рекомендации
-        <div className={styles["arrows"]}>
-          <Image src={arrows} width={40} height={40} alt={"arrows"} />
-        </div>
+      </span>
+      <div className={styles["recommendations__arrows"]}>
+        <button className={styles["arrows-btn"]} type="button">
+          <ArrowChevronIcon direction="left" />
+        </button>
+        <button className={styles["flipping-btn"]} type="button">
+          <ArrowChevronIcon direction="right" />
+        </button>
       </div>
-      <div className={styles["recommendations_body"]}>
-        <div className={styles["carousel"]}>
-          <Image
-            src={firstSlide}
-            width={200}
-            height={200}
-            alt={"preview-one"}
-            className={styles["carousel-cell__left"]}
-          />
-          <Image
-            src={secondSlide}
-            width={712}
-            height={423}
-            alt={"preview-two"}
-            className={styles["carousel-cell__center"]}
-          />
-          <Image
-            src={thirdSlide}
-            width={200}
-            height={175}
-            alt={"preview-three"}
-            className={styles["carousel-cell__right"]}
-          />
-        </div>
-        <div className={styles["information"]}>
-          <Image
-            src={circle}
-            width={40}
-            height={30}
-            alt={"circle"}
-            className={styles["information-picture"]}
-          />
-          <div className={styles["information-name"]}>Рент-зона</div>
-          <div className={styles["information-description"]}>
-            Аренда строительной техники
-          </div>
-        </div>
+      <div className={styles["recommendations__card-box"]}>
+        {recommendationsPreviews.map((previews) => (
+          <RecommendationPreview key={crypto.randomUUID()} {...previews} />
+        ))}
       </div>
     </section>
   );
