@@ -102,7 +102,7 @@
 				content: '';
 				border-bottom: 2px solid #eb5757;
 				position: absolute;
-				top: -1px;
+				top: -3px;
 				right: -4px;
 				width: 104%;
 				height: 50%;
@@ -121,11 +121,12 @@
 			width: calc(100% - 48px);
 			border-radius: 5px;
 			border: none;
-			background: var(--color-lilac);
+			background-color: var(--color-lilac);
 			text-align: center;
-			font-family: var(--rg-font);
-			font-size: var(--text-base);
-			font-weight: 600;
+			color: var(--color-text);
+			font: var(--font-title-description);
+			line-height: 100%;
+			cursor: pointer;
 
 			&:hover {
 				background-color: #b3b9fc;
@@ -143,6 +144,7 @@
 			width: 37px;
 			border-radius: 5px;
 			outline: 1px solid rgba(255, 255, 255, 0.7);
+			cursor: pointer;
 		}
 	}
 }
