@@ -8,7 +8,7 @@ export default function Modal() {
 	return (
 		<div className={styles['modal-back']}>
 			<div className={styles['modal']}>
-				<button type="button" className={styles['close-btn']}>
+				<button type="button" className={styles['modal__close-btn']}>
 					<IconClose />
 				</button>
 				<h3 className={styles['modal__title']}>Заявка на создание сайта</h3>

@@ -4,6 +4,7 @@ import Contacts from '../Contacts';
 import Footer from '../Footer';
 import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
+import Modal from '../Modal';
 import Portfolio from '../Portfolio';
 import Services from '../Services';
 import Choice from '../Сhoice/index';
@@ -15,6 +16,7 @@ export default function MainPage() {
 			{/* Header */}
 			<main className={styles.main}>
 				{/* <ComponentsContainer > */}
+				<Modal />
 				<AboutUs />
 				{/* Услуги */}
 				{/* Портфолио */}
