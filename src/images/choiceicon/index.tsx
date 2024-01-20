@@ -1,4 +1,4 @@
-export default function IconStar({ fill, id }: { fill: string; id: string }) {
+export default function IconStar({ fill, id }: { fill: string; id: number }) {
 	return (
 		<svg
 			width="24"
