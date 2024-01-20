@@ -1,6 +1,6 @@
 import { data } from '@/constants/Choice';
 
-import ChoiceCard from '../ChoiceCard';
+import ChoiceCard from './ChoiceCard';
 import styles from './style.module.scss';
 
 export default function Choice() {

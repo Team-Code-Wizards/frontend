@@ -1,7 +1,7 @@
 import { data } from '@/constants/Modal';
-import IconClose from '@/images/modalicon/IconClose';
+import IconClose from '@/images/modal/IconClose';
 
-import ModalItem from '../ModalItem';
+import ModalItem from './ModalItem';
 import styles from './style.module.scss';
 
 export default function Modal() {
