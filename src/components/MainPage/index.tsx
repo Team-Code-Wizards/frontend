@@ -1,11 +1,10 @@
 import AboutUs from '../AboutUs';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
-import Header from '../Header';
 import Footer from '../Footer';
 import Guarantee from '../Guarantee/index';
+import Header from '../Header';
 import Interaction from '../Interaction/index';
-import Modal from '../Modal';
 import Portfolio from '../Portfolio';
 import Services from '../Services';
 import Choice from '../Сhoice/index';
@@ -16,7 +15,7 @@ export default function MainPage() {
 		<>
 			<Header />
 			<main className={styles.main}>
-				<Modal />
+				{/*<Modal />*/}
 				<ComponentsContainer>
 					<AboutUs />
 					<Services />
