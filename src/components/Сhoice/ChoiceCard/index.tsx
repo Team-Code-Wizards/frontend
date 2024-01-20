@@ -1,9 +1,9 @@
-import IconStar from '@/images/choiceicon';
+import IconStar from '@/images/choice';
 
 import { IChoiceItemProps } from './interface';
 import styles from './style.module.scss';
 
-export default function ChooseCard({ item }: IChoiceItemProps) {
+export default function ChoiceCard({ item }: IChoiceItemProps) {
 	return (
 		<li
 			className={`${styles['choice-card']} ${

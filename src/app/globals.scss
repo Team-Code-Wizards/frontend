@@ -43,6 +43,7 @@
 
 	--line-height: 120%;
 	--line-height-big: 130%;
+	--font-description-letter: -0.48px;
 
 	//  === Font sets ===
 
@@ -54,13 +55,13 @@
 		sans-serif;
 
 	// === Descriptions ===
-	--font-description-main: 400 var(--text-sm) / var(--line-height-big)
-			var(--cygre-font),
-		sans-serif;
 	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
+	--font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
+	--font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--cygre-font), sans-serif;
 
 	// Colors
 	--color-bg-black: #070606;
+	--color-gray-bg: #f2f2f2;
 	--color-bg-white: #ffffff;
 	--color-bg-ivory: #ffffff1a;
 

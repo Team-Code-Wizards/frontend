@@ -1,9 +1,9 @@
 import { data } from '@/constants/Choice';
 
-import ChoiceCard from '../ChoiceCard';
+import ChoiceCard from './ChoiceCard';
 import styles from './style.module.scss';
 
-export default function Choose() {
+export default function Choice() {
 	return (
 		<div className={styles.choice}>
 			<h2 className={styles.choice__title}>Почему нас выбирают:</h2>
