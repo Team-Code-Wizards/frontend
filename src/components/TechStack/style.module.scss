@@ -5,7 +5,7 @@
 		align-items: center;
 		row-gap: 60px;
 		width: 100%;
-		padding: 80px;
+		padding: 90px;
 		background-image: url('../../images/techStack/tech-stack-background.png');
 		background-position: center;
 		background-size: contain;
@@ -24,26 +24,28 @@
 		flex-direction: column;
 		row-gap: 20px;
 		font-family: var(--rg-font);
-		line-height: 120%;
 	}
 
 	&__title {
 		font-size: 48px;
+		line-height: 0%;
 	}
 
 	&__subtitle {
 		font-size: 20px;
+		line-height: 300%;
 	}
 
 	&__short-description {
+		margin-top: -10px;
 		display: flex;
 		column-gap: 10px;
 		font-family: var(--cygre-font);
 		font-size: 16px;
 		color: var(--color-lilac);
-		line-height: 130%;
+		line-height: 115%;
 		letter-spacing: -0.48px;
-		flex-basis: 50%;
+		flex-basis: calc(50% - 10px);
 		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(7.5px);
 		border-radius: 10px;
@@ -57,7 +59,8 @@
 	&__main {
 		display: flex;
 		flex-direction: column;
-		max-width: 1280px;
+		// max-width: 1280px;
+		// height: 513px;
 		row-gap: 40px;
 	}
 }
