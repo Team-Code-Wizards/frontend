@@ -1,7 +1,8 @@
 .guarantee {
 	position: relative;
 	margin: 0 auto;
-	max-width: var(--max-width);
+	// max-width: var(--max-width);
+	width: 100%;
 	padding: 70px 80px 92px;
 	background-image: url('../../images/guarantee/background.png');
 	background-repeat: no-repeat;
@@ -42,5 +43,10 @@
 		justify-content: center;
 		gap: 20px;
 		list-style: none;
+	}
+
+	&__container {
+		max-width: var(--max-width-content);
+		margin: 0 auto;
 	}
 }

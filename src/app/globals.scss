@@ -23,12 +23,9 @@
 	font-style: normal;
 }
 
-* {
-	box-sizing: border-box;
-}
-
 :root {
 	--max-width: 1440px;
+	--max-width-content: 1280px;
 
 	//  === Fonts ===
 	--rg-font: 'RG-StandardSemibold';

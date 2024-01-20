@@ -1,5 +1,5 @@
 export interface IChoiceItem {
-	id: string;
+	id: number;
 	title: string;
 	description?: string;
 	modifier: string;

@@ -9,7 +9,7 @@ export default function Services() {
 				<h2 className={styles['services__title']}>Услуги</h2>
 				<div className={styles['services__cards']}>
 					{services.map((service) => (
-						<div key={service.title} className={styles['service-card']}>
+						<div key={service.id} className={styles['service-card']}>
 							<div className={styles['service-card__content']}>
 								<h4>{service.title}</h4>
 								{service.content.map((text) => (
