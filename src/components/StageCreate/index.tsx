@@ -1,77 +1,38 @@
+import IconClock from '@/images/stageCreate';
+
 import styles from './style.module.scss';
 
 export default function StageCreate() {
 	return (
-		<div className={styles.stageCreate}>
-			<svg
-				className={styles.icon}
-				width="78"
-				height="142"
-				viewBox="0 0 78 142"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<g clip-path="url(#clip0_890_3203)">
-					<path
-						d="M38.9696 50.6463V70.751L55.2075 80.126M38.9696 106.939C22.8272 97.6196 9.74121 73.8623 9.74121 53.876C9.74121 33.8896 22.8272 25.2427 38.9696 34.5625C55.1119 43.8823 68.1979 67.6396 68.1979 87.626C68.1979 107.612 55.1119 116.259 38.9696 106.939Z"
-						stroke="#263694"
-						stroke-width="7.5"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/>
-				</g>
-			</svg>
-
-			<div className={styles.stageCreate__block}>
-				<h2 className={styles.stageCreate__block_title}>
-					Этапы создания сайта
-				</h2>
-				<div className={styles.stageCreate__block_stages}>
-					<p
-						className={
-							styles.stageCreate__block_stage +
-							' ' +
-							styles.stageCreate__block_stage__one
-						}
+		<section className={styles['stage']}>
+			<div className={styles['stage__block']}>
+				<h2 className={styles['stage__title']}>Этапы создания сайта</h2>
+				<span className={styles['stage__icon-wrapper']}>
+					<IconClock />
+				</span>
+				<div className={styles['stage__wrapper']}>
+					<button
+						className={`${styles['stage__item']} ${styles['stage__item_active']}`}
 					>
 						1
-					</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p className={styles.stageCreate__block_stage}>2</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p className={styles.stageCreate__block_stage}>3</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p className={styles.stageCreate__block_stage}>4</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p className={styles.stageCreate__block_stage}>5</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p className={styles.stageCreate__block_stage}>6</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p className={styles.stageCreate__block_stage}>7</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p className={styles.stageCreate__block_stage}>8</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p className={styles.stageCreate__block_stage}>9</p>
-					<p className={styles.stageCreate__block_line}></p>
-					<p
-						className={
-							styles.stageCreate__block_stage +
-							' ' +
-							styles.stageCreate__block_stage__ten
-						}
-					>
-						10
-					</p>
+					</button>
+					<button className={styles['stage__item']}>2</button>
+					<button className={styles['stage__item']}>3</button>
+					<button className={styles['stage__item']}>4</button>
+					<button className={styles['stage__item']}>5</button>
+					<button className={styles['stage__item']}>6</button>
+					<button className={styles['stage__item']}>7</button>
+					<button className={styles['stage__item']}>8</button>
+					<button className={styles['stage__item']}>9</button>
+					<button className={styles['stage__item']}>10</button>
 				</div>
-				<p className={styles['stageCreate__block_plan']}>Планирование</p>
-				<p className={styles['stageCreate__block_description']}>
+				<h3 className={styles['stage__heading']}>Планирование</h3>
+				<p className={styles['stage__description']}>
 					Определение целей, целевой аудитории и основных требований к сайту,
 					создание структуры сайта, и разработка технического задания.
 				</p>
-				<button className={styles['stageCreate__block_btn']}>
-					Следующий этап
-				</button>
+				<button className={styles['stage__btn']}>Следующий этап</button>
 			</div>
-		</div>
+		</section>
 	);
 }
