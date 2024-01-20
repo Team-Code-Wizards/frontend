@@ -1,0 +1,91 @@
+.modal-back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: #0706067f;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: 100vh;
+	backdrop-filter: blur(7.5px);
+	padding: 80px 0;
+}
+
+.modal {
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+	background-color: var(--color-bg-white);
+	border-radius: 20px;
+	padding: 30px 40px 40px;
+	min-width: 608px;
+
+	&__close-btn {
+		position: absolute;
+		margin: auto;
+		top: 20px;
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		background-color: var(--color-lilac);
+		border: none;
+	
+		transition: background-color .3s ease-in-out;
+	
+		&:hover {
+			background-color: #A6AEFF;
+		}
+	
+		&:active {
+			background-color: #CCD1FD;
+		}
+	
+		&:focus {
+			background-color: #A6AEFF;
+		}
+	
+		&:focus-visible {
+			outline: none;
+		}
+	}
+
+	&__title {
+		font: var(--font-block-title);
+		font-size: var(--text-lg);
+		margin-bottom: 28px;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__btn {
+		font: var(--font-button-rg);
+		color: var(--color-text);
+		padding: 16.7px 25px;
+		background-image: var(--color-gradient-button);
+		background-size: 400%;
+		background-position: 99%;
+		border-radius: 5px;
+		border: none;
+
+		transition: 0.3s background-position ease-in-out;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background-position: 50%;
+		}
+
+		&:active {
+			transition: 0.1s background-position ease-in-out;
+			background-position: 10%;
+		}
+	}
+}
