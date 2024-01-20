@@ -1,3 +1,4 @@
+/* TODO: doesn't work normalize */
 @import 'normalize.css';
 
 @font-face {
@@ -20,6 +21,10 @@
 		url('../fonts/Cygre-Bold.woff') format('woff'),
 		url('../fonts/Cygre-Bold.ttf') format('ttf');
 	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 :root {

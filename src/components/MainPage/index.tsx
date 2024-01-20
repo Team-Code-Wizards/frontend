@@ -2,6 +2,7 @@ import AboutUs from '../AboutUs';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Footer from '../Footer';
+import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
 import Services from '../Services';
@@ -22,7 +23,7 @@ export default function MainPage() {
 				{/* Этапы создания */}
 				{/* Отзывы и рекомендации */}
 				<Choice />
-				{/* Гарантии */}
+				<Guarantee />
 				<Interaction />
 				{/* Тех арсенал */}
 				<TechStack />
