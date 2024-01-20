@@ -2,8 +2,8 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		max-width: 1440px;
-		min-height: 540px;
+		max-width: var(--max-width);
+		padding-bottom: 40px;
 		padding-left: 80px;
 		color: var(--color-text);
 		margin: 0 auto;
@@ -15,7 +15,7 @@
 	}
 
 	&__btn-group {
-		color: white;
+		color: var(--color-text);
 		display: flex;
 		margin-top: 20px;
 		column-gap: 10px;

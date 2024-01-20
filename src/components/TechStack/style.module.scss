@@ -16,7 +16,7 @@
 	&__head {
 		display: flex;
 		justify-content: space-between;
-		max-width: 1280px;
+		max-width: var(--block-max-width);
 	}
 
 	&__banner {
@@ -27,12 +27,12 @@
 	}
 
 	&__title {
-		font-size: 48px;
+		font-size: var(--text-xl);
 		line-height: 0%;
 	}
 
 	&__subtitle {
-		font-size: 20px;
+		font-size: var(--text-base);
 		line-height: 300%;
 	}
 
@@ -59,8 +59,6 @@
 	&__main {
 		display: flex;
 		flex-direction: column;
-		// max-width: 1280px;
-		// height: 513px;
 		row-gap: 40px;
 	}
 }
