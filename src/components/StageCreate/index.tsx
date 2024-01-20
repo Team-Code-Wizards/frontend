@@ -12,26 +12,47 @@ export default function StageCreate() {
 				</span>
 				<div className={styles['stage__wrapper']}>
 					<button
+						type="button"
 						className={`${styles['stage__item']} ${styles['stage__item_active']}`}
 					>
 						1
 					</button>
-					<button className={styles['stage__item']}>2</button>
-					<button className={styles['stage__item']}>3</button>
-					<button className={styles['stage__item']}>4</button>
-					<button className={styles['stage__item']}>5</button>
-					<button className={styles['stage__item']}>6</button>
-					<button className={styles['stage__item']}>7</button>
-					<button className={styles['stage__item']}>8</button>
-					<button className={styles['stage__item']}>9</button>
-					<button className={styles['stage__item']}>10</button>
+					<button type="button" className={styles['stage__item']}>
+						2
+					</button>
+					<button type="button" className={styles['stage__item']}>
+						3
+					</button>
+					<button type="button" className={styles['stage__item']}>
+						4
+					</button>
+					<button type="button" className={styles['stage__item']}>
+						5
+					</button>
+					<button type="button" className={styles['stage__item']}>
+						6
+					</button>
+					<button type="button" className={styles['stage__item']}>
+						7
+					</button>
+					<button type="button" className={styles['stage__item']}>
+						8
+					</button>
+					<button type="button" className={styles['stage__item']}>
+						9
+					</button>
+					<button type="button" className={styles['stage__item']}>
+						10
+					</button>
 				</div>
 				<h3 className={styles['stage__heading']}>Планирование</h3>
 				<p className={styles['stage__description']}>
 					Определение целей, целевой аудитории и основных требований к сайту,
 					создание структуры сайта, и разработка технического задания.
 				</p>
-				<button className={styles['stage__btn']}>Следующий этап</button>
+				<button type="button" className={styles['stage__btn']}>
+					Следующий этап
+				</button>
 			</div>
 		</section>
 	);
