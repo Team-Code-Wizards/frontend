@@ -1,6 +1,5 @@
 .modal-back {
 	position: fixed;
-	overflow-y: auto;
 	top: 0;
 	left: 0;
 	z-index: 1;
@@ -20,15 +19,16 @@
     z-index: 10;
 	background-color: var(--color-bg-white);
 	border-radius: 20px;
-	padding: 74px 40px 40px;
+	padding: 30px 40px 40px;
+	min-width: 608px;
 
 	&__close-btn {
 		position: absolute;
 		margin: auto;
 		top: 20px;
 		right: 20px;
-		width: 45px;
-		height: 45px;
+		width: 40px;
+		height: 40px;
 		border-radius: 100%;
 		background-color: var(--color-lilac);
 		border: none;
@@ -54,7 +54,8 @@
 
 	&__title {
 		font: var(--font-block-title);
-		margin-bottom: 40px;
+		font-size: var(--text-lg);
+		margin-bottom: 28px;
 	}
 
 	&__form {
