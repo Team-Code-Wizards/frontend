@@ -16,7 +16,7 @@
 		display: block;
 		all: unset;
 		line-height: 56%;
-		font-size: var(--text-xl);
+		font-size: 42px;
 	}
 
 	&__body {
@@ -53,9 +53,7 @@
 	}
 
 	&:nth-of-type(3) {
-		display: flex;
-		flex-direction: column;
-		flex-basis: 21%;
+		flex-basis: 20%;
 	}
 
 	&:nth-of-type(4) {
@@ -73,7 +71,6 @@
 	width: 100%;
 	border: 1px solid white;
 	border-radius: 10px;
-	align-self: stretch;
 	transition: all 0.3s ease-out;
 
 	&:hover {

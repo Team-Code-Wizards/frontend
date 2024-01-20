@@ -3,7 +3,7 @@
 import { FormEvent } from 'react';
 
 import ArrowIcon from '@/images/icons/ArrowIcon';
-import TelegramBgIcon from '@/images/icons/TelegramBgIcon';
+import TelegramIcon from '@/images/icons/TelegramIcon';
 import ViberIcon from '@/images/icons/ViberIcon';
 import WhatsappIcon from '@/images/icons/WhatsappIcon';
 
@@ -19,7 +19,7 @@ export default function Contacts() {
 
 	return (
 		<div className={styles['contacts']}>
-			<h1 className={styles['contacts__title']}>Контакты</h1>
+			<h2 className={styles['contacts__title']}>Контакты</h2>
 			<div className={styles['contacts__body']}>
 				<ul className={styles['link-group']}>
 					<li className={styles['link-box']}>
@@ -54,7 +54,7 @@ export default function Contacts() {
 					<li className={styles['link-box']}>
 						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
-								<TelegramBgIcon />
+								<TelegramIcon />
 							</span>
 							<span className={styles['link__item_no-margin']}>telegram</span>
 						</a>
