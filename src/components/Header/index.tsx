@@ -6,21 +6,28 @@ import styles from './style.module.scss';
 export default function Header() {
 	return (
 		<header className={styles['header']}>
-			{/*<div className={styles['header__container']}>*/}
-			<h1>
-				<span>Code Wizards</span>
-				<Image src={LogoHeader} alt={'Logo Code Wizards'} />
-			</h1>
-			<nav className={styles['header__links']}>
-				<a href="">О нас</a>
-				<a href="">Услуги</a>
-				<a href="">Наши работы</a>
-				<a href="">Гарантии</a>
-				<a href="">Отзывы</a>
-				<a href="">Контакты</a>
-			</nav>
+			<Image src={LogoHeader} alt={'Logo Code Wizards'} />
+			<ul className={styles['header__links']}>
+				<li>
+					<a href="">О нас</a>
+				</li>
+				<li>
+					<a href="">Услуги</a>
+				</li>
+				<li>
+					<a href="">Наши работы</a>
+				</li>
+				<li>
+					<a href="">Гарантии</a>
+				</li>
+				<li>
+					<a href="">Отзывы</a>
+				</li>
+				<li>
+					<a href="">Контакты</a>
+				</li>
+			</ul>
 			<a href="tel:+79504241338">+7 (950) 424-13-38</a>
-			{/*</div>*/}
 		</header>
 	);
 }

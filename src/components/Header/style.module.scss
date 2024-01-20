@@ -1,47 +1,45 @@
 .header {
-  width: 100%;
   max-width: 1280px;
   height: 48px;
   display: flex;
-  //flex-direction: column;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   margin: 20px auto 0;
   border-radius: 10px;
   padding: 0 20px;
-  font: var(--font-description-main);
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 46.7px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 46.7px 0 rgba(28, 28, 28, 0.25);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur( 4px );
+  justify-content: space-between;
+  font: var(--font-description-main);
+  width: 100%;
 
-  //&__container {
-   // display: flex;
-    //flex-direction: row;
-    //justify-content: space-between;
-    //align-items: center;
-    //min-height: 48px;
-    //font: var(--font-description-main);
-    //width: 100%;
+  &__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    span {
-      display: none;
-    }
+    li {
+      margin-right: 10px;
 
-  a {
-    font-size: var(--text-sm);
-    font-weight: 700;
-    line-height: 27.17;
-    color: var(--color-text);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    &:hover{
-      color: var(--color-lilac);
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        letter-spacing: -0.48px;
+        color: var(--color-text);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--color-lilac);
+        }
+      }
     }
   }
-
-&__links {
   a {
     margin: 0 10px;
     letter-spacing: -0.48px;
@@ -49,31 +47,17 @@
     text-decoration: none;
     transition: color 0.2s ease;
 
-    &:hover{
+    &:last-child {
+      &:not(.header__links a) {
+        font-size: var(--text-sm);
+        font-weight: 700;
+        line-height: 27.17;
+      }
+    }
+
+    &:hover {
       color: var(--color-lilac);
     }
   }
 }
-      //a {
-      //  margin: 0 10px;
-      //  letter-spacing: -0.48px;
-      //  color: var(--color-text);
-      //  text-decoration: none;
-      //  transition: color 0.2s ease;
-
-        //&:last-child {
-        //  font-size: var(--text-sm);
-        //  font-weight: 700;
-        //  line-height: 27.17;
-        //}
-        //&:hover{
-        //  color: var(--color-lilac);
-       // }
-
-      //}
-  //}
-}
-
-
-
 
