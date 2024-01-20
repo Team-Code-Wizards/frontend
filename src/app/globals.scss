@@ -1,3 +1,4 @@
+/* TODO: doesn't work normalize */
 @import 'normalize.css';
 
 @font-face {
@@ -22,6 +23,10 @@
 	font-style: normal;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 :root {
 	--max-width: 1440px;
 
@@ -38,31 +43,37 @@
 
 	--line-height: 120%;
 	--line-height-big: 130%;
+	--font-description-letter: -0.48px;
 
 	//  === Font sets ===
 
 	// === Titles ===
-	--font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font), sans-serif;
-	--font-title-description: 600 var(--text-base) / var(--line-height) var(--rg-font), sans-serif;
+	--font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
+		sans-serif;
+	--font-title-description: 600 var(--text-base) / var(--line-height)
+			var(--rg-font),
+		sans-serif;
 
 	// === Descriptions ===
-	--font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--cygre-font), sans-serif;
 	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
+	--font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
+	--font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--cygre-font), sans-serif;
 
 	// Colors
 	--color-bg-black: #070606;
+	--color-gray-bg: #f2f2f2;
 	--color-bg-white: #ffffff;
 	--color-bg-ivory: #ffffff1a;
 
-  --color-lilac: #8792fc;
+	--color-lilac: #8792fc;
 	--color-purple: #5b4dab;
 	--color-pink: #9b54d4;
 	--color-blue: #263694;
-  --color-green: #27ae60;
-  --color-red: #eb5757;
+	--color-green: #27ae60;
+	--color-red: #eb5757;
 
-  --color-text: #ffffff;
-  
+	--color-text: #ffffff;
+
 	--color-purple-gradient: linear-gradient(
 		93deg,
 		#362a64 18.25%,
