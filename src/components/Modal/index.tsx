@@ -8,15 +8,17 @@ export default function Modal() {
 	return (
 		<div className={styles['modal-back']}>
 			<div className={styles['modal']}>
-				<button className={styles['close-btn']}>
+				<button type="button" className={styles['close-btn']}>
 					<IconClose />
 				</button>
-				<h2 className={styles['modal__title']}>Заявка на создание сайта</h2>
+				<h3 className={styles['modal__title']}>Заявка на создание сайта</h3>
 				<form className={styles['modal__form']}>
 					{data.map((item) => {
 						return <ModalItem key={item.title} item={item} />;
 					})}
-					<button className={styles['modal__btn']}>Отправить</button>
+					<button type="submit" className={styles['modal__btn']}>
+						Отправить
+					</button>
 				</form>
 			</div>
 		</div>

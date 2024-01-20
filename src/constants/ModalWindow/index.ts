@@ -4,6 +4,7 @@ export const data: IModalItem[] = [
 	{
 		title: 'Имя',
 		placeholder: 'Иван Иванов',
+		type: 'text',
 	},
 	{
 		title: 'Телефон',

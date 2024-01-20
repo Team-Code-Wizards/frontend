@@ -1,6 +1,6 @@
 export interface IModalItem {
 	title: string;
 	placeholder: string;
-	type?: string;
+	type: string;
 	required?: boolean;
 }

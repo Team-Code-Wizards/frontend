@@ -32,6 +32,7 @@ export default function ModalItem({ item }: IModalItemProps) {
 					placeholder={item.placeholder}
 					className={styles['modal-item__item']}
 					required={item.required ? true : false}
+					type={item.type}
 				/>
 			)}
 		</div>
