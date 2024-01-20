@@ -1,0 +1,46 @@
+.guarantee {
+	position: relative;
+	margin: 0 auto;
+	max-width: var(--max-width);
+	padding: 70px 80px 92px;
+	background-image: url('../../images/guarantee/background.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	backdrop-filter: blur(28px);
+
+	&__gradient {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		opacity: 0.9;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+				180deg,
+				rgba(7, 6, 6, 0) 50%,
+				var(--color-bg-black) 100%
+			),
+			linear-gradient(0deg, rgba(7, 6, 6, 0) 50%, var(--color-bg-black) 100%);
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 24px;
+		font: var(--font-block-title);
+		line-height: 120%;
+		color: var(--color-bg-white);
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		list-style: none;
+	}
+}
