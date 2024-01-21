@@ -7,6 +7,7 @@ import Header from '../Header';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
 import Services from '../Services';
+import StageCreate from '../StageCreate';
 import TechStack from '../TechStack';
 import Choice from '../Сhoice/index';
 import styles from './style.module.scss';
@@ -22,7 +23,7 @@ export default function MainPage() {
 					<Services />
 					<Portfolio />
 				</ComponentsContainer>
-				{/* Этапы создания */}
+				<StageCreate />
 				{/* Отзывы и рекомендации */}
 				<Choice />
 				<Guarantee />
