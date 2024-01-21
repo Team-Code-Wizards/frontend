@@ -8,8 +8,8 @@ export default function ContactsForm({ onSubmit }: IContactsFormProps) {
 	return (
 		<div className={style['form-box']}>
 			<form className={style['form']} onSubmit={onSubmit}>
-				{inputs.map((el) => (
-					<Input key={crypto.randomUUID()} {...el} />
+				{inputs.map((el, index) => (
+					<Input key={index} {...el} />
 				))}
 				<span className={style['form__notice']}>*В формате Документ Word</span>
 				<button className={style['form__button']} type="submit">

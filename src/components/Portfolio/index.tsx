@@ -17,8 +17,8 @@ export default function Portfolio() {
 				</button>
 			</div>
 			<div className={style['portfolio__card-box']}>
-				{portfolioCards.map((el) => (
-					<PortfolioCard key={crypto.randomUUID()} {...el} />
+				{portfolioCards.map((el, index) => (
+					<PortfolioCard key={index} {...el} />
 				))}
 			</div>
 		</div>
