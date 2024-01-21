@@ -1,3 +1,5 @@
+import SiteDescriptionModal from '@/components/SiteDescriptionModal';
+
 import AboutUs from '../AboutUs';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
@@ -20,6 +22,7 @@ export default function MainPage() {
 				<ComponentsContainer>
 					<AboutUs />
 					<Services />
+					<SiteDescriptionModal />
 					<Portfolio />
 				</ComponentsContainer>
 				{/* Этапы создания */}
