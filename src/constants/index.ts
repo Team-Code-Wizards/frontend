@@ -5,3 +5,4 @@ import './Interaction/index';
 import './ModalWindow/index';
 import './Portfolio/index';
 import './Services';
+import './TechStack/index';
