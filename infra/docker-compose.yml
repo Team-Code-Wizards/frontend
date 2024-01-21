@@ -1,7 +1,8 @@
 services:
   frontend:
-    image: govard/code_wizards
+    #image: govard/code_wizards
+    image: deamanda/code_wizards_front
     pull_policy: always
     restart: always
     ports:
-      - '3000:80'
+      - '3000:3000'
