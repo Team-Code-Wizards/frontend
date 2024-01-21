@@ -3,7 +3,6 @@ import style from '@/components/Contacts/ContactsForm/style.module.scss';
 
 export const inputs: IInput[] = [
 	{
-		id: 1,
 		inputType: 'default',
 		className: style['form__input'],
 		type: 'text',
@@ -11,7 +10,6 @@ export const inputs: IInput[] = [
 		placeholder: 'Имя',
 	},
 	{
-		id: 2,
 		inputType: 'default',
 		className: style['form__input'],
 		type: 'tel',
@@ -19,7 +17,6 @@ export const inputs: IInput[] = [
 		placeholder: 'Телефон',
 	},
 	{
-		id: 3,
 		inputType: 'default',
 		className: style['form__input'],
 		type: 'email',
@@ -27,14 +24,12 @@ export const inputs: IInput[] = [
 		placeholder: 'E-mail',
 	},
 	{
-		id: 4,
 		inputType: 'textarea',
 		className: style['form__input'],
 		name: 'clientMessage',
 		placeholder: 'Сообщение',
 	},
 	{
-		id: 5,
 		inputType: 'inputFile',
 		className: style['form__input'],
 		type: 'file',

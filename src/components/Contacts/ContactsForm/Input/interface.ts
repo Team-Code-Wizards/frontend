@@ -1,8 +1,6 @@
 import { InputHTMLAttributes } from 'react';
 
-export default interface IInput
-	extends Omit<Partial<InputHTMLAttributes<HTMLInputElement>>, 'id'> {
-	id: number;
+export default interface IInput extends InputHTMLAttributes<HTMLInputElement> {
 	inputType: 'textarea' | 'inputFile' | 'default';
 	labelText?: string;
 	labelClassName?: string;

@@ -1,4 +1,5 @@
 import { inputs } from '@/constants/Contacts';
+import { v4 as uuidv4 } from 'uuid';
 
 import Input from './Input';
 import IContactsFormProps from './interface';
@@ -9,7 +10,7 @@ export default function ContactsForm({ onSubmit }: IContactsFormProps) {
 		<div className={style['form-box']}>
 			<form className={style['form']} onSubmit={onSubmit}>
 				{inputs.map((el) => (
-					<Input key={el.id} {...el} />
+					<Input key={uuidv4()} {...el} />
 				))}
 				<span className={style['form__notice']}>*В формате Документ Word</span>
 				<button className={style['form__button']} type="submit">
