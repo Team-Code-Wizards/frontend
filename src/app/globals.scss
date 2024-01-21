@@ -29,7 +29,8 @@
 
 :root {
 	--max-width: 1440px;
-
+	--block-max-width: 1280px;
+	
 	//  === Fonts ===
 	--rg-font: 'RG-StandardSemibold';
 	--cygre-font: 'Cygre';
@@ -70,12 +71,14 @@
 	--color-purple: #5b4dab;
 	--color-pink: #9b54d4;
 	--color-blue: #263694;
-  	--color-green: #27ae60;
-  	--color-red: #eb5757;
-	--color-gray: #ffffff80;
+	--color-green: #27ae60;
+	--color-red: #eb5757;
 
-  	--color-text: #ffffff;
-  
+	--color-text: #ffffff;
+	--color-input: #1b1c3380;
+	--color-input-active: #e1e1e1;
+	--color-text-input-active: #1b1c33;
+
 	--color-purple-gradient: linear-gradient(
 		93deg,
 		#362a64 18.25%,
@@ -94,9 +97,6 @@
 
 	// == Gap ==
 	--grid-gap: 20px;
-	--color-input: #1b1c3380;
-	--color-input-active: #e1e1e1;
-	--color-text-input-active: #1b1c33;
 }
 
 .body {
