@@ -3,8 +3,8 @@ import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Footer from '../Footer';
 import Guarantee from '../Guarantee/index';
+import Header from '../Header';
 import Interaction from '../Interaction/index';
-import Modal from '../Modal';
 import Portfolio from '../Portfolio';
 import Services from '../Services';
 import TechStack from '../TechStack';
@@ -14,9 +14,9 @@ import styles from './style.module.scss';
 export default function MainPage() {
 	return (
 		<>
-			{/* Header */}
+			<Header />
 			<main className={styles.main}>
-				<Modal />
+				{/*<Modal />*/}
 				<ComponentsContainer>
 					<AboutUs />
 					<Services />
