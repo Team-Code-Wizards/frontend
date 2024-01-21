@@ -28,7 +28,7 @@
       }
 
       a {
-        letter-spacing: -0.48px;
+        letter-spacing: var(--font-description-letter);
         color: var(--color-text);
         text-decoration: none;
         transition: color 0.2s ease;
@@ -48,7 +48,6 @@
       &:not(.header__links a) {
         font-size: var(--text-sm);
         font-weight: 700;
-        line-height: 27.17;
       }
     }
 
