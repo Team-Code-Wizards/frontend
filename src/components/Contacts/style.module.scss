@@ -3,7 +3,7 @@
 	flex-direction: column;
 	row-gap: 65px;
 	width: 100%;
-	max-width: 1280px;
+	max-width: var(--block-max-width);
 	padding: 3.125rem;
 	border-radius: 30px;
 	background: rgba(255, 255, 255, 0.1);

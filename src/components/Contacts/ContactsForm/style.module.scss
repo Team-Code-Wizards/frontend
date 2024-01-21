@@ -53,6 +53,7 @@
 	}
 
 	&__input {
+		width: 100%;
 		padding: 20px 10px;
 		height: 65px;
 		border: none;
@@ -63,15 +64,6 @@
 			font-size: var(--text-sm);
 			letter-spacing: -0.48px;
 			color: var(--color-input);
-		}
-
-		&:first-of-type {
-			width: 100%;
-		}
-
-		&:nth-of-type(2),
-		&:nth-of-type(3) {
-			width: 100%;
 		}
 
 		&[type='file'] {
