@@ -1,30 +1,33 @@
 .recommendations {
   &__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 1440px;
-    min-height: 540;
+    min-height: 540px;
     padding-left: 80px;
     background-image: url(../../images/recommendations/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--color-text);
+    flex-wrap: wrap;
   }
 
   &__title {
-    display: block;
-    font-size: 42px;
+    font: var(--font-block-title);
+    margin: 0;
+    margin-bottom: 46px;
+    color: var(--color-text);
   }
 
   &__arrows {
     display: flex;
     margin-top: 20px;
+    margin-left: 10px;
     column-gap: 10px;
   }
 
   &__preview-box {
     display: flex;
-    column-gap: 20px;
     margin-top: 40px;
   }
 }
@@ -48,15 +51,20 @@
   }
 }
 
-.information {
+.card__details {
   display: flex;
-  position: relative;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
 
-  &-picture {
-    display: block;
+  &-title {
+    font-family: var(--rg-font);
+    color: var(--color-text);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
   }
-  &-name {
-    display: block;
+  &-information {
+    display: flex;
   }
 }
