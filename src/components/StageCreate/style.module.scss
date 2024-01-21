@@ -35,7 +35,6 @@
         position: relative;
         background-color: transparent;
         border-radius: 100%;
-        padding: 7px 0;
         border: 1px solid var(--color-gray);
         color: var(--color-gray);
         font: var(--font-stage-btn);
@@ -85,7 +84,7 @@
         border: none;
         color: var(--color-text);
         font: var(--font-button-rg);
-
+        cursor: pointer;
         transition: 0.3s background-position ease-in-out;
 
 		&:focus {
