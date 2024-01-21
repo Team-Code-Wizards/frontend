@@ -14,10 +14,7 @@
 
 .modal {
   background-color: var(--color-bg-black);
-  font-weight: 400;
-  font-size: var(--text-sm);
-  font-family: var(--cygre-font);
-  line-height: 20.8px;
+  font: var(--font-description-main);
   position: relative;
   max-width: 766px;
   border-radius: 20px;
@@ -26,7 +23,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 53px;
-  box-sizing: border-box;
 
   &__close-btn {
       position: absolute;
