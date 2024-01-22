@@ -1,3 +1,3 @@
-export default function Form() {
-	return <form></form>;
+export default function Form({ className }: { className: string }) {
+	return <form className={className}></form>;
 }
