@@ -1,4 +1,5 @@
 import SparklesIcon from '@/images/icons/SparklesIcon';
+import { v4 as uuidv4 } from 'uuid';
 
 import Card from './Card';
 import ICardLine from './interface';
@@ -13,7 +14,7 @@ export default function CardLine({ title, cards }: ICardLine) {
 			</h4>
 			<ul className={style['card-line__list']}>
 				{cards.map((el) => (
-					<Card key={el.id} {...el} />
+					<Card key={uuidv4()} {...el} />
 				))}
 			</ul>
 		</div>

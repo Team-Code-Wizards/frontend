@@ -1,4 +1,5 @@
 import { data } from '@/constants/Interaction/index';
+import { v4 as uuidv4 } from 'uuid';
 
 import Step from './Step/index';
 import styles from './styles.module.scss';
@@ -20,7 +21,7 @@ const Interaction = (): React.ReactElement => {
 
 				<div className={styles['steps']}>
 					{data.map((item) => {
-						return <Step key={item.id} item={item} />;
+						return <Step key={uuidv4()} item={item} />;
 					})}
 				</div>
 			</section>
