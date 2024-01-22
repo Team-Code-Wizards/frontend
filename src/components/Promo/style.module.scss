@@ -1,0 +1,13 @@
+.promo {
+	&__container {
+		padding: 134px 80px;
+		height: 736px;
+		display: flex;
+		width: 100%;
+		// max-width: var(--block-max-width);
+		background-image: url('../../images/promo-bg.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		// background-size: cover;
+	}
+}
