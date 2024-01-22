@@ -2,12 +2,13 @@ import { data } from '@/constants/ModalWindow';
 import IconClose from '@/images/modal/IconClose';
 import { v4 as uuidv4 } from 'uuid';
 
+import ModalBackground from '../ModalBackground';
 import ModalItem from './ModalItem';
 import styles from './style.module.scss';
 
 export default function Modal() {
 	return (
-		<div className={styles['modal-back']}>
+		<ModalBackground>
 			<div className={styles['modal']}>
 				<button type="button" className={styles['modal__close-btn']}>
 					<IconClose />
@@ -22,6 +23,6 @@ export default function Modal() {
 					</button>
 				</form>
 			</div>
-		</div>
+		</ModalBackground>
 	);
 }
