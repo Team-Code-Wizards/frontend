@@ -1,0 +1,7 @@
+services:
+  frontend:
+    image: govard/code_wizards
+    pull_policy: always
+    restart: always
+    ports:
+      - '3000:80'

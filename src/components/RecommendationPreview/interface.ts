@@ -7,4 +7,6 @@ export default interface IRecomendationPreview {
 	image: StaticImport;
 	width: number;
 	height: number;
+	isActive: boolean;
+	styles: string;
 }
