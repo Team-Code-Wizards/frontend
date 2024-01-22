@@ -6,7 +6,6 @@ import Guarantee from '../Guarantee/index';
 import Header from '../Header';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
-import ProjectDescriptionModal from '../ProjectDescriptionModal';
 import Services from '../Services';
 import StageCreate from '../StageCreate';
 import TechStack from '../TechStack';
@@ -20,7 +19,7 @@ export default function MainPage() {
 			<main className={styles.main}>
 				{/*<Modal />*/}
 				<ComponentsContainer>
-					<ProjectDescriptionModal />
+					{/*<ProjectDescriptionModal />*/}
 					<AboutUs />
 					<Services />
 					<Portfolio />
