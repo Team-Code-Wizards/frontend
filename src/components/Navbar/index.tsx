@@ -3,9 +3,9 @@ import Image from 'next/image';
 import LogoHeader from '../../images/header/logo-header.svg';
 import styles from './style.module.scss';
 
-export default function Header() {
+export default function Navbar() {
 	return (
-		<header className={styles['header']}>
+		<nav className={styles['header']}>
 			<Image src={LogoHeader} alt={'Logo Code Wizards'} />
 			<ul className={styles['header__links']}>
 				<li>
@@ -28,6 +28,6 @@ export default function Header() {
 				</li>
 			</ul>
 			<a href="tel:+79504241338">+7 (950) 424-13-38</a>
-		</header>
+		</nav>
 	);
 }
