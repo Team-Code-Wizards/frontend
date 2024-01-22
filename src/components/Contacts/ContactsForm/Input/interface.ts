@@ -5,4 +5,6 @@ export default interface IInput
 	inputType: 'textarea' | 'inputFile' | 'default';
 	labelText?: string;
 	labelClassName?: string;
+	wrapperClassName?: string;
+	clearInputStyleKey?: string;
 }

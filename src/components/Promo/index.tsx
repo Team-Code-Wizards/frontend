@@ -1,14 +1,22 @@
+'use client';
+
+import { FormEvent } from 'react';
+
 import ArrowIcon from '@/images/icons/ArrowIcon';
 import TelegramIcon from '@/images/icons/TelegramIcon';
 import ViberIcon from '@/images/icons/ViberIcon';
 import WhatsappIcon from '@/images/icons/WhatsappIcon';
 
-import Form from './Form';
+import Form from './PromoForm';
 import style from './style.module.scss';
 
 //TODO Добавить корректные ссылки
 
 export default function Promo() {
+	const sendRequestForCallback = (event: FormEvent) => {
+		event.preventDefault();
+	};
+
 	return (
 		<section className={style['promo']}>
 			<div className={style['promo__container']}>
@@ -39,7 +47,7 @@ export default function Promo() {
 						</li>
 					</ul>
 				</div>
-				<Form className={style['promo__form']} />
+				<Form onSubmit={sendRequestForCallback} />
 			</div>
 		</section>
 	);

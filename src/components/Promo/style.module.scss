@@ -1,21 +1,20 @@
 .promo {
 	height: 736px;
-	width: 100%;
 	background-image: url('../../images/promo-bg.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	color: var(--color-text);
 
 	&__container {
-		padding: 128px 0 138px 0;
+		padding: 130px 0 138px 0;
 		display: flex;
+		justify-content: space-between;
 		height: 100%;
 		margin: 0 auto;
 		max-width: var(--block-max-width);
 	}
 
 	&__main {
-		height: 100%;
 		flex-basis: 40%;
 		display: flex;
 		flex-direction: column;
