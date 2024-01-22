@@ -26,7 +26,6 @@
 
   &__close-btn {
       position: absolute;
-      margin: 0 auto;
       top: 18px;
       right: 18px;
       width: 35px;
@@ -34,6 +33,9 @@
       border-radius: 100%;
       background-color: var(--color-lilac);
       border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       transition: background-color .3s ease-in-out;
 

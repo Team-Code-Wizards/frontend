@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
 import IconClose from '@/images/modal/IconClose';
-import landingImage from '@/images/modal/siteDescription/landing-image.png';
+import landingImage from '@/images/modal/projectDescription/landing-image.png';
 
 import styles from './style.module.scss';
 
-export default function SiteDescriptionModal() {
+export default function ProjectDescriptionModal() {
 	return (
 		<div className={styles['modal-background']}>
 			<div className={styles['modal']}>
