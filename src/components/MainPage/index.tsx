@@ -19,6 +19,7 @@ export default function MainPage() {
 			<main className={styles.main}>
 				{/*<Modal />*/}
 				<ComponentsContainer>
+					{/*<ProjectDescriptionModal />*/}
 					<AboutUs />
 					<Services />
 					<Portfolio />

@@ -1,0 +1,108 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #0706067f;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background-color: var(--color-bg-black);
+  font: var(--font-description-main);
+  position: relative;
+  max-width: 766px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 53px;
+
+  &__close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      background-color: var(--color-lilac);
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: background-color .3s ease-in-out;
+
+      &:hover {
+        background-color: #A6AEFF;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: #CCD1FD;
+      }
+
+      &:focus {
+        background-color: #A6AEFF;
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+  &__title {
+    font-size: var(--text-xl);
+    color: var(--color-lilac);
+    line-height: 57.6px;
+    font-family: var(--rg-font);
+  }
+
+  &__description {
+    margin: 40px 0;
+
+    h4 {
+      font: var(--font-description-main);
+      color: var(--color-text);
+    }
+  }
+
+  &__example {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  &__btn {
+    font: var(--font-button-rg);
+    color: var(--color-text);
+    padding: 16.7px 25px;
+    background-image: var(--color-gradient-button);
+    background-size: 400%;
+    background-position: 99%;
+    border-radius: 5px;
+    border: none;
+    margin-top: 40px;
+
+    transition: 0.3s background-position ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-position: 50%;
+      cursor: pointer;
+    }
+
+    &:active {
+      transition: 0.1s background-position ease-in-out;
+      background-position: 10%;
+    }
+  }
+}
