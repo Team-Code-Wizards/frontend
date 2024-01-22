@@ -1,36 +1,11 @@
 import Input from '@/components/Contacts/ContactsForm/Input';
-import IInput from '@/components/Contacts/ContactsForm/Input/interface';
+import { inputs } from '@/constants/Promo';
+import { v4 as uuidv4 } from 'uuid';
 
 import IPromoForm from './interface';
 import style from './style.module.scss';
 
-//TODO Обновить ключ после слияния с develop
-
 export default function Form({ onSubmit }: IPromoForm) {
-	const inputs: IInput[] = [
-		{
-			inputType: 'default',
-			wrapperClassName: style['promo-form__input-box'],
-			labelClassName: style['promo-form__input-label'],
-			className: style['promo-form__input'],
-			clearInputStyleKey: 'promo-input-clear-btn',
-			type: 'text',
-			labelText: 'Имя',
-			placeholder: 'Иван',
-			name: 'clientName',
-		},
-		{
-			inputType: 'default',
-			wrapperClassName: style['promo-form__input-box'],
-			labelClassName: style['promo-form__input-label'],
-			className: style['promo-form__input'],
-			clearInputStyleKey: 'promo-input-clear-btn',
-			type: 'tel',
-			labelText: 'Телефон',
-			placeholder: '+7 (900) 000-00-00',
-			name: 'clientTel',
-		},
-	];
 	return (
 		<form onSubmit={onSubmit} className={style['promo-form']}>
 			<p className={style['promo-form__title']}>
@@ -41,7 +16,7 @@ export default function Form({ onSubmit }: IPromoForm) {
 				</span>
 			</p>
 			{inputs.map((el) => (
-				<Input key={el.name} {...el} />
+				<Input key={uuidv4()} {...el} />
 			))}
 			<button className={style['promo-form__button']} type="submit">
 				Отправить
