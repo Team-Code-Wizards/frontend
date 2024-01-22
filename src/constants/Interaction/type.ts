@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
 
 export interface IInteractionStep {
-	id: number;
+	number: number;
 	title: string;
 	description: string;
 	image: StaticImageData;
