@@ -3,7 +3,7 @@ name: deploy_front
 on:
   push:
     branches:
-      - main
+      - experementalBranch
 
 jobs:
   build_and_push_to_docker_hub:
