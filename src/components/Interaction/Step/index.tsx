@@ -7,7 +7,7 @@ const Step = ({ item }: IStepProps): React.ReactElement => {
 	return (
 		<>
 			<div className={styles['step']}>
-				<div className={styles['step__number']}>Шаг {item.id}</div>
+				<div className={styles['step__number']}>Шаг {item.number}</div>
 				<h2 className={styles['step__title']}>{item.title}</h2>
 				<p className={styles['step__description']}>{item.description}</p>
 				<div className={styles['step__image']}>
