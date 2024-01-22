@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - experementalBranch
+  pull_request:
+    branches:
+      - experementalBranch
 
 jobs:
   build_and_push_to_docker_hub:
