@@ -1,7 +1,7 @@
 import { portfolioCards } from '@/constants/Portfolio';
-import ArrwoChevronIcon from '@/images/icons/ArrowChevronIcon';
 import { v4 as uuidv4 } from 'uuid';
 
+import ArrwoChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
 import PortfolioCard from './Card';
 import style from './style.module.scss';
 

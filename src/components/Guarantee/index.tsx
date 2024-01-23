@@ -1,7 +1,7 @@
 import { dataCard } from '@/constants/Guarantee/index';
 import { v4 as uuidv4 } from 'uuid';
 
-import GuaranteeCard from '../GuaranteeCard/index';
+import GuaranteeCard from './GuaranteeCard/index';
 import styles from './styles.module.scss';
 
 function Guarantee() {
