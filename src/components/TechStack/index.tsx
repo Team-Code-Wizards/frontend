@@ -1,5 +1,6 @@
 import { cardLines } from '@/constants/TechStack';
 import StarIcon from '@/images/icons/StarIcon';
+import { v4 as uuidv4 } from 'uuid';
 
 import CardLine from './CardLine';
 import style from './style.module.scss';
@@ -28,7 +29,7 @@ export default function TechStack() {
 			</div>
 			<div className={style['tech-stack__main']}>
 				{cardLines.map((el) => (
-					<CardLine key={el.id} {...el} />
+					<CardLine key={uuidv4()} {...el} />
 				))}
 			</div>
 		</section>

@@ -59,6 +59,7 @@
 		border: none;
 		border-radius: 10px;
 		transition: all 0.3s ease-out;
+		background-color: var(--color-gray-bg);
 
 		&::placeholder {
 			font-size: var(--text-sm);
@@ -105,5 +106,22 @@
 		background-color: var(--color-lilac);
 		border: 1px solid rgba(255, 255, 255, 0);
 		transition: all 0.3s ease-out;
+	}
+}
+
+.textarea-box,
+.input-box {
+	position: relative;
+}
+
+.textarea-box,
+.input-box:first-of-type {
+	flex-basis: 100%;
+}
+
+.input-box {
+	&:nth-of-type(2),
+	&:nth-of-type(3) {
+		flex-basis: calc(50% - 5px);
 	}
 }

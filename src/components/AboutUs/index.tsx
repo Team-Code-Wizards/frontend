@@ -6,7 +6,7 @@ import styles from './style.module.scss';
 
 export default function AboutUs() {
 	return (
-		<div className={styles['about-us']}>
+		<section className={styles['about-us']}>
 			<div className={styles['about-us__container']}>
 				<h2>О нас</h2>
 				<h3>
@@ -39,6 +39,6 @@ export default function AboutUs() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
