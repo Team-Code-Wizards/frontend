@@ -1,5 +1,6 @@
 .input-clear-btn,
-.textarea-clear-btn {
+.textarea-clear-btn,
+.promo-input-clear-btn {
 	all: initial;
 	cursor: pointer;
 	color: var(--color-text-input-active);
@@ -13,5 +14,11 @@
 
 .input-clear-btn {
 	top: 25px;
+	right: 15px;
+}
+
+.promo-input-clear-btn {
+	right: 0;
+	top: 42px;
 	right: 15px;
 }

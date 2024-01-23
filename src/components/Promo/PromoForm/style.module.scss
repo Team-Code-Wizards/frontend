@@ -1,0 +1,100 @@
+.promo-form {
+	background-color: var(--color-bg-white);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	flex-basis: 31%;
+	margin-top: 8px;
+	margin-bottom: -8px;
+
+	padding: 36px 40px 40px;
+	color: var(--color-dark-purple);
+
+	&__title {
+		font-family: var(--rg-font);
+		font-size: var(--text-base);
+		font-weight: 600;
+		line-height: var(--line-height);
+		margin-bottom: 10px;
+	}
+
+	&__message {
+		display: inline-block;
+		margin-top: 8px;
+		color: rgba(24, 57, 108, 0.6);
+		font-family: var(--cygre-font);
+		font-size: var(--text-sm);
+		line-height: var(--line-height-big);
+		letter-spacing: var(--font-description-letter);
+	}
+
+	&__button {
+		width: 100%;
+		padding: 20px 25px;
+		border-radius: 5px;
+		border: none;
+		cursor: pointer;
+		color: var(--color-text);
+		background-image: var(--color-gradient-button);
+		background-size: 400%;
+		background-position: 99%;
+		font-family: var(--rg-font);
+		font-size: var(--text-base);
+		line-height: 70%;
+
+		transition: 0.3s background-position ease-in-out;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background-position: 50%;
+		}
+
+		&:active {
+			transition: 0.1s background-position ease-in-out;
+			background-position: 10%;
+		}
+	}
+
+	&__input-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+	}
+
+	&__input-label {
+		margin-right: auto;
+		line-height: 80%;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 16px 10px;
+		background-color: var(--color-gray-bg);
+		font-family: var(--cygre-font);
+		border: none;
+		border-radius: 10px;
+		transition: all 0.3s ease-out;
+
+		&::placeholder {
+			font-size: var(--text-sm);
+			letter-spacing: -0.48px;
+			color: var(--color-input);
+		}
+
+		&:focus {
+			outline: 0;
+			background-color: var(--color-input-active);
+			color: var(--color-text-input-active);
+			transition: all 0.3s ease-out;
+
+			&::placeholder {
+				color: transparent;
+			}
+		}
+	}
+}

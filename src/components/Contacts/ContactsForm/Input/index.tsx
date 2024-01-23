@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import ClearInputButton from './ClearInputButton';
 import IInput from './interface';
-import style from './style.module.scss';
 
 export default function Input({
+	id,
 	className,
 	type,
 	name,
@@ -14,12 +14,14 @@ export default function Input({
 	inputType,
 	labelText,
 	labelClassName,
+	wrapperClassName,
+	clearInputStyleKey,
 }: IInput) {
 	const [isActive, setIsActive] = useState(false);
 
 	if (inputType === 'textarea')
 		return (
-			<span className={style['textarea-box']}>
+			<span className={wrapperClassName}>
 				<textarea
 					className={className}
 					name={name}
@@ -27,7 +29,7 @@ export default function Input({
 					onFocus={() => setIsActive(true)}
 					onBlur={() => setIsActive(false)}
 				/>
-				<ClearInputButton styleKey="textarea-clear-btn" isHidden={!isActive} />
+				<ClearInputButton styleKey={clearInputStyleKey} isHidden={!isActive} />
 			</span>
 		);
 
@@ -48,17 +50,23 @@ export default function Input({
 		);
 
 	return (
-		<span className={style['input-box']}>
+		<span className={wrapperClassName}>
+			{labelText && (
+				<label className={labelClassName} htmlFor={id}>
+					{labelText}
+				</label>
+			)}
 			<input
 				type={type}
 				className={className}
 				name={name}
+				id={id}
 				placeholder={placeholder}
 				value={value}
 				onFocus={() => setIsActive(true)}
 				onBlur={() => setIsActive(false)}
 			/>
-			<ClearInputButton styleKey="input-clear-btn" isHidden={!isActive} />
+			<ClearInputButton styleKey={clearInputStyleKey} isHidden={!isActive} />
 		</span>
 	);
 }
