@@ -1,10 +1,10 @@
-import coherent from '../../images/guarantee/coherent.svg';
-import contract from '../../images/guarantee/contract.svg';
-import deadline from '../../images/guarantee/deadline.svg';
-import quality from '../../images/guarantee/quality.svg';
-import security from '../../images/guarantee/security.svg';
-import support from '../../images/guarantee/support.svg';
-import unique from '../../images/guarantee/unique.svg';
+import coherent from '../../../public/images/guarantee/coherent.png';
+import contract from '../../../public/images/guarantee/contract.png';
+import deadline from '../../../public/images/guarantee/deadline.png';
+import quality from '../../../public/images/guarantee/quality.png';
+import security from '../../../public/images/guarantee/security.png';
+import support from '../../../public/images/guarantee/support.png';
+import unique from '../../../public/images/guarantee/unique.png';
 import { IGuaranteeItem } from './type';
 
 export const dataCard: IGuaranteeItem[] = [

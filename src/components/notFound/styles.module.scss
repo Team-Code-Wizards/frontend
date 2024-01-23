@@ -1,16 +1,16 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-  background-image: url(../../images/errorPage/error-background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 0 auto;
-  overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: relative;
+	background-image: url(/images/notFound/error-background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+	overflow: hidden;
 
   &_name {
     position: absolute;

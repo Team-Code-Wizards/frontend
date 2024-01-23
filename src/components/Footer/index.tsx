@@ -1,11 +1,10 @@
 import Image from 'next/image';
 
-import TelegramIcon from '@/images/icons/TelegramIcon';
-import ViberIcon from '@/images/icons/ViberIcon';
-import WhatsappIcon from '@/images/icons/WhatsappIcon';
-import LogoNoText from '@/images/logo/logo-no-text.svg';
-import LogoText from '@/images/logo/logo-text.svg';
-
+import TelegramIcon from '../../../public/images/icons/TelegramIcon';
+import ViberIcon from '../../../public/images/icons/ViberIcon';
+import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
+import LogoNoText from '../../../public/images/logo/logo-no-text.svg';
+import LogoText from '../../../public/images/logo/logo-text.svg';
 import styles from './styles.module.scss';
 
 //TODO добавить ссылки на соцсети

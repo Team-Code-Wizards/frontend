@@ -1,9 +1,10 @@
 import IPortfolioCard from '@/components/Portfolio/Card/interface';
-import image41 from '@/images/portfolio/image-41.png';
-import image42 from '@/images/portfolio/image-42.png';
-import image43 from '@/images/portfolio/image-43.png';
-import image44 from '@/images/portfolio/image-44.png';
-import image45 from '@/images/portfolio/image-45.png';
+
+import image41 from '../../../public/images/portfolio/image-41.png';
+import image42 from '../../../public/images/portfolio/image-42.png';
+import image43 from '../../../public/images/portfolio/image-43.png';
+import image44 from '../../../public/images/portfolio/image-44.png';
+import image45 from '../../../public/images/portfolio/image-45.png';
 
 export const portfolioCards: IPortfolioCard[] = [
 	{ tag: 'Интернет-магазин', title: 'Любимый василек', image: image41 },

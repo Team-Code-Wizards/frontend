@@ -18,7 +18,7 @@ import styles from './style.module.scss';
 export default function MainPage() {
 	return (
 		<main className={styles.main}>
-			{/*<Modal />*/}
+			{/* <Modal /> */}
 			<Navbar />
 			<Promo />
 			<ComponentsContainer>
@@ -32,8 +32,6 @@ export default function MainPage() {
 			<Choice />
 			<Guarantee />
 			<Interaction />
-			{/* Где он ? */}
-			{/* Тех арсенал */}
 			<TechStack />
 			<ComponentsContainer>
 				<Faq />

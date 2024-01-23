@@ -1,5 +1,4 @@
-import ClearInputIcon from '@/images/icons/ClearInputIcon';
-
+import ClearInputIcon from '../../../../../../public/images/icons/ClearInputIcon';
 import styles from './style.module.scss';
 
 export default function ClearInputButton({

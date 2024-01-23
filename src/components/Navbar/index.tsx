@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import LogoHeader from '../../images/header/logo-header.svg';
+import LogoHeader from '../../../public/images/header/logo-header.svg';
 import styles from './style.module.scss';
 
 export default function Navbar() {

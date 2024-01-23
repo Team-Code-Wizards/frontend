@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
-import ArrowIcon from '@/images/icons/ArrowIcon';
-
+import ArrowIcon from '../../../../public/images/icons/ArrowIcon';
 import IPortfolioCard from './interface';
 import style from './style.module.scss';
 
