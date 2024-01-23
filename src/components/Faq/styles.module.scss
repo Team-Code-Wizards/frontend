@@ -1,14 +1,14 @@
 .faq {
 	margin: 0 auto;
 	padding: 130px 0px 288px;
-	max-width: 1280px;
+	max-width: var(--block-max-width);
 	display: flex;
 	justify-content: space-between;
 
 	&__title {
 		width: 32.9%;
 		font: var(--font-block-title);
-		color: var(--color-bg-white);
+		color: var(--color-text);
 	}
 
 	&__list {
