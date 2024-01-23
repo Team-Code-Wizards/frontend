@@ -30,6 +30,10 @@
     max-width: 33%;
     margin-block-start: 10px;
     padding-inline-end: 9px;
+
+    &-adaptive {
+      display: none;
+    }
   }
 
   &__social-group {
@@ -43,6 +47,115 @@
     text-decoration: none;
     text-align: right;
     color: var(--color-text);
+  }
+
+  @media (max-width: 1280px) {
+    width: 80%;
+
+    &__row {
+      &:first-of-type {
+        margin-block-end: 40px;
+      }
+    }
+
+    &__image-no-text {
+      max-width: 10.5%;
+    }
+
+    &__image-text {
+      width: 50%;
+      max-width: 100%;
+      margin-block-start: 15px;
+      padding-inline-end: 0;
+    }
+
+    &__social-group {
+      width: auto;
+      margin-right: 10px;
+      justify-content: flex-start;
+
+      & > a {
+        &:not(:last-child) {
+          margin-right: 18px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 835px) {
+    width: 92%;
+    margin: 80px auto;
+    padding: 36px 24px 40px 39px;
+
+    &__image-no-text {
+      margin-bottom: -6px;
+    }
+
+    &__image-text {
+      width: 55%;
+      padding-inline-start: 23px;
+    }
+  }
+  
+  @media (max-width: 391px) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    width: 82%;
+    padding: 18px 24px 16px 19px;
+    margin: 60px auto;
+
+    &__row {
+      flex-direction: column-reverse;
+
+      &:first-of-type {
+        margin-block-end: 0;
+      }
+
+      &:last-of-type {
+        margin-block-end: 11px;
+      }
+    }
+
+    &__row-first {
+      padding-inline-start: 11px;
+    }
+
+    &__image-no-text {
+      display: none;
+    }
+
+    &__image-text-adaptive {
+      display: block;
+      margin-block-start: 5px;
+      width: 84%;
+      padding-inline-start: 50px;
+      margin-bottom: 7px;
+    }
+
+    &__image-text {
+      display: none;
+    }
+
+    a {
+      text-align: left;
+    }
+
+    &__social-group {
+      & > a {
+        &:not(:first-child) {
+          margin-right: 11px;
+        }
+      }
+    }
+
+    &__icon_whatsapp {
+      order: -2;
+    }
+
+    &__icon_viber {
+      order: -1;
+    }
   }
 }
 
