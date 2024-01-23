@@ -1,12 +1,11 @@
 .recommendations {
   &__container {
     display: flex;
-    flex-direction: row;
-    max-width: 1440px;
-    min-height: 540px;
-    padding-left: 80px;
+    max-width: 1280px;
+    min-height: 659px;
     background-image: url(../../images/recommendations/background.png);
     background-repeat: no-repeat;
+    align-items: center;
     background-size: cover;
     border-radius: 20px;
     color: var(--color-text);
@@ -16,7 +15,7 @@
   &__title {
     font: var(--font-block-title);
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: var(--color-text);
   }
 
@@ -25,10 +24,6 @@
     margin-top: 15px;
     margin-left: 20px;
     column-gap: 10px;
-  }
-
-  &__swiper {
-    margin-top: 40px;
   }
 }
 .arrow-btn {
@@ -48,5 +43,42 @@
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 0.1s ease-in;
+  }
+}
+
+.card {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+}
+
+.card__details {
+  display: flex;
+  margin-top: 0px;
+  margin-left: 320px;
+  flex-direction: row;
+  &__circle {
+    margin-right: 10px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_title {
+    font-family: var(--rg-font);
+    color: var(--color-text);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  &_information {
+    display: flex;
+    flex-direction: column;
   }
 }
