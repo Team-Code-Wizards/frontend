@@ -32,6 +32,7 @@ export default function MainPage() {
 			<Choice />
 			<Guarantee />
 			<Interaction />
+			{/* Где он ? */}
 			{/* Тех арсенал */}
 			<TechStack />
 			<ComponentsContainer>
