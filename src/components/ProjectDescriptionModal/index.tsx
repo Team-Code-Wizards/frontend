@@ -3,11 +3,12 @@ import Image from 'next/image';
 import IconClose from '@/images/modal/IconClose';
 import landingImage from '@/images/modal/projectDescription/landing-image.png';
 
+import ModalBackground from '../ModalBackground';
 import styles from './style.module.scss';
 
 export default function ProjectDescriptionModal() {
 	return (
-		<div className={styles['modal-background']}>
+		<ModalBackground>
 			<div className={styles['modal']}>
 				<button type="button" className={styles['modal__close-btn']}>
 					<IconClose />
@@ -30,6 +31,6 @@ export default function ProjectDescriptionModal() {
 					</button>
 				</div>
 			</div>
-		</div>
+		</ModalBackground>
 	);
 }

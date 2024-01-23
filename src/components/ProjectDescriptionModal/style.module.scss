@@ -1,17 +1,3 @@
-.modal-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #0706067f;
-  backdrop-filter: blur(5px);
-}
-
 .modal {
   background-color: var(--color-bg-black);
   font: var(--font-description-main);
