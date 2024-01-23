@@ -1,9 +1,12 @@
 import Image from 'next/image';
 
 import circle from '@/images/recommendations/circle.svg';
-import IRecommendationPreview from '@/interfaces/RecommendationPreview';
+import 'swiper/scss';
 
+import IRecommendationPreview from './interface';
 import styles from './style.module.scss';
+
+//import { recommendationsPreviews } from "@/constants/Recommendations";
 
 export default function RecommendationPreview({
 	image,
@@ -17,11 +20,10 @@ export default function RecommendationPreview({
 			<div className={styles['card__image']}>
 				<Image
 					src={image}
-					alt="video-preview"
 					width={width}
 					height={height}
-					isActive={isActive}
-					className={className}
+					alt="video-preview"
+					className={className + isActive ? ' active' : ''}
 				/>
 			</div>
 			{isActive ? (

@@ -20,19 +20,20 @@
 		"normalize.css": "^8.0.1",
 		"react": "^18",
 		"react-dom": "^18",
-		"sass": "^1.69.7"
+		"sass": "^1.69.7",
+		"swiper": "^11.0.5"
 	},
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
+		"classnames": "^2.3.2",
 		"eslint-config-next": "14.0.4",
 		"husky": "^8.0.3",
 		"lint-staged": "^15.2.0",
 		"prettier": "^3.1.1",
-		"typescript": "^5",
-		"classnames": "^2.3.2"
+		"typescript": "^5"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx,json,css}": [
