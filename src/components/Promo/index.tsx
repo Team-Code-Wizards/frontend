@@ -7,7 +7,6 @@ import TelegramIcon from '@/images/icons/TelegramIcon';
 import ViberIcon from '@/images/icons/ViberIcon';
 import WhatsappIcon from '@/images/icons/WhatsappIcon';
 
-// import Navbar from '../Navbar';
 import Form from './PromoForm';
 import style from './style.module.scss';
 
@@ -20,7 +19,6 @@ export default function Promo() {
 
 	return (
 		<header className={style['promo']}>
-			{/* <Navbar /> */}
 			<div className={style['promo__container']}>
 				<div className={style['promo__main']}>
 					<h2 className={style['promo__title']}>

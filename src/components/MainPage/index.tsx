@@ -15,31 +15,28 @@ import styles from './style.module.scss';
 
 export default function MainPage() {
 	return (
-		<>
+		<main className={styles.main}>
+			{/*<Modal />*/}
 			<Navbar />
-			{/* <Header /> */}
-			<main className={styles.main}>
-				{/*<Modal />*/}
-				<Promo />
-				<ComponentsContainer>
-					{/*<ProjectDescriptionModal />*/}
-					<AboutUs />
-					<Services />
-					<Portfolio />
-				</ComponentsContainer>
-				<StageCreate />
-				{/* Отзывы и рекомендации */}
-				<Choice />
-				<Guarantee />
-				<Interaction />
-				{/* Тех арсенал */}
-				<TechStack />
-				<ComponentsContainer>
-					{/* FAQ */}
-					<Contacts />
-					<Footer />
-				</ComponentsContainer>
-			</main>
-		</>
+			<Promo />
+			<ComponentsContainer>
+				{/*<ProjectDescriptionModal />*/}
+				<AboutUs />
+				<Services />
+				<Portfolio />
+			</ComponentsContainer>
+			<StageCreate />
+			{/* Отзывы и рекомендации */}
+			<Choice />
+			<Guarantee />
+			<Interaction />
+			{/* Тех арсенал */}
+			<TechStack />
+			<ComponentsContainer>
+				{/* FAQ */}
+				<Contacts />
+				<Footer />
+			</ComponentsContainer>
+		</main>
 	);
 }

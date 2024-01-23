@@ -4,6 +4,7 @@ import ClearInputButton from './ClearInputButton';
 import IInput from './interface';
 
 export default function Input({
+	id,
 	className,
 	type,
 	name,
@@ -51,7 +52,7 @@ export default function Input({
 	return (
 		<span className={wrapperClassName}>
 			{labelText && (
-				<label className={labelClassName} htmlFor={name}>
+				<label className={labelClassName} htmlFor={id}>
 					{labelText}
 				</label>
 			)}
@@ -59,7 +60,7 @@ export default function Input({
 				type={type}
 				className={className}
 				name={name}
-				id={name}
+				id={id}
 				placeholder={placeholder}
 				value={value}
 				onFocus={() => setIsActive(true)}

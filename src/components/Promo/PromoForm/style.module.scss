@@ -3,10 +3,10 @@
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	row-gap: 20px;
 	flex-basis: 31%;
-	margin-top: 3px;
-	margin-bottom: -3px;
+	margin-top: 8px;
+	margin-bottom: -8px;
 
 	padding: 36px 40px 40px;
 	color: var(--color-dark-purple);
