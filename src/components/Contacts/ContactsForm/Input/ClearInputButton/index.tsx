@@ -6,12 +6,12 @@ export default function ClearInputButton({
 	styleKey,
 }: {
 	isHidden: boolean;
-	styleKey: string;
+	styleKey?: string;
 }) {
 	if (isHidden) return null;
 
 	return (
-		<button className={styles[styleKey]} type="button">
+		<button className={styleKey && styles[styleKey]} type="button">
 			<ClearInputIcon />
 		</button>
 	);

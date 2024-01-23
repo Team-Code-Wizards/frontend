@@ -26,7 +26,7 @@
 :root {
 	--max-width: 1440px;
 	--block-max-width: 1280px;
-	
+
 	//  === Fonts ===
 	--rg-font: 'RG-StandardSemibold';
 	--cygre-font: 'Cygre';
@@ -54,11 +54,13 @@
 	// === Descriptions ===
 	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
 	--font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-	--font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--cygre-font), sans-serif;
+	--font-description-main: 400 var(--text-sm) / var(--line-height-big)
+			var(--cygre-font),
+		sans-serif;
 	--font-stage-btn: 700 var(--text-xs) var(--cygre-font), sans-serif;
 
 	// Colors
-	--color-bg-black: #070606;
+	--color-bg-black: #000000;
 	--color-gray-bg: #f2f2f2;
 	--color-bg-white: #ffffff;
 	--color-bg-ivory: #ffffff1a;
@@ -66,7 +68,9 @@
 	--color-lilac: #8792fc;
 	--color-gray: #ffffff80;
 	--color-purple: #5b4dab;
+	--color-dark-purple: #1b1c33;
 	--color-pink: #9b54d4;
+
 	--color-blue: #263694;
 	--color-green: #27ae60;
 	--color-red: #eb5757;

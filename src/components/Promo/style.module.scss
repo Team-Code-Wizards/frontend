@@ -1,0 +1,54 @@
+.promo {
+	background-image: url('/images/promo/promo-bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	color: var(--color-text);
+
+	&__container {
+		padding: 126px 0 138px 0;
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		margin: 0 auto;
+		max-width: var(--block-max-width);
+	}
+
+	&__main {
+		flex-basis: 40%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-family: var(--rg-font);
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 120%;
+	}
+
+	&__link-list {
+		display: flex;
+		column-gap: 10px;
+	}
+
+	&__link-box {
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(11px);
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.3);
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&__link {
+		color: var(--color-text);
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		padding: 15px;
+	}
+}
