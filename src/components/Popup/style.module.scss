@@ -11,10 +11,10 @@
 .popup-message_success,
 .popup-message_failure {
   font-family: var(--rg-font);
-  font-size: 20px;
+  font-size: var(--text-base);
   font-weight: 400;
   position: absolute;
-  color: white;
+  color: var(--color-text);
   margin-top: 260px;
 }
 .popup-message_failure {
