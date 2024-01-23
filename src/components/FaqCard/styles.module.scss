@@ -1,5 +1,6 @@
 .faq-card {
-	color: var(--color-bg-white);
+	color: var(--color-text);
+
 	&__header {
 		display: flex;
 		justify-content: space-between;
@@ -11,11 +12,11 @@
 	&__title {
 		width: 581px;
 		font: var(--font-title-description);
+		line-height: 115%;
 	}
 
 	&__description {
 		font: var(--font-description-main);
-		letter-spacing: -0.48px;
-		display: none;
+		letter-spacing: var(--font-description-letter);
 	}
 }
