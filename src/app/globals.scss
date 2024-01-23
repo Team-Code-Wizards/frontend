@@ -23,15 +23,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Involve";
+  src:
+    url("../fonts/Involve-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
-	--max-width: 1440px;
-	--block-max-width: 1280px;
+  --max-width: 1440px;
+  --block-max-width: 1280px;
 
-	//  === Fonts ===
-	--rg-font: 'RG-StandardSemibold';
-	--cygre-font: 'Cygre';
-
-  // === Font Sizes ===
+  //  === Fonts ===
+  --rg-font: 'RG-StandardSemibold';
+  --cygre-font: 'Cygre';
+  --involve-font: 'Involve'
+    // === Font Sizes ===
   --text-xs: 14px;
   --text-sm: 16px;
   --text-base: 20px;
@@ -47,54 +55,48 @@
   // === Titles ===
   --font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
     sans-serif;
-  --font-title-description: 600 var(--text-base) / var(--line-height)
-      var(--rg-font),
+  --font-title-description: 600 var(--text-base) / var(--line-height) var(--rg-font),
     sans-serif;
 
-	// === Descriptions ===
-	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
-	--font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-	--font-description-main: 400 var(--text-sm) / var(--line-height-big)
-			var(--cygre-font),
-		sans-serif;
-	--font-stage-btn: 700 var(--text-xs) var(--cygre-font), sans-serif;
+  // === Descriptions ===
+  --font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
+  --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
+  --font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--involve-font),
+    sans-serif;
+  --font-stage-btn: 700 var(--text-xs) var(--cygre-font), sans-serif;
 
-	// Colors
-	--color-bg-black: #000000;
-	--color-gray-bg: #f2f2f2;
-	--color-bg-white: #ffffff;
-	--color-bg-ivory: #ffffff1a;
+  // Colors
+  --color-bg-black: #000000;
+  --color-gray-bg: #f2f2f2;
+  --color-bg-white: #ffffff;
+  --color-bg-ivory: #ffffff1a;
 
-	--color-lilac: #8792fc;
-	--color-gray: #ffffff80;
-	--color-purple: #5b4dab;
-	--color-dark-purple: #1b1c33;
-	--color-pink: #9b54d4;
+  --color-lilac: #8792fc;
+  --color-gray: #ffffff80;
+  --color-purple: #5b4dab;
+  --color-dark-purple: #1b1c33;
+  --color-pink: #9b54d4;
 
-	--color-blue: #263694;
-	--color-green: #27ae60;
-	--color-red: #eb5757;
+  --color-blue: #263694;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
 
   --color-text: #ffffff;
   --color-input: #1b1c3380;
   --color-input-active: #e1e1e1;
   --color-text-input-active: #1b1c33;
 
-  --color-purple-gradient: linear-gradient(
-    93deg,
-    #362a64 18.25%,
-    #51259b 93.44%
-  );
+  --color-purple-gradient: linear-gradient(93deg,
+      #362a64 18.25%,
+      #51259b 93.44%);
 
-  --color-gradient-button: linear-gradient(
-    93deg,
-    rgba(167, 138, 213, 1) 11%,
-    rgba(211, 166, 238, 1) 23%,
-    rgba(63, 28, 120, 1) 39%,
-    rgba(110, 37, 155, 1) 61%,
-    rgba(81, 37, 155, 1) 81%,
-    rgba(54, 42, 100, 1) 92%
-  );
+  --color-gradient-button: linear-gradient(93deg,
+      rgba(167, 138, 213, 1) 11%,
+      rgba(211, 166, 238, 1) 23%,
+      rgba(63, 28, 120, 1) 39%,
+      rgba(110, 37, 155, 1) 61%,
+      rgba(81, 37, 155, 1) 81%,
+      rgba(54, 42, 100, 1) 92%);
 
   // == Gap ==
   --grid-gap: 20px;

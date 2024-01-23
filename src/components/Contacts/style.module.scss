@@ -4,7 +4,7 @@
 	row-gap: 65px;
 	width: 100%;
 	max-width: var(--block-max-width);
-	padding: 3.125rem;
+	padding: 80px;
 	border-radius: 30px;
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(5px);
@@ -16,7 +16,7 @@
 		display: block;
 		all: unset;
 		line-height: 56%;
-		font-size: 42px;
+		font: var(--font-block-title)
 	}
 
 	&__body {

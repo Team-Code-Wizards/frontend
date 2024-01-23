@@ -34,9 +34,8 @@
 				&_goals {
 					display: flex;
 					margin-left: 20px;
-					max-width: 320px;
 					flex-wrap: wrap;
-
+          max-width: 464px;
 					p {
 						padding: 8px;
 						background-color: var(--color-lilac);
@@ -60,7 +59,6 @@
 					margin: 10px 0 0 20px;
 					font-weight: 400;
 					font-size: 16px;
-					font-family: var(--cygre-font);
 					line-height: 20.8px;
 					text-align: justify;
 

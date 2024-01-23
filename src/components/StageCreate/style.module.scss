@@ -1,5 +1,5 @@
 .stage{
-    width: 100%;
+    width: var(--max-width);
     height: 820px;
     background-image: url(/images/stageCreate/background.png);
     background-repeat: no-repeat;
