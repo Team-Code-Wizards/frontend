@@ -4,6 +4,7 @@ import Contacts from '../Contacts';
 import Footer from '../Footer';
 import Guarantee from '../Guarantee/index';
 import Header from '../Header';
+import Faq from '../Faq/index';
 import Interaction from '../Interaction/index';
 import Portfolio from '../Portfolio';
 import Services from '../Services';
@@ -32,7 +33,7 @@ export default function MainPage() {
 				{/* Тех арсенал */}
 				<TechStack />
 				<ComponentsContainer>
-					{/* FAQ */}
+					<Faq />
 					<Contacts />
 					<Footer />
 				</ComponentsContainer>
