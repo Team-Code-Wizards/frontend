@@ -3,7 +3,6 @@
 		width: 712px;
 		height: 423px;
 		border-radius: 10px;
-		border-color: var(--color-lilac);
 		border: 2px solid var(--color-lilac);
 	}
 
@@ -11,21 +10,17 @@
 	&_right {
 		width: 262.5px;
 		height: 314px;
-		transform: translate(0px, 10%);
-		background-size: contain;
 		background: rgba(0, 0, 0, 0.5);
 		border: none;
 		position: relative;
-		top: -26px;
+		top: 2px;
 	}
 
 	&_left {
-		background-position: right;
 		border-radius: 0 10px 10px 0;
 	}
 
 	&_right {
-		background-position: left;
 		border-radius: 10px 0 0 10px;
 	}
 }
