@@ -1,5 +1,4 @@
-import LogoIcon from '@/images/header/LogoIcon';
-
+import LogoIcon from '../../../public/images/header/LogoIcon';
 import styles from './style.module.scss';
 
 //TODO добавить плавный скролл до разделов и айди отзывов
@@ -32,7 +31,7 @@ export default function Navbar() {
 					</a>
 				</li>
 				<li className={styles['navbar__link-box']}>
-					<a href="" className={styles['navbar__link']}>
+					<a href="#recommendation" className={styles['navbar__link']}>
 						Отзывы
 					</a>
 				</li>

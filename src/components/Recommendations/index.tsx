@@ -10,7 +10,7 @@ import styles from './style.module.scss';
 
 export default function Recommendations() {
 	return (
-		<section className={styles['recommendations']}>
+		<section id="recommendation" className={styles['recommendations']}>
 			<div className={styles['recommendations__container']}>
 				<div className={styles['recommendations__header']}>
 					<h2 className={styles['recommendations__title']}>
