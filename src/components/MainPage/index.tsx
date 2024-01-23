@@ -1,6 +1,7 @@
 import AboutUs from '../AboutUs';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
+import Faq from '../Faq/index';
 import Footer from '../Footer';
 import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
@@ -33,7 +34,7 @@ export default function MainPage() {
 			{/* Тех арсенал */}
 			<TechStack />
 			<ComponentsContainer>
-				{/* FAQ */}
+				<Faq />
 				<Contacts />
 				<Footer />
 			</ComponentsContainer>
