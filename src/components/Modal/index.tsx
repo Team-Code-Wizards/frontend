@@ -1,7 +1,7 @@
 import { data } from '@/constants/ModalWindow';
-import IconClose from '@/images/modal/IconClose';
 import { v4 as uuidv4 } from 'uuid';
 
+import IconClose from '../../../public/images/modal/IconClose';
 import ModalItem from './ModalItem';
 import styles from './style.module.scss';
 

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
-import laptopImage from '@/images/aboutUs/laptop-image.png';
-
+import laptopImage from '../../../public/images/aboutUs/laptop-image.png';
 import styles from './style.module.scss';
 
 export default function AboutUs() {

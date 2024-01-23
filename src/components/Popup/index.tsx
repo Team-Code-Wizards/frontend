@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import failureImage from '../../images/popup/failure.svg';
-import successImage from '../../images/popup/success.svg';
+import failureImage from '../../../public/images/popup/failure.svg';
+import successImage from '../../../public/images/popup/success.svg';
 import styles from './style.module.scss';
 
 //Для проверки в файле MainPage нужно импортировать компонент Popup и передавать ему свойста <Popup isSuccess={false}
