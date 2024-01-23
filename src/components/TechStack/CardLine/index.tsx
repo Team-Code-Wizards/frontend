@@ -1,6 +1,6 @@
-import SparklesIcon from '@/images/icons/SparklesIcon';
 import { v4 as uuidv4 } from 'uuid';
 
+import SparklesIcon from '../../../../public/images/icons/SparklesIcon';
 import Card from './Card';
 import ICardLine from './interface';
 import style from './style.module.scss';

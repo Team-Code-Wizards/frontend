@@ -2,11 +2,10 @@
 
 import { FormEvent } from 'react';
 
-import ArrowIcon from '@/images/icons/ArrowIcon';
-import TelegramIcon from '@/images/icons/TelegramIcon';
-import ViberIcon from '@/images/icons/ViberIcon';
-import WhatsappIcon from '@/images/icons/WhatsappIcon';
-
+import ArrowIcon from '../../../public/images/icons/ArrowIcon';
+import TelegramIcon from '../../../public/images/icons/TelegramIcon';
+import ViberIcon from '../../../public/images/icons/ViberIcon';
+import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
 import ContactsForm from './ContactsForm';
 import styles from './style.module.scss';
 

@@ -1,15 +1,16 @@
-import CssIcon from '@/images/icons/CssIcon';
-import DjangoIcon from '@/images/icons/DjangoIcon';
-import FirewallIcon from '@/images/icons/FirewallIcon';
-import GlobeIcon from '@/images/icons/GlobeIcon';
-import JSIcon from '@/images/icons/JSIcon';
-import LockOpenIcon from '@/images/icons/LockOpenIcon';
-import NextIcon from '@/images/icons/NextIcon';
-import ReactIcon from '@/images/icons/ReactIcon';
-import ReduxIcon from '@/images/icons/ReduxIcon';
-import SassIcon from '@/images/icons/SassIcon';
-import TSIcon from '@/images/icons/TSIcon';
 import { v4 as uuidv4 } from 'uuid';
+
+import CssIcon from '../../../public/images/icons/CssIcon';
+import DjangoIcon from '../../../public/images/icons/DjangoIcon';
+import FirewallIcon from '../../../public/images/icons/FirewallIcon';
+import GlobeIcon from '../../../public/images/icons/GlobeIcon';
+import JSIcon from '../../../public/images/icons/JSIcon';
+import LockOpenIcon from '../../../public/images/icons/LockOpenIcon';
+import NextIcon from '../../../public/images/icons/NextIcon';
+import ReactIcon from '../../../public/images/icons/ReactIcon';
+import ReduxIcon from '../../../public/images/icons/ReduxIcon';
+import SassIcon from '../../../public/images/icons/SassIcon';
+import TSIcon from '../../../public/images/icons/TSIcon';
 
 export const cardLines = [
 	{

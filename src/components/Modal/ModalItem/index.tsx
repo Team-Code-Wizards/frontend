@@ -1,5 +1,4 @@
-import IconArrow from '@/images/modal/IconArrow';
-
+import IconArrow from './../../../../public/images/modal/IconArrow';
 import { IModalItemProps } from './interface';
 import styles from './style.module.scss';
 
