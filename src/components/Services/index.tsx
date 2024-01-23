@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 
 export default function Services() {
 	return (
-		<section className={styles.wrapper}>
+		<section id="services" className={styles.wrapper}>
 			<div className={styles['services']}>
 				<h2 className={styles['services__title']}>Услуги</h2>
 				<div className={styles['services__cards']}>
