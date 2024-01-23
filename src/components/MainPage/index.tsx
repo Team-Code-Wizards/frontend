@@ -22,6 +22,7 @@ export default function MainPage() {
 				{/*<Modal />*/}
 				<Promo />
 				<ComponentsContainer>
+					{/*<ProjectDescriptionModal />*/}
 					<AboutUs />
 					<Services />
 					<Portfolio />
