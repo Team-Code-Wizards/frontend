@@ -1,9 +1,9 @@
-export default function ViberIcon({ size = 24 }) {
+export default function ViberIcon({ size = [24, 24] }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			width={size}
-			height={size}
+			width={size[0]}
+			height={size[1]}
 			viewBox="0 0 32 32"
 			fill="none"
 		>

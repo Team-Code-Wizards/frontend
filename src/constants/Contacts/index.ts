@@ -5,6 +5,8 @@ export const inputs: IInput[] = [
 	{
 		inputType: 'default',
 		className: style['form__input'],
+		wrapperClassName: style['input-box'],
+		clearInputStyleKey: 'input-clear-btn',
 		type: 'text',
 		name: 'clientName',
 		placeholder: 'Имя',
@@ -12,6 +14,8 @@ export const inputs: IInput[] = [
 	{
 		inputType: 'default',
 		className: style['form__input'],
+		wrapperClassName: style['input-box'],
+		clearInputStyleKey: 'input-clear-btn',
 		type: 'tel',
 		name: 'clientTel',
 		placeholder: 'Телефон',
@@ -19,6 +23,8 @@ export const inputs: IInput[] = [
 	{
 		inputType: 'default',
 		className: style['form__input'],
+		wrapperClassName: style['input-box'],
+		clearInputStyleKey: 'input-clear-btn',
 		type: 'email',
 		name: 'clientEmail',
 		placeholder: 'E-mail',
@@ -26,16 +32,18 @@ export const inputs: IInput[] = [
 	{
 		inputType: 'textarea',
 		className: style['form__input'],
+		wrapperClassName: style['textarea-box'],
+		clearInputStyleKey: 'textarea-clear-btn',
 		name: 'clientMessage',
 		placeholder: 'Сообщение',
 	},
 	{
 		inputType: 'inputFile',
 		className: style['form__input'],
+		labelClassName: style['label'],
 		type: 'file',
 		name: 'clientFile',
 		accept: '.doc',
 		labelText: 'Прикрепить ТЗ',
-		labelClassName: style['label'],
 	},
 ];
