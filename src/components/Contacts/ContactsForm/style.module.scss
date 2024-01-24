@@ -1,5 +1,5 @@
 .form-box {
-	font-family: var(--cygre-font);
+	font-family: var(--involve-font);
 }
 
 .form {
@@ -17,12 +17,11 @@
 	}
 
 	&__notice {
-		letter-spacing: -0.48px;
 		flex-basis: 100%;
 	}
 
 	&__button {
-		margin-top: 18px;
+		margin-top: 24px;
 		width: 100%;
 		padding: 14px 25px;
 		border-radius: 5px;
