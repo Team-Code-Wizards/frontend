@@ -1,8 +1,7 @@
 .stage{
-    width: 100%;
+    width: var(--max-width);
     height: 820px;
-    max-width: 1440px;
-    background-image: url(../../images/stage/background.png);
+    background-image: url(/images/stageCreate/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 

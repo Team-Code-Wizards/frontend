@@ -1,7 +1,7 @@
 import { cardLines } from '@/constants/TechStack';
-import StarIcon from '@/images/icons/StarIcon';
 import { v4 as uuidv4 } from 'uuid';
 
+import StarIcon from '../../../public/images/icons/StarIcon';
 import CardLine from './CardLine';
 import style from './style.module.scss';
 

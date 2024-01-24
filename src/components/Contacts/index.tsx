@@ -2,11 +2,10 @@
 
 import { FormEvent } from 'react';
 
-import ArrowIcon from '@/images/icons/ArrowIcon';
-import TelegramIcon from '@/images/icons/TelegramIcon';
-import ViberIcon from '@/images/icons/ViberIcon';
-import WhatsappIcon from '@/images/icons/WhatsappIcon';
-
+import ArrowIcon from '../../../public/images/icons/ArrowIcon';
+import TelegramIcon from '../../../public/images/icons/TelegramIcon';
+import ViberIcon from '../../../public/images/icons/ViberIcon';
+import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
 import ContactsForm from './ContactsForm';
 import styles from './style.module.scss';
 
@@ -18,7 +17,7 @@ export default function Contacts() {
 	};
 
 	return (
-		<section className={styles['contacts']}>
+		<section id="contacts" className={styles['contacts']}>
 			<h2 className={styles['contacts__title']}>Контакты</h2>
 			<div className={styles['contacts__body']}>
 				<ul className={styles['link-group']}>
@@ -54,7 +53,7 @@ export default function Contacts() {
 					<li className={styles['link-box']}>
 						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
-								<TelegramIcon />
+								<TelegramIcon size={[26, 25]} />
 							</span>
 							<span className={styles['link__item_no-margin']}>telegram</span>
 						</a>
@@ -62,7 +61,7 @@ export default function Contacts() {
 					<li className={styles['link-box']}>
 						<a className={styles['link_messenger']} href="#">
 							<span className={styles['link__item']}>
-								<WhatsappIcon />
+								<WhatsappIcon size={[25, 24]} />
 							</span>
 							<span className={styles['link__item_no-margin']}>whatsapp</span>
 						</a>

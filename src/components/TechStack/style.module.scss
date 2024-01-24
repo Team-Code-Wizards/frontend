@@ -6,12 +6,15 @@
 		row-gap: 60px;
 		width: 100%;
 		padding: 90px;
-		background-image: url('../../images/techStack/tech-stack-background.png');
+		background-image: url('../../../public/images/techStack/tech-stack-background.png');
 		background-position-y: top;
 		background-position-x: left;
 		background-size: contain;
 		background-repeat: no-repeat;
 		color: var(--color-text);
+		-webkit-box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
+		-moz-box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
+		box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
 	}
 
 	&__head {

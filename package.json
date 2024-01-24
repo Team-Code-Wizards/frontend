@@ -21,6 +21,8 @@
 		"react": "^18",
 		"react-dom": "^18",
 		"sass": "^1.69.7",
+		"swiper": "^11.0.5",
+		"sharp": "^0.33.2",
 		"uuid": "^9.0.1"
 	},
 	"devDependencies": {

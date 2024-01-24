@@ -23,6 +23,7 @@
   &__image-no-text {
     max-width: 8.5%;
     align-self: flex-end;
+    cursor: pointer;
   }
 
   &__image-text {
@@ -155,6 +156,12 @@
 
     &__icon_viber {
       order: -1;
+    }
+  }
+
+  &__link-policy {
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

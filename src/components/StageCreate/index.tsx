@@ -1,5 +1,4 @@
-import IconClock from '@/images/stage';
-
+import IconClock from '../../../public/images/stageCreate';
 import styles from './style.module.scss';
 
 export default function StageCreate() {

@@ -1,11 +1,10 @@
 import Image from 'next/image';
 
-import TelegramIcon from '@/images/icons/TelegramIcon';
-import ViberIcon from '@/images/icons/ViberIcon';
-import WhatsappIcon from '@/images/icons/WhatsappIcon';
-import LogoNoText from '@/images/logo/logo-no-text.svg';
-import LogoText from '@/images/logo/logo-text.svg';
-
+import TelegramIcon from '../../../public/images/icons/TelegramIcon';
+import ViberIcon from '../../../public/images/icons/ViberIcon';
+import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
+import LogoNoText from '../../../public/images/logo/logo-no-text.svg';
+import LogoText from '../../../public/images/logo/logo-text.svg';
 import styles from './styles.module.scss';
 
 //TODO добавить ссылки на соцсети
@@ -15,7 +14,11 @@ const Footer = (): React.ReactElement => {
 		<footer className={styles['footer']}>
 			<div className={styles['footer__row']}>
 				<div className={styles['footer__row-first']}>
-					<p>Политика конфиденциальности</p>
+					<p>
+						<a className={styles['footer__link-policy']} href="/privacy-policy">
+							Политика конфиденциальности
+						</a>
+					</p>
 					<p>© Code Wizards, 2023</p>
 				</div>
 				<div>
@@ -28,13 +31,10 @@ const Footer = (): React.ReactElement => {
 					/>
 				</div>
 			</div>
-
 			<div className={styles['footer__row']}>
-				<Image
-					src={LogoNoText}
-					alt="Логотип"
-					className={styles['footer__image-no-text']}
-				/>
+				<a href="#promo" className={styles['footer__image-no-text']}>
+					<Image src={LogoNoText} alt="Логотип" />
+				</a>
 				<Image
 					src={LogoText}
 					alt="Логотип Code Wizards"

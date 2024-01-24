@@ -1,13 +1,13 @@
 import { portfolioCards } from '@/constants/Portfolio';
-import ArrwoChevronIcon from '@/images/icons/ArrowChevronIcon';
 import { v4 as uuidv4 } from 'uuid';
 
+import ArrwoChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
 import PortfolioCard from './Card';
 import style from './style.module.scss';
 
 export default function Portfolio() {
 	return (
-		<section className={style['portfolio__container']}>
+		<section id="portfolio" className={style['portfolio__container']}>
 			<h2 className={style['portfolio__title']}>Портфолио</h2>
 			<div className={style['portfolio__btn-group']}>
 				<button className={style['flipping-btn']} type="button">
