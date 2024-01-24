@@ -1,6 +1,6 @@
 .navbar {
 	position: fixed;
-	top: 20px;
+	top: 16px;
 	z-index: 300;
 	min-width: var(--block-max-width);
 	display: flex;
@@ -13,7 +13,9 @@
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(4px);
 	justify-content: space-between;
-	font: var(--font-description-main);
+	font-family: var(--involve-font);
+	font-size: 16px;
+	font-weight: 500;
 
 	svg {
 		color: var(--color-text);
@@ -27,8 +29,7 @@
 	&__link-list {
 		display: flex;
 		align-items: center;
-		column-gap: 20px;
-		padding-right: 8px;
+		column-gap: 25px;
 	}
 
 	&__link {
@@ -46,7 +47,8 @@
 		color: var(--color-text);
 		text-decoration: none;
 		transition: color 0.2s ease;
-		font-weight: 700;
+		font-weight: 500;
+		font-family: var(--involve-font);
 
 		&:hover {
 			color: var(--color-lilac);

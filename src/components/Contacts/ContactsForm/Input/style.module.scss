@@ -76,7 +76,7 @@
 
 .promo-form-input {
 	width: 100%;
-	padding: 16px 10px;
+	padding: 18px 10px;
 	background-color: var(--color-gray-bg);
 	font-family: var(--involve-font);
 	border: none;
@@ -85,7 +85,7 @@
 
 	&::placeholder {
 		font-size: var(--text-sm);
-		letter-spacing: -0.48px;
+		font-family: var(--involve-font);
 		color: var(--color-input);
 	}
 
