@@ -1,0 +1,116 @@
+//TODO рефактор стилей
+
+//Contacts
+
+.contacts-form-input {
+	width: 100%;
+	padding: 18px 10px;
+	border: none;
+	border-radius: 10px;
+	transition: all 0.3s ease-out;
+	background-color: var(--color-gray-bg);
+
+	&::placeholder {
+		font-size: var(--text-sm);
+		letter-spacing: -0.48px;
+		color: var(--color-input);
+	}
+
+	&[type='file'] {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+
+	&:focus:not(input[type='file']) {
+		outline: 0;
+		background-color: var(--color-input-active);
+		color: var(--color-text-input-active);
+		transition: all 0.3s ease-out;
+
+		&::placeholder {
+			color: transparent;
+		}
+	}
+}
+
+.contacts-form-file-input-label {
+	cursor: pointer;
+	padding: 15px 25px;
+	border: 1px solid white;
+	border-radius: 10px;
+	width: 295px;
+
+	margin-block: 10px;
+	text-align: center;
+	margin-right: auto;
+	line-height: 39%;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		background-color: var(--color-lilac);
+		border: 1px solid rgba(255, 255, 255, 0);
+		transition: all 0.3s ease-out;
+	}
+}
+
+.textarea-box,
+.input-box {
+	position: relative;
+}
+
+.textarea-box,
+.input-box:first-of-type {
+	flex-basis: 100%;
+}
+
+.input-box {
+	&:nth-of-type(2),
+	&:nth-of-type(3) {
+		flex-basis: calc(50% - 5px);
+	}
+}
+
+//Promo
+
+.promo-form-input {
+	width: 100%;
+	padding: 16px 10px;
+	background-color: var(--color-gray-bg);
+	font-family: var(--cygre-font);
+	border: none;
+	border-radius: 10px;
+	transition: all 0.3s ease-out;
+
+	&::placeholder {
+		font-size: var(--text-sm);
+		letter-spacing: -0.48px;
+		color: var(--color-input);
+	}
+
+	&:focus {
+		outline: 0;
+		background-color: var(--color-input-active);
+		color: var(--color-text-input-active);
+		transition: all 0.3s ease-out;
+
+		&::placeholder {
+			color: transparent;
+		}
+	}
+}
+
+.promo-form-input-label {
+	margin-right: auto;
+	line-height: 80%;
+}
+
+.promo-form-input-box {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}

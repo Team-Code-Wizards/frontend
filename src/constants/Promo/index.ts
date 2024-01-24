@@ -1,12 +1,11 @@
 import IInput from '@/components/Contacts/ContactsForm/Input/interface';
-import style from '@/components/Promo/PromoForm/style.module.scss';
 
 export const inputs: IInput[] = [
 	{
 		inputType: 'default',
-		wrapperClassName: style['promo-form__input-box'],
-		labelClassName: style['promo-form__input-label'],
-		className: style['promo-form__input'],
+		wrapperStyleKey: 'promo-form-input-box',
+		labelStyleKey: 'promo-form-input-label',
+		className: 'promo-form-input',
 		clearInputStyleKey: 'promo-input-clear-btn',
 		type: 'text',
 		labelText: 'Имя',
@@ -16,9 +15,9 @@ export const inputs: IInput[] = [
 	},
 	{
 		inputType: 'default',
-		wrapperClassName: style['promo-form__input-box'],
-		labelClassName: style['promo-form__input-label'],
-		className: style['promo-form__input'],
+		wrapperStyleKey: 'promo-form-input-box',
+		labelStyleKey: 'promo-form-input-label',
+		className: 'promo-form-input',
 		clearInputStyleKey: 'promo-input-clear-btn',
 		type: 'tel',
 		labelText: 'Телефон',
