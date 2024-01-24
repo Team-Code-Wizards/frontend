@@ -1,11 +1,10 @@
 import IInput from '@/components/Contacts/ContactsForm/Input/interface';
-import style from '@/components/Contacts/ContactsForm/style.module.scss';
 
 export const inputs: IInput[] = [
 	{
 		inputType: 'default',
-		className: style['form__input'],
-		wrapperClassName: style['input-box'],
+		className: 'contacts-form-input',
+		wrapperStyleKey: 'input-box',
 		clearInputStyleKey: 'input-clear-btn',
 		type: 'text',
 		name: 'clientName',
@@ -13,8 +12,8 @@ export const inputs: IInput[] = [
 	},
 	{
 		inputType: 'default',
-		className: style['form__input'],
-		wrapperClassName: style['input-box'],
+		className: 'contacts-form-input',
+		wrapperStyleKey: 'input-box',
 		clearInputStyleKey: 'input-clear-btn',
 		type: 'tel',
 		name: 'clientTel',
@@ -22,8 +21,8 @@ export const inputs: IInput[] = [
 	},
 	{
 		inputType: 'default',
-		className: style['form__input'],
-		wrapperClassName: style['input-box'],
+		className: 'contacts-form-input',
+		wrapperStyleKey: 'input-box',
 		clearInputStyleKey: 'input-clear-btn',
 		type: 'email',
 		name: 'clientEmail',
@@ -31,16 +30,16 @@ export const inputs: IInput[] = [
 	},
 	{
 		inputType: 'textarea',
-		className: style['form__input'],
-		wrapperClassName: style['textarea-box'],
+		className: 'contacts-form-input',
+		wrapperStyleKey: 'textarea-box',
 		clearInputStyleKey: 'textarea-clear-btn',
 		name: 'clientMessage',
 		placeholder: 'Сообщение',
 	},
 	{
 		inputType: 'inputFile',
-		className: style['form__input'],
-		labelClassName: style['label'],
+		className: 'contacts-form-input',
+		labelStyleKey: 'contacts-form-file-input-label',
 		type: 'file',
 		name: 'clientFile',
 		accept: '.doc',
