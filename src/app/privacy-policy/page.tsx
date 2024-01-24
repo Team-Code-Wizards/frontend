@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
 			</div>
 			<div className={styles['container__content']}>
 				<div className={styles['container__content_block']}>
-					<h3>1.Общие положения</h3>
+					<h3>1. Общие положения</h3>
 					<p>
 						Настоящая политика обработки персональных данных составлена в
 						соответствии с требованиями Федерального закона от 27.07.2006.
