@@ -31,8 +31,8 @@
 	}
 
 	&__title {
-		font-size: var(--text-xl);
-		line-height: 0%;
+		font: var(--font-block-title);
+		line-height: 20%;
 	}
 
 	&__subtitle {
@@ -44,8 +44,7 @@
 		margin-top: -10px;
 		display: flex;
 		column-gap: 10px;
-		font-family: var(--cygre-font);
-		font-size: 16px;
+		font: var(--font-description-main);
 		color: var(--color-lilac);
 		line-height: 115%;
 		letter-spacing: -0.48px;

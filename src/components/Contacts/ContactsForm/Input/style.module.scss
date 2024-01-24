@@ -80,13 +80,12 @@
 	width: 100%;
 	padding: 16px 10px;
 	background-color: var(--color-gray-bg);
-	font-family: var(--cygre-font);
+	font: var(--font-description-main);
 	border: none;
 	border-radius: 10px;
 	transition: all 0.3s ease-out;
 
 	&::placeholder {
-		font-size: var(--text-sm);
 		letter-spacing: -0.48px;
 		color: var(--color-input);
 	}
