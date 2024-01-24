@@ -2,8 +2,8 @@
   width: 88.9%;
   max-width: 1280px;
   min-height: 314px;
-  margin: 93px auto 160px;
-  padding: 35px 23px 40px 42px;
+  margin: 160px  auto 93px;
+  padding: 35px 24px 40px 40px;
   border-radius: 30px;
   font: var(--font-description-main);
   letter-spacing: -0.03em;
@@ -24,6 +24,10 @@
     max-width: 8.5%;
     align-self: flex-end;
     cursor: pointer;
+    
+    & > img {
+      width: 100%;
+    }
   }
 
   &__image-text {
@@ -44,13 +48,16 @@
   }
 
   a {
-    display: block;
     text-decoration: none;
-    text-align: right;
     color: var(--color-text);
   }
 
-  @media (max-width: 1280px) {
+  &__link {
+    display: block;
+    text-align: right;
+  }
+
+  @media screen and (max-width: 1280px) {
     width: 80%;
 
     &__row {
@@ -61,6 +68,10 @@
 
     &__image-no-text {
       max-width: 10.5%;
+
+      & > img {
+        vertical-align: bottom;
+      }
     }
 
     &__image-text {
@@ -83,7 +94,7 @@
     }
   }
 
-  @media (max-width: 835px) {
+  @media screen and (max-width: 835px) {
     width: 92%;
     margin: 80px auto;
     padding: 36px 24px 40px 39px;
@@ -98,12 +109,12 @@
     }
   }
   
-  @media (max-width: 391px) {
+  @media screen and (max-width: 391px) {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
     width: 82%;
-    padding: 18px 24px 16px 19px;
+    padding: 20px 24px 16px 20px;
     margin: 60px auto;
 
     &__row {
@@ -120,6 +131,10 @@
 
     &__row-first {
       padding-inline-start: 11px;
+    }
+
+    &__image-no-text {
+      display: none;
     }
 
     &__image-no-text {
@@ -150,16 +165,18 @@
       }
     }
 
-    &__icon_whatsapp {
+    &__link_whatsapp {
       order: -2;
     }
 
-    &__icon_viber {
+    &__link_viber {
       order: -1;
     }
   }
 
   &__link-policy {
+    text-align: left;
+
     &:hover {
       text-decoration: underline;
     }
