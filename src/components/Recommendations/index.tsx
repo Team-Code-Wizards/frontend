@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 import { recommendationsPreviews } from '@/constants/Recommendations';
-import circle from '@/images/recommendations/circle.svg';
 import { v4 as uuidv4 } from 'uuid';
 
 import ArrowChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
+import circle from '../../../public/images/recommendations/circle.svg';
 import RecommendationPreview from './RecommendationPreview';
 import styles from './style.module.scss';
 
