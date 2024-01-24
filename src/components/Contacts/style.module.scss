@@ -33,7 +33,7 @@
 	max-height: 252px;
 	flex-wrap: wrap;
 	font-family: var(--involve-font);
-	// letter-spacing: -0.48px;
+
 	gap: 10px;
 }
 
@@ -86,8 +86,6 @@
 		}
 	}
 }
-
-//TODO рефактор повторения кода
 
 .link {
 	all: unset;
