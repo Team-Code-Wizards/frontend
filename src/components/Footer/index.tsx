@@ -14,7 +14,11 @@ const Footer = (): React.ReactElement => {
 		<footer className={styles['footer']}>
 			<div className={styles['footer__row']}>
 				<div>
-					<p>Политика конфиденциальности</p>
+					<p>
+						<a className={styles['footer__link-policy']} href="/privacy-policy">
+							Политика конфиденциальности
+						</a>
+					</p>
 					<p>© Code Wizards, 2023</p>
 				</div>
 				<div>
@@ -24,11 +28,9 @@ const Footer = (): React.ReactElement => {
 			</div>
 
 			<div className={styles['footer__row']}>
-				<Image
-					src={LogoNoText}
-					alt="Логотип"
-					className={styles['footer__image-no-text']}
-				/>
+				<a href="#promo" className={styles['footer__image-no-text']}>
+					<Image src={LogoNoText} alt="Логотип" />
+				</a>
 				<Image
 					src={LogoText}
 					alt="Логотип Code Wizards"

@@ -58,43 +58,4 @@
 			background-position: 10%;
 		}
 	}
-
-	&__input-box {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		row-gap: 10px;
-	}
-
-	&__input-label {
-		margin-right: auto;
-		line-height: 80%;
-	}
-
-	&__input {
-		width: 100%;
-		padding: 16px 10px;
-		background-color: var(--color-gray-bg);
-		font-family: var(--cygre-font);
-		border: none;
-		border-radius: 10px;
-		transition: all 0.3s ease-out;
-
-		&::placeholder {
-			font-size: var(--text-sm);
-			letter-spacing: -0.48px;
-			color: var(--color-input);
-		}
-
-		&:focus {
-			outline: 0;
-			background-color: var(--color-input-active);
-			color: var(--color-text-input-active);
-			transition: all 0.3s ease-out;
-
-			&::placeholder {
-				color: transparent;
-			}
-		}
-	}
 }

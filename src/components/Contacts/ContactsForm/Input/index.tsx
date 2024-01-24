@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import ClearInputButton from './ClearInputButton';
 import IInput from './interface';
+import style from './style.module.scss';
 
 export default function Input({
 	id,
@@ -13,17 +14,17 @@ export default function Input({
 	accept,
 	inputType,
 	labelText,
-	labelClassName,
-	wrapperClassName,
+	labelStyleKey,
+	wrapperStyleKey,
 	clearInputStyleKey,
 }: IInput) {
 	const [isActive, setIsActive] = useState(false);
 
 	if (inputType === 'textarea')
 		return (
-			<span className={wrapperClassName}>
+			<span className={wrapperStyleKey && style[wrapperStyleKey]}>
 				<textarea
-					className={className}
+					className={className && style[className]}
 					name={name}
 					placeholder={placeholder}
 					onFocus={() => setIsActive(true)}
@@ -37,28 +38,28 @@ export default function Input({
 		return (
 			<>
 				<input
-					className={className}
+					className={className && style[className]}
 					type={type}
 					id="file"
 					name={name}
 					accept={accept}
 				/>
-				<label className={labelClassName} htmlFor="file">
+				<label className={labelStyleKey && style[labelStyleKey]} htmlFor="file">
 					{labelText}
 				</label>
 			</>
 		);
 
 	return (
-		<span className={wrapperClassName}>
+		<span className={wrapperStyleKey && style[wrapperStyleKey]}>
 			{labelText && (
-				<label className={labelClassName} htmlFor={id}>
+				<label className={labelStyleKey && style[labelStyleKey]} htmlFor={id}>
 					{labelText}
 				</label>
 			)}
 			<input
 				type={type}
-				className={className}
+				className={className && style[className]}
 				name={name}
 				id={id}
 				placeholder={placeholder}
