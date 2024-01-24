@@ -15,8 +15,8 @@ export default function AboutUs() {
 			<div className={style['about-us__main']}>
 				<Image
 					src={laptopImage}
-					className={style['about-us__image']}
 					alt={'laptop-image'}
+					className={style['about-us__image']}
 				/>
 				<div className={style['about-us__goals']}>
 					<ul className={style['about-us__goals-list']}>

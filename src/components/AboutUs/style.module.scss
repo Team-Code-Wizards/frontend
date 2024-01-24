@@ -2,7 +2,7 @@
 	font-family: var(--rg-font);
 	color: var(--color-bg-white);
 	padding-block: 80px;
-	max-width: 1280px;
+	max-width: var(--block-max-width);
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -23,16 +23,10 @@
 
 	&__main {
 		width: 100%;
-		max-width: 1280px;
 		display: flex;
 		column-gap: 20px;
 		color: var(--color-bg-white);
 		font: var(--font-description-main);
-	}
-
-	&__image {
-		display: flex;
-		width: 100%;
 	}
 
 	&__goals {
@@ -75,6 +69,93 @@
 
 		&:last-of-type {
 			color: var(--color-lilac);
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.about-us {
+		&__h2-title {
+			margin-bottom: 16px;
+		}
+
+		&__h3-title {
+			width: 45%;
+			margin-bottom: 45px;
+		}
+
+		&__image {
+			width: 739px;
+			height: 472px;
+		}
+
+		&__goals {
+			padding-top: 0;
+			margin-top: -12px;
+		}
+	}
+
+	.goals-resume {
+		&__item {
+			width: 99%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.about-us {
+		&__h3-title {
+			width: 55%;
+		}
+
+		&__image {
+			width: 473px;
+			height: 472px;
+		}
+	}
+
+	.goals-resume {
+		&__item {
+			width: 95%;
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.about-us {
+		&__h2-title {
+			font-size: 40px;
+			margin-bottom: 8px;
+		}
+
+		&__h3-title {
+			font-size: 20px;
+			width: 100%;
+			margin-bottom: 32px;
+		}
+
+		&__image {
+			width: 320px;
+			height: 409px;
+		}
+
+		&__main {
+			flex-direction: column;
+			row-gap: 18px;
+		}
+
+		&__goals {
+			margin-top: 0;
+		}
+	}
+
+	.goals-resume {
+		&__item {
+			width: 100%;
+
+			&:first-of-type {
+				margin-bottom: 4px;
+			}
 		}
 	}
 }
