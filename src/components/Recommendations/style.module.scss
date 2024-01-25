@@ -1,7 +1,7 @@
 .recommendations {
 	width: 100%;
 	padding: 80px;
-	
+
 	&__container {
 		background-image: url(/images/recommendations/background.png);
 		background-repeat: no-repeat;
@@ -12,7 +12,6 @@
 		margin: 0 auto;
 		border-radius: 20px;
 		color: var(--color-text);
-		overflow: hidden;
 	}
 
 	&__header {
@@ -23,7 +22,6 @@
 
 	&__title {
 		font: var(--font-block-title);
-		color: var(--color-text);
 		margin-left: 32px;
 	}
 
@@ -62,7 +60,7 @@
 		width: 100%;
 
 		& > * {
-			display: inline-block;
+			cursor: pointer;
 		}
 	}
 }
@@ -72,6 +70,7 @@
 	align-items: center;
 	margin-top: 22px;
 	margin-left: 282.5px;
+	cursor: pointer;
 
 	&__container {
 		display: flex;
@@ -80,7 +79,6 @@
 	}
 
 	&_title {
-		color: var(--color-text);
 		font: var(--font-title-description);
 	}
 
