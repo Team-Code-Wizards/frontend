@@ -22,9 +22,13 @@ export default function Contacts() {
 			<div className={styles['contacts__body']}>
 				<ul className={styles['link-group']}>
 					<li className={styles['link-box']}>
-						<a className={styles['link']} href="mailto:email@code-wizards.team">
+						<a
+							className={styles['link']}
+							href="mailto:email@code-wizards.team"
+							type="email"
+						>
 							<p className={styles['link__item_word-space']}>
-								e-mail email@code-wizards.team
+								E-mail email@code-wizards.team
 							</p>
 							<span className={styles['link__item']}>
 								<ArrowIcon />
@@ -43,27 +47,27 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="#">
+						<a className={styles['link']} href="#">
 							<span className={styles['link__item']}>
-								<ViberIcon />
+								<ViberIcon size={[26, 26]} />
 							</span>
-							<span className={styles['link__item_no-margin']}>viber</span>
+							<span className={styles['link__item_no-margin']}>Viber</span>
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="#">
+						<a className={styles['link']} href="#">
 							<span className={styles['link__item']}>
 								<TelegramIcon size={[26, 25]} />
 							</span>
-							<span className={styles['link__item_no-margin']}>telegram</span>
+							<span className={styles['link__item_no-margin']}>Telegram</span>
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="#">
+						<a className={styles['link']} href="#">
 							<span className={styles['link__item']}>
 								<WhatsappIcon size={[25, 24]} />
 							</span>
-							<span className={styles['link__item_no-margin']}>whatsapp</span>
+							<span className={styles['link__item_no-margin']}>Whatsapp</span>
 						</a>
 					</li>
 				</ul>
