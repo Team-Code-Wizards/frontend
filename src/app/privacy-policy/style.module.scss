@@ -5,11 +5,11 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	color: var(--color-text);
-	padding: 80px 128px;
+	padding: 80px 0;
 	margin: 0 auto;
 
 	&__title {
-		margin-bottom: 80px;
+		margin-bottom: 72px;
 
 		h2 {
 			font: var(--font-block-title);
@@ -24,16 +24,25 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
+		gap: 30px;
 
 		&_block {
 			h3 {
 				font: var(--font-title-description);
-				margin-bottom: 20px;
+				margin-bottom: 13px;
 			}
 
 			p {
 				font: var(--font-description-main);
+				line-height: 131%;
+			}
+		}
+	}
+
+	@media (max-width: 580px) {
+		&__title {
+			h2 {
+				font-size: 32px;
 			}
 		}
 	}
