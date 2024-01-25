@@ -8,19 +8,23 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
-
+  width: 100%;
 
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 597px;
+    width: 88.8%;
+    margin: 0 auto;
+    text-align: center;
 
     .name {
       font-family: var(--rg-font);
       font-weight: 600;
       font-size: 383px;
       color: var(--color-bg-white);
+      width: 100%;
     }
 
     .text {
@@ -28,6 +32,8 @@
       font: var(--font-title-description);
       margin-top: -40px;
       margin-bottom: 40px;
+      text-align: center;
+      width: 55%;
     }
 
     .btn {
@@ -35,7 +41,7 @@
       justify-content: center;
       align-items: center;
       background-color: var(--color-lilac);
-      width: 215px;
+      width: 255px;
       height: 40px;
       padding: 10px 0 10px 0;
       border-radius: 5px;
@@ -50,12 +56,57 @@
             background-color: #cbcffd;
           }
 
-      a {
+      .link {
         text-decoration: none;
         color: var(--color-text);
         font-family: var(--rg-font);
         font-weight: 600;
-        font-size: 20px;
+        font-size: 23px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .not-found {
+    &__container {
+      width: 87.5%;
+    }
+  }
+}
+
+  @media screen and (max-width: 834px) {
+    .not-found {
+      &__container {
+       width: 89.2%;
+      }
+    }
+  }
+
+@media screen and (max-width: 700px) {
+  .not-found {
+    &__container {
+      .name {
+        font-size: 260px;
+      }
+    }
+    }
+  }
+
+@media screen and (max-width: 470px){
+  .not-found {
+    &__container {
+     width: 100%;
+      margin-top: 320px;
+
+      .name {
+        font-size: 200px;
+      }
+
+      .text {
+        margin-bottom: 40px;
+        margin-top: -35px;
+        width: 80%;
       }
     }
   }

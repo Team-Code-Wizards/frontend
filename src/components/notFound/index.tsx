@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import styles from './styles.module.scss';
 
 export default function NotFound() {
@@ -7,7 +9,9 @@ export default function NotFound() {
 				<h1 className={styles['name']}>404</h1>
 				<p className={styles['text']}>Такой страницы не существует.</p>
 				<button type="button" className={styles['btn']}>
-					<a href="/">Вернуться на главную</a>
+					<Link href="/" className={styles['link']}>
+						Вернуться на главную
+					</Link>
 				</button>
 			</div>
 		</div>
