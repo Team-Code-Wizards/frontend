@@ -10,6 +10,7 @@
 		width: 88.9%;
 		max-width: 1280px;
 		margin: 0 auto;
+		margin-block-end: 60px;
 	}
 
 	&__title {
@@ -21,8 +22,23 @@
 
 	&__description {
 		width: 61%;
-		margin-block-end: 60px;
 		font: var(--font-title-description);
+	}
+
+	@media screen and (max-width: 1280px) {
+		&__description-wrapper {
+			max-width: 1024px;
+			margin-block-end: 56px
+		}
+
+		&__title {
+			width: 76%;
+			margin-block-start: 67px;
+		}
+
+		&__description {
+			width: 76%;
+		}
 	}
 }
 
@@ -33,4 +49,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
+	@media screen and (max-width: 1280px) {
+		max-width: 1024px;
+	}
 }

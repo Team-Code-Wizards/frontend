@@ -1,7 +1,6 @@
 .step {
 	box-sizing: border-box;
 	max-width: 413px;
-	min-width: 328px;
 	height: 499px;
 	margin-inline-end: 20px;
 	margin-block-end: 20px;
@@ -11,8 +10,9 @@
 	background-color: var(--color-bg-black);
 
 	&__number {
-		width: 64px;
-		max-height: 28px;
+		width: 76px;
+		max-height: 35px;
+		padding: 6px 10px;
 		border-radius: 41px;
 		text-align: center;
 		font: var(--font-title-description);
@@ -29,7 +29,7 @@
 	&__description {
 		margin-block-end: 40px;
 		font: var(--font-description-main);
-    letter-spacing: -0.48px;
+    	letter-spacing: -0.48px;
 	}
 
 	&__image {
@@ -38,6 +38,22 @@
 
 	img {
 		max-width: 100%;
+	}
+
+	@media screen and (max-width: 1280px) {
+		max-width: 328px;
+		padding: 19px;
+		margin-block-end: 23px;
+
+		&__title {
+			margin-block-start: 5px;
+			margin-block-end: 32px;
+		}
+
+		&__description {
+			letter-spacing: normal;
+			width: 99%;
+		}
 	}
 }
 
