@@ -1,7 +1,3 @@
-import Image from 'next/image';
-
-import laptopImage from '&/images/aboutUs/laptop-image.png';
-
 import style from './style.module.scss';
 
 export default function AboutUs() {
@@ -9,15 +5,11 @@ export default function AboutUs() {
 		<section id="about-us" className={style['about-us']}>
 			<h2 className={style['about-us__h2-title']}>О нас</h2>
 			<h3 className={style['about-us__h3-title']}>
-				Мы – коллектив творческих умов, готовых воплощать ваши идеи в цифровую{' '}
+				Мы – коллектив творческих умов, готовых воплощать ваши идеи в цифровую
 				реальность.
 			</h3>
 			<div className={style['about-us__main']}>
-				<Image
-					src={laptopImage}
-					alt={'laptop-image'}
-					className={style['about-us__image']}
-				/>
+				<div className={style['about-us__image']} />
 				<div className={style['about-us__goals']}>
 					<ul className={style['goals-list']}>
 						<li className={style['goals-list__item']}>5 лет опыта</li>

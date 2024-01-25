@@ -29,9 +29,20 @@
 		font: var(--font-description-main);
 	}
 
+	&__image {
+		background-image: url('../../../public/images/aboutUs/about-us-main-image.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 409px;
+		border-radius: 18px;
+	}
+
 	&__goals {
 		display: flex;
 		flex-direction: column;
+		flex-basis: 70%;
 		padding-top: 62px;
 		row-gap: 18px;
 		font-family: var(--involve-font);
@@ -51,10 +62,11 @@
 
 	&__item {
 		background-color: var(--color-lilac);
-		color: var(--color-bg-black);
+		color: var(--color-dark-purple);
 		border-radius: 5px;
-		padding: 4px 8px 6px;
-		font-family: var(--cygre-font);
+		padding: 5px 10px;
+		font-family: var(--involve-font);
+		font-size: var(--font-sm);
 		font-weight: 700;
 	}
 }
@@ -83,19 +95,19 @@
 		}
 
 		&__image {
-			width: 739px;
 			height: 472px;
 		}
 
 		&__goals {
 			padding-top: 0;
 			margin-top: -12px;
+			flex-basis: 36%;
 		}
 	}
 
 	.goals-resume {
 		&__item {
-			width: 99%;
+			width: 98%;
 		}
 	}
 }
@@ -107,8 +119,11 @@
 		}
 
 		&__image {
-			width: 473px;
 			height: 472px;
+		}
+
+		&__goals {
+			flex-basis: 58%;
 		}
 	}
 
@@ -133,7 +148,6 @@
 		}
 
 		&__image {
-			width: 320px;
 			height: 409px;
 		}
 
@@ -145,6 +159,10 @@
 		&__goals {
 			margin-top: 0;
 		}
+	}
+
+	.goals-list {
+		column-gap: 4px;
 	}
 
 	.goals-resume {
