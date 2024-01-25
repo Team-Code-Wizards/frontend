@@ -38,12 +38,6 @@
 		font-size: var(--text-sm);
 	}
 
-	&__goals-list {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 12px;
-	}
-
 	&__goals-resume {
 		font-weight: 500;
 		line-height: var(--line-height-big);
@@ -51,6 +45,10 @@
 }
 
 .goals-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+
 	&__item {
 		background-color: var(--color-lilac);
 		color: var(--color-bg-black);

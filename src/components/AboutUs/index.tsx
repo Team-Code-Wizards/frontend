@@ -19,7 +19,7 @@ export default function AboutUs() {
 					className={style['about-us__image']}
 				/>
 				<div className={style['about-us__goals']}>
-					<ul className={style['about-us__goals-list']}>
+					<ul className={style['goals-list']}>
 						<li className={style['goals-list__item']}>5 лет опыта</li>
 						<li className={style['goals-list__item']}>Внедрение инноваций</li>
 						<li className={style['goals-list__item']}>
