@@ -33,7 +33,7 @@
 
 :root {
   --width-1280-1025: clamp(1025px, 80% ,1280px);
-  --width-1024-1024: clamp(769px, 80% ,1024px);
+  --width-1024-769: clamp(769px, 80% ,1024px);
   --width-768-280: clamp(280px, 80% , 768px);
   --block-max-width: 1280px;
 
@@ -116,5 +116,4 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  outline: solid ;
 }
