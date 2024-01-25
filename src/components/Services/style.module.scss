@@ -120,6 +120,7 @@
 			font: var(--font-title-description);
 			color: var(--color-text);
 			line-height: 100%;
+			transition: all 0.3s ease-in;
 			cursor: pointer;
 
 			&:hover {
@@ -141,11 +142,11 @@
 			border: 1px solid rgba(255, 255, 255, 0.7);
 			color: var(--color-text);
 			background-color: transparent;
+			transition: all 0.3s ease-in;
 			cursor: pointer;
 
 			&:hover {
-				background-color: var(--color-lilac);
-				border: 1px solid var(--color-lilac);
+				border: 1px solid var(--color-text);
 			}
 		}
 	}
