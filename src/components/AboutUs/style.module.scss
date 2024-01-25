@@ -112,7 +112,7 @@
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 	.about-us {
 		&__h3-title {
 			width: 55%;
@@ -134,7 +134,7 @@
 	}
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
 	.about-us {
 		&__h2-title {
 			font-size: 40px;
