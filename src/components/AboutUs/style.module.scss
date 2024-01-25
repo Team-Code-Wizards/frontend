@@ -86,6 +86,7 @@
 @media screen and (max-width: 1280px) {
 	.about-us {
 		max-width: var(--block-md-width);
+
 		&__h2-title {
 			margin-bottom: 16px;
 		}
@@ -138,7 +139,7 @@
 
 @media screen and (min-width: 390px) and (max-width: 833px) {
 	.about-us {
-		max-width: var(--block-s-width);
+		max-width: 80%;
 		&__h2-title {
 			font-size: 40px;
 			margin-bottom: 8px;
