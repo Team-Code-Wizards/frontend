@@ -131,6 +131,12 @@
 	}
 }
 
+@media screen and (max-width: 1439px) {
+	.contacts {
+	  width: 88%;
+	}
+}
+
 @media screen and (max-width: 1280px) {
 	.contacts {
 	  width: 80%;
@@ -164,7 +170,7 @@
 	.contacts {
 	  width: 92%;
 	  max-width: 768px;
-	  padding: 65px 40px;
+    padding: 65px 40px 72px;
   }
 
 	.link-group {
@@ -228,21 +234,27 @@
 
 @media screen and (max-width: 550px) {
   .contacts {
-	  width: 82%;
-	  max-width: 320px;
-	  padding: 60px 0;
-	  background: transparent;
+		padding: 60px 30px 30px;
+		@media screen and (max-width: 390px) {
+			width: 82%;
+			max-width: 320px;
+			padding: 60px 0 0;
+			background: transparent;
+		}
 	}
 
 	.link-box {
 		&:nth-of-type(2) {
 		  flex-basis: 67.2%;
-				@media screen and (max-width: 380px) {
-					flex-basis: 100%;
-				}
+			@media screen and (max-width: 380px) {
+				flex-basis: 100%;
+			}
 	  }
 	  &:nth-of-type(4) {
 		  flex-basis: 44%;
+			@media screen and (min-width: 391px) and (max-width: 413px) {
+				flex-basis: 42%;
+			}
 			@media screen and (max-width: 380px) {
 				flex-basis: 100%;
 			}
