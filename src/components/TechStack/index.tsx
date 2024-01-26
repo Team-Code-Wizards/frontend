@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import StarIcon from '../../../public/images/icons/StarIcon';
 import CardLine from './CardLine';
-import style from './style.module.scss';
+import style from './styles.module.scss';
 
 export default function TechStack() {
 	return (
