@@ -15,10 +15,8 @@
 	&__h3-title {
 		display: inline-flex;
 		width: 35%;
-		line-height: var(--line-height);
-		font-size: var(--text-base);
 		margin-bottom: 35px;
-		font-family: var(--involve-font);
+		font: var(--font-title-description);
 	}
 
 	&__main {
@@ -118,7 +116,7 @@
 	.about-us {
 		max-width: var(--width-1024-768);
 		&__h3-title {
-			width: 55%;
+			width: 57%;
 		}
 
 		&__image {
@@ -146,7 +144,7 @@
 		}
 
 		&__h3-title {
-			font-size: 20px;
+			font-size: 19px;
 			width: 100%;
 			margin-bottom: 32px;
 		}

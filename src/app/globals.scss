@@ -123,4 +123,13 @@
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	outline: solid;
+}
+
+div {
+	outline: red solid;
+}
+
+section {
+	outline: blue solid;
 }
