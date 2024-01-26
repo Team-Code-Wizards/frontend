@@ -1,5 +1,5 @@
 //import AboutUs from "../AboutUs";
-import ComponentsContainer from '../ComponentsContainer';
+//import ComponentsContainer from '../ComponentsContainer';
 //import Contacts from "../Contacts";
 //import Faq from "../Faq/index";
 //import Footer from "../Footer";
@@ -21,12 +21,12 @@ export default function MainPage() {
 			{/* <Modal /> этот оставить закомменченным*/}
 			{/*<Navbar /> */}
 			{/*<Promo /> */}
-			<ComponentsContainer>
-				{/*<ProjectDescriptionModal этот оставить тоже />*/}
-				{/*<AboutUs /> */}
-				<Services />
-				{/*<Portfolio /> */}
-			</ComponentsContainer>
+			{/*<ComponentsContainer>*/}
+			{/*<ProjectDescriptionModal этот оставить тоже />*/}
+			{/*<AboutUs /> */}
+			<Services />
+			{/*<Portfolio /> */}
+			{/*</ComponentsContainer>*/}
 			{/*<StageCreate />*/}
 			{/*<Recommendations /> */}
 			{/*<Choice /> */}

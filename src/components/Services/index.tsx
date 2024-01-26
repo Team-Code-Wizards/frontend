@@ -1,6 +1,7 @@
 import services from '@/constants/Services';
 import { v4 as uuidv4 } from 'uuid';
 
+import ArrowDownIcon from '../../../public/images/icons/ArrowDownIcon';
 import styles from './style.module.scss';
 
 export default function Services() {
@@ -28,6 +29,12 @@ export default function Services() {
 									<span className={styles['service-card__prices_old']}>
 										{service.oldPrice}$
 									</span>
+									<button
+										className={styles['service-card__popup']}
+										type="button"
+									>
+										<ArrowDownIcon />
+									</button>
 								</div>
 							</div>
 							<span className={styles['service-card__btns']}>

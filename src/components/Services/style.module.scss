@@ -28,6 +28,11 @@
     @media screen and (max-width: 1024px) {
       justify-content: center;
     }
+
+    @media screen and (max-width: 834px) {
+      width: 800px;
+      justify-content: space-between;
+    }
     // div:nth-child(2 of div.service-card),
     // div:nth-child(4 of div.service-card) {
     //   width: 414px;
@@ -54,6 +59,15 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(2px);
 
+  @media screen and (max-width: 1024px) {
+    height: 442px;
+  }
+
+  @media screen and (max-width: 834px) {
+    height: 427px;
+    width: 800px;
+  }
+
   &__content {
     position: relative;
     padding: 6px 9px 30px 10px;
@@ -61,10 +75,6 @@
     height: 276px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
-
-    @media screen and (max-width: 1024px) {
-      height: 372px;
-    }
 
     & > h4 {
       font: var(--font-title-description);
@@ -78,6 +88,10 @@
       font: var(--font-description-main);
       letter-spacing: -0.48px;
       line-height: 114%;
+
+      @media (max-width: 390px) {
+        display: none;
+      }
     }
   }
 
@@ -116,6 +130,13 @@
     }
   }
 
+  &__popup {
+    display: none;
+    @media screen and (max-width: 390px) {
+      display: block;
+    }
+  }
+
   &__btns {
     display: flex;
     justify-content: space-between;
@@ -132,72 +153,58 @@
       color: var(--color-text);
       line-height: 100%;
       cursor: pointer;
-      &_order {
-        padding: 10px 0;
-        height: 40px;
-        width: calc(100% - 48px);
-        border-radius: 5px;
-        border: none;
-        background-color: var(--color-lilac);
-        text-align: center;
-        font: var(--font-title-description);
-        color: var(--color-text);
-        line-height: 100%;
-        transition: all 0.3s ease-in;
-        cursor: pointer;
 
-        &:hover {
-          background-color: #b3b9fc;
-        }
-
-        &:active {
-          background-color: #cbcffd;
-        }
+      &:hover {
+        background-color: #b3b9fc;
       }
 
-      &_ask {
-        display: grid;
-        place-items: center;
-        height: 40px;
-        width: 37px;
-        border-radius: 5px;
-        border: none;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        color: var(--color-text);
-        background-color: transparent;
-        cursor: pointer;
-        &_ask {
-          display: grid;
-          place-items: center;
-          height: 40px;
-          width: 37px;
-          border-radius: 5px;
-          border: none;
-          border: 1px solid rgba(255, 255, 255, 0.7);
-          color: var(--color-text);
-          background-color: transparent;
-          transition: all 0.3s ease-in;
-          cursor: pointer;
+      &:active {
+        background-color: #cbcffd;
+      }
+    }
 
-          &:hover {
-            border: 1px solid var(--color-text);
-          }
-        }
+    &_ask {
+      display: grid;
+      place-items: center;
+      height: 40px;
+      width: 37px;
+      border-radius: 5px;
+      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: var(--color-text);
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid var(--color-text);
       }
     }
   }
   @media screen and (max-width: 1040px) {
     & {
       width: 308px;
+      max-width: 45%;
     }
 
-    div:nth-child(4 of div.service-card),
-    div:nth-child(5 of div.service-card),
-    div:nth-child(6 of div.service-card) {
+    div.service-card {
       height: 422px;
 
       & .service-card__content {
         height: 261px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 834px) {
+    & {
+      width: 374px;
+    }
+
+    div.service-card {
+      height: 422px;
+
+      & .service-card__content {
+        height: 334px;
       }
     }
   }
