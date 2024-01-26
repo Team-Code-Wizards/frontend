@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import ClearInputButton from './ClearInputButton';
 import IInput from './interface';
-import style from './style.module.scss';
+import styles from './styles.module.scss';
 
 export default function Input({
 	id,
@@ -22,9 +22,9 @@ export default function Input({
 
 	if (inputType === 'textarea')
 		return (
-			<span className={wrapperStyleKey && style[wrapperStyleKey]}>
+			<span className={wrapperStyleKey && styles[wrapperStyleKey]}>
 				<textarea
-					className={className && style[className]}
+					className={className && styles[className]}
 					name={name}
 					placeholder={placeholder}
 					onFocus={() => setIsActive(true)}
@@ -38,28 +38,31 @@ export default function Input({
 		return (
 			<>
 				<input
-					className={className && style[className]}
+					className={className && styles[className]}
 					type={type}
 					id="file"
 					name={name}
 					accept={accept}
 				/>
-				<label className={labelStyleKey && style[labelStyleKey]} htmlFor="file">
+				<label
+					className={labelStyleKey && styles[labelStyleKey]}
+					htmlFor="file"
+				>
 					{labelText}
 				</label>
 			</>
 		);
 
 	return (
-		<span className={wrapperStyleKey && style[wrapperStyleKey]}>
+		<span className={wrapperStyleKey && styles[wrapperStyleKey]}>
 			{labelText && (
-				<label className={labelStyleKey && style[labelStyleKey]} htmlFor={id}>
+				<label className={labelStyleKey && styles[labelStyleKey]} htmlFor={id}>
 					{labelText}
 				</label>
 			)}
 			<input
 				type={type}
-				className={className && style[className]}
+				className={className && styles[className]}
 				name={name}
 				id={id}
 				placeholder={placeholder}
