@@ -44,16 +44,15 @@
     }
 
   &__title {
-    font-size: var(--text-xl);
+    font: var(--font-block-title);
     color: var(--color-lilac);
     line-height: 57.6px;
-    font-family: var(--rg-font);
   }
 
   &__description {
     margin: 25px 0 35px;
 
-    h4 {
+    p {
       font: var(--font-description-main);
       color: var(--color-text);
     }
@@ -68,12 +67,12 @@
     font: var(--font-button);
     color: var(--color-text);
     padding: 5px 25px;
+    margin-top: 40px;
     background-image: var(--color-gradient-button);
     background-size: 400%;
     background-position: 99%;
     border-radius: 5px;
     border: none;
-    margin-top: 40px;
 
     transition: 0.3s background-position ease-in-out;
 
@@ -96,14 +95,14 @@
 @media screen and (max-width: 767px) {
   .modal {
     width: 82vw;
-    padding: 22px 20px 20px;
+    padding: 24px 20px 20px;
 
     &__title {
       font: var(--font-button);
     }
 
     &__description {
-      margin: 25px 0 16px;
+      margin: 21px 0 16px;
     }
 
     &__example {

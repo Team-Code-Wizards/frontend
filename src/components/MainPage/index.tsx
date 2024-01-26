@@ -7,7 +7,7 @@ import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
 import Navbar from '../Navbar';
 import Portfolio from '../Portfolio';
-import ProjectDescriptionModal from '../ProjectDescriptionModal';
+// import ProjectDescriptionModal from '../ProjectDescriptionModal';
 import Promo from '../Promo';
 import Recommendations from '../Recommendations';
 import Services from '../Services';
@@ -23,7 +23,7 @@ export default function MainPage() {
 			<Navbar />
 			<Promo />
 			<ComponentsContainer>
-				<ProjectDescriptionModal />
+				{/* <ProjectDescriptionModal /> */}
 				<AboutUs />
 				<Services />
 				<Portfolio />

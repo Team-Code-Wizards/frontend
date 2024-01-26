@@ -2,24 +2,24 @@ import Image from 'next/image';
 
 import ArrowIcon from '../../../../public/images/icons/ArrowIcon';
 import IPortfolioCard from './interface';
-import style from './style.module.scss';
+import styles from './styles.module.scss';
 
 export default function PortfolioCard({ tag, title, image }: IPortfolioCard) {
 	return (
-		<div className={style['card__container']}>
-			<div className={style['card__image']}>
+		<div className={styles['card__container']}>
+			<div className={styles['card__image']}>
 				<Image
 					src={image}
 					alt="portfolioIcon"
 					width={500}
-					className={style['card__bg']}
+					className={styles['card__bg']}
 				/>
-				<span className={style['card__tag']}>{tag}</span>
+				<span className={styles['card__tag']}>{tag}</span>
 			</div>
-			<a className={style['card__link']} href="#">
+			<a className={styles['card__link']} href="#">
 				<ArrowIcon />
 			</a>
-			<h3 className={style['card__title']}>{title}</h3>
+			<h3 className={styles['card__title']}>{title}</h3>
 		</div>
 	);
 }
