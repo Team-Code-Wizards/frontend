@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 1280px) {
 	.about-us {
-		max-width: var(--block-md-width);
+		max-width: var(--width-1280-1024);
 
 		&__h2-title {
 			margin-bottom: 16px;
@@ -114,9 +114,9 @@
 	}
 }
 
-@media screen and (min-width: 834px) and (max-width: 1279px) {
+@media screen and (min-width: 834px) and (max-width: 1084px) {
 	.about-us {
-		max-width: var(--block-sm-width);
+		max-width: var(--width-1024-768);
 		&__h3-title {
 			width: 55%;
 		}
@@ -137,9 +137,9 @@
 	}
 }
 
-@media screen and (min-width: 390px) and (max-width: 833px) {
+@media screen and (max-width: 833px) {
 	.about-us {
-		max-width: 80%;
+		max-width: var(--width-768-280);
 		&__h2-title {
 			font-size: 40px;
 			margin-bottom: 8px;
