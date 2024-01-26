@@ -3,27 +3,26 @@
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
-	row-gap: 22px;
+	row-gap: 19px;
 	flex-basis: 31%;
-	margin-top: 2px;
-
-	padding: 36px 40px 40px;
+	margin-top: 3px;
+	padding: 36px 38px 38px;
 	color: var(--color-dark-purple);
 
 	&__title {
 		font-family: var(--involve-font);
 		font-size: var(--text-base);
 		font-weight: 600;
-		line-height: var(--line-height);
+		line-height: 120%;
 		margin-bottom: 10px;
 	}
 
 	&__message {
 		display: inline-block;
-		margin-top: 8px;
+		margin-top: 11px;
 		color: rgba(24, 57, 108, 0.6);
 		font-family: var(--involve-font);
-		font-size: var(--text-sm);
+		font-size: 17px;
 		line-height: var(--line-height-big);
 		letter-spacing: var(--font-description-letter);
 	}
@@ -60,26 +59,82 @@
 	}
 }
 
-@media screen and (max-width: 1350px) and (min-width: 1100px) {
+@media screen and (max-width: 1440px) and (min-width: 1281px) {
 	.promo-form {
 		flex-basis: 36%;
 		margin-top: 1px;
 		row-gap: 26px;
 	}
-
 }
 
-@media screen and (max-width: 1100px) and (min-width: 835px) {
+@media screen and (max-width: 1280px) {
 	.promo-form {
-		flex-basis: 40%;
-		margin-top: 1px;
-		row-gap: 26px;
+		flex-basis: 39%;
+		row-gap: 19px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 835px) {
+	.promo-form {
+		flex-basis: 39%;
+
+		&__title {
+			font-size: 20px;
+			line-height: 115%;
+			margin-bottom: 14px;
+		}
+
+		&__button {
+			width: 99%;
+			padding: 22px 20px 24px;
+			line-height: 32%;
+		}
 	}
 
 }
 
-@media screen and (min-height: 834px) {
+@media screen and (max-height: 834px) {
 	.promo-form {
+		width: 52%;
+		row-gap: 20px;
 
+		&__title {
+			line-height: 110%;
+			margin-bottom: 14px;
+		}
+
+		&__button {
+			width: 99%;
+			line-height: 39%;
+			padding: 24px 25px;
+			margin-top: -3px;
+		}
+	}
+
+
+}
+
+@media screen and (max-width: 390px) {
+	.promo-form {
+		width: 100%;
+		row-gap: 22px;
+		margin-top: -4px;
+		padding: 13px 19px 19px;
+
+		&__title {
+			line-height: 135%;
+			margin-bottom: -8px;
+		}
+
+		&__message {
+			line-height: 120%;
+		}
+
+		&__button {
+			width: 100%;
+			padding: 18px;
+			line-height: 45%;
+			margin-top: 7px;
+		}
 	}
 }

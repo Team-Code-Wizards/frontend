@@ -50,13 +50,13 @@
 		font-family: var(--rg-font);
 		font-size: 32px;
 		font-weight: 600;
-		line-height: 120%;
+		line-height: 122%;
 	}
 
 	&__link-list {
 		display: flex;
-		column-gap: 10px;
-		margin-top: 190px;
+		column-gap: 9px;
+		margin-top: 187px;
 	}
 
 	&__link-box {
@@ -83,16 +83,22 @@
 @media screen and (max-width: 1280px) {
 	.promo {
 		&__container {
-			width: var(--width-1280-1025);
+			width: var(--width-1280-1024);
 		}
 		&__main {
 			flex-basis: 50%;
+			row-gap: 17px;
+			line-height: 121%;
+		}
+
+		&__title {
+			padding-left: 1px;
 		}
 
 		&__link-list {
 			display: flex;
 			column-gap: 10px;
-			margin-top: 187px;
+			margin-top: 185px;
 		}
 	}
 }
@@ -100,39 +106,88 @@
 @media screen and (max-width: 1024px) and (min-width: 834px) {
 	.promo {
 		&__container {
-			width: var(--width-1024-769);
-
+			width: 100%;
 		}
 
 		&__main {
-			flex-basis: 55%;
+			flex-basis: 52%;
 		}
-
 
 	}
 	}
 
 @media screen and (max-width: 834px){
 	.promo {
+		background-image: url('../../../public/images/promo/bg.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+
 		&__container {
-			width: var(--width-768-280);
+			width: var(--width-1024-768);
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
 			align-items: center;
+			gap:100px;
+			padding-bottom: 0;
 		}
 
-		//&__main {
-		//	flex-basis: 45%;
-		//}
+		&__main {
+			flex-basis: 67%;
+			row-gap: 10px;
+		}
+
+		&__h1-title-box {
+			padding: 10px 16px;
+			margin: 0 auto;
+		}
+
+		&__title {
+			text-align: center;
+			padding: 0 120px;
+			line-height: 120%;
+		}
+
+		&__link-list {
+			margin-top: -2px;
+			justify-content: center;
+		}
 	}
 }
 
-//@media screen and (max-width: 390px){
-//	.promo {
-//		&__container {
-//			width: 82%;
-//		}
-//	}
-//}
+@media screen and (max-width: 390px){
+	.promo {
+		background-image: url('../../../public/images/promo/bg390.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		&__container {
+			width: 82%;
+			gap:89px
+		}
+
+		&__main {
+			row-gap: 11px;
+		}
+
+		&__title {
+			line-height: 122%;
+			width: 100%;
+			padding: 0;
+			font-family: var(--involve-font);
+			font-size: 20px;
+		}
+
+		&__link-list {
+			margin-top: 30px;
+			justify-content: center;
+			column-gap: 10px;
+		}
+
+		&__link {
+padding: 4px;
+
+		}
+	}
+}
 
