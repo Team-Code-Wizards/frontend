@@ -29,13 +29,10 @@ export default function Services() {
 									<span className={styles['service-card__prices_old']}>
 										{service.oldPrice}$
 									</span>
-									<button
-										className={styles['service-card__popup']}
-										type="button"
-									>
-										<ArrowDownIcon />
-									</button>
 								</div>
+								<a className={styles['service-card__popup']}>
+									<ArrowDownIcon />
+								</a>
 							</div>
 							<span className={styles['service-card__btns']}>
 								<button

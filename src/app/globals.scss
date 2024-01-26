@@ -32,18 +32,19 @@
 }
 
 :root {
-  --width-1280-1025: clamp(1025px, 80% ,1280px);
-  --width-1024-769: clamp(769px, 80% ,1024px);
-  --width-768-280: clamp(280px, 80% , 768px);
-  --block-max-width: 1280px;
+  --max-width: 1440px;
+  --block-max-width: clamp(1024px, 90%, 1280px);
+  --width-1280-1025: clamp(1024px, 80%, 1280px);
+  --width-1024-769: clamp(768px, 80%, 1024px);
+  --width-768-280: clamp(320px, 80%, 768px);
 
   //  === Fonts ===
-  --rg-font: 'RG-StandardSemibold';
-  --involve-font: 'Involve';
+  --rg-font: "RG-StandardSemibold";
+  --involve-font: "Involve";
 
   // Шрифт ниже будет удален !
-  --cygre-font: 'Cygre';
-    // === Font Sizes ===
+  --cygre-font: "Cygre";
+  // === Font Sizes ===
   --text-xs: 14px;
   --text-sm: 16px;
   --text-base: 20px;
@@ -59,13 +60,15 @@
   // === Titles ===
   --font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
     sans-serif;
-  --font-title-description: 600 var(--text-base) / var(--line-height) var(--involve-font),
+  --font-title-description: 600 var(--text-base) / var(--line-height)
+      var(--involve-font),
     sans-serif;
 
   // === Descriptions ===
   --font-button: 600 var(--text-base) var(--involve-font), sans-serif;
   --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-  --font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--involve-font),
+  --font-description-main: 400 var(--text-sm) / var(--line-height-big)
+      var(--involve-font),
     sans-serif;
   --font-stage-btn: 700 var(--text-xs) var(--cygre-font), sans-serif;
 
@@ -90,17 +93,21 @@
   --color-input-active: #e1e1e1;
   --color-text-input-active: #1b1c33;
 
-  --color-purple-gradient: linear-gradient(93deg,
-      #362a64 18.25%,
-      #51259b 93.44%);
+  --color-purple-gradient: linear-gradient(
+    93deg,
+    #362a64 18.25%,
+    #51259b 93.44%
+  );
 
-  --color-gradient-button: linear-gradient(93deg,
-      rgba(167, 138, 213, 1) 11%,
-      rgba(211, 166, 238, 1) 23%,
-      rgba(63, 28, 120, 1) 39%,
-      rgba(110, 37, 155, 1) 61%,
-      rgba(81, 37, 155, 1) 81%,
-      rgba(54, 42, 100, 1) 92%);
+  --color-gradient-button: linear-gradient(
+    93deg,
+    rgba(167, 138, 213, 1) 11%,
+    rgba(211, 166, 238, 1) 23%,
+    rgba(63, 28, 120, 1) 39%,
+    rgba(110, 37, 155, 1) 61%,
+    rgba(81, 37, 155, 1) 81%,
+    rgba(54, 42, 100, 1) 92%
+  );
 
   // == Gap ==
   --grid-gap: 20px;

@@ -1,9 +1,9 @@
 .wrapper {
-  width: 100%;
+  max-width: 1440px;
 }
 
 .services {
-  width: var(--max-width);
+  max-width: var(--max-width);
   padding: 85px 80px 80px 80px;
   margin: 0 auto;
   color: var(--color-text);
@@ -13,10 +13,6 @@
     font: var(--font-block-title);
     line-height: 130%;
     letter-spacing: 1px;
-
-    @media screen and (max-width: 1024px) {
-      margin-left: 150px;
-    }
   }
 
   &__cards {
@@ -24,29 +20,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-
-    @media screen and (max-width: 1024px) {
-      justify-content: center;
-    }
-
-    @media screen and (max-width: 834px) {
-      width: 800px;
-      justify-content: space-between;
-    }
-    // div:nth-child(2 of div.service-card),
-    // div:nth-child(4 of div.service-card) {
-    //   width: 414px;
-    // }
-
-    // div:nth-child(4 of div.service-card),
-    // div:nth-child(5 of div.service-card),
-    // div:nth-child(6 of div.service-card) {
-    //   height: 331px;
-
-    //   & .service-card__content {
-    //     height: 261px;
-    //   }
-    // }
   }
 }
 
@@ -58,15 +31,6 @@
   border: 1px solid rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(2px);
-
-  @media screen and (max-width: 1024px) {
-    height: 442px;
-  }
-
-  @media screen and (max-width: 834px) {
-    height: 427px;
-    width: 800px;
-  }
 
   &__content {
     position: relative;
@@ -88,10 +52,6 @@
       font: var(--font-description-main);
       letter-spacing: -0.48px;
       line-height: 114%;
-
-      @media (max-width: 390px) {
-        display: none;
-      }
     }
   }
 
@@ -132,9 +92,6 @@
 
   &__popup {
     display: none;
-    @media screen and (max-width: 390px) {
-      display: block;
-    }
   }
 
   &__btns {
@@ -180,32 +137,98 @@
       }
     }
   }
-  @media screen and (max-width: 1040px) {
-    & {
-      width: 308px;
-      max-width: 45%;
-    }
+}
 
-    div.service-card {
-      height: 422px;
+@media screen and (min-width: 834px) and (max-width: 1084px) {
+  .wrapper {
+    //max-width: var(--width-1024-769);
+    max-width: 1024px;
+  }
+  .services {
+    padding: 0;
 
-      & .service-card__content {
-        height: 261px;
-      }
+    margin-left: 0px;
+
+    &__cards {
+      justify-content: space-around;
     }
   }
+  .service-card {
+    height: 442px;
+    width: 308px;
 
-  @media screen and (max-width: 834px) {
-    & {
-      width: 374px;
+    &__content {
+      height: 372px;
     }
 
-    div.service-card {
-      height: 422px;
+    & > p {
+      display: none;
+    }
+  }
+}
 
-      & .service-card__content {
-        height: 334px;
+@media screen and (max-width: 833px) {
+  .wrapper {
+    max-width: 768px;
+  }
+  .services {
+    padding: 0;
+
+    margin-left: 0px;
+
+    &__cards {
+      justify-content: space-around;
+    }
+  }
+  .service-card {
+    height: 427px;
+    width: 374px;
+
+    &__content {
+      height: 357px;
+    }
+
+    & > p {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .wrapper {
+    max-width: 320px;
+  }
+  .services {
+    padding: 0;
+    margin-left: 0px;
+
+    &__title {
+      margin-bottom: 35px;
+      font-size: 40px;
+      line-height: 120%;
+    }
+  }
+  .service-card {
+    height: min-content;
+    width: 320px;
+
+    &__content {
+      height: min-content;
+
+      & > h4 {
+        font: var(--font-title-description);
+        line-height: 105%;
+        margin: 0 0 15px;
       }
+      & > p {
+        display: none;
+      }
+    }
+
+    &__popup {
+      background-color: none;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
