@@ -1,7 +1,3 @@
-.form-box {
-	font-family: var(--involve-font);
-}
-
 .form {
 	display: flex;
 	flex-wrap: wrap;
@@ -31,8 +27,7 @@
 		background-image: var(--color-gradient-button);
 		background-size: 400%;
 		background-position: 99%;
-		font-family: var(--rg-font);
-		font-size: var(--text-base);
+		font: var( --font-button);
 
 		transition: 0.3s background-position ease-in-out;
 
@@ -57,9 +52,9 @@
 	}
 
 	.form {
-	&__button {
-		margin-top: 20px;
-  }
+		&__button {
+			margin-top: 30px;
+		}
 	}
 }
 
@@ -71,7 +66,7 @@
 }
 
 @media screen and (max-width: 700px) {
-		.form-box {
+	.form-box {
 		width: 100%;
 	}
 }
