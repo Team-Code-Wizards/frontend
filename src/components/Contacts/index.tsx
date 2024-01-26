@@ -28,7 +28,8 @@ export default function Contacts() {
 							type="email"
 						>
 							<p className={styles['link__item_word-space']}>
-								E-mail email@code-wizards.team
+								<span className={styles['link__item_email']}>E-mail</span>{' '}
+								<span>email@code-wizards.team</span>
 							</p>
 							<span className={styles['link__item']}>
 								<ArrowIcon />

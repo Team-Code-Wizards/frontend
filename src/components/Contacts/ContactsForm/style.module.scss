@@ -61,4 +61,16 @@
 	.form-box {
 		width: 48.26%;
 	}
+
+	.form {
+	&__button {
+		margin-top: 20px;
+  }
+	}
+}
+
+@media screen and (max-width: 390px) {
+	.form-box {
+		width: 100%;
+	}
 }
