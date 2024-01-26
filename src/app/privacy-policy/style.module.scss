@@ -11,18 +11,14 @@
 		margin-bottom: 80px;
 
 		h2 {
-			font-weight: 600;
-			font-size: 48px;
+			font: var(--font-block-title);
 			line-height: 57.6px;
-			font-family: var(--rg-font);
 			color: var(--color-lilac);
 		}
 
 		h3 {
-			font-weight: 600;
-			font-size: 20px;
+			font:var(--font-title-description);
 			line-height: 24px;
-			font-family: var(--rg-font);
 			max-height: 13px;
 			max-width: 483px;
 		}
@@ -36,18 +32,14 @@
 			margin-bottom: 40px;
 
 			h3 {
-				font-weight: 600;
-				font-size: 20px;
+				font: var(--font-title-description);
 				line-height: 24px;
-				font-family: var(--rg-font);
 				margin-bottom: 20px;
 			}
 
 			p {
-				font-weight: 400;
-				font-size: 16px;
+				font: var(--font-description-main);
 				line-height: 20.8px;
-				font-family: var(--cygre-font);
 			}
 		}
 	}
