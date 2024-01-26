@@ -3,21 +3,21 @@ import { v4 as uuidv4 } from 'uuid';
 
 import StarIcon from '../../../public/images/icons/StarIcon';
 import CardLine from './CardLine';
-import style from './style.module.scss';
+import styles from './styles.module.scss';
 
 export default function TechStack() {
 	return (
-		<section className={style['tech-stack__container']}>
-			<div className={style['tech-stack__head']}>
-				<div className={style['tech-stack__banner']}>
-					<h3 className={style['tech-stack__title']}>
+		<section className={styles['tech-stack__container']}>
+			<div className={styles['tech-stack__head']}>
+				<div className={styles['tech-stack__banner']}>
+					<h3 className={styles['tech-stack__title']}>
 						Наш технический арсенал
 					</h3>
-					<p className={style['tech-stack__subtitle']}>
+					<p className={styles['tech-stack__subtitle']}>
 						Взгляните на то, что лежит в основе нашей творческой энергии:
 					</p>
 				</div>
-				<div className={style['tech-stack__short-description']}>
+				<div className={styles['tech-stack__short-description']}>
 					<StarIcon />
 					<p>
 						В создании выдающихся веб-решений мы вкладываем не только талант и
@@ -27,7 +27,7 @@ export default function TechStack() {
 					</p>
 				</div>
 			</div>
-			<div className={style['tech-stack__main']}>
+			<div className={styles['tech-stack__main']}>
 				{cardLines.map((el) => (
 					<CardLine key={uuidv4()} {...el} />
 				))}

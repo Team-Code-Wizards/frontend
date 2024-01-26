@@ -1,7 +1,7 @@
 .stage{
     width: var(--max-width);
     height: 820px;
-    background-image: url(/images/stageCreate/background.png);
+    background-image: url(../../../public/images/stageCreate/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -38,7 +38,7 @@
         border-radius: 100%;
         border: 1px solid var(--color-gray);
         color: var(--color-gray);
-        font: var(--font-stage-btn);
+        font: var(--font-stage-btn-sm);
         cursor: pointer;
         transition: color .3s ease-in-out, border .3s ease-in-out;
 
@@ -71,7 +71,7 @@
             outline: none;
         }
     }
-    
+
     &__item_active {
         border: 1px solid var(--color-text);
         color: var(--color-text);
