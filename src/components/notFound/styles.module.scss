@@ -9,6 +9,7 @@
   background-position: center;
   height: 100vh;
   width: 100%;
+  color: var(--color-text);
 
   &__container {
     display: flex;
@@ -20,20 +21,16 @@
     text-align: center;
 
     .name {
-      font-family: var(--rg-font);
-      font-weight: 600;
-      font-size: 383px;
-      color: var(--color-bg-white);
       width: 100%;
+      font: var(--font-block-title);
+      font-size: 383px;
     }
 
     .text {
-      color: var(--color-bg-white);
       font: var(--font-title-description);
       margin-top: -40px;
       margin-bottom: 40px;
       text-align: center;
-      width: 55%;
     }
 
     .btn {
@@ -59,8 +56,7 @@
       .link {
         text-decoration: none;
         color: var(--color-text);
-        font-family: var(--rg-font);
-        font-weight: 600;
+        font: var(--font-button-rg);
         font-size: 23px;
       }
     }
@@ -88,9 +84,6 @@
     &__container {
       .name {
         font-size: 260px;
-      }
-      .text {
-        width: 80%;
       }
     }
     }
