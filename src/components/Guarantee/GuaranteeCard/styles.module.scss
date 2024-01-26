@@ -20,6 +20,7 @@
 		margin: 0;
 		margin-bottom: 10px;
 		color: var(--color-lilac);
+    letter-spacing: 0.06rem;
 	}
 
 	&__description {
@@ -27,4 +28,33 @@
 		color: var(--color-text);
 		font: var(--font-description-main);
 	}
+}
+
+@media screen and (max-width: 834px) {
+	.guarantee-card {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 22px;
+	}
+}
+
+@media screen and (max-width: 390px) {
+		.guarantee-card {
+			width: 100%;
+			align-items: center;
+			text-align: center;
+			gap: 11px;
+			// марджин убрать, когда будет слайдер
+			margin-bottom: 152px;
+
+			&:nth-of-type(n+2){
+				display: none;
+			}
+
+	  &__image {
+		  width: 75px;
+		  height: 75px;
+	  }
+		}
 }
