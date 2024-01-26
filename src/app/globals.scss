@@ -1,121 +1,117 @@
 /* TODO: doesn't work normalize */
-@import "normalize.css";
+@import 'normalize.css';
 
 @font-face {
-  font-family: "RG-StandardSemibold";
-  src:
-    url("../fonts/RG-StandardSemibold.woff2") format("woff2"),
-    url("../fonts/RG-StandardSemibold.woff") format("woff"),
-    url("../fonts/RG-StandardSemibold.ttf") format("ttf");
-  font-weight: 600;
-  font-style: normal;
+	font-family: 'RG-StandardSemibold';
+	src:
+		url('../fonts/RG-StandardSemibold.woff2') format('woff2'),
+		url('../fonts/RG-StandardSemibold.woff') format('woff'),
+		url('../fonts/RG-StandardSemibold.ttf') format('ttf');
+	font-weight: 600;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: "Cygre";
-  src:
-    url("../fonts/Cygre.woff2") format("woff2"),
-    url("../fonts/Cygre.woff") format("woff"),
-    url("../fonts/Cygre.ttf") format("ttf"),
-    url("../fonts/Cygre-Bold.woff2") format("woff2"),
-    url("../fonts/Cygre-Bold.woff") format("woff"),
-    url("../fonts/Cygre-Bold.ttf") format("ttf");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Involve";
-  src:
-    url("../fonts/Involve-Medium.woff") format("woff"),
-    url("../fonts/Involve-Medium.woff2") format("woff2");
-  font-style: normal;
+	font-family: 'Involve';
+	src:
+		url('../fonts/Involve-Medium.woff') format('woff'),
+		url('../fonts/Involve-Medium.woff2') format('woff2');
+	font-style: normal;
 }
 
 :root {
+  //--width-1280-1025: clamp(1025px, 80% ,1280px);
+  //--width-1024-769: clamp(769px, 80% ,1024px);
+  //--width-768-280: clamp(280px, 80% , 768px);
+  //--block-max-width: 1280px;
   --max-width: 1440px;
   --block-max-width: clamp(1024px, 90%, 1280px);
-  --width-1280-1025: clamp(1024px, 80% ,1280px);
-  --width-1024-769: clamp(768px, 80% ,1024px);
-  --width-768-280: clamp(320px, 80% , 768px);
+  --width-1280-1024: clamp(1024px, 80%, 1280px);
+  --width-1024-768: clamp(768px, 80%, 1024px);
+  --width-768-280: clamp(320px, 80%, 768px);
 
+	//  === Fonts ===
+	--rg-font: 'RG-StandardSemibold';
+	--involve-font: 'Involve';
 
-  //  === Fonts ===
-  --rg-font: 'RG-StandardSemibold';
-  --involve-font: 'Involve';
-
-  // Шрифт ниже будет удален !
-  --cygre-font: 'Cygre';
-    // === Font Sizes ===
+  // === Font Sizes ===
+  --text-xxs: 10px;
   --text-xs: 14px;
   --text-sm: 16px;
   --text-base: 20px;
   --text-lg: 32px;
   --text-xl: 48px;
 
-  --line-height: 120%;
-  --line-height-big: 130%;
-  --font-description-letter: -0.48px;
+	--line-height: 120%;
+	--line-height-big: 130%;
+	--font-description-letter: -0.48px;
 
-  //  === Font sets ===
+	//  === Font sets ===
 
-  // === Titles ===
-  --font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
-    sans-serif;
-  --font-title-description: 600 var(--text-base) / var(--line-height) var(--involve-font),
-    sans-serif;
+	// === Titles ===
+	--font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
+		sans-serif;
+	--font-title-description: 600 var(--text-base) / var(--line-height)
+			var(--involve-font),
+		sans-serif;
 
   // === Descriptions ===
   --font-button: 600 var(--text-base) var(--involve-font), sans-serif;
   --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-  --font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--involve-font),
+  --font-description-main: 500 var(--text-sm) / var(--line-height-big) var(--involve-font),
     sans-serif;
-  --font-stage-btn: 700 var(--text-xs) var(--cygre-font), sans-serif;
+  --font-stage-btn: 700 var(--text-xs) var(--involve-font), sans-serif;
+  --font-stage-btn-sm: 700 var(--text-xxs) var(--involve-font), sans-serif;
 
-  // Colors
-  --color-bg-black: #000000;
-  --color-gray-bg: #f2f2f2;
-  --color-bg-white: #ffffff;
-  --color-bg-ivory: #ffffff1a;
+	// Colors
+	--color-bg-black: #000000;
+	--color-gray-bg: #f2f2f2;
+	--color-bg-white: #ffffff;
+	--color-bg-ivory: #ffffff1a;
 
-  --color-lilac: #8792fc;
-  --color-gray: #ffffff80;
-  --color-purple: #5b4dab;
-  --color-dark-purple: #1b1c33;
-  --color-pink: #9b54d4;
+	--color-lilac: #8792fc;
+	--color-gray: #ffffff80;
+	--color-purple: #5b4dab;
+	--color-dark-purple: #1b1c33;
+	--color-pink: #9b54d4;
 
-  --color-blue: #263694;
-  --color-green: #27ae60;
-  --color-red: #eb5757;
+	--color-blue: #263694;
+	--color-green: #27ae60;
+	--color-red: #eb5757;
 
-  --color-text: #ffffff;
-  --color-input: #1b1c3380;
-  --color-input-active: #e1e1e1;
-  --color-text-input-active: #1b1c33;
+	--color-text: #ffffff;
+	--color-input: #1b1c3380;
+	--color-input-active: #e1e1e1;
+	--color-text-input-active: #1b1c33;
 
-  --color-purple-gradient: linear-gradient(93deg,
-      #362a64 18.25%,
-      #51259b 93.44%);
+	--color-purple-gradient: linear-gradient(
+		93deg,
+		#362a64 18.25%,
+		#51259b 93.44%
+	);
 
-  --color-gradient-button: linear-gradient(93deg,
-      rgba(167, 138, 213, 1) 11%,
-      rgba(211, 166, 238, 1) 23%,
-      rgba(63, 28, 120, 1) 39%,
-      rgba(110, 37, 155, 1) 61%,
-      rgba(81, 37, 155, 1) 81%,
-      rgba(54, 42, 100, 1) 92%);
+	--color-gradient-button: linear-gradient(
+		93deg,
+		rgba(167, 138, 213, 1) 11%,
+		rgba(211, 166, 238, 1) 23%,
+		rgba(63, 28, 120, 1) 39%,
+		rgba(110, 37, 155, 1) 61%,
+		rgba(81, 37, 155, 1) 81%,
+		rgba(54, 42, 100, 1) 92%
+	);
 
-  // == Gap ==
-  --grid-gap: 20px;
+	// == Gap ==
+	--grid-gap: 20px;
 }
 
 .body {
-  font-family: var(--cygre-font);
+  font-family: var(--involve-font);
   background-color: var(--color-bg-black);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
