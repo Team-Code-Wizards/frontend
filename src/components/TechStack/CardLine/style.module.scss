@@ -2,7 +2,7 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		row-gap: 30px;
+		row-gap: 37px;
 	}
 
 	&__title {
@@ -10,12 +10,14 @@
 		align-items: center;
 		column-gap: 10px;
 		color: var(--color-lilac);
-		font-family: var(--rg-font);
-		font-size: var(--text-base);
+		font: var(--font-title-description);
+		// font-family: var(--rg-font);
+		// font-size: var(--text-base);
 	}
 
 	&__list {
-		display: flex;
-		column-gap: 20px;
+		display: grid; // flex;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
 	}
 }

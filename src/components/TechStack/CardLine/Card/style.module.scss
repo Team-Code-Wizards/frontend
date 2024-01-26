@@ -2,24 +2,21 @@
 	&__box {
 		display: flex;
 		flex-direction: column;
-		width: 305px;
-		row-gap: 10px;
-		font-family: var(--cygre-font);
-		line-height: var(--line-height-big);
-		letter-spacing: -0.48px;
+		row-gap: 15px;
+		font: var(--font-description-main);
+		font-weight: 700;
 	}
 
 	&__title {
 		display: inline-flex;
 		align-items: center;
-		padding-top: 10px;
 		padding-bottom: 20px;
 		border-bottom: 1px solid white;
 
 		span {
+			font: var(--font-description-main);
+			font-weight: 700;
 			margin-left: 10px;
-			font-size: 16px;
-			font-weight: 400;
 		}
 
 		svg {
