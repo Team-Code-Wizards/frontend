@@ -7,7 +7,7 @@ import TelegramIcon from '../../../public/images/icons/TelegramIcon';
 import ViberIcon from '../../../public/images/icons/ViberIcon';
 import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
 import ContactsForm from './ContactsForm';
-import styles from './style.module.scss';
+import styles from './styles.module.scss';
 
 //TODO добавить корректные ссылки для мессенджеров
 
