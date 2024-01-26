@@ -12,18 +12,6 @@
 }
 
 @font-face {
-	font-family: 'Cygre';
-	src:
-		url('../fonts/Cygre.woff2') format('woff2'),
-		url('../fonts/Cygre.woff') format('woff'),
-		url('../fonts/Cygre.ttf') format('ttf'),
-		url('../fonts/Cygre-Bold.woff2') format('woff2'),
-		url('../fonts/Cygre-Bold.woff') format('woff'),
-		url('../fonts/Cygre-Bold.ttf') format('ttf');
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'Involve';
 	src:
 		url('../fonts/Involve-Medium.woff') format('woff'),
@@ -41,14 +29,13 @@
 	--rg-font: 'RG-StandardSemibold';
 	--involve-font: 'Involve';
 
-	// Шрифт ниже будет удален !
-	--cygre-font: 'Cygre';
-	// === Font Sizes ===
-	--text-xs: 14px;
-	--text-sm: 16px;
-	--text-base: 20px;
-	--text-lg: 32px;
-	--text-xl: 48px;
+  // === Font Sizes ===
+  --text-xxs: 10px;
+  --text-xs: 14px;
+  --text-sm: 16px;
+  --text-base: 20px;
+  --text-lg: 32px;
+  --text-xl: 48px;
 
 	--line-height: 120%;
 	--line-height-big: 130%;
@@ -63,13 +50,13 @@
 			var(--involve-font),
 		sans-serif;
 
-	// === Descriptions ===
-	--font-button: 600 var(--text-base) var(--involve-font), sans-serif;
-	--font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-	--font-description-main: 500 var(--text-sm) / var(--line-height-big)
-			var(--involve-font),
-		sans-serif;
-	--font-stage-btn: 700 var(--text-xs) var(--cygre-font), sans-serif;
+  // === Descriptions ===
+  --font-button: 600 var(--text-base) var(--involve-font), sans-serif;
+  --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
+  --font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--involve-font),
+    sans-serif;
+  --font-stage-btn: 700 var(--text-xs) var(--involve-font), sans-serif;
+  --font-stage-btn-sm: 700 var(--text-xxs) var(--involve-font), sans-serif;
 
 	// Colors
 	--color-bg-black: #000000;
@@ -113,8 +100,8 @@
 }
 
 .body {
-	font-family: var(--cygre-font);
-	background-color: var(--color-bg-black);
+  font-family: var(--involve-font);
+  background-color: var(--color-bg-black);
 }
 
 * {

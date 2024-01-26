@@ -12,10 +12,7 @@
 	color: var(--color-dark-purple);
 
 	&__title {
-		font-family: var(--rg-font);
-		font-size: var(--text-base);
-		font-weight: 600;
-		line-height: var(--line-height);
+		font: var(--font-title-description);
 		margin-bottom: 10px;
 	}
 
@@ -23,9 +20,7 @@
 		display: inline-block;
 		margin-top: 8px;
 		color: rgba(24, 57, 108, 0.6);
-		font-family: var(--cygre-font);
-		font-size: var(--text-sm);
-		line-height: var(--line-height-big);
+		font: var(--font-description-main);
 		letter-spacing: var(--font-description-letter);
 	}
 
