@@ -8,7 +8,7 @@
 	background-position: center;
 
 	&__container {
-		max-width: var(--block-max-width);
+		max-width: 1280px;
 		margin: 0 auto;
 	}
 
@@ -30,10 +30,9 @@
 
 	&__title {
 		margin: 0;
-		margin-bottom: 24px;
+		margin-bottom: 29px;
 		font: var(--font-block-title);
-		line-height: 120%;
-		color: var(--color-bg-white);
+		color: var(--color-text);
 	}
 
 	&__list {
@@ -42,8 +41,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 20px;
-		list-style: none;
+		column-gap: 20px;
+		row-gap: 23px;
 	}
 
 }
