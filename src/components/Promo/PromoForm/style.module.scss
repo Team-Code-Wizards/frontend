@@ -59,3 +59,27 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1350px) and (min-width: 1100px) {
+	.promo-form {
+		flex-basis: 36%;
+		margin-top: 1px;
+		row-gap: 26px;
+	}
+
+}
+
+@media screen and (max-width: 1100px) and (min-width: 835px) {
+	.promo-form {
+		flex-basis: 40%;
+		margin-top: 1px;
+		row-gap: 26px;
+	}
+
+}
+
+@media screen and (min-height: 834px) {
+	.promo-form {
+
+	}
+}

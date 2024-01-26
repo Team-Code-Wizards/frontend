@@ -1,9 +1,10 @@
 .promo {
-	background-image: url('/images/promo/promo-bg.png');
+	background-image: url('../../../public/images/promo/promo-bg.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	color: var(--color-text);
 	width: 100%;
+	* {outline: 2px solid tomato}
 
 	&__container {
 		padding: 126px 0 124px 0;
@@ -12,6 +13,7 @@
 		height: 100%;
 		margin: 0 auto;
 		max-width: var(--block-max-width);
+		width: 88.9%;
 	}
 
 	&__main {
@@ -77,3 +79,60 @@
 		padding: 15px;
 	}
 }
+
+@media screen and (max-width: 1280px) {
+	.promo {
+		&__container {
+			width: var(--width-1280-1025);
+		}
+		&__main {
+			flex-basis: 50%;
+		}
+
+		&__link-list {
+			display: flex;
+			column-gap: 10px;
+			margin-top: 187px;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 834px) {
+	.promo {
+		&__container {
+			width: var(--width-1024-769);
+
+		}
+
+		&__main {
+			flex-basis: 55%;
+		}
+
+
+	}
+	}
+
+@media screen and (max-width: 834px){
+	.promo {
+		&__container {
+			width: var(--width-768-280);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		//&__main {
+		//	flex-basis: 45%;
+		//}
+	}
+}
+
+//@media screen and (max-width: 390px){
+//	.promo {
+//		&__container {
+//			width: 82%;
+//		}
+//	}
+//}
+
