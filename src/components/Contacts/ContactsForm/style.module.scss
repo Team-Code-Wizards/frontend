@@ -27,8 +27,7 @@
 		background-image: var(--color-gradient-button);
 		background-size: 400%;
 		background-position: 99%;
-		font-family: var(--rg-font);
-		font-size: var(--text-base);
+		font: var( --font-button);
 
 		transition: 0.3s background-position ease-in-out;
 
@@ -51,6 +50,10 @@
 	.form-box {
 		width: 45.78%;
 	}
+
+	.form__button {
+		margin-top: 32px;
+	}
 }
 
 @media screen and (max-width: 834px) {
@@ -59,14 +62,14 @@
 	}
 
 	.form {
-	&__button {
-		margin-top: 20px;
-  }
+		&__button {
+			margin-top: 30px;
+		}
 	}
 }
 
 @media screen and (max-width: 700px) {
-		.form-box {
+	.form-box {
 		width: 100%;
 	}
 }
