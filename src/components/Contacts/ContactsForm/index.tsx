@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Input from './Input';
 import IContactsFormProps from './interface';
-import style from './style.module.scss';
+import style from './styles.module.scss';
 
 export default function ContactsForm({ onSubmit }: IContactsFormProps) {
 	return (

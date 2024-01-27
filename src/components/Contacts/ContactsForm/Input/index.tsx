@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import ClearInputButton from './ClearInputButton';
 import IInput from './interface';
-import style from './style.module.scss';
+import style from './styles.module.scss';
 
 export default function Input({
 	id,
