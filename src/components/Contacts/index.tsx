@@ -69,6 +69,7 @@ export default function Contacts() {
 								<WhatsappIcon size={[25, 24]} />
 							</span>
 							<span className={styles['link__item_no-margin']}>Whatsapp</span>
+							<span className={styles['link__item_no-margin']}>Whatsapp</span>
 						</a>
 					</li>
 				</ul>

@@ -20,10 +20,11 @@
 }
 
 :root {
-  --width-1280-1025: clamp(1025px, 80% ,1280px);
-  --width-1024-769: clamp(769px, 80% ,1024px);
-  --width-768-280: clamp(280px, 80% , 768px);
-  --block-max-width: 1280px;
+	--max-width: 1440px;
+	--block-max-width: clamp(1024px, 90%, 1280px);
+	--width-1280-1024: clamp(1024px, 80%, 1280px);
+	--width-1024-768: clamp(768px, 80%, 1024px);
+	--width-768-280: clamp(320px, 80%, 768px);
 
 	//  === Fonts ===
 	--rg-font: 'RG-StandardSemibold';

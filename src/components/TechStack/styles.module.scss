@@ -31,12 +31,12 @@
 	}
 
 	&__title {
-		font: var(--font-block-title);
-		line-height: 20%;
+		font-size: var(--text-xl);
+		line-height: 0%;
 	}
 
 	&__subtitle {
-		font: var(--font-title-description);
+		font-size: var(--text-base);
 		line-height: 300%;
 	}
 
@@ -44,7 +44,8 @@
 		margin-top: -10px;
 		display: flex;
 		column-gap: 10px;
-		font: var(--font-description-main);
+		font-family: var(--involve-font);
+		font-size: 16px;
 		color: var(--color-lilac);
 		line-height: 115%;
 		letter-spacing: -0.48px;

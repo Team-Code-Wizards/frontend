@@ -76,13 +76,16 @@
 .promo-form-input {
 	width: 100%;
 	padding: 18px 10px;
+	padding: 18px 10px;
 	background-color: var(--color-gray-bg);
-	font: var(--font-description-main);
+	font-family: var(--involve-font);
 	border: none;
 	border-radius: 10px;
 	transition: all 0.3s ease-out;
 
 	&::placeholder {
+		font-size: var(--text-sm);
+		font-family: var(--involve-font);
 		font-size: var(--text-sm);
 		font-family: var(--involve-font);
 		color: var(--color-input);
