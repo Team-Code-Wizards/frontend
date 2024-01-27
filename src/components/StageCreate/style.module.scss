@@ -1,13 +1,15 @@
 .stage{
     width: var(--max-width);
-    height: 820px;
-    background-image: url(../../../public/images/stageCreate/background.png);
+    //height: 820px;
+    height: 100vh;
+    background-image: url(&/images/stageCreate/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 
     &__block {
         position: relative;
-        padding: 68px 80px;
+        //padding: 68px 80px;
+        padding: 68px 77px;
         max-width: var(--max-width);
         margin: 0 auto;
         color: var(--color-text);
@@ -21,8 +23,10 @@
 
     &__icon-wrapper {
         position: absolute;
-        top: 205px;
-        left: 825px;
+        //top: 205px;
+        top: 161px;
+        //left: 825px;
+        left: 964px;
     }
 
     &__wrapper {
