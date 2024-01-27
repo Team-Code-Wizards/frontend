@@ -10,10 +10,7 @@
 	color: var(--color-dark-purple);
 
 	&__title {
-		font-family: var(--involve-font);
-		font-size: var(--text-base);
-		font-weight: 600;
-		line-height: 120%;
+		font: var(--font-title-description);
 		margin-bottom: 10px;
 	}
 
@@ -79,7 +76,6 @@
 		flex-basis: 39%;
 
 		&__title {
-			font-size: 20px;
 			line-height: 115%;
 			margin-bottom: 14px;
 		}
@@ -100,7 +96,6 @@
 
 		&__title {
 			line-height: 110%;
-			margin-bottom: 14px;
 		}
 
 		&__button {
@@ -114,7 +109,14 @@
 
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 550px) {
+	.promo-form {
+		width: 68%;
+		row-gap: 10px;
+	}
+}
+
+@media screen and (max-width: 339px) {
 	.promo-form {
 		width: 100%;
 		row-gap: 22px;

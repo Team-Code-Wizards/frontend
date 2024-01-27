@@ -4,16 +4,13 @@
 	background-position: center;
 	color: var(--color-text);
 	width: 100%;
-	* {outline: 2px solid tomato}
 
 	&__container {
 		padding: 126px 0 124px 0;
 		display: flex;
 		justify-content: space-between;
-		height: 100%;
 		margin: 0 auto;
 		max-width: var(--block-max-width);
-		width: 88.9%;
 	}
 
 	&__main {
@@ -96,7 +93,6 @@
 		}
 
 		&__link-list {
-			display: flex;
 			column-gap: 10px;
 			margin-top: 185px;
 		}
@@ -112,20 +108,23 @@
 		&__main {
 			flex-basis: 52%;
 		}
-
 	}
 	}
 
-@media screen and (max-width: 834px){
+@media screen and (max-width: 1050px) {
 	.promo {
-		background-image: url('../../../public/images/promo/bg.png');
-		background-repeat: no-repeat;
-		background-position: center;
-		width: 100%;
+		&__container {
+			width: 89%;
+		}
+	}
+}
+
+@media screen and (max-width: 835px){
+	.promo {
+		background-image: url('../../../public/images/promo/promo-bg768.png');
 
 		&__container {
-			width: var(--width-1024-768);
-			display: flex;
+			width: 92.1%;
 			flex-direction: column;
 			align-items: center;
 			gap:100px;
@@ -144,7 +143,7 @@
 
 		&__title {
 			text-align: center;
-			padding: 0 120px;
+			padding: 0 105px;
 			line-height: 120%;
 		}
 
@@ -155,12 +154,21 @@
 	}
 }
 
+@media screen and (max-width: 685px) {
+	.promo {
+		&__container {
+			gap: 50%;
+		}
+		&__title {
+			padding: 0 10px;
+		}
+	}
+}
+
 @media screen and (max-width: 390px){
 	.promo {
-		background-image: url('../../../public/images/promo/bg390.png');
-		background-repeat: no-repeat;
-		background-position: center;
-		width: 100%;
+		background-image: url('../../../public/images/promo/promo-bg390.png');
+
 		&__container {
 			width: 82%;
 			gap:89px
@@ -175,7 +183,7 @@
 			width: 100%;
 			padding: 0;
 			font-family: var(--involve-font);
-			font-size: 20px;
+			font-size: var(--text-base);
 		}
 
 		&__link-list {
@@ -185,8 +193,7 @@
 		}
 
 		&__link {
-padding: 4px;
-
+            padding: 4px;
 		}
 	}
 }
