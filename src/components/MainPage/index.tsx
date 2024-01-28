@@ -27,8 +27,9 @@ export default function MainPage() {
 				<AboutUs />
 				<Services />
 				<Portfolio />
+				<StageCreate />
 			</ComponentsContainer>
-			<StageCreate />
+
 			<Recommendations />
 			<Choice />
 			<Guarantee />
