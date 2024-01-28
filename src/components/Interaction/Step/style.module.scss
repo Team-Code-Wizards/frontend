@@ -118,16 +118,20 @@
 		}
 	}
 
-	@media screen and (max-width: 480px) {
+	
+	@media screen and (max-width: 660px) {
 		max-width: 100%;
+
+		&:nth-child(n + 2) {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
 		padding: 18px 20px 34px;
 
 		&__description {
 			margin-block-end: 29px;
-		}
-
-		&:nth-child(n + 2) {
-			display: none;
 		}
 	}
 }

@@ -42,7 +42,7 @@
 		}
 	}
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1060px) {
 		&__wrapper {
 			max-width: var(--width-1024-768);
 		}
@@ -62,9 +62,9 @@
 		}
 	}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 800px) {
 		&__wrapper {
-			max-width: var(--width-768-280);
+			max-width: clamp(260px, 82%, 768px);
 		}
 	}
 
