@@ -4,9 +4,10 @@
 	background-position: center;
 	color: var(--color-text);
 	width: 100%;
+	*{outline: 2px solid tomato}
 
 	&__container {
-		padding: 126px 0 124px 0;
+		padding: 126px 0 118px 0;
 		display: flex;
 		justify-content: space-between;
 		margin: 0 auto;
@@ -26,7 +27,7 @@
 		display: flex;
 		align-items: center;
 		max-width: max-content;
-		padding: 6px 16px;
+		padding: 5px 15px;
 		border-radius: 25px;
 		background: rgba(135, 146, 252, 0.25);
 		box-shadow:
@@ -48,12 +49,13 @@
 		font-size: 32px;
 		font-weight: 600;
 		line-height: 122%;
+		margin-top: 2px;
 	}
 
 	&__link-list {
 		display: flex;
 		column-gap: 9px;
-		margin-top: 187px;
+		margin-top: 186px;
 	}
 
 	&__link-box {
@@ -81,11 +83,11 @@
 	.promo {
 		&__container {
 			width: var(--width-1280-1024);
+			padding: 126px 1px 118px 0;
 		}
 		&__main {
 			flex-basis: 50%;
 			row-gap: 17px;
-			line-height: 121%;
 		}
 
 		&__title {
@@ -99,17 +101,17 @@
 	}
 }
 
-@media screen and (max-width: 1024px) and (min-width: 834px) {
-	.promo {
-		&__container {
-			width: 100%;
-		}
-
-		&__main {
-			flex-basis: 52%;
-		}
-	}
-	}
+//@media screen and (max-width: 1024px) and (min-width: 834px) {
+//	.promo {
+//		&__container {
+//			width: 100%;
+//		}
+//
+//		&__main {
+//			flex-basis: 52%;
+//		}
+//	}
+//	}
 
 @media screen and (max-width: 1050px) {
 	.promo {
@@ -143,7 +145,7 @@
 
 		&__title {
 			text-align: center;
-			padding: 0 105px;
+			padding: 0 125px;
 			line-height: 120%;
 		}
 

@@ -3,29 +3,32 @@
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
-	row-gap: 19px;
+	row-gap: 20px;
 	flex-basis: 31%;
-	margin-top: 3px;
-	padding: 36px 38px 38px;
+	margin-top: 2px;
+	padding: 37px 37px 39px 37px;
 	color: var(--color-dark-purple);
 
 	&__title {
 		margin-bottom: 10px;
+		line-height: 22px;
+		font-size: 20px;
 	}
 
 	&__message {
 		display: inline-block;
-		margin-top: 11px;
+		margin-top: 12px;
 		color: rgba(24, 57, 108, 0.6);
 		font-family: var(--involve-font);
 		font-size: 17px;
 		line-height: var(--line-height-big);
 		letter-spacing: var(--font-description-letter);
+		padding-right: 1px;
 	}
 
 	&__button {
-		width: 100%;
-		padding: 20px 25px;
+		width: 99%;
+		padding: 19px 25px;
 		border-radius: 5px;
 		border: none;
 		cursor: pointer;
@@ -55,24 +58,21 @@
 	}
 }
 
-@media screen and (max-width: 1440px) and (min-width: 1281px) {
-	.promo-form {
-		flex-basis: 36%;
-		margin-top: 1px;
-		row-gap: 26px;
-	}
-}
-
 @media screen and (max-width: 1280px) {
 	.promo-form {
 		flex-basis: 39%;
 		row-gap: 19px;
+		padding-left: 40px;
+
+		&__title {
+			margin-bottom: 12px;
+		}
 	}
 }
 
 @media screen and (max-width: 1024px) and (min-width: 835px) {
 	.promo-form {
-		flex-basis: 39%;
+		max-width: 50%;
 
 		&__title {
 			line-height: 115%;
@@ -88,7 +88,7 @@
 
 }
 
-@media screen and (max-height: 834px) {
+@media screen and (max-width: 834px) {
 	.promo-form {
 		width: 52%;
 		row-gap: 20px;
@@ -115,16 +115,15 @@
 	}
 }
 
-@media screen and (max-width: 339px) {
+@media screen and (max-width: 390px) {
 	.promo-form {
 		width: 100%;
-		row-gap: 22px;
-		margin-top: -4px;
-		padding: 13px 19px 19px;
+		row-gap: 23px;
+		padding: 10px 18px 17px;
 
 		&__title {
-			line-height: 135%;
-			margin-bottom: -8px;
+			line-height: 120%;
+			margin-bottom: 0;
 		}
 
 		&__message {
