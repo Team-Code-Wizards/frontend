@@ -60,6 +60,9 @@
 	.guarantee {
 	padding: 80px 0 77px;
 	background-image: url('/images/guarantee/background-tablet.png');
+	@media screen and (min-width: 701px) and (max-width: 833px) {
+		padding: 80px 20px 77px;
+	}
 
 	&__container {
 		max-width: 768px;
@@ -71,12 +74,15 @@
 }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 700px) {
 		.guarantee {
 	background-image: url('/images/guarantee/background-mobile.png');
 
 	&__container {
-		width: 82%;
+		width: 72%;
+		@media screen and (max-width: 390px) {
+			width: 82%;
+		}
 	}
 
 	&__title {
