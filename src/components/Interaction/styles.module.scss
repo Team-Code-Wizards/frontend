@@ -6,46 +6,76 @@
 	background-repeat: no-repeat;
 	background-color: var(--color-bg-black);
 
-	&__description-wrapper {
-		width: 88.9%;
-		max-width: 1280px;
-		margin: 0 auto;
-		margin-block-end: 60px;
+	&__wrapper {
+		max-width: var(--width-1280-1025);
+		margin: 67px auto 57px;
 	}
 
 	&__title {
 		width: 61%;
-		margin-block-start: 46px;
 		margin-block-end: 2px;
 		font: var(--font-block-title);
 	}
 
 	&__description {
 		width: 61%;
+		margin-bottom: 56px;
 		font: var(--font-title-description);
 	}
 
 	@media screen and (max-width: 1280px) {
+		&__wrapper {
+			max-width: 80%;
+		}
+
 		&__description-wrapper {
 			max-width: 1024px;
 			margin-block-end: 56px
 		}
 
 		&__title {
-			width: 76%;
-			margin-block-start: 67px;
+			width: 78%;
 		}
 
 		&__description {
-			width: 76%;
+			width: 77%;
 		}
+	}
+
+	@media screen and (max-width: 835px) {
+		&__wrapper {
+			max-width: 92%;
+			margin: 49px auto 33px;
+		}
+
+		&__title {
+			width: 100%;
+		}
+
+		&__description {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 391px) {
+		&__wrapper {
+			max-width: 82%;
+		}
+
+		&__title {
+			font-size: 40px;
+			margin-block-end: 22px;
+		}
+	}
+
+	@media screen and (max-width: 351px) {
+		&__title {
+			font-size: 32px;
+		}	
 	}
 }
 
 .steps {
-	width: 88.9%;
-	max-width: 1280px;
-	margin: 0 auto 60px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;

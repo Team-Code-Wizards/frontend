@@ -32,7 +32,7 @@
 }
 
 :root {
-  --width-1280-1025: clamp(1025px, 80% ,1280px);
+  --width-1280-1025: clamp(1025px, 90% ,1280px);
   --width-1024-1024: clamp(769px, 80% ,1024px);
   --width-768-280: clamp(280px, 80% , 768px);
   --block-max-width: 1280px;
@@ -65,7 +65,7 @@
   // === Descriptions ===
   --font-button: 600 var(--text-base) var(--involve-font), sans-serif;
   --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-  --font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--involve-font),
+  --font-description-main: 500 var(--text-sm) / var(--line-height-big) var(--involve-font),
     sans-serif;
   --font-stage-btn: 700 var(--text-xs) var(--cygre-font), sans-serif;
 
@@ -116,5 +116,4 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  outline: solid ;
 }
