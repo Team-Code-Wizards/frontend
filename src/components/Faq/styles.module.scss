@@ -3,8 +3,10 @@
   max-width: var(--block-max-width);
   display: flex;
   justify-content: space-between;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  // padding-bottom: 50px;
+  // padding-top: 50px;
+  padding: 50px;
+  gap: 20px;
 
   &__title {
     width: 32.9%;
@@ -13,7 +15,8 @@
   }
 
   &__list {
-    width: 738px;
+
+    // width: 738px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -25,11 +28,11 @@
     max-width: 1024px;
 
     &__title {
-      width: 422px;
+      // width: 422px;
     }
 
     &__list {
-      width: 589px;
+      // width: 589px;
     }
   }
 }
@@ -38,13 +41,15 @@
   .faq {
     max-width: 768px;
     justify-content: center;
+    // перенесли 
+    flex-direction: column;
 
     &__title {
-      width: 280px;
+      // width: 280px;
     }
 
     &__list {
-      width: 472px;
+      // width: 472px;
     }
   }
 }
@@ -52,15 +57,14 @@
 @media screen and (max-width: 390px) {
   .faq {
     max-width: 320px;
-    flex-direction: column;
 
     &__title {
-      width: 320px;
+      // width: 320px;
       margin-bottom: 50px;
     }
 
     &__list {
-      width: 286px;
+      // width: 286px;
       gap: 49px;
     }
   }

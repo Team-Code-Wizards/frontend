@@ -11,9 +11,11 @@
   }
 
   &__title {
-    width: 581px;
+    // width: 581px;
     font: var(--font-title-description);
     line-height: 115%;
+    // решает пролему с плюсиками 
+    flex-basis: 80%;
   }
   &__description {
     margin-top: 33px;
