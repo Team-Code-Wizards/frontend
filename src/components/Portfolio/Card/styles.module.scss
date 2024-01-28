@@ -1,7 +1,8 @@
 .card {
 	&__container {
+		width: 32.26%;
 		min-width: 413px;
-		height: 360px;
+		// height: 360px;
 		background: transparent;
 		display: flex;
 		flex-direction: column;
@@ -64,5 +65,18 @@
 		color: var(--color-text);
 		font-size: var(--text-base);
 		line-height: var(--line-height);
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.card {
+		&__container {
+			width: 32%;
+			max-width: 328px;
+		}
 	}
 }

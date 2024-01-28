@@ -3,9 +3,6 @@
 		display: flex;
 		flex-direction: column;
 		max-width: var(--max-width);
-		// padding-top: 40px ;
-		// padding-bottom: 40px;
-		// padding-left: 80px;
 		padding: 80px;
 		color: var(--color-text);
 		margin: 0 auto;
@@ -20,13 +17,15 @@
 	&__btn-group {
 		color: var(--color-text);
 		display: flex;
-		margin-top: 20px;
+		margin-top: 15px;
 		column-gap: 10px;
 	}
 
 	&__card-box {
 		display: flex;
-		overflow: hidden;
+		overflow-x: hidden;
+		overflow-y: visible;
+		min-height: 361px;
 		column-gap: 20px;
 		margin-top: 40px;
 	}
@@ -50,4 +49,29 @@
 		border: 1px solid rgba(255, 255, 255, 0.5);
 		transition: all 0.1s ease-in;
 	}
+}
+
+@media screen and (max-width: 1280px) {
+	.portfolio {
+	&__container {
+		max-width: 1280px;
+		padding: 0;
+	}
+
+	&__title {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	&__btn-group {
+		width: 80%;
+		margin: 10px auto 40px;
+	}
+
+	&__card-box {
+		width: 80%;
+		margin: 0 auto;
+		min-height: 285px;
+	}
+}
 }
