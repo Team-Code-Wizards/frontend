@@ -85,6 +85,12 @@
 			padding: 0 20px;
 		}
 	}
+
+	.card {
+		&__container {
+			width: 155%;
+		}
+	}
 }
 
 @media screen and (min-width: 769px) and (max-width: 1280px) {
@@ -117,7 +123,8 @@
 		&__container {
 			width: 82%;
 			max-width: 1280px;
-			padding-bottom: 95px;
+			margin: 60px auto;
+			padding: 57px 0 95px;
 		}
 		&__arrows {
 			margin-left: 0;
@@ -133,6 +140,7 @@
 			width: 140px;
 			font-size: 40px;
 			white-space: nowrap;
+			margin-bottom: 10px;
 			overflow: hidden;
 		}
 	}
@@ -140,6 +148,7 @@
 	.card {
 		&__container {
 			gap: 40px;
+			width: 94%;
 		}
 	}
 }

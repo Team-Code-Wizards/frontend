@@ -45,7 +45,7 @@
 	}
 
 	&_title {
-		font: var(--font-description-main);
+		font: var(--font-title-description);
 	}
 
 	&_information {
@@ -72,12 +72,17 @@
 }
 
 @media screen and (max-width: 650px) {
+	.card-image {
+		&_left {
+			order: 1;
+		}
+	}
+
 	.main-card-container {
-		flex: 1 1 100%;
+		flex: 1 0 100%;
 	}
 
 	.card-image {
-
 		&_left,
 		&_right {
 			flex-shrink: 3;
