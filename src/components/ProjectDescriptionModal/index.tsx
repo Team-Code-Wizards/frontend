@@ -14,14 +14,14 @@ export default function ProjectDescriptionModal() {
 				</button>
 				<h2 className={styles['modal__title']}>Лендинг</h2>
 				<div className={styles['modal__description']}>
-					<h4>
+					<p>
 						Лендинг (он же посадочная страница, или landing page) - это
 						одностраничный сайт, созданный для конкретной цели, например, для
 						продвижения конкретного товара или услуги. Он предоставляет
 						информацию, разъясняющую преимущества предложения и убеждающую
 						посетителя совершить целевое действие, например, оформить заказ,
 						подписаться на рассылку или скачать информационный материал.
-					</h4>
+					</p>
 				</div>
 				<div className={styles['modal__example']}>
 					<Image src={landingImage} alt="Landing image" />
