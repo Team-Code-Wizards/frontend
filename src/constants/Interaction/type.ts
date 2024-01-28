@@ -6,4 +6,6 @@ export interface IInteractionStep {
 	description: string;
 	image: StaticImageData;
 	alt: string;
+	modifer: string;
+	change?: boolean;
 }
