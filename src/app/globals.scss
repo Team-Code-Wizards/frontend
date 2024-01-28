@@ -29,12 +29,7 @@
   //  === Fonts ===
   --rg-font: "RG-StandardSemibold";
   --involve-font: "Involve";
-  //  === Fonts ===
-  --rg-font: "RG-StandardSemibold";
-  --involve-font: "Involve";
 
-  // Шрифт ниже будет удален !
-  --cygre-font: "Cygre";
   // === Font Sizes ===
   // === Font Sizes ===
   --text-xxs: 10px;
@@ -56,21 +51,12 @@
   --font-title-description: 600 var(--text-base) / var(--line-height)
       var(--involve-font),
     sans-serif;
-  // === Titles ===
-  --font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
-    sans-serif;
-  --font-title-description: 600 var(--text-base) / var(--line-height)
-      var(--involve-font),
-    sans-serif;
 
   // === Descriptions ===
   --font-button: 600 var(--text-base) var(--involve-font), sans-serif;
   --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-  --font-description-main: 400 var(--text-sm) / var(--line-height-big)
-      var(--involve-font),
-    --font-description-main: 500 var(--text-sm) / var(--line-height-big)
-      var(--involve-font),
-    sans-serif;
+  --font-description-main: 500 var(--text-sm) / var(--line-height-big)
+    var(--involve-font) sans-serif;
   --font-stage-btn: 700 var(--text-xs) var(--involve-font), sans-serif;
   --font-stage-btn-sm: 700 var(--text-xxs) var(--involve-font), sans-serif;
 
@@ -100,21 +86,7 @@
     #362a64 18.25%,
     #51259b 93.44%
   );
-  --color-purple-gradient: linear-gradient(
-    93deg,
-    #362a64 18.25%,
-    #51259b 93.44%
-  );
 
-  --color-gradient-button: linear-gradient(
-    93deg,
-    rgba(167, 138, 213, 1) 11%,
-    rgba(211, 166, 238, 1) 23%,
-    rgba(63, 28, 120, 1) 39%,
-    rgba(110, 37, 155, 1) 61%,
-    rgba(81, 37, 155, 1) 81%,
-    rgba(54, 42, 100, 1) 92%
-  );
   --color-gradient-button: linear-gradient(
     93deg,
     rgba(167, 138, 213, 1) 11%,

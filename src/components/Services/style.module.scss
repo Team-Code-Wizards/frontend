@@ -139,15 +139,14 @@
   }
 }
 
-@media screen and (min-width: 834px) and (max-width: 1084px) {
+@media screen and (min-width: 834px) and (max-width: 1280px) {
   .wrapper {
-    //max-width: var(--width-1024-769);
     max-width: 1024px;
+    margin: auto;
   }
   .services {
     padding: 0;
-
-    margin-left: 0px;
+    margin-left: 10px;
 
     &__cards {
       justify-content: space-around;
@@ -167,13 +166,13 @@
   }
 }
 
-@media screen and (max-width: 833px) {
+@media screen and (max-width: 840px) {
   .wrapper {
     max-width: 768px;
+    margin: auto;
   }
   .services {
     padding: 0;
-
     margin-left: 0px;
 
     &__cards {
@@ -197,23 +196,24 @@
 @media screen and (max-width: 390px) {
   .wrapper {
     max-width: 320px;
+    margin: auto;
   }
   .services {
     padding: 0;
-    margin-left: 0px;
 
     &__title {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       font-size: 40px;
       line-height: 120%;
     }
   }
   .service-card {
-    height: min-content;
+    height: auto;
     width: 320px;
 
     &__content {
-      height: min-content;
+      height: auto;
+      padding: 0px 0px 0px 0px;
 
       & > h4 {
         font: var(--font-title-description);
@@ -225,6 +225,9 @@
       }
     }
 
+    &__prices {
+      bottom: 1px;
+    }
     &__popup {
       background-color: none;
       display: flex;
