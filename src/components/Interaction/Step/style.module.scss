@@ -9,7 +9,7 @@
 	&__number {
 		width: 76px;
 		max-height: 35px;
-		padding: 6px 10px;
+		padding: 6px 8px;
 		border-radius: 41px;
 		text-align: center;
 		font: var(--font-title-description);
@@ -21,6 +21,7 @@
 		margin-block-start: 5px;
 		margin-block-end: 32px;
 		font: var(--font-title-description);
+		letter-spacing: var(--font-description-letter);
 	}
 
 	&__description {
