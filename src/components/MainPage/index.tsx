@@ -25,7 +25,7 @@ export default function MainPage() {
 			<Promo />
 			<ComponentsContainer>
 				{/* <ProjectDescriptionModal /> */}
-				<Popup isSuccess={true} />
+				<Popup isSuccess={false} />
 				<AboutUs />
 				<Services />
 				<Portfolio />
