@@ -4,7 +4,7 @@
 	background-position: center;
 	color: var(--color-text);
 	width: 100%;
-	*{outline: 2px solid tomato}
+	//*{outline: 2px solid tomato}
 
 	&__container {
 		padding: 126px 0 118px 0;
@@ -81,6 +81,9 @@
 
 @media screen and (max-width: 1280px) {
 	.promo {
+		//background-image: url('../../../public/images/promo/promo-bg1280.png');
+		background-image: url('../../../public/images/promo/promo-bg.png');
+
 		&__container {
 			width: var(--width-1280-1024);
 			padding: 126px 1px 118px 0;
@@ -101,18 +104,6 @@
 	}
 }
 
-//@media screen and (max-width: 1024px) and (min-width: 834px) {
-//	.promo {
-//		&__container {
-//			width: 100%;
-//		}
-//
-//		&__main {
-//			flex-basis: 52%;
-//		}
-//	}
-//	}
-
 @media screen and (max-width: 1050px) {
 	.promo {
 		&__container {
@@ -123,7 +114,7 @@
 
 @media screen and (max-width: 835px){
 	.promo {
-		background-image: url('../../../public/images/promo/promo-bg768.png');
+		background-image: url('../../../public/images/promo/promo-bg-834-new.png');
 
 		&__container {
 			width: 92.1%;
