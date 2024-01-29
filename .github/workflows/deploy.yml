@@ -20,7 +20,7 @@ jobs:
           if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
               echo "TAG=latest" >> "$GITHUB_ENV"
           else
-              echo "NEED=beta" >> "$GITHUB_ENV"
+              echo "TAG=beta" >> "$GITHUB_ENV"
           fi
       - name: Check out the repo
         uses: actions/checkout@v4 
