@@ -1,75 +1,83 @@
 .choice-card {
 	display: flex;
 	border-radius: 20px;
-	list-style-type: none;
-	box-sizing: border-box;
-	align-items: flex-end;
 
 	&__column {
 		border-radius: 6px;
-		margin-bottom: 16px;
 		display: inline-flex;
 		align-items: center;
 
 		> svg {
-			margin-right: 5px;
+			margin-right: 7px;
 		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__title {
 		color: var(--color-text);
 		font: var(--font-title-description);
-		margin: 0;
+		padding-top: 3px;
 	}
 
 	&__description {
 		color: var(--color-text);
 		font: var(--font-description-main);
-		margin: 0;
-		letter-spacing: -0.48px;
+		display: inline-block;
 	}
 
 	&_design {
 		grid-area: 1 / 1 / 2 / 4;
 		background-color: var(--color-purple);
-		padding: 4.1%;
+		padding: 6% 4.1% 0.1%;
 		background-image: url(/images/choice/design-bg.png);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: right 16px top 0;
 
 		&__wrapper {
-			max-width: 400px;
+			row-gap: 16px;
 		}
 
 		&__column {
 			background-color: var(--color-bg-ivory);
 			padding: 5px;
+			max-width: max-content;
+		}
+
+		&__description {
+			display: inline-block;
+			max-width: 69%;
 		}
 	}
 
 	&_flexibility {
 		grid-area: 1 / 4 / 3 / 6;
-		align-items: flex-start;
 		background-color: var(--color-bg-ivory);
-		padding: 3% 2% 2% 7%;
+		padding: 9% 2% 9% 14%;
+		background-image: url(/images/choice/arrow-1.svg),
+			url(/images/choice/arrow-2.svg);
+		background-repeat: no-repeat, no-repeat;
+		background-position:
+			left 8% bottom 35.5%,
+			left 13.5% bottom 6.5%;
 
 		&__wrapper {
-			max-width: 100%;
-			padding: 7.7%;
-			background-image: url(/images/choice/arrow-1.svg),
-				url(/images/choice/arrow-2.svg);
-			background-repeat: no-repeat, no-repeat;
-			background-position:
-			left 0 bottom 20%, left 4% bottom 0
+			row-gap: 12px;
 		}
 
 		&__column {
-			margin-bottom: 8px;
-
-			>svg {
+			> svg {
 				margin-right: 7px;
 			}
+		}
+
+		&__description {
+			display: inline-block;
+			max-width: 88%;
 		}
 	}
 
@@ -92,15 +100,25 @@
 	&_presence {
 		grid-area: 2 / 1 / 5 / 4;
 		background-color: var(--color-pink);
-		background-image: url(/images/choice/presence-bg.png);
-		background-size: contain;
-		padding: 3% 3% 3.7% 2.5%;
+		background-image: url(/images/choice/presence-bg.png),
+			url(/images/choice/figma-cursor.svg);
+		background-size: contain, 9%;
+		background-repeat: repeat, no-repeat;
+		background-position:
+			center,
+			right 10% top 14%;
+		padding: 4% 3% 3% 2.5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 
 		&__wrapper {
-			max-width: 440px;
-			padding: 20px 20px 15px;
+			max-width: 80%;
+			height: 80%;
+			padding: 3.5% 3% 0.5%;
 			background-color: var(--color-bg-white);
 			border-radius: 20px;
+			row-gap: 16px;
 		}
 
 		&__title {
@@ -109,6 +127,8 @@
 
 		&__description {
 			color: var(--black-color);
+			display: inline-block;
+			max-width: 92%;
 		}
 	}
 
@@ -122,12 +142,17 @@
 		padding: 4.5% 5.3%;
 
 		&__wrapper {
-			max-width: 400px;
+			row-gap: 18px;
 		}
 
 		&__column {
 			padding: 5px;
 			background-color: var(--color-bg-ivory);
+			max-width: fit-content;
+		}
+
+		&__description {
+			max-width: 65%;
 		}
 	}
 
@@ -140,10 +165,6 @@
 		background-repeat: repeat-x;
 		background-position: left 0 bottom 0;
 
-		&__wrapper {
-			max-width: 258px;
-		}
-
 		&__column {
 			margin-bottom: 10px;
 		}
@@ -151,18 +172,22 @@
 
 	&_optimization {
 		grid-area: 5 / 3 / 9 / 5;
-		align-items: flex-start;
-		padding: 25% 9.5%;
+
+		padding: 25% 0 24% 9.5%;
 		background-image: url(/images/choice/optimization-bg.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 
 		&__wrapper {
-			max-width: 396px;
+			row-gap: 12px;
+		}
+
+		&__description {
+			max-width: 83%;
 		}
 
 		&__column {
-			>svg {
+			> svg {
 				margin-right: 5px;
 			}
 		}
@@ -170,15 +195,14 @@
 
 	&_attraction {
 		grid-area: 5 / 5 / 9 / 7;
-		align-items: flex-start;
-		padding: 13.5% 5.5%;
+		padding: 13.5% 2% 0 5.5%;
 		background-color: var(--color-purple);
 		background-image: url(/images/choice/attraction-bg.png);
 		background-repeat: repeat-x;
 		background-position: left 0 bottom 0;
 
 		&__wrapper {
-			max-width: 353px;
+			row-gap: 12px;
 		}
 
 		&__column {
