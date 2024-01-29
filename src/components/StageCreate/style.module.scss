@@ -1,7 +1,7 @@
 .stage{
     width: var(--max-width);
     height: 820px;
-    background-image: url(/images/stageCreate/background.png);
+    background-image: url(../../../public/images/stageCreate/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -71,7 +71,7 @@
             outline: none;
         }
     }
-    
+
     &__item_active {
         border: 1px solid var(--color-text);
         color: var(--color-text);
