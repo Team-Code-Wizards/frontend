@@ -17,6 +17,6 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
-#ENV NEXT_SHARP_PATH=/app/node_modules/sharp
+ENV NEXT_SHARP_PATH=/usr/local/lib/node_modules/sharp/
 EXPOSE 3000
 CMD ["node", "server.js"]

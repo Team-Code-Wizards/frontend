@@ -1,7 +1,16 @@
 services:
   frontend:
-    image: govard/code_wizards
+    image: govard/code_wizards:latest
+    container_name: frontend
     pull_policy: always
     restart: always
     ports:
       - '3000:3000'
+
+  test:
+    image: govard/code_wizards:beta
+    container_name: beta
+    pull_policy: always
+    restart: always
+    ports:
+      - '3001:3000'

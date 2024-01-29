@@ -4,12 +4,24 @@ on:
   push:
     branches:
       - main
+      - develop
+
 
 jobs:
   build_and_push_to_docker_hub:
     name: docker
     runs-on: ubuntu-latest
     steps:
+      - name: Set env BRANCH
+        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+
+      - name: Set env NEED
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
+              echo "TAG=latest" >> "$GITHUB_ENV"
+          else
+              echo "NEED=beta" >> "$GITHUB_ENV"
+          fi
       - name: Check out the repo
         uses: actions/checkout@v4 
       - name: Set up Docker Buildx
@@ -23,9 +35,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile 
+          file: ./Dockerfile
           push: true
-          tags: govard/code_wizards
+          tags: govard/code_wizards:${{ env.TAG }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -38,7 +50,5 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            sudo docker pull govard/code_wizards
-            sudo docker compose stop
-            sudo docker compose rm frontend
-            sudo docker compose up -d 
+            sudo docker compose up -d
+            sudo docker image prune
