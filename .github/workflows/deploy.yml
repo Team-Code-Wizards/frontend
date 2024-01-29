@@ -13,10 +13,7 @@ jobs:
     name: docker
     runs-on: ubuntu-latest
     steps:
-      - name: Set env BRANCH
-        run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
-
-      - name: Set env NEED
+      - name: Set env TAG
         run: |
           if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
               echo "TAG=latest" >> "$GITHUB_ENV"
@@ -52,4 +49,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             sudo docker compose up -d
-            sudo docker image prune
+            sudo docker image prune -f
