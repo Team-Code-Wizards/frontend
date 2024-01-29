@@ -5,6 +5,7 @@ import image42 from '../../../public/images/portfolio/image-42.png';
 import image43 from '../../../public/images/portfolio/image-43.png';
 import image44 from '../../../public/images/portfolio/image-44.png';
 import image45 from '../../../public/images/portfolio/image-45.png';
+import image46 from '../../../public/images/portfolio/image-46.png';
 
 export const portfolioCards: IPortfolioCard[] = [
 	{
@@ -36,5 +37,11 @@ export const portfolioCards: IPortfolioCard[] = [
 		title: 'Чистый город',
 		image: image45,
 		link: 'https://musor-krsk.ru/',
+	},
+	{
+		tag: 'Корпоративный сайт',
+		title: 'ЦНМТ',
+		image: image46,
+		link: 'https://www.cnmt.ru/',
 	},
 ];
