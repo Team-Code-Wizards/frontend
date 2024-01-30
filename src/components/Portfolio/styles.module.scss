@@ -1,7 +1,5 @@
 .portfolio {
 	&__container {
-		// display: flex;
-		// flex-direction: column;
 		max-width: var(--max-width);
 		padding: 80px;
 		padding-right: 0;
@@ -23,11 +21,7 @@
 	}
 
 	&__card-box {
-		// display: flex;
-		// overflow-x: hidden;
-		// overflow-y: visible;
 		min-height: 361px;
-		// column-gap: 20px;
 		margin-top: 20px;
 	}
 
@@ -84,7 +78,6 @@
 	&__card-box {
 		width: 90%;
 		margin: 0 0 0 auto;
-		// min-height: 101px;
 		max-height: 285px;
 		min-height: auto;
 	}

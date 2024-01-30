@@ -11,7 +11,6 @@ export default function PortfolioCard({
 	link,
 }: IPortfolioCard) {
 	return (
-		// <div className={styles['card__container']}>
 		<>
 			<div className={styles['card__image']}>
 				<Image
@@ -39,6 +38,5 @@ export default function PortfolioCard({
 				{title}
 			</a>
 		</>
-		// </div>
 	);
 }
