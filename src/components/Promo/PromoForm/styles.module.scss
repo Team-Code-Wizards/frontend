@@ -124,6 +124,12 @@
 	}
 }
 
+@media screen and (max-width: 450px) {
+	.promo-form {
+		width: 80%;
+	}
+}
+
 @media screen and (max-width: 390px) {
 	.promo-form {
 		width: 100%;
