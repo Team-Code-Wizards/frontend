@@ -8,10 +8,11 @@ export default function StageCreate() {
 		<section className={styles['stage']}>
 			<div className={styles['stage__block']}>
 				<h2 className={styles['stage__title']}>Этапы создания сайта</h2>
-				<span className={styles['stage__icon-wrapper']}>
-					{/*<IconClock />*/}
-					<Image src={clockIcon} alt={'Clock'} height={546} width={580} />
-				</span>
+				<Image
+					src={clockIcon}
+					alt={'Clock'}
+					className={styles['stage__icon-wrapper']}
+				/>
 				<div className={styles['stage__wrapper']}>
 					<button
 						type="button"
