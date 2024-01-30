@@ -16,16 +16,17 @@
   }
 
   &__cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
     justify-content: space-between;
-    gap: 20px;
   }
 }
 
 .service-card {
-  width: 413px;
-  height: 346px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -34,9 +35,9 @@
 
   &__content {
     position: relative;
+    flex-basis: 90%;
     padding: 6px 9px 30px 10px;
     margin-bottom: 10px;
-    height: 276px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
 
@@ -139,7 +140,7 @@
   }
 }
 
-@media screen and (min-width: 834px) and (max-width: 1280px) {
+/*@media screen and (min-width: 834px) and (max-width: 1280px) {
   .wrapper {
     max-width: 1024px;
     margin: auto;
@@ -235,3 +236,4 @@
     }
   }
 }
+*/
