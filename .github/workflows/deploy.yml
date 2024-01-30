@@ -3,32 +3,37 @@ name: deploy_front
 on:
   push:
     branches:
-      - experementalBranch
-  pull_request:
-    branches:
-      - experementalBranch
-
+      - main
+      - develop
+      - feature/infra
 jobs:
   build_and_push_to_docker_hub:
     name: docker
     runs-on: ubuntu-latest
     steps:
+      - name: Set env TAG
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
+              echo "TAG=latest" >> "$GITHUB_ENV"
+          else
+              echo "TAG=beta" >> "$GITHUB_ENV"
+          fi
       - name: Check out the repo
         uses: actions/checkout@v4 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1 
+        uses: docker/setup-buildx-action@v3 
       - name: Login to Docker
-        uses: docker/login-action@v1 
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Hub
-        uses: docker/build-push-action@v2 
+        uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile 
+          file: ./Dockerfile
           push: true
-          tags: govard/code_wizards
+          tags: govard/code_wizards:${{ env.TAG }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -41,7 +46,5 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            sudo docker pull govard/code_wizards
-            sudo docker compose stop
-            sudo docker compose rm frontend
-            sudo docker compose up -d 
+            sudo docker compose up -d
+            sudo docker image prune -af
