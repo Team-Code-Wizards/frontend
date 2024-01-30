@@ -16,7 +16,7 @@ export default function PortfolioCard({
 				<Image
 					src={image}
 					alt="portfolioIcon"
-					width={500}
+					// width={500}
 					className={styles['card__bg']}
 				/>
 				<span className={styles['card__tag']}>{tag}</span>

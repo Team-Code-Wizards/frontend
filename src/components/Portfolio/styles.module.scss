@@ -1,9 +1,10 @@
 .portfolio {
 	&__container {
-		display: flex;
-		flex-direction: column;
+		// display: flex;
+		// flex-direction: column;
 		max-width: var(--max-width);
 		padding: 80px;
+		padding-right: 0;
 		color: var(--color-text);
 		margin: 0 auto;
 	}
@@ -22,12 +23,12 @@
 	}
 
 	&__card-box {
-		display: flex;
-		overflow-x: hidden;
+		// display: flex;
+		// overflow-x: hidden;
 		// overflow-y: visible;
 		min-height: 361px;
-		column-gap: 20px;
-		margin-top: 40px;
+		// column-gap: 20px;
+		margin-top: 22px;
 	}
 }
 
@@ -50,6 +51,7 @@
 		transition: all 0.1s ease-in;
 	}
 }
+
 
 @media screen and (max-width: 1280px) {
 	.portfolio {
