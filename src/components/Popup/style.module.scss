@@ -5,7 +5,6 @@
     align-items: center;
     justify-content: center;
     background-image: url(/images/popup/background.png);
-    //background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
     width: 80vw;
@@ -19,7 +18,7 @@
     display: flex;
     flex-direction: column;
     flex-basis: 60%;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
   }
@@ -27,22 +26,19 @@
   &__icon {
     &_success,
     &_failure {
-      //position: relative;
       background: rgba(255, 255, 255, 0.1);
       padding: 10px;
-      //top: 50%;
-      //left: 50%;
     }
     &_success {
-      border-radius: 200px;
+      border-radius: 100px;
     }
     &_failure {
       border-radius: 100px;
     }
     &_close {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 10px;
+      right: 15px;
       background: rgba(135, 146, 252, 0.5);
       border-radius: 200px;
       border: none;
@@ -59,30 +55,11 @@
     font-family: var(--involve-font);
     font-size: var(--text-base);
     font-weight: 400;
-    //position: absolute;
     color: var(--color-text);
     text-align: center;
     width: 100%;
-    //margin-top: 260px;
-  }
-
-  &__message_failure {
-    //margin-left: 220px;
-  }
-
-  &__message_success {
-    //margin-left: 175px;
   }
 }
-
-/*@media screen and (min-width: 391) and (max-width: 500px) {
-  .popup {
-    &__info {
-      flex-basis: 60%;
-      gap: 10px;
-    }
-  }
-} */
 
 @media screen and (min-width: 300px) and (max-width: 450px) {
   .popup {
@@ -90,42 +67,9 @@
       background-image: url(/images/popup/small-popup-background.png);
       height: 40vh;
     }
+
+    &__info {
+      flex-basis: 70%;
+    }
   }
 }
-
-/*&__icon {
-      &_success {
-        margin-top: 18%;
-        margin-left: 39%;
-      }
-      &_failure {
-        margin-top: 21%;
-        margin-left: 37%;
-      }
-      &_close {
-        position: absolute;
-        margin-top: 18%;
-        margin-left: 83%;
-        margin-top: 6%;
-      }
-    }
-
-    &__message_success,
-    &__message_failure {
-      font-weight: 600;
-      line-height: 120%;
-    }
-
-    &__message_failure {
-      margin-top: 48%;
-      margin-left: 20%;
-    }
-
-    &__message_success {
-      margin-top: 45%;
-      margin-left: 22%;
-      width: 174px;
-      text-align: center;
-    }
-  }
-} */
