@@ -105,4 +105,13 @@
 			flex-shrink: 3;
 		}
 	}
+
+	.card__details {
+		align-items: flex-start;
+		margin-top: 13px;
+
+		&__container {
+			margin-left: 11px;
+		}
+	}
 }
