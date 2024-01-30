@@ -1,0 +1,273 @@
+.contacts {
+	display: flex;
+	flex-direction: column;
+	row-gap: 48px;
+	width: 100%;
+	max-width: var(--block-max-width);
+	padding: 66px 84px;
+	border-radius: 30px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	color: var(--color-text);
+	margin: 0 auto;
+
+	&__title {
+		margin: 0;
+		display: block;
+		all: unset;
+		font: var(--font-block-title);
+	}
+
+	&__body {
+		display: flex;
+		column-gap: 41px;
+	}
+}
+
+.link-group {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-width: 41.5%;
+	max-height: 252px;
+	flex-wrap: wrap;
+
+	gap: 10px;
+}
+
+.link-box {
+	display: flex;
+
+	&:first-of-type {
+		flex-basis: 100%;
+	}
+
+	&:nth-of-type(2) {
+		flex-basis: 77%;
+
+		.link {
+			align-items: flex-start;
+			padding: 16px 18px 12px 20px;
+		}
+	}
+
+	&:nth-of-type(3),
+	&:last-of-type {
+		flex-grow: 1;
+	}
+
+	&:nth-of-type(4) {
+		flex-basis: 43.5%;
+	}
+
+	&:nth-of-type(3) {
+		.link {
+			padding: 16px 16px 8px;
+			row-gap: 6px;
+		}
+	}
+
+	&:nth-of-type(4),
+	&:last-of-type {
+		.link {
+			padding: 19px 19px 8px;
+			row-gap: 7px;
+		}
+	}
+
+	&:nth-of-type(3),
+	&:nth-of-type(4),
+	&:last-of-type {
+		.link {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
+
+.link {
+	all: unset;
+	display: flex;
+	align-items: center;
+	padding: 20px 20px 17px;
+	cursor: pointer;
+	width: 100%;
+	border: 1px solid white;
+	border-radius: 10px;
+	transition: all 0.3s ease-out;
+
+	&:nth-of-type(5) {
+		border: 10px solid red;
+	}
+
+	&:hover {
+		background-color: var(--color-lilac);
+		border: 1px solid rgba(255, 255, 255, 0);
+		transition: all 0.3s ease-out;
+	}
+
+	&__item {
+		display: flex;
+
+		&_no-margin {
+			margin: 0;
+		}
+
+		&_word-space {
+			word-spacing: 1.5rem;
+		}
+
+		&_tel {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+		}
+
+		&:nth-child(2) {
+			margin-left: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 1439px) {
+	.contacts {
+	  width: 88%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.contacts {
+	  width: 80%;
+	  max-width: 1024px;
+	  padding: 67px 51px;
+
+	  &__body {
+		  column-gap: 0;
+		  justify-content: space-between;
+	  }
+  }
+
+	.link-group {
+		width: 49.9%;
+	}
+
+	.link-box {
+		&:nth-of-type(2) {
+		  flex-basis: 77%;
+			  @media screen and (max-width: 1170px) {
+				  flex-basis: 100%;
+			  }
+    }
+	  &:nth-of-type(3) {
+		  flex-basis: 20.6%;
+    }
+	}
+}
+
+@media screen and (max-width: 834px) {
+	.contacts {
+	  width: 92%;
+	  max-width: 768px;
+    padding: 65px 40px 72px;
+  }
+
+	.link-group {
+		width: 48.84%;
+	}
+
+	.link-box {
+		&:nth-of-type(2) {
+		  flex-basis: 68.15%;
+	  }
+	  &:nth-of-type(4) {
+		  flex-basis: 59.6%;
+	  }
+  }
+
+  .link {
+	  padding: 16px 19px 14px;
+  }
+
+  .link__item_word-space {
+	  min-width: 78%;
+	  display: flex;
+	  gap: 28px;
+  }
+
+  .link__item_email {
+    flex-basis: 18%;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 833px) {
+	.link-box {
+	  &:nth-of-type(4) {
+			flex-basis: 44%;
+		}
+		&:nth-of-type(5) {
+		  flex-basis: 50%;
+	  }
+	}
+
+	.link__item_email {
+    flex-basis: 34%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+	.contacts {
+	  width: 90%;
+			&__body {
+	  	  flex-direction: column;
+	  	  row-gap: 91px;
+	    }
+	}
+
+	.link-group {
+		width: 100%;
+		max-height: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contacts {
+		padding: 60px 30px 30px;
+		@media screen and (max-width: 390px) {
+			width: 82%;
+			max-width: 320px;
+			padding: 60px 0 0;
+			background: transparent;
+		}
+	}
+
+	.link-box {
+		&:nth-of-type(2) {
+		  flex-basis: 67.2%;
+			@media screen and (max-width: 380px) {
+				flex-basis: 100%;
+			}
+	  }
+	  &:nth-of-type(4) {
+		  flex-basis: 44%;
+			@media screen and (min-width: 391px) and (max-width: 413px) {
+				flex-basis: 42%;
+			}
+			@media screen and (max-width: 380px) {
+				flex-basis: 100%;
+			}
+	  }
+		&:nth-of-type(5) {
+		  flex-basis: 52.8%;
+	  }
+  }
+
+	.link {
+	  padding: 16px 19px 14px;
+  }
+
+	.link__item_word-space {
+		flex-direction: column;
+	  gap: 19px;
+  }
+}
