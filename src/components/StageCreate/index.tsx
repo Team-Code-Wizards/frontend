@@ -1,4 +1,6 @@
-import IconClock from '../../../public/images/stageCreate';
+import Image from 'next/image';
+
+import clockIcon from '../../../public/images/stageCreate/clock-1440.png';
 import styles from './style.module.scss';
 
 export default function StageCreate() {
@@ -7,7 +9,8 @@ export default function StageCreate() {
 			<div className={styles['stage__block']}>
 				<h2 className={styles['stage__title']}>Этапы создания сайта</h2>
 				<span className={styles['stage__icon-wrapper']}>
-					<IconClock />
+					{/*<IconClock />*/}
+					<Image src={clockIcon} alt={'Clock'} height={546} width={580} />
 				</span>
 				<div className={styles['stage__wrapper']}>
 					<button

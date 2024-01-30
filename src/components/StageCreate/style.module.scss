@@ -1,17 +1,16 @@
 .stage{
     //width: var(--max-width);
-    height: 820px;
-    //height: 100vh;
-    background-image: url(../../../public/images/stageCreate/background.png);
+    //height: 820px;
+    background-image: url(../../../public/images/stageCreate/stages-create-bg-1440.png);
     background-repeat: no-repeat;
     background-size: cover;
-    *{outline: 2px solid tomato}
+    //*{outline: 2px solid tomato}
     margin: 0 auto;
     max-width: var(--max-width);
 
     &__block {
         position: relative;
-        padding: 68px 80px;
+        padding: 68px 80px 204px;
         //padding: 68px 77px;
         max-width: var(--max-width);
         margin: 0 auto;
@@ -26,9 +25,9 @@
 
     &__icon-wrapper {
         position: absolute;
-        top: 205px;
+        top: 135px;
         //top: 161px;
-        left: 825px;
+        left: 580px;
         //left: 964px;
     }
 
@@ -102,13 +101,11 @@
 
     &__description {
         //max-width: 320px;
-        max-width: 23%;
+        max-width: 29%;
         font: var(--font-description-main);
-        font-size: var(--text-xs);
         //line-height: 157%;
-        line-height: 147%;
+        line-height: 130%;
         //letter-spacing: -0.42px;
-        letter-spacing: 0.58px;
         margin-bottom: 81px;
     }
 
@@ -139,16 +136,31 @@
 		}
     }
 }
-//
-//@media screen and (max-width: 1300px) {
-//    .stage {
-//        max-width: 79%;
-//
-//        &__description {
-//            max-width: 35%;
-//        }
-//    }
-//}
+
+@media screen and (max-width: 1280px) {
+    .stage {
+
+        &__block {
+            padding: 68px 0 128px;
+            max-width: var(--width-1024-768);
+        }
+
+        &__description {
+            max-width: 30%;
+        }
+
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .stage {
+
+        &__description {
+            max-width: 45%;
+            margin-bottom: 54px;
+        }
+    }
+}
 //
 //@media screen and (max-width: 1024px) and (min-width: 834px) {
 //
