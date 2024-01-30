@@ -18,11 +18,31 @@
 		align-items: center;
 		row-gap: 60px;
 		color: var(--color-text);
+
+		@media screen and (max-width: 1439px) {
+			max-width: 80%;
+			padding-block: 80px;
+		}
+
+		@media screen and (max-width: 1279px) {
+			max-width: 92%;
+		}
+
+		@media screen and (max-width: 833px) {
+			max-width: 82%;
+			padding-block: 60px 34px;
+		}
 	}
 
 	&__head {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		gap: 37px 20px;
+
+		@media screen and (max-width: 670px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__banner {
@@ -38,19 +58,25 @@
 	&__subtitle {
 		width: calc(100% - 20px);
 		font: var(--font-title-description);
+
+		@media screen and (max-width: 1024px) {
+			width: 100%;
+		}
 	}
 
 	&__short-description {
 		padding: 38px 20px;
 		display: flex;
-		flex-basis: calc(50% - 10px);
 		column-gap: 10px;
 		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(7.5px);
 		border-radius: 10px;
 		color: var(--color-lilac);
 		font: var(--font-description-main);
-		font-weight: 700;
+
+		@media screen and (max-width: 420px) {
+			padding: 18px 20px;
+		}
 
 		svg {
 			min-width: 24px;
@@ -60,6 +86,10 @@
 	&__main {
 		display: flex;
 		flex-direction: column;
-		row-gap: 40px;
+		row-gap: 38px;
+
+		@media screen and (max-width: 420px) {
+			row-gap: 41px;
+		}
 	}
 }

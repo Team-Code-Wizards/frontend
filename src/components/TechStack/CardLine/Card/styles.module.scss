@@ -1,21 +1,21 @@
 .card {
-	&__box {
-		display: flex;
-		flex-direction: column;
-		row-gap: 15px;
-		font: var(--font-description-main);
-		font-weight: 700;
-	}
-
 	&__title {
 		display: inline-flex;
 		align-items: center;
 		padding-bottom: 20px;
 		border-bottom: 1px solid white;
+		order: -1;
+
+		@media screen and (max-width: 1279px) {
+			padding-bottom: 16px;
+		}
+
+		@media screen and (max-width: 833px) {
+			order: 0;
+		}
 
 		span {
 			font: var(--font-description-main);
-			font-weight: 700;
 			margin-left: 10px;
 		}
 
@@ -23,6 +23,14 @@
 			&:nth-of-type(2) {
 				margin-left: 5px;
 			}
+		}
+	}
+
+	&__description {
+		font: var(--font-description-main);
+
+		@media screen and (max-width: 420px) {
+			margin-bottom: 17px;
 		}
 	}
 }
