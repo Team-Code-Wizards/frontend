@@ -21,7 +21,7 @@ export default function RootLayout({
 		<html lang="ru">
 			<Head>
 				<link rel="icon" href="/favicon.ico" sizes="any" />
-				<!-- Yandex.Metrika counter -->
+				{/* <!-- Yandex.Metrika counter --> */}
 				<script type="text/javascript" >
 				   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 				   m[i].l=1*new Date();
@@ -37,7 +37,7 @@ export default function RootLayout({
 				   });
 				</script>
 				<noscript><div><img src="https://mc.yandex.ru/watch/96308291" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-				<!-- /Yandex.Metrika counter -->
+				{/* <!-- /Yandex.Metrika counter --> */}
 			</Head>
 			<body className="body">{children}</body>
 		</html>
