@@ -58,6 +58,7 @@
 	&__subtitle {
 		width: calc(100% - 20px);
 		font: var(--font-title-description);
+		letter-spacing: -0.48px;
 
 		@media screen and (max-width: 1024px) {
 			width: 100%;
