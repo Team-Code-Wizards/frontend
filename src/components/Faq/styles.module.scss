@@ -3,10 +3,12 @@
   max-width: var(--block-max-width);
   display: flex;
   justify-content: space-between;
-  // padding-bottom: 50px;
-  // padding-top: 50px;
-  padding: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  //padding: 50px;
   gap: 20px;
+  width: 80%;
+  max-width: 1024px;
 
   &__title {
     width: 32.9%;
@@ -15,7 +17,6 @@
   }
 
   &__list {
-
     // width: 738px;
     display: flex;
     flex-direction: column;
@@ -37,11 +38,15 @@
   }
 }
 
+@media screen and (max-width: 950px) {
+  .faq {
+    width: 92%;
+  }
+}
+
 @media screen and (max-width: 834px) {
   .faq {
-    max-width: 768px;
     justify-content: center;
-    // перенесли 
     flex-direction: column;
 
     &__title {
