@@ -1,0 +1,9 @@
+.github/
+.git/
+.dockerignore
+.gitignore
+Dockerfile
+README.md
+node_modules/
+npm-debug.log
+.husky/

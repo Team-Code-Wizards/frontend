@@ -1,0 +1,12 @@
+.modal-background {
+  position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	background-color: #0706067f;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: 100vh;
+	backdrop-filter: blur(7.5px);
+}

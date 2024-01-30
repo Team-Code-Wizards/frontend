@@ -1,0 +1,72 @@
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	width: 100%;
+	position: relative;
+
+	textarea {
+		resize: none;
+		padding: 20px;
+		height: 161px;
+		overflow: hidden;
+	}
+
+	&__notice {
+		flex-basis: 100%;
+	}
+
+	&__button {
+		margin-top: 24px;
+		width: 100%;
+		padding: 14px 25px;
+		border-radius: 5px;
+		border: none;
+		cursor: pointer;
+		color: var(--color-text);
+		background-image: var(--color-gradient-button);
+		background-size: 400%;
+		background-position: 99%;
+		font: var(--font-button);
+
+		transition: 0.3s background-position ease-in-out;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background-position: 50%;
+		}
+
+		&:active {
+			transition: 0.1s background-position ease-in-out;
+			background-position: 10%;
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.form-box {
+		width: 45.78%;
+	}
+
+	.form {
+		&__button {
+			margin-top: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 834px) {
+	.form-box {
+		width: 48.26%;
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+	.form-box {
+		width: 100%;
+	}
+}

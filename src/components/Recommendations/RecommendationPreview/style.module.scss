@@ -1,0 +1,26 @@
+.card-image {
+	&_center {
+		width: 712px;
+		height: 423px;
+		border-radius: 10px;
+		border: 2px solid var(--color-lilac);
+	}
+
+	&_left,
+	&_right {
+		width: 262.5px;
+		height: 314px;
+		background: rgba(0, 0, 0, 0.5);
+		border: none;
+		position: relative;
+		top: 2px;
+	}
+
+	&_left {
+		border-radius: 0 10px 10px 0;
+	}
+
+	&_right {
+		border-radius: 10px 0 0 10px;
+	}
+}

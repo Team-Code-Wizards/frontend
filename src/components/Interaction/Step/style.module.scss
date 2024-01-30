@@ -1,0 +1,138 @@
+.step {
+	max-width: 32%;
+	margin-block-end: 20px;
+	padding: 28px 27px 12px;
+	border-radius: 20px;
+	outline: 1px solid #ffffff;
+	background-color: var(--color-bg-black);
+
+	&__number {
+		width: 76px;
+		max-height: 35px;
+		padding: 6px 8px;
+		border-radius: 41px;
+		text-align: center;
+		font: var(--font-title-description);
+		color: #1b1c33;
+		background-color: var(--color-lilac);
+	}
+
+	&__title {
+		margin-block-start: 5px;
+		margin-block-end: 32px;
+		font: var(--font-title-description);
+		letter-spacing: var(--font-description-letter);
+	}
+
+	&__description {
+		margin-block-end: 33px;
+		font: var(--font-description-main);
+
+		&_design {
+			margin-bottom: 10px;
+		}
+
+		&_approach {
+			margin-bottom: 12px;
+		}
+
+		&_testing {
+			margin-bottom: 26px;
+		}
+
+		&_support {
+			margin-bottom: 45px;
+		}
+	}
+
+	&__image {
+		text-align: center;
+	}
+
+	img {
+		height: 100%;
+		max-width: 100%;
+	}
+
+	&:nth-of-type(3n) {
+		margin-inline-end: 0;
+	}
+
+	&:nth-of-type(n + 4) {
+		margin-block-end: 0;
+	}
+
+	@media screen and (max-width: 1280px) {
+		padding: 19px 18px 7px;
+		margin-block-end: 23px;
+
+		&__title {
+			margin-block-start: 5px;
+			margin-block-end: 30px;
+		}
+
+		&__description {
+			letter-spacing: normal;
+			margin-block-end: 40px;
+			width: 99%;
+
+			&_design {
+				margin-bottom: 19px;
+			}
+
+			&_approach {
+				margin-bottom: 19px;
+			}
+
+			&_communication {
+				margin-bottom: 20px;
+			}
+
+			&_testing {
+				margin-bottom: 15px;
+			}
+
+			&_support {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 835px) {
+		max-width: 48.5%;
+		padding: 19px 17px 34px;
+
+		&__title {
+			margin-block-end: 33px;
+		}
+
+		&__description {
+			margin-block-end: 20px;
+
+			&_communication {
+				margin-bottom: 36px;
+			}
+		}
+		
+		&:nth-child(n + 3) {
+			display: none;
+		}
+	}
+
+	
+	@media screen and (max-width: 660px) {
+		max-width: 100%;
+
+		&:nth-child(n + 2) {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		padding: 18px 20px 34px;
+
+		&__description {
+			margin-block-end: 29px;
+		}
+	}
+}
