@@ -11,7 +11,8 @@ export default function PortfolioCard({
 	link,
 }: IPortfolioCard) {
 	return (
-		<div className={styles['card__container']}>
+		// <div className={styles['card__container']}>
+		<>
 			<div className={styles['card__image']}>
 				<Image
 					src={image}
@@ -29,14 +30,6 @@ export default function PortfolioCard({
 					<ArrowIcon />
 				</a>
 			</div>
-			{/* <a
-				className={styles['card__link']}
-				href={link}
-				target="blank"
-				rel="noreferrer"
-			>
-				<ArrowIcon />
-			</a> */}
 			<a
 				className={styles['card__title']}
 				href={link}
@@ -45,6 +38,7 @@ export default function PortfolioCard({
 			>
 				{title}
 			</a>
-		</div>
+		</>
+		// </div>
 	);
 }
