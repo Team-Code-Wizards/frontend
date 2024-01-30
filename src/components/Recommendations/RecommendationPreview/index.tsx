@@ -30,10 +30,12 @@ export default function RecommendationPreview({
 			</div>
 		</div>
 	) : (
-		<Image
-			src={image}
-			alt="video-preview"
-			className={styles[`card-image${className}`]}
-		/>
+		<div className={styles['card-container']}>
+			<Image
+				src={image}
+				alt="video-preview"
+				className={styles[`card-image${className}`]}
+			/>
+		</div>
 	);
 }

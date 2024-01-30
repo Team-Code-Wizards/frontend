@@ -1,6 +1,6 @@
 .recommendations {
 	width: 100%;
-	padding: 80px;
+	padding: 80px 0;
 
 	&__container {
 		background-image: url(/images/recommendations/background.png);
@@ -8,7 +8,8 @@
 		background-size: cover;
 		position: relative;
 		overflow: hidden;
-		max-width: 1280px;
+		width: 90%;
+		max-width: var(--block-max-width);
 		padding: 20px 0;
 		margin: 0 auto;
 		border-radius: 20px;
@@ -18,7 +19,7 @@
 		align-items: center;
 		gap: 42px;
 		padding-bottom: 45px;
-		width: 100%;
+		
 	}
 
 	&__header {
@@ -62,8 +63,8 @@
 .card {
 	&__container {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: center;
+		align-items: flex-start;
 		gap: 20px;
 		width: 135%;
 
@@ -73,17 +74,9 @@
 	}
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
+@media screen and (max-width: 1280px) and (max-width: 1439px) {
 	.recommendations {
-		padding: 135px;
-
-		&__container {
-			max-width: 1280px;
-		}
-
-		&__header {
-			padding: 0 20px;
-		}
+		padding: 135px 0;
 	}
 
 	.card {
@@ -93,23 +86,31 @@
 	}
 }
 
-@media screen and (min-width: 769px) and (max-width: 1280px) {
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
 	.recommendations {
 		&__container {
-			width: 100%;
-			max-width: 1280px;
+			max-width: var(--width-1280-1025);
+			padding: 20px 0 83px;
 		}
 
 	}
 }
 
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+	.recommendations {
+		&__container {
+			max-width: var(--width-1024-769);
+		}
+	}
+}
+
 @media screen and (max-width: 835px) {
 	.recommendations {
-		padding: 0;
+		padding: 80px 0;
 
 		&__container {
 			width: 92%;
-			max-width: 1280px;
+			padding-bottom: 52px;
 		}
 
 		&__header {
@@ -118,13 +119,20 @@
 	}
 }
 
+@media screen and (min-width: 280px) and (max-width: 768px) {
+	.recommendations {
+		&__container {
+			max-width: var(--width-768-280);
+		}
+	}
+}
+
 @media screen and (max-width: 650px) {
 	.recommendations {
 		&__container {
 			width: 82%;
-			max-width: 1280px;
 			margin: 60px auto;
-			padding: 57px 0 95px;
+			padding: 57px 0 79px;
 		}
 		&__arrows {
 			margin-left: 0;
