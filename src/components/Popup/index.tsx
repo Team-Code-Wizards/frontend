@@ -16,26 +16,28 @@ export default function Popup({ isSuccess }: { isSuccess: boolean }) {
 		<ModalBackground>
 			<div className={styles.popup}>
 				<div className={styles['popup__background']}>
-					<Image
-						src={isSuccess ? successImage : failureImage}
-						alt="icon"
-						className={className}
-						width={75}
-					/>
 					<button
 						className={styles['popup__icon_close']}
 						aria-label="закрыть"
 						type="button"
 					></button>
-					<p
-						className={
-							isSuccess
-								? styles['popup__message_success']
-								: styles['popup__message_failure']
-						}
-					>
-						{isSuccess ? 'Заявка успешно отправлена!' : 'Ошибка отправки!'}
-					</p>
+					<div className={styles['popup__info']}>
+						<Image
+							src={isSuccess ? successImage : failureImage}
+							alt="icon"
+							className={className}
+							width={75}
+						/>
+						<p
+							className={
+								isSuccess
+									? styles['popup__message_success']
+									: styles['popup__message_failure']
+							}
+						>
+							{isSuccess ? 'Заявка успешно отправлена!' : 'Ошибка отправки!'}
+						</p>
+					</div>
 				</div>
 			</div>
 		</ModalBackground>

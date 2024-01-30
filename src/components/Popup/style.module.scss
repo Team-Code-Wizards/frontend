@@ -1,34 +1,48 @@
 .popup {
   &__background {
+    display: flex;
     position: relative;
+    align-items: center;
+    justify-content: center;
     background-image: url(/images/popup/background.png);
+    //background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 582px;
-    height: 449px;
+    width: 80vw;
+    max-width: 568px;
+    height: 70vh;
+    max-height: 422px;
     border-radius: 20px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
 
   &__icon {
     &_success,
     &_failure {
-      position: absolute;
+      //position: relative;
       background: rgba(255, 255, 255, 0.1);
-      margin-top: 175px;
       padding: 10px;
+      //top: 50%;
+      //left: 50%;
     }
     &_success {
-      margin-left: 265px;
       border-radius: 200px;
     }
     &_failure {
-      margin-left: 260px;
       border-radius: 100px;
     }
     &_close {
       position: absolute;
-      margin-left: 528px;
-      margin-top: 20px;
+      top: 20px;
+      right: 20px;
       background: rgba(135, 146, 252, 0.5);
       border-radius: 200px;
       border: none;
@@ -45,64 +59,73 @@
     font-family: var(--involve-font);
     font-size: var(--text-base);
     font-weight: 400;
-    position: absolute;
+    //position: absolute;
     color: var(--color-text);
-    margin-top: 260px;
+    text-align: center;
+    width: 100%;
+    //margin-top: 260px;
   }
 
   &__message_failure {
-    margin-left: 220px;
+    //margin-left: 220px;
   }
 
   &__message_success {
-    margin-left: 175px;
+    //margin-left: 175px;
   }
 }
 
-@media screen and (max-width: 390px) {
+/*@media screen and (min-width: 391) and (max-width: 500px) {
+  .popup {
+    &__info {
+      flex-basis: 60%;
+      gap: 10px;
+    }
+  }
+} */
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
   .popup {
     &__background {
-      position: relative;
       background-image: url(/images/popup/small-popup-background.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 320px;
-      height: 242px;
+      height: 40vh;
     }
+  }
+}
 
-    &__icon {
-      &_success,
-      &_failure {
-        margin-top: 58px;
-      }
+/*&__icon {
       &_success {
-        margin-left: 124px;
+        margin-top: 18%;
+        margin-left: 39%;
       }
       &_failure {
-        margin-left: 126px;
+        margin-top: 21%;
+        margin-left: 37%;
       }
       &_close {
         position: absolute;
-        margin-left: 265px;
-        margin-top: 20px;
+        margin-top: 18%;
+        margin-left: 83%;
+        margin-top: 6%;
       }
     }
 
     &__message_success,
     &__message_failure {
       font-weight: 600;
-      margin-top: 146px;
       line-height: 120%;
     }
 
     &__message_failure {
-      margin-left: 65px;
+      margin-top: 48%;
+      margin-left: 20%;
     }
 
     &__message_success {
-      width: 173px;
-      margin-left: 75px;
+      margin-top: 45%;
+      margin-left: 22%;
+      width: 174px;
       text-align: center;
     }
   }
-}
+} */
