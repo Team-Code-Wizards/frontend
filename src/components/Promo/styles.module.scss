@@ -3,7 +3,8 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	color: var(--color-text);
-	width: 100%;
+	//width: 100%;
+	max-width: 1440px;
 	//*{outline: 2px solid tomato}
 
 	&__container {
@@ -114,7 +115,7 @@
 
 @media screen and (max-width: 835px){
 	.promo {
-		background-image: url('../../../public/images/promo/promo-bg-834-new.png');
+		background-image: url('../../../public/images/promo/bggg-834.png');
 
 		&__container {
 			width: 92.1%;
@@ -160,7 +161,7 @@
 
 @media screen and (max-width: 390px){
 	.promo {
-		background-image: url('../../../public/images/promo/promo-bg390.png');
+		background-image: url('../../../public/images/promo/bgggg-390.png');
 
 		&__container {
 			width: 82%;
