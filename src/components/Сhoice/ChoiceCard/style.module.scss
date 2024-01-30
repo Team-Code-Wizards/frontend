@@ -7,7 +7,7 @@
 		display: inline-flex;
 		align-items: center;
 
-		> svg {
+		>svg {
 			margin-right: 7px;
 			min-width: 24px;
 		}
@@ -22,6 +22,7 @@
 		color: var(--color-text);
 		font: var(--font-title-description);
 		padding-top: 3px;
+		letter-spacing: -0.48px;
 	}
 
 	&__description {
@@ -180,7 +181,7 @@
 		}
 
 		&__column {
-			> svg {
+			>svg {
 				margin-right: 5px;
 			}
 		}
@@ -271,7 +272,7 @@
 			padding: 28% 4.8% 23%;
 
 			&__column {
-				> svg {
+				>svg {
 					margin-right: 10px;
 				}
 			}
@@ -283,6 +284,7 @@
 
 		&_attraction {
 			padding: 8%;
+
 			&__wrapper {
 				row-gap: 14px;
 			}
@@ -291,7 +293,7 @@
 				align-items: normal;
 				padding: 1% 2% 0;
 
-				> svg {
+				>svg {
 					margin-right: 8px;
 					margin-top: 12px;
 				}
@@ -310,7 +312,7 @@
 				max-width: 78%;
 				padding: 0;
 
-				> svg {
+				>svg {
 					min-width: 24px;
 				}
 			}
@@ -391,9 +393,10 @@
 	.choice-card {
 		&_presence {
 			grid-area: 1 / 1 / 1 / 1;
-			padding: 20% 5% 5.5%;
+			padding: 10% 5% 5.5%;
 			align-items: normal;
-			background-size: cover, 15%;
+			background-size: cover, 10%;
+
 			&__wrapper {
 				max-width: 92%;
 				row-gap: 12px;
@@ -416,6 +419,7 @@
 			background-image: url(/images/choice/design-bg-390.svg);
 			background-size: 34%;
 			background-position: right 0 bottom 0;
+
 			&__wrapper {
 				row-gap: 18px;
 			}
@@ -467,6 +471,7 @@
 			grid-area: 7 / 1 / 7 / 1;
 			padding: 4%;
 			padding-bottom: 28%;
+
 			&__wrapper {
 				row-gap: 18px;
 			}
@@ -475,6 +480,17 @@
 				max-width: 90%;
 				padding-right: 0;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.choice-card {
+		&_presence {
+			grid-area: 1 / 1 / 1 / 1;
+			padding: 20% 5% 5.5%;
+			align-items: normal;
+			background-size: cover, 15%;
 		}
 	}
 }
