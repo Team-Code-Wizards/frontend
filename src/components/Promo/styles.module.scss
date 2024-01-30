@@ -172,11 +172,12 @@
 		}
 
 		&__title {
-			line-height: 122%;
+			line-height: 120%;
 			width: 100%;
 			padding: 0;
 			font-family: var(--involve-font);
 			font-size: var(--text-base);
+			letter-spacing: -0.48px;
 		}
 
 		&__link-list {
