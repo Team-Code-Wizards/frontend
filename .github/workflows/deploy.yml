@@ -6,8 +6,6 @@ on:
       - main
       - develop
       - feature/infra
-
-
 jobs:
   build_and_push_to_docker_hub:
     name: docker

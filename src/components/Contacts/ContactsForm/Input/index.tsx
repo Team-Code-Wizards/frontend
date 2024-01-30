@@ -2,9 +2,10 @@ import { useState } from 'react';
 
 import ClearInputButton from './ClearInputButton';
 import IInput from './interface';
-import style from './style.module.scss';
+import styles from './styles.module.scss';
 
 export default function Input({
+	id,
 	className,
 	type,
 	name,
@@ -13,21 +14,23 @@ export default function Input({
 	accept,
 	inputType,
 	labelText,
-	labelClassName,
+	labelStyleKey,
+	wrapperStyleKey,
+	clearInputStyleKey,
 }: IInput) {
 	const [isActive, setIsActive] = useState(false);
 
 	if (inputType === 'textarea')
 		return (
-			<span className={style['textarea-box']}>
+			<span className={wrapperStyleKey && styles[wrapperStyleKey]}>
 				<textarea
-					className={className}
+					className={className && styles[className]}
 					name={name}
 					placeholder={placeholder}
 					onFocus={() => setIsActive(true)}
 					onBlur={() => setIsActive(false)}
 				/>
-				<ClearInputButton styleKey="textarea-clear-btn" isHidden={!isActive} />
+				<ClearInputButton styleKey={clearInputStyleKey} isHidden={!isActive} />
 			</span>
 		);
 
@@ -35,30 +38,39 @@ export default function Input({
 		return (
 			<>
 				<input
-					className={className}
+					className={className && styles[className]}
 					type={type}
 					id="file"
 					name={name}
 					accept={accept}
 				/>
-				<label className={labelClassName} htmlFor="file">
+				<label
+					className={labelStyleKey && styles[labelStyleKey]}
+					htmlFor="file"
+				>
 					{labelText}
 				</label>
 			</>
 		);
 
 	return (
-		<span className={style['input-box']}>
+		<span className={wrapperStyleKey && styles[wrapperStyleKey]}>
+			{labelText && (
+				<label className={labelStyleKey && styles[labelStyleKey]} htmlFor={id}>
+					{labelText}
+				</label>
+			)}
 			<input
 				type={type}
-				className={className}
+				className={className && styles[className]}
 				name={name}
+				id={id}
 				placeholder={placeholder}
 				value={value}
 				onFocus={() => setIsActive(true)}
 				onBlur={() => setIsActive(false)}
 			/>
-			<ClearInputButton styleKey="input-clear-btn" isHidden={!isActive} />
+			<ClearInputButton styleKey={clearInputStyleKey} isHidden={!isActive} />
 		</span>
 	);
 }

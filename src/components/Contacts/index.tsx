@@ -2,13 +2,12 @@
 
 import { FormEvent } from 'react';
 
-import ArrowIcon from '@/images/icons/ArrowIcon';
-import TelegramIcon from '@/images/icons/TelegramIcon';
-import ViberIcon from '@/images/icons/ViberIcon';
-import WhatsappIcon from '@/images/icons/WhatsappIcon';
-
+import ArrowIcon from '../../../public/images/icons/ArrowIcon';
+import TelegramIcon from '../../../public/images/icons/TelegramIcon';
+import ViberIcon from '../../../public/images/icons/ViberIcon';
+import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
 import ContactsForm from './ContactsForm';
-import styles from './style.module.scss';
+import styles from './styles.module.scss';
 
 //TODO добавить корректные ссылки для мессенджеров
 
@@ -18,14 +17,19 @@ export default function Contacts() {
 	};
 
 	return (
-		<div className={styles['contacts']}>
+		<section id="contacts" className={styles['contacts']}>
 			<h2 className={styles['contacts__title']}>Контакты</h2>
 			<div className={styles['contacts__body']}>
 				<ul className={styles['link-group']}>
 					<li className={styles['link-box']}>
-						<a className={styles['link']} href="mailto:email@code-wizards.team">
+						<a
+							className={styles['link']}
+							href="mailto:email@code-wizards.team"
+							type="email"
+						>
 							<p className={styles['link__item_word-space']}>
-								e-mail email@code-wizards.team
+								<span className={styles['link__item_email']}>E-mail</span>{' '}
+								<span>email@code-wizards.team</span>
 							</p>
 							<span className={styles['link__item']}>
 								<ArrowIcon />
@@ -44,32 +48,32 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="#">
+						<a className={styles['link']} href="#">
 							<span className={styles['link__item']}>
-								<ViberIcon />
+								<ViberIcon size={[26, 26]} />
 							</span>
-							<span className={styles['link__item_no-margin']}>viber</span>
+							<span className={styles['link__item_no-margin']}>Viber</span>
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="#">
+						<a className={styles['link']} href="#">
 							<span className={styles['link__item']}>
-								<TelegramIcon />
+								<TelegramIcon size={[26, 25]} />
 							</span>
-							<span className={styles['link__item_no-margin']}>telegram</span>
+							<span className={styles['link__item_no-margin']}>Telegram</span>
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link_messenger']} href="#">
+						<a className={styles['link']} href="#">
 							<span className={styles['link__item']}>
-								<WhatsappIcon />
+								<WhatsappIcon size={[25, 24]} />
 							</span>
-							<span className={styles['link__item_no-margin']}>whatsapp</span>
+							<span className={styles['link__item_no-margin']}>Whatsapp</span>
 						</a>
 					</li>
 				</ul>
 				<ContactsForm onSubmit={sendingDataForFeedback} />
 			</div>
-		</div>
+		</section>
 	);
 }

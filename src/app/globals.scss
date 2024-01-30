@@ -12,35 +12,31 @@
 }
 
 @font-face {
-	font-family: 'Cygre';
+	font-family: 'Involve';
 	src:
-		url('../fonts/Cygre.woff2') format('woff2'),
-		url('../fonts/Cygre.woff') format('woff'),
-		url('../fonts/Cygre.ttf') format('ttf'),
-		url('../fonts/Cygre-Bold.woff2') format('woff2'),
-		url('../fonts/Cygre-Bold.woff') format('woff'),
-		url('../fonts/Cygre-Bold.ttf') format('ttf');
+		url('../fonts/Involve-Medium.woff') format('woff'),
+		url('../fonts/Involve-Medium.woff2') format('woff2');
 	font-style: normal;
-}
-
-* {
-	box-sizing: border-box;
 }
 
 :root {
 	--max-width: 1440px;
-	--block-max-width: 1280px;
-	
+	--block-max-width: clamp(1024px, 90%, 1280px);
+	--width-1280-1024: clamp(1024px, 80%, 1280px);
+	--width-1024-768: clamp(768px, 80%, 1024px);
+	--width-768-280: clamp(320px, 80%, 768px);
+
 	//  === Fonts ===
 	--rg-font: 'RG-StandardSemibold';
-	--cygre-font: 'Cygre';
+	--involve-font: 'Involve';
 
-	// === Font Sizes ===
-	--text-xs: 14px;
-	--text-sm: 16px;
-	--text-base: 20px;
-	--text-lg: 32px;
-	--text-xl: 48px;
+  // === Font Sizes ===
+  --text-xxs: 10px;
+  --text-xs: 14px;
+  --text-sm: 16px;
+  --text-base: 20px;
+  --text-lg: 32px;
+  --text-xl: 48px;
 
 	--line-height: 120%;
 	--line-height-big: 130%;
@@ -52,23 +48,29 @@
 	--font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
 		sans-serif;
 	--font-title-description: 600 var(--text-base) / var(--line-height)
-			var(--rg-font),
+			var(--involve-font),
 		sans-serif;
 
-	// === Descriptions ===
-	--font-button: 600 var(--text-base) var(--cygre-font), sans-serif;
-	--font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-	--font-description-main: 400 var(--text-sm) / var(--line-height-big) var(--cygre-font), sans-serif;
+  // === Descriptions ===
+  --font-button: 600 var(--text-base) var(--involve-font), sans-serif;
+  --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
+  --font-description-main: 500 var(--text-sm) / var(--line-height-big) var(--involve-font),
+    sans-serif;
+  --font-stage-btn: 700 var(--text-xs) var(--involve-font), sans-serif;
+  --font-stage-btn-sm: 700 var(--text-xxs) var(--involve-font), sans-serif;
 
 	// Colors
-	--color-bg-black: #070606;
+	--color-bg-black: #000000;
 	--color-gray-bg: #f2f2f2;
 	--color-bg-white: #ffffff;
 	--color-bg-ivory: #ffffff1a;
 
 	--color-lilac: #8792fc;
+	--color-gray: #ffffff80;
 	--color-purple: #5b4dab;
+	--color-dark-purple: #1b1c33;
 	--color-pink: #9b54d4;
+
 	--color-blue: #263694;
 	--color-green: #27ae60;
 	--color-red: #eb5757;
@@ -99,8 +101,8 @@
 }
 
 .body {
-	font-family: var(--cygre-font);
-	background-color: var(--color-bg-black);
+  font-family: var(--involve-font);
+  background-color: var(--color-bg-black);
 }
 
 * {
@@ -109,3 +111,4 @@
 	margin: 0;
 	list-style: none;
 }
+

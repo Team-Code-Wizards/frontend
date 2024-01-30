@@ -1,5 +1,4 @@
-import IconStar from '@/images/choice';
-
+import IconStar from '../../../../public/images/choice';
 import { IChoiceItemProps } from './interface';
 import styles from './style.module.scss';
 
@@ -21,7 +20,7 @@ export default function ChoiceCard({ item }: IChoiceItemProps) {
 							styles[`choice-card_${item.modifier}__column`]
 						}`}
 					>
-						{item.iconFill && <IconStar id={item.id} fill={item.iconFill} />}
+						{item.iconFill && <IconStar fill={item.iconFill} />}
 						<h4
 							className={`${styles['choice-card__title']} ${
 								styles[`choice-card_${item.modifier}__title`]

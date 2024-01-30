@@ -1,0 +1,59 @@
+.guarantee-card {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 21px;
+	width: calc(50% - 21px / 2);
+	min-height: 147px;
+	padding: 15px 18px 12px 20px;
+	border-radius: 10px;
+	border: 1px solid var(--color-bg-white);
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(7.5px);
+
+	&__image {
+		width: 102px;
+		height: 102px;
+	}
+
+	&__title {
+		margin: 0 0 10px 0;
+		color: var(--color-lilac);
+    letter-spacing: 0.06rem;
+	}
+
+	&__description {
+		margin: 0;
+		color: var(--color-text);
+		font: var(--font-description-main);
+	}
+}
+
+@media screen and (max-width: 934px) {
+	.guarantee-card {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 22px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+		.guarantee-card {
+			width: 100%;
+			align-items: center;
+			text-align: center;
+			gap: 10px;
+			// марджин убрать, когда будет слайдер
+			margin-bottom: 152px;
+
+			&:nth-of-type(n+2){
+				display: none;
+			}
+
+	  &__image {
+		  width: 75px;
+		  height: 75px;
+	  }
+		}
+}

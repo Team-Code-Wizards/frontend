@@ -1,6 +1,6 @@
 .popup-background {
   position: relative;
-  background-image: url(../../images/popup/background.png);
+  background-image: url(/images/popup/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 582px;
@@ -11,10 +11,10 @@
 .popup-message_success,
 .popup-message_failure {
   font-family: var(--rg-font);
-  font-size: 20px;
+  font-size: var(--text-base);
   font-weight: 400;
   position: absolute;
-  color: white;
+  color: var(--color-text);
   margin-top: 260px;
 }
 .popup-message_failure {
@@ -49,7 +49,7 @@
     border-radius: 200px;
     border: none;
     padding: 20px;
-    background-image: url("../../images/popup/close.svg");
+    background-image: url("/images/popup/close.svg");
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
