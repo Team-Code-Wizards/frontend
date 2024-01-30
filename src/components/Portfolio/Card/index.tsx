@@ -20,15 +20,23 @@ export default function PortfolioCard({
 					className={styles['card__bg']}
 				/>
 				<span className={styles['card__tag']}>{tag}</span>
+				<a
+					className={styles['card__link']}
+					href={link}
+					target="blank"
+					rel="noreferrer"
+				>
+					<ArrowIcon />
+				</a>
 			</div>
-			<a
+			{/* <a
 				className={styles['card__link']}
 				href={link}
 				target="blank"
 				rel="noreferrer"
 			>
 				<ArrowIcon />
-			</a>
+			</a> */}
 			<a
 				className={styles['card__title']}
 				href={link}
