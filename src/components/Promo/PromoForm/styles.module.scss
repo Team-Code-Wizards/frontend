@@ -12,7 +12,7 @@
 	&__title {
 		margin-bottom: 10px;
 		line-height: 22px;
-		font-size: 20px;
+		font-size: var(--text-base);
 	}
 
 	&__message {
@@ -87,7 +87,6 @@
 			line-height: 32%;
 		}
 	}
-
 }
 
 @media screen and (max-width: 834px) {
@@ -101,13 +100,10 @@
 		}
 
 		&__button {
-			width: 99%;
 			line-height: 39%;
 			padding: 24px 25px;
 		}
 	}
-
-
 }
 
 @media screen and (max-width: 685px) {
@@ -138,12 +134,12 @@
 		margin-top: 0;
 
 		&__title {
-			line-height: 120%;
+			line-height: var(--line-height);
 			margin-bottom: 0;
 		}
 
 		&__message {
-			line-height: 120%;
+			line-height: var(--line-height);
 		}
 
 		&__button {

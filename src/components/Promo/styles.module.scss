@@ -1,11 +1,9 @@
 .promo {
-	background-image: url('../../../public/images/promo/new-bg-1440.png');
+	background-image: url('../../../public/images/promo/promo-bg-1440.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	color: var(--color-text);
-	//width: 100%;
-	max-width: 1440px;
-	//*{outline: 2px solid tomato}
+	max-width: var(--max-width);
 
 	&__container {
 		padding: 126px 0 118px 0;
@@ -47,8 +45,8 @@
 
 	&__title {
 		font-family: var(--rg-font);
-		font-size: 32px;
 		font-weight: 600;
+		font-size: var(--text-lg);
 		line-height: 122%;
 		margin-top: 2px;
 	}
@@ -79,12 +77,17 @@
 		padding: 15px;
 	}
 }
+@media screen and (max-width: 1386px) {
+	.promo {
+		&__main {
+			flex-basis: 45%;
+		}
+	}
+}
+
 
 @media screen and (max-width: 1280px) {
 	.promo {
-		//background-image: url('../../../public/images/promo/promo-bg1280.png');
-		background-image: url('../../../public/images/promo/promo-bg.png');
-
 		&__container {
 			width: var(--width-1280-1024);
 			padding: 126px 1px 118px 0;
@@ -113,9 +116,9 @@
 	}
 }
 
-@media screen and (max-width: 835px){
+@media screen and (max-width: 915px){
 	.promo {
-		background-image: url('../../../public/images/promo/bggg-834.png');
+		background-image: url('../../../public/images/promo/promo-bg-834.png');
 
 		&__container {
 			width: 92.1%;
@@ -148,6 +151,14 @@
 	}
 }
 
+@media screen and (max-width: 715px) {
+	.promo {
+		&__title {
+			padding: 0 115px;
+		}
+	}
+}
+
 @media screen and (max-width: 685px) {
 	.promo {
 		&__container {
@@ -161,7 +172,7 @@
 
 @media screen and (max-width: 390px){
 	.promo {
-		background-image: url('../../../public/images/promo/bgggg-390.png');
+		background-image: url('../../../public/images/promo/promo-bg-390.png');
 
 		&__container {
 			width: 82%;
@@ -173,7 +184,7 @@
 		}
 
 		&__title {
-			line-height: 120%;
+			line-height: var(--line-height);
 			width: 100%;
 			padding: 0;
 			font-family: var(--involve-font);
