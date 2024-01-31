@@ -42,29 +42,30 @@ export default function Portfolio() {
 
 			<Swiper
 				spaceBetween={20}
-				breakpoints={{
-					300: {
-						slidesPerView: 1.1,
-					},
-					450: {
-						slidesPerView: 1.4,
-					},
-					570: {
-						slidesPerView: 1.9,
-					},
-					834: {
-						slidesPerView: 2.08,
-					},
-					900: {
-						slidesPerView: 2.7,
-					},
-					1280: {
-						slidesPerView: 3.37,
-					},
-					1440: {
-						slidesPerView: 3.18,
-					},
-				}}
+				// breakpoints={{
+				// 	300: {
+				// 		slidesPerView: 1.1,
+				// 	},
+				// 	450: {
+				// 		slidesPerView: 1.4,
+				// 	},
+				// 	570: {
+				// 		slidesPerView: 2,
+				// 	},
+				// 	834: {
+				// 		slidesPerView: 2.08,
+				// 	},
+				// 	900: {
+				// 		slidesPerView: 2.7,
+				// 	},
+				// 	1280: {
+				// 		slidesPerView: 3.37,
+				// 	},
+				// 	1440: {
+				// 		slidesPerView: 3.18,
+				// 	},
+				// }}
+				slidesPerView="auto"
 				modules={[Navigation, Pagination]}
 				navigation={{
 					nextEl: '#swiper-forward',
@@ -75,7 +76,11 @@ export default function Portfolio() {
 				className={styles['portfolio__card-box']}
 			>
 				{portfolioCards.map((el) => (
-					<SwiperSlide className={styles['portfolio__card-box']} key={el.title}>
+					<SwiperSlide
+						className={styles['portfolio__card-box_item']}
+						style={{ width: 'fit-content' }}
+						key={el.title}
+					>
 						<PortfolioCard key={uuidv4()} {...el} />
 					</SwiperSlide>
 				))}

@@ -77,10 +77,9 @@
 	.card {
 		&__link {
 			bottom: 1.5%;
-			right: 2.5%;
+			right: 0;
 			@media screen and (max-width: 833px) {
 				bottom: 2.5%;
-				right: 0;
 			}
 		}
 	}
