@@ -65,7 +65,8 @@
   .popup {
     &__background {
       background-image: url(/images/popup/small-popup-background.png);
-      height: 40vh;
+      height: 17vh;
+      min-height: 242px;
     }
 
     &__info {
