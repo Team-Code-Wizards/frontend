@@ -1,4 +1,4 @@
-import PlusIcon from '../../../public/images/icons/Plus';
+import PlusIcon from '../../../../public/images/icons/Plus';
 import { IFaqCardProps } from './interface';
 import styles from './styles.module.scss';
 

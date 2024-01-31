@@ -17,7 +17,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
     text-align: start;
   }
 }
@@ -30,14 +30,14 @@
   .faq {
     width: 80%;
     max-width: 1024px;
-    gap: 0px;
+    gap:10px;
 
     &__title {
       width: 54%;
     }
     &__list {
       width: 73%;
-      gap: 23px;
+      gap: 27px;
     }
   }
 }
@@ -59,7 +59,7 @@
     max-width: 768px;
     justify-content: center;
     flex-direction: column;
-    gap: 60px;
+    gap: 42px;
     &__title {
       width: 50%;
     }
@@ -80,7 +80,7 @@
     }
 
     &__list {
-      gap: 30px;
+      gap: 50px;
     }
   }
 }

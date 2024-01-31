@@ -1,7 +1,7 @@
 import { FaqData } from '@/constants/Faq';
 import { v4 as uuidv4 } from 'uuid';
 
-import FaqCard from '../FaqCard';
+import FaqCard from './FaqCard';
 import styles from './styles.module.scss';
 
 function Faq() {
