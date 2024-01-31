@@ -154,6 +154,42 @@
     }
 }
 
+@media screen and (max-width: 1040px) {
+    .stage {
+       &__icon-wrapper {
+            width: 51%;
+            height: 75%;
+            position: absolute;
+            top: 15%;
+            left: 43%;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .stage {
+        &__icon-wrapper {
+            width: 43%;
+            height: 68%;
+            position: absolute;
+            top: 21%;
+            left: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 872px) {
+    .stage {
+        &__icon-wrapper {
+            width: 38%;
+            height: 55%;
+            position: absolute;
+            top: 24%;
+            left: 38%;
+        }
+    }
+}
+
 @media screen and (max-width: 834px) {
     .stage {
         max-width: 100%;
@@ -177,6 +213,18 @@
             position: absolute;
             top: 30%;
             left: 55%;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .stage {
+        &__icon-wrapper {
+            width: 38%;
+            height: 50%;
+            position: absolute;
+            top: 32%;
+            left: 47%;
         }
     }
 }
