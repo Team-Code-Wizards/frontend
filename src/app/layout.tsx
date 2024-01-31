@@ -23,9 +23,11 @@ export default function RootLayout({
 		<html lang="ru">
 			<Head>
 				<link rel="icon" href="/favicon.ico" sizes="any" />
-				<YandexMetrica />
 			</Head>
-			<body className="body">{children}</body>
+			<body className="body">
+				<YandexMetrica />
+				{children}
+			</body>
 		</html>
 	);
 }
