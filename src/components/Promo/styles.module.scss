@@ -166,11 +166,12 @@
 		}
 		&__title {
 			padding: 0 10px;
+			font-size: 28px;
 		}
 	}
 }
 
-@media screen and (max-width: 390px){
+@media screen and (max-width: 395px){
 	.promo {
 		background-image: url('../../../public/images/promo/promo-bg-390.png');
 
