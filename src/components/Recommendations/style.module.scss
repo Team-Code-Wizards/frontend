@@ -1,28 +1,36 @@
 .recommendations {
 	width: 100%;
-	padding: 80px;
+	padding: 80px 0;
 
 	&__container {
 		background-image: url(/images/recommendations/background.png);
 		background-repeat: no-repeat;
 		background-size: cover;
+		position: relative;
+		overflow: hidden;
+		width: 90%;
 		max-width: var(--block-max-width);
-		min-height: 659px;
 		padding: 20px 0;
 		margin: 0 auto;
 		border-radius: 20px;
 		color: var(--color-text);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 42px;
+		padding-bottom: 45px;
+		
 	}
 
 	&__header {
 		display: flex;
 		align-items: baseline;
-		margin-bottom: 41px;
+		align-self: flex-start;
+		padding: 0 32px;
 	}
 
 	&__title {
 		font: var(--font-block-title);
-		margin-left: 32px;
 	}
 
 	&__arrows {
@@ -31,6 +39,7 @@
 		gap: 10px;
 	}
 }
+
 .arrow-btn {
 	background: none;
 	border: 1px solid var(--color-text);
@@ -54,38 +63,100 @@
 .card {
 	&__container {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: center;
+		align-items: flex-start;
 		gap: 20px;
-		width: 100%;
+		width: 135%;
 
-		& > * {
+		&>* {
 			cursor: pointer;
 		}
 	}
 }
 
-.card__details {
-	display: flex;
-	align-items: center;
-	margin-top: 22px;
-	margin-left: 282.5px;
-	cursor: pointer;
-
-	&__container {
-		display: flex;
-		flex-direction: column;
-		margin-left: 10px;
+@media screen and (max-width: 1280px) and (max-width: 1439px) {
+	.recommendations {
+		padding: 135px 0;
 	}
 
-	&_title {
-		font: var(--font-title-description);
+	.card {
+		&__container {
+			width: 155%;
+		}
+	}
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+	.recommendations {
+		&__container {
+			max-width: var(--width-1280-1024);
+			padding: 20px 0 83px;
+		}
+
+	}
+}
+
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+	.recommendations {
+		&__container {
+			max-width: var(--width-1024-769);
+		}
+	}
+}
+
+@media screen and (max-width: 835px) {
+	.recommendations {
+		padding: 80px 0;
+
+		&__container {
+			width: 92%;
+			padding-bottom: 52px;
+		}
+
+		&__header {
+			align-self: center;
+		}
+	}
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+	.recommendations {
+		&__container {
+			max-width: var(--width-768-280);
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.recommendations {
+		&__container {
+			width: 82%;
+			margin: 60px auto;
+			padding: 57px 0 79px;
+		}
+		&__arrows {
+			margin-left: 0;
+		}
+
+		&__header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__title {
+			width: 140px;
+			font-size: 40px;
+			white-space: nowrap;
+			margin-bottom: 10px;
+			overflow: hidden;
+		}
 	}
 
-	&_information {
-		display: flex;
-		flex-direction: column;
-		font: var(--font-description-main);
-		letter-spacing: var(--font-description-letter);
+	.card {
+		&__container {
+			gap: 40px;
+			width: 94%;
+		}
 	}
 }
