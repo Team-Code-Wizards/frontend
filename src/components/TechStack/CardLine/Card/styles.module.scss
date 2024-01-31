@@ -12,12 +12,12 @@
 
 		@media screen and (max-width: 833px) {
 			order: 0;
+			padding-bottom: 17px;
 		}
 
 		span {
 			font: var(--font-description-main);
 			margin-left: 10px;
-			flex-basis: 80%;
 		}
 
 		svg {
@@ -30,8 +30,8 @@
 	&__description {
 		font: var(--font-description-main);
 
-		@media screen and (max-width: 420px) {
-			margin-bottom: 17px;
+		@media screen and (max-width: 520px) {
+			margin-bottom: 21px;
 		}
 	}
 }

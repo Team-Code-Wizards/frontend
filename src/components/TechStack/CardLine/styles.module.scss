@@ -7,6 +7,10 @@
 		@media screen and (min-width: 834px) and (max-width: 1279px) {
 			row-gap: 34px;
 		}
+
+		@media screen and (max-width: 520px) {
+			row-gap: 39px;
+		}
 	}
 
 	&__title {
