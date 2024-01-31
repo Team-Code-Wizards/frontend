@@ -8,9 +8,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 80vw;
-    max-width: 568px;
+    max-width: 582px;
     height: 70vh;
-    max-height: 422px;
+    max-height: 449px;
     border-radius: 20px;
   }
 
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     flex-basis: 60%;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
   }
@@ -37,10 +37,10 @@
     }
     &_close {
       position: absolute;
-      top: 10px;
-      right: 15px;
+      top: 17px;
+      right: 13px;
       background: rgba(135, 146, 252, 0.5);
-      border-radius: 200px;
+      border-radius: 100px;
       border: none;
       padding: 20px;
       background-image: url("/images/popup/close.svg");
@@ -54,7 +54,7 @@
   &__message_failure {
     font-family: var(--involve-font);
     font-size: var(--text-base);
-    font-weight: 400;
+    font-weight: 600;
     color: var(--color-text);
     text-align: center;
     width: 100%;
