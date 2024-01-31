@@ -1,4 +1,5 @@
-import IconStar from '../../../../public/images/choice';
+import IconStar from '&/images/choice/IconStar';
+
 import { IChoiceItemProps } from './interface';
 import styles from './style.module.scss';
 
