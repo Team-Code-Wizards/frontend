@@ -4,7 +4,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    background-image: url(/images/popup/background.png);
+    background-image: url(/images/popup/background.webp);
     background-repeat: no-repeat;
     background-size: cover;
     width: 80vw;
@@ -64,7 +64,7 @@
 @media screen and (min-width: 300px) and (max-width: 450px) {
   .popup {
     &__background {
-      background-image: url(/images/popup/small-popup-background.png);
+      background-image: url(/images/popup/small-popup-background.webp);
       height: 17vh;
       min-height: 242px;
     }
