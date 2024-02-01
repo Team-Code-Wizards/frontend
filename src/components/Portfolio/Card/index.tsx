@@ -13,12 +13,7 @@ export default function PortfolioCard({
 	return (
 		<>
 			<div className={styles['card__image']}>
-				<Image
-					src={image}
-					alt="portfolioIcon"
-					// width={500}
-					className={styles['card__bg']}
-				/>
+				<Image src={image} alt="portfolioIcon" className={styles['card__bg']} />
 				<span className={styles['card__tag']}>{tag}</span>
 				<a
 					className={styles['card__link']}

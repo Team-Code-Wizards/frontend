@@ -42,29 +42,11 @@ export default function Portfolio() {
 
 			<Swiper
 				spaceBetween={20}
-				// breakpoints={{
-				// 	300: {
-				// 		slidesPerView: 1.1,
-				// 	},
-				// 	450: {
-				// 		slidesPerView: 1.4,
-				// 	},
-				// 	570: {
-				// 		slidesPerView: 2,
-				// 	},
-				// 	834: {
-				// 		slidesPerView: 2.08,
-				// 	},
-				// 	900: {
-				// 		slidesPerView: 2.7,
-				// 	},
-				// 	1280: {
-				// 		slidesPerView: 3.37,
-				// 	},
-				// 	1440: {
-				// 		slidesPerView: 3.18,
-				// 	},
-				// }}
+				breakpoints={{
+					1441: {
+						slidesPerView: 3,
+					},
+				}}
 				slidesPerView="auto"
 				modules={[Navigation, Pagination]}
 				navigation={{

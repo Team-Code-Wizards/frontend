@@ -22,7 +22,7 @@
 
 	&__card-box {
 		min-height: 361px;
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 
 	&__card-box_item {
@@ -85,6 +85,10 @@
 			max-height: 285px;
 			min-height: auto;
 		}
+
+		&__card-box_item {
+			width: 328px;
+		}
 	}
 }
 
@@ -105,7 +109,7 @@
 
 		&__card-box {
 			width: 96%;
-			margin-bottom: 15px;
+			margin-bottom: 25px;
 		}
 
 		&__pagination {
@@ -113,9 +117,12 @@
 			width: 102px !important;
 			margin: 0 auto !important;
 		}
+
+		&__card-box_item {
+			width: 374px;
+		}
 	}
 }
-
 
 @media screen and (max-width: 450px) {
 	.portfolio {
@@ -125,14 +132,18 @@
 
 		&__title {
 			width: 82%;
-			margin-bottom: 28px;
-			font-size: 40px;
+			margin-bottom: 44px;
 		}
 
 		&__card-box {
 			width: 91%;
 			max-height: 367px;
-			margin-bottom: 6px;
+			margin-bottom: 12px;
+		}
+
+		&__card-box_item {
+			min-width: 300px;
+			max-width: 320px;
 		}
 	}
 }
