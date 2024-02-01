@@ -109,12 +109,21 @@
       padding-inline-start: 23px;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    &__image-text {
+      width: 50%;
+    }
+
+    &__image-no-text {
+      max-width: 14.5%;
+    }
+  }
   
-  @media screen and (max-width: 391px) {
+  @media screen and (max-width: 450px) {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
-    width: 82%;
     padding: 20px 24px 16px 20px;
     margin: 53px auto;
 
@@ -175,6 +184,10 @@
     }
   }
 
+  @media screen and (max-width: 390px) {
+    width: 82%;
+  }
+
   &__link-policy {
     text-align: left;
 
@@ -183,4 +196,3 @@
     }
   }
 }
-

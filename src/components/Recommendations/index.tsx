@@ -1,9 +1,6 @@
-import Image from 'next/image';
-
 import { recommendationsPreviews } from '@/constants/Recommendations';
 
 import ArrowChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
-import circle from '../../../public/images/recommendations/circle.svg';
 import RecommendationPreview from './RecommendationPreview';
 import styles from './style.module.scss';
 
@@ -29,21 +26,6 @@ export default function Recommendations() {
 					{recommendationsPreviews.map((item) => {
 						return <RecommendationPreview key={item.id} {...item} />;
 					})}
-				</div>
-
-				<div className={styles['card__details']}>
-					<Image
-						className={styles['card__details_circle']}
-						src={circle}
-						alt="circle"
-					/>
-
-					<div className={styles['card__details__container']}>
-						<h3 className={styles['card__details_title']}>Рент-зона</h3>
-						<h4 className={styles['card__details_information']}>
-							Аренда строительной техники
-						</h4>
-					</div>
 				</div>
 			</div>
 		</section>
