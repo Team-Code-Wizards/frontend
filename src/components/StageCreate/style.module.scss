@@ -4,11 +4,12 @@
     background-size: cover;
     margin: 0 auto;
     max-width: var(--max-width);
+    position: relative;
 
     &__block {
-        position: relative;
         padding: 80px 124px 204px 80px;
-        width: var(--max-width);
+        //width: var(--max-width);
+        max-width: var(--max-width);
         margin: 0 auto;
         color: var(--color-text);
         font-family: var(--rg-font);
@@ -20,11 +21,12 @@
     }
 
     &__icon-wrapper {
-        width: 41%;
+        width: 42%;
         height: 76%;
         position: absolute;
         top: 10%;
-        left: 50%;
+        right: 2%;
+        object-fit: contain;
     }
 
     &__wrapper {
@@ -97,7 +99,7 @@
     }
 
     &__description {
-        max-width: 25%;
+        max-width: 27%;
         font: var(--font-description-main);
         line-height: var(--line-height-big);
         margin-bottom: 81px;
@@ -131,15 +133,6 @@
     }
 }
 
-@media screen and (max-width: 1330px) {
-    .stage {
-        &__icon-wrapper {
-            width: 43%;
-            top: 10%;
-            left: 44%;
-        }
-    }}
-
 @media screen and (max-width: 1283px) {
     .stage {
         max-width: 100%;
@@ -150,10 +143,9 @@
         }
 
         &__icon-wrapper {
-            width: 48%;
-            height: 78%;
-            top: 11%;
-            left: 45%;
+            width: 41%;
+            top: 18%;
+            right: 4%;
         }
 
         &__wrapper {
@@ -168,37 +160,13 @@
             // подходит только для Mozila, для остальных не нужен
             //letter-spacing: -0.48px;
         }
-
     }
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1200px) {
     .stage {
-       &__icon-wrapper {
-            width: 51%;
-            top: 15%;
-            left: 43%;
-        }
-    }
-}
-
-@media screen and (max-width: 980px) {
-    .stage {
-        &__icon-wrapper {
-            width: 35%;
-            height: 68%;
-            top: 21%;
-            left: 40%;
-        }
-    }
-}
-
-@media screen and (max-width: 872px) {
-    .stage {
-        &__icon-wrapper {
-            width: 38%;
-            top: 24%;
-            left: 38%;
+        &__description {
+            max-width: 44%;
         }
     }
 }
@@ -221,13 +189,6 @@
             margin-bottom: 57px;
         }
 
-        &__icon-wrapper {
-            width: 45%;
-            height: 52%;
-            top: 30%;
-            left: 55%;
-        }
-
         &__wrapper {
             margin-bottom: 73px;
         }
@@ -238,28 +199,6 @@
     .stage {
         &__block {
             padding: 80px 80px 132px 20px;
-        }
-        &__icon-wrapper {
-            left: 43%;
-        }
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .stage {
-        &__icon-wrapper {
-            left: 42%;
-        }
-    }
-}
-
-@media screen and (max-width: 680px) {
-    .stage {
-        &__icon-wrapper {
-            width: 27%;
-            height: 47%;
-            top: 39%;
-            left: 44%;
         }
     }
 }
@@ -299,7 +238,7 @@
             width: 87%;
             height: 40%;
             top: 50%;
-            left: 0;
+            right: 9%;
         }
 
         &__wrapper {
@@ -351,12 +290,25 @@
 @media screen and (max-width: 450px) {
     .stage {
         &__icon-wrapper {
-            width: 90%;
-            height: 30%;
+            width: 100%;
+            height: 39%;
             position: absolute;
-            top: 58%;
-            left: 4%;
+            top: 51%;
+            right: 0;
         }
     }
 }
+
+@media screen and (max-width: 405px) {
+    .stage {
+        &__icon-wrapper {
+            width: 83%;
+            height: 31%;
+            top: 58%;
+            right: 8%;
+        }
+    }
+}
+
+
 
