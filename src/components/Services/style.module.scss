@@ -11,7 +11,6 @@
   &__title {
     margin-bottom: 40px;
     font: var(--font-block-title);
-    line-height: 130%;
     letter-spacing: 1px;
   }
 
@@ -35,12 +34,19 @@
   backdrop-filter: blur(2px);
 
   &__content {
+    display: flex;
+    flex-direction: column;
     position: relative;
     flex-basis: 90%;
     padding: 4px 9px 66px 12px;
     margin-bottom: 10px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
 
     & > h4 {
       font: var(--font-title-description);
@@ -63,7 +69,11 @@
     bottom: 5px;
     left: 10px;
     vertical-align: bottom;
-    font: var(--font-title-description);
+    font-family: var(--rg-font);
+    font-size: var(--text-lg);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
 
     &_pre {
       margin-right: 4px;
@@ -140,6 +150,7 @@
     }
   }
 }
+
 @media screen and (max-width: 1280px) {
   .services {
     padding: 85px 180px 150px 80px;
@@ -168,7 +179,7 @@
 
 @media screen and (max-width: 580px) {
   .services {
-    padding: 85px 10px 83px 10px;
+    padding: 85px 35px 85px 35px;
     &__title {
       font-size: 40px;
       line-height: 130%;
@@ -181,8 +192,12 @@
   }
   .service-card {
     &__content {
+      justify-content: space-between;
       margin: 0px 0 12px;
-      padding: 1px 5px 9px 15px;
+      padding: 7px 5px 11px;
+    }
+
+    &__right {
       & > p {
         display: none;
       }
@@ -191,7 +206,7 @@
       background: none;
       display: flex;
       justify-content: flex-end;
-      flex-grow: 1;
+      align-items: center;
     }
   }
 }

@@ -13,26 +13,30 @@ export default function Services() {
 					{services.map((service) => (
 						<div key={uuidv4()} className={styles['service-card']}>
 							<div className={styles['service-card__content']}>
-								<h4>{service.title}</h4>
-								{service.content.map((text) => (
-									<p key={uuidv4()}>{text}</p>
-								))}
-								<div className={styles['service-card__prices']}>
-									<p>
-										<span className={styles['service-card__prices_pre']}>
-											от
+								<div className={styles['service-card__right']}>
+									<h4>{service.title}</h4>
+									{service.content.map((text) => (
+										<p key={uuidv4()}>{text}</p>
+									))}
+									<div className={styles['service-card__prices']}>
+										<p>
+											<span className={styles['service-card__prices_pre']}>
+												от
+											</span>
+											<span className={styles['service-card__prices_new']}>
+												{service.newPrice}$
+											</span>
+										</p>
+										<span className={styles['service-card__prices_old']}>
+											{service.oldPrice}$
 										</span>
-										<span className={styles['service-card__prices_new']}>
-											{service.newPrice}$
-										</span>
-									</p>
-									<span className={styles['service-card__prices_old']}>
-										{service.oldPrice}$
-									</span>
+									</div>
 								</div>
-								<a className={styles['service-card__popup']}>
-									<ArrowDownIcon />
-								</a>
+								<div className={styles['service-card__popup']}>
+									<a className={styles['service-card__popup_img']}>
+										<ArrowDownIcon />
+									</a>
+								</div>
 							</div>
 							<span className={styles['service-card__btns']}>
 								<button
