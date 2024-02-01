@@ -168,10 +168,11 @@
 
 @media screen and (max-width: 580px) {
   .services {
-    padding: 85px 48px 83px 20px;
+    padding: 85px 10px 83px 10px;
     &__title {
       font-size: 40px;
       line-height: 130%;
+      margin-bottom: 30px;
     }
     &__cards {
       grid-template-columns: 1fr;
