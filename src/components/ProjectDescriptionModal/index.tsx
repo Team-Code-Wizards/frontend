@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import IconClose from '../../../public/images/modal/IconClose';
-import landingImage from '../../../public/images/modal/projectDescription/landing-image.png';
+import landingImage from '../../../public/images/modal/projectDescription/landing-image.webp';
 import ModalBackground from '../ModalBackground';
 import styles from './style.module.scss';
 

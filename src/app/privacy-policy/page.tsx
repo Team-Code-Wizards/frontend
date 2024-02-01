@@ -1,3 +1,6 @@
+import Link from 'next/link';
+
+import ArrowBack from '../../../public/images/icons/ArrowBack';
 import styles from './style.module.scss';
 
 export default function PrivacyPolicy() {
@@ -5,6 +8,10 @@ export default function PrivacyPolicy() {
 		<main className={styles['privacy']}>
 			<div className={styles['privacy__container']}>
 				<div className={styles['privacy__title']}>
+					<Link href="/" className={styles['privacy__back-btn']}>
+						<ArrowBack />
+						Вернуться на главную страницу
+					</Link>
 					<h2>Политика конфиденциальности</h2>
 					<h3>Политика в отношении обработки персональных данных</h3>
 				</div>

@@ -2,6 +2,8 @@
 
 import { FormEvent } from 'react';
 
+import socialUrl from '@/constants/SocialURL/index';
+
 import ArrowIcon from '../../../public/images/icons/ArrowIcon';
 import TelegramIcon from '../../../public/images/icons/TelegramIcon';
 import ViberIcon from '../../../public/images/icons/ViberIcon';
@@ -31,19 +33,31 @@ export default function Promo() {
 					</h2>
 					<ul className={styles['promo__link-list']}>
 						<li className={styles['promo__link-box']}>
-							<a href="#" className={styles['promo__link']}>
+							<a
+								href={socialUrl.telegram}
+								target="_blank"
+								className={styles['promo__link']}
+							>
 								<TelegramIcon size={[27, 26]} />
 								<ArrowIcon />
 							</a>
 						</li>
 						<li className={styles['promo__link-box']}>
-							<a href="#" className={styles['promo__link']}>
+							<a
+								href={socialUrl.watsup}
+								target="_blank"
+								className={styles['promo__link']}
+							>
 								<WhatsappIcon size={[27, 26]} />
 								<ArrowIcon />
 							</a>
 						</li>
 						<li className={styles['promo__link-box']}>
-							<a href="#" className={styles['promo__link']}>
+							<a
+								href={socialUrl.viber}
+								target="_blank"
+								className={styles['promo__link']}
+							>
 								<ViberIcon size={[25, 25]} />
 								<ArrowIcon />
 							</a>
