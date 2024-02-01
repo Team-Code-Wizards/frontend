@@ -1,5 +1,4 @@
 import { portfolioCards } from '@/constants/Portfolio';
-import { v4 as uuidv4 } from 'uuid';
 
 import ArrwoChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
 import PortfolioCard from './Card';
@@ -19,7 +18,7 @@ export default function Portfolio() {
 			</div>
 			<div className={styles['portfolio__card-box']}>
 				{portfolioCards.map((el) => (
-					<PortfolioCard key={uuidv4()} {...el} />
+					<PortfolioCard key={el.id} {...el} />
 				))}
 			</div>
 		</section>

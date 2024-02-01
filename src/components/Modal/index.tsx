@@ -1,5 +1,4 @@
 import { data } from '@/constants/ModalWindow';
-import { v4 as uuidv4 } from 'uuid';
 
 import IconClose from '../../../public/images/modal/IconClose';
 import ModalBackground from '../ModalBackground';
@@ -16,7 +15,7 @@ export default function Modal() {
 				<h3 className={styles['modal__title']}>Заявка на создание сайта</h3>
 				<form className={styles['modal__form']}>
 					{data.map((item) => {
-						return <ModalItem key={uuidv4()} item={item} />;
+						return <ModalItem key={item.id} item={item} />;
 					})}
 					<button type="submit" className={styles['modal__btn']}>
 						Отправить

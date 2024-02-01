@@ -1,5 +1,4 @@
 import services from '@/constants/Services';
-import { v4 as uuidv4 } from 'uuid';
 
 import styles from './style.module.scss';
 
@@ -10,11 +9,11 @@ export default function Services() {
 				<h2 className={styles['services__title']}>Услуги</h2>
 				<div className={styles['services__cards']}>
 					{services.map((service) => (
-						<div key={uuidv4()} className={styles['service-card']}>
+						<div key={service.id} className={styles['service-card']}>
 							<div className={styles['service-card__content']}>
 								<h4>{service.title}</h4>
 								{service.content.map((text) => (
-									<p key={uuidv4()}>{text}</p>
+									<p key={text}>{text}</p>
 								))}
 								<div className={styles['service-card__prices']}>
 									<p>

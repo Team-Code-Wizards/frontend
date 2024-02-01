@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import { recommendationsPreviews } from '@/constants/Recommendations';
-import { v4 as uuidv4 } from 'uuid';
 
 import ArrowChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
 import circle from '../../../public/images/recommendations/circle.svg';
@@ -28,7 +27,7 @@ export default function Recommendations() {
 
 				<div className={styles['card__container']}>
 					{recommendationsPreviews.map((item) => {
-						return <RecommendationPreview key={uuidv4()} {...item} />;
+						return <RecommendationPreview key={item.id} {...item} />;
 					})}
 				</div>
 

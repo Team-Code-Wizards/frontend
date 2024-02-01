@@ -1,5 +1,4 @@
 import { FaqData } from '@/constants/Faq';
-import { v4 as uuidv4 } from 'uuid';
 
 import FaqCard from '../FaqCard';
 import styles from './styles.module.scss';
@@ -10,7 +9,7 @@ function Faq() {
 			<h2 className={styles.faq__title}>Часто задаваемые вопросы&nbsp;(FAQ)</h2>
 			<ul className={styles.faq__list}>
 				{FaqData.map((item) => {
-					return <FaqCard key={uuidv4()} item={item} />;
+					return <FaqCard key={item.id} item={item} />;
 				})}
 			</ul>
 		</section>
