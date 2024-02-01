@@ -4,4 +4,5 @@ export default interface IPortfolioCard {
 	title: string;
 	tag: string;
 	image: string | StaticImport;
+	link: string;
 }
