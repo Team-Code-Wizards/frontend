@@ -22,11 +22,10 @@
   @media screen and (max-width: 450px) {
     .faq-card {
       &__header {
-        padding: 7px;
+        padding: 7px 0;
       }
     }
   }
-
 
   &__title {
     font: var(--font-title-description);
