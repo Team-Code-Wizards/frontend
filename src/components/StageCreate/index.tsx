@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import clockIcon from '../../../public/images/stageCreate/clock-icon.png';
+import clockIcon from '../../../public/images/stageCreate/clock-icon.webp';
 import styles from './style.module.scss';
 
 export default function StageCreate() {

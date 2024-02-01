@@ -1,5 +1,5 @@
 .stage{
-    background-image: url(../../../public/images/stageCreate/stages-create-bg-1440.png);
+    background-image: url(../../../public/images/stageCreate/stages-create-bg-1440.webp);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -264,7 +264,7 @@
 @media screen and (max-width: 550px){
     .stage {
         max-width:100%;
-        background-image: url(../../../public/images/stageCreate/stages-bg-390.png);
+        background-image: url(../../../public/images/stageCreate/stages-bg-390.webp);
         &__block {
             padding: 60px 0 435.45px 0;
             max-width: var(--width-768-280);
