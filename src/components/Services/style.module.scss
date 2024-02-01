@@ -19,6 +19,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
+    gap: 20px;
     justify-content: space-between;
   }
 }
@@ -36,7 +37,7 @@
   &__content {
     position: relative;
     flex-basis: 90%;
-    padding: 6px 9px 30px 10px;
+    padding: 4px 9px 66px 12px;
     margin-bottom: 10px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
@@ -139,101 +140,57 @@
     }
   }
 }
-
-/*@media screen and (min-width: 834px) and (max-width: 1280px) {
-  .wrapper {
-    max-width: 1024px;
-    margin: auto;
-  }
+@media screen and (max-width: 1280px) {
   .services {
-    padding: 0;
-    margin-left: 10px;
-
-    &__cards {
-      justify-content: space-around;
-    }
+    padding: 85px 180px 150px 80px;
   }
   .service-card {
-    height: 442px;
-    width: 308px;
-
     &__content {
-      height: 372px;
-    }
-
-    & > p {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: 840px) {
-  .wrapper {
-    max-width: 768px;
-    margin: auto;
-  }
-  .services {
-    padding: 0;
-    margin-left: 0px;
-
-    &__cards {
-      justify-content: space-around;
-    }
-  }
-  .service-card {
-    height: 427px;
-    width: 374px;
-
-    &__content {
-      height: 357px;
-    }
-
-    & > p {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .wrapper {
-    max-width: 320px;
-    margin: auto;
-  }
-  .services {
-    padding: 0;
-
-    &__title {
-      margin-bottom: 30px;
-      font-size: 40px;
-      line-height: 120%;
-    }
-  }
-  .service-card {
-    height: auto;
-    width: 320px;
-
-    &__content {
-      height: auto;
-      padding: 0px 0px 0px 0px;
-
       & > h4 {
-        font: var(--font-title-description);
-        line-height: 105%;
-        margin: 0 0 15px;
+        line-height: 125%;
       }
+    }
+    &__prices {
+      bottom: 13px;
+    }
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 1279px) {
+  .services {
+    padding: 12px 20px 160px 30px;
+    &__cards {
+      grid-template-columns: 1fr 1fr;
+      padding: 0px 20px 80px 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .services {
+    padding: 85px 48px 83px 20px;
+    &__title {
+      font-size: 40px;
+      line-height: 130%;
+    }
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  .service-card {
+    &__content {
+      margin: 0px 0 12px;
+      padding: 1px 5px 9px 15px;
       & > p {
         display: none;
       }
     }
-
-    &__prices {
-      bottom: 1px;
-    }
     &__popup {
-      background-color: none;
+      background: none;
       display: flex;
       justify-content: flex-end;
+      flex-grow: 1;
     }
   }
 }
-*/
