@@ -30,7 +30,7 @@
   .faq {
     width: 80%;
     max-width: 1024px;
-    gap:10px;
+    gap: 10px;
 
     &__title {
       width: 54%;
@@ -74,13 +74,15 @@
   .faq {
     width: 82%;
     max-width: 320px;
+    padding-bottom: 40px;
+    gap: 43px;
 
     &__title {
       width: 100%;
     }
 
     &__list {
-      gap: 50px;
+      gap: 49px;
     }
   }
 }
