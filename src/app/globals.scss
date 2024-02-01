@@ -35,13 +35,13 @@
   --rg-font: "RG-StandardSemibold";
   --involve-font: "Involve";
 
-	// === Font Sizes ===
-	--text-xxs: 10px;
-	--text-xs: 14px;
-	--text-sm: 16px;
-	--text-base: 20px;
-	--text-lg: 32px;
-	--text-xl: 48px;
+  // === Font Sizes ===
+  --text-xxs: 10px;
+  --text-xs: 14px;
+  --text-sm: 16px;
+  --text-base: 20px;
+  --text-lg: 32px;
+  --text-xl: 48px;
 
   --line-height: 120%;
   --line-height-big: 130%;
@@ -56,14 +56,14 @@
       var(--involve-font),
     sans-serif;
 
-	// === Descriptions ===
-	--font-button: 600 var(--text-base) var(--involve-font), sans-serif;
-	--font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-	--font-description-main: 500 var(--text-sm) / var(--line-height-big)
-			var(--involve-font),
-		sans-serif;
-	--font-stage-btn: 700 var(--text-xs) var(--involve-font), sans-serif;
-	--font-stage-btn-sm: 700 var(--text-xxs) var(--involve-font), sans-serif;
+  // === Descriptions ===
+  --font-button: 600 var(--text-base) var(--involve-font), sans-serif;
+  --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
+  --font-description-main: 500 var(--text-sm) / var(--line-height-big)
+      var(--involve-font),
+    sans-serif;
+  --font-stage-btn: 700 var(--text-xs) var(--involve-font), sans-serif;
+  --font-stage-btn-sm: 700 var(--text-xxs) var(--involve-font), sans-serif;
 
   // Colors
   --color-bg-black: #000000;
@@ -107,8 +107,8 @@
 }
 
 .body {
-	font-family: var(--involve-font);
-	background-color: var(--color-bg-black);
+  font-family: var(--involve-font);
+  background-color: var(--color-bg-black);
 }
 
 * {
