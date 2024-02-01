@@ -202,6 +202,11 @@
         display: none;
       }
     }
+
+    &__prices {
+      align-items: baseline;
+      bottom: 0px;
+    }
     &__popup {
       background: none;
       display: flex;
