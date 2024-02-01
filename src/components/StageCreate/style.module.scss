@@ -207,7 +207,7 @@
     .stage {
         max-width: 100%;
         &__block {
-            padding: 80px 80px 132px 20px;
+            padding: 80px 80px 132px 0;
             max-width: var(--width-1024-768);
         }
 
@@ -225,7 +225,7 @@
             width: 45%;
             height: 52%;
             top: 30%;
-            left: 58%;
+            left: 55%;
         }
 
         &__wrapper {
@@ -236,6 +236,9 @@
 
 @media screen and (max-width: 780px) {
     .stage {
+        &__block {
+            padding: 80px 80px 132px 20px;
+        }
         &__icon-wrapper {
             left: 43%;
         }
@@ -300,7 +303,7 @@
         }
 
         &__wrapper {
-            margin-bottom: 37px;
+            margin-bottom: 38px;
         }
 
         &__item {
@@ -326,9 +329,9 @@
         }
 
         &__btn {
-            padding: 18px 40px;
+            padding: 17px 25px;
             width: 70%;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
     }
 }
