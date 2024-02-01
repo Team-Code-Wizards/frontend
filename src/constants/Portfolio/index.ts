@@ -1,10 +1,11 @@
 import IPortfolioCard from '@/components/Portfolio/Card/interface';
 
-import image41 from '../../../public/images/portfolio/image-41.png';
-import image42 from '../../../public/images/portfolio/image-42.png';
-import image43 from '../../../public/images/portfolio/image-43.png';
-import image44 from '../../../public/images/portfolio/image-44.png';
-import image45 from '../../../public/images/portfolio/image-45.png';
+import image41 from '../../../public/images/portfolio/image-41.webp';
+import image42 from '../../../public/images/portfolio/image-42.webp';
+import image43 from '../../../public/images/portfolio/image-43.webp';
+import image44 from '../../../public/images/portfolio/image-44.webp';
+import image45 from '../../../public/images/portfolio/image-45.webp';
+import image46 from '../../../public/images/portfolio/image-46.webp';
 
 export const portfolioCards: IPortfolioCard[] = [
 	{
