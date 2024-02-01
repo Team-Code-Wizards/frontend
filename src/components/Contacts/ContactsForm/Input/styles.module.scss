@@ -1,7 +1,3 @@
-//TODO рефактор стилей
-
-//Contacts
-
 .contacts-form-input {
 	width: 100%;
 	padding: 18px 10px;
@@ -11,8 +7,8 @@
 	background-color: var(--color-gray-bg);
 
 	&::placeholder {
-		font-size: var(--text-sm);
 		font-family: var(--involve-font);
+		font-size: var(--text-sm);
 		color: var(--color-input);
 	}
 
@@ -111,4 +107,13 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+	.input-box {
+		&:nth-of-type(2),
+	  &:nth-of-type(3) {
+		  flex-basis: 100%;
+	  }  
+  }
 }

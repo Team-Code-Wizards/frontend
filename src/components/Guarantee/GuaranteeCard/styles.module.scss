@@ -2,10 +2,10 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 20px;
-	width: calc(50% - 20px / 2);
+	gap: 21px;
+	width: calc(50% - 21px / 2);
 	min-height: 147px;
-	padding: 15px 10px 12px 20px;
+	padding: 15px 18px 12px 20px;
 	border-radius: 10px;
 	border: 1px solid var(--color-bg-white);
 	background: rgba(255, 255, 255, 0.05);
@@ -17,20 +17,43 @@
 	}
 
 	&__title {
-		margin: 0;
-		margin-bottom: 10px;
+		margin: 0 0 10px 0;
 		color: var(--color-lilac);
-		font-family: var(--rg-font);
-		font-size: 20px;
-		font-weight: 600;
-		line-height: 120%;
+    letter-spacing: 0.06rem;
 	}
 
 	&__description {
 		margin: 0;
-		color: var(--color-bg-white);
+		color: var(--color-text);
 		font: var(--font-description-main);
-		line-height: 130%;
-		letter-spacing: -0.03rem;
 	}
+}
+
+@media screen and (max-width: 934px) {
+	.guarantee-card {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 22px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+		.guarantee-card {
+			width: 100%;
+			align-items: center;
+			text-align: center;
+			gap: 10px;
+			// марджин убрать, когда будет слайдер
+			margin-bottom: 152px;
+
+			&:nth-of-type(n+2){
+				display: none;
+			}
+
+	  &__image {
+		  width: 75px;
+		  height: 75px;
+	  }
+		}
 }

@@ -6,31 +6,92 @@
 	background-repeat: no-repeat;
 	background-color: var(--color-bg-black);
 
-	&__description-wrapper {
-		width: 88.9%;
-		max-width: 1280px;
-		margin: 0 auto;
+	&__wrapper {
+		max-width: var(--block-max-width);
+		margin: 67px auto 57px;
 	}
 
 	&__title {
 		width: 61%;
-		margin-block-start: 46px;
 		margin-block-end: 2px;
 		font: var(--font-block-title);
 	}
 
 	&__description {
 		width: 61%;
-		margin-block-end: 60px;
+		margin-bottom: 56px;
 		font: var(--font-title-description);
+	}
+
+	@media screen and (max-width: 1280px) {
+		&__wrapper {
+			max-width: var(--width-1280-1024);
+		}
+
+		&__description-wrapper {
+			max-width: 1024px;
+			margin-block-end: 56px
+		}
+
+		&__title {
+			width: 78%;
+		}
+
+		&__description {
+			width: 77%;
+		}
+	}
+
+	@media screen and (max-width: 1060px) {
+		&__wrapper {
+			max-width: var(--width-1024-768);
+		}
+	}
+
+	@media screen and (max-width: 835px) {
+		&__wrapper {
+			margin: 49px auto 33px;
+		}
+
+		&__title {
+			width: 100%;
+		}
+
+		&__description {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		&__wrapper {
+			max-width: clamp(260px, 82%, 768px);
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		&__wrapper {
+			margin: 49px auto 37px;
+		}
+
+		&__title {
+			font-size: 40px;
+			margin-block-end: 22px;
+		}
+	}
+
+	@media screen and (max-width: 351px) {
+		&__title {
+			font-size: 32px;
+		}	
 	}
 }
 
 .steps {
-	width: 88.9%;
-	max-width: 1280px;
-	margin: 0 auto 60px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
+	@media screen and (max-width: 1280px) {
+		max-width: 1024px;
+	}
 }

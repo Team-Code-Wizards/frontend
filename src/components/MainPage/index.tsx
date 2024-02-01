@@ -7,6 +7,7 @@ import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
 import Navbar from '../Navbar';
 import Portfolio from '../Portfolio';
+// import ProjectDescriptionModal from '../ProjectDescriptionModal';
 import Promo from '../Promo';
 import Recommendations from '../Recommendations';
 import Services from '../Services';
@@ -18,11 +19,11 @@ import styles from './style.module.scss';
 export default function MainPage() {
 	return (
 		<main className={styles.main}>
-			{/* <Modal />*/}
+			{/* <Modal /> */}
 			<Navbar />
 			<Promo />
 			<ComponentsContainer>
-				{/*<ProjectDescriptionModal/>*/}
+				{/* <ProjectDescriptionModal /> */}
 				<AboutUs />
 				<Services />
 				<Portfolio />

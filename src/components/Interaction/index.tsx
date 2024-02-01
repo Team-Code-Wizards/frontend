@@ -8,7 +8,7 @@ const Interaction = (): React.ReactElement => {
 	return (
 		<>
 			<section className={styles['interaction']}>
-				<div className={styles['interaction__description-wrapper']}>
+				<div className={styles['interaction__wrapper']}>
 					<h2 className={styles['interaction__title']}>
 						Как мы превращаем взаимодействие с нами в настоящее удовольствие:
 					</h2>
@@ -17,12 +17,11 @@ const Interaction = (): React.ReactElement => {
 						разработки, а создание позитивного пользовательского опыта с самого
 						начала до самого конца.
 					</p>
-				</div>
-
-				<div className={styles['steps']}>
-					{data.map((item) => {
-						return <Step key={uuidv4()} item={item} />;
-					})}
+					<div className={styles['steps']}>
+						{data.map((item) => {
+							return <Step key={uuidv4()} item={item} />;
+						})}
+					</div>
 				</div>
 			</section>
 		</>

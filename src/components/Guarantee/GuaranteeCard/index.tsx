@@ -3,6 +3,9 @@ import Image from 'next/image';
 import { IGuaranteeCardProps } from './interface';
 import styles from './styles.module.scss';
 
+// TODO убрать в стилях сокрытие всех карточек начиная со второй для мобильных экранов
+// &:nth-of-type(n+2) display: none
+
 function GuaranteeCard({ item }: IGuaranteeCardProps) {
 	return (
 		<li className={styles['guarantee-card']}>

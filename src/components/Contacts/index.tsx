@@ -2,6 +2,8 @@
 
 import { FormEvent } from 'react';
 
+import socialUrl from '@/constants/SocialURL/index';
+
 import ArrowIcon from '../../../public/images/icons/ArrowIcon';
 import TelegramIcon from '../../../public/images/icons/TelegramIcon';
 import ViberIcon from '../../../public/images/icons/ViberIcon';
@@ -28,7 +30,8 @@ export default function Contacts() {
 							type="email"
 						>
 							<p className={styles['link__item_word-space']}>
-								E-mail email@code-wizards.team
+								<span className={styles['link__item_email']}>E-mail</span>{' '}
+								<span>email@code-wizards.team</span>
 							</p>
 							<span className={styles['link__item']}>
 								<ArrowIcon />
@@ -47,7 +50,11 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link']} href="#">
+						<a
+							className={styles['link']}
+							target="_blank"
+							href={socialUrl.viber}
+						>
 							<span className={styles['link__item']}>
 								<ViberIcon size={[26, 26]} />
 							</span>
@@ -55,7 +62,11 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link']} href="#">
+						<a
+							className={styles['link']}
+							target="_blank"
+							href={socialUrl.telegram}
+						>
 							<span className={styles['link__item']}>
 								<TelegramIcon size={[26, 25]} />
 							</span>
@@ -63,7 +74,11 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link']} href="#">
+						<a
+							className={styles['link']}
+							target="_blank"
+							href={socialUrl.watsup}
+						>
 							<span className={styles['link__item']}>
 								<WhatsappIcon size={[25, 24]} />
 							</span>
