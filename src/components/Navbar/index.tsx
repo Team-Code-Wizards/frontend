@@ -1,3 +1,4 @@
+import CloseIcon from '../../../public/images/header/CloseIcon';
 import LogoIcon from '../../../public/images/header/LogoIcon';
 import MenuIcon from '../../../public/images/header/MenuIcon';
 import TelIcon from '../../../public/images/header/TelIcon';
@@ -17,6 +18,9 @@ export default function Navbar() {
 				</button>
 			</div>
 			<nav className={styles['navbar']}>
+				<button className={styles['navbar__close-btn']}>
+					<CloseIcon />
+				</button>
 				<a href="#promo" className={styles['navbar__logo']}>
 					<LogoIcon />
 				</a>
