@@ -22,8 +22,7 @@
 		"react-dom": "^18",
 		"sass": "^1.69.7",
 		"sharp": "^0.33.2",
-		"swiper": "^11.0.5",
-		"uuid": "^9.0.1"
+		"swiper": "^11.0.5"
 	},
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
