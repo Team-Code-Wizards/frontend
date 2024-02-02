@@ -39,6 +39,14 @@
 		gap: 10px;
 	}
 }
+.recommendations-swiper-slide {
+	&.swiper-slide-active {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		border: 2px solid var(--color-lilac);
+	}
+}
 
 .arrow-btn {
 	background: none;

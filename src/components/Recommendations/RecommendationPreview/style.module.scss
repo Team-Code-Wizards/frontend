@@ -3,14 +3,9 @@
 	margin-top: 60px;
 }
 
-.card-image {
-	&_center {
-		width: 100%;
-		height: 100%;
-		border-radius: 10px;
-		border: 2px solid var(--color-lilac);
-	}
 
+
+.card-image {
 	&_left,
 	&_right {
 		width: 100%;
