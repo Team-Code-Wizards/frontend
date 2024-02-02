@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import socialUrl from '@/constants/SocialURL/index';
+
 import TelegramIcon from '../../../public/images/icons/TelegramIcon';
 import ViberIcon from '../../../public/images/icons/ViberIcon';
 import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
@@ -51,13 +53,25 @@ const Footer = (): React.ReactElement => {
 					className={styles['footer__image-text']}
 				/>
 				<div className={styles['footer__social-group']}>
-					<a href="#" className={styles['footer__link_telegram']}>
+					<a
+						href={socialUrl.telegram}
+						target="_blank"
+						className={styles['footer__link_telegram']}
+					>
 						<TelegramIcon />
 					</a>
-					<a href="#" className={styles['footer__link_whatsapp']}>
+					<a
+						href={socialUrl.watsup}
+						target="_blank"
+						className={styles['footer__link_whatsapp']}
+					>
 						<WhatsappIcon />
 					</a>
-					<a href="#" className={styles['footer__link_viber']}>
+					<a
+						href={socialUrl.viber}
+						target="_blank"
+						className={styles['footer__link_viber']}
+					>
 						<ViberIcon />
 					</a>
 				</div>

@@ -1,7 +1,7 @@
 .guarantee {
 	width: 100%;
 	padding: 80px 80px 92px;
-	background-image: url('/images/guarantee/background.png');
+	background-image: url('/images/guarantee/background.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	backdrop-filter: blur(28px);
@@ -58,7 +58,7 @@
 @media screen and (max-width: 934px) {
 	.guarantee {
 	padding: 80px 0 77px;
-	background-image: url('/images/guarantee/background-tablet.png');
+	background-image: url('/images/guarantee/background-tablet.webp');
 	@media screen and (min-width: 701px) and (max-width: 833px) {
 		padding: 80px 20px 77px;
 	}
@@ -75,7 +75,7 @@
 
 @media screen and (max-width: 700px) {
 	.guarantee {
-		background-image: url('/images/guarantee/background-mobile.png');
+		background-image: url('/images/guarantee/background-mobile.webp');
 		background-size: 100% 100%;
 		
 		&__container {

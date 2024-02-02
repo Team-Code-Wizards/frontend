@@ -28,7 +28,7 @@
 	}
 
 	&__image {
-		background-image: url('../../../public/images/aboutUs/about-us-main-image.png');
+		background-image: url(/images/aboutUs/about-us-main-image.webp);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -43,7 +43,6 @@
 		flex-basis: 70%;
 		padding-top: 62px;
 		row-gap: 18px;
-		font-family: var(--involve-font);
 		font-size: var(--text-sm);
 	}
 
@@ -63,7 +62,6 @@
 		color: var(--color-dark-purple);
 		border-radius: 5px;
 		padding: 5px 10px;
-		font-family: var(--involve-font);
 		font-size: var(--font-sm);
 		font-weight: 700;
 	}
@@ -162,10 +160,6 @@
 			margin-top: 0;
 		}
 	}
-
-	// .goals-list {
-	// 	column-gap: 4px;
-	// }
 
 	.goals-resume {
 		&__item {
