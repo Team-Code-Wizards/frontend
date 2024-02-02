@@ -11,7 +11,8 @@ import Portfolio from '../Portfolio';
 // import ProjectDescriptionModal from '../ProjectDescriptionModal';
 import Promo from '../Promo';
 import Recommendations from '../Recommendations';
-// import Services from '../Services';
+import Services from '../Services';
+
 import StageCreate from '../StageCreate';
 import TechStack from '../TechStack';
 import Choice from '../Сhoice';
@@ -27,7 +28,7 @@ export default function MainPage() {
 				{/* <ProjectDescriptionModal /> */}
 				{/* <Popup isSuccess={true} /> */}
 				<AboutUs />
-				{/* <Services />  */}
+				<Services />
 				<Portfolio />
 			</ComponentsContainer>
 			<StageCreate />
