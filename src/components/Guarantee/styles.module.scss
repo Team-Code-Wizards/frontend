@@ -29,7 +29,7 @@
 	}
 
 	&__title {
-		margin: 0 0 29px 0;
+		margin: 0 0 7px 0;
 		font: var(--font-block-title);
 		color: var(--color-text);
 	}
@@ -42,6 +42,17 @@
 		justify-content: center;
 		column-gap: 20px;
 		row-gap: 23px;
+	}
+
+		&__pagination {
+			display: none;
+		}
+
+		&__pagination-bullet {
+		width: 12px;
+		height: 12px;
+		margin: 0 2.5px !important;
+		background-color: var(--color-bg-white);
 	}
 }
 
@@ -57,7 +68,7 @@
 
 @media screen and (max-width: 934px) {
 	.guarantee {
-	padding: 80px 0 77px;
+	padding: 80px 0 51px;
 	background-image: url('/images/guarantee/background-tablet.webp');
 	@media screen and (min-width: 701px) and (max-width: 833px) {
 		padding: 80px 20px 77px;
@@ -79,15 +90,19 @@
 		background-size: 100% 100%;
 		
 		&__container {
-			width: 72%;
-			@media screen and (max-width: 390px) {
-				width: 82%;
-			}
+			width: 91%;
+			margin-right: 0;
 		}
 		
 		&__title {
 			font-size: 40px;
 			margin-bottom: 52px;
+		}
+
+		&__pagination {
+			display: block;
+			width: 155px !important;
+			margin: 0 auto !important;
 		}
 	}
 }
