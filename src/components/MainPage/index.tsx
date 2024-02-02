@@ -5,11 +5,13 @@ import Faq from '../Faq';
 import Footer from '../Footer';
 import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
+import Navbar from '../Navbar';
+// import Popup from '../Popup';
 import Portfolio from '../Portfolio';
-//import ProjectDescriptionModal from "../ProjectDescriptionModal";
-//import Popup from '../Popup';
+// import ProjectDescriptionModal from '../ProjectDescriptionModal';
 import Promo from '../Promo';
 import Recommendations from '../Recommendations';
+// import Services from '../Services';
 import StageCreate from '../StageCreate';
 import TechStack from '../TechStack';
 import Choice from '../Сhoice';
@@ -19,13 +21,13 @@ export default function MainPage() {
 	return (
 		<main className={styles.main}>
 			{/* <Modal /> */}
-			{/* <Navbar /> */}
+			<Navbar />
 			<Promo />
 			<ComponentsContainer>
 				{/* <ProjectDescriptionModal /> */}
 				{/* <Popup isSuccess={true} /> */}
 				<AboutUs />
-				{/* <Services /> */}
+				{/* <Services />  */}
 				<Portfolio />
 			</ComponentsContainer>
 			<StageCreate />
