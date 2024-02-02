@@ -76,6 +76,7 @@
 
     &_pre {
       margin-right: 4px;
+      font-size: 20px;
     }
 
     &_new {
@@ -153,7 +154,10 @@
 
 @media screen and (max-width: 1280px) {
   .services {
-    padding: 85px 180px 150px 80px;
+    //padding: 85px 180px 150px 80px;
+    max-width: 1040px;
+    padding: 0px;
+    padding-bottom: 150px;
   }
   .service-card {
     &__content {
@@ -170,9 +174,36 @@
 @media screen and (min-width: 581px) and (max-width: 1279px) {
   .services {
     padding: 12px 20px 160px 30px;
+    &__title {
+      letter-spacing: 0px;
+    }
     &__cards {
       grid-template-columns: 1fr 1fr;
       padding: 0px 20px 80px 0px;
+      gap: 20px;
+    }
+  }
+
+  .service-card {
+    &__content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0px 0 12px;
+      padding: 6px 6px 96px;
+    }
+
+    &__right {
+      & > h4 {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__prices {
+      align-items: baseline;
+      bottom: -2px;
+      left: 12px;
     }
   }
 }
@@ -187,17 +218,23 @@
     }
     &__cards {
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 17px;
     }
   }
   .service-card {
     &__content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       justify-content: space-between;
       margin: 0px 0 12px;
-      padding: 7px 5px 11px;
+      padding: 7px 9px 11px;
     }
 
     &__right {
+      & > h4 {
+        margin-bottom: 37px;
+      }
       & > p {
         display: none;
       }
@@ -205,7 +242,8 @@
 
     &__prices {
       align-items: baseline;
-      bottom: 0px;
+      bottom: -2px;
+      left: 12px;
     }
     &__popup {
       background: none;
