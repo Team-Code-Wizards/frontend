@@ -1,14 +1,16 @@
 .stage{
-    width: var(--max-width);
-    height: 820px;
-    background-image: url(../../../public/images/stageCreate/background.webp);
+    background-image: url(../../../public/images/stageCreate/stages-create-bg-1440.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--max-width);
+    position: relative;
 
     &__block {
-        position: relative;
-        padding: 68px 80px;
-        max-width: var(--max-width);
+        padding: 80px 0 204px 0;
+        width: 100%;
+        max-width: var(--block-max-width);
         margin: 0 auto;
         color: var(--color-text);
         font-family: var(--rg-font);
@@ -20,13 +22,16 @@
     }
 
     &__icon-wrapper {
+        width: 42%;
+        height: 76%;
         position: absolute;
-        top: 205px;
-        left: 825px;
+        top: 10%;
+        right: 8%;
+        object-fit: contain;
     }
 
     &__wrapper {
-        margin-bottom: 84px;
+        margin-bottom: 73px;
     }
 
     &__item {
@@ -89,22 +94,22 @@
 
     &__heading {
         font: var(--font-title-description);
-        margin-bottom: 14px;
+        margin-bottom: 12px;
+        // подходит только для Mozila, для остальных не нужен
+        // letter-spacing: -0.48px;
     }
 
     &__description {
-        max-width: 320px;
+        max-width: 25%;
         font: var(--font-description-main);
-        font-size: var(--text-xs);
-        line-height: 157%;
-        letter-spacing: -0.42px;
+        line-height: var(--line-height-big);
         margin-bottom: 81px;
     }
 
     &__btn {
         background-image: var(--color-gradient-button);
         background-size: 400%;
-		background-position: 99%;
+        background-position: 99%;
         border-radius: 5px;
         padding: 18px 41px;
         border: none;
@@ -113,18 +118,205 @@
         cursor: pointer;
         transition: 0.3s background-position ease-in-out;
 
-		&:focus {
-			outline: none;
+        &:focus {
+            outline: none;
             background-position: 70%;
-		}
+        }
 
-		&:hover {
-			background-position: 50%;
-		}
+        &:hover {
+            background-position: 50%;
+        }
 
-		&:active {
-			transition: 0.1s background-position ease-in-out;
-			background-position: 10%;
-		}
+        &:active {
+            transition: 0.1s background-position ease-in-out;
+            background-position: 10%;
+        }
     }
 }
+
+@media screen and (max-width: 1283px) {
+    .stage {
+        &__block {
+            padding: 87px 0 132px 0;
+            max-width: 80%;
+        }
+
+        &__icon-wrapper {
+            width: 52%;
+            top: 12%;
+            right: 5%;
+        }
+
+        &__wrapper {
+            margin-bottom: 75px;
+        }
+
+        &__description {
+            max-width: 31%;
+        }
+
+        &__heading {
+            // подходит только для Mozila, для остальных не нужен
+            //letter-spacing: -0.48px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .stage {
+        &__block {
+            max-width: 88%;
+        }
+        &__description {
+            max-width: 44%;
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .stage {
+        max-width: 100%;
+        &__block {
+            padding: 80px 80px 132px 0;
+            max-width: var(--width-1024-768);
+        }
+
+        &__heading {
+            // подходит только для Mozila, для остальных не нужен
+            //letter-spacing: -0.48px;
+        }
+
+        &__description {
+            max-width: 47%;
+            margin-bottom: 57px;
+        }
+
+        &__wrapper {
+            margin-bottom: 73px;
+        }
+
+        &__icon-wrapper {
+            width: 43%;
+            top: 18%;
+            right: 3%;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .stage {
+        &__block {
+            padding: 80px 80px 132px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px){
+    .stage {
+        max-width:100%;
+        background-image: url(../../../public/images/stageCreate/stages-bg-390.webp);
+        &__block {
+            padding: 60px 0 435.45px 0;
+            max-width: var(--width-768-280);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 10px;
+        }
+
+        &__description {
+            max-width: 100%;
+            margin-bottom: 38px;
+        }
+
+        &__heading {
+            margin-bottom: 13px;
+            font-weight: 600;
+            font-size: var(--text-base);
+            line-height: 20.8px;
+            letter-spacing: var(--font-description-letter);
+        }
+
+        &__icon-wrapper {
+            width: 87%;
+            height: 40%;
+            top: 50%;
+            right: 9%;
+        }
+
+        &__wrapper {
+            margin-bottom: 38px;
+        }
+
+        &__item {
+            width: 8px;
+            height: 10px;
+            padding: 10px 11px;
+            border-radius: 36px;
+            line-height: 23.74px;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-right: 8.5px;
+
+                &::after {
+                    width: 8px;
+                    top: 10px;
+                    right: -8px;
+                }
+            }
+        }
+
+        &__btn {
+            padding: 17px 25px;
+            width: 70%;
+            margin-bottom: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .stage {
+        &__description {
+            max-width: 98%;
+        }
+
+        &__btn {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .stage {
+        &__icon-wrapper {
+            width: 100%;
+            height: 39%;
+            position: absolute;
+            top: 51%;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .stage {
+        &__icon-wrapper {
+            width: 83%;
+            height: 31%;
+            top: 58%;
+            right: 8%;
+        }
+    }
+}
+
+
+
