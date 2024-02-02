@@ -1,5 +1,4 @@
 import AboutUs from '../AboutUs';
-import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Faq from '../Faq';
 import Footer from '../Footer';
@@ -12,7 +11,6 @@ import Portfolio from '../Portfolio';
 import Promo from '../Promo';
 import Recommendations from '../Recommendations';
 import Services from '../Services';
-
 import StageCreate from '../StageCreate';
 import TechStack from '../TechStack';
 import Choice from '../Сhoice';
@@ -24,24 +22,18 @@ export default function MainPage() {
 			{/* <Modal /> */}
 			<Navbar />
 			<Promo />
-			<ComponentsContainer>
-				{/* <ProjectDescriptionModal /> */}
-				{/* <Popup isSuccess={true} /> */}
-				<AboutUs />
-				<Services />
-				<Portfolio />
-			</ComponentsContainer>
+			<AboutUs />
+			<Services />
+			<Portfolio />
 			<StageCreate />
 			<Recommendations />
 			<Choice />
 			<Guarantee />
 			<Interaction />
 			<TechStack />
-			<ComponentsContainer>
-				<Faq />
-				<Contacts />
-				<Footer />
-			</ComponentsContainer>
+			<Faq />
+			<Contacts />
+			<Footer />
 		</main>
 	);
 }
