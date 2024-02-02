@@ -80,7 +80,7 @@
 		flex-direction: column;
 		align-items: end;
 		justify-content: flex-start;
-		gap: calc((100vh - 326px) * 0.36); // 32vh;
+		gap: calc((100vh - 326px) * 0.35); // 32vh;
 		font: var(--font-block-title);
 		background-color: lightgray;
 		background: url('/images/header/nav-bg.png');
@@ -89,8 +89,16 @@
 		border-radius: 0;
 		border: 1px solid white;
 
+		&.hidden {
+			display: none;
+		}
+
 		&__close-btn {
 			display: block;
+			width: 48px;
+			height: 48px;
+			display: grid;
+			place-items: center;
 			border: none;
 			background-color: transparent;
 		}
@@ -160,11 +168,6 @@
 @media screen and (max-width: 395px) {
 	.navbar {
 		gap: calc((100vh - 290px) * 0.21);
-		padding: 49px 9px 9px;
-	}
-
-	.nav-icons {
-		width: 82%;
-		top: 49px;
+		padding: 21px 9px 9px;
 	}
 }
