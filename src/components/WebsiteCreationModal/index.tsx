@@ -1,11 +1,11 @@
-import { data } from '@/constants/ModalWindow';
+import { data } from '@/constants/WebsiteCreationModal';
 
 import IconClose from '../../../public/images/modal/IconClose';
 import ModalBackground from '../ModalBackground';
 import ModalItem from './ModalItem';
 import styles from './style.module.scss';
 
-export default function Modal() {
+export default function WebsiteCreationModal() {
 	return (
 		<ModalBackground>
 			<div className={styles['modal']}>
