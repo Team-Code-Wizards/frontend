@@ -5,7 +5,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { v4 as uuidv4 } from 'uuid';
 
 import ArrwoChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
 import PortfolioCard from './Card';
@@ -63,7 +62,7 @@ export default function Portfolio() {
 						style={{ width: 'fit-content' }}
 						key={el.title}
 					>
-						<PortfolioCard key={uuidv4()} {...el} />
+						<PortfolioCard key={el.id} {...el} />
 					</SwiperSlide>
 				))}
 			</Swiper>
