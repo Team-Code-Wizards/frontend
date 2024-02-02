@@ -64,7 +64,6 @@ export default function Portfolio() {
 					>
 						<PortfolioCard key={el.id} {...el} />
 					</SwiperSlide>
-
 				))}
 			</Swiper>
 			<div id="portfolio-pagination" className={styles.portfolio__pagination} />
