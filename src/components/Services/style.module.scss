@@ -1,5 +1,6 @@
 .wrapper {
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .services {
@@ -156,7 +157,7 @@
 @media screen and (max-width: 1280px) {
   .services {
     //padding: 85px 180px 150px 80px;
-    max-width: 1040px;
+    max-width: 1024px;
     padding: 0px;
     padding-bottom: 150px;
   }
@@ -205,6 +206,10 @@
       align-items: baseline;
       bottom: -2px;
       left: 12px;
+
+      &_old {
+        bottom: 1px;
+      }
     }
   }
 }
@@ -245,6 +250,10 @@
       align-items: baseline;
       bottom: -2px;
       left: 12px;
+
+      &_old {
+        bottom: 0px;
+      }
     }
     &__popup {
       background: none;
