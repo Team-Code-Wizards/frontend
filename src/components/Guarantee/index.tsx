@@ -12,7 +12,7 @@ import GuaranteeCard from './GuaranteeCard/index';
 import styles from './styles.module.scss';
 
 function Guarantee() {
-	const [width, setWidth] = useState(window.innerWidth);
+	const [width, setWidth] = useState(1440);
 	useEffect(() => {
 		const handleResizeWindow = () => setWidth(window.innerWidth);
 		window.addEventListener('resize', handleResizeWindow);
