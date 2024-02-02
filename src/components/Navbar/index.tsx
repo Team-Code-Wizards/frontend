@@ -1,5 +1,3 @@
-import classNames from 'classnames';
-
 import CloseIcon from '../../../public/images/header/CloseIcon';
 import LogoIcon from '../../../public/images/header/LogoIcon';
 import MenuIcon from '../../../public/images/header/MenuIcon';
@@ -19,7 +17,7 @@ export default function Navbar() {
 					<MenuIcon />
 				</button>
 			</div>
-			<nav className={classNames(styles['navbar'], styles['hidden'])}>
+			<nav className={styles['navbar']}>
 				<button className={styles['navbar__close-btn']}>
 					<CloseIcon />
 				</button>
