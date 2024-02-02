@@ -1,5 +1,5 @@
 .promo {
-	// background-image: url('../../../public/images/promo/promo-bg-1440.webp');
+	background-image: url('../../../public/images/promo/promo-bg-1440.webp');
 	background-repeat: no-repeat;
 	background-position: center;
 	color: var(--color-text);
@@ -118,7 +118,7 @@
 
 @media screen and (max-width: 915px) {
 	.promo {
-		// background-image: url('../../../public/images/promo/promo-bg-834.webp');
+		background-image: url('../../../public/images/promo/promo-bg-834.webp');
 
 		&__container {
 			width: 92.1%;
@@ -173,7 +173,7 @@
 
 @media screen and (max-width: 395px) {
 	.promo {
-		// background-image: url('../../../public/images/promo/promo-bg-390.webp');
+		background-image: url('../../../public/images/promo/promo-bg-390.webp');
 
 		&__container {
 			width: 82%;

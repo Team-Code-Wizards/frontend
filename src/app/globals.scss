@@ -9,6 +9,8 @@
     url("../fonts/RG-StandardSemibold.ttf") format("ttf");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
+
 }
 
 @font-face {
@@ -17,6 +19,8 @@
     url("../fonts/Involve-Medium.woff") format("woff"),
     url("../fonts/Involve-Medium.woff2") format("woff2");
   font-style: normal;
+  font-display: swap;
+
 }
 
 :root {

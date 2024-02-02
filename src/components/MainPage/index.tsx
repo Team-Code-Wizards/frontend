@@ -1,4 +1,5 @@
 import AboutUs from '../AboutUs';
+import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Faq from '../Faq';
 import Footer from '../Footer';
@@ -20,20 +21,26 @@ export default function MainPage() {
 	return (
 		<main className={styles.main}>
 			{/* <Modal /> */}
+			{/* <ProjectDescriptionModal /> */}
+			{/* <Popup isSuccess={true} /> */}
 			<Navbar />
 			<Promo />
-			<AboutUs />
-			<Services />
-			<Portfolio />
+			<ComponentsContainer>
+				<AboutUs />
+				<Services />
+				<Portfolio />
+			</ComponentsContainer>
 			<StageCreate />
 			<Recommendations />
 			<Choice />
 			<Guarantee />
 			<Interaction />
 			<TechStack />
-			<Faq />
-			<Contacts />
-			<Footer />
+			<ComponentsContainer>
+				<Faq />
+				<Contacts />
+				<Footer />
+			</ComponentsContainer>
 		</main>
 	);
 }
