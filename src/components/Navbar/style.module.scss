@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 16px;
 	z-index: 300;
-	min-width: var(--block-max-width);
+	width: var(--block-max-width);
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
@@ -16,8 +16,14 @@
 	font-family: var(--involve-font);
 	font-size: 16px;
 	font-weight: 500;
+	&__close-btn {
+		display: none;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 
-	svg {
+	&__logo {
 		color: var(--color-text);
 		transition: color 0.2s ease;
 
@@ -53,5 +59,122 @@
 		&:hover {
 			color: var(--color-lilac);
 		}
+	}
+}
+
+.nav-icons {
+	display: none;
+	z-index: 300;
+}
+
+@media screen and (max-width: 1280px) {
+	.navbar {
+		width: var(--width-1280-1024);
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.navbar {
+		display: none;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: 48vw;
+		padding: 33px;
+		flex-direction: column;
+		align-items: end;
+		justify-content: flex-start;
+		gap: calc((100vh - 326px) * 0.35); // 32vh;
+		font: var(--font-block-title);
+		background-color: lightgray;
+		background: url('/images/header/nav-bg.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 0;
+		border: 1px solid white;
+
+		&.hidden {
+			display: none;
+		}
+
+		&__close-btn {
+			display: block;
+			width: 48px;
+			height: 48px;
+			display: grid;
+			place-items: center;
+			border: none;
+			background-color: transparent;
+		}
+
+		&__logo,
+		&__tel {
+			display: none;
+		}
+
+		&__link-list {
+			flex-direction: column;
+			gap: 23px;
+			align-items: end;
+			font: var(--font-block-title);
+			font-size: var(--text-lg);
+		}
+	}
+
+	.nav-icons {
+		position: fixed;
+		top: 21px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 92%;
+
+		& > * {
+			display: grid;
+			place-items: center;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&__tel {
+			width: 54px;
+			height: 54px;
+			border-radius: 100%;
+			border: none;
+			background-color: rgba(256, 256, 256, 0.1);
+		}
+
+		&__menu {
+			width: 48px;
+			height: 48px;
+			border: none;
+			background-color: transparent;
+			z-index: 500;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.navbar {
+		width: 65vw;
+		font-size: 20px;
+
+		&__link-list {
+			font: var(--font-title-description);
+			gap: 30px;
+		}
+	}
+
+	.nav-icons {
+		width: 82%;
+	}
+}
+
+@media screen and (max-width: 395px) {
+	.navbar {
+		gap: calc((100vh - 290px) * 0.21);
+		padding: 21px 9px 9px;
 	}
 }
