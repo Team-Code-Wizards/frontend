@@ -16,9 +16,11 @@
 	font-family: var(--involve-font);
 	font-size: 16px;
 	font-weight: 500;
-
 	&__close-btn {
 		display: none;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	&__logo {
@@ -62,6 +64,7 @@
 
 .nav-icons {
 	display: none;
+	z-index: 300;
 }
 
 @media screen and (max-width: 1280px) {
@@ -124,11 +127,14 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 89%;
+		width: 92%;
 
 		& > * {
 			display: grid;
 			place-items: center;
+			&:hover {
+				cursor: pointer;
+			}
 		}
 
 		&__tel {

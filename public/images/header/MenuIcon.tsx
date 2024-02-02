@@ -10,9 +10,9 @@ export default function MenuIcon() {
 			<path
 				d="M2 22H30M2 12H30M2 2H30"
 				stroke="white"
-				stroke-width="4"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeWidth="4"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	);

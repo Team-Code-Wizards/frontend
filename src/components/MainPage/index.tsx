@@ -27,7 +27,7 @@ export default function MainPage() {
 				{/* <ProjectDescriptionModal /> */}
 				{/* <Popup isSuccess={true} /> */}
 				<AboutUs />
-				{/* <Services /> */}
+				{/* <Services />  */}
 				<Portfolio />
 			</ComponentsContainer>
 			<StageCreate />
