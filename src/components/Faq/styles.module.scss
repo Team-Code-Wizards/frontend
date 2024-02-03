@@ -4,8 +4,8 @@
   max-width: var(--block-max-width);
   display: flex;
   justify-content: space-between;
-  padding-bottom: 170px;
-  padding-top: 50px;
+  padding-bottom: 224px;
+  padding-top: 136px;
   gap: 120px;
 
   &__title {
@@ -21,20 +21,25 @@
     text-align: start;
   }
 }
+
 @media screen and (max-width: 1439px) {
   .faq {
     width: 88%;
   }
 }
+
 @media screen and (max-width: 1280px) {
   .faq {
     width: 80%;
     max-width: 1024px;
     gap: 10px;
+    padding-top: 113px;
+    padding-bottom: 189px;
 
     &__title {
       width: 54%;
     }
+
     &__list {
       width: 73%;
       gap: 27px;
@@ -60,9 +65,13 @@
     justify-content: center;
     flex-direction: column;
     gap: 42px;
+    padding-top: 65px;
+    padding-bottom: 163px;
+
     &__title {
       width: 50%;
     }
+
     &__list {
       width: 100%;
       gap: 23px;
@@ -76,13 +85,14 @@
     max-width: 320px;
     padding-bottom: 40px;
     gap: 43px;
+    padding-top: 52px;
 
     &__title {
       width: 100%;
     }
 
     &__list {
-      gap: 49px;
+      gap: 48px;
     }
   }
 }

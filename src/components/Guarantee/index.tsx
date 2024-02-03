@@ -13,7 +13,9 @@ import styles from './styles.module.scss';
 
 function Guarantee() {
 	const [width, setWidth] = useState(1440);
+
 	useEffect(() => {
+		setWidth(window.innerWidth);
 		const handleResizeWindow = () => setWidth(window.innerWidth);
 		window.addEventListener('resize', handleResizeWindow);
 		return () => {

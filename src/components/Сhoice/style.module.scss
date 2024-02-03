@@ -3,6 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 50px;
+	padding-top: 66px;
 
 	&__title {
 		font: var(--font-block-title);
@@ -20,7 +21,8 @@
 @media screen and (max-width: 1280px) {
 	.choice {
 		max-width: var(--width-1280-1024);
-		row-gap: 60px;
+		row-gap: 56px;
+		padding-top: 77px;
 
 		&__list {
 			grid-template-columns: 0fr 1.3fr 0.65fr 1fr 0.94fr 0fr;
@@ -31,6 +33,7 @@
 @media screen and (min-width: 834px) and (max-width: 1084px) {
 	.choice {
 		max-width: var(--width-1024-768);
+		padding-top: 59px;
 		&__list {
 			grid-template-columns: 0fr 1.45fr 0.44fr 1fr 0.9fr 0fr;
 		}
@@ -41,7 +44,7 @@
 	.choice {
 		max-width: var(--width-768-280);
 		row-gap: 30px;
-
+		padding-top: 16px;
 		&__title {
 			font-size: 40px;
 		}
