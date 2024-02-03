@@ -3,9 +3,6 @@
 import { recommendationsPreviews } from '@/constants/Recommendations';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/scss';
-import 'swiper/scss/pagination';
-import { v4 as uuidv4 } from 'uuid';
 
 import ArrowChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
 import RecommendationPreview from './RecommendationPreview';
@@ -57,7 +54,7 @@ export default function Recommendations() {
 						modifier: 2.5,
 					}}
 					speed={1000}
-					loop={true}
+					loop
 					className={styles['recommendations-swiper-container']}
 					modules={[EffectCoverflow, Navigation, Pagination]}
 					navigation={{
@@ -90,15 +87,11 @@ export default function Recommendations() {
 					{recommendationsPreviews.map((item) => {
 						return (
 							<SwiperSlide
-								key={uuidv4()}
+								key={item.id}
 								className={styles['recommendations-swiper-slide']}
 							>
 								{({ isActive }) => (
-									<RecommendationPreview
-										key={uuidv4()}
-										{...item}
-										isActive={isActive}
-									/>
+									<RecommendationPreview {...item} isActive={isActive} />
 								)}
 							</SwiperSlide>
 						);
