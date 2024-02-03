@@ -27,6 +27,7 @@
 
 		&:hover {
 			background-color: #a6aeff;
+			cursor: pointer;
 		}
 
 		&:active {
@@ -58,7 +59,7 @@
 		background-position: 99%;
 		border-radius: 5px;
 		border: none;
-
+		cursor: pointer;
 		transition: 0.3s background-position ease-in-out;
 
 		&:focus {

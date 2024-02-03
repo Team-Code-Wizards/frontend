@@ -1,6 +1,6 @@
+import IconClose from '&/images/modal/IconClose';
 import { data } from '@/constants/WebsiteCreationModal';
 
-import IconClose from '../../../public/images/modal/IconClose';
 import ModalBackground from '../ModalBackground';
 import ModalItem from './ModalItem';
 import styles from './style.module.scss';
