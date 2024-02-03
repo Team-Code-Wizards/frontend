@@ -10,7 +10,13 @@ export const recommendationsPreviews: IRecomendationPreview[] = [
 		title: 'Василёк',
 		info: 'Ивановский трикотаж',
 		image: leftSlide,
-		className: '_left',
+		isActive: false,
+	},
+	{
+		id: '1997bad5-2faa-460b-8a13-10e50a1fbb8f',
+		title: 'Чистый город',
+		info: 'Вывоз мусора',
+		image: rightSlide,
 		isActive: false,
 	},
 	{
@@ -18,15 +24,6 @@ export const recommendationsPreviews: IRecomendationPreview[] = [
 		title: 'Рент-зона',
 		info: 'Аренда строительной техники',
 		image: centerSlide,
-		className: '_center',
-		isActive: true,
-	},
-	{
-		id: '1997bad5-2faa-460b-8a13-10e50a1fbb8f',
-		title: 'Чистый город',
-		info: 'Вывоз мусора',
-		image: rightSlide,
-		className: '_right',
 		isActive: false,
 	},
 ];

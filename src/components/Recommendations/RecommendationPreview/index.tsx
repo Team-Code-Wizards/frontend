@@ -5,16 +5,20 @@ import IRecommendationPreview from './interface';
 import styles from './style.module.scss';
 
 export default function RecommendationPreview({
+	title,
+	info,
 	image,
-	className,
+	isActive,
 }: IRecommendationPreview) {
-	return className === '_center' ? (
+	return isActive ? (
 		<div className={styles['main-card-container']}>
-			<Image
-				src={image}
-				alt="video-preview"
-				className={styles[`card-image${className}`]}
-			/>
+			<div className={styles['card-container']}>
+				<Image
+					src={image}
+					alt="video-preview"
+					className={styles[`card-image`]}
+				/>
+			</div>
 			<div className={styles['card__details']}>
 				<Image
 					className={styles['card__details_circle']}
@@ -22,20 +26,14 @@ export default function RecommendationPreview({
 					alt="circle"
 				/>
 				<div className={styles['card__details__container']}>
-					<h3 className={styles['card__details_title']}>Рент-зона</h3>
-					<h4 className={styles['card__details_information']}>
-						Аренда строительной техники
-					</h4>
+					<h3 className={styles['card__details_title']}>{title}</h3>
+					<h4 className={styles['card__details_information']}>{info}</h4>
 				</div>
 			</div>
 		</div>
 	) : (
 		<div className={styles['card-container']}>
-			<Image
-				src={image}
-				alt="video-preview"
-				className={styles[`card-image${className}`]}
-			/>
+			<Image src={image} alt="video-preview" className={styles[`card-image`]} />
 		</div>
 	);
 }

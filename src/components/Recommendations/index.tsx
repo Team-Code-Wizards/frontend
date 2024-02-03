@@ -1,9 +1,10 @@
 'use client';
 
 import { recommendationsPreviews } from '@/constants/Recommendations';
-import { Navigation, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
+import 'swiper/scss/pagination';
 import { v4 as uuidv4 } from 'uuid';
 
 import ArrowChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
@@ -11,6 +12,14 @@ import RecommendationPreview from './RecommendationPreview';
 import styles from './style.module.scss';
 
 export default function Recommendations() {
+	const pagination = {
+		el: '#recommendation-pagination',
+		clickable: true,
+		renderBullet: function (index: number, className: string) {
+			return `<span class='${className} ${styles['recommendations__pagination-bullet']}'></span>`;
+		},
+	};
+
 	return (
 		<section className={styles['recommendations']}>
 			<div className={styles['recommendations__container']}>
@@ -37,15 +46,45 @@ export default function Recommendations() {
 				</div>
 
 				<Swiper
-					spaceBetween={50}
-					slidesPerView={3}
+					effect={'coverflow'}
+					grabCursor={true}
+					slidesPerView={'auto'}
 					centeredSlides={true}
+					pagination={pagination}
+					coverflowEffect={{
+						rotate: 0,
+						depth: 150,
+						modifier: 2.5,
+					}}
+					speed={1000}
 					loop={true}
-					className={styles['card__container']}
-					modules={[Navigation, Pagination]}
+					className={styles['recommendations-swiper-container']}
+					modules={[EffectCoverflow, Navigation, Pagination]}
 					navigation={{
 						nextEl: '#swiper-forward',
 						prevEl: '#swiper-back',
+					}}
+					breakpoints={{
+						1280: {
+							coverflowEffect: {
+								stretch: -60,
+							},
+						},
+						835: {
+							coverflowEffect: {
+								stretch: -50,
+							},
+						},
+						600: {
+							coverflowEffect: {
+								stretch: -40,
+							},
+						},
+						0: {
+							coverflowEffect: {
+								stretch: -100,
+							},
+						},
 					}}
 				>
 					{recommendationsPreviews.map((item) => {
@@ -54,11 +93,21 @@ export default function Recommendations() {
 								key={uuidv4()}
 								className={styles['recommendations-swiper-slide']}
 							>
-								<RecommendationPreview key={uuidv4()} {...item} />
+								{({ isActive }) => (
+									<RecommendationPreview
+										key={uuidv4()}
+										{...item}
+										isActive={isActive}
+									/>
+								)}
 							</SwiperSlide>
 						);
 					})}
 				</Swiper>
+				<div
+					id="recommendation-pagination"
+					className={styles.recommendation__pagination}
+				/>
 			</div>
 		</section>
 	);
