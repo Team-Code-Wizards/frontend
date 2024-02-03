@@ -8,7 +8,7 @@
     position: relative;
 
     &__block {
-        padding: 80px 0 204px 0;
+        padding: 27px 0 204px 0;
         width: 100%;
         max-width: var(--block-max-width);
         margin: 0 auto;
@@ -25,7 +25,7 @@
         width: 42%;
         height: 76%;
         position: absolute;
-        top: 10%;
+        top: 5%;
         right: 8%;
         object-fit: contain;
     }
@@ -95,8 +95,6 @@
     &__heading {
         font: var(--font-title-description);
         margin-bottom: 12px;
-        // подходит только для Mozila, для остальных не нужен
-        // letter-spacing: -0.48px;
     }
 
     &__description {
@@ -137,7 +135,7 @@
 @media screen and (max-width: 1283px) {
     .stage {
         &__block {
-            padding: 87px 0 132px 0;
+            padding: 167px 0 132px 0;
             max-width: 80%;
         }
 
@@ -155,10 +153,6 @@
             max-width: 31%;
         }
 
-        &__heading {
-            // подходит только для Mozila, для остальных не нужен
-            //letter-spacing: -0.48px;
-        }
     }
 }
 
@@ -177,13 +171,8 @@
     .stage {
         max-width: 100%;
         &__block {
-            padding: 80px 80px 132px 0;
+            padding: 120px 80px 132px 0;
             max-width: var(--width-1024-768);
-        }
-
-        &__heading {
-            // подходит только для Mozila, для остальных не нужен
-            //letter-spacing: -0.48px;
         }
 
         &__description {
@@ -216,7 +205,7 @@
         max-width:100%;
         background-image: url(../../../public/images/stageCreate/stages-bg-390.webp);
         &__block {
-            padding: 60px 0 435.45px 0;
+            padding: 101px 0 432.45px 0;
             max-width: var(--width-768-280);
             display: flex;
             flex-direction: column;

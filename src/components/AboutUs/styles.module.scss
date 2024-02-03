@@ -82,7 +82,7 @@
 @media screen and (max-width: 1280px) {
 	.about-us {
 		max-width: var(--width-1280-1024);
-
+		padding-top: 12px;
 		&__h2-title {
 			margin-bottom: 16px;
 		}
@@ -112,6 +112,7 @@
 
 @media screen and (min-width: 834px) and (max-width: 1084px) {
 	.about-us {
+		padding-top: 122px;
 		max-width: var(--width-1024-768);
 		&__h3-title {
 			width: 57%;
@@ -153,7 +154,7 @@
 
 		&__main {
 			flex-direction: column;
-			row-gap: 18px;
+			row-gap: 24px;
 		}
 
 		&__goals {

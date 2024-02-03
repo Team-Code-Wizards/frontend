@@ -12,7 +12,7 @@
 	&__container {
 		max-width: var(--block-max-width);
 		margin: 0 auto;
-		padding-block: 80px 56px;
+		padding-block: 74px 56px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -22,6 +22,7 @@
 		@media screen and (max-width: 1439px) {
 			max-width: 80%;
 			padding-block: 80px;
+			padding-top: 104px;
 		}
 
 		@media screen and (max-width: 1279px) {
