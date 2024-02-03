@@ -12,7 +12,8 @@ import GuaranteeCard from './GuaranteeCard/index';
 import styles from './styles.module.scss';
 
 function Guarantee() {
-	const [width, setWidth] = useState(1440);
+	// const [width, setWidth] = useState(() => (typeof window !== 'undefined' ? window.innerWidth : 800));
+	const [width, setWidth] = useState(() => (window ? window.innerWidth : 800));
 	useEffect(() => {
 		const handleResizeWindow = () => setWidth(window.innerWidth);
 		window.addEventListener('resize', handleResizeWindow);

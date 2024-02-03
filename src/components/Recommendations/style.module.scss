@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 1280px) and (max-width: 1439px) {
 	.recommendations {
-		padding: 135px 0;
+		padding: 75px 0;
 	}
 
 	.card {
@@ -106,7 +106,7 @@
 
 @media screen and (max-width: 835px) {
 	.recommendations {
-		padding: 80px 0;
+		padding: 91px 0;
 
 		&__container {
 			width: 92%;
@@ -129,9 +129,10 @@
 
 @media screen and (max-width: 650px) {
 	.recommendations {
+		padding-top: 0;
 		&__container {
 			width: 82%;
-			margin: 60px auto;
+			margin: 5px auto;
 			padding: 57px 0 79px;
 		}
 		&__arrows {

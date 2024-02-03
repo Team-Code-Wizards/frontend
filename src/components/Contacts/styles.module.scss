@@ -220,7 +220,7 @@
 	  width: 90%;
 			&__body {
 	  	  flex-direction: column;
-	  	  row-gap: 91px;
+	  	  row-gap: 66px;
 	    }
 	}
 
@@ -236,7 +236,7 @@
 		@media screen and (max-width: 390px) {
 			width: 82%;
 			max-width: 320px;
-			padding: 60px 0 0;
+			padding: 66px 0 0;
 			background: transparent;
 		}
 	}
