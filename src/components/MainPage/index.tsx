@@ -14,13 +14,16 @@ import Recommendations from '../Recommendations';
 import Services from '../Services';
 import StageCreate from '../StageCreate';
 import TechStack from '../TechStack';
+//import ProjectDescriptionModal from "../ProjectDescriptionModal";
+//import Popup from '../Popup';
+import WebsiteCreationModal from '../WebsiteCreationModal';
 import Choice from '../Сhoice';
 import styles from './style.module.scss';
 
 export default function MainPage() {
 	return (
 		<main className={styles.main}>
-			{/* <Modal /> */}
+			<WebsiteCreationModal />
 			{/* <ProjectDescriptionModal /> */}
 			{/* <Popup isSuccess={true} /> */}
 			<Navbar />
