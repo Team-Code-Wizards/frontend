@@ -3,11 +3,11 @@ import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Faq from '../Faq';
 import Footer from '../Footer';
-import Guarantee from '../Guarantee/index';
+//import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
 import Navbar from '../Navbar';
 // import Popup from '../Popup';
-import Portfolio from '../Portfolio';
+//import Portfolio from '../Portfolio';
 import Promo from '../Promo';
 import Recommendations from '../Recommendations';
 import Services from '../Services';
@@ -30,12 +30,12 @@ export default function MainPage() {
 			<ComponentsContainer>
 				<AboutUs />
 				<Services />
-				<Portfolio />
+				{/*<Portfolio /> */}
 			</ComponentsContainer>
 			<StageCreate />
 			<Recommendations />
 			<Choice />
-			<Guarantee />
+			{/* <Guarantee /> */}
 			<Interaction />
 			<TechStack />
 			<ComponentsContainer>
