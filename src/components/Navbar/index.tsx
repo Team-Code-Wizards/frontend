@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+
 import CloseIcon from '../../../public/images/header/CloseIcon';
 import LogoIcon from '../../../public/images/header/LogoIcon';
 import MenuIcon from '../../../public/images/header/MenuIcon';
@@ -7,18 +11,28 @@ import styles from './style.module.scss';
 //TODO добавить плавный скролл до разделов и айди отзывов
 
 export default function Navbar() {
+	const [isNavOpen, setIsNavOpen] = useState(false);
+
 	return (
 		<>
 			<div className={styles['nav-icons']}>
-				<button className={styles['nav-icons__tel']}>
+				<a className={styles['nav-icons__tel']} href="tel:+79504241338">
 					<TelIcon />
-				</button>
-				<button className={styles['nav-icons__menu']}>
+				</a>
+				<button
+					onClick={() => setIsNavOpen(true)}
+					className={styles['nav-icons__menu']}
+				>
 					<MenuIcon />
 				</button>
 			</div>
-			<nav className={styles['navbar']}>
-				<button className={styles['navbar__close-btn']}>
+			<nav
+				className={`${styles['navbar']} ${isNavOpen ? styles['active'] : ''}`}
+			>
+				<button
+					onClick={() => setIsNavOpen(false)}
+					className={styles['navbar__close-btn']}
+				>
 					<CloseIcon />
 				</button>
 				<a href="#promo" className={styles['navbar__logo']}>
