@@ -1,59 +1,88 @@
 .tech-stack {
+	width: 100%;
+	background-image: url('../../../public/images/techStack/tech-stack-background.webp');
+	background-position-y: top;
+	background-position-x: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
+	-moz-box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
+	box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
+
 	&__container {
+		max-width: var(--block-max-width);
+		margin: 0 auto;
+		padding-block: 74px 56px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		row-gap: 60px;
-		width: 100%;
-		padding: 90px;
-		background-image: url('../../../public/images/techStack/tech-stack-background.png');
-		background-position-y: top;
-		background-position-x: left;
-		background-size: contain;
-		background-repeat: no-repeat;
 		color: var(--color-text);
-		-webkit-box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
-		-moz-box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
-		box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
+
+		@media screen and (max-width: 1439px) {
+			max-width: 80%;
+			padding-block: 80px;
+			padding-top: 104px;
+		}
+
+		@media screen and (max-width: 1279px) {
+			max-width: 92%;
+		}
+
+		@media screen and (max-width: 833px) {
+			max-width: 82%;
+			padding-block: 60px 34px;
+			row-gap: 58px;
+		}
 	}
 
 	&__head {
-		display: flex;
-		justify-content: space-between;
-		max-width: var(--block-max-width);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		gap: 37px 20px;
+
+		@media screen and (max-width: 730px) {
+			grid-template-columns: 1fr;
+		}
+
+		@media screen and (max-width: 520px) {
+			gap: 35px 20px;
+		}
 	}
 
 	&__banner {
 		display: flex;
 		flex-direction: column;
-		row-gap: 20px;
-		font-family: var(--rg-font);
+		margin-top: -11px;
 	}
 
 	&__title {
-		font-size: var(--text-xl);
-		line-height: 0%;
+		font: var(--font-block-title);
 	}
 
 	&__subtitle {
-		font-size: var(--text-base);
-		line-height: 300%;
+		width: calc(100% - 20px);
+		font: var(--font-title-description);
+
+		@media screen and (max-width: 1024px) {
+			width: 100%;
+		}
 	}
 
 	&__short-description {
-		margin-top: -10px;
+		padding: 38px 20px;
 		display: flex;
 		column-gap: 10px;
-		font-family: var(--involve-font);
-		font-size: 16px;
-		color: var(--color-lilac);
-		line-height: 115%;
-		letter-spacing: -0.48px;
-		flex-basis: calc(50% - 10px);
 		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(7.5px);
 		border-radius: 10px;
-		padding: 40px 20px;
+		color: var(--color-lilac);
+		font: var(--font-description-main);
+
+		@media screen and (max-width: 520px) {
+			padding: 18px 20px;
+		}
 
 		svg {
 			min-width: 24px;
@@ -63,6 +92,10 @@
 	&__main {
 		display: flex;
 		flex-direction: column;
-		row-gap: 40px;
+		row-gap: 38px;
+
+		@media screen and (max-width: 520px) {
+			row-gap: 33px;
+		}
 	}
 }

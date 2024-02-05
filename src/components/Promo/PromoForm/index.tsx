@@ -1,6 +1,5 @@
 import Input from '@/components/Contacts/ContactsForm/Input';
 import { inputs } from '@/constants/Promo';
-import { v4 as uuidv4 } from 'uuid';
 
 import IPromoForm from './interface';
 import styles from './styles.module.scss';
@@ -16,7 +15,7 @@ export default function Form({ onSubmit }: IPromoForm) {
 				</span>
 			</p>
 			{inputs.map((el) => (
-				<Input key={uuidv4()} {...el} />
+				<Input key={el.id} {...el} />
 			))}
 			<button className={styles['promo-form__button']} type="submit">
 				Отправить

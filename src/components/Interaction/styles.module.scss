@@ -1,7 +1,7 @@
 .interaction {
 	width: 100%;
 	color: var(--color-text);
-	background-image: url('/images/interaction/interaction-background.png');
+	background-image: url('/images/interaction/interaction-background.webp');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: var(--color-bg-black);
@@ -50,7 +50,7 @@
 
 	@media screen and (max-width: 835px) {
 		&__wrapper {
-			margin: 49px auto 33px;
+			margin: 67px auto 33px;
 		}
 
 		&__title {

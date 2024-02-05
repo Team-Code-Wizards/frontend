@@ -1,13 +1,14 @@
-import attention from '../../../public/images/interaction/1-attention.png';
-import communication from '../../../public/images/interaction/2-communication.png';
-import design from '../../../public/images/interaction/3-design.png';
-import approach from '../../../public/images/interaction/4-approach.png';
-import testing from '../../../public/images/interaction/5-testing.png';
-import support from '../../../public/images/interaction/6-support.png';
+import attention from '../../../public/images/interaction/1-attention.webp';
+import communication from '../../../public/images/interaction/2-communication.webp';
+import design from '../../../public/images/interaction/3-design.webp';
+import approach from '../../../public/images/interaction/4-approach.webp';
+import testing from '../../../public/images/interaction/5-testing.webp';
+import support from '../../../public/images/interaction/6-support.webp';
 import { IInteractionStep } from './type';
 
 export const data: IInteractionStep[] = [
 	{
+		id: 'd7a344f2-7043-4e91-96a8-623a55bf1b43',
 		number: 1,
 		title: 'Внимание к Деталям и Понимание Потребностей:',
 		description:
@@ -19,6 +20,7 @@ export const data: IInteractionStep[] = [
 	},
 
 	{
+		id: '1ed569ae-dc94-44df-9aac-04f045ae04f7',
 		number: 2,
 		title: 'Прозрачность и Коммуникация:',
 		description:
@@ -30,6 +32,7 @@ export const data: IInteractionStep[] = [
 	},
 
 	{
+		id: '98d45fea-bcec-4245-b775-2f6cebc52755',
 		number: 3,
 		title: 'Дизайн с Фокусом на Пользователе:',
 		description:
@@ -41,6 +44,7 @@ export const data: IInteractionStep[] = [
 	},
 
 	{
+		id: 'eb3a8e4b-8d45-4afd-83a4-830d9b395af4',
 		number: 4,
 		title: 'Гибкость и Индивидуальный Подход:',
 		description:
@@ -51,6 +55,7 @@ export const data: IInteractionStep[] = [
 	},
 
 	{
+		id: '4242ecac-fc9c-42b2-bd2a-6d415785e557',
 		number: 5,
 		title: 'Тестирование и Обратная Связь:',
 		description:
@@ -61,6 +66,7 @@ export const data: IInteractionStep[] = [
 	},
 
 	{
+		id: 'e32c34a1-d481-4ded-9cb0-d6f77fb3250e',
 		number: 6,
 		title: 'Поддержка и Развитие:',
 		description:

@@ -1,27 +1,72 @@
+'use client';
+
 import { portfolioCards } from '@/constants/Portfolio';
-import { v4 as uuidv4 } from 'uuid';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import ArrwoChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
 import PortfolioCard from './Card';
 import styles from './styles.module.scss';
 
 export default function Portfolio() {
+	const pagination = {
+		el: '#portfolio-pagination',
+		clickable: true,
+		renderBullet: function (index: number, className: string) {
+			return `<span class='${className} ${styles['portfolio__pagination-bullet']}'></span>`;
+		},
+	};
+
 	return (
 		<section id="portfolio" className={styles['portfolio__container']}>
 			<h2 className={styles['portfolio__title']}>Портфолио</h2>
 			<div className={styles['portfolio__btn-group']}>
-				<button className={styles['flipping-btn']} type="button">
+				<button
+					className={styles['flipping-btn']}
+					type="button"
+					id="swiper-back"
+				>
 					<ArrwoChevronIcon direction="left" />
 				</button>
-				<button className={styles['flipping-btn']} type="button">
+				<button
+					className={styles['flipping-btn']}
+					type="button"
+					id="swiper-forward"
+				>
 					<ArrwoChevronIcon direction="right" />
 				</button>
 			</div>
-			<div className={styles['portfolio__card-box']}>
+
+			<Swiper
+				spaceBetween={20}
+				breakpoints={{
+					1441: {
+						slidesPerView: 3,
+					},
+				}}
+				slidesPerView="auto"
+				modules={[Navigation, Pagination]}
+				navigation={{
+					nextEl: '#swiper-forward',
+					prevEl: '#swiper-back',
+				}}
+				pagination={pagination}
+				loop={true}
+				className={styles['portfolio__card-box']}
+			>
 				{portfolioCards.map((el) => (
-					<PortfolioCard key={uuidv4()} {...el} />
+					<SwiperSlide
+						className={styles['portfolio__card-box_item']}
+						style={{ width: 'fit-content' }}
+						key={el.title}
+					>
+						<PortfolioCard key={el.id} {...el} />
+					</SwiperSlide>
 				))}
-			</div>
+			</Swiper>
+			<div id="portfolio-pagination" className={styles.portfolio__pagination} />
 		</section>
 	);
 }
