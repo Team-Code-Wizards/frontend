@@ -1,59 +1,66 @@
+'use client';
+
+import { useState } from 'react';
+
 import Image from 'next/image';
 
-import clockIcon from '../../../public/images/stageCreate/clock-icon.webp';
+import { stages } from '@/constants/StageCreate';
+import { IStagesItem } from '@/constants/StageCreate/type';
+
 import styles from './style.module.scss';
 
 export default function StageCreate() {
+	const stagesProps = stages.map((item) => {
+		return { ...item, active: false };
+	});
+	stagesProps[0].active = true;
+
+	const [activeStage, setActiveStage] = useState(stages[0]);
+	function handleClick(stage: IStagesItem) {
+		setActiveStage(stage);
+	}
+
 	return (
 		<section className={styles['stage']}>
 			<div className={styles['stage__block']}>
 				<h2 className={styles['stage__title']}>Этапы создания сайта</h2>
 				<Image
-					src={clockIcon}
-					alt={'Clock'}
+					src={activeStage.icon}
+					alt={activeStage.alt}
 					className={styles['stage__icon-wrapper']}
 				/>
 				<div className={styles['stage__wrapper']}>
-					<button
-						type="button"
-						className={`${styles['stage__item']} ${styles['stage__item_active']}`}
-					>
-						1
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						2
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						3
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						4
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						5
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						6
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						7
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						8
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						9
-					</button>
-					<button type="button" className={styles['stage__item']}>
-						10
-					</button>
+					{stagesProps.map((item, idx) => {
+						return (
+							<button
+								type="button"
+								className={`${styles['stage__item']} ${
+									activeStage.id == item.id ? styles['stage__item_active'] : ''
+								}`}
+								key={item.id}
+								data-id={item.id}
+								onClick={() => handleClick(item)}
+							>
+								{idx + 1}
+							</button>
+						);
+					})}
 				</div>
-				<h3 className={styles['stage__heading']}>Планирование</h3>
+				<h3 className={styles['stage__heading']}>{activeStage.title}</h3>
 				<p className={styles['stage__description']}>
-					Определение целей, целевой аудитории и основных требований к сайту,
-					создание структуры сайта, и разработка технического задания.
+					{activeStage.description}
 				</p>
-				<button type="button" className={styles['stage__btn']}>
+				<button
+					type="button"
+					className={styles['stage__btn']}
+					data-id={activeStage.next}
+					onClick={() => {
+						return handleClick(
+							stages.filter((item) => item.id == activeStage.next)[0]
+						);
+					}}
+				>
+					{/* Add uid of next stage as a data attribute */}
 					Следующий этап
 				</button>
 			</div>
