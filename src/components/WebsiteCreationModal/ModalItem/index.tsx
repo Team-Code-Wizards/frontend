@@ -6,7 +6,6 @@ import { IModalItemProps } from './interface';
 import styles from './style.module.scss';
 
 //import {IOptions} from '@/constants/WebsiteCreationModal/type';
-//import {IOptions} from '@/constants/WebsiteCreationModal/type';
 
 export default function ModalItem({ item, control }: IModalItemProps) {
 	const [value, setValue] = useState(item.options);
