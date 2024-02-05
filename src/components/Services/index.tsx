@@ -1,11 +1,27 @@
+'use client';
+
+import { useState } from 'react';
+
+import WebsiteCreationModal from '@/components/WebsiteCreationModal';
 import services from '@/constants/Services';
 
 import ArrowDownIcon from '../../../public/images/icons/ArrowDownIcon';
 import styles from './style.module.scss';
 
 export default function Services() {
+	const [openModal, setOpenModal] = useState<boolean>(false);
+
+	const handleOpenModal = (): void => {
+		setOpenModal(true);
+	};
+
+	const handleCloseModal = (): void => {
+		setOpenModal(false);
+	};
+
 	return (
 		<section id="services" className={styles.wrapper}>
+			<WebsiteCreationModal open={openModal} close={handleCloseModal} />
 			<div className={styles['services']}>
 				<h2 className={styles['services__title']}>Услуги</h2>
 				<div className={styles['services__cards']}>
@@ -41,6 +57,7 @@ export default function Services() {
 								<button
 									className={styles['service-card__btns_order']}
 									type="submit"
+									onClick={handleOpenModal}
 								>
 									Заказать
 								</button>
