@@ -5,6 +5,5 @@ export default interface IRecommendationPreview {
 	title: string;
 	info: string;
 	image: StaticImport;
-	className: string;
-	isActive?: boolean;
+	isActive: boolean;
 }
