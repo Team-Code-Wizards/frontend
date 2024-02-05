@@ -8,7 +8,7 @@
     position: relative;
 
     &__block {
-        padding: 27px 0 204px 0;
+        padding: 80px 0 204px 0;
         width: 100%;
         max-width: var(--block-max-width);
         margin: 0 auto;
@@ -135,7 +135,7 @@
 @media screen and (max-width: 1283px) {
     .stage {
         &__block {
-            padding: 167px 0 132px 0;
+            padding: 150px 0 132px 0;
             max-width: 80%;
         }
 
