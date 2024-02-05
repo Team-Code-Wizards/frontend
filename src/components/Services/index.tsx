@@ -1,9 +1,16 @@
+'use client';
+
+import { useState } from 'react';
+
 import services from '@/constants/Services';
 
 import ArrowDownIcon from '../../../public/images/icons/ArrowDownIcon';
+import WebsiteCreationModal from '../WebsiteCreationModal';
 import styles from './style.module.scss';
 
 export default function Services() {
+	const [isCreationModalOpen, setCreationModalOpen] = useState(false);
+
 	return (
 		<section id="services" className={styles.wrapper}>
 			<div className={styles['services']}>
@@ -39,6 +46,7 @@ export default function Services() {
 							</div>
 							<span className={styles['service-card__btns']}>
 								<button
+									onClick={() => setCreationModalOpen(true)}
 									className={styles['service-card__btns_order']}
 									type="submit"
 								>
@@ -55,6 +63,9 @@ export default function Services() {
 					))}
 				</div>
 			</div>
+			{isCreationModalOpen && (
+				<WebsiteCreationModal close={setCreationModalOpen} />
+			)}
 		</section>
 	);
 }
