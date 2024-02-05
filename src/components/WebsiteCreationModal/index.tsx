@@ -39,12 +39,7 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 						{data.map((item) => {
 							return <ModalItem key={item.id} item={item} control={control} />;
 						})}
-						<button
-							type="submit"
-							className={styles['modal__btn']}
-							//onClick={close}
-							//onSubmit={handleSubmit(onSubmit)}
-						>
+						<button type="submit" className={styles['modal__btn']}>
 							Отправить
 						</button>
 					</form>

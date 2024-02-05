@@ -4,5 +4,10 @@ export interface IModalItem {
 	placeholder?: string;
 	type: string;
 	required?: boolean;
-	options?: string[];
+	options?: IOptions[];
+}
+
+export interface IOptions {
+	label: string;
+	value: string;
 }

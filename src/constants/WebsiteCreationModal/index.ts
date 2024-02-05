@@ -18,17 +18,31 @@ export const data: IModalItem[] = [
 	{
 		id: 'c4edfd5e-2a4e-46d8-8006-3c52e2285e0e',
 		title: 'К вашему номеру подключен Viber, WhatsApp, Telegram',
-		// placeholder: 'Да',
 		type: 'dropdown',
-		options: ['Да'],
+		options: [
+			{ label: 'Да', value: 'Да' },
+			{
+				label: 'Нет (лучше звонить по номеру)',
+				value: 'Нет (лучше звонить по номеру)',
+			},
+		],
 		required: true,
 	},
 	{
 		id: '09e1eaa7-e356-456a-8bf2-1c021e54a6b6',
 		title: 'Выбор сайта',
-		// placeholder: 'Лендинг',
 		type: 'dropdown',
-		options: ['Лендинг'],
+		options: [
+			{ label: 'Лендинг', value: 'Лендинг' },
+			{ label: 'Интернет-магазин', value: 'Интернет-магазин' },
+			{ label: 'Копоративный сайт', value: 'Копоративный сайт' },
+			{ label: 'Блог или новостной сайт', value: 'Блог или новостной сайт' },
+			{ label: 'Фирменный сайт', value: 'Фирменный сайт' },
+			{
+				label: 'Сайт по вашему техническому заданию',
+				value: 'Сайт по вашему техническому заданию',
+			},
+		],
 		required: true,
 	},
 	{
