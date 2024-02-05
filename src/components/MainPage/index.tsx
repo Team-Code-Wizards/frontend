@@ -40,7 +40,7 @@ import styles from './style.module.scss';
 // Cтатус ...
 
 // - Фикс padding-top в "Этапы создания сайта" и там же фикс шрифта в тексте, в кнопке.
-// Cтатус ...
+// Cтатус в работе
 
 export default function MainPage() {
 	return (
