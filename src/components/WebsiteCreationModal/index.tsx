@@ -1,3 +1,5 @@
+import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+
 import IconClose from '&/images/modal/IconClose';
 import { data } from '@/constants/WebsiteCreationModal';
 
@@ -5,45 +7,49 @@ import ModalBackground from '../ModalBackground';
 import ModalItem from './ModalItem';
 import styles from './style.module.scss';
 
-//import {SubmitHandler, useForm} from 'react-hook-form';
-
 interface IModal {
 	open: boolean;
 	close: () => void;
 }
 
 export default function WebsiteCreationModal({ open, close }: IModal) {
-	//const {handleSubmit} = useForm()
+	const { handleSubmit, control } = useForm();
 
-	// const onSubmit:SubmitHandler<any> = (data:any) => {
-	// 	console.log(data)
-	// }
+	const onSubmit: SubmitHandler<FieldValues> = (data) => {
+		console.log(data);
+		close();
+	};
 
-	return open ? (
-		<ModalBackground>
-			<div className={styles['modal']}>
-				<button
-					type="button"
-					className={styles['modal__close-btn']}
-					onClick={close}
-				>
-					<IconClose />
-				</button>
-				<h3 className={styles['modal__title']}>Заявка на создание сайта</h3>
-				<form className={styles['modal__form']}>
-					{data.map((item) => {
-						return <ModalItem key={item.id} item={item} />;
-					})}
+	return (
+		open && (
+			<ModalBackground>
+				<div className={styles['modal']}>
 					<button
-						type="submit"
-						className={styles['modal__btn']}
+						type="button"
+						className={styles['modal__close-btn']}
 						onClick={close}
-						//onSubmit={handleSubmit(onSubmit)}
 					>
-						Отправить
+						<IconClose />
 					</button>
-				</form>
-			</div>
-		</ModalBackground>
-	) : null;
+					<h3 className={styles['modal__title']}>Заявка на создание сайта</h3>
+					<form
+						className={styles['modal__form']}
+						onSubmit={handleSubmit(onSubmit)}
+					>
+						{data.map((item) => {
+							return <ModalItem key={item.id} item={item} control={control} />;
+						})}
+						<button
+							type="submit"
+							className={styles['modal__btn']}
+							//onClick={close}
+							//onSubmit={handleSubmit(onSubmit)}
+						>
+							Отправить
+						</button>
+					</form>
+				</div>
+			</ModalBackground>
+		)
+	);
 }

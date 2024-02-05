@@ -1,8 +1,10 @@
+import { Controller } from 'react-hook-form';
+
 import IconArrow from '../../../../public/images/modal/IconArrow';
 import { IModalItemProps } from './interface';
 import styles from './style.module.scss';
 
-export default function ModalItem({ item }: IModalItemProps) {
+export default function ModalItem({ item, control }: IModalItemProps) {
 	return (
 		<div className={styles['modal-item']}>
 			<h4
@@ -20,11 +22,19 @@ export default function ModalItem({ item }: IModalItemProps) {
 					<IconArrow />
 				</div>
 			) : (
-				<input
-					placeholder={item.placeholder}
-					className={styles['modal-item__input']}
-					required={item.required}
-					type={item.type}
+				<Controller
+					name={item.title}
+					control={control}
+					rules={{ required: item.required }}
+					render={({ field }) => (
+						<input
+							{...field}
+							placeholder={item.placeholder}
+							className={styles['modal-item__input']}
+							required={item.required}
+							type={item.type}
+						/>
+					)}
 				/>
 			)}
 		</div>
