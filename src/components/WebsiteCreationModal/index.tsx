@@ -5,12 +5,20 @@ import ModalBackground from '../ModalBackground';
 import ModalItem from './ModalItem';
 import styles from './style.module.scss';
 
+//import {SubmitHandler, useForm} from 'react-hook-form';
+
 interface IModal {
 	open: boolean;
 	close: () => void;
 }
 
 export default function WebsiteCreationModal({ open, close }: IModal) {
+	//const {handleSubmit} = useForm()
+
+	// const onSubmit:SubmitHandler<any> = (data:any) => {
+	// 	console.log(data)
+	// }
+
 	return open ? (
 		<ModalBackground>
 			<div className={styles['modal']}>
@@ -30,6 +38,7 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 						type="submit"
 						className={styles['modal__btn']}
 						onClick={close}
+						//onSubmit={handleSubmit(onSubmit)}
 					>
 						Отправить
 					</button>
