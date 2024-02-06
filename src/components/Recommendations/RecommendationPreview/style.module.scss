@@ -25,7 +25,13 @@
 		margin-left: 9px;
 	}
 
+	&_link {
+		text-decoration: none;
+		color: var(--color-text);
+	}
+
 	&_title {
+		text-decoration: none;
 		font: var(--font-title-description);
 	}
 
