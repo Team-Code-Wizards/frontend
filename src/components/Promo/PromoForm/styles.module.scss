@@ -11,8 +11,10 @@
 
 	&__title {
 		margin-bottom: 10px;
-		line-height: 22px;
+		line-height: 24px;
 		font-size: var(--text-base);
+		font-family: var(--involve-font);
+		font-weight: 600;
 	}
 
 	&__message {
@@ -20,7 +22,8 @@
 		margin-top: 12px;
 		color: rgba(24, 57, 108, 0.6);
 		font-family: var(--involve-font);
-		font-size: 17px;
+		font-size: 16px;
+		font-weight: 500;
 		line-height: var(--line-height-big);
 		letter-spacing: var(--font-description-letter);
 		padding-right: 1px;
@@ -110,6 +113,10 @@
 	.promo-form {
 		width: 58%;
 		margin-top: 50px;
+
+		&__title {
+			letter-spacing: -0.48px;
+		}
 	}
 }
 

@@ -19,7 +19,6 @@
 		align-items: center;
 		gap: 42px;
 		padding-bottom: 45px;
-		
 	}
 
 	&__header {
@@ -49,8 +48,8 @@
 
 .recommendations-swiper-container {
 	position: relative;
+	cursor: pointer;
 }
-
 
 .recommendations-swiper-slide {
 	border-radius: 10px;
@@ -86,8 +85,6 @@
 	}
 }
 
-
-
 .recommendation__pagination {
 	display: none;
 }
@@ -96,7 +93,6 @@
 	.recommendations {
 		padding: 75px 0;
 	}
-
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
@@ -105,7 +101,6 @@
 			max-width: var(--width-1280-1024);
 			padding: 20px 0 83px;
 		}
-
 	}
 }
 
