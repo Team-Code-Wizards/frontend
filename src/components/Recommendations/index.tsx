@@ -44,7 +44,6 @@ export default function Recommendations() {
 
 				<Swiper
 					effect={'coverflow'}
-					grabCursor={true}
 					slidesPerView={'auto'}
 					centeredSlides={true}
 					pagination={pagination}
