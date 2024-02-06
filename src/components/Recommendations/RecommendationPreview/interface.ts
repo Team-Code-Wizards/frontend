@@ -6,4 +6,6 @@ export default interface IRecommendationPreview {
 	info: string;
 	image: StaticImport;
 	isActive: boolean;
+	icon: StaticImport;
+	siteUrl: string;
 }
