@@ -269,6 +269,9 @@
 
       &_old {
         bottom: 0px;
+        &:before {
+          top: 0;
+        }
       }
     }
 
