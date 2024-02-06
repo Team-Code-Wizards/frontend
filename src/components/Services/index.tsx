@@ -5,11 +5,19 @@ import { useState } from 'react';
 import services from '@/constants/Services';
 
 import ArrowDownIcon from '../../../public/images/icons/ArrowDownIcon';
+import ProjectDescriptionModal from '../ProjectDescriptionModal';
 import WebsiteCreationModal from '../WebsiteCreationModal';
 import styles from './style.module.scss';
 
 export default function Services() {
 	const [isCreationModalOpen, setCreationModalOpen] = useState(false);
+	const [isPrDescriptionModalOpen, setPrDescriptionModalOpen] = useState(false);
+	const [activeService, setActiveService] = useState('');
+
+	const handlerAskBtn = (id: string) => () => {
+		setActiveService(id);
+		setPrDescriptionModalOpen(true);
+	};
 
 	return (
 		<section id="services" className={styles.wrapper}>
@@ -53,6 +61,7 @@ export default function Services() {
 									Заказать
 								</button>
 								<button
+									onClick={handlerAskBtn(service.id)}
 									className={styles['service-card__btns_ask']}
 									type="button"
 								>
@@ -65,6 +74,12 @@ export default function Services() {
 			</div>
 			{isCreationModalOpen && (
 				<WebsiteCreationModal close={setCreationModalOpen} />
+			)}
+			{isPrDescriptionModalOpen && (
+				<ProjectDescriptionModal
+					id={activeService}
+					close={setPrDescriptionModalOpen}
+				/>
 			)}
 		</section>
 	);
