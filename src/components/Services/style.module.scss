@@ -174,11 +174,6 @@
     &__prices {
       bottom: 13px;
 
-      &_old {
-        &:before {
-          top: 0;
-        }
-      }
     }
 
   }
@@ -222,6 +217,9 @@
 
       &_old {
         bottom: 1px;
+        &:before {
+          top: 0;
+        }
       }
     }
   }
