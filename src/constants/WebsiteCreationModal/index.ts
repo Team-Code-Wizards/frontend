@@ -4,6 +4,7 @@ export const data: IModalItem[] = [
 	{
 		id: '32ec6be3-2265-481a-8106-6615f94961c1',
 		title: 'Имя',
+		name: 'name',
 		placeholder: 'Иван Иванов',
 		type: 'text',
 		required: false,
@@ -11,6 +12,7 @@ export const data: IModalItem[] = [
 	{
 		id: '3bda61fa-12de-4fb7-94bf-c905904a6f97',
 		title: 'Телефон',
+		name: 'tel',
 		placeholder: '+7 (900) 000-00-00',
 		type: 'tel',
 		required: true,
@@ -18,6 +20,7 @@ export const data: IModalItem[] = [
 	{
 		id: 'c4edfd5e-2a4e-46d8-8006-3c52e2285e0e',
 		title: 'К вашему номеру подключен Viber, WhatsApp, Telegram',
+		name: 'messenger',
 		type: 'dropdown',
 		options: [
 			{ label: 'Да', value: 'Да' },
@@ -31,6 +34,7 @@ export const data: IModalItem[] = [
 	{
 		id: '09e1eaa7-e356-456a-8bf2-1c021e54a6b6',
 		title: 'Выбор сайта',
+		name: 'site-order',
 		type: 'dropdown',
 		options: [
 			{ label: 'Лендинг', value: 'Лендинг' },
@@ -48,6 +52,7 @@ export const data: IModalItem[] = [
 	{
 		id: '27c81fc6-5e1d-4ea3-b6fb-b3047c9918da',
 		title: 'Дополнительная информация',
+		name: 'add-info',
 		placeholder: 'Сообщение (необязательно)',
 		type: 'text',
 		required: false,

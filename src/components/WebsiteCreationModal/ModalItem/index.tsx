@@ -1,18 +1,14 @@
-import { useState } from 'react';
 import { Controller } from 'react-hook-form';
 
 import IconArrow from '../../../../public/images/modal/IconArrow';
 import { IModalItemProps } from './interface';
 import styles from './style.module.scss';
 
-//import {IOptions} from '@/constants/WebsiteCreationModal/type';
-
-export default function ModalItem({ item, control }: IModalItemProps) {
-	const [value, setValue] = useState(item.options);
-
-	const handleChange = () => {
-		setValue(undefined);
-	};
+export default function ModalItem({
+	item,
+	register,
+	control,
+}: IModalItemProps) {
 	return (
 		<div className={styles['modal-item']}>
 			<h4
@@ -27,45 +23,36 @@ export default function ModalItem({ item, control }: IModalItemProps) {
 			{item.type === 'dropdown' ? (
 				<div className={styles['dropdown']}>
 					<Controller
-						name={item.title}
+						name={item.name}
 						control={control}
 						rules={{ required: item.required }}
-						defaultValue={value}
 						render={({ field }) => (
-							<select
-								{...field}
-								className={styles['modal-item__input']}
-								required={item.required}
-							>
-								{item.options?.map((option) => (
-									<option
-										key={option.label}
-										value={option.value}
-										onChange={handleChange}
-									>
-										{option.label}
-									</option>
-								))}
-								<IconArrow />
-							</select>
+							<div className={styles['select-container']}>
+								<select
+									{...field}
+									className={`${styles['modal-item__input']} ${styles['select']} ${styles['option']}`}
+									required={item.required}
+								>
+									{item.options?.map((option) => (
+										<option key={option.label} value={option.value}>
+											{option.label}
+										</option>
+									))}
+								</select>
+								<div className={styles['icon-arrow']}>
+									<IconArrow />
+								</div>
+							</div>
 						)}
 					/>
 				</div>
 			) : (
-				<Controller
-					name={item.title}
-					defaultValue=""
-					control={control}
-					rules={{ required: item.required }}
-					render={({ field }) => (
-						<input
-							{...field}
-							placeholder={item.placeholder}
-							className={styles['modal-item__input']}
-							required={item.required}
-							type={item.type}
-						/>
-					)}
+				<input
+					placeholder={item.placeholder}
+					className={styles['modal-item__input']}
+					required={item.required}
+					type={item.type}
+					{...register(item.name)}
 				/>
 			)}
 		</div>

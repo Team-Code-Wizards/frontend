@@ -13,11 +13,13 @@ interface IModal {
 }
 
 export default function WebsiteCreationModal({ open, close }: IModal) {
-	const { handleSubmit, control } = useForm();
+	const { register, reset, formState, handleSubmit, control } = useForm();
 
+	const { isValid } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
-		console.log(data);
+		console.log('data: ', data);
 		close();
+		reset();
 	};
 
 	return (
@@ -37,9 +39,20 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 						onSubmit={handleSubmit(onSubmit)}
 					>
 						{data.map((item) => {
-							return <ModalItem key={item.id} item={item} control={control} />;
+							return (
+								<ModalItem
+									key={item.id}
+									{...{ item }}
+									register={register}
+									control={control}
+								/>
+							);
 						})}
-						<button type="submit" className={styles['modal__btn']}>
+						<button
+							type="submit"
+							className={styles['modal__btn']}
+							disabled={!isValid}
+						>
 							Отправить
 						</button>
 					</form>

@@ -54,12 +54,56 @@
 }
 
 .dropdown {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.select-container {
+	position: relative;
+	width: 100%;
+}
+
+.select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding-right: 30px;
+	width: 100%;
 	cursor: pointer;
-	padding: 17px;
-	background-color: var(--color-gray-bg);
+	font-size: 16px;
+	font-family: var(--involve-font);
+	font-weight: 500;
+	border-radius: 0;
+}
+	.option {
+		font-size: 16px; /* Задайте нужный размер шрифта */
+		font-family: var(--involve-font); /* Используйте нужный шрифт */
+		font-weight: 500; /* Установите нужный вес шрифта */
+		color: #1b1c33;
+		background-color: #f2f2f2;
+
+		&:focus {
+			outline: 2px solid #8792fc;
+			background-color: #f2f2f2;
+		}
+
+		&:hover {
+			background-color: #f2f2f2;
+			color: #1b1c33;
+			outline: 2px solid #8792fc;
+		}
+
+	}
+
+
+.icon-arrow {
+	position: absolute;
+	top: 50%;
+	right: 5px; /* Расположение вашей иконки */
+	transform: translateY(-50%);
+	pointer-events: none; /* Позволяет событиям мыши проходить через иконку */
+
 }
 
 @media screen and (min-width: 834px) and (max-width: 1279px) {
