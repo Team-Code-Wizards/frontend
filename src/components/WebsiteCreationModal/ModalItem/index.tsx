@@ -52,6 +52,7 @@ export default function ModalItem({
 					className={styles['modal-item__input']}
 					required={item.required}
 					type={item.type}
+					pattern={item.pattern ? item.pattern : undefined}
 					{...register(item.name)}
 				/>
 			)}

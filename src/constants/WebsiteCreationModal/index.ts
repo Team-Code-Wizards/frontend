@@ -7,14 +7,16 @@ export const data: IModalItem[] = [
 		name: 'name',
 		placeholder: 'Иван Иванов',
 		type: 'text',
+		pattern: '',
 		required: false,
 	},
 	{
 		id: '3bda61fa-12de-4fb7-94bf-c905904a6f97',
 		title: 'Телефон',
-		name: 'tel',
+		name: 'number',
 		placeholder: '+7 (900) 000-00-00',
 		type: 'tel',
+		pattern: '/\\(?([0-9]{3})\\)?([ .-]?)([0-9]{3})\\2([0-9]{4})/',
 		required: true,
 	},
 	{
@@ -29,6 +31,7 @@ export const data: IModalItem[] = [
 				value: 'Нет (лучше звонить по номеру)',
 			},
 		],
+		pattern: '',
 		required: true,
 	},
 	{
@@ -47,6 +50,7 @@ export const data: IModalItem[] = [
 				value: 'Сайт по вашему техническому заданию',
 			},
 		],
+		pattern: '',
 		required: true,
 	},
 	{
@@ -55,6 +59,7 @@ export const data: IModalItem[] = [
 		name: 'add-info',
 		placeholder: 'Сообщение (необязательно)',
 		type: 'text',
+		pattern: '',
 		required: false,
 	},
 ];
