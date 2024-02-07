@@ -60,7 +60,6 @@ export default function StageCreate() {
 						);
 					}}
 				>
-					{/* Add uid of next stage as a data attribute */}
 					Следующий этап
 				</button>
 			</div>
