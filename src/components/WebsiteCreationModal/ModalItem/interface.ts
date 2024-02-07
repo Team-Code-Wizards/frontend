@@ -4,6 +4,7 @@ import { IModalItem } from '@/constants/WebsiteCreationModal/type';
 
 export interface IModalItemProps {
 	item: IModalItem;
-	control: Control<FieldValues>;
-	register: UseFormRegister<FieldValues>;
+	control: Control<IModalItem, any, IModalItem>;
+	register: UseFormRegister<IModalItem>;
+	errors:any
 }

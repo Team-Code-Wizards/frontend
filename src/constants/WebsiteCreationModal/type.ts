@@ -6,7 +6,6 @@ export interface IModalItem {
 	type: string;
 	required?: boolean;
 	options?: IOptions[];
-	pattern?: string;
 }
 
 export interface IOptions {

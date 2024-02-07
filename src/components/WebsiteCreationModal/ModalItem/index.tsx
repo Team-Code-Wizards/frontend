@@ -1,14 +1,24 @@
-import { Controller } from 'react-hook-form';
+import {Controller} from 'react-hook-form';
 
 import IconArrow from '../../../../public/images/modal/IconArrow';
 import { IModalItemProps } from './interface';
 import styles from './style.module.scss';
+import ConditionalInput from '@/components/WebsiteCreationModal/ModalItem/ConditionalInput';
 
 export default function ModalItem({
 	item,
-	register,
 	control,
+	register,
+	errors
 }: IModalItemProps) {
+
+	//const {register} = useForm<IModalItem>()
+
+	//const pattern = item.type === 'tel' ? /[0-9+()-]+/ : undefined;
+	//const validation = pattern ? { pattern: { value: pattern, message: 'Неверный формат' } } : {};
+	//const validationRules = item.type === 'tel' ? { pattern: pattern, message: 'Неверный формат' } : {};
+	console.log('ModalItem:',errors)
+
 	return (
 		<div className={styles['modal-item']}>
 			<h4
@@ -47,15 +57,8 @@ export default function ModalItem({
 					/>
 				</div>
 			) : (
-				<input
-					placeholder={item.placeholder}
-					className={styles['modal-item__input']}
-					required={item.required}
-					type={item.type}
-					pattern={item.pattern ? item.pattern : undefined}
-					{...register(item.name)}
-				/>
-			)}
-		</div>
+                 <ConditionalInput item={item} register={register} errors={errors}/>
+				)}
+			</div>
 	);
 }

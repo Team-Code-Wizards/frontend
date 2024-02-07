@@ -1,4 +1,4 @@
-import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 import IconClose from '&/images/modal/IconClose';
 import { data } from '@/constants/WebsiteCreationModal';
@@ -6,6 +6,7 @@ import { data } from '@/constants/WebsiteCreationModal';
 import ModalBackground from '../ModalBackground';
 import ModalItem from './ModalItem';
 import styles from './style.module.scss';
+import {IModalItem} from '@/constants/WebsiteCreationModal/type';
 
 interface IModal {
 	open: boolean;
@@ -13,10 +14,15 @@ interface IModal {
 }
 
 export default function WebsiteCreationModal({ open, close }: IModal) {
-	const { register, reset, formState, handleSubmit, control } = useForm();
+	const { register,
+		reset,
+		formState,
+		handleSubmit,
+		control } = useForm<IModalItem>();
 
-	const { isValid } = formState;
-	const onSubmit: SubmitHandler<FieldValues> = (data) => {
+	const { isValid, errors } = formState;
+	console.log('Modal formState:', formState)
+	const onSubmit: SubmitHandler<IModalItem> = (data) => {
 		console.log('data: ', data);
 		close();
 		reset();
@@ -42,9 +48,10 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 							return (
 								<ModalItem
 									key={item.id}
-									{...{ item }}
+									{...{item} }
 									register={register}
 									control={control}
+									errors={errors}
 								/>
 							);
 						})}
