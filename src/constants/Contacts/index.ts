@@ -10,6 +10,7 @@ export const inputs: IInput[] = [
 		type: 'text',
 		name: 'clientName',
 		placeholder: 'Имя',
+		required: false,
 	},
 	{
 		id: 'a05b899c-0c7c-43b4-8762-63657599ff22',
@@ -20,6 +21,7 @@ export const inputs: IInput[] = [
 		type: 'tel',
 		name: 'clientTel',
 		placeholder: 'Телефон',
+		required: true,
 	},
 	{
 		id: '70b358a0-835d-435b-aeb8-e7cb7628630e',
@@ -30,6 +32,7 @@ export const inputs: IInput[] = [
 		type: 'email',
 		name: 'clientEmail',
 		placeholder: 'E-mail',
+		required: true,
 	},
 	{
 		id: 'c530307b-b1b1-4254-a26e-a350436c685c',
@@ -39,6 +42,7 @@ export const inputs: IInput[] = [
 		clearInputStyleKey: 'textarea-clear-btn',
 		name: 'clientMessage',
 		placeholder: 'Сообщение',
+		required: false,
 	},
 	{
 		id: '9fb5f3e7-ef78-45c1-b2eb-6839a80de6ce',
@@ -49,5 +53,6 @@ export const inputs: IInput[] = [
 		name: 'clientFile',
 		accept: '.doc',
 		labelText: 'Прикрепить ТЗ',
+		required: false,
 	},
 ];
