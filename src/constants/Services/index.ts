@@ -1,3 +1,5 @@
+import { Service } from '@/components/Services/ServiceCard/interface';
+
 import blog from '../../../public/images/modal/projectDescription/blog.webp';
 import corpSite from '../../../public/images/modal/projectDescription/corp-site.webp';
 import firmSite from '../../../public/images/modal/projectDescription/firm-site.webp';
@@ -5,7 +7,7 @@ import internetShop from '../../../public/images/modal/projectDescription/intern
 import landing from '../../../public/images/modal/projectDescription/landing.webp';
 import siteByTt from '../../../public/images/modal/projectDescription/site-by-tt.webp';
 
-const services = [
+const services: Service[] = [
 	{
 		id: 'f6c813f6-c7b0-4eb4-9979-4bf9b5e8070b',
 		title: 'Лендинг',
