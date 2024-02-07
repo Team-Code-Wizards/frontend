@@ -1,9 +1,10 @@
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import IconClose from '&/images/modal/IconClose';
+import { siteOrderSchema } from '@/constants/WebsiteCreationModal/siteOrderSchema';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 import ModalBackground from '../ModalBackground';
-import ModalItem from './ModalItem';
 import styles from './style.module.scss';
 
 interface IModal {
@@ -11,10 +12,21 @@ interface IModal {
 	close: () => void;
 }
 
-export default function WebsiteCreationModal({ open, close }: IModal) {
-	const { register, reset, formState, handleSubmit, control } = useForm();
+//TODO Раскомментить errors
 
-	const { isValid } = formState;
+export default function WebsiteCreationModal({ open, close }: IModal) {
+	const {
+		//register,
+		reset,
+		formState,
+		handleSubmit,
+		//control
+	} = useForm({ mode: 'onChange', resolver: yupResolver(siteOrderSchema) });
+
+	const {
+		isValid,
+		//errors
+	} = formState;
 	//console.log('Modal formState:', formState)
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log('data: ', data);
@@ -38,7 +50,7 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 						className={styles['modal__form']}
 						onSubmit={handleSubmit(onSubmit)}
 					>
-						<ModalItem register={register} control={control} />
+						{/*<ModalItem register={register} control={control} errors={errors} />*/}
 						<button
 							type="submit"
 							className={styles['modal__btn']}

@@ -1,10 +1,28 @@
-import { Controller } from 'react-hook-form';
+import {
+	Control,
+	Controller,
+	FieldValues,
+	UseFormRegister,
+} from 'react-hook-form';
 
 import IconArrow from '../../../../public/images/modal/IconArrow';
-import { IModalItemProps } from './interface';
 import styles from './style.module.scss';
 
-export default function ModalItem({ control, register }: IModalItemProps) {
+//TODO Раскомментить errors
+
+export interface IControllerProps {
+	name: string;
+	control: Control;
+	rules?: { [key: string]: boolean };
+	register: UseFormRegister<FieldValues>;
+	//errors?:any
+}
+
+export default function ModalItem({
+	control,
+	register,
+	//errors
+}: IControllerProps) {
 	//const {register} = useForm<IModalItem>()
 
 	//const pattern = item.type === 'tel' ? /[0-9+()-]+/ : undefined;
@@ -22,14 +40,19 @@ export default function ModalItem({ control, register }: IModalItemProps) {
 				type="text"
 				{...register('name')}
 			/>
+			{/*<p>{errors && errors.name?.message}</p>*/}
 			<h4 className={styles['modal-item__title_required']}>Телефон</h4>
 			<input
 				placeholder="+7 (900) 000-00-00"
 				className={styles['modal-item__input']}
-				required={true}
+				//required={true}
 				type="tel"
-				{...register('tel')}
+				{...register('tel', {
+					required: 'Неверный формат',
+					pattern: { value: /[0-9+()-]+/, message: 'Неверный формат' },
+				})}
 			/>
+			{/*<p>{errors.tel && errors.tel?.message}</p>*/}
 			<h4 className={styles['modal-item__title_required']}>
 				К вашему номеру подключен Viber, WhatsApp, Telegram
 			</h4>

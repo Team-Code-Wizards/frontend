@@ -13,6 +13,7 @@
 		"commit": "git add -A && npm run lint-staged && git diff --quiet && git add -A && cz"
 	},
 	"dependencies": {
+		"@hookform/resolvers": "^3.3.4",
 		"@typescript-eslint/eslint-plugin": "^6.18.1",
 		"classnames": "^2.5.1",
 		"cz-conventional-changelog": "^3.3.0",
@@ -23,7 +24,8 @@
 		"react-hook-form": "^7.50.0",
 		"sass": "^1.69.7",
 		"sharp": "^0.33.2",
-		"swiper": "^11.0.5"
+		"swiper": "^11.0.5",
+		"yup": "^1.3.3"
 	},
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
