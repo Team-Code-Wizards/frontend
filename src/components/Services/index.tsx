@@ -30,7 +30,12 @@ export default function Services() {
 								<div className={styles['service-card__right']}>
 									<h4>{service.title}</h4>
 									{service.content.map((text) => (
-										<p key={text}>{text}</p>
+										<p
+											className={styles['service-card__right__item']}
+											key={text}
+										>
+											{text}
+										</p>
 									))}
 									<div className={styles['service-card__prices']}>
 										<p>
@@ -46,11 +51,9 @@ export default function Services() {
 										</span>
 									</div>
 								</div>
-								<div className={styles['service-card__popup']}>
-									<a className={styles['service-card__popup_img']}>
-										<ArrowDownIcon />
-									</a>
-								</div>
+								<button className={styles['service-card__popup']}>
+									<ArrowDownIcon />
+								</button>
 							</div>
 							<span className={styles['service-card__btns']}>
 								<button
@@ -73,12 +76,13 @@ export default function Services() {
 				</div>
 			</div>
 			{isCreationModalOpen && (
-				<WebsiteCreationModal close={setCreationModalOpen} />
+				<WebsiteCreationModal open={setCreationModalOpen} />
 			)}
 			{isPrDescriptionModalOpen && (
 				<ProjectDescriptionModal
 					id={activeService}
-					close={setPrDescriptionModalOpen}
+					open={setPrDescriptionModalOpen}
+					order={setCreationModalOpen}
 				/>
 			)}
 		</section>

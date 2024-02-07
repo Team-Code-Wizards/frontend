@@ -10,18 +10,25 @@ import styles from './style.module.scss';
 
 export default function ProjectDescriptionModal({
 	id,
-	close,
+	open,
+	order,
 }: {
 	id: string;
-	close: (value: SetStateAction<boolean>) => void;
+	open: (value: SetStateAction<boolean>) => void;
+	order: (value: SetStateAction<boolean>) => void;
 }) {
 	const info = services.filter((service) => service.id === id)[0];
 
+	const handlerOrderClick = () => {
+		open(false);
+		order(true);
+	};
+
 	return (
-		<ModalBackground>
+		<ModalBackground onClick={() => open(false)}>
 			<div className={styles['modal']}>
 				<button
-					onClick={() => close(false)}
+					onClick={() => open(false)}
 					type="button"
 					className={styles['modal__close-btn']}
 				>
@@ -33,7 +40,11 @@ export default function ProjectDescriptionModal({
 				</div>
 				<div className={styles['modal__example']}>
 					<Image src={info.image} alt="Landing image" />
-					<button type="submit" className={styles['modal__btn']}>
+					<button
+						onClick={handlerOrderClick}
+						type="submit"
+						className={styles['modal__btn']}
+					>
 						Заказать
 					</button>
 				</div>

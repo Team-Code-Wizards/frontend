@@ -8,15 +8,15 @@ import ModalItem from './ModalItem';
 import styles from './style.module.scss';
 
 export default function WebsiteCreationModal({
-	close,
+	open,
 }: {
-	close: (value: SetStateAction<boolean>) => void;
+	open: (value: SetStateAction<boolean>) => void;
 }) {
 	return (
-		<ModalBackground>
+		<ModalBackground onClick={() => open(false)}>
 			<div className={styles['modal']}>
 				<button
-					onClick={() => close(false)}
+					onClick={() => open(false)}
 					type="button"
 					className={styles['modal__close-btn']}
 				>

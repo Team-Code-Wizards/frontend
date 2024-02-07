@@ -1,18 +1,18 @@
 export default function ArrowDownIcon() {
 	return (
 		<svg
-			width="24"
-			height="25"
-			viewBox="0 0 24 25"
+			width="16"
+			height="16"
+			viewBox="0 0 16 16"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path
-				d="M12 5.5V19.5M12 19.5L18 13.5M12 19.5L6 13.5"
+				d="M8 1V15M8 15L14 9M8 15L2 9"
 				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="square"
-				strokeLinejoin="round"
+				stroke-width="2"
+				stroke-linecap="square"
+				stroke-linejoin="round"
 			/>
 		</svg>
 	);
