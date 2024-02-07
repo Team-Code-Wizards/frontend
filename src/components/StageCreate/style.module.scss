@@ -15,14 +15,14 @@
     color: var(--color-text);
     font-family: var(--rg-font);
   }
-    &__block {
-        padding: 80px 0 204px 0;
-        width: 100%;
-        max-width: var(--block-max-width);
-        margin: 0 auto;
-        color: var(--color-text);
-        font-family: var(--rg-font);
-    }
+  &__block {
+    padding: 80px 0 204px 0;
+    width: 100%;
+    max-width: var(--block-max-width);
+    margin: 0 auto;
+    color: var(--color-text);
+    font-family: var(--rg-font);
+  }
 
   &__title {
     font: var(--font-block-title);
@@ -127,29 +127,30 @@
     cursor: pointer;
     transition: 0.3s background-position ease-in-out;
     &__btn {
-        background-image: var(--color-gradient-button);
-        background-size: 400%;
-        background-position: 99%;
-        border-radius: 5px;
-        padding: 18px 41px;
-        border: none;
-        color: var(--color-text);
-        font: var(--font-title-description);
-        cursor: pointer;
-        transition: 0.3s background-position ease-in-out;
+      background-image: var(--color-gradient-button);
+      background-size: 400%;
+      background-position: 99%;
+      border-radius: 5px;
+      padding: 18px 41px;
+      border: none;
+      color: var(--color-text);
+      font: var(--font-title-description);
+      cursor: pointer;
+      transition: 0.3s background-position ease-in-out;
 
-    &:focus {
-      outline: none;
-      background-position: 70%;
-    }
+      &:focus {
+        outline: none;
+        background-position: 70%;
+      }
 
-    &:hover {
-      background-position: 50%;
-    }
+      &:hover {
+        background-position: 50%;
+      }
 
-    &:active {
-      transition: 0.1s background-position ease-in-out;
-      background-position: 10%;
+      &:active {
+        transition: 0.1s background-position ease-in-out;
+        background-position: 10%;
+      }
     }
   }
 }
@@ -161,23 +162,24 @@
       max-width: 80%;
     }
     .stage {
-        &__block {
-            padding: 150px 0 132px 0;
-            max-width: 80%;
-        }
+      &__block {
+        padding: 150px 0 132px 0;
+        max-width: 80%;
+      }
 
-    &__icon-wrapper {
-      width: 52%;
-      top: 12%;
-      right: 5%;
-    }
+      &__icon-wrapper {
+        width: 52%;
+        top: 12%;
+        right: 5%;
+      }
 
-    &__wrapper {
-      margin-bottom: 75px;
-    }
+      &__wrapper {
+        margin-bottom: 75px;
+      }
 
-    &__description {
-      max-width: 31%;
+      &__description {
+        max-width: 31%;
+      }
     }
   }
 }
