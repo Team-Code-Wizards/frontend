@@ -80,12 +80,30 @@
 	}
 }
 
+@keyframes go-right-1050 {
+	from {
+		right: 0;
+	}
+	to {
+		right: -48vw;
+	}
+}
+
 @keyframes go-left-650 {
 	from {
 		right: -65vw;
 	}
 	to {
 		right: 0;
+	}
+}
+
+@keyframes go-right-650 {
+	from {
+		right: 0;
+	}
+	to {
+		right: -65vw;
 	}
 }
 
@@ -111,6 +129,11 @@
 		&.active {
 			display: flex;
 			animation: go-left-1050 0.5s linear forwards;
+		}
+
+		&.close {
+			display: flex;
+			animation: go-right-1050 0.5s linear forwards;
 		}
 
 		&__close-btn {
@@ -180,6 +203,10 @@
 
 		&.active {
 			animation: go-left-650 0.5s linear forwards;
+		}
+
+		&.close {
+			animation: go-right-650 0.5s linear forwards;
 		}
 
 		&__link-list {
