@@ -1,6 +1,5 @@
 'use client';
 
-// import { IFaqData } from "@/constants/Faq/type";
 import { useState } from 'react';
 
 import { FaqData } from '@/constants/Faq';

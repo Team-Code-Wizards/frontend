@@ -1,9 +1,6 @@
 import PlusIcon from '../../../../public/images/icons/Plus';
 import { IFaqCardProps } from './interface';
-// import { IFaqData } from "@/constants/Faq/type";
 import styles from './styles.module.scss';
-
-// import { useEffect, useState } from "react";
 
 function FaqCard({
 	item,
@@ -12,22 +9,12 @@ function FaqCard({
 	item: IFaqCardProps;
 	handleClick: (question: IFaqCardProps) => void;
 }) {
-	// const [open, setOpen] = useState(item.active);
-	//   useEffect(() => {
-	//     console.log(item);
-	//   }, [item]);
-
-	//   const onToggle = () => {
-	//     setOpen(!open);
-	//   };
-
 	return (
 		<li className={styles['faq-card']}>
 			<details
 				open={item.active}
 				onClick={(e) => {
 					e.preventDefault();
-					//          onToggle();
 					handleClick(item);
 				}}
 			>
