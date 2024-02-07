@@ -270,10 +270,13 @@
 			bottom: -2px;
 			left: 12px;
 
-			&_old {
-				bottom: 0px;
-			}
-		}
+      &_old {
+        bottom: 0px;
+        &:before {
+          top: 0;
+        }
+      }
+    }
 
 		&__popup {
 			display: grid;

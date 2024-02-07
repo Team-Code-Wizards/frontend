@@ -1,6 +1,9 @@
 .faq-card {
   color: var(--color-text);
 
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
