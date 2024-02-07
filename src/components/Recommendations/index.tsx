@@ -41,10 +41,8 @@ export default function Recommendations() {
 						</button>
 					</div>
 				</div>
-
 				<Swiper
 					effect={'coverflow'}
-					grabCursor={true}
 					slidesPerView={'auto'}
 					centeredSlides={true}
 					pagination={pagination}

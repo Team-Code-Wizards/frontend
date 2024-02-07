@@ -10,16 +10,14 @@
 		overflow: hidden;
 		width: 90%;
 		max-width: var(--block-max-width);
-		padding: 20px 0;
+		padding: 20px 0 45px;
 		margin: 0 auto;
 		border-radius: 20px;
 		color: var(--color-text);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 42px;
-		padding-bottom: 45px;
-		
+		gap: 42px;	
 	}
 
 	&__header {
@@ -49,6 +47,7 @@
 
 .recommendations-swiper-container {
 	position: relative;
+	cursor: pointer;
 }
 
 

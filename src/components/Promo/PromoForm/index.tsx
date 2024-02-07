@@ -17,9 +17,7 @@ export default function Form({ onSubmit }: IPromoForm) {
 			{inputs.map((el) => (
 				<Input key={el.id} {...el} />
 			))}
-			<button className={styles['promo-form__button']} type="submit">
-				Отправить
-			</button>
+			<button className={styles['promo-form__button']}>Отправить</button>
 		</form>
 	);
 }
