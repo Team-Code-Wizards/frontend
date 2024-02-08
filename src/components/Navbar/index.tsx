@@ -17,10 +17,12 @@ export default function Navbar() {
 	const navRef = useRef<null | HTMLElement>(null);
 
 	const handlerHideNavBar = () => {
-		if (isNavOpen) {
-			setIsNavOpen('close');
-			setTimeout(() => setIsNavOpen(''), 100);
-		}
+		setIsNavOpen((prevState) => {
+			if (prevState === 'active') {
+				return 'close';
+			}
+			return '';
+		});
 	};
 
 	const handlerWindHideNavBar = (event: MouseEvent) => {

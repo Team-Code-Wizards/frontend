@@ -10,9 +10,9 @@ export default function ArrowDownIcon() {
 			<path
 				d="M8 1V15M8 15L14 9M8 15L2 9"
 				stroke="white"
-				stroke-width="2"
-				stroke-linecap="square"
-				stroke-linejoin="round"
+				strokeWidth="2"
+				strokeLinecap="square"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	);
