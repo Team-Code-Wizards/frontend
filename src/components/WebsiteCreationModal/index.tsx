@@ -13,8 +13,6 @@ interface IModal {
 	close: () => void;
 }
 
-//TODO Раскомментить строки 9, 20, 24, 31, 56
-
 export default function WebsiteCreationModal({ open, close }: IModal) {
 	const { register, reset, formState, handleSubmit, control } = useForm({
 		mode: 'onChange',
@@ -22,7 +20,6 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 	});
 
 	const { isValid, errors } = formState;
-	console.log('Modal formState:', formState);
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log('data: ', data);
 		close();

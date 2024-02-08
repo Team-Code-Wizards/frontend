@@ -1,6 +1,4 @@
-import { IModalItem } from './type';
-
-export const data: IModalItem[] = [
+export const data = [
 	{
 		id: '32ec6be3-2265-481a-8106-6615f94961c1',
 		title: 'Имя',
