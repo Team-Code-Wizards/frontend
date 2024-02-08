@@ -19,11 +19,7 @@ export interface IControllerProps {
 	errors?: FieldErrors<{ [key: string]: string }> | undefined;
 }
 
-export default function ModalItem({
-	control,
-	register,
-	errors,
-}: IControllerProps) {
+export default function ModalItem({ control, register, errors }: FieldValues) {
 	//const pattern = item.type === 'tel' ? /[0-9+()-]+/ : undefined;
 	//const validation = pattern ? { pattern: { value: pattern, message: 'Неверный формат' } } : {};
 	//const validationRules = item.type === 'tel' ? { pattern: pattern, message: 'Неверный формат' } : {};
