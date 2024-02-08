@@ -1,32 +1,36 @@
 import { useState } from 'react';
 
 import ClearInputButton from './ClearInputButton';
-import IInput from './interface';
+import { IInputProps } from './interface';
 import styles from './styles.module.scss';
 
 export default function Input({
 	id,
 	className,
+	register,
 	type,
 	name,
 	placeholder,
-	value,
 	accept,
 	inputType,
 	labelText,
 	labelStyleKey,
 	wrapperStyleKey,
 	clearInputStyleKey,
-}: IInput) {
+	regOptions,
+}: IInputProps) {
 	const [isActive, setIsActive] = useState(false);
+
+	//TODO починить костыль
+	if (!register) return;
 
 	if (inputType === 'textarea')
 		return (
 			<span className={wrapperStyleKey && styles[wrapperStyleKey]}>
 				<textarea
 					className={className && styles[className]}
-					name={name}
 					placeholder={placeholder}
+					{...register(name, regOptions)}
 					onFocus={() => setIsActive(true)}
 					onBlur={() => setIsActive(false)}
 				/>
@@ -41,7 +45,7 @@ export default function Input({
 					className={className && styles[className]}
 					type={type}
 					id="file"
-					name={name}
+					{...register(name)}
 					accept={accept}
 				/>
 				<label
@@ -63,10 +67,9 @@ export default function Input({
 			<input
 				type={type}
 				className={className && styles[className]}
-				name={name}
 				id={id}
 				placeholder={placeholder}
-				value={value}
+				{...register(name)}
 				onFocus={() => setIsActive(true)}
 				onBlur={() => setIsActive(false)}
 			/>

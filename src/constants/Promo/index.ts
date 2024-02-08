@@ -1,4 +1,7 @@
-import IInput from '@/components/Contacts/ContactsForm/Input/interface';
+import {
+	IInput,
+	InputNames,
+} from '@/components/Contacts/ContactsForm/Input/interface';
 
 export const inputs: IInput[] = [
 	{
@@ -11,7 +14,7 @@ export const inputs: IInput[] = [
 		labelText: 'Имя',
 		placeholder: 'Иван',
 		id: 'promo-name-input',
-		name: 'clientName',
+		name: InputNames.NAME,
 	},
 	{
 		inputType: 'default',
@@ -22,7 +25,8 @@ export const inputs: IInput[] = [
 		type: 'tel',
 		labelText: 'Телефон',
 		placeholder: '+7 (900) 000-00-00',
+		regOptions: {},
 		id: 'promo-tel-input',
-		name: 'clientTel',
+		name: InputNames.PHONE,
 	},
 ];

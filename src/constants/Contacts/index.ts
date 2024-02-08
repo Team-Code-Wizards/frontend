@@ -1,4 +1,7 @@
-import IInput from '@/components/Contacts/ContactsForm/Input/interface';
+import {
+	IInput,
+	InputNames,
+} from '@/components/Contacts/ContactsForm/Input/interface';
 
 export const inputs: IInput[] = [
 	{
@@ -8,7 +11,7 @@ export const inputs: IInput[] = [
 		wrapperStyleKey: 'input-box',
 		clearInputStyleKey: 'input-clear-btn',
 		type: 'text',
-		name: 'clientName',
+		name: InputNames.NAME,
 		placeholder: 'Имя',
 	},
 	{
@@ -18,7 +21,7 @@ export const inputs: IInput[] = [
 		wrapperStyleKey: 'input-box',
 		clearInputStyleKey: 'input-clear-btn',
 		type: 'tel',
-		name: 'clientTel',
+		name: InputNames.PHONE,
 		placeholder: 'Телефон',
 	},
 	{
@@ -28,7 +31,7 @@ export const inputs: IInput[] = [
 		wrapperStyleKey: 'input-box',
 		clearInputStyleKey: 'input-clear-btn',
 		type: 'email',
-		name: 'clientEmail',
+		name: InputNames.EMAIL,
 		placeholder: 'E-mail',
 	},
 	{
@@ -37,7 +40,7 @@ export const inputs: IInput[] = [
 		className: 'contacts-form-input',
 		wrapperStyleKey: 'textarea-box',
 		clearInputStyleKey: 'textarea-clear-btn',
-		name: 'clientMessage',
+		name: InputNames.MESSAGE,
 		placeholder: 'Сообщение',
 	},
 	{
@@ -46,7 +49,7 @@ export const inputs: IInput[] = [
 		className: 'contacts-form-input',
 		labelStyleKey: 'contacts-form-file-input-label',
 		type: 'file',
-		name: 'clientFile',
+		name: InputNames.FILE,
 		accept: '.doc',
 		labelText: 'Прикрепить ТЗ',
 	},
