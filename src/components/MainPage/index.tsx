@@ -23,7 +23,7 @@ import styles from './style.module.scss';
 export default function MainPage() {
 	return (
 		<main className={styles.main}>
-			<video src='/public/video/video1.mov'></video>
+			<video src='/video/video1.mov'></video>
 			{/* <WebsiteCreationModal /> */}
 			{/* <ProjectDescriptionModal /> */}
 			{/* <Popup isSuccess={true} /> */}
