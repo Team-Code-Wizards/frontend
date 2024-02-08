@@ -23,6 +23,7 @@ export default function Navbar() {
 			}
 			return '';
 		});
+		setTimeout(() => setIsNavOpen(''), 500);
 	};
 
 	const handlerWindHideNavBar = (event: MouseEvent) => {
