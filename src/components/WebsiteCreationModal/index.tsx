@@ -7,12 +7,14 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import ModalBackground from '../ModalBackground';
 import styles from './style.module.scss';
 
+//import ModalItem from '@/components/WebsiteCreationModal/ModalItem';
+
 interface IModal {
 	open: boolean;
 	close: () => void;
 }
 
-//TODO Раскомментить errors
+//TODO Раскомментить строки 9, 20, 24, 31, 56
 
 export default function WebsiteCreationModal({ open, close }: IModal) {
 	const {
@@ -27,7 +29,7 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 		isValid,
 		//errors
 	} = formState;
-	//console.log('Modal formState:', formState)
+	console.log('Modal formState:', formState);
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log('data: ', data);
 		close();

@@ -32,6 +32,7 @@
 		background-color: var(--color-gray-bg);
 		line-height: var(--line-height-big);
 		letter-spacing: var(--font-description-letter);
+		position: relative;
 
 		&:focus-visible {
 			outline: none;
@@ -50,6 +51,16 @@
 
 	&:last-of-type {
 		margin-bottom: 24px;
+	}
+
+	&__error {
+		color: #eb5757;
+		font-family: var(--involve-font);
+		font-size: 11px;
+		line-height: 14.3px;
+		position: absolute;
+		top: 34.8%;
+		right: 58%;
 	}
 }
 
@@ -77,9 +88,9 @@
 	border-radius: 0;
 }
 	.option {
-		font-size: 16px; /* Задайте нужный размер шрифта */
-		font-family: var(--involve-font); /* Используйте нужный шрифт */
-		font-weight: 500; /* Установите нужный вес шрифта */
+		font-size: 16px;
+		font-family: var(--involve-font);
+		font-weight: 500;
 		color: #1b1c33;
 		background-color: #f2f2f2;
 
@@ -93,16 +104,15 @@
 			color: #1b1c33;
 			outline: 2px solid #8792fc;
 		}
-
 	}
 
 
 .icon-arrow {
 	position: absolute;
-	top: 50%;
-	right: 5px; /* Расположение вашей иконки */
+	top: 25.5px;
+	right: 18px;
 	transform: translateY(-50%);
-	pointer-events: none; /* Позволяет событиям мыши проходить через иконку */
+	pointer-events: none;
 
 }
 

@@ -1,6 +1,7 @@
 import {
 	Control,
 	Controller,
+	FieldErrors,
 	FieldValues,
 	UseFormRegister,
 } from 'react-hook-form';
@@ -15,16 +16,14 @@ export interface IControllerProps {
 	control: Control;
 	rules?: { [key: string]: boolean };
 	register: UseFormRegister<FieldValues>;
-	//errors?:any
+	errors?: FieldErrors<{ [key: string]: string }> | undefined;
 }
 
 export default function ModalItem({
 	control,
 	register,
-	//errors
+	errors,
 }: IControllerProps) {
-	//const {register} = useForm<IModalItem>()
-
 	//const pattern = item.type === 'tel' ? /[0-9+()-]+/ : undefined;
 	//const validation = pattern ? { pattern: { value: pattern, message: 'Неверный формат' } } : {};
 	//const validationRules = item.type === 'tel' ? { pattern: pattern, message: 'Неверный формат' } : {};
@@ -40,19 +39,20 @@ export default function ModalItem({
 				type="text"
 				{...register('name')}
 			/>
-			{/*<p>{errors && errors.name?.message}</p>*/}
+			<p className={styles['modal-item__error']}>
+				{errors && errors.name?.message}
+			</p>
 			<h4 className={styles['modal-item__title_required']}>Телефон</h4>
 			<input
 				placeholder="+7 (900) 000-00-00"
 				className={styles['modal-item__input']}
-				//required={true}
+				required={true}
 				type="tel"
-				{...register('tel', {
-					required: 'Неверный формат',
-					pattern: { value: /[0-9+()-]+/, message: 'Неверный формат' },
-				})}
+				{...register('tel')}
 			/>
-			{/*<p>{errors.tel && errors.tel?.message}</p>*/}
+			<p className={styles['modal-item__error']}>
+				{errors && errors.tel?.message}
+			</p>
 			<h4 className={styles['modal-item__title_required']}>
 				К вашему номеру подключен Viber, WhatsApp, Telegram
 			</h4>
@@ -68,6 +68,7 @@ export default function ModalItem({
 								className={`${styles['modal-item__input']} ${styles['select']} ${styles['option']}`}
 								required={true}
 							>
+								<option></option>
 								<option>Да</option>
 								<option>Нет (лучше звонить по номеру)</option>
 							</select>
@@ -91,6 +92,7 @@ export default function ModalItem({
 								className={`${styles['modal-item__input']} ${styles['select']} ${styles['option']}`}
 								required={true}
 							>
+								<option></option>
 								<option>Лендинг</option>
 								<option>Интернет-магазин</option>
 								<option>Копоративный сайт</option>
