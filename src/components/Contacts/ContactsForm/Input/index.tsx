@@ -6,6 +6,11 @@ import ClearInputButton from './ClearInputButton';
 import IInput from './interface';
 import styles from './styles.module.scss';
 
+// type Inputs = {
+// 	clientTel: string | undefined;
+// 	clientEmail: string | undefined;
+// };
+
 export default function Input({
 	id,
 	className,
