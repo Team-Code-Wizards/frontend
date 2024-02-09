@@ -43,6 +43,10 @@
 			transition: 0.1s background-position ease-in-out;
 			background-position: 10%;
 		}
+
+		&_disabled {
+			background: linear-gradient(93.14deg, #CACCD7 18.25%, #D6DAE7 93.44%);
+		}
 	}
 }
 
@@ -79,6 +83,13 @@
 			color: transparent;
 		}
 	}
+
+		&_error {
+			border: 2px solid #EB575799;
+		}
+		&_success {
+			border: 2px solid #27AE6099;
+		}
 }
 
 .contacts-form-file-input-label {
@@ -114,6 +125,38 @@
 	&:nth-of-type(3) {
 		flex-basis: calc(50% - 5px);
 	}
+}
+
+.input-error-message {
+	position:absolute;
+	bottom: 4px;
+	left: 10px;
+	font-family: var(--involve-font);
+	font-size: 11px;
+	color: var(--color-red);
+}
+
+.input-validation-icon{
+	position: absolute;
+	right: 13px;
+	top: calc(43% - 7px);
+}
+
+.input-clear-btn {
+	all: initial;
+	cursor: pointer;
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	background-color: var(--color-bg-white);
+	width: 21px;
+	height: 21px;
+	padding: 1px 0 0 1px;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 2px 6.5px 0px rgba(13, 9, 9, 0.15);
 }
 
 

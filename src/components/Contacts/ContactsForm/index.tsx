@@ -1,10 +1,13 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useEffect } from 'react';
+import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
+import ClearInputIcon from '&/images/icons/ClearInputIcon';
+import DoneIcon from '&/images/icons/DoneIcon';
+import ErrorIcon from '&/images/icons/ErrorIcon';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import ClearInputButton from './Input/ClearInputButton';
+// import ClearInputButton from './Input/ClearInputButton';
 // import { FormProvider } from 'react-hook-form';
 // import { inputs } from '@/constants/Contacts';
 // import Input from './Input';
@@ -25,30 +28,43 @@ export const schema = yup.object().shape({
 	clientFile: yup.mixed().notRequired(),
 });
 // interface IFormInput {
-// 	clientName: string;
-// 	clientTel: number;
+// 	clientName?: string | undefined | null;
+// 	clientTel: string;
 // 	clientEmail: string;
-// 	clientMessage: string;
-// 	clientFile: string;
+// 	clientMessage?: string | undefined | null;
+// 	clientFile?: string | undefined | null | object;
 // }
 
 export default function ContactsForm() {
 	const {
 		register,
+		resetField,
 		handleSubmit,
-		formState: { errors },
+		formState,
+		formState: { errors, dirtyFields, isValid, isDirty },
 		reset,
 	} = useForm({
+		defaultValues: {
+			clientName: '',
+			clientTel: '',
+			clientEmail: '',
+			clientMessage: '',
+			clientFile: '',
+		},
 		mode: 'onChange',
 		resolver: yupResolver(schema),
 	});
-	// const { handleSubmit, register } = useForm<IFormInput>();
-	// const onSubmit = (data: IFormInput) => console.log(data);
-	const onSubmit = (data) => {
+
+	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log(data);
 		reset();
 	};
-	const [isActive, setIsActive] = useState(false);
+	useEffect(() => {
+		// console.log(isDirty);
+		console.log(formState);
+
+		// console.log(`value ${getValues('clientTel')}`);
+	}, [formState]);
 
 	return (
 		<div className={styles['form-box']}>
@@ -59,36 +75,75 @@ export default function ContactsForm() {
 						type="text"
 						className={styles['contacts-form-input']}
 						placeholder="Имя"
-						onFocus={() => setIsActive(true)}
-						onBlur={() => setIsActive(false)}
 					/>
-					<ClearInputButton styleKey={'input-clear-btn'} isHidden={!isActive} />
+					{dirtyFields?.clientName && (
+						<button
+							className={styles['input-clear-btn']}
+							onClick={() => resetField('clientName')}
+						>
+							<ClearInputIcon />
+						</button>
+					)}
 				</span>
 
 				<span className={styles['input-box']}>
 					<input
 						{...register('clientTel')}
 						type="tel"
-						className={styles['contacts-form-input']}
+						className={`${styles['contacts-form-input']} ${
+							errors.clientTel && styles['contacts-form-input_error']
+						} ${
+							!errors.clientTel &&
+							dirtyFields?.clientTel &&
+							styles['contacts-form-input_success']
+						}`}
 						placeholder="Телефон"
-						onFocus={() => setIsActive(true)}
-						onBlur={() => setIsActive(false)}
 					/>
-					<ClearInputButton styleKey={'input-clear-btn'} isHidden={!isActive} />
-					<span>{errors.clientTel?.message}</span>
+					{dirtyFields?.clientTel && (
+						<button
+							className={styles['input-clear-btn']}
+							onClick={() => resetField('clientTel')}
+						>
+							<ClearInputIcon />
+						</button>
+					)}
+					<span className={styles['input-error-message']}>
+						{errors.clientTel?.message}
+					</span>
+					<span className={styles['input-validation-icon']}>
+						{errors.clientTel && <ErrorIcon />}
+						{!errors.clientTel && dirtyFields?.clientTel && <DoneIcon />}
+					</span>
 				</span>
 
 				<span className={styles['input-box']}>
 					<input
 						{...register('clientEmail')}
 						type="email"
-						className={styles['contacts-form-input']}
+						className={`${styles['contacts-form-input']} ${
+							errors.clientEmail && styles['contacts-form-input_error']
+						} ${
+							!errors.clientEmail &&
+							dirtyFields?.clientEmail &&
+							styles['contacts-form-input_success']
+						}`}
 						placeholder="Email"
-						onFocus={() => setIsActive(true)}
-						onBlur={() => setIsActive(false)}
 					/>
-					<ClearInputButton styleKey={'input-clear-btn'} isHidden={!isActive} />
-					<span>{errors.clientEmail?.message}</span>
+					{dirtyFields?.clientEmail && (
+						<button
+							className={styles['input-clear-btn']}
+							onClick={() => resetField('clientEmail')}
+						>
+							<ClearInputIcon />
+						</button>
+					)}
+					<span className={styles['input-error-message']}>
+						{errors.clientEmail?.message}
+					</span>
+					<span className={styles['input-validation-icon']}>
+						{errors.clientEmail && <ErrorIcon />}
+						{!errors.clientEmail && dirtyFields?.clientEmail && <DoneIcon />}
+					</span>
 				</span>
 
 				<span className={styles['textarea-box']}>
@@ -96,10 +151,15 @@ export default function ContactsForm() {
 						{...register('clientMessage')}
 						className={styles['contacts-form-input']}
 						placeholder="Сообщение"
-						onFocus={() => setIsActive(true)}
-						onBlur={() => setIsActive(false)}
 					/>
-					<ClearInputButton styleKey={'input-clear-btn'} isHidden={!isActive} />
+					{dirtyFields?.clientMessage && (
+						<button
+							className={styles['input-clear-btn']}
+							onClick={() => resetField('clientMessage')}
+						>
+							<ClearInputIcon />
+						</button>
+					)}
 				</span>
 
 				<input
@@ -117,7 +177,12 @@ export default function ContactsForm() {
 				</label>
 
 				<span className={styles['form__notice']}>*В формате Документ Word</span>
-				<button className={styles['form__button']} type="submit">
+				<button
+					className={`${styles['form__button']} ${
+						!isValid && isDirty && styles['form__button_disabled']
+					}`}
+					type="submit"
+				>
 					Отправить
 				</button>
 				<span className={styles['form__notice']}>
@@ -128,7 +193,6 @@ export default function ContactsForm() {
 		</div>
 	);
 }
-
 // import { inputs } from '@/constants/Contacts';
 
 // import Input from './Input';
