@@ -43,6 +43,9 @@ export default function ModalItem({ control, register, errors }: FieldValues) {
 								<option>Да</option>
 								<option>Нет (лучше звонить по номеру)</option>
 							</select>
+							<p className={styles['modal-item__dropdown-error']}>
+								{errors && errors.messenger?.message}
+							</p>
 							<div className={styles['icon-arrow']}>
 								<IconArrow />
 							</div>
@@ -50,7 +53,7 @@ export default function ModalItem({ control, register, errors }: FieldValues) {
 					)}
 				/>
 			</div>
-			{errors && errors.messenger?.message}
+
 			<h4 className={styles['modal-item__title_required']}>Выбор сайта</h4>
 			<div className={styles['dropdown']}>
 				<Controller
@@ -70,6 +73,9 @@ export default function ModalItem({ control, register, errors }: FieldValues) {
 								<option>Фирменный сайт</option>
 								<option>Сайт по вашему техническому заданию</option>
 							</select>
+							<p className={styles['modal-item__dropdown-error']}>
+								{errors && errors.siteOrder?.message}
+							</p>
 							<div className={styles['icon-arrow']}>
 								<IconArrow />
 							</div>
