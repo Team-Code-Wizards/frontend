@@ -1,13 +1,15 @@
 import { NextResponse } from 'next/server';
 
-import { sendEmail } from '@/service/mailservice/mailService';
+import sendMail from '@/service/mailservice';
 
-export async function POST(res: Response, req: Request) {
+export async function POST(req: Request) {
 	try {
-		await sendEmail();
+		const body = await req.json();
 
-		return NextResponse.json({ message: req.body }, { status: 200 });
+		sendMail(body);
+
+		return NextResponse.json({ status: 200 });
 	} catch {
-		return NextResponse.json({ error: req.body }, { status: 500 });
+		return NextResponse.json({ status: 405 });
 	}
 }
