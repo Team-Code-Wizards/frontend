@@ -1,7 +1,7 @@
 .promo {
 	background-image: url('../../../public/images/promo/promo-bg-1440.webp');
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom;
 	color: var(--color-text);
 	max-width: var(--max-width);
 
@@ -88,6 +88,7 @@
 
 @media screen and (max-width: 1280px) {
 	.promo {
+		background-image: url('../../../public/images/promo/promo-bg-1280.webp');
 		&__container {
 			width: var(--width-1280-1024);
 			padding: 126px 1px 118px 0;
@@ -110,6 +111,8 @@
 
 @media screen and (max-width: 1050px) {
 	.promo {
+		background-position: center;
+		background-size: cover;
 		&__container {
 			width: 89%;
 		}

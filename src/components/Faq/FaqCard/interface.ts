@@ -1,5 +1,5 @@
 import { IFaqData } from '@/constants/Faq/type';
 
-export interface IFaqCardProps {
-	item: IFaqData;
+export interface IFaqCardProps extends IFaqData {
+	active: boolean;
 }

@@ -1,14 +1,18 @@
 .faq-card {
   color: var(--color-text);
 
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid var(--color-text);
     cursor: pointer;
-    gap: 10px;
+    gap: 15px;
+    font: var(--font-block-description);
 
     @media screen and (max-width: 1280px) {
       .faq-card {
@@ -35,7 +39,11 @@
   }
 
   &__description {
-    margin-top: 33px;
+    margin-top: 15px;
+    max-width: fit-content;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
     font: var(--font-description-main);
     letter-spacing: var(--font-description-letter);
   }
