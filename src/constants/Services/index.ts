@@ -10,6 +10,8 @@ const services = [
 		],
 		newPrice: '300',
 		oldPrice: '500',
+		newPriceRu: '30.000',
+		oldPriceRu: '45.000',
 	},
 	{
 		id: 'b67da2b7-cf95-4879-8bb7-35b65c53b1df',
@@ -23,6 +25,8 @@ const services = [
 		],
 		newPrice: '500',
 		oldPrice: '700',
+		newPriceRu: '50.000',
+		oldPriceRu: '75.000',
 	},
 	{
 		id: '60d474c6-2a74-4375-960f-b0d42fde343d',
@@ -34,6 +38,8 @@ const services = [
 		],
 		newPrice: '650',
 		oldPrice: '850',
+		newPriceRu: '60.000',
+		oldPriceRu: '80.000',
 	},
 	{
 		id: '80f9f551-ef24-4cee-b235-70fcae0757eb',
@@ -46,6 +52,8 @@ const services = [
 		],
 		newPrice: '750',
 		oldPrice: '1000',
+		newPriceRu: '75.000',
+		oldPriceRu: '90.000',
 	},
 	{
 		id: 'eeb2c51f-bfff-4b80-85b4-037129852892',
@@ -58,6 +66,8 @@ const services = [
 		],
 		newPrice: '900',
 		oldPrice: '1100',
+		newPriceRu: '90.000',
+		oldPriceRu: '105.000',
 	},
 	{
 		id: '90792fc4-dcab-4fc2-9ba9-dd652cafcc12',
@@ -70,6 +80,8 @@ const services = [
 		],
 		newPrice: '1000',
 		oldPrice: '1250',
+		newPriceRu: '100.000',
+		oldPriceRu: '115.000',
 	},
 ];
 

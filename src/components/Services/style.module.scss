@@ -49,13 +49,13 @@
     display: flex;
     flex-direction: column;
 
-    &>h4 {
+    & > h4 {
       font: var(--font-title-description);
       line-height: 105%;
       margin: 0 0 15px;
     }
 
-    &>p {
+    & > p {
       margin: 0 0 15px;
       padding: 0;
       font: var(--font-description-main);
@@ -90,7 +90,7 @@
       color: rgba(255, 255, 255, 0.5);
       position: relative;
       text-decoration: none;
-      bottom: -4px;
+      bottom: -13px;
 
       &:before {
         content: "";
@@ -166,16 +166,14 @@
 
   .service-card {
     &__content {
-      &>h4 {
+      & > h4 {
         line-height: 125%;
       }
     }
 
     &__prices {
       bottom: 13px;
-
     }
-
   }
 }
 
@@ -205,7 +203,7 @@
     }
 
     &__right {
-      &>h4 {
+      & > h4 {
         margin-bottom: 16px;
       }
     }
@@ -253,11 +251,11 @@
     }
 
     &__right {
-      &>h4 {
+      & > h4 {
         margin-bottom: 37px;
       }
 
-      &>p {
+      & > p {
         display: none;
       }
     }
