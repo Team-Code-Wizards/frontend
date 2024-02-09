@@ -14,7 +14,7 @@ interface IModal {
 }
 
 export default function WebsiteCreationModal({ open, close }: IModal) {
-	const { register, reset, formState, handleSubmit, control } = useForm({
+	const { register, formState, handleSubmit, control } = useForm({
 		mode: 'onChange',
 		resolver: yupResolver(siteOrderSchema),
 	});
@@ -23,7 +23,6 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log('data: ', data);
 		close();
-		reset();
 	};
 
 	return (

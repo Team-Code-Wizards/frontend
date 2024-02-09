@@ -18,7 +18,7 @@ export default function ModalItem({ control, register, errors }: FieldValues) {
 			</p>
 			<h4 className={styles['modal-item__title_required']}>Телефон</h4>
 			<input
-				placeholder="+7 (900) 000-00-00"
+				placeholder="+7 900 000 00 00"
 				className={styles['modal-item__input']}
 				type="tel"
 				{...register('tel')}
