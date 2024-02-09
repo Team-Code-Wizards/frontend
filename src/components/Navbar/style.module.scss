@@ -16,11 +16,9 @@
 	font-family: var(--involve-font);
 	font-size: 16px;
 	font-weight: 500;
+
 	&__close-btn {
 		display: none;
-		&:hover {
-			cursor: pointer;
-		}
 	}
 
 	&__logo {
@@ -73,18 +71,53 @@
 	}
 }
 
+@keyframes go-left-1050 {
+	from {
+		right: -48vw;
+	}
+	to {
+		right: 0;
+	}
+}
+
+@keyframes go-right-1050 {
+	from {
+		right: 0;
+	}
+	to {
+		right: -48vw;
+	}
+}
+
+@keyframes go-left-650 {
+	from {
+		right: -65vw;
+	}
+	to {
+		right: 0;
+	}
+}
+
+@keyframes go-right-650 {
+	from {
+		right: 0;
+	}
+	to {
+		right: -65vw;
+	}
+}
+
 @media screen and (max-width: 1050px) {
 	.navbar {
 		display: none;
 		top: 0;
-		right: 0;
 		height: 100vh;
 		width: 48vw;
 		padding: 33px;
 		flex-direction: column;
 		align-items: end;
 		justify-content: flex-start;
-		gap: calc((100vh - 326px) * 0.35); // 32vh;
+		gap: calc((100vh - 326px) * 0.35);
 		font: var(--font-block-title);
 		background-color: lightgray;
 		background: url('/images/header/nav-bg.png');
@@ -93,18 +126,32 @@
 		border-radius: 0;
 		border: 1px solid white;
 
-		&.hidden {
-			display: none;
+		&.active {
+			display: flex;
+			animation: go-left-1050 0.5s linear forwards;
+		}
+
+		&.close {
+			display: flex;
+			animation: go-right-1050 0.5s linear forwards;
 		}
 
 		&__close-btn {
 			display: block;
-			width: 48px;
-			height: 48px;
+			width: 54px;
+			height: 54px;
 			display: grid;
 			place-items: center;
+			border-radius: 100%;
 			border: none;
-			background-color: transparent;
+			background-color: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(11px);
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.25);
+			}
 		}
 
 		&__logo,
@@ -133,25 +180,18 @@
 		& > * {
 			display: grid;
 			place-items: center;
-			&:hover {
-				cursor: pointer;
-			}
-		}
-
-		&__tel {
 			width: 54px;
 			height: 54px;
+			background-color: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(11px);
+			transition: all 0.2s ease-in-out;
 			border-radius: 100%;
 			border: none;
-			background-color: rgba(256, 256, 256, 0.1);
-		}
 
-		&__menu {
-			width: 48px;
-			height: 48px;
-			border: none;
-			background-color: transparent;
-			z-index: 500;
+			&:hover {
+				cursor: pointer;
+				background-color: rgba(255, 255, 255, 0.25);
+			}
 		}
 	}
 }
@@ -160,6 +200,14 @@
 	.navbar {
 		width: 65vw;
 		font-size: 20px;
+
+		&.active {
+			animation: go-left-650 0.5s linear forwards;
+		}
+
+		&.close {
+			animation: go-right-650 0.5s linear forwards;
+		}
 
 		&__link-list {
 			font: var(--font-title-description);
