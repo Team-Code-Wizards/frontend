@@ -115,7 +115,7 @@
     padding: 18px 41px;
     border: none;
     color: var(--color-text);
-    font: var(--font-button-rg);
+    font: var(--font-description-main);
     cursor: pointer;
     transition: 0.3s background-position ease-in-out;
 
@@ -164,7 +164,7 @@
       max-width: 88%;
     }
     &__description {
-      max-width: 44%;
+      max-width: 42%;
     }
   }
 }
