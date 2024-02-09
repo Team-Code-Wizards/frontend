@@ -1,7 +1,5 @@
 import { InputHTMLAttributes } from 'react';
 
-// import { FieldValues, UseFormRegister } from 'react-hook-form';
-
 export default interface IInput extends InputHTMLAttributes<HTMLInputElement> {
 	id: string;
 	className: string;

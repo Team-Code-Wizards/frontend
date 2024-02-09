@@ -1,4 +1,4 @@
-import Input from '@/components/Contacts/ContactsForm/Input';
+import Input from '@/components/Input';
 import { inputs } from '@/constants/Promo';
 
 import IPromoForm from './interface';

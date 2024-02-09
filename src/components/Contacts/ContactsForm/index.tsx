@@ -1,46 +1,18 @@
-import { useEffect } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import ClearInputIcon from '&/images/icons/ClearInputIcon';
 import DoneIcon from '&/images/icons/DoneIcon';
 import ErrorIcon from '&/images/icons/ErrorIcon';
+import { contactsSchema } from '@/constants/Contacts/contactsSchema';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 
-// import ClearInputButton from './Input/ClearInputButton';
-// import { FormProvider } from 'react-hook-form';
-// import { inputs } from '@/constants/Contacts';
-// import Input from './Input';
-// import IContactsFormProps from './interface';
 import styles from './styles.module.scss';
-
-export const schema = yup.object().shape({
-	clientName: yup.string().notRequired(),
-	clientTel: yup
-		.string()
-		.required('Введите номер телефона')
-		.matches(/^\+?\d{10,}$/g, 'Неверный формат номера телефона'),
-	clientEmail: yup
-		.string()
-		.required('Введите Email')
-		.matches(/.+@.+\..+/i, 'Неверный формат Email'),
-	clientMessage: yup.string().notRequired(),
-	clientFile: yup.mixed().notRequired(),
-});
-// interface IFormInput {
-// 	clientName?: string | undefined | null;
-// 	clientTel: string;
-// 	clientEmail: string;
-// 	clientMessage?: string | undefined | null;
-// 	clientFile?: string | undefined | null | object;
-// }
 
 export default function ContactsForm() {
 	const {
 		register,
 		resetField,
 		handleSubmit,
-		formState,
 		formState: { errors, dirtyFields, isValid, isDirty },
 		reset,
 	} = useForm({
@@ -52,19 +24,13 @@ export default function ContactsForm() {
 			clientFile: '',
 		},
 		mode: 'onChange',
-		resolver: yupResolver(schema),
+		resolver: yupResolver(contactsSchema),
 	});
 
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log(data);
 		reset();
 	};
-	useEffect(() => {
-		// console.log(isDirty);
-		console.log(formState);
-
-		// console.log(`value ${getValues('clientTel')}`);
-	}, [formState]);
 
 	return (
 		<div className={styles['form-box']}>
@@ -193,28 +159,3 @@ export default function ContactsForm() {
 		</div>
 	);
 }
-// import { inputs } from '@/constants/Contacts';
-
-// import Input from './Input';
-// import IContactsFormProps from './interface';
-// import styles from './styles.module.scss';
-
-// export default function ContactsForm({ onSubmit }: IContactsFormProps) {
-// 	return (
-// 		<div className={styles['form-box']}>
-// 			<form className={styles['form']} onSubmit={onSubmit}>
-// 				{inputs.map((el) => (
-// 					<Input key={`key${el.id}`} {...el} />
-// 				))}
-// 				<span className={styles['form__notice']}>*В формате Документ Word</span>
-// 				<button className={styles['form__button']} type="submit">
-// 					Отправить
-// 				</button>
-// 				<span className={styles['form__notice']}>
-// 					Нажимая кнопку «отправить», вы соглашаетесь с политикой обработки
-// 					персональных данных.
-// 				</span>
-// 			</form>
-// 		</div>
-// 	);
-// }
