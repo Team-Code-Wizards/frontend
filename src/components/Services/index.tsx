@@ -2,15 +2,15 @@
 
 import { useState } from 'react';
 
+import WebsiteCreationModal from '@/components/WebsiteCreationModal';
 import services from '@/constants/Services';
 
 import ProjectDescriptionModal from '../ProjectDescriptionModal';
-import WebsiteCreationModal from '../WebsiteCreationModal';
 import ServiceCard from './ServiceCard';
 import styles from './style.module.scss';
 
 export default function Services() {
-	const [isCreationModalOpen, setCreationModalOpen] = useState(false);
+	const [openCreationModal, setOpenCreationModal] = useState<boolean>(false);
 	const [isPrDescriptionModalOpen, setPrDescriptionModalOpen] = useState(false);
 	const [activeService, setActiveService] = useState('');
 
@@ -18,9 +18,20 @@ export default function Services() {
 		setActiveService(id);
 		setPrDescriptionModalOpen(true);
 	};
+	const handleOpenCreationModal = (): void => {
+		setOpenCreationModal(true);
+	};
+
+	const handleCloseCreationModal = (): void => {
+		setOpenCreationModal(false);
+	};
 
 	return (
 		<section id="services" className={styles.wrapper}>
+			<WebsiteCreationModal
+				open={openCreationModal}
+				close={handleCloseCreationModal}
+			/>
 			<div className={styles['services']}>
 				<h2 className={styles['services__title']}>Услуги</h2>
 				<div className={styles['services__cards']}>
@@ -28,20 +39,17 @@ export default function Services() {
 						<ServiceCard
 							key={service.id}
 							service={service}
-							openCreationModal={setCreationModalOpen}
+							openCreationModal={handleOpenCreationModal}
 							handlerAskBtn={handlerAskBtn}
 						/>
 					))}
 				</div>
 			</div>
-			{isCreationModalOpen && (
-				<WebsiteCreationModal open={setCreationModalOpen} />
-			)}
 			{isPrDescriptionModalOpen && (
 				<ProjectDescriptionModal
 					id={activeService}
 					open={setPrDescriptionModalOpen}
-					order={setCreationModalOpen}
+					order={handleOpenCreationModal}
 				/>
 			)}
 		</section>
