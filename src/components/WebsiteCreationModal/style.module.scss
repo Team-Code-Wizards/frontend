@@ -74,6 +74,11 @@
 			transition: 0.1s background-position ease-in-out;
 			background-position: 10%;
 		}
+		&:disabled {
+			background-image:none;
+			background-color: #CACCD7;
+			cursor: auto;
+		}
 	}
 }
 

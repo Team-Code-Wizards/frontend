@@ -71,46 +71,10 @@
 	}
 }
 
-@keyframes go-left-1050 {
-	from {
-		right: -48vw;
-	}
-	to {
-		right: 0;
-	}
-}
-
-@keyframes go-right-1050 {
-	from {
-		right: 0;
-	}
-	to {
-		right: -48vw;
-	}
-}
-
-@keyframes go-left-650 {
-	from {
-		right: -65vw;
-	}
-	to {
-		right: 0;
-	}
-}
-
-@keyframes go-right-650 {
-	from {
-		right: 0;
-	}
-	to {
-		right: -65vw;
-	}
-}
-
 @media screen and (max-width: 1050px) {
 	.navbar {
-		display: none;
 		top: 0;
+		right: 0;
 		height: 100vh;
 		width: 48vw;
 		padding: 33px;
@@ -125,15 +89,12 @@
 		background-repeat: no-repeat;
 		border-radius: 0;
 		border: 1px solid white;
+		transform: translateX(100%);
+		transition: all 0.5s;
 
 		&.active {
 			display: flex;
-			animation: go-left-1050 0.5s linear forwards;
-		}
-
-		&.close {
-			display: flex;
-			animation: go-right-1050 0.5s linear forwards;
+			transform: translateX(0);
 		}
 
 		&__close-btn {
@@ -200,14 +161,6 @@
 	.navbar {
 		width: 65vw;
 		font-size: 20px;
-
-		&.active {
-			animation: go-left-650 0.5s linear forwards;
-		}
-
-		&.close {
-			animation: go-right-650 0.5s linear forwards;
-		}
 
 		&__link-list {
 			font: var(--font-title-description);
