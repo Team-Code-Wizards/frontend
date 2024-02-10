@@ -16,11 +16,9 @@
 	font-family: var(--involve-font);
 	font-size: 16px;
 	font-weight: 500;
+
 	&__close-btn {
 		display: none;
-		&:hover {
-			cursor: pointer;
-		}
 	}
 
 	&__logo {
@@ -75,7 +73,6 @@
 
 @media screen and (max-width: 1050px) {
 	.navbar {
-		display: none;
 		top: 0;
 		right: 0;
 		height: 100vh;
@@ -84,7 +81,7 @@
 		flex-direction: column;
 		align-items: end;
 		justify-content: flex-start;
-		gap: calc((100vh - 326px) * 0.35); // 32vh;
+		gap: calc((100vh - 326px) * 0.35);
 		font: var(--font-block-title);
 		background-color: lightgray;
 		background: url('/images/header/nav-bg.png');
@@ -92,19 +89,30 @@
 		background-repeat: no-repeat;
 		border-radius: 0;
 		border: 1px solid white;
+		transform: translateX(100%);
+		transition: all 0.5s;
 
-		&.hidden {
-			display: none;
+		&.active {
+			display: flex;
+			transform: translateX(0);
 		}
 
 		&__close-btn {
 			display: block;
-			width: 48px;
-			height: 48px;
+			width: 54px;
+			height: 54px;
 			display: grid;
 			place-items: center;
+			border-radius: 100%;
 			border: none;
-			background-color: transparent;
+			background-color: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(11px);
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.25);
+			}
 		}
 
 		&__logo,
@@ -133,25 +141,18 @@
 		& > * {
 			display: grid;
 			place-items: center;
-			&:hover {
-				cursor: pointer;
-			}
-		}
-
-		&__tel {
 			width: 54px;
 			height: 54px;
+			background-color: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(11px);
+			transition: all 0.2s ease-in-out;
 			border-radius: 100%;
 			border: none;
-			background-color: rgba(256, 256, 256, 0.1);
-		}
 
-		&__menu {
-			width: 48px;
-			height: 48px;
-			border: none;
-			background-color: transparent;
-			z-index: 500;
+			&:hover {
+				cursor: pointer;
+				background-color: rgba(255, 255, 255, 0.25);
+			}
 		}
 	}
 }

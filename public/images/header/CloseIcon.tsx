@@ -1,16 +1,16 @@
 export default function CloseIcon() {
 	return (
 		<svg
-			width="28"
-			height="28"
-			viewBox="0 0 28 28"
+			width="14"
+			height="14"
+			viewBox="0 0 14 14"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path
-				d="M25.9999 25.9999L14 14M14 14L2 2M14 14L26.0001 2M14 14L2 26.0001"
+				d="M13 13L7.00002 7.00002M7.00002 7.00002L1 1M7.00002 7.00002L13 1M7.00002 7.00002L1 13"
 				stroke="white"
-				strokeWidth="4"
+				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
 			/>
