@@ -1,70 +1,70 @@
 .wrapper {
-	max-width: 1440px;
-	margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .services {
-	max-width: var(--max-width);
-	padding: 85px 80px 80px 80px;
-	margin: 0 auto;
-	color: var(--color-text);
+  max-width: var(--max-width);
+  padding: 85px 80px 80px 80px;
+  margin: 0 auto;
+  color: var(--color-text);
 
-	&__title {
-		margin-bottom: 40px;
-		font: var(--font-block-title);
-		letter-spacing: 1px;
-	}
+  &__title {
+    margin-bottom: 40px;
+    font: var(--font-block-title);
+    letter-spacing: 1px;
+  }
 
-	&__cards {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		column-gap: 20px;
-		gap: 20px;
-		justify-content: space-between;
-	}
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    gap: 20px;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-	.services {
-		max-width: 1024px;
-		padding: 84px 0 169px;
+  .services {
+    max-width: 1024px;
+    padding: 84px 0 169px;
 
-		&__cards {
-			grid-template-rows: 1fr 1fr;
-		}
-	}
+    &__cards {
+      grid-template-rows: 1fr 1fr;
+    }
+  }
 }
 
 @media screen and (min-width: 581px) and (max-width: 1279px) {
-	.services {
-		padding: 89px 20px 88px 30px;
+  .services {
+    padding: 89px 20px 88px 30px;
 
-		&__title {
-			letter-spacing: 0px;
-		}
+    &__title {
+      letter-spacing: 0px;
+    }
 
-		&__cards {
-			grid-template-columns: 1fr 1fr;
-			padding: 0px 20px 80px 0px;
-			gap: 20px;
-		}
-	}
+    &__cards {
+      grid-template-columns: 1fr 1fr;
+      padding: 0px 20px 80px 0px;
+      gap: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 580px) {
-	.services {
-		padding: 21px 35px 108px;
+  .services {
+    padding: 21px 35px 108px;
 
-		&__title {
-			font-size: 40px;
-			line-height: 130%;
-			margin-bottom: 30px;
-		}
+    &__title {
+      font-size: 40px;
+      line-height: 130%;
+      margin-bottom: 30px;
+    }
 
-		&__cards {
-			grid-template-columns: 1fr;
-			grid-template-rows: auto;
-			gap: 17px;
-		}
-	}
+    &__cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 17px;
+    }
+  }
 }
