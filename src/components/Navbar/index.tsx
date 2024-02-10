@@ -13,18 +13,10 @@ import styles from './style.module.scss';
 //TODO добавить плавный скролл до разделов
 
 export default function Navbar() {
-	const [isNavOpen, setIsNavOpen] = useState('');
+	const [isNavOpen, setIsNavOpen] = useState(false);
 	const navRef = useRef<null | HTMLElement>(null);
 
-	const handlerHideNavBar = () => {
-		setIsNavOpen((prevState) => {
-			if (prevState === 'active') {
-				return 'close';
-			}
-			return '';
-		});
-		setTimeout(() => setIsNavOpen(''), 500);
-	};
+	const handlerHideNavBar = () => setIsNavOpen(false);
 
 	const handlerWindHideNavBar = (event: MouseEvent) => {
 		if (
@@ -50,7 +42,7 @@ export default function Navbar() {
 					<TelIcon />
 				</a>
 				<button
-					onClick={() => setIsNavOpen('active')}
+					onClick={() => setIsNavOpen(true)}
 					className={styles['nav-icons__menu']}
 				>
 					<MenuIcon />
@@ -58,7 +50,7 @@ export default function Navbar() {
 			</div>
 			<nav
 				ref={navRef}
-				className={`${styles['navbar']} ${isNavOpen ? styles[isNavOpen] : ''}`}
+				className={`${styles['navbar']} ${isNavOpen ? styles['active'] : ''}`}
 			>
 				<button
 					onClick={handlerHideNavBar}
