@@ -1,16 +1,16 @@
 export default function MenuIcon() {
 	return (
 		<svg
-			width="32"
-			height="24"
-			viewBox="0 0 32 24"
+			width="16"
+			height="12"
+			viewBox="0 0 16 12"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path
-				d="M2 22H30M2 12H30M2 2H30"
+				d="M1 11H15M1 6H15M1 1H15"
 				stroke="white"
-				strokeWidth="4"
+				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
 			/>
