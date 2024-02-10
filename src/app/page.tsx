@@ -1,5 +1,10 @@
+import { InfoMsgProvider } from '@/components/InfoMsgContext';
 import MainPage from '@/components/MainPage';
 
 export default function Home() {
-	return <MainPage />;
+	return (
+		<InfoMsgProvider>
+			<MainPage />
+		</InfoMsgProvider>
+	);
 }
