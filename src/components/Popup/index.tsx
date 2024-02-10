@@ -1,45 +1,52 @@
+'use client';
+
 import Image from 'next/image';
 
 import failureImage from '../../../public/images/popup/failure.svg';
 import successImage from '../../../public/images/popup/success.svg';
+import { useInfoMsg } from '../InfoMsgContext';
 import ModalBackground from '../ModalBackground';
 import styles from './style.module.scss';
 
-//Для проверки в файле MainPage нужно импортировать компонент Popup и передавать ему свойста <Popup isSuccess={false}
-//или <Popup isSuccess={true} />
+export default function Popup() {
+	const { infoMsg, hideInfoMsg } = useInfoMsg();
 
-export default function Popup({ isSuccess }: { isSuccess: boolean }) {
-	const className = isSuccess
+	const className = infoMsg
 		? styles['popup__icon_success']
 		: styles['popup__icon_failure'];
 	return (
-		<ModalBackground>
-			<div className={styles.popup}>
-				<div className={styles['popup__background']}>
-					<button
-						className={styles['popup__icon_close']}
-						aria-label="закрыть"
-						type="button"
-					></button>
-					<div className={styles['popup__info']}>
-						<Image
-							src={isSuccess ? successImage : failureImage}
-							alt="icon"
-							className={className}
-							width={75}
-						/>
-						<p
-							className={
-								isSuccess
-									? styles['popup__message_success']
-									: styles['popup__message_failure']
-							}
-						>
-							{isSuccess ? 'Заявка успешно отправлена!' : 'Ошибка отправки!'}
-						</p>
+		<>
+			{typeof infoMsg === 'boolean' && (
+				<ModalBackground onClick={hideInfoMsg}>
+					<div className={styles.popup}>
+						<div className={styles['popup__background']}>
+							<button
+								onClick={hideInfoMsg}
+								className={styles['popup__icon_close']}
+								aria-label="закрыть"
+								type="button"
+							></button>
+							<div className={styles['popup__info']}>
+								<Image
+									src={infoMsg ? successImage : failureImage}
+									alt="icon"
+									className={className}
+									width={75}
+								/>
+								<p
+									className={
+										infoMsg
+											? styles['popup__message_success']
+											: styles['popup__message_failure']
+									}
+								>
+									{infoMsg ? 'Заявка успешно отправлена!' : 'Ошибка отправки!'}
+								</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</ModalBackground>
+				</ModalBackground>
+			)}
+		</>
 	);
 }
