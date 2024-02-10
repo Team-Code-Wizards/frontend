@@ -1,6 +1,6 @@
 %title-defaults {
 	font: var(--font-title-description);
-	max-width: 90%;
+	max-width: 95%;
 	position: relative;
 	z-index: 350;
 }
@@ -8,7 +8,7 @@
 .modal-item {
 	display: flex;
 	flex-direction: column;
-	row-gap: 13px;
+	row-gap: 14px;
 
 	&__title {
 		@extend %title-defaults;
@@ -28,7 +28,7 @@
 		border: none;
 		font: var(--font-description-main);
 		border-radius: 10px;
-		padding: 17px 10px;
+		padding: 18px 10px;
 		background-color: var(--color-gray-bg);
 		line-height: var(--line-height-big);
 		letter-spacing: var(--font-description-letter);
@@ -50,7 +50,7 @@
 	}
 
 	&:last-of-type {
-		margin-bottom: 24px;
+		margin-bottom: 31px;
 	}
 
 	&__error {
@@ -125,7 +125,7 @@
 	pointer-events: none;
 }
 
-@media screen and (min-width: 834px) and (max-width: 1279px) {
+@media screen and (min-width: 836px) and (max-width: 1279px) {
 	.modal-item {
 		row-gap: 17px;
 
@@ -135,18 +135,26 @@
 	}
 }
 
-@media screen and (max-width: 833px) {
+@media screen and (max-width: 835px) {
 	.modal-item {
 		&:last-of-type {
-			margin-bottom: 5px;
+			margin-bottom: 3px;
 		}
 	}
 }
 
-@media screen and (min-width: 694px) and (max-width: 833px) {
+@media screen and (max-width: 391px) {
 	.modal-item {
 		&:last-of-type {
-			margin-bottom: 24px;
+			//margin-bottom: 3px;
 		}
 	}
 }
+
+//@media screen and (min-width: 694px) and (max-width: 833px) {
+//	.modal-item {
+//		&:last-of-type {
+//			margin-bottom: 24px;
+//		}
+//	}
+//}
