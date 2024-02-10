@@ -17,21 +17,21 @@ const Step = ({ item }: IStepProps): React.ReactElement => {
 					{item.description}
 				</p>
 				<div className={styles['step__image']}>
-					{item.change ? (
-						<picture>
+					<picture>
+						{item.changeMobile && (
+							<source
+								media="(max-width: 391px)"
+								srcSet={`/images/interaction/${item.modifer}-390px.webp`}
+							/>
+						)}
+						{item.changeLaptop && (
 							<source
 								media="(max-width: 1280px)"
 								srcSet={`/images/interaction/${item.modifer}-1280px.webp`}
 							/>
-							<source
-								media="(max-width: 390px)"
-								srcSet={`/images/interaction/${item.modifer}-390px.webp`}
-							/>
-							<Image src={item.image} alt={item.alt} />
-						</picture>
-					) : (
+						)}
 						<Image src={item.image} alt={item.alt} />
-					)}
+					</picture>
 				</div>
 			</div>
 		</>

@@ -16,7 +16,7 @@ export const data: IInteractionStep[] = [
 		image: attention,
 		alt: 'Список целей и задач',
 		modifer: 'attention',
-		change: true,
+		changeLaptop: true,
 	},
 
 	{
@@ -28,7 +28,8 @@ export const data: IInteractionStep[] = [
 		image: communication,
 		alt: 'Созвон клиента с командой',
 		modifer: 'communication',
-		change: true,
+		changeLaptop: true,
+		changeMobile: true,
 	},
 
 	{
@@ -40,7 +41,8 @@ export const data: IInteractionStep[] = [
 		image: design,
 		alt: 'Макет',
 		modifer: 'design',
-		change: true,
+		changeLaptop: true,
+		changeMobile: true,
 	},
 
 	{
@@ -52,7 +54,7 @@ export const data: IInteractionStep[] = [
 		image: approach,
 		alt: 'Схема',
 		modifer: 'approach',
-		change: true,
+		changeMobile: true,
 	},
 
 	{
@@ -64,7 +66,7 @@ export const data: IInteractionStep[] = [
 		image: testing,
 		alt: 'Иллюстрация тестирования',
 		modifer: 'testing',
-		change: true,
+		changeMobile: true,
 	},
 
 	{
@@ -76,6 +78,7 @@ export const data: IInteractionStep[] = [
 		image: support,
 		alt: 'Чат с клиентом',
 		modifer: 'support',
-		change: true,
+		changeLaptop: true,
+		changeMobile: true,
 	},
 ];

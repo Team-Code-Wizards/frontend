@@ -1,6 +1,5 @@
 .step {
 	max-width: 32%;
-	margin-block-end: 20px;
 	padding: 28px 27px 12px;
 	border-radius: 20px;
 	border: 1px solid #ffffff;
@@ -54,17 +53,8 @@
 		max-width: 100%;
 	}
 
-	&:nth-of-type(3n) {
-		margin-inline-end: 0;
-	}
-
-	&:nth-of-type(n + 5) {
-		margin-block-end: 0;
-	}
-
 	@media screen and (max-width: 1280px) {
 		padding: 19px 18px 7px;
-		margin-block-end: 23px;
 
 		&__title {
 			margin-block-start: 5px;
@@ -98,8 +88,12 @@
 		}
 	}
 
+	@media screen and (max-width: 1060px) {
+		max-width: 31%;
+	}
+
 	@media screen and (max-width: 835px) {
-		max-width: 48.5%;
+		max-width: 48%;
 		padding: 19px 17px 34px;
 
 		&__title {
@@ -113,26 +107,26 @@
 				margin-bottom: 36px;
 			}
 		}
-		
-		&:nth-child(n + 3) {
-			display: none;
-		}
+
 	}
 
 	
 	@media screen and (max-width: 660px) {
 		max-width: 100%;
-
-		&:nth-child(n + 3) {
-			display: none;
-		}
 	}
 
 	@media screen and (max-width: 480px) {
-		padding: 18px 20px 34px;
+		padding: 18px 18px 16px;
+		min-height: 500px;
 
 		&__description {
 			margin-block-end: 29px;
+		}
+	}
+
+	@media screen and (max-width: 391px) {
+		img {
+			width: auto;
 		}
 	}
 }
