@@ -1,8 +1,6 @@
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import ClearInputIcon from '&/images/icons/ClearInputIcon';
-import DoneIcon from '&/images/icons/DoneIcon';
-import ErrorIcon from '&/images/icons/ErrorIcon';
 import { contactsSchema } from '@/constants/Contacts/contactsSchema';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -14,7 +12,6 @@ export default function ContactsForm() {
 		resetField,
 		handleSubmit,
 		formState: { errors, dirtyFields, isValid, isDirty },
-		reset,
 	} = useForm({
 		defaultValues: {
 			clientName: '',
@@ -29,7 +26,6 @@ export default function ContactsForm() {
 
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log(data);
-		reset();
 	};
 
 	return (
@@ -76,10 +72,6 @@ export default function ContactsForm() {
 					<span className={styles['input-error-message']}>
 						{errors.clientTel?.message}
 					</span>
-					<span className={styles['input-validation-icon']}>
-						{errors.clientTel && <ErrorIcon />}
-						{!errors.clientTel && dirtyFields?.clientTel && <DoneIcon />}
-					</span>
 				</span>
 
 				<span className={styles['input-box']}>
@@ -106,10 +98,6 @@ export default function ContactsForm() {
 					<span className={styles['input-error-message']}>
 						{errors.clientEmail?.message}
 					</span>
-					<span className={styles['input-validation-icon']}>
-						{errors.clientEmail && <ErrorIcon />}
-						{!errors.clientEmail && dirtyFields?.clientEmail && <DoneIcon />}
-					</span>
 				</span>
 
 				<span className={styles['textarea-box']}>
@@ -133,7 +121,7 @@ export default function ContactsForm() {
 					className={styles['contacts-form-input']}
 					type="file"
 					id="file"
-					accept=".doc"
+					accept=".doc,.docx"
 				/>
 				<label
 					className={styles['contacts-form-file-input-label']}
