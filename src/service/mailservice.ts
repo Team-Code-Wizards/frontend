@@ -16,8 +16,8 @@ export default function sendMail({
 		host: 'smtp.ethereal.email',
 		port: 587,
 		auth: {
-			user: 'sheila.gutmann28@ethereal.email',
-			pass: 'dRKBjtunBJBNXCw6nh',
+			user: 'laurence.bailey@ethereal.email',
+			pass: 'SHU2u8SAU6Zz1pG8jU',
 		},
 	});
 

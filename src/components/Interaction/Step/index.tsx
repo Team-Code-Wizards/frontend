@@ -20,8 +20,12 @@ const Step = ({ item }: IStepProps): React.ReactElement => {
 					{item.change ? (
 						<picture>
 							<source
-								media="(max-width: 1280px) and (min-width: 835px)"
+								media="(max-width: 1280px)"
 								srcSet={`/images/interaction/${item.modifer}-1280px.webp`}
+							/>
+							<source
+								media="(max-width: 390px)"
+								srcSet={`/images/interaction/${item.modifer}-390px.webp`}
 							/>
 							<Image src={item.image} alt={item.alt} />
 						</picture>

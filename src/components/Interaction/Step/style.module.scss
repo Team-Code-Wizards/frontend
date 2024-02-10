@@ -3,7 +3,7 @@
 	margin-block-end: 20px;
 	padding: 28px 27px 12px;
 	border-radius: 20px;
-	outline: 1px solid #ffffff;
+	border: 1px solid #ffffff;
 	background-color: var(--color-bg-black);
 
 	&__number {
@@ -58,7 +58,7 @@
 		margin-inline-end: 0;
 	}
 
-	&:nth-of-type(n + 4) {
+	&:nth-of-type(n + 5) {
 		margin-block-end: 0;
 	}
 
@@ -123,7 +123,7 @@
 	@media screen and (max-width: 660px) {
 		max-width: 100%;
 
-		&:nth-child(n + 2) {
+		&:nth-child(n + 3) {
 			display: none;
 		}
 	}

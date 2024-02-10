@@ -52,6 +52,7 @@ export const data: IInteractionStep[] = [
 		image: approach,
 		alt: 'Схема',
 		modifer: 'approach',
+		change: true,
 	},
 
 	{
@@ -63,6 +64,7 @@ export const data: IInteractionStep[] = [
 		image: testing,
 		alt: 'Иллюстрация тестирования',
 		modifer: 'testing',
+		change: true,
 	},
 
 	{
