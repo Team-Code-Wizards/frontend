@@ -16,30 +16,6 @@ import TechStack from '../TechStack';
 import Choice from '../Сhoice';
 import styles from './style.module.scss';
 
-// TODO
-// - Фикс текста формы обратной связи в "Промо".
-// Cтатус готово
-
-// - Фикс бэкграунда в блоке "Промо".
-// Cтатус готово
-
-// - Добавить градиентный переход с блока "Промо" в блок "О нас".
-// Cтатус готово
-
-// - Добавить новую фичу в FAQ: ответу добавить фон.
-// Cтатус готоово
-
-// - Фикс заголовка по макету в блоке "FAQ".
-// Cтатус готово
-
-// - Добавить в блок "Отзывы и рекомендации" ссылки на клиентов в аватарку и заголовок.
-// Cтатус готово
-
-// Так же сделать блок с отзывами именно cursor: pointer; сейчас там рука другая какая-то.
-// Cтатус готово
-
-// - Фикс padding-top в "Этапы создания сайта" и там же фикс шрифта в тексте, в кнопке.
-// Cтатус готово
 
 export default function MainPage() {
 	return (
@@ -47,6 +23,9 @@ export default function MainPage() {
 			<Popup />
 			<Navbar />
 			<Promo />
+			<video controls>
+			<source src='/video/video2.mp4' type="video/mp4" />
+			</video>
 			<ComponentsContainer>
 				<AboutUs />
 				<Services />
