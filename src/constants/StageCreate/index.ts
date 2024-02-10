@@ -70,7 +70,7 @@ export const stages: IStagesItem[] = [
 		id: '46a7b082-cc52-47d6-9d71-e904aedb6eaf',
 		title: 'Оптимизация',
 		description:
-			'Настройка для лучшей производительности иулучшения поисковой оптимизации (SEO).',
+			'Настройка для лучшей производительности и улучшения поисковой оптимизации (SEO).',
 		icon: optimizationIcon,
 		alt: 'Optimization',
 		next: '364d3305-109d-4ce6-bacd-782678314ab9',
