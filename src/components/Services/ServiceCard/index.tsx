@@ -29,14 +29,14 @@ export default function ServiceCard({
 	}, []);
 
 	const getVisitorIP = async () => {
-		await fetch('https://api.ipify.org')
+		await fetch('//api.ipify.org')
 			.then((response) => response.text())
 			.then((data) => setIPAddress(data))
 			.catch((error) => console.error(`Не смог получить IP: ${error}`));
 	};
 
 	const getIPInfo = async () => {
-		await fetch(`https://ip-api.com/json/${IPAddress}`)
+		await fetch(`//ip-api.com/json/${IPAddress}`)
 			.then((response) => response.json())
 			.then((data) => setGeoInfo(data))
 			.catch((error) => console.log(`Не удалось получить геоданные: ${error}`));
