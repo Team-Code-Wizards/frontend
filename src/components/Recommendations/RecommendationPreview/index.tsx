@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import Image from 'next/image';
 
 import IRecommendationPreview from './interface';
@@ -10,36 +12,81 @@ export default function RecommendationPreview({
 	isActive,
 	icon,
 	siteUrl,
+	videoUrl,
 }: IRecommendationPreview) {
+	const [isShowVideo, setIsShowVideo] = useState(false);
+	function handleClick() {
+		setIsShowVideo((prev) => !prev);
+	}
+
+	useEffect(() => {
+		if (!isActive) {
+			setIsShowVideo(false);
+		}
+	}, [isActive]);
+
 	return isActive ? (
-		<div className={styles['main-card-container']}>
-			<div className={styles['card-container']}>
-				<Image
-					src={image}
-					alt="video-preview"
-					className={styles[`card-image`]}
-				/>
-			</div>
-			<div className={styles['card__details']}>
-				<a
-					href={siteUrl}
-					target="_blank"
-					className={styles['card__details_link']}
-				>
-					<Image src={icon} alt="avatar" />
-				</a>
-				<div className={styles['card__details__container']}>
+		isShowVideo ? (
+			<div className={styles['main-card-container']}>
+				<div className={styles['card-container']}>
+					<video
+						width="100%"
+						className={styles['card-container__video']}
+						controls
+						src={videoUrl}
+					/>
+					<div className={styles['card-container__glass']}></div>
+				</div>
+				<div className={styles['card__details']}>
 					<a
 						href={siteUrl}
 						target="_blank"
 						className={styles['card__details_link']}
 					>
-						<h3 className={styles['card__details_title']}>{title}</h3>
+						<Image src={icon} alt="avatar" />
 					</a>
-					<h4 className={styles['card__details_information']}>{info}</h4>
+					<div className={styles['card__details__container']}>
+						<a
+							href={siteUrl}
+							target="_blank"
+							className={styles['card__details_link']}
+						>
+							<h3 className={styles['card__details_title']}>{title}</h3>
+						</a>
+						<h4 className={styles['card__details_information']}>{info}</h4>
+					</div>
 				</div>
 			</div>
-		</div>
+		) : (
+			<div className={styles['main-card-container']}>
+				<div className={styles['card-container']} onClick={handleClick}>
+					<Image
+						src={image}
+						alt="video-preview"
+						className={styles[`card-image`]}
+					/>
+				</div>
+				<div className={styles['card__details']}>
+					<a
+						href={siteUrl}
+						target="_blank"
+						className={styles['card__details_link']}
+					>
+						<Image src={icon} alt="avatar" />
+					</a>
+					<div className={styles['card__details__container']}>
+						<a
+							href={siteUrl}
+							target="_blank"
+							className={styles['card__details_link']}
+						>
+							<h3 className={styles['card__details_title']}>{title}</h3>
+						</a>
+						<h4 className={styles['card__details_information']}>{info}</h4>
+					</div>
+				</div>
+			</div>
+		)
 	) : (
 		<div className={styles['card-container']}>
 			<Image src={image} alt="video-preview" className={styles[`card-image`]} />
