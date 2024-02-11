@@ -84,7 +84,7 @@
 	}
 }
 
-@media screen and (min-width: 836px) and (max-width: 1279px) {
+@media screen and (min-width: 836px) and (max-width: 1279px) and (orientation: portrait) {
 	.modal {
 		max-width: 73%;
 		padding: 68px 40px;
@@ -106,7 +106,7 @@
 	}
 }
 
-@media screen and (min-width: 694px) and (max-width: 835px) {
+@media screen and (min-width: 694px) and (max-width: 835px) and (orientation: portrait)  {
 	.modal {
 		max-width: 61%;
 		min-height: 783px;
@@ -130,33 +130,20 @@
 	}
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 391px) and (orientation: portrait)  {
 	.modal {
+		padding: 10px 18px;
+		max-width: 320px;
+		max-height: 829px;
 
+
+		&__title {
+			max-width: 80%;;
+		}
+
+		&__form {
+			row-gap: 14px;
+		}
 	}
 }
 
-//@media screen and (min-width: 480px) and (max-width: 833px) {
-//	.modal {
-//		&__title {
-//			font-size: var(--text-xl);
-//		}
-//	}
-//}
-//
-//@media screen and (max-width: 833px) {
-//	.modal {
-//		max-height: 974px;
-//		max-width: 82%;
-//		padding: 74px 20px 48px;
-//
-//		&__close-btn {
-//			width: 48px;
-//			height: 48px;
-//		}
-//
-//		&__form {
-//			row-gap: 36px;
-//		}
-//	}
-//}
