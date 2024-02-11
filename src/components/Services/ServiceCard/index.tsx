@@ -61,13 +61,13 @@ export default function ServiceCard({
 						<p>
 							<span className={styles['service-card__prices_pre']}>от</span>
 							<span className={styles['service-card__prices_new']}>
-								{geoInfo.country == 'Russia'
+								{geoInfo.country === 'Russia'
 									? `${service.newPriceRu}₽`
 									: `${service.newPrice}$`}
 							</span>
 						</p>
 						<span className={styles['service-card__prices_old']}>
-							{geoInfo.country == 'Russia'
+							{geoInfo.country === 'Russia'
 								? `${service.oldPriceRu}₽`
 								: `${service.oldPrice}$`}
 						</span>
