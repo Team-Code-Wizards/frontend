@@ -11,23 +11,27 @@ const Step = ({ item }: IStepProps): React.ReactElement => {
 				<h2 className={styles['step__title']}>{item.title}</h2>
 				<p
 					className={`${styles['step__description']} ${
-						styles[`step__description_${item.modifer}`]
+						styles[`step__description_${item.modifier}`]
 					}`}
 				>
 					{item.description}
 				</p>
 				<div className={styles['step__image']}>
-					{item.change ? (
-						<picture>
+					<picture>
+						{item.changeMobile && (
 							<source
-								media="(max-width: 1280px) and (min-width: 835px)"
-								srcSet={`/images/interaction/${item.modifer}-1280px.webp`}
+								media="(max-width: 391px)"
+								srcSet={`/images/interaction/${item.modifier}-390px.webp`}
 							/>
-							<Image src={item.image} alt={item.alt} />
-						</picture>
-					) : (
+						)}
+						{item.changeLaptop && (
+							<source
+								media="(max-width: 1280px)"
+								srcSet={`/images/interaction/${item.modifier}-1280px.webp`}
+							/>
+						)}
 						<Image src={item.image} alt={item.alt} />
-					)}
+					</picture>
 				</div>
 			</div>
 		</>
