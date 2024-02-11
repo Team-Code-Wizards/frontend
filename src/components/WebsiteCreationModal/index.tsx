@@ -1,8 +1,10 @@
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import IconClose from '&/images/modal/IconClose';
+import { useInfoMsg } from '@/components/InfoMsgContext';
 import ModalItem from '@/components/WebsiteCreationModal/ModalItem';
 import { siteOrderSchema } from '@/constants/WebsiteCreationModal/siteOrderSchema';
+import sendRequest from '@/service/sendrequest';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import ModalBackground from '../ModalBackground';
@@ -14,14 +16,23 @@ interface IModal {
 }
 
 export default function WebsiteCreationModal({ open, close }: IModal) {
+	const { showSuccessInfoMsg, showFailedInfoMsg } = useInfoMsg();
+
 	const { register, formState, handleSubmit, control } = useForm({
 		mode: 'onChange',
 		resolver: yupResolver(siteOrderSchema),
 	});
 
 	const { isValid, errors } = formState;
-	const onSubmit: SubmitHandler<FieldValues> = (data) => {
-		console.log('data: ', data);
+	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+		const res = await sendRequest(data);
+
+		if (res.status === 200) {
+			showSuccessInfoMsg();
+		} else {
+			showFailedInfoMsg();
+		}
+
 		close();
 	};
 
