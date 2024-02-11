@@ -34,6 +34,7 @@ export default function RecommendationPreview({
 						className={styles['card-container__video']}
 						controls
 						src={videoUrl}
+						autoPlay
 					/>
 					<div className={styles['card-container__glass']}></div>
 				</div>
