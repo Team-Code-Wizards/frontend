@@ -13,7 +13,7 @@
 		left: 0;
 		color: black;
 		width: 100%;
-		height: 90%;
+		height: 80%;
 		z-index: 3;
 	}
 
@@ -92,4 +92,13 @@
 			margin-left: 11px;
 		}
 	}
+}
+
+@media screen and (max-width: 450px) {
+	.card-container {
+		&__glass {
+			display: none;
+		}
+	}
+
 }
