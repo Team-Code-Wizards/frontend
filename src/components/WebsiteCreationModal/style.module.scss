@@ -49,7 +49,6 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 8px;
-		outline: 2px solid tomato;
 	}
 
 	&__btn {
@@ -106,12 +105,46 @@
 	}
 }
 
+@media screen and (max-width: 932px) and (min-width: 891px) {
+	.modal {
+		max-width: 68%;
+		padding: 40px 40px;
+		row-gap: 30px;
+		min-height: 90%;
+
+		&__title {
+			font-size: var(--text-lg);
+		}
+	}
+}
+
+@media screen and (max-width: 891px) and (min-width: 836px) {
+	.modal {
+		padding-top: 30px;
+		row-gap: 10px;
+
+		&__title {
+			font-size: var(--text-lg);
+		}
+	}
+}
+
+@media screen and (max-width: 760px) {
+	.modal{
+		row-gap: 10px;
+		padding-top: 30px;
+		&__title {
+			max-width: 80%;
+			line-height: 110%;
+		}
+	}
+}
+
 @media screen and (min-width: 694px) and (max-width: 835px) and (orientation: portrait)  {
 	.modal {
 		max-width: 61%;
 		min-height: 783px;
 		padding: 32px 36px;
-		//row-gap: 20px;
 
 		&__close-btn {
 			width: 40px;
@@ -130,19 +163,43 @@
 	}
 }
 
-@media screen and (max-width: 391px) and (orientation: portrait)  {
+@media screen and (max-width: 635px) and (min-width: 470px){
 	.modal {
-		padding: 10px 18px;
-		max-width: 320px;
-		max-height: 829px;
+		max-width: 96%;
+
+		&__title {
+			max-width: 93%;
+		}
+	}
+
+}
+
+@media screen and (max-width: 470px) and (min-width: 391px){
+	.modal {
+		max-width: 90%;
+	}
+}
+
+@media screen and (max-width: 392px) and (orientation: portrait)  {
+	.modal {
+		padding: 28px;
+		width: 97%;
+		max-height: 83%;
+		row-gap: 20px;
 
 
 		&__title {
-			max-width: 80%;;
+			max-width: 65%;
+			font-size: 24px;
+		}
+
+		&__close-btn {
+			top: 33px;
+			right: 32px;
 		}
 
 		&__form {
-			row-gap: 14px;
+			row-gap: 20px;
 		}
 	}
 }
