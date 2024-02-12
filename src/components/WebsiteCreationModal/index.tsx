@@ -46,6 +46,7 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 					</button>
 					<h3 className={styles['modal__title']}>Заявка на создание сайта</h3>
 					<form
+						id="form-services"
 						className={styles['modal__form']}
 						onSubmit={handleSubmit(onSubmit)}
 					>

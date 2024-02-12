@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 
 export default function Form({ onSubmit }: IPromoForm) {
 	return (
-		<form onSubmit={onSubmit} className={styles['promo-form']}>
+		<form id="form-promo" onSubmit={onSubmit} className={styles['promo-form']}>
 			<p className={styles['promo-form__title']}>
 				Не желаете тратить время на чтение длинных текстов? <br />
 				<span className={styles['promo-form__message']}>
