@@ -27,7 +27,7 @@ export default function sendMail({
 	});
 
 	const mailOptions = {
-		from: 'new-client-wizards@yandex.ru',
+		from: email,
 		to: emailTo,
 		subject: 'Заявка на создание сайта',
 		html: `
@@ -45,7 +45,7 @@ export default function sendMail({
           ${message ? `<h3>Сообщение:</h3> <p>${message}</p>` : ''}
           ${attachments ? `<h3>Приложение:</h3>` : ''}
         `,
-		attachments: [
+		attachments: attachments && [
 			{
 				filename: attachments?.[0].name,
 				path: attachments?.[0].webkitRelativePath,
