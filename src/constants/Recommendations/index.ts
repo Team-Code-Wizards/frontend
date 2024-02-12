@@ -18,6 +18,7 @@ export const recommendationsPreviews: IRecomendationPreview[] = [
 		isActive: false,
 		icon: cloth,
 		siteUrl: 'https://ivanovskij-trikotazh.ru/',
+		videoUrl: './video/video3.mp4',
 	},
 	{
 		id: 'cba43bd3-128b-40db-883b-a6812c53a841',
@@ -27,6 +28,7 @@ export const recommendationsPreviews: IRecomendationPreview[] = [
 		isActive: false,
 		icon: circle,
 		siteUrl: '',
+		videoUrl: './video/video1.mp4',
 	},
 	{
 		id: '57912bd4-705d-4878-8f9f-50ae2a5f69fb',
@@ -36,6 +38,7 @@ export const recommendationsPreviews: IRecomendationPreview[] = [
 		isActive: false,
 		icon: garbageTruck,
 		siteUrl: 'https://musor-krsk.ru/',
+		videoUrl: './video/video2.mp4',
 	},
 	{
 		id: '83cb7c21-c399-45f0-9608-b8a4a892ecc7',
@@ -45,5 +48,6 @@ export const recommendationsPreviews: IRecomendationPreview[] = [
 		isActive: false,
 		icon: truck,
 		siteUrl: 'https://rent-zona.ru/',
+		videoUrl: './video/video1.mp4',
 	},
 ];

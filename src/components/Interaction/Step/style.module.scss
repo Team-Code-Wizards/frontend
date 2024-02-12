@@ -129,4 +129,8 @@
 			width: auto;
 		}
 	}
+
+	@media screen and (max-width: 390px) {
+		min-height: 600px;
+	}
 }
