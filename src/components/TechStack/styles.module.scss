@@ -1,13 +1,13 @@
 .tech-stack {
-	width: 100%;
+	max-width: var(--max-width);
 	background-image: url('../../../public/images/techStack/tech-stack-background.webp');
 	background-position-y: top;
 	background-position-x: left;
 	background-size: contain;
 	background-repeat: no-repeat;
-	-webkit-box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
-	-moz-box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
-	box-shadow: 0px 45px 34px 44px rgba(0, 0, 0, 1) inset;
+	-webkit-box-shadow: 0 45px 34px 44px rgba(0, 0, 0, 1) inset;
+	-moz-box-shadow: 0 45px 34px 44px rgba(0, 0, 0, 1) inset;
+	box-shadow: 0 45px 34px 44px rgba(0, 0, 0, 1) inset;
 
 	&__container {
 		max-width: var(--block-max-width);

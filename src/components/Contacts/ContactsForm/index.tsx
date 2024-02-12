@@ -42,7 +42,11 @@ export default function ContactsForm() {
 
 	return (
 		<div className={styles['form-box']}>
-			<form className={styles['form']} onSubmit={handleSubmit(onSubmit)}>
+			<form
+				id="form-contacts"
+				className={styles['form']}
+				onSubmit={handleSubmit(onSubmit)}
+			>
 				<span className={styles['input-box']}>
 					<input
 						{...register('name')}
