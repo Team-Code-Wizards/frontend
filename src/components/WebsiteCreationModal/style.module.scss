@@ -110,7 +110,7 @@
 		max-width: 68%;
 		padding: 40px 40px;
 		row-gap: 30px;
-		min-height: 90%;
+		min-height: 830px;
 
 		&__title {
 			font-size: var(--text-lg);
@@ -122,6 +122,10 @@
 	.modal {
 		padding-top: 30px;
 		row-gap: 10px;
+
+		&__title {
+			font-size: var(--text-lg);
+		}
 	}
 }
 
@@ -179,7 +183,7 @@
 	.modal {
 		padding: 28px;
 		max-width: 97%;
-		min-height: 83%;
+		min-height: 830px;
 		row-gap: 29px;
 
 
@@ -209,3 +213,4 @@
 		}
 	}
 }
+
