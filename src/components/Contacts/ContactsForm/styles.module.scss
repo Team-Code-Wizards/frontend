@@ -85,6 +85,7 @@
 	}
 
 		&_error {
+			padding: 16.5px 10px;
 			border: 2px solid #EB575799;
 		}
 		&_success {
@@ -100,13 +101,32 @@
 	width: 295px;
 	margin-block: 6px;
 	text-align: center;
-	margin-right: auto;
+	margin-inline-end: 10px;
 	transition: all 0.3s ease-out;
 
 	&:hover {
 		background-color: var(--color-lilac);
 		border: 1px solid rgba(255, 255, 255, 0);
 		transition: all 0.3s ease-out;
+	}
+}
+
+.contacts-form-file-name {
+	height: 34px;
+	padding: 5px 13px 5px 10px;
+	margin-block: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid #FFFFFF50;
+	border-radius: 100px;
+	background-color: #FFFFFF30;
+	
+	&__button {
+		all: unset;
+		cursor: pointer;
+		margin-top: 3px;
 	}
 }
 

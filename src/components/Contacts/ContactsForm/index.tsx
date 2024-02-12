@@ -1,6 +1,10 @@
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
+import Image from 'next/image';
+
+import AttachmentIcon from '&/images/contacts/attachment.svg';
 import ClearInputIcon from '&/images/icons/ClearInputIcon';
+import DeleteIcon from '&/images/icons/DeleteIcon';
 import { contactsSchema } from '@/constants/Contacts/contactsSchema';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -11,6 +15,7 @@ export default function ContactsForm() {
 		register,
 		resetField,
 		handleSubmit,
+		watch,
 		formState: { errors, dirtyFields, isValid, isDirty },
 	} = useForm({
 		defaultValues: {
@@ -24,6 +29,7 @@ export default function ContactsForm() {
 		resolver: yupResolver(contactsSchema),
 	});
 
+	const file = watch('clientFile');
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		console.log(data);
 	};
@@ -120,15 +126,27 @@ export default function ContactsForm() {
 					{...register('clientFile')}
 					className={styles['contacts-form-input']}
 					type="file"
-					id="file"
+					id="fileContacts"
 					accept=".doc,.docx"
 				/>
 				<label
 					className={styles['contacts-form-file-input-label']}
-					htmlFor="file"
+					htmlFor="fileContacts"
 				>
 					Прикрепить ТЗ
 				</label>
+				{file && (
+					<span className={styles['contacts-form-file-name']}>
+						<Image src={AttachmentIcon} alt="" />
+						{file[0].name}
+						<button
+							className={styles['contacts-form-file-name__button']}
+							onClick={() => resetField('clientFile')}
+						>
+							<DeleteIcon />
+						</button>
+					</span>
+				)}
 
 				<span className={styles['form__notice']}>*В формате Документ Word</span>
 				<button
