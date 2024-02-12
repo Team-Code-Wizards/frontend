@@ -10,3 +10,9 @@
 	height: 100vh;
 	backdrop-filter: blur(7.5px);
 }
+
+@media screen and (max-height: 830px) {
+	.modal-background {
+overflow-y: auto;
+	}
+}
