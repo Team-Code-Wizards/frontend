@@ -33,7 +33,6 @@ export default function ContactsForm() {
 	// const file = watch('attachments');
 
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-		console.log(data);
 		await submitter(data)
 			.then(() => {
 				reset();
