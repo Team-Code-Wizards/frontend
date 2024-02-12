@@ -8,4 +8,6 @@ export type Service = {
 	oldPrice: string;
 	description: string;
 	image: StaticImageData;
+	newPriceRu: string;
+	oldPriceRu: string;
 };

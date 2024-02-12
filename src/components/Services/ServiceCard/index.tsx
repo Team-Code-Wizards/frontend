@@ -1,8 +1,9 @@
-import { SetStateAction, useState } from 'react';
+import { SetStateAction, useEffect, useState } from 'react';
 
 import ArrowDownIcon from '../../../../public/images/icons/ArrowDownIcon';
 import { Service } from './interface';
 import styles from './style.module.scss';
+import { GeoData } from './types';
 
 export default function ServiceCard({
 	service,
@@ -17,6 +18,28 @@ export default function ServiceCard({
 
 	const toggleText = () => {
 		setIsShown(!isShown);
+	};
+
+	const [IPAddress, setIPAddress] = useState('');
+	const [geoInfo, setGeoInfo] = useState<GeoData>({});
+
+	useEffect(() => {
+		getVisitorIP();
+		getIPInfo();
+	}, []);
+
+	const getVisitorIP = async () => {
+		await fetch('//api.ipify.org')
+			.then((response) => response.text())
+			.then((data) => setIPAddress(data))
+			.catch((error) => console.error(`Не смог получить IP: ${error}`));
+	};
+
+	const getIPInfo = async () => {
+		await fetch(`//ip-api.com/json/${IPAddress}`)
+			.then((response) => response.json())
+			.then((data) => setGeoInfo(data))
+			.catch((error) => console.log(`Не удалось получить геоданные: ${error}`));
 	};
 
 	return (
@@ -38,11 +61,15 @@ export default function ServiceCard({
 						<p>
 							<span className={styles['service-card__prices_pre']}>от</span>
 							<span className={styles['service-card__prices_new']}>
-								{service.newPrice}$
+								{geoInfo.country === 'Russia'
+									? `${service.newPriceRu}₽`
+									: `${service.newPrice}$`}
 							</span>
 						</p>
 						<span className={styles['service-card__prices_old']}>
-							{service.oldPrice}$
+							{geoInfo.country === 'Russia'
+								? `${service.oldPriceRu}₽`
+								: `${service.oldPrice}$`}
 						</span>
 					</div>
 				</div>

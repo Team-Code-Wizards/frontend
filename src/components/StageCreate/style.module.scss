@@ -25,7 +25,7 @@
     width: 42%;
     height: 76%;
     position: absolute;
-    top: 5%;
+    top: 10%;
     right: 8%;
     object-fit: contain;
   }
@@ -101,6 +101,7 @@
 
   &__description {
     max-width: 25%;
+    height: 75px;
     font: var(--font-description-main);
     line-height: var(--line-height-big);
     margin-bottom: 81px;
@@ -114,7 +115,7 @@
     padding: 18px 41px;
     border: none;
     color: var(--color-text);
-    font: var(--font-title-description);
+    font: var(--font-description-main);
     cursor: pointer;
     transition: 0.3s background-position ease-in-out;
 
@@ -142,9 +143,9 @@
     }
 
     &__icon-wrapper {
-      width: 52%;
-      top: 12%;
-      right: 5%;
+      width: 53%;
+      top: 18%;
+      right: 4%;
     }
 
     &__wrapper {
@@ -163,7 +164,7 @@
       max-width: 88%;
     }
     &__description {
-      max-width: 44%;
+      max-width: 42%;
     }
   }
 }
@@ -302,7 +303,7 @@
     &__icon-wrapper {
       width: 83%;
       height: 31%;
-      top: 58%;
+      top: 60%;
       right: 8%;
     }
   }

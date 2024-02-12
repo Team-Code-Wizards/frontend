@@ -6,4 +6,3 @@ import './Portfolio/index';
 import './Recommendations/index';
 import './Services';
 import './TechStack/index';
-import './WebsiteCreationModal/index';
