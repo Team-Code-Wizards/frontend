@@ -38,6 +38,14 @@
     letter-spacing: -0.48px;
   }
 
+  &__icon {
+    transition: transform 0.3s;
+
+    &-expanded {
+      transform: rotate(45deg);
+    }
+  }
+
   &__description {
     margin-top: 15px;
     max-width: fit-content;

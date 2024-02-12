@@ -20,7 +20,13 @@ function FaqCard({
 			>
 				<summary className={styles['faq-card__header']} onClick={() => {}}>
 					<h4 className={styles['faq-card__title']}>{item.title}</h4>
-					<PlusIcon />
+					<p
+						className={`${styles['faq-card__icon']} ${
+							item.active ? styles['faq-card__icon-expanded'] : ''
+						}`}
+					>
+						<PlusIcon />
+					</p>
 				</summary>
 				<p className={styles['faq-card__description']}>{item.description}</p>
 			</details>

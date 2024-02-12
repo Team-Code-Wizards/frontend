@@ -1,3 +1,5 @@
+'use client';
+
 import socialUrl from '@/constants/SocialURL/index';
 
 import ArrowIcon from '../../../public/images/icons/ArrowIcon';
