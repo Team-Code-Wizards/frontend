@@ -69,13 +69,17 @@
 	}
 
 	@media screen and (max-width: 480px) {
-		&__wrapper {
-			margin: 49px auto 37px;
-		}
+		.interaction {
+			max-width: var(--width-768-280);
 
-		&__title {
-			font-size: 40px;
-			margin-block-end: 22px;
+			&__wrapper {
+				margin: 49px auto 37px;
+			}
+
+			&__title {
+				font-size: 40px;
+				margin-block-end: 22px;
+			}
 		}
 	}
 
@@ -86,6 +90,7 @@
 	}
 
 	@media screen and (max-width: 391px) {
+		max-width: var(--width-768-280);
 		&__wrapper {
 			max-width: 91%;
 			margin: 49px 0 20px auto;

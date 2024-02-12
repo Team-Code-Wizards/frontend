@@ -122,10 +122,6 @@
 	.modal {
 		padding-top: 30px;
 		row-gap: 10px;
-
-		//&__title {
-		//	font-size: var(--text-lg);
-		//}
 	}
 }
 
@@ -140,7 +136,7 @@
 	}
 }
 
-@media screen and (min-width: 694px) and (max-width: 835px) and (orientation: portrait)  {
+@media screen and (min-width: 694px) and (max-width: 835px) {
 	.modal {
 		max-width: 61%;
 		min-height: 783px;
@@ -182,7 +178,7 @@
 @media screen and (max-width: 392px) {
 	.modal {
 		padding: 28px;
-		max-width: 88%;
+		max-width: 97%;
 		min-height: 83%;
 		row-gap: 29px;
 
@@ -203,10 +199,10 @@
 	}
 }
 
-@media screen and (max-width: 321px){
+@media screen and (max-width: 345px){
 	.modal {
 		max-width: 90%;
-		row-gap: 0;
+		row-gap: 20px;
 
 		&__form {
 			row-gap: 0;

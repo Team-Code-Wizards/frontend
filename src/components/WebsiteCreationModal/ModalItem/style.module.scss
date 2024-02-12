@@ -92,15 +92,10 @@
 	padding-right: 30px;
 	width: 100%;
 	cursor: pointer;
-	font-size: 16px;
-	font-family: var(--involve-font);
-	font-weight: 500;
+	font: var(--font-description-main);
 	border-radius: 0;
 }
 	.option {
-		font-size: var(--text-sm);
-		font-family: var(--involve-font);
-		font-weight: 500;
 		color: var(--color-dark-purple);
 		background-color: var(--color-gray-bg);
 
@@ -125,7 +120,7 @@
 	pointer-events: none;
 }
 
-@media screen and (min-width: 836px) and (max-width: 1279px)  and (orientation: portrait) {
+@media screen and (min-width: 836px) and (max-width: 1279px) {
 	.modal-item {
 		row-gap: 17px;
 
@@ -162,7 +157,6 @@
 
 @media screen and (max-width: 470px) and (min-width: 391px){
 	.modal-item {
-		//max-width: 90%;
 		&__title {
 			font-size: 18px;
 
@@ -183,12 +177,12 @@
 		row-gap: 14px;
 
 		&__title {
-			font-size: 16px;
+			font-size: var(--text-sm);
 			font-weight: 500;
 
 
 			&_required {
-				font-size: 16px;
+				font-size: var(--text-sm);
 				font-weight: 500;
 				max-width: 80%;
 			}
@@ -203,8 +197,3 @@
 	}
 }
 
-@media screen and (max-width: 391px) {
-	.modal-item {
-
-	}
-}
