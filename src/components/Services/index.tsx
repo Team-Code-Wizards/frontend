@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import WebsiteCreationModal from '@/components/WebsiteCreationModal';
 import services from '@/constants/Services';
@@ -25,6 +25,14 @@ export default function Services() {
 	const handleCloseCreationModal = (): void => {
 		setOpenCreationModal(false);
 	};
+
+	useEffect(() => {
+		const body = document.querySelector('body');
+		if (body) {
+			body.style.overflow =
+				isPrDescriptionModalOpen || openCreationModal ? 'hidden' : 'auto';
+		}
+	}, [isPrDescriptionModalOpen, openCreationModal]);
 
 	return (
 		<section id="services" className={styles.wrapper}>

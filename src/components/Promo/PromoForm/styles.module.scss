@@ -58,8 +58,86 @@
 			transition: 0.1s background-position ease-in-out;
 			background-position: 10%;
 		}
+
+		&_disabled {
+			background: linear-gradient(93.14deg, #CACCD7 18.25%, #D6DAE7 93.44%);
+		}
+	}
+
+	&__input-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		row-gap: 2px;
+	}
+
+	&__input-label {
+		margin-right: auto;
+		line-height: 80%;
+  }
+
+	&__input {
+		width: 100%;
+		padding: 18px 10px;
+		background-color: var(--color-gray-bg);
+		font-family: var(--involve-font);
+		border: none;
+		border-radius: 10px;
+		transition: all 0.3s ease-out;
+
+	&::placeholder {
+		font-size: var(--text-sm);
+		font-family: var(--involve-font);
+		color: var(--color-input);
+	}
+
+	&:focus {
+		outline: 0;
+		background-color: var(--color-input-active);
+		color: var(--color-text-input-active);
+		transition: all 0.3s ease-out;
+
+		&::placeholder {
+			color: transparent;
+		}
+	}
+			&_error {
+			padding: 16.5px 10px;
+			border: 2px solid #EB575799;
+		}
+		&_success {
+			padding: 16.5px 10px;
+			border: 2px solid #27AE6099;
+		}
 	}
 }
+
+.input-error-message {
+	position:absolute;
+	bottom: 4px;
+	left: 10px;
+	font-family: var(--involve-font);
+	font-size: 11px;
+	color: var(--color-red);
+}
+
+.input-clear-btn {
+	all: initial;
+	cursor: pointer;
+	position: absolute;
+	top: 23px;
+	right: -6px;
+	background-color: var(--color-bg-white);
+	width: 21px;
+	height: 21px;
+	padding: 1px 0 0 1px;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 2px 6.5px 0px rgba(13, 9, 9, 0.15);
+}
+
 
 @media screen and (max-width: 1280px) {
 	.promo-form {
@@ -137,16 +215,18 @@
 	.promo-form {
 		width: 100%;
 		row-gap: 16px;
-		padding: 10px 18px 17px;
+		padding: 17px 18px 17px;
 		margin-top: 0;
+		row-gap: 13px;
 
 		&__title {
 			line-height: var(--line-height);
+			letter-spacing: 0;
 			margin-bottom: 0;
 		}
 
 		&__message {
-			line-height: var(--line-height);
+			letter-spacing: 0.01em;
 		}
 
 		&__button {
@@ -155,5 +235,10 @@
 			line-height: 45%;
 			margin-top: 7px;
 		}
-	}
-}
+
+		&__input {
+			&::placeholder {
+				font-size: var(--text-xs);
+			}
+		}
+}}

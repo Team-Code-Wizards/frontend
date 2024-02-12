@@ -1,4 +1,5 @@
 .popup {
+
   &__background {
     display: flex;
     position: relative;
@@ -12,6 +13,7 @@
     height: 70vh;
     max-height: 449px;
     border-radius: 20px;
+
   }
 
   &__info {
@@ -24,17 +26,21 @@
   }
 
   &__icon {
+
     &_success,
     &_failure {
       background: rgba(255, 255, 255, 0.1);
       padding: 10px;
     }
+
     &_success {
       border-radius: 100px;
     }
+
     &_failure {
       border-radius: 100px;
     }
+
     &_close {
       position: absolute;
       top: 17px;

@@ -108,6 +108,8 @@
 .body {
   font-family: var(--involve-font);
   background-color: var(--color-bg-black);
+  // overflow-y: hidden;
+  // position: fixed;
 }
 
 * {
