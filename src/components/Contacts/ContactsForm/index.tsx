@@ -1,37 +1,44 @@
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
-import Image from 'next/image';
-
-import AttachmentIcon from '&/images/contacts/attachment.svg';
 import ClearInputIcon from '&/images/icons/ClearInputIcon';
-import DeleteIcon from '&/images/icons/DeleteIcon';
+import { useInfoMsg } from '@/components/InfoMsgContext';
 import { contactsSchema } from '@/constants/Contacts/contactsSchema';
+import useSubmitter from '@/service/submitter';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import styles from './styles.module.scss';
 
 export default function ContactsForm() {
+	const { showFailedInfoMsg } = useInfoMsg();
+	const submitter = useSubmitter();
 	const {
 		register,
 		resetField,
 		handleSubmit,
-		watch,
+		// watch,
+		reset,
 		formState: { errors, dirtyFields, isValid, isDirty },
 	} = useForm({
 		defaultValues: {
-			clientName: '',
-			clientTel: '',
-			clientEmail: '',
-			clientMessage: '',
-			clientFile: '',
+			name: '',
+			tel: '',
+			mail: '',
+			message: '',
+			attachments: '',
 		},
 		mode: 'onChange',
 		resolver: yupResolver(contactsSchema),
 	});
 
-	const file = watch('clientFile');
-	const onSubmit: SubmitHandler<FieldValues> = (data) => {
+	// const file = watch('attachments');
+
+	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
 		console.log(data);
+		await submitter(data)
+			.then(() => {
+				reset();
+			})
+			.catch(() => showFailedInfoMsg());
 	};
 
 	return (
@@ -39,15 +46,15 @@ export default function ContactsForm() {
 			<form className={styles['form']} onSubmit={handleSubmit(onSubmit)}>
 				<span className={styles['input-box']}>
 					<input
-						{...register('clientName')}
+						{...register('name')}
 						type="text"
 						className={styles['contacts-form-input']}
 						placeholder="Имя"
 					/>
-					{dirtyFields?.clientName && (
+					{dirtyFields?.name && (
 						<button
 							className={styles['input-clear-btn']}
-							onClick={() => resetField('clientName')}
+							onClick={() => resetField('name')}
 						>
 							<ClearInputIcon />
 						</button>
@@ -56,74 +63,74 @@ export default function ContactsForm() {
 
 				<span className={styles['input-box']}>
 					<input
-						{...register('clientTel')}
+						{...register('tel')}
 						type="tel"
 						className={`${styles['contacts-form-input']} ${
-							errors.clientTel && styles['contacts-form-input_error']
+							errors.tel && styles['contacts-form-input_error']
 						} ${
-							!errors.clientTel &&
-							dirtyFields?.clientTel &&
+							!errors.tel &&
+							dirtyFields?.tel &&
 							styles['contacts-form-input_success']
 						}`}
 						placeholder="Телефон"
 					/>
-					{dirtyFields?.clientTel && (
+					{dirtyFields?.tel && (
 						<button
 							className={styles['input-clear-btn']}
-							onClick={() => resetField('clientTel')}
+							onClick={() => resetField('tel')}
 						>
 							<ClearInputIcon />
 						</button>
 					)}
 					<span className={styles['input-error-message']}>
-						{errors.clientTel?.message}
+						{errors.tel?.message}
 					</span>
 				</span>
 
 				<span className={styles['input-box']}>
 					<input
-						{...register('clientEmail')}
+						{...register('mail')}
 						type="email"
 						className={`${styles['contacts-form-input']} ${
-							errors.clientEmail && styles['contacts-form-input_error']
+							errors.mail && styles['contacts-form-input_error']
 						} ${
-							!errors.clientEmail &&
-							dirtyFields?.clientEmail &&
+							!errors.mail &&
+							dirtyFields?.mail &&
 							styles['contacts-form-input_success']
 						}`}
 						placeholder="Email"
 					/>
-					{dirtyFields?.clientEmail && (
+					{dirtyFields?.mail && (
 						<button
 							className={styles['input-clear-btn']}
-							onClick={() => resetField('clientEmail')}
+							onClick={() => resetField('mail')}
 						>
 							<ClearInputIcon />
 						</button>
 					)}
 					<span className={styles['input-error-message']}>
-						{errors.clientEmail?.message}
+						{errors.mail?.message}
 					</span>
 				</span>
 
 				<span className={styles['textarea-box']}>
 					<textarea
-						{...register('clientMessage')}
+						{...register('message')}
 						className={styles['contacts-form-input']}
 						placeholder="Сообщение"
 					/>
-					{dirtyFields?.clientMessage && (
+					{dirtyFields?.message && (
 						<button
 							className={styles['input-clear-btn']}
-							onClick={() => resetField('clientMessage')}
+							onClick={() => resetField('message')}
 						>
 							<ClearInputIcon />
 						</button>
 					)}
 				</span>
 
-				<input
-					{...register('clientFile')}
+				{/* <input
+					{...register('attachments')}
 					className={styles['contacts-form-input']}
 					type="file"
 					id="fileContacts"
@@ -141,14 +148,14 @@ export default function ContactsForm() {
 						{file[0].name}
 						<button
 							className={styles['contacts-form-file-name__button']}
-							onClick={() => resetField('clientFile')}
+							onClick={() => resetField('attachments')}
 						>
 							<DeleteIcon />
 						</button>
 					</span>
 				)}
 
-				<span className={styles['form__notice']}>*В формате Документ Word</span>
+				<span className={styles['form__notice']}>*В формате Документ Word</span> */}
 				<button
 					className={`${styles['form__button']} ${
 						!isValid && isDirty && styles['form__button_disabled']
