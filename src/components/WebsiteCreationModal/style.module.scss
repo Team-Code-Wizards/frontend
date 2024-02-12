@@ -83,11 +83,11 @@
 	}
 }
 
-@media screen and (min-width: 836px) and (max-width: 1279px) and (orientation: portrait) {
+@media screen and (min-width: 836px) and (max-width: 1279px) {
 	.modal {
 		max-width: 73%;
-		padding: 68px 40px;
-		row-gap: 46px;
+		padding: 28px 40px;
+		row-gap: 0;
 
 		&__close-btn {
 			width: 46px;
@@ -123,9 +123,9 @@
 		padding-top: 30px;
 		row-gap: 10px;
 
-		&__title {
-			font-size: var(--text-lg);
-		}
+		//&__title {
+		//	font-size: var(--text-lg);
+		//}
 	}
 }
 
@@ -165,13 +165,12 @@
 
 @media screen and (max-width: 635px) and (min-width: 470px){
 	.modal {
-		max-width: 96%;
+		max-width: 90%;
 
 		&__title {
 			max-width: 93%;
 		}
 	}
-
 }
 
 @media screen and (max-width: 470px) and (min-width: 391px){
@@ -180,12 +179,12 @@
 	}
 }
 
-@media screen and (max-width: 392px) and (orientation: portrait)  {
+@media screen and (max-width: 392px) {
 	.modal {
 		padding: 28px;
-		width: 97%;
-		max-height: 83%;
-		row-gap: 20px;
+		max-width: 88%;
+		min-height: 83%;
+		row-gap: 29px;
 
 
 		&__title {
@@ -204,3 +203,13 @@
 	}
 }
 
+@media screen and (max-width: 321px){
+	.modal {
+		max-width: 90%;
+		row-gap: 0;
+
+		&__form {
+			row-gap: 0;
+		}
+	}
+}

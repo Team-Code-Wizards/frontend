@@ -1,5 +1,5 @@
 .interaction {
-	width: 100%;
+	max-width: var(--max-width);
 	color: var(--color-text);
 	background-image: url('/images/interaction/interaction-background.webp');
 	background-size: cover;
@@ -82,7 +82,7 @@
 	@media screen and (max-width: 351px) {
 		&__title {
 			font-size: 32px;
-		}	
+		}
 	}
 
 	@media screen and (max-width: 391px) {

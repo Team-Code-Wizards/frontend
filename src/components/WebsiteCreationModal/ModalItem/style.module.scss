@@ -135,7 +135,7 @@
 	}
 }
 
-@media screen and (max-width: 835px)  and (orientation: portrait) {
+@media screen and (max-width: 835px)  {
 	.modal-item {
 		&:last-of-type {
 			margin-bottom: 3px;
@@ -162,7 +162,7 @@
 
 @media screen and (max-width: 470px) and (min-width: 391px){
 	.modal-item {
-
+		//max-width: 90%;
 		&__title {
 			font-size: 18px;
 
@@ -178,7 +178,7 @@
 	}
 }
 
-@media screen and (max-width: 420px)  and (orientation: portrait) {
+@media screen and (max-width: 420px)  {
 	.modal-item {
 		row-gap: 14px;
 
@@ -203,4 +203,8 @@
 	}
 }
 
+@media screen and (max-width: 391px) {
+	.modal-item {
 
+	}
+}
