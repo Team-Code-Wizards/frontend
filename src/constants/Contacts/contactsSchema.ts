@@ -14,5 +14,5 @@ export const contactsSchema = yup.object().shape({
 			'Неверный формат Email'
 		),
 	clientMessage: yup.string().notRequired(),
-	clientFile: yup.mixed().notRequired(),
+	clientFile: yup.mixed(),
 });

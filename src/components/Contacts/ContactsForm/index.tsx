@@ -138,7 +138,7 @@ export default function ContactsForm() {
 				{file && (
 					<span className={styles['contacts-form-file-name']}>
 						<Image src={AttachmentIcon} alt="" />
-						{/* {file[0].name} */}
+						{file[0].name}
 						<button
 							className={styles['contacts-form-file-name__button']}
 							onClick={() => resetField('clientFile')}
