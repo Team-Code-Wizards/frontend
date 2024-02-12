@@ -2,9 +2,9 @@ import nodemailer from 'nodemailer';
 
 import { ISendMailItem } from './type';
 
-const email = process.env.EMAIL;
-const pass = process.env.EMAIL_PASS;
-const emailTo = process.env.EMAIL_TO;
+const email = 'new-client-wizards@yandex.ru';
+const pass = 'woycgjccsecenziy';
+const emailTo = 'email@code-wizards.team';
 
 export default function sendMail({
 	description,
@@ -47,8 +47,8 @@ export default function sendMail({
         `,
 		attachments: [
 			{
-				filename: attachments?.filename,
-				path: attachments?.path,
+				filename: attachments?.[0].name,
+				path: attachments?.[0].webkitRelativePath,
 			},
 		],
 	};
