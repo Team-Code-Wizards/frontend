@@ -1,10 +1,10 @@
 export interface ISendMailItem {
 	description?: boolean;
 	name?: string;
-	phone?: string;
+	tel?: string;
 	mail?: string;
-	messanger?: string;
-	choice?: string;
+	messenger?: string;
+	siteOrder?: string;
 	message?: string;
 	attachments?: FileAttachment;
 }
