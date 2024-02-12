@@ -17,7 +17,7 @@ export default function Popup() {
 	return (
 		<>
 			{typeof infoMsg === 'boolean' && (
-				<ModalBackground onClick={hideInfoMsg}>
+				<ModalBackground zindex="900" onClick={hideInfoMsg}>
 					<div className={styles.popup}>
 						<div className={styles['popup__background']}>
 							<button

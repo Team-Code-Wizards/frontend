@@ -89,7 +89,7 @@ export default function ModalItem({ control, register, errors }: FieldValues) {
 				placeholder="Дополнительная информация"
 				className={styles['modal-item__input']}
 				type="text"
-				{...register('add-info')}
+				{...register('message')}
 			/>
 		</div>
 	);

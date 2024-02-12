@@ -1,15 +1,18 @@
 export interface ISendMailItem {
 	description?: boolean;
 	name?: string;
-	phone?: string;
+	tel?: string;
 	mail?: string;
-	messanger?: string;
-	choice?: string;
+	messenger?: string;
+	siteOrder?: string;
 	message?: string;
-	attachments?: FileAttachment;
+	attachments?: FileList[];
 }
 
-interface FileAttachment {
-	filename: string;
-	path: string;
+interface FileList {
+	lastModified: number;
+	name: string;
+	size: number;
+	type: string;
+	webkitRelativePath: string;
 }

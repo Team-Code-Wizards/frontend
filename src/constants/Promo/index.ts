@@ -1,4 +1,4 @@
-import IInput from '@/components/Contacts/ContactsForm/Input/interface';
+import IInput from '@/components/Input/interface';
 
 export const inputs: IInput[] = [
 	{
