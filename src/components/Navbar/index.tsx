@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { navbarItems } from '@/constants/Navbar';
 
@@ -14,19 +14,21 @@ import styles from './style.module.scss';
 
 export default function Navbar() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
-
-	const handlerHideNavBar = () => setIsNavOpen(false);
-
-	const handlerWindHideNavBar = (event: MouseEvent) => {
-		if (
-			event.target instanceof HTMLElement &&
-			!event.target.classList.contains('navbar')
-		) {
-			handlerHideNavBar();
-		}
-	};
+	const navRef = useRef<HTMLElement>(null);
+	const menuRef = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
+		const handlerWindHideNavBar = (event: MouseEvent) => {
+			if (
+				navRef.current instanceof HTMLElement &&
+				menuRef.current instanceof HTMLElement &&
+				!event.composedPath().includes(navRef.current) &&
+				!event.composedPath().includes(menuRef.current)
+			) {
+				setIsNavOpen(false);
+			}
+		};
+
 		setTimeout(() => {
 			window.addEventListener('click', handlerWindHideNavBar);
 		});
@@ -44,6 +46,7 @@ export default function Navbar() {
 					<TelIcon />
 				</a>
 				<button
+					ref={menuRef}
 					onClick={() => setIsNavOpen(true)}
 					className={styles['nav-icons__menu']}
 					aria-label="Menu button"
@@ -52,10 +55,11 @@ export default function Navbar() {
 				</button>
 			</div>
 			<nav
+				ref={navRef}
 				className={`${styles['navbar']} ${isNavOpen ? styles['active'] : ''}`}
 			>
 				<button
-					onClick={handlerHideNavBar}
+					onClick={() => setIsNavOpen(false)}
 					className={styles['navbar__close-btn']}
 					aria-label="Close menu"
 				>
@@ -69,7 +73,7 @@ export default function Navbar() {
 						<li key={item.id} className={styles['navbar__link-box']}>
 							<a
 								href={item.link}
-								onClick={handlerHideNavBar}
+								onClick={() => setIsNavOpen(false)}
 								className={styles['navbar__link']}
 							>
 								{item.title}
