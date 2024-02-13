@@ -20,7 +20,7 @@ export default function Contacts() {
 							className={styles['link']}
 							href="mailto:email@code-wizards.team"
 							type="email"
-							aria-label="end e-mail"
+							aria-label="Send e-mail"
 						>
 							<p className={styles['link__item_word-space']}>
 								<span className={styles['link__item_email']}>E-mail</span>{' '}
