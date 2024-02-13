@@ -8,4 +8,5 @@ export default interface IRecommendationPreview {
 	isActive: boolean;
 	icon: StaticImport;
 	siteUrl: string;
+	videoUrl: string;
 }

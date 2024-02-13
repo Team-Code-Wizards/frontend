@@ -7,6 +7,7 @@ export interface IInteractionStep {
 	description: string;
 	image: StaticImageData;
 	alt: string;
-	modifer: string;
-	change?: boolean;
+	modifier: string;
+	changeLaptop?: boolean;
+	changeMobile?: boolean;
 }

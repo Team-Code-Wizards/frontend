@@ -1,7 +1,5 @@
 'use client';
 
-import { FormEvent } from 'react';
-
 import socialUrl from '@/constants/SocialURL/index';
 
 import ArrowIcon from '../../../public/images/icons/ArrowIcon';
@@ -14,10 +12,6 @@ import styles from './styles.module.scss';
 //TODO добавить корректные ссылки для мессенджеров
 
 export default function Contacts() {
-	const sendingDataForFeedback = (event: FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-	};
-
 	return (
 		<section id="contacts" className={styles['contacts']}>
 			<h2 className={styles['contacts__title']}>Контакты</h2>
@@ -86,7 +80,7 @@ export default function Contacts() {
 						</a>
 					</li>
 				</ul>
-				<ContactsForm onSubmit={sendingDataForFeedback} />
+				<ContactsForm />
 			</div>
 		</section>
 	);

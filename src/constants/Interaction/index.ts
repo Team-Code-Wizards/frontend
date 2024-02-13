@@ -15,8 +15,8 @@ export const data: IInteractionStep[] = [
 			'Как только вы связываетесь с нами, мы вкладываемся в то, чтобы внимательно выслушать ваши потребности и цели. Это помогает нам точно понять, что вам нужно, и начать проект с четким видением.',
 		image: attention,
 		alt: 'Список целей и задач',
-		modifer: 'attention',
-		change: true,
+		modifier: 'attention',
+		changeLaptop: true,
 	},
 
 	{
@@ -27,8 +27,9 @@ export const data: IInteractionStep[] = [
 			'Мы ценим открытость и прозрачность в каждом этапе процесса. Наша команда предоставляет регулярные обновления, отвечает на ваши вопросы и дает вам полный контроль над ходом разработки.',
 		image: communication,
 		alt: 'Созвон клиента с командой',
-		modifer: 'communication',
-		change: true,
+		modifier: 'communication',
+		changeLaptop: true,
+		changeMobile: true,
 	},
 
 	{
@@ -39,8 +40,9 @@ export const data: IInteractionStep[] = [
 			'В процессе разработки мы ставим вас на первое место. Наш дизайн ориентирован на создание приятного и интуитивно понятного интерфейса, чтобы ваши посетители чувствовали себя комфортно и уверенно.',
 		image: design,
 		alt: 'Макет',
-		modifer: 'design',
-		change: true,
+		modifier: 'design',
+		changeLaptop: true,
+		changeMobile: true,
 	},
 
 	{
@@ -51,7 +53,8 @@ export const data: IInteractionStep[] = [
 			'Мы понимаем, что каждый проект уникален. Наши решения гибки, и мы готовы адаптироваться к вашим потребностям. Независимо от того, создаем ли мы сайт для стартапа или обновляем корпоративный ресурс, мы подходим к этому с индивидуальным вниманием.',
 		image: approach,
 		alt: 'Схема',
-		modifer: 'approach',
+		modifier: 'approach',
+		changeMobile: true,
 	},
 
 	{
@@ -62,7 +65,8 @@ export const data: IInteractionStep[] = [
 			'Качество - наш приоритет. Перед запуском проекта мы тщательно тестируем все аспекты, чтобы удостовериться, что ваш веб-сайт работает безупречно. Мы также активно приветствуем вашу обратную связь и вносим коррективы, если это необходимо.',
 		image: testing,
 		alt: 'Иллюстрация тестирования',
-		modifer: 'testing',
+		modifier: 'testing',
+		changeMobile: true,
 	},
 
 	{
@@ -73,7 +77,8 @@ export const data: IInteractionStep[] = [
 			'Наше внимание не заканчивается после запуска. Мы предоставляем поддержку и готовы помогать вам в долгосрочной перспективе. Если у вас возникают вопросы или вам нужна дополнительная функциональность, мы всегда здесь, чтобы помочь.',
 		image: support,
 		alt: 'Чат с клиентом',
-		modifer: 'support',
-		change: true,
+		modifier: 'support',
+		changeLaptop: true,
+		changeMobile: true,
 	},
 ];

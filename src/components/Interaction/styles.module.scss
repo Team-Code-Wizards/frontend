@@ -1,5 +1,5 @@
 .interaction {
-	width: 100%;
+	max-width: var(--max-width);
 	color: var(--color-text);
 	background-image: url('/images/interaction/interaction-background.webp');
 	background-size: cover;
@@ -69,20 +69,44 @@
 	}
 
 	@media screen and (max-width: 480px) {
-		&__wrapper {
-			margin: 49px auto 37px;
-		}
+		.interaction {
+			max-width: var(--width-768-280);
 
-		&__title {
-			font-size: 40px;
-			margin-block-end: 22px;
+			&__wrapper {
+				margin: 49px auto 37px;
+			}
+
+			&__title {
+				font-size: 40px;
+				margin-block-end: 22px;
+			}
 		}
 	}
 
 	@media screen and (max-width: 351px) {
 		&__title {
 			font-size: 32px;
-		}	
+		}
+	}
+
+	@media screen and (max-width: 391px) {
+		max-width: var(--width-768-280);
+		&__wrapper {
+			max-width: 91%;
+			margin: 49px 0 20px auto;
+		}
+
+		.steps__card {
+			width: 91%;
+		}
+
+		.steps {
+			&__pagination {
+				display: block;
+				width: 155px !important;
+				margin: 0 auto !important;
+			}
+		}
 	}
 }
 
@@ -90,8 +114,20 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	gap: var(--grid-gap);
 
 	@media screen and (max-width: 1280px) {
 		max-width: 1024px;
+	}
+
+	&__pagination {
+		display: none;
+	}
+
+	&__pagination-bullet {
+		width: 12px;
+		height: 12px;
+		margin: 0 2.5px !important;
+		background-color: var(--color-bg-white);
 	}
 }
