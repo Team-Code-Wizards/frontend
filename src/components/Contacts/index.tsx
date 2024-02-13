@@ -9,8 +9,6 @@ import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
 import ContactsForm from './ContactsForm';
 import styles from './styles.module.scss';
 
-//TODO добавить корректные ссылки для мессенджеров
-
 export default function Contacts() {
 	return (
 		<section id="contacts" className={styles['contacts']}>
@@ -22,6 +20,7 @@ export default function Contacts() {
 							className={styles['link']}
 							href="mailto:email@code-wizards.team"
 							type="email"
+							aria-label="end e-mail"
 						>
 							<p className={styles['link__item_word-space']}>
 								<span className={styles['link__item_email']}>E-mail</span>{' '}
@@ -33,7 +32,11 @@ export default function Contacts() {
 						</a>
 					</li>
 					<li className={styles['link-box']}>
-						<a className={styles['link']} href="tel:+7(950)424-13-38">
+						<a
+							className={styles['link']}
+							href="tel:+7(950)424-13-38"
+							aria-label="Call"
+						>
 							<p className={styles['link__item_tel']}>
 								<span>Телефон</span>
 								<span>+7 (950) 424-13-38</span>
@@ -48,6 +51,7 @@ export default function Contacts() {
 							className={styles['link']}
 							target="_blank"
 							href={socialUrl.viber}
+							aria-label="Viber link"
 						>
 							<span className={styles['link__item']}>
 								<ViberIcon size={[26, 26]} />
@@ -60,6 +64,7 @@ export default function Contacts() {
 							className={styles['link']}
 							target="_blank"
 							href={socialUrl.telegram}
+							aria-label="Telegram link"
 						>
 							<span className={styles['link__item']}>
 								<TelegramIcon size={[26, 25]} />
@@ -72,6 +77,7 @@ export default function Contacts() {
 							className={styles['link']}
 							target="_blank"
 							href={socialUrl.watsup}
+							aria-label="Whatsapp link"
 						>
 							<span className={styles['link__item']}>
 								<WhatsappIcon size={[25, 24]} />

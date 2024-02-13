@@ -29,6 +29,7 @@ export default function Promo() {
 								href={socialUrl.telegram}
 								target="_blank"
 								className={styles['promo__link']}
+								aria-label="Telegram link"
 							>
 								<TelegramIcon size={[27, 26]} />
 								<ArrowIcon />
@@ -39,6 +40,7 @@ export default function Promo() {
 								href={socialUrl.watsup}
 								target="_blank"
 								className={styles['promo__link']}
+								aria-label="Whatsapp link"
 							>
 								<WhatsappIcon size={[27, 26]} />
 								<ArrowIcon />
@@ -49,6 +51,7 @@ export default function Promo() {
 								href={socialUrl.viber}
 								target="_blank"
 								className={styles['promo__link']}
+								aria-label="Viber link"
 							>
 								<ViberIcon size={[25, 25]} />
 								<ArrowIcon />
