@@ -51,12 +51,13 @@
 }
 
 .contacts-form-input {
+	padding: 16.5px 10px;
+	border: 2px solid transparent;
 	width: 100%;
-	padding: 18px 10px;
-	border: none;
 	border-radius: 10px;
 	transition: all 0.3s ease-out;
 	background-color: var(--color-gray-bg);
+	font-family: var(--involve-font);
 
 	&::placeholder {
 		font-family: var(--involve-font);
@@ -85,7 +86,6 @@
 	}
 
 		&_error {
-			padding: 16.5px 10px;
 			border: 2px solid #EB575799;
 		}
 		&_success {

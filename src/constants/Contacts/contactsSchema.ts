@@ -5,7 +5,7 @@ export const contactsSchema = yup.object().shape({
 	tel: yup
 		.string()
 		.required('Введите номер телефона')
-		.matches(/^\+?[\d\s]{10,13}$/, 'Неверный формат номера телефона'),
+		.matches(/^\+?[\d\s]{10,16}$/, 'Неверный формат номера телефона'),
 	mail: yup
 		.string()
 		.required('Введите Email')
