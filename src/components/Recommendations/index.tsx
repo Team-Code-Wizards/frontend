@@ -41,7 +41,6 @@ export default function Recommendations() {
 						</button>
 					</div>
 				</div>
-
 				<Swiper
 					effect={'coverflow'}
 					slidesPerView={'auto'}

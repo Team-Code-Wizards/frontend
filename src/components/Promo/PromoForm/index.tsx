@@ -1,4 +1,4 @@
-import Input from '@/components/Contacts/ContactsForm/Input';
+import Input from '@/components/Input';
 import { inputs } from '@/constants/Promo';
 
 import IPromoForm from './interface';
@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 
 export default function Form({ onSubmit }: IPromoForm) {
 	return (
-		<form onSubmit={onSubmit} className={styles['promo-form']}>
+		<form id="form-promo" onSubmit={onSubmit} className={styles['promo-form']}>
 			<p className={styles['promo-form__title']}>
 				Не желаете тратить время на чтение длинных текстов? <br />
 				<span className={styles['promo-form__message']}>
@@ -17,9 +17,7 @@ export default function Form({ onSubmit }: IPromoForm) {
 			{inputs.map((el) => (
 				<Input key={el.id} {...el} />
 			))}
-			<button className={styles['promo-form__button']} type="submit">
-				Отправить
-			</button>
+			<button className={styles['promo-form__button']}>Отправить</button>
 		</form>
 	);
 }
