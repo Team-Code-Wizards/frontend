@@ -83,7 +83,6 @@ export default function ModalItem({ control, register, errors }: FieldValues) {
 					)}
 				/>
 			</div>
-			{errors && errors.siteOrder?.message}
 			<h4 className={styles['modal-item__title']}>Дополнительная информация</h4>
 			<input
 				placeholder="Сообщение (не обязательно)"
