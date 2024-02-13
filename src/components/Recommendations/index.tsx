@@ -46,13 +46,14 @@ export default function Recommendations() {
 					slidesPerView={'auto'}
 					centeredSlides={true}
 					pagination={pagination}
+					initialSlide={1}
 					coverflowEffect={{
 						rotate: 0,
 						depth: 150,
-						modifier: 2.5,
+						modifier: 3,
 					}}
 					speed={1000}
-					loop
+					rewind
 					className={styles['recommendations-swiper-container']}
 					modules={[EffectCoverflow, Navigation, Pagination]}
 					navigation={{
