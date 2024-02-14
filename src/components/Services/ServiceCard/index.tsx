@@ -58,8 +58,9 @@ export default function ServiceCard({
 					className={`${styles['service-card__popup']} ${
 						isShown ? styles['shown'] : ''
 					}`}
+					aria-label="What's included"
 				>
-					<ArrowDownIcon aria-label="What's included" />
+					<ArrowDownIcon />
 				</button>
 			</div>
 			<span className={styles['service-card__btns']}>
