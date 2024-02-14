@@ -78,7 +78,7 @@ export default function Recommendations() {
 						},
 						0: {
 							coverflowEffect: {
-								stretch: -100,
+								stretch: -20,
 							},
 						},
 					}}

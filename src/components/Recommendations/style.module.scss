@@ -162,7 +162,9 @@
 			overflow: hidden;
 		}
 	}
+}
 
+@media screen and (max-width: 450px) {
 	.recommendations-swiper-slide {
 		width: 100%;
 	}
