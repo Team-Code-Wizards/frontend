@@ -59,7 +59,7 @@ export default function ServiceCard({
 						isShown ? styles['shown'] : ''
 					}`}
 				>
-					<ArrowDownIcon />
+					<ArrowDownIcon aria-label="What's included" />
 				</button>
 			</div>
 			<span className={styles['service-card__btns']}>
@@ -74,6 +74,7 @@ export default function ServiceCard({
 					onClick={handlerAskBtn(service.id)}
 					className={styles['service-card__btns_ask']}
 					type="button"
+					aria-label="Service description"
 				>
 					?
 				</button>

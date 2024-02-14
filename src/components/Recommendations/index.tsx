@@ -30,14 +30,14 @@ export default function Recommendations() {
 							type="button"
 							id="swiper-back"
 						>
-							<ArrowChevronIcon direction="left" />
+							<ArrowChevronIcon direction="left" aria-label="Previous slide" />
 						</button>
 						<button
 							className={styles['arrow-btn']}
 							type="button"
 							id="swiper-forward"
 						>
-							<ArrowChevronIcon direction="right" />
+							<ArrowChevronIcon direction="right" aria-label="Next slide" />
 						</button>
 					</div>
 				</div>

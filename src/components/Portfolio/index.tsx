@@ -28,14 +28,14 @@ export default function Portfolio() {
 					type="button"
 					id="swiper-back"
 				>
-					<ArrwoChevronIcon direction="left" />
+					<ArrwoChevronIcon direction="left" aria-label="Previous slide" />
 				</button>
 				<button
 					className={styles['flipping-btn']}
 					type="button"
 					id="swiper-forward"
 				>
-					<ArrwoChevronIcon direction="right" />
+					<ArrwoChevronIcon direction="right" aria-label="Next slide" />
 				</button>
 			</div>
 
