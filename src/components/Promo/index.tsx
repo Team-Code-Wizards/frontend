@@ -7,8 +7,6 @@ import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
 import PromoForm from './PromoForm';
 import styles from './styles.module.scss';
 
-//TODO Добавить корректные ссылки
-
 export default function Promo() {
 	return (
 		<header id="promo" className={styles['promo']}>
