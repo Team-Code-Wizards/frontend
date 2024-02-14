@@ -52,7 +52,7 @@ export default function Recommendations() {
 						modifier: 2.5,
 					}}
 					speed={1000}
-					loop
+					rewind={true}
 					className={styles['recommendations-swiper-container']}
 					modules={[EffectCoverflow, Navigation, Pagination]}
 					navigation={{

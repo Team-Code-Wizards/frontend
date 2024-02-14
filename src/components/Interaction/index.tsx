@@ -46,7 +46,7 @@ const Interaction = (): React.ReactElement => {
 					<Swiper
 						slidesPerView="auto"
 						pagination={pagination}
-						loop={true}
+						rewind={true}
 						modules={[Pagination]}
 						className={styles['steps']}
 						spaceBetween={20}

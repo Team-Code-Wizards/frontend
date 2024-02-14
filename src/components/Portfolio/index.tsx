@@ -53,7 +53,7 @@ export default function Portfolio() {
 					prevEl: '#swiper-back',
 				}}
 				pagination={pagination}
-				loop={true}
+				rewind={true}
 				className={styles['portfolio__card-box']}
 			>
 				{portfolioCards.map((el) => (
