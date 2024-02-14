@@ -59,7 +59,7 @@ const Interaction = (): React.ReactElement => {
 						}}
 					>
 						{data.map((item) =>
-							width < 835 ? (
+							width < 836 ? (
 								<SwiperSlide className={styles['steps__card']} key={item.title}>
 									<Step key={item.id} item={item} />
 								</SwiperSlide>
