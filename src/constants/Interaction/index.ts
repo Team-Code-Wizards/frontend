@@ -1,9 +1,9 @@
-import attention from '../../../public/images/interaction/1-attention.webp';
-import communication from '../../../public/images/interaction/2-communication.webp';
-import design from '../../../public/images/interaction/3-design.webp';
-import approach from '../../../public/images/interaction/4-approach.webp';
-import testing from '../../../public/images/interaction/5-testing.webp';
-import support from '../../../public/images/interaction/6-support.webp';
+import approach from '../../../public/images/interaction/approach.webp';
+import attention from '../../../public/images/interaction/attention.webp';
+import communication from '../../../public/images/interaction/communication.webp';
+import design from '../../../public/images/interaction/design.webp';
+import support from '../../../public/images/interaction/support.webp';
+import testing from '../../../public/images/interaction/testing.webp';
 import { IInteractionStep } from './type';
 
 export const data: IInteractionStep[] = [
