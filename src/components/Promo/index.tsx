@@ -25,17 +25,13 @@ export default function Promo() {
 	// получаем значение utm_term
 	const utmTerm: string = urlParams.get('utm_term') || 'default';
 
-	const [promoState, setPromoState] = useState<IPromoState>({
+	const [promoState] = useState<IPromoState>({
 		default: 'Мы не просто создаем сайты',
 		'{интернет-магазин}': 'магазин',
 	});
 
 	useEffect(() => {
 		console.log(utmTerm);
-		setPromoState({
-			default: 'Мы не просто создаем сайты',
-			'{интернет-магазин}': 'магазин',
-		});
 	}, []);
 
 	return (
