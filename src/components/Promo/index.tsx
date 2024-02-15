@@ -1,3 +1,9 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+import { useSearchParams } from 'next/navigation';
+
 import socialUrl from '@/constants/SocialURL/index';
 
 import ArrowIcon from '../../../public/images/icons/ArrowIcon';
@@ -9,7 +15,30 @@ import styles from './styles.module.scss';
 
 //TODO Добавить корректные ссылки
 
+interface IPromoState {
+	[key: string]: string;
+}
+
 export default function Promo() {
+	// получаем параметры запроса
+	const urlParams = useSearchParams();
+	// получаем значение utm_term
+	const utmTerm: string | null =
+		urlParams.get('utm_term')?.replace('{', '').replace('}', '') || 'default';
+
+	const [promoState, setPromoState] = useState<IPromoState>({
+		default: 'Мы не просто создаем сайты',
+		'интернет-магазин': 'магазин',
+	});
+
+	useEffect(() => {
+		console.log(utmTerm);
+		setPromoState({
+			default: 'Мы не просто создаем сайты',
+			'интернет-магазин': 'магазин',
+		});
+	}, []);
+
 	return (
 		<header id="promo" className={styles['promo']}>
 			<div className={styles['promo__container']}>
@@ -19,7 +48,7 @@ export default function Promo() {
 						<h1 className={styles['promo__h1-title']}>Команда Code Wizards</h1>
 					</div>
 					<h2 className={styles['promo__title']}>
-						Мы не просто создаем сайты.
+						{promoState[utmTerm]}
 						<br /> Мы строим цифровые пространства, где каждая строчка кода –
 						это мелодия успеха вашего бизнеса.
 					</h2>
