@@ -23,19 +23,18 @@ export default function Promo() {
 	// получаем параметры запроса
 	const urlParams = useSearchParams();
 	// получаем значение utm_term
-	const utmTerm: string | null =
-		urlParams.get('utm_term')?.replace('{', '').replace('}', '') || 'default';
+	const utmTerm: string = urlParams.get('utm_term') || 'default';
 
 	const [promoState, setPromoState] = useState<IPromoState>({
 		default: 'Мы не просто создаем сайты',
-		'интернет-магазин': 'магазин',
+		'{интернет-магазин}': 'магазин',
 	});
 
 	useEffect(() => {
 		console.log(utmTerm);
 		setPromoState({
 			default: 'Мы не просто создаем сайты',
-			'интернет-магазин': 'магазин',
+			'{интернет-магазин}': 'магазин',
 		});
 	}, []);
 
