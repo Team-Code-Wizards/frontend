@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
+import Image from 'next/image';
+
+import AttachmentIcon from '&/images/contacts/attachment.svg';
 import ClearInputIcon from '&/images/icons/ClearInputIcon';
+import DeleteIcon from '&/images/icons/DeleteIcon';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import { contactsSchema } from '@/constants/Contacts/contactsSchema';
 import useSubmitter from '@/service/submitter';
@@ -11,31 +16,61 @@ import styles from './styles.module.scss';
 export default function ContactsForm() {
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
-	const {
-		register,
-		resetField,
-		handleSubmit,
-		// watch,
-		reset,
-		formState: { errors, dirtyFields, isValid, isDirty },
-	} = useForm({
-		defaultValues: {
-			name: '',
-			tel: '',
-			mail: '',
-			message: '',
-			attachments: '',
-		},
-		mode: 'onChange',
-		resolver: yupResolver(contactsSchema),
-	});
+	const { register, resetField, handleSubmit, watch, reset, formState } =
+		useForm({
+			defaultValues: {
+				name: '',
+				tel: '',
+				mail: '',
+				message: '',
+				attachments: '',
+			},
+			mode: 'onChange',
+			resolver: yupResolver(contactsSchema),
+		});
 
-	// const file = watch('attachments');
+	const file = watch('attachments');
 
+	function saveFileToLocalStorage() {
+		const fileItem = file[0];
+
+		if (fileItem) {
+			const reader = new FileReader();
+			reader.readAsDataURL(fileItem);
+			reader.onload = function () {
+				const fileData = reader.result;
+				if (typeof fileData === 'string') {
+					localStorage.setItem('uploadedFile', fileData);
+					console.log('File saved to LocalStorage.');
+				}
+			};
+			reader.onerror = function (error) {
+				console.error('Error reading the file: ', error);
+			};
+		} else {
+			console.error('No file selected.');
+		}
+	}
+
+	useEffect(() => {
+		if (file[0]) {
+			saveFileToLocalStorage();
+		}
+	}, [file]);
+
+	const { errors, dirtyFields, isValid, isDirty } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+		if (file[0]) {
+			data.attachments = {
+				filename: file[0].name,
+				path: localStorage.getItem('uploadedFile'),
+			};
+		}
+
 		await submitter(data)
 			.then(() => {
 				reset();
+				localStorage.removeItem('uploadedFile');
 			})
 			.catch(() => showFailedInfoMsg());
 	};
@@ -131,8 +166,7 @@ export default function ContactsForm() {
 						</button>
 					)}
 				</span>
-
-				{/* <input
+				<input
 					{...register('attachments')}
 					className={styles['contacts-form-input']}
 					type="file"
@@ -145,7 +179,7 @@ export default function ContactsForm() {
 				>
 					Прикрепить ТЗ
 				</label>
-				{file && (
+				{file[0] && (
 					<span className={styles['contacts-form-file-name']}>
 						<Image src={AttachmentIcon} alt="" />
 						{file[0].name}
@@ -158,7 +192,7 @@ export default function ContactsForm() {
 					</span>
 				)}
 
-				<span className={styles['form__notice']}>*В формате Документ Word</span> */}
+				<span className={styles['form__notice']}>*В формате Документ Word</span>
 				<button
 					className={`${styles['form__button']} ${
 						!isValid && isDirty && styles['form__button_disabled']

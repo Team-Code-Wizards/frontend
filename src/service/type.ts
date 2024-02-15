@@ -6,13 +6,10 @@ export interface ISendMailItem {
 	messenger?: string;
 	siteOrder?: string;
 	message?: string;
-	attachments?: FileList[];
+	attachments?: FileList;
 }
 
 interface FileList {
-	lastModified: number;
-	name: string;
-	size: number;
-	type: string;
-	webkitRelativePath: string;
+	filename: string;
+	path: string;
 }
