@@ -7,7 +7,7 @@ export const data: IChoiceItem[] = [
 		description:
 			'Мы создаем дизайн, который не только красив, но и подчеркивает уникальность вашего бренда, делая вас запоминающимся в глазах клиентов.',
 		modifier: 'design',
-		iconFill: '#9188FA',
+		iconFill: '#FFFFFF',
 	},
 	{
 		id: '677e2138-c1a4-4855-aa73-8fae4d062840',

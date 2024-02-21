@@ -63,6 +63,10 @@
 .nav-icons {
 	display: none;
 	z-index: 300;
+
+	&__menu {
+		cursor: pointer;
+	}
 }
 
 @media screen and (max-width: 1280px) {
