@@ -78,6 +78,7 @@
 @media screen and (max-width: 1050px) {
 	.navbar {
 		top: 0;
+		overflow-y: auto;
 		left: 100%;
 		height: 100vh;
 		width: 48vw;
@@ -100,6 +101,10 @@
 		}
 
 		&__close-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: none;
 			width: 54px;
 			min-height: 54px;
 			display: grid;
