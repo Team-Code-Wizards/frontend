@@ -93,7 +93,8 @@
 	}
 
 	@media screen and (max-width: 835px) {
-		max-width: 48%;
+		max-width: 100%;
+		height: 100%;
 		padding: 19px 17px 34px;
 
 		&__title {
@@ -117,7 +118,6 @@
 
 	@media screen and (max-width: 480px) {
 		padding: 18px 18px 16px;
-		min-height: 500px;
 		
 		&__description {
 			margin-block-end: 29px;
@@ -128,9 +128,5 @@
 		img {
 			width: auto;
 		}
-	}
-
-	@media screen and (max-width: 390px) {
-		min-height: 600px;
 	}
 }
