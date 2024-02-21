@@ -14,21 +14,21 @@ import styles from './style.module.scss';
 
 export default function Navbar() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
-	const navRef = useRef<null | HTMLElement>(null);
-
-	const handlerHideNavBar = () => setIsNavOpen(false);
-
-	const handlerWindHideNavBar = (event: MouseEvent) => {
-		if (
-			navRef.current instanceof HTMLElement &&
-			event.target instanceof HTMLElement &&
-			!navRef.current.contains(event.target)
-		) {
-			handlerHideNavBar();
-		}
-	};
+	const navRef = useRef<HTMLElement>(null);
+	const menuRef = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
+		const handlerWindHideNavBar = (event: MouseEvent) => {
+			if (
+				navRef.current instanceof HTMLElement &&
+				menuRef.current instanceof HTMLElement &&
+				!event.composedPath().includes(navRef.current) &&
+				!event.composedPath().includes(menuRef.current)
+			) {
+				setIsNavOpen(false);
+			}
+		};
+
 		setTimeout(() => {
 			window.addEventListener('click', handlerWindHideNavBar);
 		});
@@ -38,12 +38,18 @@ export default function Navbar() {
 	return (
 		<>
 			<div className={styles['nav-icons']}>
-				<a className={styles['nav-icons__tel']} href="tel:+79504241338">
+				<a
+					className={styles['nav-icons__tel']}
+					href="tel:+79504241338"
+					aria-label="Call"
+				>
 					<TelIcon />
 				</a>
 				<button
+					ref={menuRef}
 					onClick={() => setIsNavOpen(true)}
 					className={styles['nav-icons__menu']}
+					aria-label="Menu button"
 				>
 					<MenuIcon />
 				</button>
@@ -53,12 +59,13 @@ export default function Navbar() {
 				className={`${styles['navbar']} ${isNavOpen ? styles['active'] : ''}`}
 			>
 				<button
-					onClick={handlerHideNavBar}
+					onClick={() => setIsNavOpen(false)}
 					className={styles['navbar__close-btn']}
+					aria-label="Close menu"
 				>
 					<CloseIcon />
 				</button>
-				<a href="#promo" className={styles['navbar__logo']}>
+				<a href="#promo" className={styles['navbar__logo']} aria-label="Logo">
 					<LogoIcon />
 				</a>
 				<ul className={styles['navbar__link-list']}>
@@ -66,7 +73,7 @@ export default function Navbar() {
 						<li key={item.id} className={styles['navbar__link-box']}>
 							<a
 								href={item.link}
-								onClick={handlerHideNavBar}
+								onClick={() => setIsNavOpen(false)}
 								className={styles['navbar__link']}
 							>
 								{item.title}
@@ -74,7 +81,11 @@ export default function Navbar() {
 						</li>
 					))}
 				</ul>
-				<a className={styles['navbar__tel']} href="tel:+79504241338">
+				<a
+					className={styles['navbar__tel']}
+					href="tel:+79504241338"
+					aria-label="Call"
+				>
 					+7 (950) 424-13-38
 				</a>
 			</nav>

@@ -85,7 +85,7 @@ export default function Form() {
 						dirtyFields?.tel &&
 						styles['promo-form__input_success']
 					}`}
-					placeholder="+7 (900) 000-00-00"
+					placeholder="+7 900 000 00 00"
 				/>
 				{dirtyFields?.tel && (
 					<button

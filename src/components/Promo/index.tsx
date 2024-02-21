@@ -7,8 +7,6 @@ import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
 import PromoForm from './PromoForm';
 import styles from './styles.module.scss';
 
-//TODO Добавить корректные ссылки
-
 export default function Promo() {
 	return (
 		<header id="promo" className={styles['promo']}>
@@ -29,6 +27,7 @@ export default function Promo() {
 								href={socialUrl.telegram}
 								target="_blank"
 								className={styles['promo__link']}
+								aria-label="Telegram link"
 							>
 								<TelegramIcon size={[27, 26]} />
 								<ArrowIcon />
@@ -39,6 +38,7 @@ export default function Promo() {
 								href={socialUrl.watsup}
 								target="_blank"
 								className={styles['promo__link']}
+								aria-label="Whatsapp link"
 							>
 								<WhatsappIcon size={[27, 26]} />
 								<ArrowIcon />
@@ -49,6 +49,7 @@ export default function Promo() {
 								href={socialUrl.viber}
 								target="_blank"
 								className={styles['promo__link']}
+								aria-label="Viber link"
 							>
 								<ViberIcon size={[25, 25]} />
 								<ArrowIcon />
