@@ -6,7 +6,7 @@
 	background-color: var(--color-bg-black);
 
 	&__number {
-		width: 76px;
+		width: 78px;
 		max-height: 35px;
 		padding: 6px 8px;
 		border-radius: 41px;
@@ -111,14 +111,14 @@
 
 	}
 
-	
+
 	@media screen and (max-width: 660px) {
 		max-width: 100%;
 	}
 
 	@media screen and (max-width: 480px) {
 		padding: 18px 18px 16px;
-		
+
 		&__description {
 			margin-block-end: 29px;
 		}
