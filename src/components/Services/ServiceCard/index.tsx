@@ -58,6 +58,7 @@ export default function ServiceCard({
 					className={`${styles['service-card__popup']} ${
 						isShown ? styles['shown'] : ''
 					}`}
+					aria-label="What's included"
 				>
 					<ArrowDownIcon />
 				</button>
@@ -74,6 +75,7 @@ export default function ServiceCard({
 					onClick={handlerAskBtn(service.id)}
 					className={styles['service-card__btns_ask']}
 					type="button"
+					aria-label="Service description"
 				>
 					?
 				</button>

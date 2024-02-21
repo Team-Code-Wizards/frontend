@@ -253,7 +253,7 @@ export default function PrivacyPolicy() {
 						</p>
 						<p>
 							3. Актуальная версия Политики в свободном доступе расположена в
-							сети Интернет по адресу code-wizards.team/policy.
+							сети Интернет по адресу code-wizards.team/privacy-policy.
 						</p>
 					</div>
 				</div>

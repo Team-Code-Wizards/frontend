@@ -63,6 +63,10 @@
 .nav-icons {
 	display: none;
 	z-index: 300;
+
+	&__menu {
+		cursor: pointer;
+	}
 }
 
 @media screen and (max-width: 1280px) {
@@ -75,7 +79,7 @@
 	.navbar {
 		top: 0;
 		overflow-y: auto;
-		right: 0;
+		left: 100%;
 		height: 100vh;
 		width: 48vw;
 		padding: 33px;
@@ -85,17 +89,15 @@
 		gap: calc((100vh - 326px) * 0.35);
 		font: var(--font-block-title);
 		background-color: lightgray;
-		background: url('/images/header/nav-bg.png');
+		background: url('/images/header/nav-bg.webp');
 		background-size: cover;
 		background-repeat: no-repeat;
 		border-radius: 0;
 		border: 1px solid white;
-		transform: translateX(100%);
 		transition: all 0.5s;
 
 		&.active {
-			display: flex;
-			transform: translateX(0);
+			transform: translateX(-100%);
 		}
 
 		&__close-btn {
@@ -104,7 +106,9 @@
 			align-items: center;
 			flex: none;
 			width: 54px;
-			height: 54px;
+			min-height: 54px;
+			display: grid;
+			place-items: center;
 			border-radius: 100%;
 			border: none;
 			background-color: rgba(255, 255, 255, 0.15);
