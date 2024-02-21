@@ -57,17 +57,26 @@ export default function Form() {
 					{...register('name')}
 					id="promoName"
 					type="text"
-					className={styles['promo-form__input']}
+					className={`${styles['promo-form__input']} ${
+						errors.name && styles['promo-form__input_error']
+					} ${
+						!errors.name &&
+						dirtyFields?.name &&
+						styles['promo-form__input_success']
+					}`}
 					placeholder="Иван"
 				/>
 				{dirtyFields?.name && (
-					<button
+					<div
 						className={styles['input-clear-btn']}
 						onClick={() => resetField('name')}
 					>
 						<ClearInputIcon />
-					</button>
+					</div>
 				)}
+				<span className={styles['input-error-message']}>
+					{errors.name?.message}
+				</span>
 			</span>
 
 			<span className={styles['promo-form__input-box']}>
@@ -88,12 +97,12 @@ export default function Form() {
 					placeholder="+7 900 000 00 00"
 				/>
 				{dirtyFields?.tel && (
-					<button
+					<div
 						className={styles['input-clear-btn']}
 						onClick={() => resetField('tel')}
 					>
 						<ClearInputIcon />
-					</button>
+					</div>
 				)}
 				<span className={styles['input-error-message']}>
 					{errors.tel?.message}
