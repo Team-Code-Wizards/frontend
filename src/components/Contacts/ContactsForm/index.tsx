@@ -59,10 +59,12 @@ export default function ContactsForm() {
 
 	const { errors, dirtyFields, isValid, isDirty } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-		data.attachments = {
-			filename: file.name,
-			path: fileData,
-		};
+		if (file) {
+			data.attachments = {
+				filename: file.name,
+				path: fileData,
+			};
+		}
 
 		await submitter(data)
 			.then(() => {

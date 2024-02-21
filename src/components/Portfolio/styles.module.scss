@@ -137,7 +137,7 @@
 		}
 
 		&__card-box {
-			width: 91%;
+			width: 93%;
 			max-height: 367px;
 			margin-bottom: 12px;
 		}
@@ -148,3 +148,27 @@
 		}
 	}
 }
+
+@media screen and (max-width: 345px) {
+	.portfolio {
+		&__card-box {
+			width: 98%;
+		}
+	}}
+
+@media screen and (max-width: 327px) {
+	.portfolio {
+		&__card-box {
+			width: 100%;
+			margin-left: 15px;
+		}
+	}}
+
+@media screen and (max-width: 320px) {
+	.portfolio {
+		&__card-box {
+			width: 110%;
+			margin-left: 0;
+		}
+	}}
+

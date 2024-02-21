@@ -32,7 +32,7 @@ export const stages: IStagesItem[] = [
 	},
 	{
 		id: 'eb449ef7-4aee-498d-905c-2c9ab550b388',
-		title: 'Верстка',
+		title: 'Вёрстка',
 		description:
 			'Трансформация визуальных концепций дизайна сайта в технически рабочие веб-страницы.',
 		icon: htmlIcon,
