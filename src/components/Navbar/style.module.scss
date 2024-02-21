@@ -98,9 +98,8 @@
 		}
 
 		&__close-btn {
-			display: block;
 			width: 54px;
-			height: 54px;
+			min-height: 54px;
 			display: grid;
 			place-items: center;
 			border-radius: 100%;
