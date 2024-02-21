@@ -148,3 +148,27 @@
 		}
 	}
 }
+
+@media screen and (max-width: 345px) {
+	.portfolio {
+		&__card-box {
+			width: 98%;
+		}
+	}}
+
+@media screen and (max-width: 327px) {
+	.portfolio {
+		&__card-box {
+			width: 100%;
+			margin-left: 15px;
+		}
+	}}
+
+@media screen and (max-width: 320px) {
+	.portfolio {
+		&__card-box {
+			width: 110%;
+			margin-left: 0;
+		}
+	}}
+
