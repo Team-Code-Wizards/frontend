@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import Image from 'next/image';
@@ -14,6 +14,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import styles from './styles.module.scss';
 
 export default function ContactsForm() {
+	const [fileData, setFileData] = useState('');
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
 	const { register, resetField, handleSubmit, watch, reset, formState } =
@@ -29,48 +30,44 @@ export default function ContactsForm() {
 			resolver: yupResolver(contactsSchema),
 		});
 
-	const file = watch('attachments');
+	const { 0: file } = watch('attachments');
 
-	function saveFileToLocalStorage() {
-		const fileItem = file[0];
+	function readFile() {
+		const fileItem = file;
 
-		if (fileItem) {
-			const reader = new FileReader();
-			reader.readAsDataURL(fileItem);
-			reader.onload = function () {
-				const fileData = reader.result;
-				if (typeof fileData === 'string') {
-					localStorage.setItem('uploadedFile', fileData);
-					console.log('File saved to LocalStorage.');
-				}
-			};
-			reader.onerror = function (error) {
-				console.error('Error reading the file: ', error);
-			};
-		} else {
+		if (!fileItem) {
 			console.error('No file selected.');
+			return;
 		}
+
+		const reader = new FileReader();
+		reader.readAsDataURL(fileItem);
+		reader.onload = function () {
+			const fileData = reader.result;
+			if (typeof fileData === 'string') {
+				setFileData(fileData);
+			}
+		};
+		reader.onerror = function (error) {
+			console.error('Error reading the file: ', error);
+		};
 	}
 
 	useEffect(() => {
-		if (file[0]) {
-			saveFileToLocalStorage();
-		}
+		if (file) readFile();
 	}, [file]);
 
 	const { errors, dirtyFields, isValid, isDirty } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-		if (file[0]) {
-			data.attachments = {
-				filename: file[0].name,
-				path: localStorage.getItem('uploadedFile'),
-			};
-		}
+		data.attachments = {
+			filename: file.name,
+			path: fileData,
+		};
 
 		await submitter(data)
 			.then(() => {
 				reset();
-				localStorage.removeItem('uploadedFile');
+				setFileData('');
 			})
 			.catch(() => showFailedInfoMsg());
 	};
@@ -179,10 +176,10 @@ export default function ContactsForm() {
 				>
 					Прикрепить ТЗ
 				</label>
-				{file[0] && (
+				{file && (
 					<span className={styles['contacts-form-file-name']}>
 						<Image src={AttachmentIcon} alt="" />
-						{file[0].name}
+						{file.name}
 						<button
 							className={styles['contacts-form-file-name__button']}
 							onClick={() => resetField('attachments')}
