@@ -28,14 +28,14 @@ export default function Recommendations() {
 						<button
 							className={styles['arrow-btn']}
 							type="button"
-							id="swiper-back"
+							id="recommendations-swiper-back"
 						>
 							<ArrowChevronIcon direction="left" />
 						</button>
 						<button
 							className={styles['arrow-btn']}
 							type="button"
-							id="swiper-forward"
+							id="recommendations-swiper-forward"
 						>
 							<ArrowChevronIcon direction="right" />
 						</button>
@@ -46,18 +46,19 @@ export default function Recommendations() {
 					slidesPerView={'auto'}
 					centeredSlides={true}
 					pagination={pagination}
+					initialSlide={1}
 					coverflowEffect={{
 						rotate: 0,
 						depth: 150,
-						modifier: 2.5,
+						modifier: 3,
 					}}
 					speed={1000}
-					loop
+					rewind
 					className={styles['recommendations-swiper-container']}
 					modules={[EffectCoverflow, Navigation, Pagination]}
 					navigation={{
-						nextEl: '#swiper-forward',
-						prevEl: '#swiper-back',
+						nextEl: '#recommendations-swiper-forward',
+						prevEl: '#recommendations-swiper-back',
 					}}
 					breakpoints={{
 						1280: {
@@ -77,7 +78,7 @@ export default function Recommendations() {
 						},
 						0: {
 							coverflowEffect: {
-								stretch: -100,
+								stretch: -20,
 							},
 						},
 					}}

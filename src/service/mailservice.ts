@@ -48,8 +48,8 @@ export default function sendMail({
         `,
 		attachments: attachments && [
 			{
-				filename: attachments?.[0].name,
-				path: attachments?.[0].webkitRelativePath,
+				filename: attachments.filename,
+				path: attachments.path,
 			},
 		],
 	};
