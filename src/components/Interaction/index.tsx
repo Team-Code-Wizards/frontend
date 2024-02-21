@@ -44,15 +44,22 @@ const Interaction = (): React.ReactElement => {
 						начала до самого конца.
 					</p>
 					<Swiper
-						slidesPerView="auto"
 						pagination={pagination}
-						loop={true}
+						rewind
 						modules={[Pagination]}
 						className={styles['steps']}
 						spaceBetween={20}
+						breakpoints={{
+							501: {
+								slidesPerView: 2,
+							},
+							0: {
+								slidesPerView: 1,
+							},
+						}}
 					>
 						{data.map((item) =>
-							width < 391 ? (
+							width < 836 ? (
 								<SwiperSlide className={styles['steps__card']} key={item.title}>
 									<Step key={item.id} item={item} />
 								</SwiperSlide>

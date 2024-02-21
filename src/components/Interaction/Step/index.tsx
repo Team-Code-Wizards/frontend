@@ -24,6 +24,12 @@ const Step = ({ item }: IStepProps): React.ReactElement => {
 								srcSet={`/images/interaction/${item.modifier}-390px.webp`}
 							/>
 						)}
+						{item.modifier !== 'support' && (
+							<source
+								media="(max-width: 835px)"
+								srcSet={`/images/interaction/${item.modifier}.webp`}
+							/>
+						)}
 						{item.changeLaptop && (
 							<source
 								media="(max-width: 1280px)"
