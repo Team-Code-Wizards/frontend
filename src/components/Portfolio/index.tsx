@@ -47,6 +47,9 @@ export default function Portfolio() {
 					1441: {
 						slidesPerView: 3,
 					},
+					350: {
+						slidesPerView: 1,
+					},
 				}}
 				slidesPerView="auto"
 				modules={[Navigation, Pagination]}
