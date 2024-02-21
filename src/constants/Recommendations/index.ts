@@ -10,7 +10,7 @@ import truck from '../../../public/images/recommendations/truck.svg';
 export const recommendationsPreviews: IRecomendationPreview[] = [
 	{
 		id: '1997bad5-2faa-460b-8a13-10e50a1fbb8f',
-		title: 'Василёк',
+		title: 'Василек',
 		info: 'Ивановский трикотаж',
 		image: leftSlide,
 		isActive: false,
