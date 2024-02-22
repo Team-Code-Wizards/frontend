@@ -77,7 +77,7 @@ export const stages: IStagesItem[] = [
 	},
 	{
 		id: '364d3305-109d-4ce6-bacd-782678314ab9',
-		title: 'Развертывание',
+		title: 'Развёртывание',
 		description: 'Размещение сайта на сервере и привязка к доменному имени.',
 		icon: deploymentIcon,
 		alt: 'Deployment',

@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import ArrwoChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
+import ArrowChevronIcon from '../../../public/images/icons/ArrowChevronIcon';
 import PortfolioCard from './Card';
 import styles from './styles.module.scss';
 
@@ -27,15 +27,17 @@ export default function Portfolio() {
 					className={styles['flipping-btn']}
 					type="button"
 					id="swiper-back"
+					aria-label="Previous slide"
 				>
-					<ArrwoChevronIcon direction="left" />
+					<ArrowChevronIcon direction="left" />
 				</button>
 				<button
 					className={styles['flipping-btn']}
 					type="button"
 					id="swiper-forward"
+					aria-label="Next slide"
 				>
-					<ArrwoChevronIcon direction="right" />
+					<ArrowChevronIcon direction="right" />
 				</button>
 			</div>
 

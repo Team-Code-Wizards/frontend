@@ -70,11 +70,11 @@
         content: "";
         border-bottom: 2px solid #eb5757;
         position: absolute;
-        top: -9px;
-        right: -1px;
-        width: 104%;
-        height: 50%;
-        transform: rotate(19deg);
+        top: -7px;
+        right: 9px;
+        width: 83%;
+        height: 42%;
+        transform: rotate(17deg);
       }
     }
   }
@@ -147,6 +147,7 @@
 
     &__prices {
       align-items: baseline;
+      //flex-direction: column-reverse;
       bottom: -2px;
       left: 12px;
 
@@ -154,8 +155,17 @@
         bottom: 1px;
         &:before {
           top: 0;
+          right: 8px;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 685px) {
+  .service-card {
+    &__prices {
+      flex-direction: column-reverse;
     }
   }
 }
@@ -194,6 +204,7 @@
         bottom: 0px;
         &:before {
           top: 0;
+          right: 9px;
         }
       }
     }
@@ -209,6 +220,20 @@
 
       &.shown {
         transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .service-card {
+    &__prices {
+      &_new {
+        font-size: 7vw;
+        margin-right: 8px;
+      }
+      &_old {
+        font-size: 6vw;
       }
     }
   }

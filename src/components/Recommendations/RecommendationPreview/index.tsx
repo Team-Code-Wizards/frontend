@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
+import play from '&/images/recommendations/play.svg';
+
 import IRecommendationPreview from './interface';
 import styles from './style.module.scss';
 
@@ -42,7 +44,7 @@ export default function RecommendationPreview({
 					<a
 						href={siteUrl}
 						target="_blank"
-						className={styles['card__details_link']}
+						className={`${styles['card__details_link']} ${styles['card__details_link-avatar']}`}
 					>
 						<Image src={icon} alt="avatar" />
 					</a>
@@ -64,14 +66,17 @@ export default function RecommendationPreview({
 					<Image
 						src={image}
 						alt="video-preview"
-						className={styles[`card-image`]}
+						className={`${styles[`card-image`]} ${styles[`card-image_active`]}`}
 					/>
+					<span className={styles['card-icon-play']}>
+						<Image src={play} alt="Воспроизведение видео" />
+					</span>
 				</div>
 				<div className={styles['card__details']}>
 					<a
 						href={siteUrl}
 						target="_blank"
-						className={styles['card__details_link']}
+						className={`${styles['card__details_link']} ${styles['card__details_link-avatar']}`}
 					>
 						<Image src={icon} alt="avatar" />
 					</a>
