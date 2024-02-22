@@ -40,6 +40,7 @@ function Guarantee() {
 					slidesPerView="auto"
 					pagination={pagination}
 					rewind
+
 					modules={[Pagination]}
 					className={styles['guarantee__list']}
 				>
