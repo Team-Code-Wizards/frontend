@@ -20,6 +20,7 @@ export default function PortfolioCard({
 					href={link}
 					target="blank"
 					rel="noreferrer"
+					aria-label="Visit site"
 				>
 					<ArrowIcon />
 				</a>

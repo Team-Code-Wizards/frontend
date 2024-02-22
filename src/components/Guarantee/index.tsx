@@ -39,7 +39,8 @@ function Guarantee() {
 					spaceBetween={20}
 					slidesPerView="auto"
 					pagination={pagination}
-					rewind={true}
+					rewind
+
 					modules={[Pagination]}
 					className={styles['guarantee__list']}
 				>

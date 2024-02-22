@@ -19,16 +19,6 @@ export const recommendationsPreviews: IRecomendationPreview[] = [
 		videoUrl: './video/video3.mp4',
 	},
 	{
-		id: '57912bd4-705d-4878-8f9f-50ae2a5f69fb',
-		title: 'Чистый город',
-		info: 'Вывоз мусора',
-		image: rightSlide,
-		isActive: false,
-		icon: garbageTruck,
-		siteUrl: 'https://musor-krsk.ru/',
-		videoUrl: './video/video2.mp4',
-	},
-	{
 		id: '83cb7c21-c399-45f0-9608-b8a4a892ecc7',
 		title: 'Рент-зона',
 		info: 'Аренда строительной техники',
@@ -37,5 +27,15 @@ export const recommendationsPreviews: IRecomendationPreview[] = [
 		icon: truck,
 		siteUrl: 'https://rent-zona.ru/',
 		videoUrl: './video/video1.mp4',
+	},
+	{
+		id: '57912bd4-705d-4878-8f9f-50ae2a5f69fb',
+		title: 'Чистый город',
+		info: 'Вывоз мусора',
+		image: rightSlide,
+		isActive: false,
+		icon: garbageTruck,
+		siteUrl: 'https://musor-krsk.ru/',
+		videoUrl: './video/video2.mp4',
 	},
 ];

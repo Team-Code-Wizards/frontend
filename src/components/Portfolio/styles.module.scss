@@ -1,151 +1,185 @@
 .portfolio {
-	&__container {
-		max-width: var(--max-width);
-		padding: 92px 80px 80px;
-		padding-right: 0;
-		color: var(--color-text);
-		margin: 0 auto;
-	}
+  &__container {
+    max-width: var(--max-width);
+    padding: 92px 0 80px 80px;
+    color: var(--color-text);
+    margin: 0 auto;
+  }
 
-	&__title {
-		display: block;
-		font-size: 42px;
-		font: var(--font-block-title);
-	}
+  &__title {
+    display: block;
+    font-size: 42px;
+    font: var(--font-block-title);
+  }
 
-	&__btn-group {
-		color: var(--color-text);
-		display: flex;
-		margin-top: 15px;
-		column-gap: 10px;
-	}
+  &__btn-group {
+    color: var(--color-text);
+    display: flex;
+    margin-top: 15px;
+    column-gap: 10px;
+  }
 
-	&__card-box {
-		min-height: 361px;
-		margin-top: 40px;
-	}
+  &__card-box {
+    min-height: 361px;
+    margin-top: 40px;
+  }
 
-	&__card-box_item {
-		width: 413px;
-		cursor: pointer;
-	}
+  &__card-box_item {
+    width: 413px;
+    cursor: pointer;
+  }
 
-	&__pagination {
-		display: none;
-	}
+  &__pagination {
+    display: none;
+  }
 
-	&__pagination-bullet {
-		width: 12px;
-		height: 12px;
-		margin: 2.5px !important;
-		background-color: var(--color-bg-white);
-	}
+  &__pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 2.5px !important;
+    background-color: var(--color-bg-white);
+  }
 }
 
 .flipping-btn {
-	background: none;
-	border: 1px solid var(--color-text);
-	color: var(--color-text);
-	border-radius: 100px;
-	width: 34px;
-	height: 34px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.1s ease-in;
+  background: none;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  border-radius: 100px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease-in;
 
-	&:active {
-		color: rgba(255, 255, 255, 0.5);
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		transition: all 0.1s ease-in;
-	}
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.1s ease-in;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-	.portfolio {
-		&__container {
-			max-width: 1280px;
-			padding: 0;
-		}
+  .portfolio {
+    &__container {
+      max-width: 1280px;
+      padding: 0;
+    }
 
-		&__title {
-			width: 80%;
-			max-width: 1024px;
-			margin: 0 auto;
-		}
+    &__title {
+      width: 80%;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
 
-		&__btn-group {
-			width: 80%;
-			margin: 14px auto 41px;
-		}
+    &__btn-group {
+      width: 80%;
+      margin: 14px auto 41px;
+    }
 
-		&__card-box {
-			width: 90%;
-			margin: 0 0 0 auto;
-			max-height: 285px;
-			min-height: auto;
-		}
+    &__card-box {
+      width: 90%;
+      margin: 0 0 0 auto;
+      max-height: 285px;
+      min-height: auto;
+    }
 
-		&__card-box_item {
-			width: 328px;
-		}
-	}
+    &__card-box_item {
+      width: 328px;
+    }
+  }
 }
 
 @media screen and (max-width: 834px) {
-	.portfolio {
-		&__container {
-			max-width: 834px;
-		}
+  .portfolio {
+    &__container {
+      max-width: 834px;
+      padding-top: 80px;
+    }
 
-		&__title {
-			width: 92%;
-			margin-bottom: 45px;
-		}
+    &__title {
+      width: 92%;
+      margin-bottom: 45px;
+    }
 
-		&__btn-group {
-			display: none;
-		}
+    &__btn-group {
+      display: none;
+    }
 
-		&__card-box {
-			width: 96%;
-			margin-bottom: 25px;
-		}
+    &__card-box {
+      width: 96%;
+      margin-bottom: 25px;
+    }
 
-		&__pagination {
-			display: block;
-			width: 102px !important;
-			margin: 0 auto !important;
-		}
+    &__pagination {
+      display: block;
+      width: 102px !important;
+      margin: 0 auto !important;
+    }
 
-		&__card-box_item {
-			width: 374px;
-		}
-	}
+    &__card-box_item {
+      width: 374px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .portfolio {
+    &__container {
+      padding-top: 80px;
+    }
+  }
 }
 
 @media screen and (max-width: 450px) {
-	.portfolio {
-		&__container {
-			max-width: 390px;
-		}
+  .portfolio {
+    &__container {
+      max-width: 390px;
+    }
 
-		&__title {
-			width: 82%;
-			margin-bottom: 32px;
-			font-size: 40px;
-		}
+    &__title {
+      width: 82%;
+      margin-bottom: 32px;
+      font-size: 40px;
+    }
 
-		&__card-box {
-			width: 91%;
-			max-height: 367px;
-			margin-bottom: 12px;
-		}
+    &__card-box {
+      width: 93%;
+      max-height: 367px;
+      margin-bottom: 12px;
+    }
 
-		&__card-box_item {
-			min-width: 300px;
-			max-width: 320px;
-		}
-	}
+    &__card-box_item {
+      min-width: 300px;
+      max-width: 320px;
+    }
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .portfolio {
+    &__card-box {
+      width: 98%;
+    }
+  }
+}
+
+@media screen and (max-width: 327px) {
+  .portfolio {
+    &__card-box {
+      width: 100%;
+      margin-left: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio {
+    &__card-box {
+      width: 110%;
+      margin-left: 0;
+    }
+  }
 }
