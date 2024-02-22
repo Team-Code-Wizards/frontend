@@ -37,7 +37,7 @@
 
 @media screen and (min-width: 581px) and (max-width: 1279px) {
   .services {
-    padding: 89px 20px 88px 30px;
+    padding: 89px 20px 0px 30px;
 
     &__title {
       letter-spacing: 0px;
@@ -53,7 +53,7 @@
 
 @media screen and (max-width: 580px) {
   .services {
-    padding: 21px 35px 108px;
+    padding: 80px 35px 0px;
 
     &__title {
       font-size: 40px;
