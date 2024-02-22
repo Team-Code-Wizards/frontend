@@ -50,8 +50,8 @@ export default function Form() {
 				</span>
 			</p>
 			<span className={styles['promo-form__input-box']}>
-				<label className={styles['promo-form__input-box']} htmlFor="promoName">
-					Имя
+				<label className={styles['promo-form__label']} htmlFor="promoName">
+					Имя<span className={styles['promo-form__required-label']}>*</span>
 				</label>
 				<input
 					{...register('name')}
@@ -80,8 +80,8 @@ export default function Form() {
 			</span>
 
 			<span className={styles['promo-form__input-box']}>
-				<label className={styles['promo-form__input-box']} htmlFor="promoPhone">
-					Телефон
+				<label className={styles['promo-form__label']} htmlFor="promoPhone">
+					Телефон<span className={styles['promo-form__required-label']}>*</span>
 				</label>
 				<input
 					{...register('tel')}

@@ -92,7 +92,7 @@ export default function ContactsForm() {
 							dirtyFields?.name &&
 							styles['contacts-form-input_success']
 						}`}
-						placeholder="Имя"
+						placeholder="Имя*"
 					/>
 					{dirtyFields?.name && (
 						<div
@@ -118,7 +118,7 @@ export default function ContactsForm() {
 							dirtyFields?.tel &&
 							styles['contacts-form-input_success']
 						}`}
-						placeholder="Телефон"
+						placeholder="Телефон*"
 					/>
 					{dirtyFields?.tel && (
 						<div
@@ -146,7 +146,7 @@ export default function ContactsForm() {
 							dirtyFields?.mail &&
 							styles['contacts-form-input_success']
 						}`}
-						placeholder="E-mail"
+						placeholder="E-mail*"
 					/>
 					{dirtyFields?.mail && (
 						<div
