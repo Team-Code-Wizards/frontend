@@ -147,6 +147,7 @@
 
     &__prices {
       align-items: baseline;
+      //flex-direction: column-reverse;
       bottom: -2px;
       left: 12px;
 
@@ -157,6 +158,14 @@
           right: 8px;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 685px) {
+  .service-card {
+    &__prices {
+      flex-direction: column-reverse;
     }
   }
 }
