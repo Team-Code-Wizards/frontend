@@ -85,17 +85,26 @@ export default function ContactsForm() {
 					<input
 						{...register('name')}
 						type="text"
-						className={styles['contacts-form-input']}
+						className={`${styles['contacts-form-input']} ${
+							errors.name && styles['contacts-form-input_error']
+						} ${
+							!errors.name &&
+							dirtyFields?.name &&
+							styles['contacts-form-input_success']
+						}`}
 						placeholder="Имя"
 					/>
 					{dirtyFields?.name && (
-						<button
+						<div
 							className={styles['input-clear-btn']}
 							onClick={() => resetField('name')}
 						>
 							<ClearInputIcon />
-						</button>
+						</div>
 					)}
+					<span className={styles['input-error-message']}>
+						{errors.name?.message}
+					</span>
 				</span>
 
 				<span className={styles['input-box']}>
@@ -112,12 +121,14 @@ export default function ContactsForm() {
 						placeholder="Телефон"
 					/>
 					{dirtyFields?.tel && (
-						<button
+						<div
 							className={styles['input-clear-btn']}
-							onClick={() => resetField('tel')}
+							onClick={() => {
+								resetField('tel');
+							}}
 						>
 							<ClearInputIcon />
-						</button>
+						</div>
 					)}
 					<span className={styles['input-error-message']}>
 						{errors.tel?.message}
@@ -135,15 +146,15 @@ export default function ContactsForm() {
 							dirtyFields?.mail &&
 							styles['contacts-form-input_success']
 						}`}
-						placeholder="Email"
+						placeholder="E-mail"
 					/>
 					{dirtyFields?.mail && (
-						<button
+						<div
 							className={styles['input-clear-btn']}
 							onClick={() => resetField('mail')}
 						>
 							<ClearInputIcon />
-						</button>
+						</div>
 					)}
 					<span className={styles['input-error-message']}>
 						{errors.mail?.message}
@@ -157,12 +168,12 @@ export default function ContactsForm() {
 						placeholder="Сообщение"
 					/>
 					{dirtyFields?.message && (
-						<button
+						<div
 							className={styles['input-clear-btn']}
 							onClick={() => resetField('message')}
 						>
 							<ClearInputIcon />
-						</button>
+						</div>
 					)}
 				</span>
 				<input

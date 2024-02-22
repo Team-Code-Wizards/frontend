@@ -6,7 +6,7 @@ import styles from './style.module.scss';
 export default function ModalItem({ control, register, errors }: FieldValues) {
 	return (
 		<div className={styles['modal-item']}>
-			<h4 className={styles['modal-item__title']}>Имя</h4>
+			<h4 className={styles['modal-item__title_required']}>Имя</h4>
 			<div className={styles['modal-item__input-container']}>
 				<input
 					placeholder="Иван Иванов"
@@ -90,7 +90,7 @@ export default function ModalItem({ control, register, errors }: FieldValues) {
 			<h4 className={styles['modal-item__title']}>Дополнительная информация</h4>
 			<div className={styles['modal-item__input-container']}>
 				<input
-					placeholder="Сообщение (необязательно)"
+					placeholder="Сообщение (не обязательно)"
 					className={styles['modal-item__input']}
 					type="text"
 					{...register('message')}
