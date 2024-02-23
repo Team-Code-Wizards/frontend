@@ -3,6 +3,7 @@
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import ClearInputIcon from '&/images/icons/ClearInputIcon';
+import PromoArrowIcon from '&/images/icons/PromoArrowIcon';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import { promoSchema } from '@/constants/Promo/promoSchema';
 import useSubmitter from '@/service/submitter';
@@ -42,13 +43,6 @@ export default function Form() {
 			className={styles['promo-form']}
 			onSubmit={handleSubmit(onSubmit)}
 		>
-			<p className={styles['promo-form__title']}>
-				Не желаете тратить время на чтение длинных текстов? <br />
-				<span className={styles['promo-form__message']}>
-					Просто оставьте свои данные и мы свяжемся с вами в ближайшее время и
-					ответим на все ваши вопросы
-				</span>
-			</p>
 			<span className={styles['promo-form__input-box']}>
 				<label className={styles['promo-form__label']} htmlFor="promoName">
 					Имя<span className={styles['promo-form__required-label']}>*</span>
@@ -115,7 +109,10 @@ export default function Form() {
 				}`}
 				type="submit"
 			>
-				Отправить
+				Узнать цену
+				<span className={styles['promo-form__icon']}>
+					<PromoArrowIcon />
+				</span>
 			</button>
 		</form>
 	);
