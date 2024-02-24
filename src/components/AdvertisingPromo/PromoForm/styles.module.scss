@@ -39,7 +39,7 @@
 		}
 
 		&_disabled {
-			background: linear-gradient(93.14deg, #CACCD7 18.25%, #D6DAE7 93.44%);
+			background-color: var(--color-button-disabled);
 		}
 	}
 
@@ -169,23 +169,29 @@
 
 @media screen and (max-width: 395px) {
 	.promo-form {
-		gap: 17px;
+		gap: 0;
 		grid-area: 3 / 1 / 4 / 2;
 		margin-bottom: 39px;
 		padding: 15px 19px 19px;
+
+		&__input-box {
+			row-gap: 5px;
+			
+			&:not(:last-of-type) {
+				margin-bottom: 17px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 20px;
+			}
+		}
 
 		&__message {
 			letter-spacing: 0.01em;
 		}
 
-		&__input {
-			&::placeholder {
-				font-size: var(--text-xs);
-			}
-		}
-
 		&__button {
 			gap: 24%;
-			padding: 13px 9px 13px 0px;
+			padding: 13px 9px 11px 0px;
 		}
 }}
