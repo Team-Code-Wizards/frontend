@@ -11,6 +11,7 @@ export default function Choice() {
 	const { ref, inView } = useInView({
 		/* Optional options */
 		threshold: 0.2,
+		triggerOnce: true,
 	});
 
 	return (
