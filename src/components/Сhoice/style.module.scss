@@ -4,6 +4,7 @@
 	flex-direction: column;
 	row-gap: 50px;
 	padding-top: 66px;
+	padding-bottom: 10px;
 
 	&__title {
 		font: var(--font-block-title);
@@ -15,6 +16,17 @@
 		grid-template-columns: 0.98fr 0.46fr 1.54fr 1fr 0.7fr 1.28fr;
 		grid-column-gap: var(--grid-gap);
 		grid-row-gap: var(--grid-gap);
+		opacity: 0;
+  		animation: fadeInContainer 1s ease forwards;			
+	}
+
+	@keyframes fadeInContainer {
+		from {
+		  opacity: 0;
+		}
+		to {
+		  opacity: 1;
+		}
 	}
 }
 
