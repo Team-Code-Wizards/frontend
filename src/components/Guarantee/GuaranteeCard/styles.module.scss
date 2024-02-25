@@ -1,61 +1,70 @@
 .guarantee-card {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 21px;
-	width: calc(50% - 21px / 2);
-	min-height: 147px;
-	padding: 15px 18px 12px 20px;
-	border-radius: 10px;
-	border: 1px solid var(--color-bg-white);
-	background: rgba(255, 255, 255, 0.05);
-	backdrop-filter: blur(7.5px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 21px;
+  width: calc(50% - 21px / 2);
+  min-height: 147px;
+  padding: 15px 18px 12px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-bg-white);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(7.5px);
 
-	&__image {
-		width: 102px;
-		height: 102px;
-	}
-
-	&__title {
-		margin: 0 0 10px 0;
-		color: var(--color-lilac);
+  &__title {
+    margin: 0 0 10px 0;
+    color: var(--color-lilac);
     letter-spacing: 0.06rem;
-	}
+  }
 
-	&__description {
-		margin: 0;
-		color: var(--color-text);
-		font: var(--font-description-main);
-	}
+  &__image {
+    width: 102px;
+    height: 102px;
+  }
+
+  &__description {
+    margin: 0;
+    color: var(--color-text);
+    font: var(--font-description-main);
+  }
+
+  &:hover {
+    background: rgba(145, 136, 250, 0.8);
+    border: 1px solid rgba(145, 136, 250, 0.8);
+    backdrop-filter: none;
+  }
+}
+.guarantee-card:hover .guarantee-card__title {
+  color: var(--color-text);
 }
 
 @media screen and (max-width: 934px) {
-	.guarantee-card {
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		gap: 22px;
-	}
+  .guarantee-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 22px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-		.guarantee-card {
-			width: 100%;
-			max-width: 320px;
-			min-height: 315px;
-			align-items: center;
-			text-align: center;
-			gap: 10px;
-			margin-bottom: 36px;
-			cursor: pointer;
-			
-			&__image {
-				width: 75px;
-				height: 75px;
-			}
+  .guarantee-card {
+    width: 100%;
+    max-width: 320px;
+    min-height: 315px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 36px;
+    cursor: pointer;
 
-		&__title {
-			margin: 0 0 11px 0;
-		}
-		}
+    &__image {
+      width: 75px;
+      height: 75px;
+    }
+
+    &__title {
+      margin: 0 0 11px 0;
+    }
+  }
 }
