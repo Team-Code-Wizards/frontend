@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -27,6 +27,10 @@ export default function StageCreate() {
 	// useEffect(() => {
 	// 	console.log(isActive);
 	// }, [isActive]);
+
+	useEffect(() => {
+		console.log(stages);
+	});
 
 	return (
 		<section className={styles['stage']}>
