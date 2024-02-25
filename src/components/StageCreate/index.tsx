@@ -10,24 +10,38 @@ import { IStagesItem } from '@/constants/StageCreate/type';
 import styles from './style.module.scss';
 
 export default function StageCreate() {
+	const [activeStage, setActiveStage] = useState(stages[0]);
+	// const [isActive, setIsActive] = useState(false);
+	const [hovered, setHovered] = useState(false);
+
 	const stagesProps = stages.map((item) => {
 		return { ...item, active: false };
 	});
 	stagesProps[0].active = true;
 
-	const [activeStage, setActiveStage] = useState(stages[0]);
 	function handleClick(stage: IStagesItem) {
 		setActiveStage(stage);
+		// setIsActive(true);
 	}
+
+	// useEffect(() => {
+	// 	console.log(isActive);
+	// }, [isActive]);
 
 	return (
 		<section className={styles['stage']}>
 			<div className={styles['stage__block']}>
 				<h2 className={styles['stage__title']}>Этапы создания сайта</h2>
 				<Image
-					src={activeStage.icon}
+					src={hovered ? activeStage.iconHover : activeStage.icon}
 					alt={activeStage.alt}
-					className={styles['stage__icon-wrapper']}
+					className={`${styles['stage__icon-wrapper']} ${hovered ? styles['stage__icon-wrapper_hovered'] : ''}`}
+					onMouseOver={() => {
+						setHovered(true);
+					}}
+					onMouseOut={() => {
+						setHovered(false);
+					}}
 				/>
 				<div className={styles['stage__wrapper']}>
 					{stagesProps.map((item, idx) => {
@@ -46,7 +60,12 @@ export default function StageCreate() {
 						);
 					})}
 				</div>
-				<h3 className={styles['stage__heading']}>{activeStage.title}</h3>
+				<h3
+					className={styles['stage__heading']}
+					// className={`${styles['stage__heading']} ${isActive && styles['stage__heading_slide-in']}`}
+				>
+					{activeStage.title}
+				</h3>
 				<p className={styles['stage__description']}>
 					{activeStage.description}
 				</p>

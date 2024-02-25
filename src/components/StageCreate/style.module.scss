@@ -28,6 +28,12 @@
     top: 10%;
     right: 8%;
     object-fit: contain;
+    transition: 0.2s;
+
+    &_hovered {
+      top: 9%;
+      transition: 0.2s;
+    }
   }
 
   &__wrapper {
@@ -97,8 +103,16 @@
   }
 
   &__heading {
+    max-width: 25%;
     font: var(--font-title-description);
     margin-bottom: 12px;
+    // transform: translateX(-10%);
+    // transition: 0.5s;
+    animation: slide-in 0.5s forwards;
+
+    &_slide-in {
+      animation: slide-in 0.5s forwards;
+    }
   }
 
   &__description {
@@ -107,6 +121,8 @@
     font: var(--font-description-main);
     line-height: var(--line-height-big);
     margin-bottom: 81px;
+    // 
+    animation: slide-in 0.5s forwards;
   }
 
   &__btn {
@@ -120,6 +136,9 @@
     font: var(--font-description-main);
     cursor: pointer;
     transition: 0.3s background-position ease-in-out;
+    // 
+    animation: slide-in 0.5s forwards;
+
 
     &:focus {
       outline: none;
@@ -137,6 +156,17 @@
   }
 }
 
+@keyframes slide-in {
+  0% { 
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateX(0%);
+    opacity: 1; 
+  }
+}
+
 @media screen and (max-width: 1283px) {
   .stage {
     &__block {
@@ -148,13 +178,18 @@
       width: 53%;
       top: 18%;
       right: 4%;
+      
+      &_hovered {
+        top: 17%;
+      }
     }
 
     &__wrapper {
       margin-bottom: 75px;
     }
 
-    &__description {
+    &__description, 
+    &__heading {
       max-width: 31%;
     }
   }
@@ -179,6 +214,10 @@
       max-width: var(--width-1024-768);
     }
 
+    &__heading {
+      max-width: 47%;
+    }
+
     &__description {
       max-width: 47%;
       margin-bottom: 57px;
@@ -192,6 +231,10 @@
       width: 43%;
       top: 18%;
       right: 3%;
+
+      &_hovered {
+        top: 17%;
+      }
     }
   }
 }
@@ -228,6 +271,7 @@
     }
 
     &__heading {
+      max-width: 100%;
       margin-bottom: 13px;
       font-weight: 600;
       font-size: var(--text-base);
@@ -240,6 +284,10 @@
       height: 40%;
       top: 50%;
       right: 9%;
+
+      &_hovered {
+        top: 49%;
+      }
     }
 
     &__wrapper {
@@ -272,7 +320,8 @@
 
 @media screen and (max-width: 479px) {
   .stage {
-    &__description {
+    &__description, 
+    &__heading{
       max-width: 98%;
     }
 
@@ -290,6 +339,10 @@
       position: absolute;
       top: 51%;
       right: 0;
+
+      &_hovered {
+        top: 50%;
+      }
     }
   }
 }
@@ -301,6 +354,10 @@
       height: 31%;
       top: 60%;
       right: 8%;
+      
+      &_hovered {
+        top: 59%;
+      }
     }
   }
 }
