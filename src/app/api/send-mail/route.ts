@@ -1,10 +1,10 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 import sendMail from '@/service/mailservice';
 import middleware from '@/service/middlewareRateLimit';
 
 // Handler for POST requests
-export async function POST(req) {
+export async function POST(req: NextRequest) {
 	try {
 		// Вызов middleware перед обработкой POST-запроса
 		const response = await middleware(req);
