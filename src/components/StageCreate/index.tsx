@@ -25,9 +25,8 @@ export default function StageCreate() {
 		setAnimationClassName('slide-out');
 		setTimeout(() => {
 			setAnimationClassName('slide-in');
+			setActiveStage(stage);
 		}, 1000);
-		setActiveStage(stage);
-		// setIsActive(true);
 	}
 
 	// useEffect(() => {
