@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import Image from 'next/image';
 
@@ -12,6 +12,8 @@ import styles from './style.module.scss';
 export default function StageCreate() {
 	const [activeStage, setActiveStage] = useState(stages[0]);
 	// const [isActive, setIsActive] = useState(false);
+	const [animationClassName, setAnimationClassName] = useState('');
+
 	const [hovered, setHovered] = useState(false);
 
 	const stagesProps = stages.map((item) => {
@@ -20,17 +22,22 @@ export default function StageCreate() {
 	stagesProps[0].active = true;
 
 	function handleClick(stage: IStagesItem) {
+		setAnimationClassName('slide-out');
+		setTimeout(() => {
+			setAnimationClassName('slide-in');
+		}, 1000);
 		setActiveStage(stage);
 		// setIsActive(true);
 	}
 
 	// useEffect(() => {
-	// 	console.log(isActive);
-	// }, [isActive]);
+	// 	// setIsActive(false);
+	// 	setIsActive(true);
+	// }, [activeStage]);
 
-	useEffect(() => {
-		console.log(stages);
-	});
+	// useEffect(() => {
+	// 	console.log(stages);
+	// });
 
 	return (
 		<section className={styles['stage']}>
@@ -39,7 +46,7 @@ export default function StageCreate() {
 				<Image
 					src={hovered ? activeStage.iconHover : activeStage.icon}
 					alt={activeStage.alt}
-					className={`${styles['stage__icon-wrapper']} ${hovered ? styles['stage__icon-wrapper_hovered'] : ''}`}
+					className={`${styles['stage__icon-wrapper']} ${hovered ? styles['stage__icon-wrapper_hovered'] : ''} ${styles[`image__${animationClassName}`]}`}
 					onMouseOver={() => {
 						setHovered(true);
 					}}
@@ -65,17 +72,23 @@ export default function StageCreate() {
 					})}
 				</div>
 				<h3
-					className={styles['stage__heading']}
+					// className={styles['stage__heading']}
 					// className={`${styles['stage__heading']} ${isActive && styles['stage__heading_slide-in']}`}
+					className={`${styles['stage__heading']} ${styles[`text__${animationClassName}`]}`}
+					// onAnimationEnd={() => setAnimationClassName('')}
 				>
 					{activeStage.title}
 				</h3>
-				<p className={styles['stage__description']}>
+				<p
+					// className={styles['stage__description']}
+					className={`${styles['stage__description']} ${styles[`text__${animationClassName}`]}`}
+				>
 					{activeStage.description}
 				</p>
 				<button
 					type="button"
-					className={styles['stage__btn']}
+					// className={styles['stage__btn']}
+					className={`${styles['stage__btn']} ${styles[`button__${animationClassName}`]}`}
 					data-id={activeStage.next}
 					onClick={() => {
 						return handleClick(
