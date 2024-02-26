@@ -38,6 +38,8 @@
 			line-height: var(--line-height-big);
 			letter-spacing: var(--font-description-letter);
 			width: 100%;
+			white-space: normal;
+			word-wrap: break-word;
 
 
 			&:focus-visible {
@@ -75,6 +77,8 @@
 	position: relative;
 	display: inline-block;
 	width: 100%;
+	white-space: normal;
+	word-wrap: break-word;
 }
 
 .select {
