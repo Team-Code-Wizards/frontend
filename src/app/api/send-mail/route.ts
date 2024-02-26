@@ -10,11 +10,6 @@ const ratelimit = new Ratelimit({
 	limiter: Ratelimit.slidingWindow(5, '20 s'),
 });
 
-// Define which routes you want to rate limit
-export const config = {
-	matcher: '/',
-};
-
 // Middleware function to handle rate limiting
 export default async function middleware(request: NextRequest) {
 	const ip = request.ip ?? '127.0.0.1';
