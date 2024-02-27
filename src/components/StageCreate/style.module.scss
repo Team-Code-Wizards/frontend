@@ -35,9 +35,11 @@
   }
 
   &__item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
-    padding: 7px;
     position: relative;
     background-color: transparent;
     border-radius: 100%;
@@ -245,15 +247,9 @@
     }
 
     &__item {
-      width: 8px;
-      height: 10px;
-      padding: 10px 11px;
+      width: 23px;
+      height: 23px;
       border-radius: 36px;
-      line-height: 23.74px;
-      display: inline-flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
 
       &:not(:last-child) {
         margin-right: 8.5px;

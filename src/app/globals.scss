@@ -84,6 +84,9 @@
   --color-input: #1b1c3380;
   --color-input-active: #e1e1e1;
   --color-text-input-active: #1b1c33;
+  --color-button-hover: #a4adff;
+  --color-button-active: #b7bdf9;
+  --color-button-disabled: #e1e4ff;
 
   --color-purple-gradient: linear-gradient(
     93deg,
@@ -108,8 +111,6 @@
 .body {
   font-family: var(--involve-font);
   background-color: var(--color-bg-black);
-  // overflow-y: hidden;
-  // position: fixed;
 }
 
 * {

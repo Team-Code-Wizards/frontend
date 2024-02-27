@@ -50,29 +50,38 @@ export default function Form() {
 				</span>
 			</p>
 			<span className={styles['promo-form__input-box']}>
-				<label className={styles['promo-form__input-box']} htmlFor="promoName">
-					Имя
+				<label className={styles['promo-form__label']} htmlFor="promoName">
+					Имя<span className={styles['promo-form__required-label']}>*</span>
 				</label>
 				<input
 					{...register('name')}
 					id="promoName"
 					type="text"
-					className={styles['promo-form__input']}
+					className={`${styles['promo-form__input']} ${
+						errors.name && styles['promo-form__input_error']
+					} ${
+						!errors.name &&
+						dirtyFields?.name &&
+						styles['promo-form__input_success']
+					}`}
 					placeholder="Иван"
 				/>
 				{dirtyFields?.name && (
-					<button
+					<div
 						className={styles['input-clear-btn']}
 						onClick={() => resetField('name')}
 					>
 						<ClearInputIcon />
-					</button>
+					</div>
 				)}
+				<span className={styles['input-error-message']}>
+					{errors.name?.message}
+				</span>
 			</span>
 
 			<span className={styles['promo-form__input-box']}>
-				<label className={styles['promo-form__input-box']} htmlFor="promoPhone">
-					Телефон
+				<label className={styles['promo-form__label']} htmlFor="promoPhone">
+					Телефон<span className={styles['promo-form__required-label']}>*</span>
 				</label>
 				<input
 					{...register('tel')}
@@ -85,15 +94,15 @@ export default function Form() {
 						dirtyFields?.tel &&
 						styles['promo-form__input_success']
 					}`}
-					placeholder="+7 (900) 000-00-00"
+					placeholder="+7 900 000 00 00"
 				/>
 				{dirtyFields?.tel && (
-					<button
+					<div
 						className={styles['input-clear-btn']}
 						onClick={() => resetField('tel')}
 					>
 						<ClearInputIcon />
-					</button>
+					</div>
 				)}
 				<span className={styles['input-error-message']}>
 					{errors.tel?.message}

@@ -1,6 +1,6 @@
 {
 	"name": "code-wizards",
-	"version": "0.1.0",
+	"version": "0.9.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
@@ -16,7 +16,6 @@
 		"@hookform/resolvers": "^3.3.4",
 		"@typescript-eslint/eslint-plugin": "^6.18.1",
 		"body-parser": "^1.20.2",
-		"classnames": "^2.5.1",
 		"cz-conventional-changelog": "^3.3.0",
 		"dotenv": "^16.4.3",
 		"next": "^14.1.1-canary.20",
@@ -27,7 +26,7 @@
 		"react-hook-form": "^7.50.0",
 		"sass": "^1.69.7",
 		"sharp": "^0.33.2",
-		"swiper": "^11.0.5",
+		"swiper": "^11.0.6",
 		"yup": "^1.3.3"
 	},
 	"devDependencies": {
@@ -36,8 +35,6 @@
 		"@types/nodemailer": "^6.4.14",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
-		"@types/uuid": "^9.0.7",
-		"classnames": "^2.3.2",
 		"eslint-config-next": "14.0.4",
 		"husky": "^8.0.3",
 		"lint-staged": "^15.2.0",

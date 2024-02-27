@@ -1,6 +1,11 @@
+import { useEffect, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
+import Image from 'next/image';
+
+import AttachmentIcon from '&/images/contacts/attachment.svg';
 import ClearInputIcon from '&/images/icons/ClearInputIcon';
+import DeleteIcon from '&/images/icons/DeleteIcon';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import { contactsSchema } from '@/constants/Contacts/contactsSchema';
 import useSubmitter from '@/service/submitter';
@@ -9,33 +14,62 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import styles from './styles.module.scss';
 
 export default function ContactsForm() {
+	const [fileData, setFileData] = useState('');
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
-	const {
-		register,
-		resetField,
-		handleSubmit,
-		// watch,
-		reset,
-		formState: { errors, dirtyFields, isValid, isDirty },
-	} = useForm({
-		defaultValues: {
-			name: '',
-			tel: '',
-			mail: '',
-			message: '',
-			attachments: '',
-		},
-		mode: 'onChange',
-		resolver: yupResolver(contactsSchema),
-	});
+	const { register, resetField, handleSubmit, watch, reset, formState } =
+		useForm({
+			defaultValues: {
+				name: '',
+				tel: '',
+				mail: '',
+				message: '',
+				attachments: '',
+			},
+			mode: 'onChange',
+			resolver: yupResolver(contactsSchema),
+		});
 
-	// const file = watch('attachments');
+	const { 0: file } = watch('attachments');
 
+	function readFile() {
+		const fileItem = file;
+
+		if (!fileItem) {
+			console.error('No file selected.');
+			return;
+		}
+
+		const reader = new FileReader();
+		reader.readAsDataURL(fileItem);
+		reader.onload = function () {
+			const fileData = reader.result;
+			if (typeof fileData === 'string') {
+				setFileData(fileData);
+			}
+		};
+		reader.onerror = function (error) {
+			console.error('Error reading the file: ', error);
+		};
+	}
+
+	useEffect(() => {
+		if (file) readFile();
+	}, [file]);
+
+	const { errors, dirtyFields, isValid, isDirty } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+		if (file) {
+			data.attachments = {
+				filename: file.name,
+				path: fileData,
+			};
+		}
+
 		await submitter(data)
 			.then(() => {
 				reset();
+				setFileData('');
 			})
 			.catch(() => showFailedInfoMsg());
 	};
@@ -51,17 +85,26 @@ export default function ContactsForm() {
 					<input
 						{...register('name')}
 						type="text"
-						className={styles['contacts-form-input']}
-						placeholder="Имя"
+						className={`${styles['contacts-form-input']} ${
+							errors.name && styles['contacts-form-input_error']
+						} ${
+							!errors.name &&
+							dirtyFields?.name &&
+							styles['contacts-form-input_success']
+						}`}
+						placeholder="Имя*"
 					/>
 					{dirtyFields?.name && (
-						<button
+						<div
 							className={styles['input-clear-btn']}
 							onClick={() => resetField('name')}
 						>
 							<ClearInputIcon />
-						</button>
+						</div>
 					)}
+					<span className={styles['input-error-message']}>
+						{errors.name?.message}
+					</span>
 				</span>
 
 				<span className={styles['input-box']}>
@@ -75,15 +118,17 @@ export default function ContactsForm() {
 							dirtyFields?.tel &&
 							styles['contacts-form-input_success']
 						}`}
-						placeholder="Телефон"
+						placeholder="Телефон*"
 					/>
 					{dirtyFields?.tel && (
-						<button
+						<div
 							className={styles['input-clear-btn']}
-							onClick={() => resetField('tel')}
+							onClick={() => {
+								resetField('tel');
+							}}
 						>
 							<ClearInputIcon />
-						</button>
+						</div>
 					)}
 					<span className={styles['input-error-message']}>
 						{errors.tel?.message}
@@ -101,15 +146,15 @@ export default function ContactsForm() {
 							dirtyFields?.mail &&
 							styles['contacts-form-input_success']
 						}`}
-						placeholder="Email"
+						placeholder="E-mail*"
 					/>
 					{dirtyFields?.mail && (
-						<button
+						<div
 							className={styles['input-clear-btn']}
 							onClick={() => resetField('mail')}
 						>
 							<ClearInputIcon />
-						</button>
+						</div>
 					)}
 					<span className={styles['input-error-message']}>
 						{errors.mail?.message}
@@ -123,16 +168,15 @@ export default function ContactsForm() {
 						placeholder="Сообщение"
 					/>
 					{dirtyFields?.message && (
-						<button
+						<div
 							className={styles['input-clear-btn']}
 							onClick={() => resetField('message')}
 						>
 							<ClearInputIcon />
-						</button>
+						</div>
 					)}
 				</span>
-
-				{/* <input
+				<input
 					{...register('attachments')}
 					className={styles['contacts-form-input']}
 					type="file"
@@ -148,7 +192,7 @@ export default function ContactsForm() {
 				{file && (
 					<span className={styles['contacts-form-file-name']}>
 						<Image src={AttachmentIcon} alt="" />
-						{file[0].name}
+						{file.name}
 						<button
 							className={styles['contacts-form-file-name__button']}
 							onClick={() => resetField('attachments')}
@@ -158,7 +202,7 @@ export default function ContactsForm() {
 					</span>
 				)}
 
-				<span className={styles['form__notice']}>*В формате Документ Word</span> */}
+				<span className={styles['form__notice']}>*В формате Документ Word</span>
 				<button
 					className={`${styles['form__button']} ${
 						!isValid && isDirty && styles['form__button_disabled']

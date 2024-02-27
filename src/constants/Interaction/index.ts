@@ -1,9 +1,9 @@
-import attention from '../../../public/images/interaction/1-attention.webp';
-import communication from '../../../public/images/interaction/2-communication.webp';
-import design from '../../../public/images/interaction/3-design.webp';
-import approach from '../../../public/images/interaction/4-approach.webp';
-import testing from '../../../public/images/interaction/5-testing.webp';
-import support from '../../../public/images/interaction/6-support.webp';
+import approach from '../../../public/images/interaction/approach.webp';
+import attention from '../../../public/images/interaction/attention.webp';
+import communication from '../../../public/images/interaction/communication.webp';
+import design from '../../../public/images/interaction/design.webp';
+import support from '../../../public/images/interaction/support.webp';
+import testing from '../../../public/images/interaction/testing.webp';
 import { IInteractionStep } from './type';
 
 export const data: IInteractionStep[] = [
@@ -12,7 +12,7 @@ export const data: IInteractionStep[] = [
 		number: 1,
 		title: 'Внимание к Деталям и Понимание Потребностей:',
 		description:
-			'Как только вы связываетесь с нами, мы вкладываемся в то, чтобы внимательно выслушать ваши потребности и цели. Это помогает нам точно понять, что вам нужно, и начать проект с четким видением.',
+			'Как только вы связываетесь с нами, мы вкладываемся в то, чтобы внимательно выслушать ваши потребности и цели. Это помогает нам точно понять, что вам нужно, и начать проект с чётким видением.',
 		image: attention,
 		alt: 'Список целей и задач',
 		modifier: 'attention',
@@ -24,7 +24,7 @@ export const data: IInteractionStep[] = [
 		number: 2,
 		title: 'Прозрачность и Коммуникация:',
 		description:
-			'Мы ценим открытость и прозрачность в каждом этапе процесса. Наша команда предоставляет регулярные обновления, отвечает на ваши вопросы и дает вам полный контроль над ходом разработки.',
+			'Мы ценим открытость и прозрачность в каждом этапе процесса. Наша команда предоставляет регулярные обновления, отвечает на ваши вопросы и даёт вам полный контроль над ходом разработки.',
 		image: communication,
 		alt: 'Созвон клиента с командой',
 		modifier: 'communication',

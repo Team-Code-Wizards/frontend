@@ -15,14 +15,14 @@ export const navbarItems = [
 		link: '#portfolio',
 	},
 	{
-		id: 'd13039d2-9bb9-4236-ab21-ab389e31e7f6',
-		title: 'Гарантии',
-		link: '#guarantees',
-	},
-	{
 		id: 'ebf65ae3-a410-41ea-a0d0-0fceda714aaf',
 		title: 'Отзывы',
 		link: '#recommendation',
+	},
+	{
+		id: 'd13039d2-9bb9-4236-ab21-ab389e31e7f6',
+		title: 'Гарантии',
+		link: '#guarantees',
 	},
 	{
 		id: '2273d070-dc65-4c92-a0fb-93ab31ff6c2d',

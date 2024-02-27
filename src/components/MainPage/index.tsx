@@ -1,14 +1,15 @@
 import AboutUs from '../AboutUs';
+// import Promo from '../Promo';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Faq from '../Faq';
 import Footer from '../Footer';
 import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
+import MainPromo from '../MainPromo/MainPromo';
 import Navbar from '../Navbar';
 import Popup from '../Popup';
 import Portfolio from '../Portfolio';
-import Promo from '../Promo';
 import Recommendations from '../Recommendations';
 import Services from '../Services';
 import StageCreate from '../StageCreate';
@@ -21,7 +22,8 @@ export default function MainPage() {
 		<main className={styles.main}>
 			<Popup />
 			<Navbar />
-			<Promo />
+			{/* <Promo /> */}
+			<MainPromo />
 			<ComponentsContainer>
 				<AboutUs />
 				<Services />

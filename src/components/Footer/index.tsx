@@ -9,8 +9,6 @@ import LogoNoText from '../../../public/images/logo/logo-no-text.svg';
 import LogoText from '../../../public/images/logo/logo-text.svg';
 import styles from './styles.module.scss';
 
-//TODO добавить ссылки на соцсети
-
 const Footer = (): React.ReactElement => {
 	return (
 		<footer className={styles['footer']}>
@@ -27,12 +25,17 @@ const Footer = (): React.ReactElement => {
 					<p>© Code Wizards, 2023</p>
 				</div>
 				<div>
-					<a href="tel:+79504241338" className={styles['footer__link']}>
+					<a
+						href="tel:+79504241338"
+						className={styles['footer__link']}
+						aria-label="Call"
+					>
 						+7 (950) 424-13-38
 					</a>
 					<a
 						href="mailto:email@code-wizards.team"
 						className={styles['footer__link']}
+						aria-label="Send e-mail"
 					>
 						email@code-wizards.team
 					</a>
@@ -44,7 +47,11 @@ const Footer = (): React.ReactElement => {
 				</div>
 			</div>
 			<div className={styles['footer__row']}>
-				<a href="#promo" className={styles['footer__image-no-text']}>
+				<a
+					href="#promo"
+					className={styles['footer__image-no-text']}
+					aria-label="Logo"
+				>
 					<Image src={LogoNoText} alt="Логотип" />
 				</a>
 				<Image
@@ -57,6 +64,7 @@ const Footer = (): React.ReactElement => {
 						href={socialUrl.telegram}
 						target="_blank"
 						className={styles['footer__link_telegram']}
+						aria-label="Telegram link"
 					>
 						<TelegramIcon />
 					</a>
@@ -64,6 +72,7 @@ const Footer = (): React.ReactElement => {
 						href={socialUrl.watsup}
 						target="_blank"
 						className={styles['footer__link_whatsapp']}
+						aria-label="Whatsapp link"
 					>
 						<WhatsappIcon />
 					</a>
@@ -71,6 +80,7 @@ const Footer = (): React.ReactElement => {
 						href={socialUrl.viber}
 						target="_blank"
 						className={styles['footer__link_viber']}
+						aria-label="Viber link"
 					>
 						<ViberIcon />
 					</a>

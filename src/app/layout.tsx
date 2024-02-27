@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Head from 'next/head';
 
 // import { Inter } from 'next/font/google';
 import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
@@ -21,9 +20,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
-			<Head>
-				<link rel="icon" href="/favicon.ico" sizes="any" />
-			</Head>
+			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
 				<YandexMetrica />
 				{children}
