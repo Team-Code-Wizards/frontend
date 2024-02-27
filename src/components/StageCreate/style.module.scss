@@ -28,11 +28,6 @@
     top: 10%;
     right: 8%;
     object-fit: contain;
-    // transition: 0.2s;
-
-    // &_inview {
-    //   animation: image-slide-in 1.26s forwards;
-    // }
 
     &_hovered {
       top: 9%;
@@ -110,7 +105,6 @@
     max-width: 25%;
     font: var(--font-title-description);
     margin-bottom: 12px;
-    // animation: text-slide-in 0.5s forwards;
   }
 
   &__description {
@@ -119,8 +113,6 @@
     font: var(--font-description-main);
     line-height: var(--line-height-big);
     margin-bottom: 81px;
-    // 
-    // animation: text-slide-in 0.5s forwards;
   }
 
   &__btn {
@@ -134,8 +126,6 @@
     font: var(--font-description-main);
     cursor: pointer;
     transition: 0.3s background-position ease-in-out;
-    // 
-    // animation: button-slide-in 0.62s forwards;
 
     &:focus {
       outline: none;
@@ -155,6 +145,10 @@
 
 .text__slide-in {
   animation: 0.5s ease both text-slide-in;
+
+  &_invisible {
+    visibility: hidden;
+  }
 }
 
 .text__slide-out {
@@ -163,6 +157,10 @@
 
 .button__slide-in {
   animation: 0.5s ease 0.12s both text-slide-in;
+
+  &_invisible {
+    visibility: hidden;
+  }
 }
 
 .button__slide-out {
@@ -171,6 +169,10 @@
 
 .image__slide-in {
   animation: 1s ease 0.26s both image-slide-in;
+  
+  &_invisible {
+    visibility: hidden;
+  }
 }
 
 .image__slide-out {

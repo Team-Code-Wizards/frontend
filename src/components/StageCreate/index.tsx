@@ -12,7 +12,7 @@ import styles from './style.module.scss';
 
 export default function StageCreate() {
 	const { ref, inView } = useInView({
-		threshold: 0.85,
+		threshold: 0.5,
 		triggerOnce: false,
 	});
 
@@ -33,18 +33,6 @@ export default function StageCreate() {
 		}, 1000);
 	}
 
-	// useEffect(() => {
-	// 	// setIsActive(false);
-	// 	animationStarted;
-	// }, [animationStarted]);
-
-	// useEffect(() => {
-	// 	console.log(stages);
-	// });
-
-	// className={`${styles[`choice-card${inView ? '_inview' : ''}`]}
-	// 			${styles[`choice-card_${item.modifier}`]}
-	// 			`}
 	return (
 		<section className={styles['stage']} ref={ref}>
 			<div className={styles['stage__block']}>
@@ -52,7 +40,7 @@ export default function StageCreate() {
 				<Image
 					src={hovered ? activeStage.iconHover : activeStage.icon}
 					alt={activeStage.alt}
-					className={`${styles['stage__icon-wrapper']} ${hovered ? styles['stage__icon-wrapper_hovered'] : ''} ${styles[`image__${animationClassName}`]} ${styles[`image${inView ? '__slide-in' : ''}`]}`}
+					className={`${styles['stage__icon-wrapper']} ${hovered ? styles['stage__icon-wrapper_hovered'] : ''} ${styles[`image__${animationClassName}`]} ${styles[`image${inView ? '__slide-in' : '__slide-in_invisible'}`]}`}
 					onMouseOver={() => {
 						setHovered(true);
 					}}
@@ -78,18 +66,18 @@ export default function StageCreate() {
 					})}
 				</div>
 				<h3
-					className={`${styles['stage__heading']} ${styles[`text__${animationClassName}`]} ${styles[`text${inView ? '__slide-in' : ''}`]}`}
+					className={`${styles['stage__heading']} ${styles[`text__${animationClassName}`]} ${styles[`text${inView ? '__slide-in' : '__slide-in_invisible'}`]}`}
 				>
 					{activeStage.title}
 				</h3>
 				<p
-					className={`${styles['stage__description']} ${styles[`text__${animationClassName}`]} ${styles[`text${inView ? '__slide-in' : ''}`]}`}
+					className={`${styles['stage__description']} ${styles[`text__${animationClassName}`]} ${styles[`text${inView ? '__slide-in' : '__slide-in_invisible'}`]}`}
 				>
 					{activeStage.description}
 				</p>
 				<button
 					type="button"
-					className={`${styles['stage__btn']} ${styles[`button__${animationClassName}`]} ${styles[`button${inView ? '__slide-in' : ''}`]}`}
+					className={`${styles['stage__btn']} ${styles[`button__${animationClassName}`]} ${styles[`button${inView ? '__slide-in' : '__slide-in_invisible'}`]}`}
 					data-id={activeStage.next}
 					onClick={() => {
 						return handleClick(
