@@ -28,8 +28,11 @@
     top: 10%;
     right: 8%;
     object-fit: contain;
-    transition: 0.2s;
-    animation: image-slide-in 1.26s forwards;
+    // transition: 0.2s;
+
+    // &_inview {
+    //   animation: image-slide-in 1.26s forwards;
+    // }
 
     &_hovered {
       top: 9%;
@@ -107,7 +110,7 @@
     max-width: 25%;
     font: var(--font-title-description);
     margin-bottom: 12px;
-    animation: text-slide-in 0.5s forwards;
+    // animation: text-slide-in 0.5s forwards;
   }
 
   &__description {
@@ -117,7 +120,7 @@
     line-height: var(--line-height-big);
     margin-bottom: 81px;
     // 
-    animation: text-slide-in 0.5s forwards;
+    // animation: text-slide-in 0.5s forwards;
   }
 
   &__btn {
@@ -132,7 +135,7 @@
     cursor: pointer;
     transition: 0.3s background-position ease-in-out;
     // 
-    animation: button-slide-in 0.62s forwards;
+    // animation: button-slide-in 0.62s forwards;
 
     &:focus {
       outline: none;
