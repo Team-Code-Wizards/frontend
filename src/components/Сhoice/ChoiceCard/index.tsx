@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 
 export default function ChoiceCard({ item }: IChoiceItemProps) {
 	return (
-		<li
+		<div
 			className={`${styles['choice-card']} ${
 				styles[`choice-card_${item.modifier}`]
 			}`}
@@ -41,6 +41,6 @@ export default function ChoiceCard({ item }: IChoiceItemProps) {
 					</p>
 				)}
 			</div>
-		</li>
+		</div>
 	);
 }

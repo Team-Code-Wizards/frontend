@@ -487,11 +487,24 @@
 
 @media screen and (max-width: 400px) {
 	.choice-card {
+		&__title {
+			letter-spacing: normal;
+		}
+		
 		&_presence {
-			grid-area: 1 / 1 / 1 / 1;
-			padding: 20% 5% 5.5%;
+			padding: 19% 5% 5% 4.5%;
 			align-items: normal;
 			background-size: cover, 15%;
+
+			&__wrapper {
+				padding: 2% 0 4% 5%;
+			}
 		}
+	}
+}
+
+@media screen and (max-width: 391px) {
+	.choice-card {
+		height: 100%;
 	}
 }
