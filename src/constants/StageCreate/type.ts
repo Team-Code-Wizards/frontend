@@ -8,5 +8,4 @@ export interface IStagesItem {
 	iconHover: StaticImageData;
 	alt: string;
 	next: string;
-	prev: string;
 }

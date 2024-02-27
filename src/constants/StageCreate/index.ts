@@ -31,7 +31,6 @@ export const stages: IStagesItem[] = [
 		iconHover: clockIconHover,
 		alt: 'Planning',
 		next: '2764cf44-1388-4b3a-93aa-b07ff99439ee',
-		prev: '7eb97675-cb4e-4eec-9150-8821a2969be7',
 	},
 	{
 		id: '2764cf44-1388-4b3a-93aa-b07ff99439ee',
@@ -42,7 +41,6 @@ export const stages: IStagesItem[] = [
 		iconHover: figmaIconHover,
 		alt: 'Figma',
 		next: 'eb449ef7-4aee-498d-905c-2c9ab550b388',
-		prev: '07ceff85-1dd6-4259-a47a-ab43d811b710',
 	},
 	{
 		id: 'eb449ef7-4aee-498d-905c-2c9ab550b388',
@@ -53,7 +51,6 @@ export const stages: IStagesItem[] = [
 		iconHover: htmlIconHover,
 		alt: 'HTML',
 		next: '5ba437e5-be8b-4a54-8671-ec4878f44f0b',
-		prev: '2764cf44-1388-4b3a-93aa-b07ff99439ee',
 	},
 	{
 		id: '5ba437e5-be8b-4a54-8671-ec4878f44f0b',
@@ -64,7 +61,6 @@ export const stages: IStagesItem[] = [
 		iconHover: developmentIconHover,
 		alt: 'Development',
 		next: '476bbc13-3c57-471c-a1df-0d8a2a5e9b2c',
-		prev: 'eb449ef7-4aee-498d-905c-2c9ab550b388',
 	},
 	{
 		id: '476bbc13-3c57-471c-a1df-0d8a2a5e9b2c',
@@ -75,7 +71,6 @@ export const stages: IStagesItem[] = [
 		iconHover: testingIconHover,
 		alt: 'Testing',
 		next: '9c524412-47da-4940-9f28-bdd4ecf433d8',
-		prev: '5ba437e5-be8b-4a54-8671-ec4878f44f0b',
 	},
 	{
 		id: '9c524412-47da-4940-9f28-bdd4ecf433d8',
@@ -86,7 +81,6 @@ export const stages: IStagesItem[] = [
 		iconHover: contentIconHover,
 		alt: 'Content',
 		next: '46a7b082-cc52-47d6-9d71-e904aedb6eaf',
-		prev: '476bbc13-3c57-471c-a1df-0d8a2a5e9b2c',
 	},
 	{
 		id: '46a7b082-cc52-47d6-9d71-e904aedb6eaf',
@@ -97,7 +91,6 @@ export const stages: IStagesItem[] = [
 		iconHover: optimizationIconHover,
 		alt: 'Optimization',
 		next: '364d3305-109d-4ce6-bacd-782678314ab9',
-		prev: '9c524412-47da-4940-9f28-bdd4ecf433d8',
 	},
 	{
 		id: '364d3305-109d-4ce6-bacd-782678314ab9',
@@ -107,7 +100,6 @@ export const stages: IStagesItem[] = [
 		iconHover: deploymentIconHover,
 		alt: 'Deployment',
 		next: 'cf1e143e-aba1-4855-8001-3626e9d79e53',
-		prev: '46a7b082-cc52-47d6-9d71-e904aedb6eaf',
 	},
 	{
 		id: 'cf1e143e-aba1-4855-8001-3626e9d79e53',
@@ -117,7 +109,6 @@ export const stages: IStagesItem[] = [
 		iconHover: hostingIconHover,
 		alt: 'Hosting',
 		next: '7eb97675-cb4e-4eec-9150-8821a2969be7',
-		prev: '364d3305-109d-4ce6-bacd-782678314ab9',
 	},
 	{
 		id: '7eb97675-cb4e-4eec-9150-8821a2969be7',
@@ -128,6 +119,5 @@ export const stages: IStagesItem[] = [
 		iconHover: supportIconHover,
 		alt: 'Support',
 		next: '07ceff85-1dd6-4259-a47a-ab43d811b710',
-		prev: 'cf1e143e-aba1-4855-8001-3626e9d79e53',
 	},
 ];
