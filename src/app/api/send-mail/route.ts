@@ -17,9 +17,9 @@ export async function POST(req: NextRequest) {
 		// Если middleware прошло успешно, обрабатываем POST-запрос
 		const body = await req.json();
 		sendMail(body);
-		return NextResponse.json({ status: 200 });
+		return NextResponse.json({ status: 200, message: 'письмо отправлено' });
 	} catch (error) {
 		console.error(error);
-		return NextResponse.json({ status: 500 });
+		return NextResponse.json({ status: 500, message: 'что то не так' });
 	}
 }
