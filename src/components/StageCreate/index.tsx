@@ -13,7 +13,7 @@ import styles from './style.module.scss';
 export default function StageCreate() {
 	const { ref, inView } = useInView({
 		threshold: 0.5,
-		triggerOnce: false,
+		triggerOnce: true,
 	});
 
 	const [activeStage, setActiveStage] = useState(stages[0]);
@@ -40,7 +40,7 @@ export default function StageCreate() {
 				<Image
 					src={hovered ? activeStage.iconHover : activeStage.icon}
 					alt={activeStage.alt}
-					className={`${styles['stage__icon-wrapper']} ${hovered ? styles['stage__icon-wrapper_hovered'] : ''} ${styles[`image__${animationClassName}`]} ${styles[`image${inView ? '__slide-in' : '__slide-in_invisible'}`]}`}
+					className={`${styles['stage__icon-wrapper']} ${hovered ? styles['stage__icon-wrapper_hovered'] : ''} ${styles[`image__${animationClassName}`]} ${styles[`image${inView ? '__slide-in' : ''}`]}`}
 					onMouseOver={() => {
 						setHovered(true);
 					}}
@@ -66,18 +66,18 @@ export default function StageCreate() {
 					})}
 				</div>
 				<h3
-					className={`${styles['stage__heading']} ${styles[`text__${animationClassName}`]} ${styles[`text${inView ? '__slide-in' : '__slide-in_invisible'}`]}`}
+					className={`${styles['stage__heading']} ${styles[`text__${animationClassName}`]} ${styles[`text${inView ? '__slide-in' : ''}`]}`}
 				>
 					{activeStage.title}
 				</h3>
 				<p
-					className={`${styles['stage__description']} ${styles[`text__${animationClassName}`]} ${styles[`text${inView ? '__slide-in' : '__slide-in_invisible'}`]}`}
+					className={`${styles['stage__description']} ${styles[`text__${animationClassName}`]} ${styles[`text${inView ? '__slide-in' : ''}`]}`}
 				>
 					{activeStage.description}
 				</p>
 				<button
 					type="button"
-					className={`${styles['stage__btn']} ${styles[`button__${animationClassName}`]} ${styles[`button${inView ? '__slide-in' : '__slide-in_invisible'}`]}`}
+					className={`${styles['stage__btn']} ${styles[`button__${animationClassName}`]} ${styles[`button${inView ? '__slide-in' : ''}`]}`}
 					data-id={activeStage.next}
 					onClick={() => {
 						return handleClick(

@@ -145,10 +145,6 @@
 
 .text__slide-in {
   animation: 0.5s ease both text-slide-in;
-
-  &_invisible {
-    visibility: hidden;
-  }
 }
 
 .text__slide-out {
@@ -157,10 +153,6 @@
 
 .button__slide-in {
   animation: 0.5s ease 0.12s both text-slide-in;
-
-  &_invisible {
-    visibility: hidden;
-  }
 }
 
 .button__slide-out {
@@ -169,10 +161,6 @@
 
 .image__slide-in {
   animation: 1s ease 0.26s both image-slide-in;
-  
-  &_invisible {
-    visibility: hidden;
-  }
 }
 
 .image__slide-out {
