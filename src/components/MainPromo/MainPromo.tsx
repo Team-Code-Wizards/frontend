@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useState } from 'react';
 
 import { StaticImageData } from 'next/image';
 import { useSearchParams } from 'next/navigation';
@@ -20,7 +20,8 @@ export interface IPromoState {
 	};
 }
 
-export default function MainPromo() {
+// Компонент-обертка, который будет использовать useSearchParams()
+const PromoWrapper = () => {
 	const urlParams = useSearchParams();
 	// получаем значение utm_term
 	const utmCampaign: string = urlParams.get('utm_campaign') || 'default';
@@ -43,13 +44,17 @@ export default function MainPromo() {
 		},
 	});
 
-	useEffect(() => {
-		console.log(promoState[utmCampaign]);
-	}, []);
-
 	return promoState[utmCampaign] ? (
 		<AdvertisingPromo promoConfig={promoState[utmCampaign]} />
 	) : (
 		<Promo />
+	);
+};
+
+export default function MainPromo() {
+	return (
+		<Suspense>
+			<PromoWrapper />
+		</Suspense>
 	);
 }
