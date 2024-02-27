@@ -54,7 +54,7 @@
 		animation-delay: 1.5s;
 	}
 
-	&:hover {
+	&_inview:hover {
 		transform: scale(1.05);
 	}
 
@@ -75,6 +75,7 @@
 	}
 
 	&__title {
+		cursor: default;
 		color: var(--color-text);
 		font: var(--font-title-description);
 		padding-top: 3px;
@@ -82,6 +83,7 @@
 	}
 
 	&__description {
+		cursor: default;
 		color: var(--color-text);
 		font: var(--font-description-main);
 		display: inline-block;
