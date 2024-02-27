@@ -69,7 +69,6 @@
 	.choice {
 		&__title {
 			margin-bottom: 28px;
-			letter-spacing: normal;
 		}
 
 		&__list {
@@ -78,11 +77,19 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			column-gap: 20px;
+			row-gap: 40px;
 		}
 
 		&__slide {
 			height: auto;
+
+			&_flexibility {
+				order: -1;
+			}
+
+			&_presence {
+				order: -2;
+			}
 		}
 
 		&__pagination {

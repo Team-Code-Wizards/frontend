@@ -485,10 +485,20 @@
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 391px) {
 	.choice-card {
+		height: 100%;
+
+		&__wrapper {
+			justify-content: center;
+		}
+
 		&__title {
 			letter-spacing: normal;
+
+			&_conversion {
+				padding-top: 1px;
+			}
 		}
 		
 		&_presence {
@@ -500,11 +510,58 @@
 				padding: 2% 0 4% 5%;
 			}
 		}
-	}
-}
 
-@media screen and (max-width: 391px) {
-	.choice-card {
-		height: 100%;
+		&_flexibility {
+			padding: 1% 5% 8% 10%;
+			background-position: left 3% bottom 38%, left 15% bottom 19%;
+
+			&__wrapper {
+				row-gap: 11px;
+			}
+		}
+
+		&_design {
+			background-size: 27%;
+			background-position: right 0px bottom 56px;
+		}
+
+		&_conversion {
+			padding: 7% 4% 7% 5%;
+			background-position: bottom 38% right 0;
+
+			&__column {
+				padding-left: 3px;
+			}
+		}
+
+		&_safety {
+			padding: 18% 5% 19%;
+
+			&__wrapper {
+				height: 100%;
+				row-gap: 11px;
+			}
+
+			&__column {
+				margin-bottom: 0;
+
+				&>svg {
+					margin-right: 5px;
+				}
+			}
+		}
+
+		&_optimization {
+			padding: 4% 4%;
+			&__column {
+				&>svg {
+					margin-right: 6px;
+				}
+			}
+		}
+
+		&_attraction {
+			padding-bottom: 5%;
+		}
 	}
 }

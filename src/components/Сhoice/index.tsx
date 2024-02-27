@@ -46,7 +46,10 @@ export default function Choice() {
 					{data.map((item) =>
 						width < 391 ? (
 							item.modifier !== 'planet' && (
-								<SwiperSlide className={styles.choice__slide} key={item.title}>
+								<SwiperSlide
+									className={`${styles[`choice__slide`]} ${(item.modifier === 'presence' || item.modifier === 'flexibility') && styles[`choice__slide_${item.modifier}`]}`}
+									key={item.title}
+								>
 									<ChoiceCard item={item} />
 								</SwiperSlide>
 							)
