@@ -19,7 +19,8 @@ export async function POST(req: NextRequest) {
 		sendMail(body);
 		return NextResponse.json({ status: 200, message: 'письмо отправлено' });
 	} catch (error) {
-		console.error(error);
-		return NextResponse.json({ status: 500, message: 'что то не так' });
+		if (error instanceof Error) {
+			return NextResponse.json({ status: 500, message: error.message });
+		}
 	}
 }
