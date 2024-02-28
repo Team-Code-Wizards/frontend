@@ -1,0 +1,52 @@
+.approach-wrapper {
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out 0s forwards;
+    opacity: 0;
+
+    @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+      
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+
+    &__icon {
+        position: absolute;
+        opacity: 0;
+
+        &_left {
+            animation: fadeIn 0.25s ease-in-out 0.8s forwards, rotate 0.25s linear 0.8s forwards;
+            top: 8px;
+            right: 8px;
+        }
+
+        &_middle {
+            animation: fadeIn 0.25s ease-in-out 0.3s forwards, rotate 0.25s linear 0.3s forwards;
+            top: 8px;
+            left: 8px;
+        }
+
+        &_right {
+            animation: fadeIn 0.25s ease-in-out 0.55s forwards, rotate 0.25s linear 0.55s forwards;
+            top: 8px;
+            left: 94px;
+        }
+
+        &_bottom {
+            animation: fadeIn 0.25s ease-in-out 1.05s forwards, rotate 0.25s linear 1.05s forwards;
+            bottom: 15px;
+            left: 90px;
+        }
+    }
+}
