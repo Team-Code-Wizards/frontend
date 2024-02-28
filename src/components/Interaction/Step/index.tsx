@@ -1,5 +1,4 @@
-import Image from 'next/image';
-
+//import Image from 'next/image';
 import { IStepProps } from './interface';
 import styles from './style.module.scss';
 
@@ -36,7 +35,7 @@ const Step = ({ item }: IStepProps): React.ReactElement => {
 								srcSet={`/images/interaction/${item.modifier}-1280px.webp`}
 							/>
 						)}
-						<Image src={item.image} alt={item.alt} />
+						{item.image}
 					</picture>
 				</div>
 			</div>
