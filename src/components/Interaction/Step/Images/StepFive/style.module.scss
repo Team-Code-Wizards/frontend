@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  animation-delay: 2.75ms;
 
   &__lineone,
   &__linetwo {
@@ -19,6 +20,12 @@
       transform-origin: center;
       opacity: 0;
     }
+    &_one {
+      animation-delay: 2.75ms;
+    }
+    &_two {
+      animation-delay: 2.91ms;
+    }
   }
 
   &__linetwo {
@@ -27,6 +34,12 @@
       animation: appearAndRotate 0.5s ease forwards;
       transform-origin: center;
       opacity: 0;
+    }
+    &_one {
+      animation-delay: 3.05ms;
+    }
+    &_two {
+      animation-delay: 3.21ms;
     }
   }
 }
