@@ -1,0 +1,36 @@
+.step-one {
+  opacity: 1;
+  animation-delay: 0.06s;
+  background-color: var(--color-bg-white);
+  width: 337px;
+  height: 176px;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.image:nth-child(3) {
+  animation-delay: 0.4s;
+}
