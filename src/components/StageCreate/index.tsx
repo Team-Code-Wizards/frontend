@@ -28,8 +28,8 @@ export default function StageCreate() {
 	function handleClick(stage: IStagesItem) {
 		setAnimationClassName('slide-out');
 		setTimeout(() => {
-			setAnimationClassName('slide-in');
 			setActiveStage(stage);
+			setAnimationClassName('slide-in');
 		}, 1000);
 	}
 
