@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { data } from '@/constants/Interaction/index';
 import 'swiper/css';
@@ -31,9 +32,19 @@ const Interaction = (): React.ReactElement => {
 		},
 	};
 
+	const { ref, inView } = useInView({
+		/* Optional options */
+		threshold: 0.4,
+		triggerOnce: false,
+	});
+
+	useEffect(() => {
+		console.log(inView);
+	}, [inView]);
+
 	return (
 		<>
-			<section className={styles['interaction']}>
+			<section ref={ref} className={styles['interaction']}>
 				<div className={styles['interaction__wrapper']}>
 					<h2 className={styles['interaction__title']}>
 						Как мы превращаем взаимодействие с нами в настоящее удовольствие:
