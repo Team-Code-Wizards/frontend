@@ -1,0 +1,42 @@
+.up-btn {
+  position: fixed;
+  right: 80px;
+  bottom: 110px;
+  cursor: pointer;
+  z-index: 999;
+  background-color: var(--color-lilac);
+  border-radius: 100px;
+  padding: 15px;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #a6aeff;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #ccd1fd;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .up-btn {
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .up-btn {
+    right: 30px;
+  }
+}
