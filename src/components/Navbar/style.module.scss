@@ -107,7 +107,6 @@
 			flex: none;
 			width: 54px;
 			min-height: 54px;
-			display: grid;
 			place-items: center;
 			border-radius: 100%;
 			border: none;
@@ -182,6 +181,6 @@
 @media screen and (max-width: 395px) {
 	.navbar {
 		gap: calc((100vh - 290px) * 0.21);
-		padding: 21px 9px 9px;
+		padding: 28px 28px 9px;
 	}
 }
