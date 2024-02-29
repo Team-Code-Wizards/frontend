@@ -191,11 +191,14 @@ export default function ContactsForm() {
 				</label>
 				{file && (
 					<span className={styles['contacts-form-file-name']}>
-						<Image src={AttachmentIcon} alt="" />
-						{file.name}
+						<Image src={AttachmentIcon} alt="file" />
+						<span className={styles['contacts-form-file-name_text']}>
+							{file.name}
+						</span>
 						<button
 							className={styles['contacts-form-file-name__button']}
 							onClick={() => resetField('attachments')}
+							aria-label="Delete"
 						>
 							<DeleteIcon />
 						</button>
