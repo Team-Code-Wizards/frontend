@@ -13,12 +13,12 @@
       }
       
     @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 
     &__icon {
@@ -26,27 +26,67 @@
         opacity: 0;
 
         &_left {
-            animation: fadeIn 0.25s ease-in-out 0.8s forwards, rotate 0.25s linear 0.8s forwards;
-            top: 8px;
-            right: 8px;
-        }
-
-        &_middle {
-            animation: fadeIn 0.25s ease-in-out 0.3s forwards, rotate 0.25s linear 0.3s forwards;
+            animation: fadeIn 0.25s ease-in-out 0.15s forwards, rotate 0.25s linear 0.15s forwards;
             top: 8px;
             left: 8px;
         }
 
-        &_right {
-            animation: fadeIn 0.25s ease-in-out 0.55s forwards, rotate 0.25s linear 0.55s forwards;
+        &_middle {
+            animation: fadeIn 0.25s ease-in-out 0.40s forwards, rotate 0.25s linear 0.40s forwards;
             top: 8px;
             left: 94px;
         }
 
+        &_right {
+            animation: fadeIn 0.25s ease-in-out 0.65s forwards, rotate 0.25s linear 0.65s forwards;
+            top: 8px;
+            right: 8px;
+        }
+
         &_bottom {
-            animation: fadeIn 0.25s ease-in-out 1.05s forwards, rotate 0.25s linear 1.05s forwards;
+            animation: fadeIn 0.25s ease-in-out 0.90s forwards, rotate 0.25s linear 0.90s forwards;
             bottom: 15px;
             left: 90px;
+        }
+
+        @media screen and (max-width: 666px) {
+            width: 21px;
+            height: 21px;
+
+            &_left {
+                top: 6px;
+                left: 6.5px;
+            }
+
+            &_middle {
+                top: 6px;
+                left: 70px;
+                height: 20.53px;
+            }
+
+            &_right {
+                top: 6px;
+                right: 6.5px;
+                width: 20.25px;
+                height: 21.25px;
+            }
+
+            &_bottom {
+                bottom: 8px;
+                left: 67px;
+                width: 28.5px;
+                height: 34.5px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 666px) {
+        width: 161.25px;
+        height: 121.5px;
+
+        &__background {
+            width: 100%;
+            height: 100%;
         }
     }
 }
