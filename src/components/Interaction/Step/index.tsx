@@ -1,3 +1,5 @@
+import StepOne from '@/components/Interaction/Step/Images/StepOne';
+
 import { IStepProps } from './interface';
 import styles from './style.module.scss';
 
@@ -34,7 +36,8 @@ const Step = ({ item, inView }: IStepProps): React.ReactElement => {
 								srcSet={`/images/interaction/${item.modifier}-1280px.webp`}
 							/>
 						)}
-						{item.image}
+						{/*{item.image}*/}
+						<StepOne inView={inView} />
 					</picture>
 				</div>
 			</div>

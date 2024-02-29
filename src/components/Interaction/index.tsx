@@ -34,7 +34,7 @@ const Interaction = (): React.ReactElement => {
 
 	const { ref, inView } = useInView({
 		/* Optional options */
-		threshold: 0.4,
+		threshold: 0.45,
 		triggerOnce: false,
 	});
 
