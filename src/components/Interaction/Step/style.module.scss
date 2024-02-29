@@ -5,6 +5,7 @@
 	border: 1px solid #ffffff;
 	background-color: var(--color-bg-black);
 
+
 	&__number {
 		width: 78px;
 		max-height: 35px;
@@ -46,6 +47,13 @@
 
 	&__image {
 		text-align: center;
+
+
+		&_inview {
+			opacity: 0;
+			transition: transform .3s ease-in-out;
+			animation: fadeInItem 0.5s ease forwards;
+		}
 	}
 
 	@media screen and (max-width: 1280px) {

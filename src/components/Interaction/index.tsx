@@ -34,8 +34,8 @@ const Interaction = (): React.ReactElement => {
 
 	const { ref, inView } = useInView({
 		/* Optional options */
-		threshold: 0.4,
-		triggerOnce: false,
+		threshold: 0.6,
+		//triggerOnce: false,
 	});
 
 	useEffect(() => {
@@ -72,10 +72,10 @@ const Interaction = (): React.ReactElement => {
 						{data.map((item) =>
 							width < 836 ? (
 								<SwiperSlide className={styles['steps__card']} key={item.title}>
-									<Step key={item.id} item={item} />
+									<Step key={item.id} item={item} inView={inView} />
 								</SwiperSlide>
 							) : (
-								<Step key={item.id} item={item} />
+								<Step key={item.id} item={item} inView={inView} />
 							)
 						)}
 						<div

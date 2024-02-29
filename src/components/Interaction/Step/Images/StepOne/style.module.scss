@@ -1,5 +1,4 @@
 .step-one {
-  opacity: 1;
   animation-delay: 0.06s;
   background-color: var(--color-bg-white);
   width: 337px;
@@ -13,15 +12,16 @@
 }
 
 .image {
+  opacity: 0;
   animation: fadeIn 0.8s ease forwards;
 }
 
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
