@@ -55,7 +55,7 @@ export default function AdvertisingPromo() {
 								className={styles['promo__link']}
 								aria-label="Telegram link"
 							>
-								<TelegramIcon size={[15, 16]} />
+								<TelegramIcon size={[15, 15]} />
 							</a>
 						</li>
 						<li className={styles['promo__link-box']}>
@@ -65,7 +65,7 @@ export default function AdvertisingPromo() {
 								className={styles['promo__link']}
 								aria-label="Whatsapp link"
 							>
-								<WhatsappIcon size={[14, 14]} />
+								<WhatsappIcon size={[15, 15]} />
 							</a>
 						</li>
 						<li className={styles['promo__link-box']}>
@@ -75,7 +75,7 @@ export default function AdvertisingPromo() {
 								className={styles['promo__link']}
 								aria-label="Viber link"
 							>
-								<ViberIcon size={[13, 13]} />
+								<ViberIcon size={[15, 15]} />
 							</a>
 						</li>
 					</ul>

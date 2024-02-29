@@ -115,7 +115,7 @@
 
     &__pagination {
       display: block;
-      width: 102px !important;
+      width: 130px !important;
       margin: 0 auto !important;
     }
 
@@ -166,11 +166,11 @@
   }
 }
 
-@media screen and (max-width: 327px) {
+@media screen and (max-width: 330px) {
   .portfolio {
     &__card-box {
       width: 100%;
-      margin-left: 15px;
+      margin-left: 1px;
     }
   }
 }
@@ -178,7 +178,6 @@
 @media screen and (max-width: 320px) {
   .portfolio {
     &__card-box {
-      width: 110%;
       margin-left: 0;
     }
   }
