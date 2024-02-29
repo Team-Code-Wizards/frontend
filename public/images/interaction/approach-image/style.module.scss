@@ -1,50 +1,69 @@
 .approach-wrapper {
     position: relative;
-    animation: fadeIn 0.3s ease-in-out 0s forwards;
     opacity: 0;
 
-    @keyframes rotate {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(180deg);
-        }
-      }
-      
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
+    &_active {
+        animation: fadeIn 0.3s ease-in-out 0s forwards;
+
+        @keyframes rotate {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(180deg);
+            }
+          }
+          
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     }
+
+    
 
     &__icon {
         position: absolute;
         opacity: 0;
 
+        &_active {
+            &-left {
+                animation: fadeIn 0.25s ease-in-out 0.15s forwards, rotate 0.25s linear 0.15s forwards;
+            } 
+
+            &-middle {
+                animation: fadeIn 0.25s ease-in-out 0.40s forwards, rotate 0.25s linear 0.40s forwards;
+            }
+
+            &-right {
+                animation: fadeIn 0.25s ease-in-out 0.65s forwards, rotate 0.25s linear 0.65s forwards;
+            }
+
+            &-bottom {
+                animation: fadeIn 0.25s ease-in-out 0.90s forwards, rotate 0.25s linear 0.90s forwards;
+            }
+        }
+
         &_left {
-            animation: fadeIn 0.25s ease-in-out 0.15s forwards, rotate 0.25s linear 0.15s forwards;
             top: 8px;
             left: 8px;
         }
 
         &_middle {
-            animation: fadeIn 0.25s ease-in-out 0.40s forwards, rotate 0.25s linear 0.40s forwards;
             top: 8px;
             left: 94px;
         }
 
         &_right {
-            animation: fadeIn 0.25s ease-in-out 0.65s forwards, rotate 0.25s linear 0.65s forwards;
             top: 8px;
             right: 8px;
         }
 
         &_bottom {
-            animation: fadeIn 0.25s ease-in-out 0.90s forwards, rotate 0.25s linear 0.90s forwards;
             bottom: 15px;
             left: 90px;
         }

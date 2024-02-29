@@ -3,7 +3,7 @@ export interface IInteractionStep {
 	number: number;
 	title: string;
 	description: string;
-	image: React.JSX.Element;
+	image(inView: boolean): React.JSX.Element;
 	alt: string;
 	modifier: string;
 	changeLaptop?: boolean;
