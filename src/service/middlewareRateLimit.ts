@@ -6,7 +6,7 @@ import { kv } from '@vercel/kv';
 const ratelimit = new Ratelimit({
 	redis: kv,
 	// 5 requests from the same IP in 20 seconds
-	limiter: Ratelimit.slidingWindow(5, '20 s'),
+	limiter: Ratelimit.slidingWindow(2, '20 s'),
 });
 
 // Middleware function to handle rate limiting
@@ -17,6 +17,6 @@ export default async function middleware(request: NextRequest) {
 	if (success) {
 		return NextResponse.next(request);
 	} else {
-		return NextResponse.redirect(new URL('/blocked', request.url));
+		throw new Error('Too many requests');
 	}
 }
