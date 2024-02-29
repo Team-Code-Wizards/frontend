@@ -1,0 +1,35 @@
+.step-six {
+  margin-bottom: 55px;
+}
+
+.image {
+  // animation: 0.5s ease 0.12s both slide-in-step-six;
+
+  &_one {
+    width: 80%;
+    margin-right: 20%;
+    margin-bottom: 3px;
+  }
+
+  &_two {
+    width: 29%;
+    margin-left: 71%;
+    animation-delay: 0.44s;
+  }
+}
+
+// @keyframes slide-in-step-six {
+//   0% { 
+//     transform: translateY(10%);
+//     opacity: 0;
+//     scale: 1.1;
+//   }
+//   30% { 
+//     scale: 1.1;
+//     opacity: 1; 
+//   }
+//   100% { 
+//     transform: translateY(0%);
+//     scale:1;
+//   }
+// }

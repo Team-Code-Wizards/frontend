@@ -1,9 +1,13 @@
-import Image from 'next/image';
+import { useEffect } from 'react';
 
 import { IStepProps } from './interface';
 import styles from './style.module.scss';
 
-const Step = ({ item }: IStepProps): React.ReactElement => {
+const Step = ({ item, inView }: IStepProps): React.ReactElement => {
+	useEffect(() => {
+		console.log(`Step ${inView}`);
+	}, [inView]);
+
 	return (
 		<>
 			<div className={styles['step']}>
@@ -16,7 +20,7 @@ const Step = ({ item }: IStepProps): React.ReactElement => {
 				>
 					{item.description}
 				</p>
-				<div className={styles['step__image']}>
+				<div className={`${styles[`step__image${inView ? '_inview' : ''}`]}`}>
 					<picture>
 						{item.changeMobile && (
 							<source
@@ -36,7 +40,11 @@ const Step = ({ item }: IStepProps): React.ReactElement => {
 								srcSet={`/images/interaction/${item.modifier}-1280px.webp`}
 							/>
 						)}
-						<Image src={item.image} alt={item.alt} />
+						<div
+							className={`${styles[`${item.imageClassName}${inView ? '_inview' : ''}`]}`}
+						>
+							{item.image}
+						</div>
 					</picture>
 				</div>
 			</div>
