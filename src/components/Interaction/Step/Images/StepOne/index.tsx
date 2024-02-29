@@ -13,9 +13,21 @@ interface IStepOne {
 export default function StepOne({ inView }: IStepOne) {
 	return (
 		<div className={`${styles[`step-one${inView ? '_inview' : ''}`]}`}>
-			<Image className={styles['image']} src={aim} alt={'aim'} />
-			<Image className={styles['image']} src={task1} alt={'task1'} />
-			<Image className={styles['image']} src={task2} alt={'task2'} />
+			<Image
+				className={`${styles[`image${inView ? '_inview' : ''}`]}`}
+				src={aim}
+				alt={'aim'}
+			/>
+			<Image
+				className={`${styles[`image${inView ? '_inview' : ''}`]}`}
+				src={task1}
+				alt={'task1'}
+			/>
+			<Image
+				className={`${styles[`image${inView ? '_inview' : ''}`]}`}
+				src={task2}
+				alt={'task2'}
+			/>
 		</div>
 	);
 }

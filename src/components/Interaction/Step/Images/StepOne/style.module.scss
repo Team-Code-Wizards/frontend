@@ -1,14 +1,16 @@
 .step-one {
   //animation-delay: 0.04s;
-  //background-color: var(--color-bg-white);
-  //width: 337px;
-  //height: 176px;
-  //padding: 20px;
-  //border-radius: 20px;
-  //gap: 20px;
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: space-between;
+  background-color: var(--color-bg-white);
+  width: 337px;
+  height: 176px;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 1;
+  animation: fadeIn 0.8s ease forwards;
 
   &_inview {
     opacity: 1;
@@ -28,8 +30,8 @@
 }
 
   .image {
-    opacity: 0;
-    animation: fadeIn 0.8s ease forwards;
+    //opacity: 0;
+    //animation: fadeIn 0.8s ease forwards;
 
 
   }
