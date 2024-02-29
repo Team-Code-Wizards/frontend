@@ -33,11 +33,13 @@
 			border: none;
 			font: var(--font-description-main);
 			border-radius: 10px;
-			padding: 18px 10px;
+			padding: 18px 31px 18px 10px;
 			background-color: var(--color-gray-bg);
 			line-height: var(--line-height-big);
 			letter-spacing: var(--font-description-letter);
 			width: 100%;
+			white-space: normal;
+			word-wrap: break-word;
 
 
 			&:focus-visible {
@@ -75,13 +77,14 @@
 	position: relative;
 	display: inline-block;
 	width: 100%;
+	white-space: normal;
+	word-wrap: break-word;
 }
 
 .select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	padding-right: 30px;
 	width: 100%;
 	cursor: pointer;
 	font: var(--font-description-main);
@@ -90,6 +93,8 @@
 	.option {
 		color: var(--color-dark-purple);
 		background-color: var(--color-gray-bg);
+		white-space: normal;
+		word-wrap: break-word;
 
 		&:focus {
 			outline: 2px solid var(--color-lilac);
