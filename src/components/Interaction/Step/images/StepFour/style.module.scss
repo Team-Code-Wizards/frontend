@@ -3,7 +3,7 @@
     opacity: 0;
 
         &_active {
-            animation: fadeIn 0.3s ease-in-out 0s forwards;
+            animation: fadeIn 0.3s ease-in-out 1.69s forwards;
 
             @keyframes rotate {
                 0% {
@@ -32,19 +32,19 @@
 
         &_active {
             &-left {
-                animation: fadeIn 0.25s ease-in-out 0.15s forwards, rotate 0.25s linear 0.15s forwards;
+                animation: fadeIn 0.25s ease-in-out 1.84s forwards, rotate 0.25s linear 1.84s forwards;
             } 
 
             &-middle {
-                animation: fadeIn 0.25s ease-in-out 0.40s forwards, rotate 0.25s linear 0.40s forwards;
+                animation: fadeIn 0.25s ease-in-out 2.09s forwards, rotate 0.25s linear 2.09s forwards;
             }
 
             &-right {
-                animation: fadeIn 0.25s ease-in-out 0.65s forwards, rotate 0.25s linear 0.65s forwards;
+                animation: fadeIn 0.25s ease-in-out 2.34s forwards, rotate 0.25s linear 2.34s forwards;
             }
 
             &-bottom {
-                animation: fadeIn 0.25s ease-in-out 0.90s forwards, rotate 0.25s linear 0.90s forwards;
+                animation: fadeIn 0.25s ease-in-out 2.59s forwards, rotate 0.25s linear 2.59s forwards;
             }
         }
 
