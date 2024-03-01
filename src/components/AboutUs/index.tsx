@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 export default function AboutUs() {
 	const { ref, inView } = useInView({
 		/* Optional options */
-		threshold: 1,
+		threshold: 0.8,
 		triggerOnce: true,
 	});
 
