@@ -46,52 +46,13 @@
 
 	&__image {
 		text-align: center;
-		// &_inview {
-		// 	&:nth-last-child(n) {
-		// 		animation: 0.5s ease 0.12s both slide-in-step-six;
-
-		// 	picture > div > img:nth-last-of-type() {
-		// 		animation-delay: 0.44s;
-		// 	}
-		// 	}
-		// }
 	}
 
-	.step-six {
-		&_inview {
-			img:nth-child(1) {
-				animation: 0.5s ease 3.12s both slide-in-step-six;
-			}
-			img:nth-child(2) {
-				animation: 0.5s ease 3.44s both slide-in-step-six;
-			}
-			// img:nth-last-of-type() {
-			// 	// animation: 0.5s ease 0.44s both slide-in-step-six;
-			// 	animation-delay: 0.44s;
-			// }
-		}
-	}
 
 	img {
 		height: 100%;
 		max-width: 100%;
 	}
-
-	@keyframes slide-in-step-six {
-  0% { 
-    transform: translateY(10%);
-    opacity: 0;
-    scale: 1.1;
-  }
-  30% { 
-    scale: 1.1;
-    opacity: 1; 
-  }
-  100% { 
-    transform: translateY(0%);
-    scale:1;
-  }
-}
 
 	@media screen and (max-width: 1280px) {
 		padding: 19px 18px 7px;

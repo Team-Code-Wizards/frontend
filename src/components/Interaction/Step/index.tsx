@@ -40,11 +40,12 @@ const Step = ({ item, inView }: IStepProps): React.ReactElement => {
 								srcSet={`/images/interaction/${item.modifier}-1280px.webp`}
 							/>
 						)}
-						<div
+						{/* <div
 							className={`${styles[`${item.imageClassName}${inView ? '_inview' : ''}`]}`}
 						>
 							{item.image}
-						</div>
+						</div> */}
+						{item.image(inView)}
 					</picture>
 				</div>
 			</div>
