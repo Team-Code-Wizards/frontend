@@ -1,5 +1,5 @@
 import StepFive from '@/components/Interaction/Step/Images/StepFive/index';
-import ApproachImage from '@/components/Interaction/Step/Images/StepFour/ApproachImage';
+import StepFour from '@/components/Interaction/Step/Images/StepFour';
 import StepOne from '@/components/Interaction/Step/Images/StepOne';
 import StepSix from '@/components/Interaction/Step/Images/StepSix/index';
 
@@ -58,7 +58,7 @@ export const data: IInteractionStep[] = [
 			'Мы понимаем, что каждый проект уникален. Наши решения гибки, и мы готовы адаптироваться к вашим потребностям. Независимо от того, создаем ли мы сайт для стартапа или обновляем корпоративный ресурс, мы подходим к этому с индивидуальным вниманием.',
 		alt: 'Схема',
 		image: (inView, isActive) => {
-			return ApproachImage(inView, isActive);
+			return StepFour(inView, isActive);
 		},
 		modifier: 'approach',
 		changeMobile: true,
