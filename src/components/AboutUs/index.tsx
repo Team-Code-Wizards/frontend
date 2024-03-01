@@ -1,8 +1,25 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+import UpButton from '@/components/UpButton';
+
 import styles from './styles.module.scss';
 
 export default function AboutUs() {
+	const { ref, inView } = useInView({
+		/* Optional options */
+		threshold: 1,
+		triggerOnce: true,
+	});
+
+	useEffect(() => {
+		console.log(inView);
+	}, [inView]);
+
 	return (
-		<section id="about-us" className={styles['about-us']}>
+		<section id="about-us" className={styles['about-us']} ref={ref}>
 			<h2 className={styles['about-us__h2-title']}>О нас</h2>
 			<h3 className={styles['about-us__h3-title']}>
 				Мы – коллектив творческих умов, готовых воплощать ваши идеи в цифровую
@@ -33,6 +50,7 @@ export default function AboutUs() {
 					</div>
 				</div>
 			</div>
+			<UpButton inView={inView} />
 		</section>
 	);
 }

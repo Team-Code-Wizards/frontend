@@ -1,5 +1,3 @@
-import UpButton from '@/components/UpButton';
-
 import AboutUs from '../AboutUs';
 // import Promo from '../Promo';
 import AdvertisingPromo from '../AdvertisingPromo';
@@ -26,7 +24,6 @@ export default function MainPage() {
 			<Navbar />
 			{/* <Promo /> */}
 			<AdvertisingPromo />
-			<UpButton />
 			<ComponentsContainer>
 				<AboutUs />
 				<Services />
