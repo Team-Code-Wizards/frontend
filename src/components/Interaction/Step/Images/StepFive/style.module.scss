@@ -1,0 +1,66 @@
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  gap: 10px;
+  
+  &_inview {
+    opacity: 1;
+    
+    @keyframes appearAndRotate {
+      0% {
+        opacity: 0;
+        transform: scale(0) rotate(315deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(360deg);
+      }
+    }
+  }
+  
+  &__lineone,
+  &__linetwo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+  }
+  
+  &__lineone {
+    &_inview {
+      &-one {
+        animation: appearAndRotate 0.5s ease forwards;
+        animation-delay: 2.74s;
+        transform-origin: center;
+        opacity: 0;
+      }
+      
+      &-two {
+        animation: appearAndRotate 0.9s ease forwards;
+        animation-delay: 2.74s;
+        transform-origin: center;
+        opacity: 0;
+      }
+    }
+  }
+  
+  &__linetwo {
+    &_inview {
+      &-one {
+        animation: appearAndRotate 1.2s ease forwards;
+        animation-delay: 2.74s;
+        transform-origin: center;
+        opacity: 0;
+      }
+
+      &-two {
+        animation: appearAndRotate 1.5s ease forwards;
+        animation-delay: 2.74s;
+        transform-origin: center;
+        opacity: 0;
+      }
+    }
+  }
+}

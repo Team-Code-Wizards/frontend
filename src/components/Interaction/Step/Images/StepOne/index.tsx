@@ -6,10 +6,10 @@ import task2 from '&/images/interaction/stepOne/Frame-326.webp';
 
 import styles from './style.module.scss';
 
-export default function StepOne(inView: boolean) {
+export default function StepOne(inView: boolean, isActive: boolean) {
 	return (
 		<div
-			className={`${styles['step-one']} ${inView && styles['step-one_inview']}`}
+			className={`${styles['step-one']} ${inView && isActive && styles['step-one_inview']}`}
 		>
 			<Image
 				className={`${styles[`image`]} ${inView && styles['image_inview']}`}
