@@ -2,27 +2,27 @@
     position: relative;
     opacity: 0;
 
-    &_active {
-        animation: fadeIn 0.3s ease-in-out 0s forwards;
+        &_active {
+            animation: fadeIn 0.3s ease-in-out 0s forwards;
 
-        @keyframes rotate {
-            0% {
-              transform: rotate(0deg);
-            }
-            100% {
-              transform: rotate(180deg);
-            }
-          }
-          
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
+            @keyframes rotate {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(180deg);
+                }
+              }
+              
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
             }
         }
-    }
 
     
 

@@ -34,7 +34,7 @@ const Interaction = (): React.ReactElement => {
 
 	const { ref, inView } = useInView({
 		/* Optional options */
-		threshold: 0.5,
+		threshold: 0.2,
 		triggerOnce: false,
 	});
 
@@ -67,10 +67,17 @@ const Interaction = (): React.ReactElement => {
 					{data.map((item) =>
 						width < 836 ? (
 							<SwiperSlide className={styles['steps__card']} key={item.title}>
-								<Step key={item.id} item={item} inView={inView} />
+								{({ isActive }) => (
+									<Step
+										key={item.id}
+										item={item}
+										inView={inView}
+										isActive={isActive}
+									/>
+								)}
 							</SwiperSlide>
 						) : (
-							<Step key={item.id} item={item} inView={inView} />
+							<Step key={item.id} item={item} inView={inView} isActive={true} />
 						)
 					)}
 					<div id="steps-pagination" className={styles['steps__pagination']} />

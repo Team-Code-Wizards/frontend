@@ -1,7 +1,7 @@
 import { IStepProps } from './interface';
 import styles from './style.module.scss';
 
-const Step = ({ item, inView }: IStepProps): React.ReactElement => {
+const Step = ({ item, inView, isActive }: IStepProps): React.ReactElement => {
 	return (
 		<>
 			<div className={styles['step']}>
@@ -14,7 +14,7 @@ const Step = ({ item, inView }: IStepProps): React.ReactElement => {
 				>
 					{item.description}
 				</p>
-				{item.image(inView)}
+				{item.image(inView, isActive)}
 			</div>
 		</>
 	);
