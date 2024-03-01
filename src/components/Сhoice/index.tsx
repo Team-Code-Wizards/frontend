@@ -1,7 +1,7 @@
 'use client';
 
-import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { data } from '@/constants/Choice';
 import 'swiper/css';
@@ -39,13 +39,7 @@ export default function Choice() {
 	};
 
 	return (
-		<section className={styles.choice}>
-			<h2 className={styles.choice__title}>Почему нас выбирают:</h2>
-			<ul ref={ref} className={`${styles.choice__list}`}>
-				{data.map((item) => {
-					return <ChoiceCard inView={inView} key={item.id} item={item} />;
-				})}
-			</ul>
+		<section ref={ref} className={styles.choice}>
 			<div className={styles.choice__container}>
 				<h2 className={styles.choice__title}>Почему нас выбирают:</h2>
 				<Swiper
@@ -63,11 +57,11 @@ export default function Choice() {
 									className={`${styles[`choice__slide`]} ${(item.modifier === 'presence' || item.modifier === 'flexibility') && styles[`choice__slide_${item.modifier}`]}`}
 									key={item.title}
 								>
-									<ChoiceCard item={item} />
+									<ChoiceCard inView={inView} key={item.id} item={item} />
 								</SwiperSlide>
 							)
 						) : (
-							<ChoiceCard key={item.id} item={item} />
+							<ChoiceCard inView={inView} key={item.id} item={item} />
 						)
 					)}
 					<div
@@ -77,5 +71,5 @@ export default function Choice() {
 				</Swiper>
 			</div>
 		</section>
-	)
+	);
 }
