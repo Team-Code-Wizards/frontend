@@ -1,4 +1,5 @@
 import ApproachImage from '@/components/Interaction/Step/Images/StepFour/ApproachImage';
+import StepOne from '@/components/Interaction/Step/Images/StepOne';
 import StepSix from '@/components/Interaction/Step/Images/StepSix/index';
 
 import { IInteractionStep } from './type';
@@ -11,7 +12,7 @@ export const data: IInteractionStep[] = [
 		description:
 			'Как только вы связываетесь с нами, мы вкладываемся в то, чтобы внимательно выслушать ваши потребности и цели. Это помогает нам точно понять, что вам нужно, и начать проект с чётким видением.',
 		image: (inView, isActive) => {
-			return StepSix(inView, isActive);
+			return StepOne(inView, isActive);
 		},
 		alt: 'Список целей и задач',
 		modifier: 'attention',
