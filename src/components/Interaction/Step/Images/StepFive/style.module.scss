@@ -2,7 +2,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
   gap: 10px;
+
+  &_inview {
+    //animation: appearAndRotate 0.5s ease forwards;
+    //transform-origin: center;
+    opacity: 1;
+
+    @keyframes appearAndRotate {
+      0% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(360deg);
+      }
+    }
+  }
 
   &__lineone,
   &__linetwo {
@@ -13,47 +31,38 @@
   }
 
   &__lineone {
-    &_one,
-    &_two {
-      animation: appearAndRotate 0.5s ease forwards;
-      transform-origin: center;
-      opacity: 0;
-    }
-    &_one {
-      animation-delay: 100ms;
-    }
-    &_two {
-      animation-delay: 250ms;
+    &_inview {
+      &-one {
+        animation-delay: 276ms;
+        animation: appearAndRotate 1s ease forwards;
+        transform-origin: center;
+        opacity: 0;
+      }
+
+      &-two {
+        animation-delay: 291ms;
+        animation: appearAndRotate 1s ease forwards;
+        transform-origin: center;
+        opacity: 0;
+      }
     }
   }
 
   &__linetwo {
-    &_one,
-    &_two {
-      animation: appearAndRotate 0.5s ease forwards;
-      transform-origin: center;
-      opacity: 0;
-    }
-    &_one {
-      animation-delay: 400ms;
-    }
-    &_two {
-      animation-delay: 550ms;
-    }
-  }
-}
+    &_inview {
+      &-one {
+        animation-delay: 307ms;
+        animation: appearAndRotate 1s ease forwards;
+        transform-origin: center;
+        opacity: 0;
+      }
 
-@keyframes appearAndRotate {
-  0% {
-    opacity: 0;
-    transform: scale(0) rotate(0deg);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(0.75) rotate(180deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(360deg);
+      &-two {
+        animation-delay: 319ms;
+        animation: appearAndRotate 1s ease forwards;
+        transform-origin: center;
+        opacity: 0;
+      }
+    }
   }
 }
