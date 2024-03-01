@@ -6,14 +6,12 @@
   gap: 10px;
 
   &_inview {
-    //animation: appearAndRotate 0.5s ease forwards;
-    //transform-origin: center;
     opacity: 1;
 
     @keyframes appearAndRotate {
       0% {
         opacity: 0;
-        transform: scale(0) rotate(0deg);
+        transform: scale(0) rotate(315deg);
       }
       100% {
         opacity: 1;
@@ -33,15 +31,13 @@
   &__lineone {
     &_inview {
       &-one {
-        animation-delay: 276ms;
-        animation: appearAndRotate 1s ease forwards;
+        animation: appearAndRotate 0.5s ease forwards;
         transform-origin: center;
         opacity: 0;
       }
 
       &-two {
-        animation-delay: 291ms;
-        animation: appearAndRotate 1s ease forwards;
+        animation: appearAndRotate 0.9s ease forwards;
         transform-origin: center;
         opacity: 0;
       }
@@ -51,15 +47,13 @@
   &__linetwo {
     &_inview {
       &-one {
-        animation-delay: 307ms;
-        animation: appearAndRotate 1s ease forwards;
+        animation: appearAndRotate 1.2s ease forwards;
         transform-origin: center;
         opacity: 0;
       }
 
       &-two {
-        animation-delay: 319ms;
-        animation: appearAndRotate 1s ease forwards;
+        animation: appearAndRotate 1.5s ease forwards;
         transform-origin: center;
         opacity: 0;
       }
