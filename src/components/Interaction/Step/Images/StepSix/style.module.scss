@@ -1,0 +1,62 @@
+.step-six {
+  margin-bottom: 45px;
+}
+
+.image {
+  &__one {
+    width: 80%;
+    margin-right: 20%;
+    margin-bottom: 3px;
+
+    &_inview {
+      animation: 0.5s ease 3.12s both slide-in;
+      // animation: 0.5s ease 0.12s both slide-in;
+    }
+  }
+
+  &__two {
+    width: 29%;
+    margin-left: 71%;
+
+    &_inview {
+      animation: 0.5s ease 3.44s both slide-in;
+      // animation: 0.5s ease 0.44s both slide-in;
+    }
+  }
+}
+
+@keyframes slide-in {
+  0% { 
+    transform: translateY(10%);
+    opacity: 0;
+    scale: 1.1;
+  }
+  30% { 
+    scale: 1.1;
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateY(0%);
+    scale:1;
+  }
+}
+
+@media screen and (max-width: 1280){
+  .step-six {
+  // margin-bottom: 45px;
+}
+
+.image {
+  &__one {
+    // src: url('/images/interaction/stepSix/bubble-1-1280.webp');
+    // width: 80%;
+    // margin-right: 20%;
+    // margin-bottom: 3px;
+  }
+
+  &__two {
+    // width: 29%;
+    // margin-left: 71%;
+  }
+}
+}

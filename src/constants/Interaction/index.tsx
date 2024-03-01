@@ -1,11 +1,6 @@
-// import approach from '../../../public/images/interaction/approach.webp';
-import ApproachImage from '@/components/Interaction/Step/images/StepFour/ApproachImage';
+import ApproachImage from '@/components/Interaction/Step/Images/StepFour/ApproachImage';
+import StepSix from '@/components/Interaction/Step/Images/StepSix/index';
 
-// import attention from '../../../public/images/interaction/attention.webp';
-// import communication from '../../../public/images/interaction/communication.webp';
-// import design from '../../../public/images/interaction/design.webp';
-// import support from '../../../public/images/interaction/support.webp';
-// import testing from '../../../public/images/interaction/testing.webp';
 import { IInteractionStep } from './type';
 
 export const data: IInteractionStep[] = [
@@ -15,7 +10,9 @@ export const data: IInteractionStep[] = [
 		title: 'Внимание к Деталям и Понимание Потребностей:',
 		description:
 			'Как только вы связываетесь с нами, мы вкладываемся в то, чтобы внимательно выслушать ваши потребности и цели. Это помогает нам точно понять, что вам нужно, и начать проект с чётким видением.',
-		
+		image: (inView, isActive) => {
+			return StepSix(inView, isActive);
+		},
 		alt: 'Список целей и задач',
 		modifier: 'attention',
 		changeLaptop: true,
@@ -28,6 +25,9 @@ export const data: IInteractionStep[] = [
 		description:
 			'Мы ценим открытость и прозрачность в каждом этапе процесса. Наша команда предоставляет регулярные обновления, отвечает на ваши вопросы и даёт вам полный контроль над ходом разработки.',
 		alt: 'Созвон клиента с командой',
+		image: (inView, isActive) => {
+			return StepSix(inView, isActive);
+		},
 		modifier: 'communication',
 		changeLaptop: true,
 		changeMobile: true,
@@ -40,6 +40,9 @@ export const data: IInteractionStep[] = [
 		description:
 			'В процессе разработки мы ставим вас на первое место. Наш дизайн ориентирован на создание приятного и интуитивно понятного интерфейса, чтобы ваши посетители чувствовали себя комфортно и уверенно.',
 		alt: 'Макет',
+		image: (inView, isActive) => {
+			return StepSix(inView, isActive);
+		},
 		modifier: 'design',
 		changeLaptop: true,
 		changeMobile: true,
@@ -65,7 +68,9 @@ export const data: IInteractionStep[] = [
 		title: 'Тестирование и Обратная Связь:',
 		description:
 			'Качество - наш приоритет. Перед запуском проекта мы тщательно тестируем все аспекты, чтобы удостовериться, что ваш веб-сайт работает безупречно. Мы также активно приветствуем вашу обратную связь и вносим коррективы, если это необходимо.',
-
+		image: (inView, isActive) => {
+			return ApproachImage(inView, isActive);
+		},
 		alt: 'Иллюстрация тестирования',
 		modifier: 'testing',
 		changeMobile: true,
@@ -77,7 +82,9 @@ export const data: IInteractionStep[] = [
 		title: 'Поддержка и Развитие:',
 		description:
 			'Наше внимание не заканчивается после запуска. Мы предоставляем поддержку и готовы помогать вам в долгосрочной перспективе. Если у вас возникают вопросы или вам нужна дополнительная функциональность, мы всегда здесь, чтобы помочь.',
-
+		image: (inView, isActive) => {
+			return StepSix(inView, isActive);
+		},
 		alt: 'Чат с клиентом',
 		modifier: 'support',
 		changeLaptop: true,
