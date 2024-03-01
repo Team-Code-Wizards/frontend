@@ -51,6 +51,7 @@ const Interaction = (): React.ReactElement => {
 				</p>
 				<Swiper
 					pagination={pagination}
+					watchSlidesProgress
 					rewind
 					modules={[Pagination]}
 					className={styles['steps']}
@@ -67,12 +68,12 @@ const Interaction = (): React.ReactElement => {
 					{data.map((item) =>
 						width < 836 ? (
 							<SwiperSlide className={styles['steps__card']} key={item.title}>
-								{({ isActive }) => (
+								{({ isVisible }) => (
 									<Step
 										key={item.id}
 										item={item}
 										inView={inView}
-										isActive={isActive}
+										isActive={isVisible}
 									/>
 								)}
 							</SwiperSlide>

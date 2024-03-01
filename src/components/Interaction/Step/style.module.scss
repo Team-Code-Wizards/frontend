@@ -118,14 +118,18 @@
 	}
 
 	@media screen and (max-width: 480px) {
-		padding: 18px 18px 16px;
+		padding: 18px 18px 25px;
 
 		&__description {
-			margin-block-end: 29px;
+			margin-block-end: 25px;
 		}
 	}
 
 	@media screen and (max-width: 391px) {
+		&__title {
+			letter-spacing: 0.19px;
+		}
+
 		img {
 			width: auto;
 		}
