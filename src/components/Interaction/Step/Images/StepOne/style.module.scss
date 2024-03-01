@@ -47,5 +47,18 @@
     }
   }
 
+@media screen and (max-width: 1280px) {
+  .step-one {
+    width: 294px;
+    height: 162px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .step-one {
+    width: 280px;
+    height: 141px;
+  }
+}
 
 

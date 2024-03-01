@@ -14,7 +14,7 @@ const Step = ({ item, inView }: IStepProps): React.ReactElement => {
 				>
 					{item.description}
 				</p>
-				<div className={`${styles[`step__image${inView ? '_inview' : ''}`]}`}>
+				<div className={styles['step__image']}>
 					<picture>
 						{item.changeMobile && (
 							<source
