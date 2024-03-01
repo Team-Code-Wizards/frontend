@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  animation-delay: 2.75ms;
 
   &__lineone,
   &__linetwo {
@@ -21,10 +20,10 @@
       opacity: 0;
     }
     &_one {
-      animation-delay: 2.75ms;
+      animation-delay: 100ms;
     }
     &_two {
-      animation-delay: 2.91ms;
+      animation-delay: 250ms;
     }
   }
 
@@ -36,10 +35,10 @@
       opacity: 0;
     }
     &_one {
-      animation-delay: 3.05ms;
+      animation-delay: 400ms;
     }
     &_two {
-      animation-delay: 3.21ms;
+      animation-delay: 550ms;
     }
   }
 }
@@ -51,7 +50,7 @@
   }
   50% {
     opacity: 1;
-    transform: scale(1) rotate(180deg);
+    transform: scale(0.75) rotate(180deg);
   }
   100% {
     opacity: 1;

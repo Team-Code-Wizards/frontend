@@ -9,9 +9,9 @@ import imageTwo from '&/images/interaction/testing-two.webp';
 
 import styles from './style.module.scss';
 
-export default function StepFive() {
+export default function StepFive(inView: boolean) {
 	return (
-		<div className={styles['images']}>
+		<div className={`${styles['images']} ${inView && styles['images_inview']}`}>
 			<div className={styles['images__lineone']}>
 				<Image
 					src={imageOne}
