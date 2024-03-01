@@ -1,16 +1,12 @@
-.step-six {
-  margin-bottom: 45px;
-}
-
 .image {
+  height: auto;
+
   &__one {
     width: 80%;
-    margin-right: 20%;
-    margin-bottom: 3px;
+    margin: auto auto 5px 5px;
 
     &_inview {
       animation: 0.5s ease 3.12s both slide-in;
-      // animation: 0.5s ease 0.12s both slide-in;
     }
   }
 
@@ -20,7 +16,6 @@
 
     &_inview {
       animation: 0.5s ease 3.44s both slide-in;
-      // animation: 0.5s ease 0.44s both slide-in;
     }
   }
 }
@@ -41,22 +36,50 @@
   }
 }
 
-@media screen and (max-width: 1280){
-  .step-six {
-  // margin-bottom: 45px;
-}
-
+@media screen and (max-width: 1280px) {
 .image {
   &__one {
-    // src: url('/images/interaction/stepSix/bubble-1-1280.webp');
-    // width: 80%;
-    // margin-right: 20%;
-    // margin-bottom: 3px;
+    width: 91.3%;
+    margin-inline-start: 0;
+    margin-block-end: 15px;
   }
 
   &__two {
-    // width: 29%;
-    // margin-left: 71%;
+    width: 36%;
+    margin-inline-start: 63%;
+  }
+}
+}
+
+@media screen and (max-width: 834px) {
+.image {
+  &__one {
+    margin-block-start: 10px;
+    &_inview {
+      animation-delay: 0s;
+    }
+  }
+
+  &__two {
+    width: 30%;
+    margin-inline-start: 70%;
+    &_inview {
+      animation-delay: 0.32s;
+    }
+  }
+}
+}
+
+@media screen and (max-width: 391px) {
+.image {
+  &__one {
+    width: 93.5%;
+    margin-block-end: 5px;
+  }
+
+  &__two {
+    width: 37%;
+    margin-left: 63%;
   }
 }
 }
