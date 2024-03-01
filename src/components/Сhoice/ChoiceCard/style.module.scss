@@ -1,6 +1,62 @@
 .choice-card {
 	display: flex;
 	border-radius: 20px;
+	opacity: 0;
+	transition: transform .3s ease-in-out;
+
+	&_inview {
+		display: flex;
+		border-radius: 20px;
+		opacity: 0;
+		transition: transform .3s ease-in-out;
+		animation: fadeInItem 0.5s ease forwards;
+	}
+
+	@keyframes fadeInItem {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	&_inview:nth-child(1) {
+		animation-delay: 0.1875s;
+	}
+
+	&_inview:nth-child(2) {
+		animation-delay: 0.375s;
+	}
+
+	&_inview:nth-child(3) {
+		animation-delay: 0.5625s;
+	}
+
+	&_inview:nth-child(4) {
+		animation-delay: 0.75s;
+	}
+
+	&_inview:nth-child(5) {
+		animation-delay: 0.9375s;
+	}
+
+	&_inview:nth-child(6) {
+		animation-delay: 1.125s;
+	}
+
+	&_inview:nth-child(7) {
+		animation-delay: 1.3125s;
+	}
+
+	&_inview:nth-child(8) {
+		animation-delay: 1.5s;
+	}
+
+	&_inview:hover {
+		transform: scale(1.05);
+	}
 
 	&__column {
 		border-radius: 6px;
@@ -19,6 +75,7 @@
 	}
 
 	&__title {
+		cursor: default;
 		color: var(--color-text);
 		font: var(--font-title-description);
 		padding-top: 3px;
@@ -26,6 +83,7 @@
 	}
 
 	&__description {
+		cursor: default;
 		color: var(--color-text);
 		font: var(--font-description-main);
 		display: inline-block;

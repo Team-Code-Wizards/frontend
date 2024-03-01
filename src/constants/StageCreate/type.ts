@@ -5,6 +5,7 @@ export interface IStagesItem {
 	title: string;
 	description?: string;
 	icon: StaticImageData;
+	iconHover: StaticImageData;
 	alt: string;
 	next: string;
 }

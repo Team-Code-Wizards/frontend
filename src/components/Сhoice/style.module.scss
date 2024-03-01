@@ -5,6 +5,7 @@
 	flex-direction: column;
 	row-gap: 50px;
 	padding-top: 66px;
+	padding-bottom: 10px;
 
 	&__container {
 		margin: 0 auto;
@@ -22,6 +23,7 @@
 		grid-template-columns: 0.98fr 0.46fr 1.54fr 1fr 0.7fr 1.28fr;
 		grid-column-gap: var(--grid-gap);
 		grid-row-gap: var(--grid-gap);
+		opacity: 1;
 	}
 }
 
@@ -41,6 +43,7 @@
 	.choice {
 		max-width: var(--width-1024-768);
 		padding-top: 59px;
+
 		&__list {
 			grid-template-columns: 0fr 1.45fr 0.44fr 1fr 0.9fr 0fr;
 		}
@@ -55,6 +58,7 @@
 		
 		row-gap: 30px;
 		padding-top: 16px;
+
 		&__title {
 			font-size: 40px;
 		}
