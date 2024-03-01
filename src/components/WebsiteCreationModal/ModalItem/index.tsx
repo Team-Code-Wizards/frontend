@@ -75,7 +75,7 @@ export default function ModalItem({ control, register, errors }: FieldValues) {
 								<option>Корпоративный сайт</option>
 								<option>Блог или новостной сайт</option>
 								<option>Фирменный сайт</option>
-								<option>Сайт по вашему техническому заданию</option>
+								<option>Сайт по вашему ТЗ</option>
 							</select>
 							<p className={styles['modal-item__error']}>
 								{errors && errors.siteOrder?.message}

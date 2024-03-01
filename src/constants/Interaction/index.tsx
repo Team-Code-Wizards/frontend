@@ -1,4 +1,7 @@
-import StepFive from '@/components/Interaction/Step/Images/StepFive';
+import StepFive from '@/components/Interaction/Step/Images/StepFive/index';
+import ApproachImage from '@/components/Interaction/Step/Images/StepFour/ApproachImage';
+import StepOne from '@/components/Interaction/Step/Images/StepOne';
+import StepSix from '@/components/Interaction/Step/Images/StepSix/index';
 
 import { IInteractionStep } from './type';
 
@@ -9,8 +12,8 @@ export const data: IInteractionStep[] = [
 		title: 'Внимание к Деталям и Понимание Потребностей:',
 		description:
 			'Как только вы связываетесь с нами, мы вкладываемся в то, чтобы внимательно выслушать ваши потребности и цели. Это помогает нам точно понять, что вам нужно, и начать проект с чётким видением.',
-		image: (inView) => {
-			return StepFive(inView);
+		image: (inView, isActive) => {
+			return StepOne(inView, isActive);
 		},
 		alt: 'Список целей и задач',
 		modifier: 'attention',
@@ -23,10 +26,10 @@ export const data: IInteractionStep[] = [
 		title: 'Прозрачность и Коммуникация:',
 		description:
 			'Мы ценим открытость и прозрачность в каждом этапе процесса. Наша команда предоставляет регулярные обновления, отвечает на ваши вопросы и даёт вам полный контроль над ходом разработки.',
-		image: (inView) => {
-			return StepFive(inView);
-		},
 		alt: 'Созвон клиента с командой',
+		image: (inView, isActive) => {
+			return StepSix(inView, isActive);
+		},
 		modifier: 'communication',
 		changeLaptop: true,
 		changeMobile: true,
@@ -38,10 +41,10 @@ export const data: IInteractionStep[] = [
 		title: 'Дизайн с Фокусом на Пользователе:',
 		description:
 			'В процессе разработки мы ставим вас на первое место. Наш дизайн ориентирован на создание приятного и интуитивно понятного интерфейса, чтобы ваши посетители чувствовали себя комфортно и уверенно.',
-		image: (inView) => {
-			return StepFive(inView);
-		},
 		alt: 'Макет',
+		image: (inView, isActive) => {
+			return StepSix(inView, isActive);
+		},
 		modifier: 'design',
 		changeLaptop: true,
 		changeMobile: true,
@@ -53,10 +56,10 @@ export const data: IInteractionStep[] = [
 		title: 'Гибкость и Индивидуальный Подход:',
 		description:
 			'Мы понимаем, что каждый проект уникален. Наши решения гибки, и мы готовы адаптироваться к вашим потребностям. Независимо от того, создаем ли мы сайт для стартапа или обновляем корпоративный ресурс, мы подходим к этому с индивидуальным вниманием.',
-		image: (inView) => {
-			return StepFive(inView);
-		},
 		alt: 'Схема',
+		image: (inView, isActive) => {
+			return ApproachImage(inView, isActive);
+		},
 		modifier: 'approach',
 		changeMobile: true,
 	},
@@ -67,8 +70,8 @@ export const data: IInteractionStep[] = [
 		title: 'Тестирование и Обратная Связь:',
 		description:
 			'Качество - наш приоритет. Перед запуском проекта мы тщательно тестируем все аспекты, чтобы удостовериться, что ваш веб-сайт работает безупречно. Мы также активно приветствуем вашу обратную связь и вносим коррективы, если это необходимо.',
-		image: (inView) => {
-			return StepFive(inView);
+		image: (inView, isActive) => {
+			return StepFive(inView, isActive);
 		},
 		alt: 'Иллюстрация тестирования',
 		modifier: 'testing',
@@ -81,8 +84,8 @@ export const data: IInteractionStep[] = [
 		title: 'Поддержка и Развитие:',
 		description:
 			'Наше внимание не заканчивается после запуска. Мы предоставляем поддержку и готовы помогать вам в долгосрочной перспективе. Если у вас возникают вопросы или вам нужна дополнительная функциональность, мы всегда здесь, чтобы помочь.',
-		image: (inView) => {
-			return StepFive(inView);
+		image: (inView, isActive) => {
+			return StepSix(inView, isActive);
 		},
 		alt: 'Чат с клиентом',
 		modifier: 'support',

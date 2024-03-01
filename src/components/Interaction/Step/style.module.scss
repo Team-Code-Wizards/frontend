@@ -1,11 +1,16 @@
 .step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	max-width: 32%;
 	padding: 28px 27px 12px;
 	border-radius: 20px;
 	border: 1px solid #ffffff;
 	background-color: var(--color-bg-black);
 
+
 	&__number {
+		margin-right: auto;
 		width: 78px;
 		max-height: 35px;
 		padding: 6px 8px;
@@ -19,6 +24,7 @@
 	&__title {
 		margin-block-start: 5px;
 		margin-block-end: 32px;
+		margin-right: auto;
 		font: var(--font-title-description);
 		letter-spacing: var(--font-description-letter);
 	}
@@ -46,11 +52,6 @@
 
 	&__image {
 		text-align: center;
-	}
-
-	img {
-		height: 100%;
-		max-width: 100%;
 	}
 
 	@media screen and (max-width: 1280px) {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Image from 'next/image';
 
 import imageFour from '&/images/interaction/testing-four.webp';
@@ -9,9 +7,11 @@ import imageTwo from '&/images/interaction/testing-two.webp';
 
 import styles from './style.module.scss';
 
-export default function StepFive(inView: boolean) {
+export default function StepFive(inView: boolean, isActive: boolean) {
 	return (
-		<div className={`${styles['images']} ${inView && styles['images_inview']}`}>
+		<div
+			className={`${styles['images']} ${inView && isActive && styles['images_inview']}`}
+		>
 			<div
 				className={`${styles['images__lineone']} ${inView && styles['images__lineone_inview']}`}
 			>
