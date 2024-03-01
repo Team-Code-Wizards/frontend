@@ -6,7 +6,8 @@ import bubble2 from '&/images/interaction/stepSix/bubble-2.webp';
 
 import styles from './style.module.scss';
 
-export default function StepSix(inView: boolean) {
+export default function StepSix(inView: boolean, isActive: boolean) {
+	console.log(isActive);
 	return (
 		<div className={styles['step-six']}>
 			{/* <div className={`${styles['step-six']} ${inView && styles['step-six_inview']}`} > */}
