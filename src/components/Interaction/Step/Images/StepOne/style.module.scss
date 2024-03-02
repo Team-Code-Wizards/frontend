@@ -1,11 +1,6 @@
 .step-one {
-  width: 337px;
-  height: 176px;
-  opacity: 1;
-
-  &_inview {
     opacity: 1;
-    animation: fadeInItem 0.5s ease forwards;
+    animation: fadeInItem 0.5s ease 0.04s forwards;
     background-color: var(--color-bg-white);
     width: 337px;
     height: 176px;
@@ -15,26 +10,36 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+    //animation-delay: 0.04s;
 }
 
   .image {
-    opacity: 0;
-
-    &_inview {
-      animation: fadeIn 0.5s ease forwards;
+    opacity: 1;
 
 
-      &:nth-child(2) {
-        animation-delay: 1s;
+    &__one {
+
+      &_inview {
+        animation: fadeIn 0.04s ease forwards;
       }
+    }
 
-      &:nth-child(3) {
+    &__two {
+
+      &_inview {
         animation-delay: 1s;
+        animation: fadeIn 0.5s ease forwards;
+      }
+    }
+
+    &__three {
+
+      &_inview {
+        animation-delay: 1s;
+        animation: fadeIn 0.5s ease forwards;
       }
     }
   }
-
 
   @keyframes fadeIn {
     from {
@@ -47,18 +52,18 @@
     }
   }
 
-@media screen and (max-width: 1280px) {
-  .step-one {
-    width: 294px;
-    height: 162px;
-  }
-}
-
-@media screen and (max-width: 834px) {
-  .step-one {
-    width: 280px;
-    height: 141px;
-  }
-}
+//@media screen and (max-width: 1280px) {
+//  .step-one {
+//    width: 294px;
+//    height: 162px;
+//  }
+//}
+//
+//@media screen and (max-width: 834px) {
+//  .step-one {
+//    width: 280px;
+//    height: 141px;
+//  }
+//}
 
 
