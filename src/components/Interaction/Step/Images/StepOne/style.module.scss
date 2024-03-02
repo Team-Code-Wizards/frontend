@@ -1,6 +1,11 @@
 .step-one {
+  width: 337px;
+  height: 176px;
+  opacity: 1;
+
+  &_inview {
     opacity: 1;
-    animation: fadeInItem 0.5s ease 0.04s forwards;
+    animation: fadeInItem 0.5s ease forwards;
     background-color: var(--color-bg-white);
     width: 337px;
     height: 176px;
@@ -10,59 +15,89 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    //animation-delay: 0.04s;
+  }
 }
 
-  .image {
+.image {
+  opacity: 0;
+
+  &_inview {
+    animation: fadeIn 0.5s ease forwards;
+
+
+    &:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1s;
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
-    &__one {
+@media screen and (max-width: 1281px) {
+  .step-one {
+    width: 100%;
+    //height: 162px;
 
-      &_inview {
-        animation: fadeIn 0.04s ease forwards;
-      }
-    }
-
-    &__two {
-
-      &_inview {
-        animation-delay: 1s;
-        animation: fadeIn 0.5s ease forwards;
-      }
-    }
-
-    &__three {
-
-      &_inview {
-        animation-delay: 1s;
-        animation: fadeIn 0.5s ease forwards;
-      }
+    &_inview {
+      width: 100%;
+      height: 162px;
+      border-radius: 17px;
+      padding: 20px 17px;
+      //gap: 16px;
     }
   }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+  .image {
+    &_inview {
+      width: 100%;
     }
   }
+}
 
-//@media screen and (max-width: 1280px) {
-//  .step-one {
-//    width: 294px;
-//    height: 162px;
-//  }
-//}
-//
-//@media screen and (max-width: 834px) {
+@media screen and (max-width: 835px) {
+  .step-one {
+    width: 100%;
+    //height: 176px;
+
+    &_inview {
+      width:100%;
+      //height: 176px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+  }
+  .image {
+    &_inview {
+      width: 100%;
+    }
+  }
+}
+
+//@media screen and (max-width: 391px) {
 //  .step-one {
 //    width: 280px;
 //    height: 141px;
+//
+//    &_inview {
+//      width: 280px;
+//      height: 141px;
+//      border-radius: 16px;
+//      padding: 16px;
+//    }
 //  }
 //}
 

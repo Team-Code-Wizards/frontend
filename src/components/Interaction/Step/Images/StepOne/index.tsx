@@ -45,103 +45,24 @@ export default function StepOne(inView: boolean, isActive: boolean) {
 	}
 
 	return (
-		<div className={styles['step-one']}>
+		<div
+			className={`${styles['step-one']} ${inView && styles['step-one_inview']}`}
+		>
 			<Image
-				className={`${styles[`image`]} ${styles['image__one']} ${isActive && inView && styles['image__one_inview']}`}
+				className={`${styles[`image`]} ${isActive && inView && styles['image_inview']}`}
 				src={aimSrc}
 				alt={'aim'}
 			/>
 			<Image
-				className={`${styles[`image`]} ${styles['image__two']} ${isActive && inView && styles['image__two_inview']}`}
+				className={`${styles[`image`]} ${isActive && inView && styles['image_inview']}`}
 				src={task1Src}
 				alt={'task1'}
 			/>
 			<Image
-				className={`${styles[`image`]} ${styles['image__three']} ${isActive && inView && styles['image__three_inview']}`}
+				className={`${styles[`image`]} ${isActive && inView && styles['image_inview']}`}
 				src={task2Src}
 				alt={'task2'}
 			/>
 		</div>
-
-		// <div
-		// 	//className={`${styles['step-one']} ${isActive && inView && styles['step-one_inview']}`}
-		// 	className={styles['step-one']}
-		// >
-		// 	{width > 1280 || (width < 835 && width > 390) &&
-		// 		<div className={`${styles['step-one']} ${isActive && inView && styles['step-one_inview']}`}>
-		// 			<Image
-		// 				className={`${styles[`image`]} ${styles['image__one']} ${isActive && inView && styles['image__one_inview']}`}
-		// 				src={aimBig}
-		// 				alt={'aim'}
-		// 			/>
-		// 			<Image
-		// 				className={`${styles[`image`]} ${styles['image__two']} ${isActive && inView && styles['image__two_inview']}`}
-		// 				src={task1Big}
-		// 				alt={'task1'}
-		// 			/>
-		// 			<Image
-		// 				className={`${styles[`image`]} ${styles['image__three']} ${isActive && inView && styles['image__three_inview']}`}
-		// 				src={task2Big}
-		// 				alt={'task2'}
-		// 			/>
-		// 		</div>
-		// }
-		//
-		// 	{width < 1281 && width > 834 &&
-		// 		<div className={`${styles['step-one']} ${isActive && inView && styles['step-one_inview']}`}>
-		// 		<Image
-		// 			className={`${styles[`image`]} ${styles['image__one']} ${isActive && inView && styles['image__one_inview']}`}
-		// 			src={aimLess}
-		// 			alt={'aim'}
-		// 		/>
-		// 		<Image
-		// 			className={`${styles[`image`]} ${styles['image__two']} ${isActive && inView && styles['image__two_inview']}`}
-		// 			src={task1Less}
-		// 			alt={'task1'}
-		// 		/>
-		// 		<Image
-		// 			className={`${styles[`image`]} ${styles['image__three']} ${isActive && inView && styles['image__three_inview']}`}
-		// 			src={task2Less}
-		// 			alt={'task2'}
-		// 		/>
-		// 		</div>
-		// 	}
-		//
-		// 	{width < 391 &&
-		// 		<div className={`${styles['step-one']} ${isActive && inView && styles['step-one_inview']}`}>
-		// 			<Image
-		// 				className={`${styles[`image`]} ${styles['image__one']} ${isActive && inView && styles['image__one_inview']}`}
-		// 				src={aimSmall}
-		// 				alt={'aim'}
-		// 			/>
-		// 			<Image
-		// 				className={`${styles[`image`]} ${styles['image__two']} ${isActive && inView && styles['image__two_inview']}`}
-		// 				src={task1Small}
-		// 				alt={'task1'}
-		// 			/>
-		// 			<Image
-		// 				className={`${styles[`image`]} ${styles['image__three']} ${isActive && inView && styles['image__three_inview']}`}
-		// 				src={task2Small}
-		// 				alt={'task2'}
-		// 			/>
-		// 		</div>
-		// 	}
-
-		// {/*<Image*/}
-		// {/*	className={`${styles[`image`]} ${inView && styles['image_inview']}`}*/}
-		// {/*	src={aim}*/}
-		// {/*	alt={'aim'}*/}
-		// {/*/>*/}
-		// {/*<Image*/}
-		// {/*	className={`${styles[`image`]} ${inView && styles['image_inview']}`}*/}
-		// {/*	src={task1}*/}
-		// {/*	alt={'task1'}*/}
-		// {/*/>*/}
-		// {/*<Image*/}
-		// {/*	className={`${styles[`image`]} ${inView && styles['image_inview']}`}*/}
-		// {/*	src={task2}*/}
-		// {/*	alt={'task2'}*/}
-		// {/*/>*/}
-		// </div>
 	);
 }
