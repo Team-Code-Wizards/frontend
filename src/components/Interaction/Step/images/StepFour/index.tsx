@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
-import bottomIcon from '&/images/interaction/approach-image/approach-bottom-icon.webp';
-import leftIcon from '&/images/interaction/approach-image/approach-left-icon.webp';
-import middleIcon from '&/images/interaction/approach-image/approach-middle-icon.webp';
-import rightIcon from '&/images/interaction/approach-image/approach-right-icon.webp';
-import approach from '&/images/interaction/approach-image/approach.webp';
+import bottomIcon from '&/images/interaction/stepFour/approach-bottom-icon.webp';
+import leftIcon from '&/images/interaction/stepFour/approach-left-icon.webp';
+import middleIcon from '&/images/interaction/stepFour/approach-middle-icon.webp';
+import rightIcon from '&/images/interaction/stepFour/approach-right-icon.webp';
+import approach from '&/images/interaction/stepFour/approach.webp';
 
 import style from './style.module.scss';
 
