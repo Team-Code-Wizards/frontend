@@ -1,0 +1,147 @@
+.step-three {
+  position: relative;
+}
+
+.image {
+  height: auto;
+
+  &__one {
+    width: 92.4%;
+    margin-inline-start: 3.8%;
+
+    &_inview {
+      animation: 0.8s ease 0.85s both page;
+    }
+  }
+
+  &__two {
+    position: absolute;
+    top: 38%;
+    left: 52%;
+    z-index: 3;
+    width: 9.3%;
+
+    &_inview {
+      animation: 0.57s ease 1.19s both cursor;
+    }
+  }
+
+  &__three {
+    position: absolute;
+    top: 42%;
+    left: 36%;
+    z-index: 2;
+    width: 19%;
+
+    &_inview {
+      animation: 0.4s ease 1.38s both rectangle;
+    }
+  }
+}
+
+@keyframes page {
+  0% { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }
+}
+
+@keyframes cursor {
+  0% { 
+    opacity: 0;
+    scale: 1.1;
+    transform: translateY(15%);
+  }
+  95% { 
+    opacity: 1;
+    scale: 1.1;
+  }
+  100% { 
+    scale: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes rectangle {
+  0% { 
+    opacity: 0;
+    scale: 0.5;
+  }
+  91% { 
+    scale: 1.05;
+  }
+  100% { 
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+.image {
+  &__one {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__two {
+    top: 31%;
+    left: 52%;
+    width: 10%;
+  }
+
+  &__three {
+    top: 34%;
+    left: 35%;
+    width: 21%;
+  }
+}
+}
+
+@media screen and (max-width: 834px) {
+.image {
+  &__one {
+    &_inview {
+      animation-delay: 0s;
+    }
+  }
+
+  &__two {
+    top: 38%;
+    left: 53%;
+    width: 11%;
+    &_inview {
+      animation-delay: 0.32s;
+    }
+  }
+
+  &__three {
+    top: 42%;
+    left: 36%;
+    &_inview {
+      animation-delay: 0.51s;
+    }
+  }
+}
+}
+
+@media screen and (max-width: 391px) {
+.image {
+  &__one {
+    width: 95%;
+    margin-inline-start: 2.5%;
+  }
+
+  &__two {
+    top: 36%;
+    left: 52%;
+    width: 10%;
+  }
+
+  &__three {
+    top: 40%;
+    width: 19.5%;
+    }
+}
+}
