@@ -1,7 +1,8 @@
-import StepFive from '@/components/Interaction/Step/Images/StepFive/index';
+import StepFive from '@/components/Interaction/Step/Images/StepFive';
 import StepFour from '@/components/Interaction/Step/Images/StepFour';
 import StepOne from '@/components/Interaction/Step/Images/StepOne';
-import StepSix from '@/components/Interaction/Step/Images/StepSix/index';
+import StepSix from '@/components/Interaction/Step/Images/StepSix';
+import StepThree from '@/components/Interaction/Step/Images/StepThree';
 
 import { IInteractionStep } from './type';
 
@@ -43,7 +44,7 @@ export const data: IInteractionStep[] = [
 			'В процессе разработки мы ставим вас на первое место. Наш дизайн ориентирован на создание приятного и интуитивно понятного интерфейса, чтобы ваши посетители чувствовали себя комфортно и уверенно.',
 		alt: 'Макет',
 		image: (inView, isActive) => {
-			return StepSix(inView, isActive);
+			return StepThree(inView, isActive);
 		},
 		modifier: 'design',
 		changeLaptop: true,

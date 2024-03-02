@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-import imageFour from '&/images/interaction/testing-four.webp';
-import imageOne from '&/images/interaction/testing-one.webp';
-import imageThree from '&/images/interaction/testing-three.webp';
-import imageTwo from '&/images/interaction/testing-two.webp';
+import imageFour from '&/images/interaction/stepFive/testing-four.webp';
+import imageOne from '&/images/interaction/stepFive/testing-one.webp';
+import imageThree from '&/images/interaction/stepFive/testing-three.webp';
+import imageTwo from '&/images/interaction/stepFive/testing-two.webp';
 
 import styles from './style.module.scss';
 

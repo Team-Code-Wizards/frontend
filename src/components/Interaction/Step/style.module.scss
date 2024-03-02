@@ -34,7 +34,7 @@
 		font: var(--font-description-main);
 
 		&_design {
-			margin-bottom: 10px;
+			margin-bottom: 25px;
 		}
 
 		&_approach {
@@ -68,7 +68,7 @@
 			width: 99%;
 
 			&_design {
-				margin-block-end: 19px;
+				margin-block-end: 14px;
 			}
 
 			&_approach {
@@ -121,6 +121,9 @@
 			letter-spacing: 0.19px;
 		}
 		&__description {
+			&_design {
+				margin-block-end: 22px;
+			}
 			&_support {
 				margin-block-end: 8px;
 			}
