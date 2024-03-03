@@ -1,3 +1,4 @@
+
 'use client';
 
 import ArrowIcon from '&/images/icons/ArrowIcon';
@@ -9,22 +10,43 @@ import socialUrl from '@/constants/SocialURL/index';
 import PromoForm from './PromoForm';
 import styles from './styles.module.scss';
 
-//TODO Добавить корректные ссылки
 
-export default function Promo() {
+export default function AdvertisingPromo() {
+
 	return (
 		<header id="promo" className={styles['promo']}>
 			<div className={styles['promo__container']}>
 				<div className={styles['promo__main']}>
-					<div className={styles['promo__h1-title-box']}>
-						<span className={styles['promo__copyright']}>©&nbsp;</span>
-						<h1 className={styles['promo__h1-title']}>Команда Code Wizards</h1>
+					<div className={styles['promo__advantages-wrapper']}>
+						<div
+							className={`${styles['promo__advantages-box']} ${styles['promo__advantages-box_quality']}`}
+						>
+							<PromoQualitycon />
+							<p className={styles['promo__advantages']}>Гарантия качества</p>
+						</div>
+						<div
+							className={`${styles['promo__advantages-box']} ${styles['promo__advantages-box_design']}`}
+						>
+							<PromoDesgnIcon />
+							<p className={styles['promo__advantages']}>Уникальный дизайн</p>
+						</div>
+						<div
+							className={`${styles['promo__advantages-box']} ${styles['promo__advantages-box_approach']}`}
+						>
+							<PromoApproachIcon />
+							<p className={styles['promo__advantages']}>Гибкий подход</p>
+						</div>
 					</div>
-					<h2 className={styles['promo__title']}>
-						Мы не просто создаем сайты.
-						<br /> Мы строим цифровые пространства, где каждая строчка кода –
-						это мелодия успеха вашего бизнеса.
-					</h2>
+					<div className={styles['promo__content']}>
+						<h1 className={styles['promo__title']}>
+							Сайт с нуля под ключ за 21 день
+						</h1>
+						<p className={styles['promo__description']}>
+							Мы не просто создаем сайты.
+							<br /> Мы строим цифровые пространства, где каждая строчка кода –
+							это мелодия успеха вашего бизнеса.
+						</p>
+					</div>
 					<ul className={styles['promo__link-list']}>
 						<li className={styles['promo__link-box']}>
 							<a
@@ -33,8 +55,7 @@ export default function Promo() {
 								className={styles['promo__link']}
 								aria-label="Telegram link"
 							>
-								<TelegramIcon size={[27, 26]} />
-								<ArrowIcon />
+								<TelegramIcon size={[15, 16]} />
 							</a>
 						</li>
 						<li className={styles['promo__link-box']}>
@@ -44,8 +65,7 @@ export default function Promo() {
 								className={styles['promo__link']}
 								aria-label="Whatsapp link"
 							>
-								<WhatsappIcon size={[27, 26]} />
-								<ArrowIcon />
+								<WhatsappIcon size={[14, 14]} />
 							</a>
 						</li>
 						<li className={styles['promo__link-box']}>
@@ -55,13 +75,19 @@ export default function Promo() {
 								className={styles['promo__link']}
 								aria-label="Viber link"
 							>
-								<ViberIcon size={[25, 25]} />
-								<ArrowIcon />
+								<ViberIcon size={[13, 13]} />
 							</a>
 						</li>
 					</ul>
+					<PromoForm />
+					<div className={styles['promo__preview']}>
+						<Image
+							src={Preview}
+							alt="Превью сайта"
+							className={styles['promo__preview-img']}
+						/>
+					</div>
 				</div>
-				<PromoForm />
 			</div>
 		</header>
 	);
