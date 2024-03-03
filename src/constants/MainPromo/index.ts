@@ -1,7 +1,7 @@
-import keySitePageImage from '&/images/advertisingPromo/keySite.png';
-import landingPageImage from '&/images/advertisingPromo/landingPage.png';
-import pricePageImage from '&/images/advertisingPromo/price.png';
-import storePageImage from '&/images/advertisingPromo/store.png';
+import keySitePageImage from '&/images/advertisingPromo/keySite.webp';
+import landingPageImage from '&/images/advertisingPromo/landingPage.webp';
+import pricePageImage from '&/images/advertisingPromo/price.webp';
+import storePageImage from '&/images/advertisingPromo/store.webp';
 
 import promoStateType from './type';
 

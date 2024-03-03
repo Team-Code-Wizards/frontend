@@ -208,6 +208,7 @@
       padding-top: 3px;
 
       &-img {
+        object-fit: cover;
         max-width: 317px;
         max-height: 213px;
       }
@@ -318,7 +319,6 @@
   .promo {
     &__preview {
       &-img {
-        object-fit: cover;
         width: 100%;
       }
     }
