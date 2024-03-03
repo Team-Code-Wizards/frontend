@@ -1,5 +1,7 @@
 'use client';
 
+import { Suspense } from 'react';
+
 import { useSearchParams } from 'next/navigation';
 
 import { promoState } from '@/constants/MainPromo/index';
@@ -14,7 +16,9 @@ const PromoWrapper = () => {
 	const utmCampaign: string = urlParams.get('utm_campaign') || 'default';
 
 	return promoState[utmCampaign] ? (
-		<AdvertisingPromo promoConfig={promoState[utmCampaign]} />
+		<Suspense>
+			<AdvertisingPromo promoConfig={promoState[utmCampaign]} />
+		</Suspense>
 	) : (
 		<Promo />
 	);
