@@ -91,6 +91,12 @@
 
 	@media screen and (max-width: 1060px) {
 		max-width: 31%;
+
+		&__description {
+			&_attention {
+				margin-block-end: 15px;
+			}
+		}
 	}
 
 	@media screen and (max-width: 835px) {
@@ -100,6 +106,12 @@
 
 		&__title {
 			margin-block-end: 33px;
+		}
+
+		&__description {
+			&_attention {
+				margin-block-end: 23px;
+			}
 		}
 	}
 
