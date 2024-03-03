@@ -7,6 +7,10 @@
 	background-repeat: no-repeat;
 	background-color: var(--color-bg-black);
 
+	@media screen and (max-width: 480px) {
+		background-image: url('/images/interaction/interaction-background-390.webp');
+	}
+
 	&__wrapper {
 		max-width: var(--block-max-width);
 		margin: 67px auto 57px;
@@ -102,15 +106,17 @@
 
 	@media screen and (max-width: 391px) {
 		&__wrapper {
-			max-width: 82%;
-			margin: 49px 0 20px auto;
-		}
+				max-width: 82%;
+				margin: 49px 0 20px 34px;
+			}
 
-		.steps__card {
-			width: 91%;
+			.steps__card {
+				width: 91%;
+			}
 		}
 	}
-}
+
+
 
 .steps {
 	display: flex;
