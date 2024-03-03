@@ -10,6 +10,7 @@ import PromoForm from './PromoForm';
 import styles from './styles.module.scss';
 
 //TODO Добавить корректные ссылки
+//Test
 
 export default function Promo() {
 	return (
