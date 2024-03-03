@@ -1,18 +1,25 @@
-import Image from 'next/image';
 
+'use client';
+import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 import PromoApproachIcon from '&/images/icons/PromoApproachIcon';
 import PromoDesgnIcon from '&/images/icons/PromoDesignIcon';
 import PromoQualitycon from '&/images/icons/PromoQualityIcon';
 import TelegramIcon from '&/images/icons/TelegramIcon';
 import ViberIcon from '&/images/icons/ViberIcon';
 import WhatsappIcon from '&/images/icons/WhatsappIcon';
-import Preview from '&/images/promo/promo-preview.webp';
 import socialUrl from '@/constants/SocialURL/index';
-
 import PromoForm from './PromoForm';
 import styles from './styles.module.scss';
 
-export default function AdvertisingPromo() {
+interface IPromoState {
+	[key: string]: {
+		h1: string;
+		promoImage: StaticImageData;
+	};
+}
+export default function AdvertisingPromo({ promoConfig }: IPromoState) {
+
 	return (
 		<header id="promo" className={styles['promo']}>
 			<div className={styles['promo__container']}>
@@ -38,9 +45,7 @@ export default function AdvertisingPromo() {
 						</div>
 					</div>
 					<div className={styles['promo__content']}>
-						<h1 className={styles['promo__title']}>
-							Сайт с нуля под ключ за 21 день
-						</h1>
+						<h1 className={styles['promo__title']}>{promoConfig.h1}</h1>
 						<p className={styles['promo__description']}>
 							Мы не просто создаем сайты.
 							<br /> Мы строим цифровые пространства, где каждая строчка кода –
@@ -82,7 +87,7 @@ export default function AdvertisingPromo() {
 					<PromoForm />
 					<div className={styles['promo__preview']}>
 						<Image
-							src={Preview}
+							src={promoConfig.promoImage}
 							alt="Превью сайта"
 							className={styles['promo__preview-img']}
 						/>

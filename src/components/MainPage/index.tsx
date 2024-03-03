@@ -1,12 +1,12 @@
 import AboutUs from '../AboutUs';
 // import Promo from '../Promo';
-import AdvertisingPromo from '../AdvertisingPromo';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Faq from '../Faq';
 import Footer from '../Footer';
 import Guarantee from '../Guarantee/index';
 import Interaction from '../Interaction/index';
+import MainPromo from '../MainPromo/MainPromo';
 import Navbar from '../Navbar';
 import Popup from '../Popup';
 import Portfolio from '../Portfolio';
@@ -23,7 +23,7 @@ export default function MainPage() {
 			<Popup />
 			<Navbar />
 			{/* <Promo /> */}
-			<AdvertisingPromo />
+			<MainPromo />
 			<ComponentsContainer>
 				<AboutUs />
 				<Services />
