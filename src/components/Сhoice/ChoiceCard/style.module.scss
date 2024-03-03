@@ -7,7 +7,6 @@
 	&_inview {
 		display: flex;
 		border-radius: 20px;
-		opacity: 0;
 		transition: transform .3s ease-in-out;
 		animation: fadeInItem 0.5s ease forwards;
 	}
@@ -20,38 +19,6 @@
 		to {
 			opacity: 1;
 		}
-	}
-
-	&_inview:nth-child(1) {
-		animation-delay: 0.1875s;
-	}
-
-	&_inview:nth-child(2) {
-		animation-delay: 0.375s;
-	}
-
-	&_inview:nth-child(3) {
-		animation-delay: 0.5625s;
-	}
-
-	&_inview:nth-child(4) {
-		animation-delay: 0.75s;
-	}
-
-	&_inview:nth-child(5) {
-		animation-delay: 0.9375s;
-	}
-
-	&_inview:nth-child(6) {
-		animation-delay: 1.125s;
-	}
-
-	&_inview:nth-child(7) {
-		animation-delay: 1.3125s;
-	}
-
-	&_inview:nth-child(8) {
-		animation-delay: 1.5s;
 	}
 
 	&_inview:hover {
@@ -90,6 +57,7 @@
 	}
 
 	&_design {
+		animation-delay: 0.1875s;
 		grid-area: 1 / 1 / 2 / 4;
 		background-color: var(--color-purple);
 		padding: 6% 4.1% 0.1%;
@@ -115,6 +83,7 @@
 	}
 
 	&_flexibility {
+		animation-delay: 0.375s;
 		grid-area: 1 / 4 / 3 / 6;
 		background-color: var(--color-bg-ivory);
 		padding: 9% 2% 9% 14%;
@@ -136,6 +105,7 @@
 	}
 
 	&_planet {
+		animation-delay: 0.5625s;
 		grid-area: 1 / 6 / 3 / 7;
 		padding: 10px;
 		background-color: var(--color-lilac);
@@ -152,6 +122,7 @@
 	}
 
 	&_presence {
+		animation-delay: 0.75s;
 		grid-area: 2 / 1 / 5 / 4;
 		background-color: var(--color-pink);
 		background-image: url(/images/choice/presence-bg.webp),
@@ -186,6 +157,7 @@
 	}
 
 	&_conversion {
+		animation-delay: 0.9375s;
 		grid-area: 3 / 4 / 5 / 7;
 		background-color: var(--color-blue);
 		background-image: url(/images/choice/percent-bg.webp);
@@ -210,6 +182,7 @@
 	}
 
 	&_safety {
+		animation-delay: 1.125s;
 		grid-area: 5 / 1 / 9 / 3;
 		align-items: flex-start;
 		padding: 6% 7.7%;
@@ -224,6 +197,7 @@
 	}
 
 	&_optimization {
+		animation-delay: 1.3125s;
 		grid-area: 5 / 3 / 9 / 5;
 		padding: 25% 0 24% 9.5%;
 		background-image: url(/images/choice/optimization-bg.webp);
@@ -246,6 +220,7 @@
 	}
 
 	&_attraction {
+		animation-delay: 1.5s;
 		grid-area: 5 / 5 / 9 / 7;
 		padding: 13.5% 2% 0 5.5%;
 		background-color: var(--color-purple);
@@ -543,13 +518,37 @@
 	}
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 701px) {
 	.choice-card {
 		height: 100%;
 
 		&__wrapper {
 			justify-content: center;
 		}
+
+		&_attraction {
+			&__column {
+				&>svg {
+					margin-top: 3px;
+				}
+			}
+		}
+
+		&_flexibility {
+			background-position: left 3% bottom 45%, left 10% bottom 20%;
+		}
+
+		&_safety {
+			&__wrapper {
+				height: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 391px) {
+	.choice-card {
+		
 
 		&__title {
 			letter-spacing: normal;
@@ -596,7 +595,6 @@
 			padding: 18% 5% 19%;
 
 			&__wrapper {
-				height: 100%;
 				row-gap: 11px;
 			}
 
@@ -620,6 +618,12 @@
 
 		&_attraction {
 			padding-bottom: 5%;
+
+			&__column {
+				&>svg {
+					margin-top: 12px;
+				}
+			}
 		}
 	}
 }

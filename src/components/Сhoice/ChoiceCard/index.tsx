@@ -6,9 +6,9 @@ import styles from './style.module.scss';
 export default function ChoiceCard({ item, inView }: IChoiceItemProps) {
 	return (
 		<div
-			className={`${styles[`choice-card${inView ? '_inview' : ''}`]}
+			className={`${styles[`choice-card`]}
 			${styles[`choice-card_${item.modifier}`]}
-			`}
+			${inView && styles['choice-card_inview']}`}
 		>
 			<div
 				className={`${styles['choice-card__wrapper']} ${

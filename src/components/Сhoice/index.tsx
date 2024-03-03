@@ -47,11 +47,11 @@ export default function Choice() {
 					rewind
 					modules={[Pagination]}
 					className={styles.choice__list}
-					spaceBetween={20}
+					spaceBetween={30}
 					slidesPerView={1}
 				>
 					{data.map((item) =>
-						width < 391 ? (
+						width < 701 ? (
 							item.modifier !== 'planet' && (
 								<SwiperSlide
 									className={`${styles[`choice__slide`]} ${(item.modifier === 'presence' || item.modifier === 'flexibility') && styles[`choice__slide_${item.modifier}`]}`}
