@@ -1,5 +1,4 @@
 import AboutUs from '../AboutUs';
-// import Promo from '../Promo';
 import ComponentsContainer from '../ComponentsContainer';
 import Contacts from '../Contacts';
 import Faq from '../Faq';
@@ -20,9 +19,6 @@ import styles from './style.module.scss';
 export default function MainPage() {
 	return (
 		<main className={styles.main}>
-			<Popup />
-			<Navbar />
-			{/* <Promo /> */}
 			<MainPromo />
 			<ComponentsContainer>
 				<AboutUs />
@@ -40,6 +36,8 @@ export default function MainPage() {
 				<Contacts />
 				<Footer />
 			</ComponentsContainer>
+			<Popup />
+			<Navbar />
 		</main>
 	);
 }
