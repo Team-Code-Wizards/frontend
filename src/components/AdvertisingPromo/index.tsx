@@ -1,8 +1,7 @@
-'use client';
 
+'use client';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
-
 import PromoApproachIcon from '&/images/icons/PromoApproachIcon';
 import PromoDesgnIcon from '&/images/icons/PromoDesignIcon';
 import PromoQualitycon from '&/images/icons/PromoQualityIcon';
@@ -10,7 +9,6 @@ import TelegramIcon from '&/images/icons/TelegramIcon';
 import ViberIcon from '&/images/icons/ViberIcon';
 import WhatsappIcon from '&/images/icons/WhatsappIcon';
 import socialUrl from '@/constants/SocialURL/index';
-
 import PromoForm from './PromoForm';
 import styles from './styles.module.scss';
 
@@ -20,8 +18,8 @@ interface IPromoState {
 		promoImage: StaticImageData;
 	};
 }
-
 export default function AdvertisingPromo({ promoConfig }: IPromoState) {
+
 	return (
 		<header id="promo" className={styles['promo']}>
 			<div className={styles['promo__container']}>
