@@ -17,9 +17,10 @@ export async function POST(req: NextRequest) {
 		// Если middleware прошло успешно, обрабатываем POST-запрос
 		const body = await req.json();
 		sendMail(body);
-		return NextResponse.json({ status: 200 });
+		return NextResponse.json({ message: 'письмо отправлено' }, { status: 200 });
 	} catch (error) {
-		console.error(error);
-		return NextResponse.json({ status: 500 });
+		if (error instanceof Error) {
+			return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+		}
 	}
 }
