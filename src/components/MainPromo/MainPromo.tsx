@@ -1,5 +1,7 @@
 'use client';
 
+import { Suspense } from 'react';
+
 import { useSearchParams } from 'next/navigation';
 
 import { promoState } from '@/constants/MainPromo/index';
@@ -21,5 +23,9 @@ const PromoWrapper = () => {
 };
 
 export default function MainPromo() {
-	return <PromoWrapper />;
+	return (
+		<Suspense>
+			<PromoWrapper />
+		</Suspense>
+	);
 }
