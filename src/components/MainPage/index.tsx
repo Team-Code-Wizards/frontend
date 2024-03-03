@@ -1,45 +1,46 @@
+import dynamic from 'next/dynamic';
+
 import AboutUs from '../AboutUs';
-// import Promo from '../Promo';
 import ComponentsContainer from '../ComponentsContainer';
-import Contacts from '../Contacts';
-import Faq from '../Faq';
-import Footer from '../Footer';
-import Guarantee from '../Guarantee/index';
-import Interaction from '../Interaction/index';
 import MainPromo from '../MainPromo/MainPromo';
 import Navbar from '../Navbar';
 import Popup from '../Popup';
 import Portfolio from '../Portfolio';
-import Recommendations from '../Recommendations';
 import Services from '../Services';
-import StageCreate from '../StageCreate';
-import TechStack from '../TechStack';
-import Choice from '../Сhoice';
 import styles from './style.module.scss';
+
+const StageCreateLazy = dynamic(() => import('../StageCreate'));
+const RecommendationsLazy = dynamic(() => import('../Recommendations'));
+const ChoiceLazy = dynamic(() => import('../Сhoice'));
+const GuaranteeLazy = dynamic(() => import('../Guarantee/index'));
+const InteractionLazy = dynamic(() => import('../Interaction/index'));
+const TechStackLazy = dynamic(() => import('../TechStack'));
+const FaqLazy = dynamic(() => import('../Faq'));
+const ContactsLazy = dynamic(() => import('../Contacts'));
+const FooterLazy = dynamic(() => import('../Footer'));
 
 export default function MainPage() {
 	return (
 		<main className={styles.main}>
-			<Popup />
-			<Navbar />
-			{/* <Promo /> */}
 			<MainPromo />
 			<ComponentsContainer>
 				<AboutUs />
 				<Services />
 				<Portfolio />
 			</ComponentsContainer>
-			<StageCreate />
-			<Recommendations />
-			<Choice />
-			<Guarantee />
-			<Interaction />
-			<TechStack />
+			<StageCreateLazy />
+			<RecommendationsLazy />
+			<ChoiceLazy />
+			<GuaranteeLazy />
+			<InteractionLazy />
+			<TechStackLazy />
 			<ComponentsContainer>
-				<Faq />
-				<Contacts />
-				<Footer />
+				<FaqLazy />
+				<ContactsLazy />
+				<FooterLazy />
 			</ComponentsContainer>
+			<Popup />
+			<Navbar />
 		</main>
 	);
 }
