@@ -57,6 +57,7 @@ export default function Form() {
 					{...register('name')}
 					id="promoName"
 					type="text"
+					autoComplete="name"
 					className={`${styles['promo-form__input']} ${
 						errors.name && styles['promo-form__input_error']
 					} ${
@@ -87,6 +88,7 @@ export default function Form() {
 					{...register('tel')}
 					id="promoPhone"
 					type="tel"
+					autoComplete="tel"
 					className={`${styles['promo-form__input']} ${
 						errors.tel && styles['promo-form__input_error']
 					} ${

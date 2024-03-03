@@ -101,7 +101,6 @@
 	width: 295px;
 	margin-block: 6px;
 	text-align: center;
-	margin-inline-end: 10px;
 	transition: all 0.3s ease-out;
 
 	&:hover {
@@ -122,7 +121,7 @@
 	border: 1px solid #ffffff50;
 	border-radius: 100px;
 	background-color: #ffffff20;
-	max-width: min(100%, 290px);
+	max-width: min(100%, 295px);
 
 	&_text {
 		white-space: nowrap;
