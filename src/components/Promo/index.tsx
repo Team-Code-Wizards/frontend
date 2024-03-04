@@ -1,11 +1,15 @@
+'use client';
+
+import ArrowIcon from '&/images/icons/ArrowIcon';
+import TelegramIcon from '&/images/icons/TelegramIcon';
+import ViberIcon from '&/images/icons/ViberIcon';
+import WhatsappIcon from '&/images/icons/WhatsappIcon';
 import socialUrl from '@/constants/SocialURL/index';
 
-import ArrowIcon from '../../../public/images/icons/ArrowIcon';
-import TelegramIcon from '../../../public/images/icons/TelegramIcon';
-import ViberIcon from '../../../public/images/icons/ViberIcon';
-import WhatsappIcon from '../../../public/images/icons/WhatsappIcon';
 import PromoForm from './PromoForm';
 import styles from './styles.module.scss';
+
+//TODO Добавить корректные ссылки
 
 export default function Promo() {
 	return (
