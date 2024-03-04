@@ -1,10 +1,9 @@
-import React from 'react';
-
 const YandexMetrica = () => {
 	return (
 		<>
-			<script dangerouslySetInnerHTML={{
-				__html: `
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `
           (function(m,e,t,r,i,k,a){
             m[i] = m[i] || function(){(m[i].a = m[i].a || []).push(arguments)};
             m[i].l = 1 * new Date();
@@ -20,11 +19,16 @@ const YandexMetrica = () => {
             accurateTrackBounce: true,
             webvisor: true
           });
-        `
-			}} />
+        `,
+				}}
+			/>
 			<noscript>
 				<div>
-					<img src="https://mc.yandex.ru/watch/96308291" style={{ position: 'absolute', left: '-9999px' }} alt="" />
+					<img
+						src="https://mc.yandex.ru/watch/96308291"
+						style={{ position: 'absolute', left: '-9999px' }}
+						alt=""
+					/>
 				</div>
 			</noscript>
 		</>
