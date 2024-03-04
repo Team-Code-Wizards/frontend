@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 
-import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
-
 import './globals.scss';
 
 export const metadata: Metadata = {
@@ -20,7 +18,7 @@ export default function RootLayout({
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
 				{children}
-				<YandexMetrica />
+				{/* <YandexMetrica /> */}
 			</body>
 		</html>
 	);
