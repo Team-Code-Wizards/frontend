@@ -19,6 +19,7 @@ export default function ContactsForm() {
 	const [fileData, setFileData] = useState('');
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
+
 	const { register, resetField, handleSubmit, watch, reset, formState } =
 		useForm({
 			defaultValues: {
@@ -86,6 +87,7 @@ export default function ContactsForm() {
 				<span className={styles['input-box']}>
 					<input
 						{...register('name')}
+						autoComplete="name"
 						type="text"
 						className={`${styles['contacts-form-input']} ${
 							errors.name && styles['contacts-form-input_error']
@@ -112,6 +114,7 @@ export default function ContactsForm() {
 				<span className={styles['input-box']}>
 					<input
 						{...register('tel')}
+						autoComplete="tel"
 						type="tel"
 						className={`${styles['contacts-form-input']} ${
 							errors.tel && styles['contacts-form-input_error']
@@ -141,6 +144,7 @@ export default function ContactsForm() {
 					<input
 						{...register('mail')}
 						type="email"
+						autoComplete="email"
 						className={`${styles['contacts-form-input']} ${
 							errors.mail && styles['contacts-form-input_error']
 						} ${
@@ -193,11 +197,14 @@ export default function ContactsForm() {
 				</label>
 				{file && (
 					<span className={styles['contacts-form-file-name']}>
-						<Image src={AttachmentIcon} alt="" />
-						{file.name}
+						<Image src={AttachmentIcon} alt="file" />
+						<span className={styles['contacts-form-file-name_text']}>
+							{file.name}
+						</span>
 						<button
 							className={styles['contacts-form-file-name__button']}
 							onClick={() => resetField('attachments')}
+							aria-label="Delete"
 						>
 							<DeleteIcon />
 						</button>

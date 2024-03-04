@@ -19,7 +19,7 @@ export const promoState: promoStateType = {
 		promoImage: storePageImage,
 	},
 	price: {
-		h1: 'Стоимость разработки сайта от 300$',
+		h1: 'Стоимость разработки сайта от 30 000 ₽',
 		promoImage: pricePageImage,
 	},
 };
