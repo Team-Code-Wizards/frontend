@@ -186,8 +186,8 @@
       &__item {
         display: none;
         opacity: 0;
-        transition: opacity 0.3s ease;
-        animation: fadeIn 0.4s ease forwards;
+        transition: opacity 1s ease;
+        animation: fadeIn 1s ease forwards;
 
         &.shown {
           display: block;
@@ -199,7 +199,7 @@
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(5px);
+        transform: translateY(10px);
       }
       to {
         opacity: 1;
