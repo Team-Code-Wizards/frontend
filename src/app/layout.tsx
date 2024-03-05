@@ -18,7 +18,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	const isProdaction = process.env.NODE_ENV === 'production';
-
+	console.log(process.env.NODE_ENV);
 	return (
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
 			<link rel="icon" href="/favicon.ico" sizes="any" />
