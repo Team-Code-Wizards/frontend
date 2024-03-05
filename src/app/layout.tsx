@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import 'dotenv/config';
+
 
 import './globals.scss';
 
@@ -17,14 +17,14 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const isProduction = process.env.PROD === 'true';
+
 
 	return (
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
-				{isProduction && <YandexMetrica />}
-				{isProduction && <GoogleAnalytics gaId="GTM-NMKTG44L" />}
+				<YandexMetrica />
+				<GoogleAnalytics gaId="GTM-NMKTG44L" />
 				{children}
 			</body>
 		</html>
