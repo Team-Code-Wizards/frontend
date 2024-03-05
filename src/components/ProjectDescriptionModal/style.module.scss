@@ -10,6 +10,38 @@
 	align-items: flex-start;
 	padding: 39px 53px 31px;
 
+	&_show {
+		animation: show 0.3s ease forwards;
+
+		@keyframes show {
+			from {
+				transform: scale(2);
+				opacity: 0;
+			}
+
+			to {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+	}
+
+	&_hiding {
+		animation: hiding 0.3s ease forwards;
+
+		@keyframes hiding {
+			from {
+				transform: scale(1);
+				opacity: 1;
+			}
+			
+			to {
+				transform: scale(2);
+				opacity: 0;
+			}
+		}
+	}
+
 	&__close-btn {
 		position: absolute;
 		top: 18px;
@@ -121,4 +153,24 @@
 			margin-top: 20px;
 		}
 	}
+}
+
+
+.md-effect-11 .md-content {
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-ms-transform: scale(2);
+	transform: scale(2);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show.md-effect-11 .md-content {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
 }

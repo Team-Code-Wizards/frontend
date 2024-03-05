@@ -9,6 +9,20 @@
   width: 100%;
   height: 100vh;
   backdrop-filter: blur(2.5px);
+
+  &_show {
+    animation: show .3s;
+
+    @keyframes show {
+      from {
+        opacity: 0;
+      }
+      
+      to {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 @media screen and (max-height: 830px) {

@@ -1,4 +1,4 @@
-import { SetStateAction } from 'react';
+import { SetStateAction, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -18,17 +18,32 @@ export default function ProjectDescriptionModal({
 	order: (value: SetStateAction<boolean>) => void;
 }) {
 	const info = services.filter((service) => service.id === id)[0];
+	const [modalState, setModalState] = useState(true);
 
 	const handlerOrderClick = () => {
-		open(false);
-		order(true);
+		setModalState(false);
+
+		setTimeout(() => {
+			open(false);
+			order(true);
+		}, 300);
+	};
+
+	const handlerHiding = () => {
+		setModalState(false);
+
+		setTimeout(() => {
+			open(false);
+		}, 300);
 	};
 
 	return (
-		<ModalBackground onClick={() => open(false)}>
-			<div className={styles['modal']}>
+		<ModalBackground onClick={() => handlerHiding()}>
+			<div
+				className={`${styles['modal']} ${modalState ? styles['modal_show'] : styles['modal_hiding']}`}
+			>
 				<button
-					onClick={() => open(false)}
+					onClick={() => handlerHiding()}
 					type="button"
 					className={styles['modal__close-btn']}
 				>
