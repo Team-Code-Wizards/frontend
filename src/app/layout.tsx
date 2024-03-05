@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
-
+// import { Inter } from 'next/font/google';
+import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.scss';
 
 export const metadata: Metadata = {
@@ -17,6 +19,8 @@ export default function RootLayout({
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
+				<GoogleAnalytics gaId="GTM-NMKTG44L" />
+				<YandexMetrica />
 				{children}
 				{/* <YandexMetrica /> */}
 			</body>
