@@ -18,6 +18,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	const isProduction = process.env.PROD === 'true';
+	console.log('test')
 	console.log(isProduction)
 	console.log(typeof isProduction)
 
