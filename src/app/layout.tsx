@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 
+import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
+import 'dotenv/config';
+
 import './globals.scss';
 
 export const metadata: Metadata = {
@@ -13,12 +16,14 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
+	const isProdaction = process.env.NODE_ENV === 'production';
+
 	return (
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
 				{children}
-				{/* <YandexMetrica /> */}
+				{isProdaction && <YandexMetrica />}
 			</body>
 		</html>
 	);
