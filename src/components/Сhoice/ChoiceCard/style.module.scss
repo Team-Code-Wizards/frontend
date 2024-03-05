@@ -273,6 +273,7 @@
 		}
 
 		&_presence {
+			animation-delay: 0.5625s;
 			padding-bottom: 4%;
 			padding-top: 6%;
 			background-size: cover, 11.5%;
@@ -288,6 +289,7 @@
 		}
 
 		&_conversion {
+			animation-delay: 0.75s;
 			padding: 5% 4% 7% 4%;
 			background-size: 40%;
 			background-position: right -20px top 5px;
@@ -298,10 +300,12 @@
 		}
 
 		&_safety {
+			animation-delay: 0.9375s;
 			padding: 4% 6%;
 		}
 
 		&_optimization {
+			animation-delay: 1.125s;
 			padding: 28% 4.8% 23%;
 
 			&__column {
@@ -316,6 +320,7 @@
 		}
 
 		&_attraction {
+			animation-delay: 1.3125s;
 			padding: 8%;
 
 			&__wrapper {
@@ -426,6 +431,7 @@
 @media screen and (max-width: 833px) {
 	.choice-card {
 		&_presence {
+			animation-delay: 0.1875s;
 			grid-area: 1 / 1 / 1 / 1;
 			padding: 10% 5% 5.5%;
 			align-items: normal;
@@ -439,6 +445,7 @@
 		}
 
 		&_flexibility {
+			animation-delay: 0.375s;
 			grid-area: 2 / 1 / 2 / 1;
 			padding: 6% 5% 8% 10%;
 
@@ -448,6 +455,7 @@
 		}
 
 		&_design {
+			animation-delay: 0.5625s;
 			grid-area: 3 / 1 / 3 / 1;
 			padding: 4% 12% 3% 5%;
 			background-image: url(/images/choice/design-bg-390.svg);
@@ -469,6 +477,7 @@
 		}
 
 		&_conversion {
+			animation-delay: 0.75s;
 			grid-area: 4 / 1 / 4 / 1;
 			padding-bottom: 4%;
 			background-image: url(/images/choice/conversion-bg-390.svg);
@@ -490,18 +499,21 @@
 		}
 
 		&_optimization {
+			animation-delay: 0.9375s;
 			grid-area: 5 / 1 / 5 / 1;
 			padding: 4%;
 			padding-bottom: 7%;
 		}
 
 		&_safety {
+			animation-delay: 1.125s;
 			grid-area: 6 / 1 / 6 / 1;
 			padding: 3% 4% 19%;
 			background-size: 100%;
 		}
 
 		&_attraction {
+			animation-delay: 1.3125s;
 			grid-area: 7 / 1 / 7 / 1;
 			padding: 4%;
 			padding-bottom: 28%;
