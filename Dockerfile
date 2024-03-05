@@ -1,5 +1,5 @@
 FROM node:18-slim AS builder
-#ENV NODE_ENV
+ENV NODE_ENV production
 
 WORKDIR /app
 COPY package*.json ./
