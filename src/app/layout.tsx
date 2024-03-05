@@ -17,14 +17,15 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const isProdaction = process.env.NODE_ENV === 'production';
-	console.log(process.env.NODE_ENV);
+	// const isProdaction = process.env.NODE_ENV === 'production';
+	const isProduction = process.env.BETA;
+	console.log(process.env.NODE_ENV, process.env.BETA);
 	return (
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
-				{isProdaction && <YandexMetrica />}
-				{isProdaction && <GoogleAnalytics gaId="GTM-NMKTG44L" />}
+				{isProduction && <YandexMetrica />}
+				{isProduction && <GoogleAnalytics gaId="GTM-NMKTG44L" />}
 				{children}
 			</body>
 		</html>
