@@ -1,12 +1,8 @@
 import type { Metadata } from 'next';
-
 // import { Inter } from 'next/font/google';
 import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
 import { GoogleAnalytics } from '@next/third-parties/google';
-
 import './globals.scss';
-
-// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Code Wizards',
@@ -26,6 +22,7 @@ export default function RootLayout({
 				<GoogleAnalytics gaId="GTM-NMKTG44L" />
 				<YandexMetrica />
 				{children}
+				{/* <YandexMetrica /> */}
 			</body>
 		</html>
 	);

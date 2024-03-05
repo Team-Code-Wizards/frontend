@@ -1,196 +1,207 @@
 .footer {
-  width: 88.9%;
-  max-width: 1280px;
-  min-height: 314px;
-  margin: 192px auto 67px;
-  padding: 35px 24px 40px 40px;
-  border-radius: 30px;
-  font: var(--font-description-main);
-  letter-spacing: -0.03em;
-  line-height: 21px;
-  color: var(--color-text);
-  background-color: var(--color-purple);
+	width: 88.9%;
+	max-width: 1280px;
+	min-height: 314px;
+	margin: 192px auto 67px;
+	padding: 35px 24px 40px 40px;
+	border-radius: 30px;
+	font: var(--font-description-main);
+	letter-spacing: -0.03em;
+	line-height: 21px;
+	color: var(--color-text);
+	background-color: var(--color-purple);
 
-  &__row {
-    display: flex;
-    justify-content: space-between;
+	&__row {
+		display: flex;
+		justify-content: space-between;
 
-    &:first-of-type {
-      margin-block-end: 47px;
-    }
-  }
+		&:first-of-type {
+			margin-block-end: 47px;
+		}
+	}
 
-  &__image-no-text {
-    max-width: 8.5%;
-    align-self: flex-end;
-    cursor: pointer;
-    
-    & > img {
-      width: 100%;
-    }
-  }
+	&__image-no-text {
+		max-width: 8.5%;
+		align-self: flex-end;
+		cursor: pointer;
 
-  &__image-text {
-    width: 35%;
-    max-width: 33%;
-    margin-block-start: 10px;
-    padding-inline-end: 9px;
+		& > img {
+			width: 100%;
+		}
+	}
 
-    &-adaptive {
-      display: none;
-    }
-  }
+	&__image-text {
+		width: 35%;
+		max-width: 33%;
+		margin-block-start: 10px;
+		padding-inline-end: 9px;
 
-  &__social-group {
-    width: 9%;
-    display: flex;
-    justify-content: space-between;
-  }
+		&-adaptive {
+			display: none;
+		}
+	}
 
-  a {
-    text-decoration: none;
-    color: var(--color-text);
-  }
+	&__social-group {
+		width: 9%;
+		display: flex;
+		justify-content: space-between;
+		color: rgb(255, 255, 255, 0.7);
 
-  &__link {
-    display: block;
-    text-align: right;
-  }
+		& a > * {
+			&:hover {
+				color: rgba(255, 255, 255, 0.9);
+			}
 
-  @media screen and (max-width: 1280px) {
-    width: 80%;
-    margin-top: 162px;
-    &__row {
-      &:first-of-type {
-        margin-block-end: 40px;
-      }
-    }
+			&:active {
+				color: var(--color-text);
+			}
+		}
+	}
 
-    &__image-no-text {
-      max-width: 10.5%;
+	a {
+		text-decoration: none;
+		color: var(--color-text);
+	}
 
-      & > img {
-        vertical-align: bottom;
-      }
-    }
+	&__link {
+		display: block;
+		text-align: right;
+	}
 
-    &__image-text {
-      width: 50%;
-      max-width: 100%;
-      margin-block-start: 15px;
-      padding-inline-end: 0;
-    }
+	@media screen and (max-width: 1280px) {
+		width: 80%;
+		margin-top: 162px;
+		&__row {
+			&:first-of-type {
+				margin-block-end: 40px;
+			}
+		}
 
-    &__social-group {
-      width: auto;
-      margin-right: 10px;
-      justify-content: flex-start;
+		&__image-no-text {
+			max-width: 10.5%;
 
-      & > a {
-        &:not(:last-child) {
-          margin-right: 18px;
-        }
-      }
-    }
-  }
+			& > img {
+				vertical-align: bottom;
+			}
+		}
 
-  @media screen and (max-width: 835px) {
-    width: 92%;
-    margin: 159px auto 75px;
-    padding: 36px 24px 40px 39px;
-    &__image-no-text {
-      margin-bottom: -6px;
-    }
+		&__image-text {
+			width: 50%;
+			max-width: 100%;
+			margin-block-start: 15px;
+			padding-inline-end: 0;
+		}
 
-    &__image-text {
-      width: 55%;
-      padding-inline-start: 23px;
-    }
-  }
+		&__social-group {
+			width: auto;
+			margin-right: 10px;
+			justify-content: flex-start;
 
-  @media screen and (max-width: 500px) {
-    &__image-text {
-      width: 50%;
-    }
+			& > a {
+				&:not(:last-child) {
+					margin-right: 18px;
+				}
+			}
+		}
+	}
 
-    &__image-no-text {
-      max-width: 14.5%;
-    }
-  }
-  
-  @media screen and (max-width: 450px) {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    padding: 20px 24px 16px 20px;
-    margin: 113px auto;
+	@media screen and (max-width: 835px) {
+		width: 92%;
+		margin: 159px auto 75px;
+		padding: 36px 24px 40px 39px;
+		&__image-no-text {
+			margin-bottom: -6px;
+		}
 
-    &__row {
-      flex-direction: column-reverse;
+		&__image-text {
+			width: 55%;
+			padding-inline-start: 23px;
+		}
+	}
 
-      &:first-of-type {
-        margin-block-end: 0;
-      }
+	@media screen and (max-width: 500px) {
+		&__image-text {
+			width: 50%;
+		}
 
-      &:last-of-type {
-        margin-block-end: 11px;
-      }
-    }
+		&__image-no-text {
+			max-width: 14.5%;
+		}
+	}
 
-    &__row-first {
-      padding-inline-start: 11px;
-    }
+	@media screen and (max-width: 450px) {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		padding: 20px 24px 16px 20px;
+		margin: 113px auto;
 
-    &__image-no-text {
-      display: none;
-    }
+		&__row {
+			flex-direction: column-reverse;
 
-    &__image-no-text {
-      display: none;
-    }
+			&:first-of-type {
+				margin-block-end: 0;
+			}
 
-    &__image-text-adaptive {
-      display: block;
-      margin-block-start: 5px;
-      width: 84%;
-      padding-inline-start: 50px;
-      margin-bottom: 7px;
-    }
+			&:last-of-type {
+				margin-block-end: 11px;
+			}
+		}
 
-    &__image-text {
-      display: none;
-    }
+		&__row-first {
+			padding-inline-start: 11px;
+		}
 
-    a {
-      text-align: left;
-    }
+		&__image-no-text {
+			display: none;
+		}
 
-    &__social-group {
-      & > a {
-        &:not(:first-child) {
-          margin-right: 11px;
-        }
-      }
-    }
+		&__image-no-text {
+			display: none;
+		}
 
-    &__link_whatsapp {
-      order: -2;
-    }
+		&__image-text-adaptive {
+			display: block;
+			margin-block-start: 5px;
+			width: 84%;
+			padding-inline-start: 50px;
+			margin-bottom: 7px;
+		}
 
-    &__link_viber {
-      order: -1;
-    }
-  }
+		&__image-text {
+			display: none;
+		}
 
-  @media screen and (max-width: 390px) {
-    width: 82%;
-  }
+		a {
+			text-align: left;
+		}
 
-  &__link-policy {
-    text-align: left;
+		&__social-group {
+			& > a {
+				&:not(:first-child) {
+					margin-right: 11px;
+				}
+			}
+		}
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+		&__link_whatsapp {
+			order: -2;
+		}
+
+		&__link_viber {
+			order: -1;
+		}
+	}
+
+	@media screen and (max-width: 390px) {
+		width: 82%;
+	}
+
+	&__link-policy {
+		text-align: left;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

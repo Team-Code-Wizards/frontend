@@ -8,10 +8,10 @@
 	margin: 0 auto;
 	border-radius: 10px;
 	padding: 14px 20px;
-	background: rgba(255, 255, 255, 0.15);
-	box-shadow: 0 4px 46.7px 0 rgba(28, 28, 28, 0.25);
-	backdrop-filter: blur(20px);
+	background: rgba(53, 42, 121, 0.4);
+	box-shadow: 0px 4px 46.7px rgba(0, 0, 0, 0.25);
 	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(20px);
 	justify-content: space-between;
 	font-family: var(--involve-font);
 	font-size: 16px;
@@ -107,7 +107,6 @@
 			flex: none;
 			width: 54px;
 			min-height: 54px;
-			display: grid;
 			place-items: center;
 			border-radius: 100%;
 			border: none;
@@ -182,6 +181,6 @@
 @media screen and (max-width: 395px) {
 	.navbar {
 		gap: calc((100vh - 290px) * 0.21);
-		padding: 21px 9px 9px;
+		padding: 28px 28px 9px;
 	}
 }
