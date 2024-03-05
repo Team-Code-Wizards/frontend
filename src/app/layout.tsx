@@ -21,7 +21,6 @@ export default function RootLayout({
 				{/*<GoogleAnalytics gaId="GTM-NMKTG44L" />*/}
 				{/*<YandexMetrica />*/}
 				{children}
-				{/* <YandexMetrica /> */}
 			</body>
 		</html>
 	);
