@@ -4,7 +4,7 @@
   max-width: var(--max-width);
 
   &__container {
-    padding: 126px 0 118px 0;
+    padding: 126px 0 80px 0;
     margin: 0 auto;
     width: 90%;
     max-width: var(--block-max-width);
@@ -112,7 +112,7 @@
   .promo {
     &__container {
       max-width: var(--width-1280-1024);
-      padding: 126px 1px 118px 0;
+      padding: 126px 1px 80px 0;
     }
     &__main {
       grid-template-columns: 0.85fr 1fr;
@@ -174,7 +174,6 @@
   .promo {
     &__container {
       width: 92.1%;
-      padding-bottom: 0;
     }
 
     &__advantages-wrapper {
@@ -186,7 +185,7 @@
 @media screen and (max-width: 835px) {
   .promo {
     &__container {
-      padding: 95px 0;
+      padding: 95px 0 80px;
     }
 
     &__advantages-wrapper {
@@ -346,7 +345,7 @@
   .promo {
     &__container {
       width: 82%;
-      padding: 143px 0 0;
+      padding: 143px 0 60px;
     }
 
     &__preview {
