@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import 'dotenv/config';
-
 import './globals.scss';
 
 export const metadata: Metadata = {
@@ -26,8 +25,8 @@ export default function RootLayout({
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
-				{isProduction && <YandexMetrica />}
-				{isProduction && <GoogleAnalytics gaId="GTM-NMKTG44L" />}
+				{process.env.PROD === 'true' && <YandexMetrica />}
+				{isProduction? <GoogleAnalytics gaId="GTM-NMKTG44L" /> : <p style={{fontSize: '50px'}}>SQL</p>}
 				{children}
 			</body>
 		</html>
