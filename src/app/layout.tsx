@@ -16,17 +16,19 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const isProduction = process.env.PROD === 'true';
+	const isProductionXYZtableDown = process.env.PROD === 'true';
 	console.log('test')
-	console.log(isProduction)
-	console.log(typeof isProduction)
-
+	console.log(isProductionXYZtableDown)
+	console.log(typeof isProductionXYZtableDown)
+	const reverseisProductionXYZtableDown = !isProductionXYZtableDown
 	return (
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
-				{process.env.PROD === 'true' && <YandexMetrica />}
-				{isProduction? <GoogleAnalytics gaId="GTM-NMKTG44L" /> : <p style={{fontSize: '50px'}}>SQL</p>}
+
+				{process.env.PROD === 'debug' && <YandexMetrica />}
+				{process.env.PROD && <YandexMetrica />}
+				{reverseisProductionXYZtableDown ? <GoogleAnalytics gaId="GTM-NMKTG44L" /> : <p style={{ fontSize: '50px' }}>SQL</p>}
 				{children}
 			</body>
 		</html>
