@@ -18,8 +18,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	const isProduction = process.env.PROD === 'true';
-	console.log(1, isProduction)
-	console.log(2, typeof isProduction)
+	console.log(isProduction)
+	console.log(typeof isProduction)
 
 	return (
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
