@@ -59,9 +59,9 @@
 @media screen and (max-width: 1060px) and (min-width: 836px) {
   .step-one {
     &_inview {
-      width: 100%;
-      gap: 10px;
-      padding: 11px 15px;
+      width: 90%;
+      gap: 24px;
+      padding: 20px 15px;
     }
   }
 
@@ -91,7 +91,7 @@
   .step-one {
     &_inview {
       padding: 20px 11px;
-      gap: 16px;
+      gap: 20px;
     }
   }
 }
@@ -99,7 +99,7 @@
 @media screen and (max-width: 708px) {
   .step-one {
     &_inview {
-      padding: 20px 11px;
+      padding: 20px 15px;
     }
   }
 }
@@ -107,15 +107,14 @@
 @media screen and (max-width: 590px) {
   .step-one {
     &_inview {
-      gap: 13px;
-      padding: 15px;
+      gap: 20px;
+      padding: 20px;
     }
   }
 
   .image {
     &_inview {
       width: 100%;
-      height: auto;
     }
   }
 }
@@ -125,7 +124,7 @@
     &_inview {
       gap: 20px;
       padding: 20px;
-      width: 94%;
+      width: 90%;
     }
   }
 
