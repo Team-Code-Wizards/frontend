@@ -4,22 +4,24 @@
   align-items: center;
   opacity: 0;
   gap: 10px;
-  
+  margin-top: auto;
+
   &_inview {
     opacity: 1;
-    
+
     @keyframes appearAndRotate {
       0% {
         opacity: 0;
         transform: scale(0) rotate(315deg);
       }
+
       100% {
         opacity: 1;
         transform: scale(1) rotate(360deg);
       }
     }
   }
-  
+
   &__lineone,
   &__linetwo {
     display: flex;
@@ -27,7 +29,7 @@
     gap: 10px;
     position: relative;
   }
-  
+
   &__lineone {
     &_inview {
       &-one {
@@ -36,7 +38,7 @@
         transform-origin: center;
         opacity: 0;
       }
-      
+
       &-two {
         animation: appearAndRotate 0.9s ease forwards;
         animation-delay: 2.74s;
@@ -45,7 +47,7 @@
       }
     }
   }
-  
+
   &__linetwo {
     &_inview {
       &-one {
@@ -60,6 +62,22 @@
         animation-delay: 2.74s;
         transform-origin: center;
         opacity: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .images {
+
+    &__lineone,
+    &__linetwo {
+      &_inview {
+
+        &-one,
+        &-two {
+          animation-delay: 0s;
+        }
       }
     }
   }
