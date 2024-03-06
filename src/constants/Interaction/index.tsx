@@ -3,6 +3,7 @@ import StepFour from '@/components/Interaction/Step/Images/StepFour';
 import StepOne from '@/components/Interaction/Step/Images/StepOne';
 import StepSix from '@/components/Interaction/Step/Images/StepSix';
 import StepThree from '@/components/Interaction/Step/Images/StepThree';
+import StepTwo from '@/components/Interaction/Step/Images/StepTwo';
 
 import { IInteractionStep } from './type';
 
@@ -29,7 +30,7 @@ export const data: IInteractionStep[] = [
 			'Мы ценим открытость и прозрачность в каждом этапе процесса. Наша команда предоставляет регулярные обновления, отвечает на ваши вопросы и даёт вам полный контроль над ходом разработки.',
 		alt: 'Созвон клиента с командой',
 		image: (inView, isActive) => {
-			return StepSix(inView, isActive);
+			return StepTwo(inView, isActive);
 		},
 		modifier: 'communication',
 		changeLaptop: true,
