@@ -1,6 +1,8 @@
 .wrapper {
-	width: 100%;
+	position: relative;
 	margin-top: auto;
+	width: 100%;
+	padding-bottom: 50px;
 }
 
 .members {
@@ -8,6 +10,7 @@
 	gap: 10px;
 	margin: 0px auto;
 	width: min(288px, 77%);
+	left: calc((100% - min(288px, 77%)) / 2);
 
 	& > .img {
 		width: 48.2%;
@@ -27,10 +30,10 @@
 	height: auto;
 
 	&_phone {
-		position: relative;
-		top: -16px;
-		width: 279px;
-		left: 10.7%;
+		position: absolute;
+		bottom: 0px;
+		width: min(279px, 75%);
+		left: calc((100% - min(279px, 77%)) / 2);
 		opacity: 0;
 
 		&_active {
@@ -70,40 +73,5 @@
 	}
 	100% {
 		transform: rotate(0deg);
-	}
-}
-
-@media screen and (max-width: 1280px) {
-	.img_phone {
-		left: 2.7%;
-	}
-}
-
-@media screen and (max-width: 1060px) {
-	.img_phone {
-		width: 210px;
-		left: calc((100% - 210px) / 2);
-	}
-}
-
-@media screen and (max-width: 835px) {
-	.members {
-		width: 279px;
-	}
-
-	.img_phone {
-		width: 279px;
-		left: 8.6%;
-	}
-}
-
-@media screen and (max-width: 810px) {
-	.members {
-		width: min(288px, 77%);
-	}
-
-	.img_phone {
-		width: min(279px, 77%);
-		left: calc((100% - min(279px, 77%)) / 2);
 	}
 }
