@@ -108,6 +108,10 @@
   --grid-gap: 20px;
 }
 
+.html {
+  scrollbar-gutter: stable both-edges;
+}
+
 .body {
   font-family: var(--involve-font);
   background-color: var(--color-bg-black);
