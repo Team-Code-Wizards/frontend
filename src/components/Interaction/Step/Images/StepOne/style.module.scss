@@ -1,5 +1,6 @@
 .step-one {
   opacity: 1;
+  margin-top: auto;
 
   &_inview {
     opacity: 1;
@@ -37,6 +38,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -62,6 +64,7 @@
       padding: 11px 15px;
     }
   }
+
   .image {
     &_inview {
       width: 100%;
@@ -76,6 +79,7 @@
       padding: 20px;
     }
   }
+
   .image {
     &_inview {
       width: 100%;
@@ -107,6 +111,7 @@
       padding: 15px;
     }
   }
+
   .image {
     &_inview {
       width: 100%;
@@ -123,6 +128,7 @@
       width: 94%;
     }
   }
+
   .image {
     &_inview {
       width: 96%;
@@ -137,6 +143,7 @@
       padding: 16px;
     }
   }
+
   .image {
     &_inview {
       width: 100%;

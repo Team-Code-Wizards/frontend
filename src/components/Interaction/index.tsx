@@ -56,8 +56,14 @@ const Interaction = (): React.ReactElement => {
 					className={styles['steps']}
 					spaceBetween={20}
 					breakpoints={{
-						501: {
+						1061: {
+							slidesPerView: 2.5,
+						},
+						733: {
 							slidesPerView: 2,
+						},
+						501: {
+							slidesPerView: 1.5,
 						},
 						0: {
 							slidesPerView: 1,
@@ -65,7 +71,7 @@ const Interaction = (): React.ReactElement => {
 					}}
 				>
 					{data.map((item) =>
-						width < 836 ? (
+						width < 1071 ? (
 							<SwiperSlide className={styles['steps__card']} key={item.title}>
 								{({ isVisible }) => (
 									<Step
