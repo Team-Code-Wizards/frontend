@@ -99,8 +99,8 @@
 }
 }
 
-@media screen and (max-width: 834px) {
-.image {
+@media screen and (max-width: 1070px) {
+  .image {
   &__one {
     &_inview {
       animation-delay: 0s;
@@ -108,20 +108,30 @@
   }
 
   &__two {
-    top: 38%;
-    left: 53%;
-    width: 11%;
     &_inview {
       animation-delay: 0.32s;
     }
   }
 
   &__three {
-    top: 42%;
-    left: 36%;
     &_inview {
       animation-delay: 0.51s;
     }
+  }
+}
+}
+
+@media screen and (max-width: 834px) {
+.image {
+  &__two {
+    top: 38%;
+    left: 53%;
+    width: 11%;
+  }
+
+  &__three {
+    top: 42%;
+    left: 36%;
   }
 }
 }

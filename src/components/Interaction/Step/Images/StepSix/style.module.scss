@@ -1,6 +1,5 @@
 .step-six {
   margin-top: auto;
-
 }
 
 .image {
@@ -55,21 +54,31 @@
 }
 }
 
-@media screen and (max-width: 834px) {
-.image {
+@media screen and (max-width: 1070px) {
+  .image {
   &__one {
-    margin-block-start: 10px;
     &_inview {
       animation-delay: 0s;
     }
   }
 
   &__two {
-    width: 30%;
-    margin-inline-start: 70%;
     &_inview {
       animation-delay: 0.32s;
     }
+  }
+}
+}
+
+@media screen and (max-width: 834px) {
+.image {
+  &__one {
+    margin-block-start: 10px;
+  }
+
+  &__two {
+    width: 30%;
+    margin-inline-start: 70%;
   }
 }
 }

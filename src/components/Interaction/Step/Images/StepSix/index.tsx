@@ -22,7 +22,7 @@ export default function StepSix(inView: boolean, isActive: boolean) {
 
 	return (
 		<div className={styles['step-six']}>
-			{(834 < width && width < 1281) || (240 < width && width < 600) ? (
+			{width < 1281 ? (
 				<Image
 					className={`${styles['image']} ${styles['image__one']} ${isActive && inView && styles['image__one_inview']}`}
 					src={bubble1Tablet}
