@@ -4,7 +4,7 @@
   &_inview {
     display: flex;
     position: fixed;
-    right: 80px;
+    right: 45px;
     bottom: 110px;
     cursor: pointer;
     z-index: 999;
@@ -36,14 +36,26 @@
   }
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 1000px) {
   .up-btn {
-    right: 50px;
+    &_inview {
+      right: 30px;
+    }
   }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 900px) {
   .up-btn {
-    right: 30px;
+    &_inview {
+      right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .up-btn {
+    &_inview {
+      right: 10px;
+    }
   }
 }
