@@ -68,6 +68,20 @@
   }
 }
 
+@media screen and (max-width: 1070px) {
+  .images {
+    &__lineone,
+    &__linetwo {
+      &_inview {
+        &-one,
+        &-two {
+          animation-delay: 3ms;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .images {
     &__lineone,
@@ -75,7 +89,7 @@
       &_inview {
         &-one,
         &-two {
-          animation-delay: 0s;
+          animation-delay: 0ms;
         }
       }
     }
