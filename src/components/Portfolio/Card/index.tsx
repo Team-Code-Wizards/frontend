@@ -9,30 +9,26 @@ export default function PortfolioCard({
 	title,
 	image,
 	link,
-	adaptive,
+	imageNumber,
 }: IPortfolioCard) {
 	return (
 		<>
 			<div className={styles['card__image']}>
-				{adaptive ? (
-					<picture>
-						<source
-							srcSet="../../../../public/images/portfolio/image-41-390px.webp"
-							media="(max-width: 451px)"
-						/>
-						<Image
-							src={image}
-							alt="portfolioIcon"
-							className={styles['card__bg']}
-						/>
-					</picture>
-				) : (
+				<picture>
+					<source
+						media="(max-width: 835px)"
+						srcSet={`/images/portfolio/image-${imageNumber}-834px.webp`}
+					/>
+					<source
+						media="(max-width: 391px)"
+						srcSet={`/images/portfolio/image-${imageNumber}-390px.webp`}
+					/>
 					<Image
 						src={image}
 						alt="portfolioIcon"
 						className={styles['card__bg']}
 					/>
-				)}
+				</picture>
 				<span className={styles['card__tag']}>{tag}</span>
 				<a
 					className={styles['card__link']}

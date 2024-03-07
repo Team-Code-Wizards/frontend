@@ -14,7 +14,7 @@ export const portfolioCards: IPortfolioCard[] = [
 		title: 'Любимый василек',
 		image: image41,
 		link: 'https://ivanovskij-trikotazh.ru/',
-		adaptive: true,
+		imageNumber: 41,
 	},
 	{
 		id: '9e67c18d-589b-43aa-b4a1-55cabbedffce',
@@ -22,6 +22,7 @@ export const portfolioCards: IPortfolioCard[] = [
 		title: 'Смарт ремонт',
 		image: image42,
 		link: 'https://smartremont.com/',
+		imageNumber: 42,
 	},
 	{
 		id: 'c371d067-221f-4fc3-90f6-a05d957c90f7',
@@ -29,6 +30,7 @@ export const portfolioCards: IPortfolioCard[] = [
 		title: 'Рент-зона',
 		image: image43,
 		link: 'https://rent-zona.ru/',
+		imageNumber: 43,
 	},
 	{
 		id: 'e34c37dd-b80a-4f9c-a43b-0f3b71db0126',
@@ -36,6 +38,7 @@ export const portfolioCards: IPortfolioCard[] = [
 		title: 'Мебель-Екатеринбург',
 		image: image44,
 		link: 'https://мебель-екатеринбург.рф/',
+		imageNumber: 44,
 	},
 	{
 		id: '8dae8a3b-e128-41fc-b286-d9701cfe1818',
@@ -43,6 +46,7 @@ export const portfolioCards: IPortfolioCard[] = [
 		title: 'Чистый город',
 		image: image45,
 		link: 'https://musor-krsk.ru/',
+		imageNumber: 45,
 	},
 	{
 		id: '8xae8a3b-e128-41fc-b286-d9706ybn1818',
@@ -50,5 +54,6 @@ export const portfolioCards: IPortfolioCard[] = [
 		title: 'ЦНМТ',
 		image: image46,
 		link: 'https://www.cnmt.ru/',
+		imageNumber: 46,
 	},
 ];
