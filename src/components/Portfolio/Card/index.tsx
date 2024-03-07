@@ -17,8 +17,9 @@ export default function PortfolioCard({
 				{adaptive ? (
 					<picture>
 						<source
-							srcSet="../../../../public/images/portfolio/image-41-390px.webp"
-							media="(max-width: 451px)"
+							// srcSet="../../../../public/images/portfolio/image-41-390px.webp"
+							srcSet="/images/portfolio/image-41-390px.webp"
+							media="(max-width: 449px)"
 						/>
 						<Image
 							src={image}

@@ -5,6 +5,7 @@
 
 	&__bg {
 		width: 100%;
+		height: 330px;
 	}
 
 	&__tag,
@@ -70,33 +71,49 @@
 	}
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 835px) {
 	.card {
+		&__bg {
+			max-width: 90%;
+		}
+
 		&__link {
 			bottom: 1.5%;
 			right: 2%;
-			@media screen and (max-width: 833px) {
-				bottom: 2.5%;
+			@media screen and (max-width: 835px) {
+				bottom: 1%;
+				right: 10%;
 			}
 		}
 	}
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 460px) {
 	.card {
 		&__container {
 			min-height: 335px;
 		}
 
 		&__bg {
-			max-height: 300px;
+			max-height: 245px;
 			margin-bottom: 11px;
+			max-width: 310px;
 		}
 
 		&__link {
-			bottom: 7%;
-			right: 0;
+			bottom: 3%;
+			right: 17%;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.card {
+
+		&__link {
+			bottom: 5%;
+			right: 3%;
 		}
 	}
 }

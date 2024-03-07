@@ -1,6 +1,6 @@
 import IPortfolioCard from '@/components/Portfolio/Card/interface';
 
-import image41 from '../../../public/images/portfolio/image-41.webp';
+import image41 from '../../../public/images/portfolio/image-41-390px.webp';
 import image42 from '../../../public/images/portfolio/image-42.webp';
 import image43 from '../../../public/images/portfolio/image-43.webp';
 import image44 from '../../../public/images/portfolio/image-44.webp';
