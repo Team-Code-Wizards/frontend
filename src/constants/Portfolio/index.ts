@@ -14,7 +14,6 @@ export const portfolioCards: IPortfolioCard[] = [
 		title: 'Любимый василек',
 		image: image41,
 		link: 'https://ivanovskij-trikotazh.ru/',
-		adaptive: true,
 	},
 	{
 		id: '9e67c18d-589b-43aa-b4a1-55cabbedffce',
