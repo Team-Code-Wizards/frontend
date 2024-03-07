@@ -189,7 +189,23 @@
   }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (min-width: 426px) and (max-width: 500px) {
+  .promo-form {
+    &__button {
+      gap: 27%;
+    }
+  }
+}
+
+@media screen and (min-width: 387px) and (max-width: 425px) {
+  .promo-form {
+    &__button {
+      gap: 23%;
+    }
+  }
+}
+
+@media screen and (max-width: 386px) {
   .promo-form {
     &__button {
       gap: 18%;
