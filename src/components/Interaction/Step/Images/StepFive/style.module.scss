@@ -5,6 +5,7 @@
   opacity: 0;
   gap: 10px;
   margin-top: auto;
+  padding-bottom: 32px;
 
   &_inview {
     opacity: 1;
@@ -69,11 +70,9 @@
 
 @media screen and (max-width: 1000px) {
   .images {
-
     &__lineone,
     &__linetwo {
       &_inview {
-
         &-one,
         &-two {
           animation-delay: 0s;
