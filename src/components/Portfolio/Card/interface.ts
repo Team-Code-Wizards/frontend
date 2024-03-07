@@ -6,4 +6,5 @@ export default interface IPortfolioCard {
 	tag: string;
 	image: string | StaticImport;
 	link: string;
+	adaptive?: boolean;
 }
