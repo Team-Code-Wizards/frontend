@@ -8,7 +8,7 @@ import approach from '&/images/interaction/stepFour/approach.webp';
 
 import style from './style.module.scss';
 
-const StepFour = (inView: boolean, isActive: boolean): JSX.Element => {
+const StepFour = (inView: boolean, isActive: boolean) => {
 	return (
 		<div
 			className={`${style[`approach-wrapper`]} ${isActive && inView && style[`approach-wrapper_active`]}`}
