@@ -76,9 +76,7 @@
         }
 
         @media screen and (max-width: 1000px) {
-
             &_active {
-
                 &-left {
                     animation: fadeIn 0.25s ease-in-out 0.14s forwards, rotate 0.25s linear 0.14s forwards;
                 }
@@ -97,40 +95,32 @@
             }
         }
 
-        @media screen and (max-width: 666px) {
-            width: 21px;
-            height: 21px;
-
+        @media screen and (max-width: 350px) {
             &_left {
-                top: 6px;
+                top: 7px;
                 left: 6.5px;
             }
 
             &_middle {
-                top: 6px;
-                left: 70px;
-                height: 20.53px;
+                top: 7px;
+                left: 86px;
             }
 
             &_right {
-                top: 6px;
+                top: 7px;
                 right: 6.5px;
-                width: 20.25px;
-                height: 21.25px;
             }
 
             &_bottom {
                 bottom: 8px;
-                left: 67px;
-                width: 28.5px;
-                height: 34.5px;
+                left: 82px;
             }
         }
     }
 
-    @media screen and (max-width: 666px) {
-        width: 161.25px;
-        height: 121.5px;
+    @media screen and (max-width: 350px) {
+        width: 200.25px;
+        height: 150.5px;
 
         &__background {
             width: 100%;
