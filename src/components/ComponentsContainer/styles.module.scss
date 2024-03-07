@@ -1,6 +1,11 @@
 .section {
 	width: 100%;
-	background-image: url('../../../public/images/componentsContainer/components-container-bg.webp');
+	background-color: hsla(0, 7%, 2%, 1);
+	background-image:
+		radial-gradient(at 2% 96%, hsla(278, 51%, 36%, 0.53) 0px, transparent 50%),
+		radial-gradient(at 0% 42%, hsla(270, 50%, 40%, 0.26) 0px, transparent 50%),
+		radial-gradient(at 100% 0%, hsla(248, 49%, 35%, 0.66) 0px, transparent 50%),
+		radial-gradient(at 36% 100%, hsla(229, 48%, 37%, 0.67) 0px, transparent 50%);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;

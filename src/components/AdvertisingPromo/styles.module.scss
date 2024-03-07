@@ -4,7 +4,7 @@
   max-width: var(--max-width);
 
   &__container {
-    padding: 126px 0 118px 0;
+    padding: 126px 0 80px 0;
     margin: 0 auto;
     width: 90%;
     max-width: var(--block-max-width);
@@ -27,6 +27,7 @@
   }
 
   &__advantages-box {
+    cursor: default;
     font: var(--font-description-main);
     display: flex;
     gap: 5px;
@@ -61,7 +62,7 @@
   }
 
   &__description {
-    width: 71%;
+    width: 78%;
     margin-bottom: 20px;
   }
 
@@ -83,15 +84,16 @@
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
-			background-color: var(--color-button-hover);
-		}
+      background-color: var(--color-button-hover);
+    }
 
-		&:active {
-			background-color: var(--color-button-active);
-		}
+    &:active {
+      background-color: var(--color-button-active);
+    }
   }
 
   &__link {
+    display: block;
     color: var(--color-text);
   }
 
@@ -99,17 +101,18 @@
     grid-area: 1 / 2 / 5 / 3;
 
     &-img {
+      border-radius: 10px;
+      object-fit: cover;
       height: 100%;
     }
   }
 }
 
-
 @media screen and (max-width: 1280px) {
   .promo {
     &__container {
       max-width: var(--width-1280-1024);
-      padding: 126px 1px 118px 0;
+      padding: 126px 1px 80px 0;
     }
     &__main {
       grid-template-columns: 0.85fr 1fr;
@@ -150,16 +153,19 @@
 
 @media screen and (max-width: 1050px) {
   .promo {
+    &__main {
+      grid-template-columns: none;
+    }
+
     &__container {
       width: 89%;
     }
-  }
-}
 
-@media screen and (max-width: 951px) {
-  .promo {
-    &__main {
-      grid-template-columns: 1fr;
+    &__preview {
+      &-img {
+        object-fit: contain;
+        max-width: 100%;
+      }
     }
   }
 }
@@ -168,7 +174,6 @@
   .promo {
     &__container {
       width: 92.1%;
-      padding-bottom: 0;
     }
 
     &__advantages-wrapper {
@@ -180,7 +185,7 @@
 @media screen and (max-width: 835px) {
   .promo {
     &__container {
-      padding: 95px 0;
+      padding: 95px 0 80px;
     }
 
     &__advantages-wrapper {
@@ -202,6 +207,7 @@
       padding-top: 3px;
 
       &-img {
+        object-fit: cover;
         max-width: 317px;
         max-height: 213px;
       }
@@ -226,7 +232,7 @@
   }
 }
 
-@media screen and (max-width: 706px) {
+@media screen and (max-width: 724px) {
   .promo {
     &__advantages-wrapper {
       margin-right: auto;
@@ -234,36 +240,23 @@
   }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 685px) {
   .promo {
-    &__preview {
-      &-img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 395px) {
-  .promo {
-    &__container {
-      width: 82%;
-      padding: 143px 0 0;
-    }
-
     &__main {
       justify-items: normal;
+      grid-template-rows: none;
     }
 
     &__preview {
       grid-area: 1 / 1 / 2 / 2;
       padding-top: 0;
-      max-height: 210px;
       margin-bottom: 34px;
 
       &-img {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 400px;
+        max-width: none;
+        max-height: none;
       }
     }
 
@@ -291,13 +284,16 @@
     }
 
     &__advantages-wrapper {
+      width: 100%;
       grid-area: 5 / 1 / 6 / 2;
-      justify-content: center;
-      gap: 9px;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0;
     }
 
     &__advantages-box {
-      padding: 2px 11px;
+      padding: 4px 11px 5px;
     }
 
     &__link-box {
@@ -307,13 +303,60 @@
     }
 
     &__link {
-      width: 19px;
-      height: 19px;
-
       & > svg {
         width: 19px;
         height: 19px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .promo {
+    &__preview {
+      &-img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .promo {
+    &__preview {
+      &-img {
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .promo {
+    &__preview {
+      &-img {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .promo {
+    &__container {
+      width: 82%;
+      padding: 143px 0 60px;
+    }
+
+    &__preview {
+      margin-bottom: 30px;
+      &-img {
+        height: 210px;
+      }
+    }
+
+    &__link {
+      margin-bottom: 43px;
     }
   }
 }
