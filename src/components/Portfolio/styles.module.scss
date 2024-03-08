@@ -119,11 +119,6 @@
       width: 130px !important;
       margin: 0 auto !important;
     }
-
-    &__card-box_item {
-      width: 50%;
-      margin-right: 15px;
-    }
   }
 }
 
@@ -135,7 +130,7 @@
 
     &__card-box_item {
       margin-right: 0;
-      width: 55%;
+      width: 58%;
     }
   }
 }
@@ -152,7 +147,6 @@
 @media screen and (max-width: 450px) {
   .portfolio {
     &__container {
-      max-width: 390px;
       padding: 120px 0 60px;
     }
 
