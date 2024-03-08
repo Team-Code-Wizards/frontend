@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import UpButton from '@/components/UpButton';
@@ -17,6 +17,29 @@ export default function AboutUs() {
 	useEffect(() => {
 		console.log(inView);
 	}, [inView]);
+
+	const [showButton, setShowButton] = useState(true);
+	const [timer, setTimer] = useState<number | undefined>(undefined);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setShowButton(true);
+			if (timer !== undefined) {
+				clearTimeout(timer);
+			}
+			const newTimer = setTimeout(() => setShowButton(false), 3000);
+			setTimer(newTimer as unknown as number);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			if (timer !== undefined) {
+				clearTimeout(timer);
+			}
+		};
+	}, [timer]);
 
 	return (
 		<section id="about-us" className={styles['about-us']} ref={ref}>
@@ -50,7 +73,7 @@ export default function AboutUs() {
 					</div>
 				</div>
 			</div>
-			<UpButton inView={inView} />
+			<UpButton inView={inView} showButton={showButton} />
 		</section>
 	);
 }
