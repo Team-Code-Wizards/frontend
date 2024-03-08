@@ -118,7 +118,7 @@
 		}
 
 		&__link {
-			right: -4%;
+			right: -2%;
 		}
 	}
 }
@@ -135,6 +135,14 @@
 		&__link {
 			bottom: 4%;
 			right: -2%;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.card {
+		&__bg {
+			width: 100%;
 		}
 	}
 }

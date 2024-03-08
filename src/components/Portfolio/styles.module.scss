@@ -130,7 +130,7 @@
 
     &__card-box_item {
       margin-right: 0;
-      width: 58%;
+      width: 62%;
     }
   }
 }
@@ -139,7 +139,7 @@
   .portfolio {
 
     &__card-box_item {
-      width: 60%;
+      width: 67%;
     }
   }
 }
@@ -181,15 +181,7 @@
   .portfolio {
     &__card-box {
       width: 100%;
-      margin-left: 1px;
-    }
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .portfolio {
-    &__card-box {
-      margin-left: 0;
+      margin-left: 5px;
     }
   }
 }
