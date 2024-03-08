@@ -73,14 +73,9 @@
 
 @media screen and (max-width: 840px) {
 	.card {
-		&__bg {
-			max-width: 93%;
-		}
-
 		&__link {
-
 				bottom: 1%;
-				right: 5%;
+				right: 0;
 			}
 	}
 }
@@ -88,61 +83,28 @@
 @media screen and (max-width: 715px) {
 	.card {
 		&__bg {
-			max-width: 90%;
-		}
-
-		&__link {
-			bottom: 0;
-			right: 8%;
-		}
-	}
-}
-
-@media screen and (max-width: 650px) {
-	.card {
-		&__bg {
-			max-width: 95%;
+			max-width: 100%;
 		}
 
 		&__link {
 			bottom: 1%;
-			right: 3%;
+			right: 1%;
 		}
 	}
 }
 
 @media screen and (max-width: 565px) {
 	.card {
-		&__bg {
-			max-width: 100%;
-		}
-
 		&__link {
-			right: -2%;
+			right: 1%;
 		}
 	}
 }
 
-
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 390px) {
 	.card {
 		&__bg {
-			max-height: 245px;
-			margin-bottom: 11px;
-			max-width: 310px;
-		}
-
-		&__link {
-			bottom: 4%;
-			right: -2%;
-		}
-	}
-}
-
-@media screen and (max-width: 450px) {
-	.card {
-		&__bg {
-			width: 100%;
+			max-height: 300px;
 		}
 	}
 }

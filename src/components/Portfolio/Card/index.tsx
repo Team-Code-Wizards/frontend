@@ -19,7 +19,7 @@ export default function PortfolioCard({
 						<picture>
 							<source
 								srcSet="/images/portfolio/image-41-390px.webp"
-								media="(max-width: 461px)"
+								media="(max-width: 390px)"
 							/>
 							<source
 								srcSet="/images/portfolio/image-41-834px.webp"
