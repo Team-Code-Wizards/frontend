@@ -92,18 +92,18 @@
 @media screen and (max-width: 460px) {
 	.card {
 		&__container {
-			min-height: 335px;
+			min-height: 300px;
 		}
 
 		&__bg {
-			max-height: 245px;
+			max-height: 300px;
 			margin-bottom: 11px;
 			max-width: 310px;
 		}
 
 		&__link {
-			bottom: 3%;
-			right: 17%;
+			bottom: 7%;
+			right: 4%;
 		}
 	}
 }

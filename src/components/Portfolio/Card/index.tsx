@@ -14,35 +14,37 @@ export default function PortfolioCard({
 	return (
 		<>
 			<div className={styles['card__image']}>
-				{adaptive ? (
-					<picture>
-						<source
-							srcSet="/images/portfolio/image-41-390px.webp"
-							media="(max-width: 449px)"
-						/>
+				<div className={styles['card__container']}>
+					{adaptive ? (
+						<picture>
+							<source
+								srcSet="/images/portfolio/image-41-390px.webp"
+								media="(max-width: 449px)"
+							/>
+							<Image
+								src={image}
+								alt="portfolioIcon"
+								className={styles['card__bg']}
+							/>
+						</picture>
+					) : (
 						<Image
 							src={image}
 							alt="portfolioIcon"
 							className={styles['card__bg']}
 						/>
-					</picture>
-				) : (
-					<Image
-						src={image}
-						alt="portfolioIcon"
-						className={styles['card__bg']}
-					/>
-				)}
-				<span className={styles['card__tag']}>{tag}</span>
-				<a
-					className={styles['card__link']}
-					href={link}
-					target="blank"
-					rel="noreferrer"
-					aria-label="Visit site"
-				>
-					<ArrowIcon />
-				</a>
+					)}
+					<span className={styles['card__tag']}>{tag}</span>
+					<a
+						className={styles['card__link']}
+						href={link}
+						target="blank"
+						rel="noreferrer"
+						aria-label="Visit site"
+					>
+						<ArrowIcon />
+					</a>
+				</div>
 			</div>
 			<a
 				className={styles['card__title']}
