@@ -1,0 +1,161 @@
+.step-one {
+  opacity: 1;
+  margin-top: auto;
+
+  &_inview {
+    opacity: 1;
+    animation: fadeInItem 0.5s ease forwards;
+    background-color: var(--color-bg-white);
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.image {
+  opacity: 0;
+
+  &_inview {
+    animation: fadeIn 0.5s ease forwards;
+
+
+    &:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1s;
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 1281px) {
+  .step-one {
+
+    &_inview {
+      border-radius: 17px;
+      padding: 20px 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 1060px) and (min-width: 836px) {
+  .step-one {
+    &_inview {
+      width: 90%;
+      gap: 24px;
+      padding: 20px 15px;
+    }
+  }
+
+  .image {
+    &_inview {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .step-one {
+    &_inview {
+      border-radius: 20px;
+      padding: 20px;
+    }
+  }
+
+  .image {
+    &_inview {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 741px) {
+  .step-one {
+    &_inview {
+      padding: 20px 11px;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .step-one {
+    &_inview {
+      padding: 20px 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .step-one {
+    &_inview {
+      gap: 20px;
+      padding: 20px;
+    }
+  }
+
+  .image {
+    &_inview {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .step-one {
+    &_inview {
+      gap: 20px;
+      padding: 20px;
+      width: 90%;
+    }
+  }
+
+  .image {
+    &_inview {
+      width: 96%;
+    }
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .step-one {
+    &_inview {
+      gap: 16px;
+      padding: 16px;
+    }
+  }
+
+  .image {
+    &_inview {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .step-one {
+    &_inview {
+      gap: 16px;
+      padding: 16px;
+      width: 100%;
+    }
+  }
+}

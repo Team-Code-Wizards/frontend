@@ -1,0 +1,77 @@
+.wrapper {
+	position: relative;
+	margin-top: auto;
+	width: 100%;
+	padding-bottom: 50px;
+}
+
+.members {
+	display: flex;
+	gap: 10px;
+	margin: 0px auto;
+	width: min(288px, 77%);
+	left: calc((100% - min(288px, 77%)) / 2);
+
+	& > .img {
+		width: 48.2%;
+		opacity: 0;
+
+		&_client_active {
+			animation: 0.5s ease 0.47s forwards appearance;
+		}
+
+		&_team_active {
+			animation: 0.5s ease 0.55s forwards appearance;
+		}
+	}
+}
+
+.img {
+	height: auto;
+
+	&_phone {
+		position: absolute;
+		bottom: 0px;
+		width: min(279px, 75%);
+		left: calc((100% - min(279px, 77%)) / 2);
+		opacity: 0;
+
+		&_active {
+			animation:
+				0.3s ease 0.97s forwards phone-appearance,
+				0.12s ease 1.27s 2 alternate phone-rotation;
+		}
+	}
+}
+
+@keyframes appearance {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes phone-appearance {
+	0% {
+		opacity: 0;
+		scale: 1.5;
+	}
+	100% {
+		opacity: 1;
+		scale: 1;
+	}
+}
+
+@keyframes phone-rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
