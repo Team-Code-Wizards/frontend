@@ -208,3 +208,13 @@
     }
   }
 }
+
+@media screen and (max-width: 320px) {
+  .portfolio {
+
+      &__title {
+        margin-left: 30px;
+
+    }
+  }
+}

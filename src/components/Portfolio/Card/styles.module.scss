@@ -200,11 +200,15 @@
 @media screen and (max-width: 321px) {
 	.card {
 		&__bg {
-			max-width: 83%;
+			max-width: 84%;
 		}
 
 		&__link {
 			right: 17%;
+		}
+
+		&__title {
+			margin-left: 30px;
 		}
 	}
 }
