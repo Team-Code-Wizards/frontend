@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import IconClose from '&/images/modal/IconClose';
@@ -16,6 +17,7 @@ interface IModal {
 }
 
 export default function WebsiteCreationModal({ open, close }: IModal) {
+	const [show, setShow] = useState(true);
 	const submitter = useSubmitter();
 	const { showFailedInfoMsg } = useInfoMsg();
 	const { register, formState, handleSubmit, control, reset } = useForm({
@@ -27,20 +29,46 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
 		await submitter(data)
 			.then(() => {
-				close();
-				reset();
+				setShow(false);
+
+				setTimeout(() => {
+					close();
+					reset();
+
+					setShow(true);
+				}, 300);
 			})
-			.catch(() => showFailedInfoMsg());
+			.catch(() => {
+				setShow(false);
+
+				setTimeout(() => {
+					showFailedInfoMsg();
+
+					setShow(true);
+				}, 300);
+			});
+	};
+
+	const handlerClose = () => {
+		setShow(false);
+
+		setTimeout(() => {
+			close();
+
+			setShow(true);
+		}, 300);
 	};
 
 	return (
 		open && (
 			<ModalBackground>
-				<div className={styles['modal']}>
+				<div
+					className={`${styles['modal']} ${show ? styles['modal_show'] : styles['modal_hiding']}`}
+				>
 					<button
 						type="button"
 						className={styles['modal__close-btn']}
-						onClick={close}
+						onClick={handlerClose}
 					>
 						<IconClose />
 					</button>

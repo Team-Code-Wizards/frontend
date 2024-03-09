@@ -23,7 +23,7 @@ export default function RootLayout({
 	//console.log(typeof isProductionXYZtableDown)
 	//const reverseisProductionXYZtableDown = !isProductionXYZtableDown
 	return (
-		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
+		<html lang="ru" style={{ scrollBehavior: 'smooth' }} className="html">
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
 				{/*{<p style={{ fontSize: '50px', color: 'white' }}>{isProductionXYZtableDown}</p>}*/}
