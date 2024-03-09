@@ -65,7 +65,7 @@
   .portfolio {
     &__container {
       max-width: 1280px;
-      padding: 0;
+      padding: 0 0 80px;
     }
 
     &__title {
@@ -92,11 +92,12 @@
   }
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 835px) {
   .portfolio {
     &__container {
       max-width: 834px;
       padding-top: 80px;
+      padding-left: 30px;
     }
 
     &__title {
@@ -109,18 +110,18 @@
     }
 
     &__card-box {
-      width: 96%;
-      margin-bottom: 25px;
+      width: 100%;
+      margin: 0 auto 20px;
+    }
+
+    &__card-box_item {
+      width: 374px;
     }
 
     &__pagination {
       display: block;
       width: 130px !important;
       margin: 0 auto !important;
-    }
-
-    &__card-box_item {
-      width: 374px;
     }
   }
 }
@@ -129,56 +130,81 @@
   .portfolio {
     &__container {
       padding-top: 80px;
+      padding-bottom: 60px;
+    }
+
+    &__card-box_item {
+      margin-right: 0;
     }
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 430px) {
   .portfolio {
     &__container {
-      max-width: 390px;
+      padding: 80px 0 60px 25px;
+    }
+
+    //&__title {
+    //  width: 82%;
+    //  margin-bottom: 32px;
+    //  font-size: 40px;
+    //}
+
+    //&__card-box_item {
+    //  min-width: 300px;
+    //  max-width: 320px;
+    //}
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .portfolio {
+    &__container {
+      padding: 80px 0 60px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .portfolio {
+    &__container {
+      padding: 80px 0 60px 10px;
     }
 
     &__title {
-      width: 82%;
+      width: 85%;
       margin-bottom: 32px;
       font-size: 40px;
     }
 
     &__card-box {
-      width: 93%;
-      max-height: 367px;
-      margin-bottom: 12px;
-    }
-
-    &__card-box_item {
-      min-width: 300px;
-      max-width: 320px;
+      max-height: 330px;
+      margin-bottom: 20px;
     }
   }
 }
 
-@media screen and (max-width: 345px) {
+
+@media screen and (max-width: 350px) {
   .portfolio {
-    &__card-box {
-      width: 98%;
+    &__container {
+      padding: 80px 0 60px 10px;
+    }
+
+    &__title {
+      margin-left: 5px;
     }
   }
 }
 
 @media screen and (max-width: 330px) {
   .portfolio {
-    &__card-box {
-      width: 100%;
-      margin-left: 1px;
+    &__container {
+      padding: 80px 0 60px 0;
     }
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .portfolio {
     &__card-box {
-      margin-left: 0;
+      margin-left: 1px;
     }
   }
 }
