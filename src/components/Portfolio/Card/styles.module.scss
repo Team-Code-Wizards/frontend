@@ -192,12 +192,12 @@
 		}
 
 		&__title {
-			margin-left: 1px;
+			margin-left: 30px;
 		}
 	}
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 322px) {
 	.card {
 		&__bg {
 			max-width: 84%;

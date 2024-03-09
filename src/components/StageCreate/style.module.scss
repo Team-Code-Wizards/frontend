@@ -418,7 +418,7 @@
   }
 
     &__wrapper {
-      margin-left: 5px;
+      margin-left: 13px;
     }
 
     &__heading {
@@ -435,3 +435,13 @@
     }
   }
 }
+
+@media screen and (max-width: 350px) {
+  .stage {
+    &__wrapper {
+      margin-left: 10px;
+    }
+  }
+}
+
+
