@@ -105,6 +105,102 @@
 	.card {
 		&__bg {
 			max-height: 300px;
+			max-width: 85%;
+			margin-left: 26px;
+		}
+
+		&__tag {
+			left: 40px;
+			top: 10px;
+		}
+
+		&__link {
+			bottom: 2%;
+			right: 8%;
+		}
+
+		&__title {
+			margin-left: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.card {
+		&__bg {
+			margin-left: 25px;
+		}
+
+		&__link {
+			right: 8%;
+		}
+
+		&__title {
+			margin-left: 25px;
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.card {
+		&__bg {
+			margin-left: 15px;
+		}
+
+		&__link {
+			right: 11%;
+		}
+
+		&__title {
+			margin-left: 15px;
+		}
+
+		&__tag {
+			left: 25px;
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.card {
+		&__bg {
+			margin-left: 5px;
+		}
+
+		&__link {
+			right: 14%;
+		}
+
+		&__title {
+			margin-left: 5px;
+		}
+
+		&__tag {
+			left: 13px;
+		}
+	}
+}
+
+@media screen and (max-width: 335px) {
+	.card {
+		&__bg {
+			margin-left: 1px;
+		}
+
+		&__link {
+			right: 15%;
+		}
+
+		&__title {
+			margin-left: 1px;
+		}
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.card {
+		&__bg {
+			max-width: 83%;
 		}
 	}
 }
