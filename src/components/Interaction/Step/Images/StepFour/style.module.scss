@@ -1,0 +1,130 @@
+.approach-wrapper {
+    position: relative;
+    opacity: 0;
+    margin-top: auto;
+
+    &_active {
+        animation: fadeIn 0.3s ease-in-out 1.69s forwards;
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            animation: fadeIn 0.3s ease-in-out 0s forwards;
+        }
+    }
+
+
+
+    &__icon {
+        position: absolute;
+        opacity: 0;
+
+        &_active {
+            &-left {
+                animation: fadeIn 0.25s ease-in-out 1.84s forwards, rotate 0.25s linear 1.84s forwards;
+            }
+
+            &-middle {
+                animation: fadeIn 0.25s ease-in-out 2.09s forwards, rotate 0.25s linear 2.09s forwards;
+            }
+
+            &-right {
+                animation: fadeIn 0.25s ease-in-out 2.34s forwards, rotate 0.25s linear 2.34s forwards;
+            }
+
+            &-bottom {
+                animation: fadeIn 0.25s ease-in-out 2.59s forwards, rotate 0.25s linear 2.59s forwards;
+            }
+        }
+
+        &_left {
+            top: 8px;
+            left: 8px;
+        }
+
+        &_middle {
+            top: 8px;
+            left: 94px;
+        }
+
+        &_right {
+            top: 8px;
+            right: 8px;
+        }
+
+        &_bottom {
+            bottom: 15px;
+            left: 90px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            &_active {
+                &-left {
+                    animation: fadeIn 0.25s ease-in-out 0.14s forwards, rotate 0.25s linear 0.14s forwards;
+                }
+
+                &-middle {
+                    animation: fadeIn 0.25s ease-in-out 0.39s forwards, rotate 0.25s linear 0.39s forwards;
+                }
+
+                &-right {
+                    animation: fadeIn 0.25s ease-in-out 0.64s forwards, rotate 0.25s linear 0.64s forwards;
+                }
+
+                &-bottom {
+                    animation: fadeIn 0.25s ease-in-out 0.89s forwards, rotate 0.25s linear 0.89s forwards;
+                }
+            }
+        }
+
+        @media screen and (max-width: 350px) {
+            &_left {
+                top: 7px;
+                left: 6.5px;
+            }
+
+            &_middle {
+                top: 7px;
+                left: 86px;
+            }
+
+            &_right {
+                top: 7px;
+                right: 6.5px;
+            }
+
+            &_bottom {
+                bottom: 8px;
+                left: 82px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 350px) {
+        width: 200.25px;
+        height: 150.5px;
+
+        &__background {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

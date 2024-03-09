@@ -1,11 +1,16 @@
 .step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	max-width: 32%;
 	padding: 28px 27px 12px;
 	border-radius: 20px;
 	border: 1px solid #ffffff;
 	background-color: var(--color-bg-black);
 
+
 	&__number {
+		margin-right: auto;
 		width: 78px;
 		max-height: 35px;
 		padding: 6px 8px;
@@ -19,6 +24,7 @@
 	&__title {
 		margin-block-start: 5px;
 		margin-block-end: 32px;
+		margin-right: auto;
 		font: var(--font-title-description);
 		letter-spacing: var(--font-description-letter);
 	}
@@ -28,7 +34,7 @@
 		font: var(--font-description-main);
 
 		&_design {
-			margin-bottom: 10px;
+			margin-bottom: 25px;
 		}
 
 		&_approach {
@@ -48,11 +54,6 @@
 		text-align: center;
 	}
 
-	img {
-		height: 100%;
-		max-width: 100%;
-	}
-
 	@media screen and (max-width: 1280px) {
 		padding: 19px 18px 7px;
 
@@ -67,48 +68,50 @@
 			width: 99%;
 
 			&_design {
-				margin-bottom: 19px;
+				margin-block-end: 14px;
 			}
 
 			&_approach {
-				margin-bottom: 19px;
+				margin-block-end: 19px;
 			}
 
 			&_communication {
-				margin-bottom: 20px;
+				margin-block-end: 20px;
 			}
 
 			&_testing {
-				margin-bottom: 15px;
+				margin-block-end: 15px;
 			}
 
 			&_support {
-				margin-bottom: 25px;
+				margin-block-end: 25px;
 			}
 		}
 	}
 
-	@media screen and (max-width: 1060px) {
-		max-width: 31%;
+	@media screen and (max-width: 1070px) {
+		max-width: 100%;
+		height: 100%;
+
+		&__description {
+			&_attention {
+				margin-block-end: 15px;
+			}
+		}
 	}
 
 	@media screen and (max-width: 835px) {
-		max-width: 100%;
-		height: 100%;
-		padding: 19px 17px 34px;
+		padding: 26px 25px 10px;
 
 		&__title {
 			margin-block-end: 33px;
 		}
 
 		&__description {
-			margin-block-end: 20px;
-
-			&_communication {
-				margin-bottom: 36px;
+			&_attention {
+				margin-block-end: 23px;
 			}
 		}
-
 	}
 
 
@@ -117,16 +120,24 @@
 	}
 
 	@media screen and (max-width: 480px) {
-		padding: 18px 18px 16px;
+		padding: 18px 18px 10px;
 
 		&__description {
-			margin-block-end: 29px;
+			margin-block-end: 25px;
 		}
 	}
 
 	@media screen and (max-width: 391px) {
-		img {
-			width: auto;
+		&__title {
+			letter-spacing: 0.19px;
+		}
+		&__description {
+			&_design {
+				margin-block-end: 22px;
+			}
+			&_support {
+				margin-block-end: 8px;
+			}
 		}
 	}
 }
