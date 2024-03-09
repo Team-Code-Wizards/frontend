@@ -7,6 +7,7 @@ type InfoMsgContextType = {
 	showSuccessInfoMsg: () => void;
 	showFailedInfoMsg: () => void;
 	hideInfoMsg: () => void;
+	show: boolean;
 };
 
 const InfoMsgContextDefault: InfoMsgContextType = {
@@ -14,6 +15,7 @@ const InfoMsgContextDefault: InfoMsgContextType = {
 	showSuccessInfoMsg: () => {},
 	showFailedInfoMsg: () => {},
 	hideInfoMsg: () => {},
+	show: true,
 };
 
 export const InfoMsgContext = createContext<InfoMsgContextType>(
@@ -30,19 +32,38 @@ type Props = {
 
 export function InfoMsgProvider({ children }: Props) {
 	const [infoMsg, setInfoMsg] = useState<boolean | null>(null);
+	const [show, setShow] = useState(true);
 
 	const showSuccessInfoMsg = () => {
 		setInfoMsg(true);
-		setTimeout(() => setInfoMsg(null), 2000);
+		setTimeout(() => setShow(false), 1700);
+
+		setTimeout(() => {
+			setInfoMsg(null);
+
+			setShow(true);
+		}, 2000);
 	};
 
 	const showFailedInfoMsg = () => {
 		setInfoMsg(false);
-		setTimeout(() => setInfoMsg(null), 2000);
+		setTimeout(() => setShow(false), 1700);
+
+		setTimeout(() => {
+			setInfoMsg(null);
+
+			setShow(true);
+		}, 2000);
 	};
 
 	const hideInfoMsg = () => {
-		setInfoMsg(null);
+		setShow(false);
+
+		setTimeout(() => {
+			setShow(true);
+
+			setInfoMsg(null);
+		}, 300);
 	};
 
 	const value = {
@@ -50,6 +71,7 @@ export function InfoMsgProvider({ children }: Props) {
 		showSuccessInfoMsg,
 		showFailedInfoMsg,
 		hideInfoMsg,
+		show,
 	};
 
 	return (

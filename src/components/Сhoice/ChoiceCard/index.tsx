@@ -5,10 +5,10 @@ import styles from './style.module.scss';
 
 export default function ChoiceCard({ item, inView }: IChoiceItemProps) {
 	return (
-		<li
-			className={`${styles[`choice-card${inView ? '_inview' : ''}`]}
+		<div
+			className={`${styles[`choice-card`]}
 			${styles[`choice-card_${item.modifier}`]}
-			`}
+			${inView && styles['choice-card_inview']}`}
 		>
 			<div
 				className={`${styles['choice-card__wrapper']} ${
@@ -41,6 +41,6 @@ export default function ChoiceCard({ item, inView }: IChoiceItemProps) {
 					</p>
 				)}
 			</div>
-		</li>
+		</div>
 	);
 }

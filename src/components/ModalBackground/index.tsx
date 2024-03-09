@@ -16,13 +16,15 @@ export default function ModalBackground({
 	const handlerClick = (
 		event: React.MouseEvent<HTMLDivElement, MouseEvent>
 	) => {
-		if (event.target === event.currentTarget && onClick) onClick();
+		if (event.target === event.currentTarget && onClick) {
+			onClick();
+		}
 	};
 
 	return (
 		<div
 			onClick={(event) => handlerClick(event)}
-			className={styles['modal-background']}
+			className={`${styles['modal-background']} ${styles['modal-background_show']}`}
 			style={{ zIndex: zindex }}
 		>
 			{children}
