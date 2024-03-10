@@ -60,7 +60,7 @@
 		animation-delay: 0.1875s;
 		grid-area: 1 / 1 / 2 / 4;
 		background-color: var(--color-purple);
-		padding: 6% 4.1% 32px;
+		padding: 6% 2.4% 32px;
 		background-image: url(/images/choice/design-bg.webp);
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -78,7 +78,7 @@
 
 		&__description {
 			display: inline-block;
-			max-width: 69%;
+			max-width: 66%;
 		}
 	}
 
@@ -263,6 +263,10 @@
 			&__description {
 				max-width: 84%;
 			}
+
+			&__column {
+				max-width: 90%;
+			}
 		}
 
 		&_planet {
@@ -304,8 +308,8 @@
 		&_conversion {
 			animation-delay: 0.75s;
 			padding: 5% 4% 7% 4%;
-			background-size: 40%;
-			background-position: right -20px top 5px;
+			background-size: 40% stretch;
+			background-position: right -30px top;
 
 			&__description {
 				max-width: 90%;
@@ -399,8 +403,11 @@
 
 		&_conversion {
 			padding: 5% 0 7% 5%;
-			background-size: 56%;
-			background-position: right -25px bottom 0;
+			background-size: 50%;
+			background-position: right -30px bottom -30px;
+			@media screen and (max-width: 920px) {
+				background-size: 55%;
+			}
 
 			&__wrapper {
 				row-gap: 14px;
@@ -463,7 +470,7 @@
 
 			background-position:
 				left 3% bottom 24%,
-				left 15% bottom 5%;
+				left 12% bottom 5%;
 		}
 
 		&_design {
@@ -481,8 +488,7 @@
 			&__column {
 				padding: 0;
 				padding-left: 4px;
-								max-width: 73%;
-
+				max-width: 73%;
 			}
 
 			&__description {
@@ -508,7 +514,7 @@
 			}
 
 			&__description {
-				max-width: 65%;
+				max-width: 69%;
 			}
 		}
 
@@ -561,7 +567,26 @@
 		}
 
 		&_flexibility {
-			background-position: left 3% bottom 45%, left 10% bottom 20%;
+			background-position:
+				left 3% bottom 24%,
+				left 12% bottom 12%;
+		}
+
+		&_conversion {
+			&__column {
+				max-width: 65%;
+			}
+			@media screen and (max-width: 655px) {
+				background-size: 40%;
+				background-position: right center;
+			}
+		}
+
+		&_flexibility {
+			background-position: left 3% bottom 45%, left 12% bottom 20%;
+			@media screen and (width: 701px) {
+				background-position: left 3% bottom 45%, left 12% bottom 12%;
+			}
 		}
 
 		&_safety {
@@ -615,6 +640,9 @@
 		&_design {
 			background-size: 27%;
 			background-position: right 0px bottom 56px;
+				&__column {
+					padding-right: 5px;
+				}
 		}
 
 		&_conversion {
