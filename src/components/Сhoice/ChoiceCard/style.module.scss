@@ -60,7 +60,7 @@
 		animation-delay: 0.1875s;
 		grid-area: 1 / 1 / 2 / 4;
 		background-color: var(--color-purple);
-		padding: 6% 4.1% 0.1%;
+		padding: 6% 4.1% 32px;
 		background-image: url(/images/choice/design-bg.webp);
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -238,6 +238,19 @@
 		}
 	}
 }
+@media screen and (max-width: 1439px) {
+	.choice-card {
+	&_design {
+		&__column {
+			max-width: 60%;
+		}
+
+		&__description {
+			max-width: 58.5%;
+		}
+	}
+	}
+}
 
 @media screen and (max-width: 1280px) {
 	.choice-card {
@@ -343,11 +356,10 @@
 @media screen and (min-width: 834px) and (max-width: 1084px) {
 	.choice-card {
 		&_design {
-			background-image: none;
 			padding: 6% 3% 4% 5%;
 
 			&__column {
-				max-width: 78%;
+				max-width: 87%;
 				padding: 0;
 				padding-left: 5px;
 
@@ -357,7 +369,7 @@
 			}
 
 			&__description {
-				max-width: 100%;
+				max-width: 87%;
 			}
 		}
 
@@ -469,10 +481,12 @@
 			&__column {
 				padding: 0;
 				padding-left: 4px;
+								max-width: 73%;
+
 			}
 
 			&__description {
-				max-width: 80%;
+				max-width: 73%;
 			}
 		}
 
@@ -558,9 +572,18 @@
 	}
 }
 
+@media screen and (max-width: 450px) {
+	.choice-card {
+		&_design {
+			&__column {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 391px) {
 	.choice-card {
-		
 
 		&__title {
 			letter-spacing: normal;
