@@ -186,7 +186,7 @@
 }
 
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 351px) {
   .portfolio {
     &__container {
       padding: 80px 0 60px 10px;
@@ -198,13 +198,28 @@
   }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 335px) {
   .portfolio {
     &__container {
       padding: 80px 0 60px 0;
     }
     &__card-box {
       margin-left: 1px;
+    }
+
+    &__title {
+      margin-left: 30px;
+
+    }
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .portfolio {
+
+      &__title {
+        margin-left: 30px;
+
     }
   }
 }

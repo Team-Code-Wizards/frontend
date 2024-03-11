@@ -43,4 +43,3 @@ const StepFour = (inView: boolean, isActive: boolean): JSX.Element => {
 };
 
 export default StepFour;
-
