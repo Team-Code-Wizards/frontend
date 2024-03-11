@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
-import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
-import { GoogleAnalytics } from '@next/third-parties/google';
+//import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
+//import { GoogleAnalytics } from '@next/third-parties/google';
+import 'dotenv/config';
 
-// import { Inter } from 'next/font/google';
 import './globals.scss';
 
 export const metadata: Metadata = {
@@ -17,12 +17,19 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
+	//const isProductionXYZtableDown = process.env.PROD === 'true';
+	//console.log('test')
+	//console.log(isProductionXYZtableDown)
+	//console.log(typeof isProductionXYZtableDown)
+	//const reverseisProductionXYZtableDown = !isProductionXYZtableDown
 	return (
-		<html lang="ru" style={{ scrollBehavior: 'smooth' }}>
+		<html lang="ru" style={{ scrollBehavior: 'smooth' }} className="html">
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
-				<GoogleAnalytics gaId="GTM-NMKTG44L" />
-				<YandexMetrica />
+				{/*{<p style={{ fontSize: '50px', color: 'white' }}>{isProductionXYZtableDown}</p>}*/}
+				{/*{process.env.PROD === 'debug' && <YandexMetrica />}*/}
+				{/*{process.env.PROD && <YandexMetrica />}*/}
+				{/*{reverseisProductionXYZtableDown ? <GoogleAnalytics gaId="GTM-NMKTG44L" /> : <p style={{ fontSize: '50px' }}>SQL</p>}*/}
 				{children}
 			</body>
 		</html>

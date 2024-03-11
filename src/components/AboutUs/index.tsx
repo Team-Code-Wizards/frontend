@@ -1,8 +1,48 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+import UpButton from '@/components/UpButton';
+
 import styles from './styles.module.scss';
 
 export default function AboutUs() {
+	const { ref, inView } = useInView({
+		/* Optional options */
+		threshold: 0.8,
+		triggerOnce: true,
+	});
+
+	useEffect(() => {
+		console.log(inView);
+	}, [inView]);
+
+	const [showButton, setShowButton] = useState(true);
+	const [timer, setTimer] = useState<number | undefined>(undefined);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setShowButton(true);
+			if (timer !== undefined) {
+				clearTimeout(timer);
+			}
+			const newTimer = setTimeout(() => setShowButton(false), 3000);
+			setTimer(newTimer as unknown as number);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			if (timer !== undefined) {
+				clearTimeout(timer);
+			}
+		};
+	}, [timer]);
+
 	return (
-		<section id="about-us" className={styles['about-us']}>
+		<section id="about-us" className={styles['about-us']} ref={ref}>
 			<h2 className={styles['about-us__h2-title']}>О нас</h2>
 			<h3 className={styles['about-us__h3-title']}>
 				Мы – коллектив творческих умов, готовых воплощать ваши идеи в цифровую
@@ -33,6 +73,7 @@ export default function AboutUs() {
 					</div>
 				</div>
 			</div>
+			<UpButton inView={inView} showButton={showButton} />
 		</section>
 	);
 }

@@ -10,7 +10,6 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-
 }
 
 @font-face {
@@ -20,7 +19,6 @@
     url("../fonts/Involve-Medium.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
-
 }
 
 :root {
@@ -108,9 +106,14 @@
   --grid-gap: 20px;
 }
 
+.html {
+  scrollbar-gutter: stable both-edges;
+}
+
 .body {
   font-family: var(--involve-font);
   background-color: var(--color-bg-black);
+  min-width: 320px;
 }
 
 * {
@@ -118,5 +121,4 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  // outline: 1px solid cornflowerblue;
 }
