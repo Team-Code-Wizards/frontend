@@ -64,7 +64,7 @@
 		background-image: url(/images/choice/design-bg.webp);
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: right 16px top 0;
+		background-position: right 0 top 0;
 
 		&__wrapper {
 			row-gap: 16px;
@@ -235,31 +235,38 @@
 		&__column {
 			background-color: var(--color-bg-ivory);
 			padding: 5px;
+			max-width: max-content;
 		}
 	}
 }
 @media screen and (max-width: 1439px) {
 	.choice-card {
-	&_design {
-		&__column {
-			max-width: 60%;
-		}
+		&_design {
+			&__column {
+				max-width: 46%;
+			}
 
-		&__description {
-			max-width: 58.5%;
-		}
-	}
-
-		&_planet {
-		&__wrapper {
-			width: 100%;
-			height: 80%;
-			margin: auto;
-			@media screen and (min-width: 1339px) {
-				height: 95%;
+			&__description {
+				max-width: 58.5%;
 			}
 		}
-	}
+
+		&_planet {
+			&__wrapper {
+				width: 100%;
+				height: 80%;
+				margin: auto;
+				@media screen and (min-width: 1339px) {
+					height: 95%;
+				}
+			}
+		}
+		
+		&_attraction {
+			&__column {
+				max-width: 68%;
+			}
+		}
 	}
 }
 
@@ -276,7 +283,7 @@
 			}
 
 			&__column {
-				max-width: 90%;
+				max-width: 88%;
 			}
 		}
 
@@ -356,8 +363,9 @@
 			}
 
 			&__column {
+				max-width: max-content;
 				align-items: normal;
-				padding: 1% 2% 0;
+				padding: 1%;
 
 				>svg {
 					margin-right: 8px;
@@ -374,11 +382,9 @@
 			padding: 6% 3% 4% 5%;
 
 			&__column {
-				max-width: 87%;
-				padding: 0;
-				padding-left: 5px;
+				max-width: 73%;
 
-				>svg {
+				&>svg {
 					min-width: 24px;
 				}
 			}
@@ -389,7 +395,7 @@
 		}
 
 		&_flexibility {
-			padding: 12.8% 0 14% 11.5%;
+			padding: 12.8% 2% 14% 11.5%;
 			background-position:
 				left 4.5% bottom 36%,
 				left 10% bottom 12%;
@@ -452,13 +458,13 @@
 
 			&__column {
 				flex-direction: column;
-				padding: 0 5%;
+				padding: 1% 5%;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 833px) {
+@media screen and (max-width: 834px) {
 	.choice-card {
 		&_presence {
 			animation-delay: 0.1875s;
@@ -497,9 +503,8 @@
 			}
 
 			&__column {
-				padding: 0;
-				padding-left: 4px;
-				max-width: 73%;
+				padding: 4px;
+				max-width: 50%;
 			}
 
 			&__description {
@@ -516,12 +521,6 @@
 
 			&__wrapper {
 				row-gap: 16px;
-			}
-
-			&__column {
-				padding: 0;
-				padding-left: 5px;
-				max-width: 69%;
 			}
 
 			&__description {
@@ -554,8 +553,12 @@
 			}
 
 			&__column {
-				max-width: 90%;
-				padding-right: 0;
+				max-width: max-content;
+				padding: 1%;
+
+				&>svg {
+					margin-top: 2px;
+				}
 			}
 		}
 	}
@@ -564,6 +567,12 @@
 @media screen and (max-width: 701px) {
 	.choice-card {
 		height: 100%;
+
+		&_design {
+			&__column {
+				max-width: 60%;
+			}
+		}
 
 		&__wrapper {
 			justify-content: center;
@@ -608,12 +617,56 @@
 	}
 }
 
+@media screen and (max-width: 640px) {
+	.choice-card {
+		&_design {
+			&__column {
+				max-width: 69%;
+			}
+		}
+
+		&_conversion {
+			&__column {
+				max-width: 50%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.choice-card {
+		&_conversion {
+			&__column {
+				max-width: 60%;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 450px) {
 	.choice-card {
 		&_design {
 			&__column {
 				max-width: 100%;
 			}
+		}
+
+		&_conversion {
+			&__column {
+				max-width: 65%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.choice-card {
+		&_conversion {
+			&__column {
+				max-width: 70%;
+			}
+
+			background-position: bottom 38% right 0;
 		}
 	}
 }
@@ -658,7 +711,6 @@
 
 		&_conversion {
 			padding: 7% 4% 7% 5%;
-			background-position: bottom 38% right 0;
 
 			&__column {
 				padding-left: 3px;
