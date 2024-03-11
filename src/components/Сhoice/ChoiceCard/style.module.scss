@@ -249,6 +249,17 @@
 			max-width: 58.5%;
 		}
 	}
+
+		&_planet {
+		&__wrapper {
+			width: 100%;
+			height: 80%;
+			margin: auto;
+			@media screen and (min-width: 1339px) {
+				height: 95%;
+			}
+		}
+	}
 	}
 }
 
