@@ -185,11 +185,26 @@
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 401px) {
+  .step-one {
+    &_inview {
+      gap: 15px;
+      padding: 15px 15px 16px 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 391px) {
   .step-one {
     &_inview {
       gap: 16px;
       padding: 16px;
+    }
+  }
+
+  .image {
+    &_inview {
+      width: 97%;
     }
   }
 }
