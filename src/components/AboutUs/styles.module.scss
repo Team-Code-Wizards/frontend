@@ -179,3 +179,10 @@
     padding-bottom: 0;
   }
 }
+
+@media screen and (max-width: 322px) {
+  .about-us {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
