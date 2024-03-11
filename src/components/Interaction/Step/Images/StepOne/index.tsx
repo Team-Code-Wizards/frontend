@@ -34,11 +34,11 @@ export default function StepOne(inView: boolean, isActive: boolean) {
 		aimSrc = aimBig;
 		task1Src = task1Big;
 		task2Src = task2Big;
-	} else if (width < 1281 && width > 834) {
+	} else if (width < 1281 && width > 835) {
 		aimSrc = aimLess;
 		task1Src = task1Less;
 		task2Src = task2Less;
-	} else if (width < 391) {
+	} else if (width < 392) {
 		aimSrc = aimSmall;
 		task1Src = task1Small;
 		task2Src = task2Small;
