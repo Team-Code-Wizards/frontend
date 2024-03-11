@@ -640,6 +640,13 @@
 				max-width: 60%;
 			}
 		}
+
+		&_attraction {
+			&__column {
+				align-items: center;
+				max-width: 72%;
+			}
+		}
 	}
 }
 
@@ -656,6 +663,12 @@
 				max-width: 65%;
 			}
 		}
+
+		&_attraction {
+			&__column {
+				max-width: 83%;
+			}
+		}
 	}
 }
 
@@ -667,6 +680,12 @@
 			}
 
 			background-position: bottom 38% right 0;
+		}
+
+		&_attraction {
+			&__column {
+				max-width: 90%;
+			}
 		}
 	}
 }
@@ -746,8 +765,10 @@
 			padding-bottom: 5%;
 
 			&__column {
+				max-width: 92%;
+
 				&>svg {
-					margin-top: 12px;
+					margin-top: 0;
 				}
 			}
 		}
