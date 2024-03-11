@@ -60,7 +60,7 @@
 		animation-delay: 0.1875s;
 		grid-area: 1 / 1 / 2 / 4;
 		background-color: var(--color-purple);
-		padding: 6% 4.1% 0.1%;
+		padding: 6% 2.4% 32px;
 		background-image: url(/images/choice/design-bg.webp);
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -78,7 +78,7 @@
 
 		&__description {
 			display: inline-block;
-			max-width: 69%;
+			max-width: 66%;
 		}
 	}
 
@@ -238,6 +238,30 @@
 		}
 	}
 }
+@media screen and (max-width: 1439px) {
+	.choice-card {
+	&_design {
+		&__column {
+			max-width: 60%;
+		}
+
+		&__description {
+			max-width: 58.5%;
+		}
+	}
+
+		&_planet {
+		&__wrapper {
+			width: 100%;
+			height: 80%;
+			margin: auto;
+			@media screen and (min-width: 1339px) {
+				height: 95%;
+			}
+		}
+	}
+	}
+}
 
 @media screen and (max-width: 1280px) {
 	.choice-card {
@@ -249,6 +273,10 @@
 
 			&__description {
 				max-width: 84%;
+			}
+
+			&__column {
+				max-width: 90%;
 			}
 		}
 
@@ -291,8 +319,8 @@
 		&_conversion {
 			animation-delay: 0.75s;
 			padding: 5% 4% 7% 4%;
-			background-size: 40%;
-			background-position: right -20px top 5px;
+			background-size: 40% stretch;
+			background-position: right -30px top;
 
 			&__description {
 				max-width: 90%;
@@ -343,11 +371,10 @@
 @media screen and (min-width: 834px) and (max-width: 1084px) {
 	.choice-card {
 		&_design {
-			background-image: none;
 			padding: 6% 3% 4% 5%;
 
 			&__column {
-				max-width: 78%;
+				max-width: 87%;
 				padding: 0;
 				padding-left: 5px;
 
@@ -357,7 +384,7 @@
 			}
 
 			&__description {
-				max-width: 100%;
+				max-width: 87%;
 			}
 		}
 
@@ -387,8 +414,11 @@
 
 		&_conversion {
 			padding: 5% 0 7% 5%;
-			background-size: 56%;
-			background-position: right -25px bottom 0;
+			background-size: 50%;
+			background-position: right -30px bottom -30px;
+			@media screen and (max-width: 920px) {
+				background-size: 55%;
+			}
 
 			&__wrapper {
 				row-gap: 14px;
@@ -451,7 +481,7 @@
 
 			background-position:
 				left 3% bottom 24%,
-				left 15% bottom 5%;
+				left 12% bottom 5%;
 		}
 
 		&_design {
@@ -469,10 +499,11 @@
 			&__column {
 				padding: 0;
 				padding-left: 4px;
+				max-width: 73%;
 			}
 
 			&__description {
-				max-width: 80%;
+				max-width: 73%;
 			}
 		}
 
@@ -494,7 +525,7 @@
 			}
 
 			&__description {
-				max-width: 65%;
+				max-width: 69%;
 			}
 		}
 
@@ -547,7 +578,26 @@
 		}
 
 		&_flexibility {
-			background-position: left 3% bottom 45%, left 10% bottom 20%;
+			background-position:
+				left 3% bottom 24%,
+				left 12% bottom 12%;
+		}
+
+		&_conversion {
+			&__column {
+				max-width: 65%;
+			}
+			@media screen and (max-width: 655px) {
+				background-size: 40%;
+				background-position: right center;
+			}
+		}
+
+		&_flexibility {
+			background-position: left 3% bottom 45%, left 12% bottom 20%;
+			@media screen and (width: 701px) {
+				background-position: left 3% bottom 45%, left 12% bottom 12%;
+			}
 		}
 
 		&_safety {
@@ -558,9 +608,18 @@
 	}
 }
 
+@media screen and (max-width: 450px) {
+	.choice-card {
+		&_design {
+			&__column {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 391px) {
 	.choice-card {
-		
 
 		&__title {
 			letter-spacing: normal;
@@ -592,6 +651,9 @@
 		&_design {
 			background-size: 27%;
 			background-position: right 0px bottom 56px;
+				&__column {
+					padding-right: 5px;
+				}
 		}
 
 		&_conversion {
