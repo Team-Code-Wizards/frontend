@@ -119,6 +119,23 @@
   }
 }
 
+@media screen and (max-width: 563px) {
+  .step-one {
+    &_inview {
+      gap: 14px;
+      padding: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .step-one {
+    &_inview {
+      padding: 15px;
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
   .step-one {
     &_inview {
