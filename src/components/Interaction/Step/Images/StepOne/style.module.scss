@@ -123,15 +123,23 @@
   .step-one {
     &_inview {
       gap: 14px;
-      padding: 14px;
     }
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 540px) {
   .step-one {
     &_inview {
-      padding: 15px;
+      gap: 13px;
+      padding: 17px 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .step-one {
+    &_inview {
+      padding: 17px 14px 17px 12px;
     }
   }
 }
