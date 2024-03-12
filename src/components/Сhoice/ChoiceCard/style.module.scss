@@ -363,7 +363,7 @@
 			}
 
 			&__column {
-				max-width: max-content;
+				max-width: 84%;
 				align-items: normal;
 				padding: 1%;
 
@@ -376,7 +376,7 @@
 	}
 }
 
-@media screen and (min-width: 834px) and (max-width: 1084px) {
+@media screen and (min-width: 833px) and (max-width: 1084px) {
 	.choice-card {
 		&_design {
 			padding: 6% 3% 4% 5%;
@@ -459,12 +459,13 @@
 			&__column {
 				flex-direction: column;
 				padding: 1% 5%;
+				max-width: 79%;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 833px) {
 	.choice-card {
 		&_presence {
 			animation-delay: 0.1875s;
@@ -692,7 +693,6 @@
 
 @media screen and (max-width: 391px) {
 	.choice-card {
-
 		&__title {
 			letter-spacing: normal;
 
@@ -707,7 +707,7 @@
 			background-size: cover, 15%;
 
 			&__wrapper {
-				padding: 2% 0 4% 5%;
+				padding: 2% 2% 4% 4%;
 			}
 		}
 
