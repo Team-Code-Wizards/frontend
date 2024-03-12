@@ -19,7 +19,7 @@ export default function Form() {
 		resetField,
 		handleSubmit,
 		reset,
-		formState: { errors, dirtyFields, isValid, isDirty },
+		formState: { errors, dirtyFields, isValid },
 	} = useForm({
 		defaultValues: {
 			name: '',
@@ -104,10 +104,9 @@ export default function Form() {
 			</span>
 
 			<button
-				className={`${styles['promo-form__button']} ${
-					!isValid && isDirty && styles['promo-form__button_disabled']
-				}`}
 				type="submit"
+				className={styles['promo-form__button']}
+				disabled={!isValid}
 			>
 				Узнать цену
 				<span className={styles['promo-form__icon']}>

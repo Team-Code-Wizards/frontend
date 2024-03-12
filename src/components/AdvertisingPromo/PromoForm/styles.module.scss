@@ -38,8 +38,10 @@
       background-color: var(--color-button-active);
     }
 
-    &_disabled {
-      background-color: var(--color-button-disabled);
+    &:disabled {
+      background-image: none;
+      background-color: #caccd7;
+      cursor: auto;
     }
   }
 
