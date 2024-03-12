@@ -30,7 +30,7 @@ export default function StepOne(inView: boolean, isActive: boolean) {
 	let task1Src = task1Big;
 	let task2Src = task2Big;
 
-	if (width > 1280 || (width < 1060 && width > 392)) {
+	if (width > 1280 || (width < 1060 && width > 405)) {
 		aimSrc = aimBig;
 		task1Src = task1Big;
 		task2Src = task2Big;
@@ -38,7 +38,7 @@ export default function StepOne(inView: boolean, isActive: boolean) {
 		aimSrc = aimLess;
 		task1Src = task1Less;
 		task2Src = task2Less;
-	} else if (width < 392) {
+	} else if (width < 405) {
 		aimSrc = aimSmall;
 		task1Src = task1Small;
 		task2Src = task2Small;

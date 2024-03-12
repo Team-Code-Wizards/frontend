@@ -14,10 +14,6 @@ export default function AboutUs() {
 		triggerOnce: true,
 	});
 
-	useEffect(() => {
-		console.log(inView);
-	}, [inView]);
-
 	const [showButton, setShowButton] = useState(true);
 	const [timer, setTimer] = useState<number | undefined>(undefined);
 

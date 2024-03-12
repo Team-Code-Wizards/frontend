@@ -102,114 +102,82 @@
   }
 }
 
-//@media screen and (max-width: 741px) {
-//  .step-one {
-//    &_inview {
-//      padding: 20px 11px;
-//      gap: 20px;
-//    }
-//  }
-//}
-//
-//@media screen and (max-width: 708px) {
-//  .step-one {
-//    &_inview {
-//      padding: 20px 15px;
-//    }
-//  }
-//}
-//
-//@media screen and (max-width: 590px) {
-//  .step-one {
-//    &_inview {
-//      gap: 15px;
-//      padding: 17px;
-//    }
-//  }
-//
-//  .image {
-//    &_inview {
-//      width: 100%;
-//    }
-//  }
-//}
+@media screen and (max-width: 590px) {
+  .step-one {
+    &_inview {
+      padding: 16px 12px;
+    }
+  }
+}
 
-//@media screen and (max-width: 563px) {
-//  .step-one {
-//    &_inview {
-//      gap: 14px;
-//    }
-//  }
-//}
-//
-//@media screen and (max-width: 540px) {
-//  .step-one {
-//    &_inview {
-//      gap: 13px;
-//      padding: 17px 15px;
-//    }
-//  }
-//}
-//
-//@media screen and (max-width: 520px) {
-//  .step-one {
-//    &_inview {
-//      padding: 17px 14px 17px 12px;
-//    }
-//  }
-//}
-//
-//@media screen and (max-width: 500px) {
-//  .step-one {
-//    &_inview {
-//      gap: 20px;
-//      padding: 20px;
-//      width: 90%;
-//    }
-//  }
-//
-//  .image {
-//    &_inview {
-//      width: 96%;
-//    }
-//  }
-//}
+@media screen and (max-width: 550px) {
+  .step-one {
+    &_inview {
+      padding: 16px 10px 16px 16px;
+    }
+  }
+}
 
-//@media screen and (max-width: 480px) {
-//  .step-one {
-//    &_inview {
-//      gap: 17px;
-//      padding: 17px;
-//      width: 100%;
-//    }
-//  }
-//
-//  .image {
-//    &_inview {
-//      width: 100%;
-//    }
-//  }
-//}
+@media screen and (max-width: 530px) {
+  .step-one {
+    &_inview {
+      padding: 16px 5px 16px 16px;
+      gap: 15px;
+    }
+  }
+}
 
-//@media screen and (max-width: 424px) {
-//  .step-one {
-//    &_inview {
-//      gap: 16px;
-//      padding: 15px;
-//    }
-//  }
-//}
+@media screen and (max-width: 520px) {
+  .step-one {
+    &_inview {
+      gap: 14px;
+    }
+  }
+}
 
-//@media screen and (max-width: 401px) {
-//  .step-one {
-//    &_inview {
-//      gap: 15px;
-//      padding: 15px 15px 16px 13px;
-//    }
-//  }
-//}
+@media screen and (max-width: 500px) {
+  .step-one {
+    &_inview {
+      gap: 16px;
+      width: 87%;
+      padding: 16px;
+    }
+  }
+}
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 480px) {
+  .step-one {
+    &_inview {
+      gap: 16px;
+      width: 100%;
+      padding: 16px;
+    }
+  }
+
+  .image {
+    &_inview {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .image {
+    &_inview {
+      width: 97%;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .step-one {
+    &_inview {
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 405px) {
   .step-one {
     &_inview {
       gap: 16px;
@@ -217,9 +185,25 @@
     }
   }
 
-  //.image {
-  //  &_inview {
-  //    width: 97%;
-  //  }
-  //}
+  .image {
+    &_inview {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .step-one {
+    &_inview {
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .step-one {
+    &_inview {
+      gap: 14px;
+    }
+  }
 }
