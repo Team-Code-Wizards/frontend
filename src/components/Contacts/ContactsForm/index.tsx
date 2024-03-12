@@ -60,7 +60,7 @@ export default function ContactsForm() {
 		if (file) readFile();
 	}, [file]);
 
-	const { errors, dirtyFields, isValid, isDirty } = formState;
+	const { errors, dirtyFields, isValid } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
 		if (file) {
 			data.attachments = {
@@ -213,10 +213,9 @@ export default function ContactsForm() {
 
 				<span className={styles['form__notice']}>*В формате Документ Word</span>
 				<button
-					className={`${styles['form__button']} ${
-						!isValid && isDirty && styles['form__button_disabled']
-					}`}
 					type="submit"
+					className={styles['form__button']}
+					disabled={!isValid}
 				>
 					Отправить
 				</button>
