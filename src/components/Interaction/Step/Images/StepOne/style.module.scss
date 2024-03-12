@@ -17,6 +17,7 @@
 
 .image {
   opacity: 0;
+  object-fit: contain;
 
   &_inview {
     animation: fadeIn 0.5s ease forwards;
