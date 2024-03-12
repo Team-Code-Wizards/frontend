@@ -8,5 +8,8 @@ export const promoSchema = yup.object().shape({
 	tel: yup
 		.string()
 		.required('Введите номер телефона')
-		.matches(/^\+?[\d\s]{10,16}$/g, 'Неверный формат'),
+		.matches(
+			/^\+?\d[\s-]?\d\d\d[\s-]?\d\d\d[\s-]?\d\d[\s-]?\d\d$/g,
+			'Неверный формат'
+		),
 });
