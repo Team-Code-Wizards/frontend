@@ -59,9 +59,9 @@
 @media screen and (max-width: 1060px) and (min-width: 836px) {
   .step-one {
     &_inview {
-      width: 90%;
-      gap: 24px;
-      padding: 20px 15px;
+      width: 95%;
+      gap: 20px;
+      padding: 20px;
     }
   }
 
@@ -76,13 +76,28 @@
   .step-one {
     &_inview {
       border-radius: 20px;
-      padding: 20px;
+      padding: 20px 15px;
     }
   }
 
   .image {
     &_inview {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .step-one {
+    &_inview {
+      padding: 16px;
+      gap: 16px;
+    }
+  }
+
+  .image {
+    &_inview {
+      width: 95%;
     }
   }
 }
