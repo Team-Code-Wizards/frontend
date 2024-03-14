@@ -22,7 +22,10 @@ export default async function useCaptchaHandler() {
 			},
 		});
 
+		console.log('hook до if', response);
+
 		if (response?.data?.success === true) {
+			console.log('hook', response.data);
 			return response?.data?.score;
 		}
 	};
