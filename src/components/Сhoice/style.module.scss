@@ -35,6 +35,10 @@
 		row-gap: 56px;
 		padding-top: 77px;
 
+		&__container {
+			width: 100%;
+		}
+
 		&__list {
 			grid-template-columns: 0fr 1.3fr 0.65fr 1fr 0.94fr 0fr;
 		}
