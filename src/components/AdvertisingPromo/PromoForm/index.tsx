@@ -6,6 +6,7 @@ import ClearInputIcon from '&/images/icons/ClearInputIcon';
 import PromoArrowIcon from '&/images/icons/PromoArrowIcon';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import { promoSchema } from '@/constants/Promo/promoSchema';
+import useCaptchaHandler from '@/service/captchaHandler';
 import useSubmitter from '@/service/submitter';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -14,6 +15,7 @@ import styles from './styles.module.scss';
 export default function Form() {
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
+	const captchaHandler = useCaptchaHandler();
 	const {
 		register,
 		resetField,
@@ -30,11 +32,22 @@ export default function Form() {
 	});
 
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-		await submitter(data)
+		await (
+			await captchaHandler
+		)()
+			.then((res) => {
+				if (res > 0.5) {
+					submitter(data);
+				} else {
+					throw new Error('you are possibly robot');
+				}
+			})
 			.then(() => {
 				reset();
 			})
-			.catch(() => showFailedInfoMsg());
+			.catch(() => {
+				showFailedInfoMsg();
+			});
 	};
 
 	return (
