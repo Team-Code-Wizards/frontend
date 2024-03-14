@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import GoogleCaptchaWrapper from '@/app/GoogleCaptchaWrapper';
 //import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
 //import { GoogleAnalytics } from '@next/third-parties/google';
 import 'dotenv/config';
@@ -27,13 +26,11 @@ export default function RootLayout({
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }} className="html">
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
-				<GoogleCaptchaWrapper>
-					{/*{<p style={{ fontSize: '50px', color: 'white' }}>{isProductionXYZtableDown}</p>}*/}
-					{/*{process.env.PROD === 'debug' && <YandexMetrica />}*/}
-					{/*{process.env.PROD && <YandexMetrica />}*/}
-					{/*{reverseisProductionXYZtableDown ? <GoogleAnalytics gaId="GTM-NMKTG44L" /> : <p style={{ fontSize: '50px' }}>SQL</p>}*/}
-					{children}
-				</GoogleCaptchaWrapper>
+				{/*{<p style={{ fontSize: '50px', color: 'white' }}>{isProductionXYZtableDown}</p>}*/}
+				{/*{process.env.PROD === 'debug' && <YandexMetrica />}*/}
+				{/*{process.env.PROD && <YandexMetrica />}*/}
+				{/*{reverseisProductionXYZtableDown ? <GoogleAnalytics gaId="GTM-NMKTG44L" /> : <p style={{ fontSize: '50px' }}>SQL</p>}*/}
+				{children}
 			</body>
 		</html>
 	);

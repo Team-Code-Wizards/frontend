@@ -5,7 +5,6 @@ import IconClose from '&/images/modal/IconClose';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import ModalItem from '@/components/WebsiteCreationModal/ModalItem';
 import { siteOrderSchema } from '@/constants/WebsiteCreationModal/siteOrderSchema';
-import useCaptchaHandler from '@/service/captchaHandler';
 import useSubmitter from '@/service/submitter';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -21,7 +20,6 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 	const [show, setShow] = useState(true);
 	const submitter = useSubmitter();
 	const { showFailedInfoMsg } = useInfoMsg();
-	const captchaHandler = useCaptchaHandler();
 	const { register, formState, handleSubmit, control, reset } = useForm({
 		mode: 'onChange',
 		resolver: yupResolver(siteOrderSchema),
@@ -29,16 +27,7 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 
 	const { isValid, errors } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-		await (
-			await captchaHandler
-		)()
-			.then((res) => {
-				if (res > 0.5) {
-					submitter(data);
-				} else {
-					throw new Error('you are possibly robot');
-				}
-			})
+		await submitter(data)
 			.then(() => {
 				setShow(false);
 

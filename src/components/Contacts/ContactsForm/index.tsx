@@ -10,7 +10,6 @@ import ClearInputIcon from '&/images/icons/ClearInputIcon';
 import DeleteIcon from '&/images/icons/DeleteIcon';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import { contactsSchema } from '@/constants/Contacts/contactsSchema';
-import useCaptchaHandler from '@/service/captchaHandler';
 import useSubmitter from '@/service/submitter';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -20,7 +19,6 @@ export default function ContactsForm() {
 	const [fileData, setFileData] = useState('');
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
-	const captchaHandler = useCaptchaHandler();
 
 	const { register, resetField, handleSubmit, watch, reset, formState } =
 		useForm({
@@ -71,23 +69,12 @@ export default function ContactsForm() {
 			};
 		}
 
-		await (
-			await captchaHandler
-		)()
-			.then((res) => {
-				if (res > 0.5) {
-					submitter(data);
-				} else {
-					throw new Error('you are possibly robot');
-				}
-			})
+		await submitter(data)
 			.then(() => {
 				reset();
 				setFileData('');
 			})
-			.catch(() => {
-				showFailedInfoMsg();
-			});
+			.catch(() => showFailedInfoMsg());
 	};
 
 	return (
