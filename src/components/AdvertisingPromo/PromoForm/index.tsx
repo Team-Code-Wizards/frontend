@@ -36,8 +36,9 @@ export default function Form() {
 			await captchaHandler
 		)()
 			.then((res) => {
+				console.log('then & res', res);
 				if (res > 0.5) {
-					submitter(data);
+					submitter(data).then(() => console.log('submit'));
 				} else {
 					throw new Error('you are possibly robot');
 				}
