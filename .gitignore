@@ -7,6 +7,7 @@
 .yarn/install-state.gz
 .husky
 .env
+.env.local
 # testing
 /coverage
 
