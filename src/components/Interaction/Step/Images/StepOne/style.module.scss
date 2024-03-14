@@ -17,6 +17,7 @@
 
 .image {
   opacity: 0;
+  object-fit: contain;
 
   &_inview {
     animation: fadeIn 0.5s ease forwards;
@@ -59,9 +60,9 @@
 @media screen and (max-width: 1060px) and (min-width: 836px) {
   .step-one {
     &_inview {
-      width: 90%;
-      gap: 24px;
-      padding: 20px 15px;
+      width: 95%;
+      gap: 20px;
+      padding: 20px;
     }
   }
 
@@ -76,7 +77,7 @@
   .step-one {
     &_inview {
       border-radius: 20px;
-      padding: 20px;
+      padding: 20px 15px;
     }
   }
 
@@ -87,19 +88,17 @@
   }
 }
 
-@media screen and (max-width: 741px) {
+@media screen and (max-width: 760px) {
   .step-one {
     &_inview {
-      padding: 20px 11px;
-      gap: 20px;
+      padding: 16px;
+      gap: 16px;
     }
   }
-}
 
-@media screen and (max-width: 708px) {
-  .step-one {
+  .image {
     &_inview {
-      padding: 20px 15px;
+      width: 95%;
     }
   }
 }
@@ -107,14 +106,32 @@
 @media screen and (max-width: 590px) {
   .step-one {
     &_inview {
-      gap: 20px;
-      padding: 20px;
+      padding: 16px 12px;
     }
   }
+}
 
-  .image {
+@media screen and (max-width: 550px) {
+  .step-one {
     &_inview {
-      width: 100%;
+      padding: 16px 10px 16px 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .step-one {
+    &_inview {
+      padding: 16px 5px 16px 16px;
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .step-one {
+    &_inview {
+      gap: 14px;
     }
   }
 }
@@ -122,20 +139,46 @@
 @media screen and (max-width: 500px) {
   .step-one {
     &_inview {
-      gap: 20px;
-      padding: 20px;
-      width: 90%;
+      gap: 16px;
+      width: 87%;
+      padding: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .step-one {
+    &_inview {
+      gap: 16px;
+      width: 100%;
+      padding: 16px;
     }
   }
 
   .image {
     &_inview {
-      width: 96%;
+      width: 100%;
     }
   }
 }
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 450px) {
+  .image {
+    &_inview {
+      width: 97%;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .step-one {
+    &_inview {
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 405px) {
   .step-one {
     &_inview {
       gap: 16px;
@@ -150,12 +193,18 @@
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 340px) {
   .step-one {
     &_inview {
-      gap: 16px;
-      padding: 16px;
-      width: 100%;
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .step-one {
+    &_inview {
+      gap: 14px;
     }
   }
 }
