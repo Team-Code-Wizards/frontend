@@ -1,11 +1,82 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import Link from 'next/link';
+
+import UpButton from '@/components/UpButton';
 
 import ArrowBack from '../../../public/images/icons/ArrowBack';
 import styles from './style.module.scss';
 
+const ThirdParagraph = () => {
+	const [showButton, setShowButton] = useState(true);
+	const [timer, setTimer] = useState<number | undefined>(undefined);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const [width, setWidth] = useState(1440);
+
+	useEffect(() => {
+		setWidth(window.innerWidth);
+		const handleResizeWindow = () => setWidth(window.innerWidth);
+		window.addEventListener('resize', handleResizeWindow);
+		return () => {
+			window.removeEventListener('resize', handleResizeWindow);
+		};
+	}, []);
+
+	const { ref, inView } = useInView({
+		threshold: 0.25,
+		triggerOnce: true,
+	});
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setShowButton(true);
+			if (timer !== undefined) {
+				clearTimeout(timer);
+			}
+			const newTimer = setTimeout(() => setShowButton(false), 3000);
+			setTimer(newTimer as unknown as number);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			if (timer !== undefined) {
+				clearTimeout(timer);
+			}
+		};
+	}, [timer]);
+
+	return (
+		<div className={styles['privacy__content_block']} ref={ref}>
+			<UpButton inView={inView} showButton={showButton} />
+			<h3>
+				3. Оператор может обрабатывать следующие персональные данные
+				Пользователя
+			</h3>
+			<p>1. Фамилия, имя, отчество.</p>
+			<p>2. Номер телефона.</p>
+			<p>3. Адрес электронной почты.</p>
+			<p>
+				4. Также на сайте происходит сбор и обработка обезличенных данных о
+				посетителях (в т.ч. файлов «cookie») с помощью сервисов
+				интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).
+			</p>
+			<p>
+				5. Вышеперечисленные данные далее по тексту Политики объединены общим
+				понятием Персональные данные.
+			</p>
+		</div>
+	);
+};
+
 export default function PrivacyPolicy() {
 	return (
 		<main className={styles['privacy']}>
+			{/*<UpButton inView={inView} showButton={showButton} />*/}
 			<div className={styles['privacy__container']}>
 				<div className={styles['privacy__title']}>
 					<Link href="/" className={styles['privacy__back-btn']}>
@@ -122,24 +193,7 @@ export default function PrivacyPolicy() {
 							данных.
 						</p>
 					</div>
-					<div className={styles['privacy__content_block']}>
-						<h3>
-							3. Оператор может обрабатывать следующие персональные данные
-							Пользователя
-						</h3>
-						<p>1. Фамилия, имя, отчество.</p>
-						<p>2. Номер телефона.</p>
-						<p>3. Адрес электронной почты.</p>
-						<p>
-							4. Также на сайте происходит сбор и обработка обезличенных данных
-							о посетителях (в т.ч. файлов «cookie») с помощью сервисов
-							интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).
-						</p>
-						<p>
-							5. Вышеперечисленные данные далее по тексту Политики объединены
-							общим понятием Персональные данные.
-						</p>
-					</div>
+					<ThirdParagraph />
 					<div className={styles['privacy__content_block']}>
 						<h3>4. Цели обработки персональных данных</h3>
 						<p>
