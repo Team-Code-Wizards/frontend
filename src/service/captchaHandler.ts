@@ -6,6 +6,7 @@ export default async function useCaptchaHandler() {
 	const { executeRecaptcha } = useGoogleReCaptcha();
 	const captchaHandler = async () => {
 		if (!executeRecaptcha) {
+			console.log('HELLO');
 			return;
 		}
 		const gRecaptchaToken = await executeRecaptcha('inquirySubmit');
