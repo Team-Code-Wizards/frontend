@@ -24,10 +24,7 @@ export async function POST(req: Request) {
 		);
 
 		return NextResponse.json({
-
 			success: res.data.success,
-			//score: res.data.score || 0.6,
-
 		});
 	} catch (e) {
 		console.log('e:', e);
