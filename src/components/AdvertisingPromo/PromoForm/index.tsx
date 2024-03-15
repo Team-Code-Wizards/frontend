@@ -32,17 +32,16 @@ export default function Form() {
 	});
 
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-		await (
-			await captchaHandler
-		)()
-			.then((res) => {
-				console.log('then & res', res);
-				if (res) {
-					submitter(data).then(() => console.log('submit'));
-				} else {
-					throw new Error('you are possibly robot');
-				}
-			})
+		const test = await captchaHandler
+		console.log('onsubmit',test)
+		test().then((res) => {
+			console.log('then & res', res);
+			if (res) {
+				submitter(data).then(() => console.log('submit'));
+			} else {
+				throw new Error('you are possibly robot');
+			}
+		})
 			.then(() => {
 				reset();
 			})
