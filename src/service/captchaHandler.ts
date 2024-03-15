@@ -26,7 +26,7 @@ export default async function useCaptchaHandler() {
 
 		if (response?.data?.success === true) {
 			console.log('hook', response.data);
-			return response?.data?.score;
+			return response?.data?.success;
 		}
 	};
 

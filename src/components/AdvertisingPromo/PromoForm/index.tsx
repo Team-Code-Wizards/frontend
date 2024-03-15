@@ -37,7 +37,7 @@ export default function Form() {
 		)()
 			.then((res) => {
 				console.log('then & res', res);
-				if (res > 0.5) {
+				if (res) {
 					submitter(data).then(() => console.log('submit'));
 				} else {
 					throw new Error('you are possibly robot');
