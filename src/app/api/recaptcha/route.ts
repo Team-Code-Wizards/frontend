@@ -31,5 +31,6 @@ export async function POST(req: Request) {
 		if (e instanceof Error) {
 			return NextResponse.json({ error: true });
 		}
+		return NextResponse.json({ error: 'Вы меня поймали' });
 	}
 }
