@@ -180,9 +180,21 @@
   }
 }
 
-@media screen and (max-width: 322px) {
+@media screen and (min-width: 341px) and (max-width: 579px) {
+  .about-us {
+    &__image {
+      height: 353px;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
   .about-us {
     padding-left: 25px;
     padding-right: 25px;
+
+    &__image {
+      height: 300px;
+    }
   }
 }

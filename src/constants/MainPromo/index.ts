@@ -11,7 +11,7 @@ export const promoState: promoStateType = {
 		promoImage: landingPageImage,
 	},
 	'full construction': {
-		h1: 'Сайт с нуля под ключ быстро и качественно!',
+		h1: 'Стоимость разработки сайта от 30 000 ₽',
 		promoImage: keySitePageImage,
 	},
 	'online store': {
