@@ -29,7 +29,7 @@ export async function POST(req: Request) {
 	} catch (e) {
 		console.log('e:', e);
 		if (e instanceof Error) {
-			return NextResponse.json({ success: false });
+			return NextResponse.json({ error: true });
 		}
 	}
 }
