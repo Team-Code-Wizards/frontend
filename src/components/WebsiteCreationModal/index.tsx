@@ -33,7 +33,7 @@ export default function WebsiteCreationModal({ open, close }: IModal) {
 			await captchaHandler
 		)()
 			.then((res) => {
-				if (res > 0.5) {
+				if (res) {
 					submitter(data);
 				} else {
 					throw new Error('you are possibly robot');
