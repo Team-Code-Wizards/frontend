@@ -24,13 +24,13 @@ export async function POST(req: Request) {
 		);
 
 		return NextResponse.json({
-			success: true,
-			score: res.data.score || 0.6,
+			success: res.data.success,
 		});
 	} catch (e) {
-		console.log('e:', e);
+		//console.log('e:', e);
 		if (e instanceof Error) {
-			return NextResponse.json({ success: false });
+			return NextResponse.json({ error: true });
 		}
+		return NextResponse.json({ error: 'Вы меня поймали' });
 	}
 }

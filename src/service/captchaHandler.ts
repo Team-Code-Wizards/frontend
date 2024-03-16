@@ -6,6 +6,7 @@ export default async function useCaptchaHandler() {
 	const { executeRecaptcha } = useGoogleReCaptcha();
 	const captchaHandler = async () => {
 		if (!executeRecaptcha) {
+			console.log('HELLO');
 			return;
 		}
 		const gRecaptchaToken = await executeRecaptcha('inquirySubmit');
@@ -22,11 +23,11 @@ export default async function useCaptchaHandler() {
 			},
 		});
 
-		console.log('hook до if', response);
+		//console.log('hook до if', response);
 
 		if (response?.data?.success === true) {
-			console.log('hook', response.data);
-			return response?.data?.score;
+			//console.log('hook', response.data);
+			return response?.data?.success;
 		}
 	};
 
