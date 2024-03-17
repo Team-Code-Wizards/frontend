@@ -37,6 +37,14 @@
 				font-size: 32px;
 				margin-bottom: 6px;
 			}
+
+			@media (max-width: 350px) {
+				font-size: 30px;
+			}
+
+			@media (max-width: 330px) {
+				font-size: 28px;
+			}
 		}
 
 		h3 {

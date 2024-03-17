@@ -10,6 +10,7 @@ import ClearInputIcon from '&/images/icons/ClearInputIcon';
 import DeleteIcon from '&/images/icons/DeleteIcon';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import { contactsSchema } from '@/constants/Contacts/contactsSchema';
+import useCaptchaHandler from '@/service/captchaHandler';
 import useSubmitter from '@/service/submitter';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -19,6 +20,7 @@ export default function ContactsForm() {
 	const [fileData, setFileData] = useState('');
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
+	const captchaHandler = useCaptchaHandler();
 
 	const { register, resetField, handleSubmit, watch, reset, formState } =
 		useForm({
@@ -60,7 +62,7 @@ export default function ContactsForm() {
 		if (file) readFile();
 	}, [file]);
 
-	const { errors, dirtyFields, isValid, isDirty } = formState;
+	const { errors, dirtyFields, isValid } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
 		if (file) {
 			data.attachments = {
@@ -69,12 +71,23 @@ export default function ContactsForm() {
 			};
 		}
 
-		await submitter(data)
+		await (
+			await captchaHandler
+		)()
+			.then((res) => {
+				if (res) {
+					submitter(data);
+				} else {
+					throw new Error('you are possibly robot');
+				}
+			})
 			.then(() => {
 				reset();
 				setFileData('');
 			})
-			.catch(() => showFailedInfoMsg());
+			.catch(() => {
+				showFailedInfoMsg();
+			});
 	};
 
 	return (
@@ -213,10 +226,9 @@ export default function ContactsForm() {
 
 				<span className={styles['form__notice']}>*В формате Документ Word</span>
 				<button
-					className={`${styles['form__button']} ${
-						!isValid && isDirty && styles['form__button_disabled']
-					}`}
 					type="submit"
+					className={styles['form__button']}
+					disabled={!isValid}
 				>
 					Отправить
 				</button>

@@ -8,18 +8,18 @@ import UpButton from '@/components/UpButton';
 import styles from './styles.module.scss';
 
 export default function AboutUs() {
-	const { ref, inView } = useInView({
-		/* Optional options */
-		threshold: 0.8,
-		triggerOnce: true,
-	});
-
-	useEffect(() => {
-		console.log(inView);
-	}, [inView]);
-
+	const [width, setWidth] = useState(1440);
 	const [showButton, setShowButton] = useState(true);
 	const [timer, setTimer] = useState<number | undefined>(undefined);
+
+	useEffect(() => {
+		setWidth(window.innerWidth);
+		const handleResizeWindow = () => setWidth(window.innerWidth);
+		window.addEventListener('resize', handleResizeWindow);
+		return () => {
+			window.removeEventListener('resize', handleResizeWindow);
+		};
+	}, []);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -40,6 +40,22 @@ export default function AboutUs() {
 			}
 		};
 	}, [timer]);
+
+	let threshold = 0.8;
+
+	if (width < 835) {
+		threshold = 0.7;
+	} else if (width < 601) {
+		threshold = 0.6;
+	} else if (width < 400) {
+		threshold = 0.5;
+	}
+
+	const { ref, inView } = useInView({
+		/* Optional options */
+		threshold: threshold,
+		triggerOnce: true,
+	});
 
 	return (
 		<section id="about-us" className={styles['about-us']} ref={ref}>

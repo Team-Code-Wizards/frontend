@@ -6,6 +6,7 @@ import ClearInputIcon from '&/images/icons/ClearInputIcon';
 import PromoArrowIcon from '&/images/icons/PromoArrowIcon';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import { promoSchema } from '@/constants/Promo/promoSchema';
+import useCaptchaHandler from '@/service/captchaHandler';
 import useSubmitter from '@/service/submitter';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -14,12 +15,13 @@ import styles from './styles.module.scss';
 export default function Form() {
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
+	const captchaHandler = useCaptchaHandler();
 	const {
 		register,
 		resetField,
 		handleSubmit,
 		reset,
-		formState: { errors, dirtyFields, isValid, isDirty },
+		formState: { errors, dirtyFields, isValid },
 	} = useForm({
 		defaultValues: {
 			name: '',
@@ -30,11 +32,23 @@ export default function Form() {
 	});
 
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-		await submitter(data)
+		await (
+			await captchaHandler
+		)()
+			.then((res) => {
+				//console.log('then & res', res);
+				if (res) {
+					submitter(data);
+				} else {
+					throw new Error('you are possibly robot');
+				}
+			})
 			.then(() => {
 				reset();
 			})
-			.catch(() => showFailedInfoMsg());
+			.catch(() => {
+				showFailedInfoMsg();
+			});
 	};
 
 	return (
@@ -104,10 +118,9 @@ export default function Form() {
 			</span>
 
 			<button
-				className={`${styles['promo-form__button']} ${
-					!isValid && isDirty && styles['promo-form__button_disabled']
-				}`}
 				type="submit"
+				className={styles['promo-form__button']}
+				disabled={!isValid}
 			>
 				Узнать цену
 				<span className={styles['promo-form__icon']}>
