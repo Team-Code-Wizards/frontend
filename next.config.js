@@ -4,15 +4,25 @@ const nextConfig = {
 	async headers() {
 		return [
 			{
-				source: '/*',
+				source: '/',
 				headers: [
 					{
 						key: 'Access-Control-Allow-Origin',
-						value: 'beta.code-wizards.team',
+						value: '*',
+					},
+				],
+			},
+			{
+				source: '/api/',
+				headers: [
+					{
+						key: 'Access-Control-Allow-Origin',
+						value: 'https://code-wizards.team/',
 					},
 				],
 			},
 		];
 	},
 };
+// коммент
 module.exports = nextConfig;
