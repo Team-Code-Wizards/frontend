@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 import dynamic from 'next/dynamic';
 
+import { InfoMsgProvider } from '@/components/InfoMsgContext';
+
 import ComponentsContainer from '../ComponentsContainer';
 import MainPromo from '../MainPromo/MainPromo';
 import Navbar from '../Navbar';
@@ -30,30 +32,32 @@ export default function MainPage() {
 	}, []);
 
 	return (
-		<main className={styles.main}>
-			<MainPromo />
-			<Navbar />
-			<ComponentsContainer>
-				<AboutUsLazy />
-				<ServicesLazy />
-				<Porfolio />
-			</ComponentsContainer>
-			{isLoadMore && (
-				<>
-					<StageCreateLazy />
-					<RecommendationsLazy />
-					<ChoiceLazy />
-					<GuaranteeLazy />
-					<InteractionLazy />
-					<TechStackLazy />
-					<ComponentsContainer>
-						<FaqLazy />
-						<ContactsLazy />
-						<FooterLazy />
-					</ComponentsContainer>
-					<Popup />
-				</>
-			)}
-		</main>
+		<InfoMsgProvider>
+			<main className={styles.main}>
+				<MainPromo />
+				<Navbar />
+				<ComponentsContainer>
+					<AboutUsLazy />
+					<ServicesLazy />
+					<Porfolio />
+				</ComponentsContainer>
+				{isLoadMore && (
+					<>
+						<StageCreateLazy />
+						<RecommendationsLazy />
+						<ChoiceLazy />
+						<GuaranteeLazy />
+						<InteractionLazy />
+						<TechStackLazy />
+						<ComponentsContainer>
+							<FaqLazy />
+							<ContactsLazy />
+							<FooterLazy />
+						</ComponentsContainer>
+						<Popup />
+					</>
+				)}
+			</main>
+		</InfoMsgProvider>
 	);
 }
