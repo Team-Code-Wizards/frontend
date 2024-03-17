@@ -1,5 +1,6 @@
-import keySitePageImage from '&/images/advertisingPromo/keySite.webp';
+//import keySitePageImage from '&/images/advertisingPromo/keySite.webp';
 import landingPageImage from '&/images/advertisingPromo/landingPage.webp';
+import keySitePageImage from '&/images/advertisingPromo/laptop-image-without-bg.png';
 import pricePageImage from '&/images/advertisingPromo/price.webp';
 import storePageImage from '&/images/advertisingPromo/store.webp';
 
