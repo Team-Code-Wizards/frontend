@@ -4,10 +4,11 @@ import { useEffect, useState } from 'react';
 
 import dynamic from 'next/dynamic';
 
+import AdvertisingPromo from '@/components/AdvertisingPromo';
 import { InfoMsgProvider } from '@/components/InfoMsgContext';
 
 import ComponentsContainer from '../ComponentsContainer';
-import MainPromo from '../MainPromo/MainPromo';
+// import MainPromo from '../MainPromo/MainPromo';
 import Navbar from '../Navbar';
 import Popup from '../Popup';
 import Porfolio from '../Portfolio';
@@ -34,7 +35,8 @@ export default function MainPage() {
 	return (
 		<InfoMsgProvider>
 			<main className={styles.main}>
-				<MainPromo />
+				<AdvertisingPromo />
+				{/* <MainPromo /> */}
 				<Navbar />
 				<ComponentsContainer>
 					<AboutUsLazy />

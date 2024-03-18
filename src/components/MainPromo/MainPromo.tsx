@@ -1,29 +1,29 @@
-'use client';
+// 'use client';
 
-import { promoState } from '@/constants/MainPromo/index';
+// // import { promoState } from '@/constants/MainPromo/index';
 
-import AdvertisingPromo from '../AdvertisingPromo';
+// import AdvertisingPromo from '../AdvertisingPromo';
 
-const temporaryUtmCampaign = 'full construction';
+// // const temporaryUtmCampaign = 'full construction';
 
-// const PromoWrapper = () => {
-// 	const urlParams = useSearchParams();
-// 	const utmCampaign: string = urlParams.get('utm_campaign') || 'default';
-// 	return promoState[utmCampaign] ? (
+// // const PromoWrapper = () => {
+// // 	const urlParams = useSearchParams();
+// // 	const utmCampaign: string = urlParams.get('utm_campaign') || 'default';
+// // 	return promoState[utmCampaign] ? (
 
-// 		<AdvertisingPromo promoConfig={promoState[utmCampaign]} />
+// // 		<AdvertisingPromo promoConfig={promoState[utmCampaign]} />
 
-// 	) : (
-// 		<Promo />
+// // 	) : (
+// // 		<Promo />
+// // 	);
+// // };
+
+// export default function MainPromo() {
+// 	return (
+// 		// <Suspense>
+// 		// 	<PromoWrapper />
+// 		// </Suspense>
+
+// 		<AdvertisingPromo promoConfig={promoState[temporaryUtmCampaign]} />
 // 	);
-// };
-
-export default function MainPromo() {
-	return (
-		// <Suspense>
-		// 	<PromoWrapper />
-		// </Suspense>
-
-		<AdvertisingPromo promoConfig={promoState[temporaryUtmCampaign]} />
-	);
-}
+// }
