@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import GoogleCaptchaWrapper from '@/app/GoogleCaptchaWrapper';
-import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
+//import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
 //import { GoogleAnalytics } from '@next/third-parties/google';
 import 'dotenv/config';
 
@@ -34,7 +34,6 @@ export default function RootLayout({
 					{/*{reverseisProductionXYZtableDown ? <GoogleAnalytics gaId="GTM-NMKTG44L" /> : <p style={{ fontSize: '50px' }}>SQL</p>}*/}
 					{children}
 				</GoogleCaptchaWrapper>
-				<YandexMetrica />
 			</body>
 		</html>
 	);
