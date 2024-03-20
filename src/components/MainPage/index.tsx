@@ -15,7 +15,7 @@ import styles from './style.module.scss';
 
 const StageCreateLazy = dynamic(() => import('../StageCreate'));
 const RecommendationsLazy = dynamic(() => import('../Recommendations'));
-const ChoiceLazy = dynamic(() => import('../Сhoice'));
+const ChoiceLazy = dynamic(() => import('../Choice'));
 const GuaranteeLazy = dynamic(() => import('../Guarantee/index'));
 const InteractionLazy = dynamic(() => import('../Interaction/index'));
 const TechStackLazy = dynamic(() => import('../TechStack'));
