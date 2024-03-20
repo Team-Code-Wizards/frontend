@@ -369,7 +369,7 @@
 
 			&__column {
 				max-width: 100%;
-				width: auto;
+				width: 170px;
 				align-items: normal;
 				padding: 2%;
 
@@ -462,8 +462,13 @@
 
 			&__column {
 				flex-direction: column;
-				padding: 3% 5%;
-				max-width: 96%;
+				padding: 3% 3%;
+				width: 140px;
+
+				>svg {
+					margin-right: 0;
+					margin-top: 0;
+				}
 			}
 		}
 	}
@@ -630,6 +635,7 @@
 
 			&__column {
 				max-width: max-content;
+				width: auto;
 				padding: 1%;
 				flex-direction: row;
 
@@ -710,7 +716,7 @@
 
 		&_attraction {
 			&__column {
-				width: 256px;
+				width: 249px;
 			}
 		}
 	}
@@ -806,7 +812,7 @@
 
 			&__column {
 				align-items: center;
-				width: 265px;
+				width: 255px;
 
 				&>svg {
 					margin-top: 0;
