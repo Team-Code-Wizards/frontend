@@ -45,7 +45,6 @@
 		cursor: default;
 		color: var(--color-text);
 		font: var(--font-title-description);
-		padding-top: 3px;
 		letter-spacing: -0.48px;
 	}
 
@@ -64,7 +63,7 @@
 		background-image: url(/images/choice/design-bg.webp);
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: right 16px top 0;
+		background-position: right 0 top 0;
 
 		&__wrapper {
 			row-gap: 16px;
@@ -235,39 +234,52 @@
 		&__column {
 			background-color: var(--color-bg-ivory);
 			padding: 5px;
+			max-width: max-content;
 		}
 	}
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1395px) {
 	.choice-card {
-	&_design {
-		&__column {
-			max-width: 60%;
-		}
+		&_design {
+			&__column {
+				width: 250px;
+			}
 
-		&__description {
-			max-width: 58.5%;
-		}
-	}
-
-		&_planet {
-		&__wrapper {
-			width: 100%;
-			height: 80%;
-			margin: auto;
-			@media screen and (min-width: 1339px) {
-				height: 95%;
+			&__description {
+				max-width: 58.5%;
 			}
 		}
-	}
+
+		&_flexibility {
+			@media screen and (max-width: 1338px) {
+				background-position: left 8% bottom 35.5%, left 13.5% bottom 15.5%;	
+			}
+		}
+
+		&_planet {
+			&__wrapper {
+				width: 100%;
+				height: 80%;
+				margin: auto;
+				@media screen and (min-width: 1339px) {
+					height: 95%;
+				}
+			}
+		}
+		
+		&_attraction {
+			&__column {
+				width: 257px;
+			}
+		}
 	}
 }
 
 @media screen and (max-width: 1280px) {
 	.choice-card {
 		&_design {
-			background-size: 14%;
-			background-position: right 0 top 30px;
+			background-size: 15%;
+			background-position: right 0 bottom 0;
 			background-image: url(/images/choice/design-bg-1280.svg);
 			padding: 4% 3% 4%;
 
@@ -276,7 +288,7 @@
 			}
 
 			&__column {
-				max-width: 90%;
+				width: auto;
 			}
 		}
 
@@ -356,8 +368,10 @@
 			}
 
 			&__column {
+				max-width: 100%;
+				width: 170px;
 				align-items: normal;
-				padding: 1% 2% 0;
+				padding: 2%;
 
 				>svg {
 					margin-right: 8px;
@@ -368,17 +382,13 @@
 	}
 }
 
-@media screen and (min-width: 834px) and (max-width: 1084px) {
+@media screen and (max-width: 1084px) {
 	.choice-card {
 		&_design {
 			padding: 6% 3% 4% 5%;
 
 			&__column {
-				max-width: 87%;
-				padding: 0;
-				padding-left: 5px;
-
-				>svg {
+				&>svg {
 					min-width: 24px;
 				}
 			}
@@ -389,7 +399,7 @@
 		}
 
 		&_flexibility {
-			padding: 12.8% 0 14% 11.5%;
+			padding: 12.8% 2% 14% 11.5%;
 			background-position:
 				left 4.5% bottom 36%,
 				left 10% bottom 12%;
@@ -452,25 +462,120 @@
 
 			&__column {
 				flex-direction: column;
-				padding: 0 5%;
+				padding: 3% 3%;
+				width: 140px;
+
+				>svg {
+					margin-right: 0;
+					margin-top: 0;
+				}
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 833px) {
+@media screen and (max-width: 998px) {
+	.choice-card {
+		&_design {
+			&__column {
+				width: 250px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 835px) {
 	.choice-card {
 		&_presence {
-			animation-delay: 0.1875s;
-			grid-area: 1 / 1 / 1 / 1;
-			padding: 10% 5% 5.5%;
+			padding: 20% 5% 5.5%;
 			align-items: normal;
-			background-size: cover, 10%;
+			background-size: cover, auto;
 
 			&__wrapper {
-				max-width: 92%;
 				row-gap: 12px;
-				padding: 2% 0 3% 5%;
+				padding: 5%;
+			}
+		}
+
+		&_flexibility {
+			padding: 15% 5% 8% 10%;
+    		background-position: left 3% bottom 35%, left 12% bottom 4%;
+		}
+
+		&_design {
+			padding: 4% 5% 3% 5%;
+			background-image: url(/images/choice/design-bg-834.svg);
+			background-size: auto;
+			background-position: right 0 top 0;
+
+			&__wrapper {
+				row-gap: 18px;
+			}
+
+			&__column {
+				padding: 4px;
+				width: 250px;
+			}
+
+			&__description {
+				max-width: 100%;
+			}
+		}
+
+		&_conversion {
+			padding-bottom: 4%;
+			background-image: url(/images/choice/conversion-bg-834.svg);
+			background-position: bottom 0 right 0;
+			background-size: 45%;
+
+			&__wrapper {
+				row-gap: 16px;
+			}
+
+			&__description {
+				max-width: 57%;
+			}
+		}
+
+		&_optimization {
+			padding: 7%;
+		}
+
+		&_safety {
+			padding: 6% 6% 19%;
+			background-size: 100%;
+		}
+
+		&_attraction {
+			padding: 8%;
+			padding-bottom: 28%;
+
+			&__wrapper {
+				row-gap: 18px;
+			}
+
+			&__column {
+				max-width: max-content;
+				padding: 4%;
+
+				&>svg {
+					margin-top: 2px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.choice-card {
+		&_presence {
+			padding: 11% 5% 5.5%;
+			animation-delay: 0.1875s;
+			grid-area: 1 / 1 / 1 / 1;
+			background-size: cover, 9%;
+
+			&__wrapper {
+				padding: 4%;
 			}
 		}
 
@@ -478,10 +583,10 @@
 			animation-delay: 0.375s;
 			grid-area: 2 / 1 / 2 / 1;
 			padding: 6% 5% 8% 10%;
-
 			background-position:
 				left 3% bottom 24%,
 				left 12% bottom 5%;
+
 		}
 
 		&_design {
@@ -489,44 +594,20 @@
 			grid-area: 3 / 1 / 3 / 1;
 			padding: 4% 12% 3% 5%;
 			background-image: url(/images/choice/design-bg-390.svg);
-			background-size: 34%;
+			background-size: 14%;
 			background-position: right 0 bottom 0;
 
-			&__wrapper {
-				row-gap: 18px;
-			}
-
 			&__column {
-				padding: 0;
-				padding-left: 4px;
-				max-width: 73%;
-			}
-
-			&__description {
-				max-width: 73%;
+				width: auto;
+				max-width: max-content;
 			}
 		}
 
 		&_conversion {
 			animation-delay: 0.75s;
 			grid-area: 4 / 1 / 4 / 1;
-			padding-bottom: 4%;
 			background-image: url(/images/choice/conversion-bg-390.svg);
 			background-position: bottom 26% right 0;
-
-			&__wrapper {
-				row-gap: 16px;
-			}
-
-			&__column {
-				padding: 0;
-				padding-left: 5px;
-				max-width: 69%;
-			}
-
-			&__description {
-				max-width: 69%;
-			}
 		}
 
 		&_optimization {
@@ -546,17 +627,23 @@
 		&_attraction {
 			animation-delay: 1.3125s;
 			grid-area: 7 / 1 / 7 / 1;
-			padding: 4%;
-			padding-bottom: 28%;
+			padding: 4% 8% 15% 4%;
 
 			&__wrapper {
 				row-gap: 18px;
 			}
 
 			&__column {
-				max-width: 90%;
-				padding-right: 0;
+				max-width: max-content;
+				width: auto;
+				padding: 1%;
+				flex-direction: row;
+
+				&>svg {
+					margin-top: 2px;
+				}
 			}
+
 		}
 	}
 }
@@ -564,6 +651,12 @@
 @media screen and (max-width: 701px) {
 	.choice-card {
 		height: 100%;
+
+		&_design {
+			&__description {
+				max-width: 97%;
+			}
+		}
 
 		&__wrapper {
 			justify-content: center;
@@ -580,27 +673,31 @@
 		&_flexibility {
 			background-position:
 				left 3% bottom 24%,
-				left 12% bottom 12%;
+				left 12% bottom 15%;
 		}
 
 		&_conversion {
+			background-size: 30%;
+			padding: 5%;
+
 			&__column {
-				max-width: 65%;
+				@media screen and (max-width: 431px) {
+					width: 189px;
+				}
 			}
-			@media screen and (max-width: 655px) {
-				background-size: 40%;
-				background-position: right center;
+
+			&__description {
+				max-width: 77%;
 			}
 		}
 
 		&_flexibility {
 			background-position: left 3% bottom 45%, left 12% bottom 20%;
-			@media screen and (width: 701px) {
-				background-position: left 3% bottom 45%, left 12% bottom 12%;
-			}
 		}
 
 		&_safety {
+			padding: 3% 4% 5%;
+
 			&__wrapper {
 				height: 100%;
 			}
@@ -608,11 +705,18 @@
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 637px) {
 	.choice-card {
 		&_design {
+			background-position-y: center;
 			&__column {
-				max-width: 100%;
+				width: 247px;
+			}
+		}
+
+		&_attraction {
+			&__column {
+				width: 249px;
 			}
 		}
 	}
@@ -620,7 +724,6 @@
 
 @media screen and (max-width: 391px) {
 	.choice-card {
-
 		&__title {
 			letter-spacing: normal;
 
@@ -635,7 +738,11 @@
 			background-size: cover, 15%;
 
 			&__wrapper {
-				padding: 2% 0 4% 5%;
+				padding: 2% 2% 4% 4%;
+			}
+
+			&__description {
+				max-width: 90%;
 			}
 		}
 
@@ -651,17 +758,27 @@
 		&_design {
 			background-size: 27%;
 			background-position: right 0px bottom 56px;
-				&__column {
-					padding-right: 5px;
-				}
+
+			&__column {
+				width: 257px;
+			}
+
+			&__description {
+				max-width: 82%;
+			}
 		}
 
 		&_conversion {
 			padding: 7% 4% 7% 5%;
-			background-position: bottom 38% right 0;
+			background-position-y: 65%;
+			background-size: 40%;
 
 			&__column {
-				padding-left: 3px;
+				width: 195px;
+			}
+
+			&__description {
+				max-width: 67%;
 			}
 		}
 
@@ -694,8 +811,11 @@
 			padding-bottom: 5%;
 
 			&__column {
+				align-items: center;
+				width: 255px;
+
 				&>svg {
-					margin-top: 12px;
+					margin-top: 0;
 				}
 			}
 		}
