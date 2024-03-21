@@ -57,6 +57,7 @@ export default function Form() {
 			className={styles['promo-form']}
 			onSubmit={handleSubmit(onSubmit)}
 		>
+			{/*<div className={styles['promo-form__input-container']}>*/}
 			<span className={styles['promo-form__input-box']}>
 				<label className={styles['promo-form__label']} htmlFor="promoName">
 					Имя<span className={styles['promo-form__required-label']}>*</span>
@@ -116,6 +117,7 @@ export default function Form() {
 					{errors.tel?.message}
 				</span>
 			</span>
+			{/*</div>*/}
 
 			<button
 				type="submit"

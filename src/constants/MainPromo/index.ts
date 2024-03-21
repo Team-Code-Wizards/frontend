@@ -1,5 +1,4 @@
-//import keySitePageImage from '&/images/advertisingPromo/keySite.webp';
-import keySitePageImage from '&/images/advertisingPromo/keySite1.webp';
+import keySitePageImage from '&/images/advertisingPromo/keySite.webp';
 import landingPageImage from '&/images/advertisingPromo/landingPage.webp';
 import pricePageImage from '&/images/advertisingPromo/price.webp';
 import storePageImage from '&/images/advertisingPromo/store.webp';
