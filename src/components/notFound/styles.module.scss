@@ -1,7 +1,6 @@
 .not-found {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-image: url(../../../public/images/notFound/error-background.webp);
   background-repeat: no-repeat;
@@ -10,6 +9,7 @@
   height: 100vh;
   width: 100%;
   color: var(--color-text);
+  margin-bottom: 70px;
 
   &__container {
     display: flex;
@@ -21,14 +21,18 @@
     text-align: center;
 
     .name {
+      all: unset;
       width: 100%;
       font: var(--font-block-title);
-      font-size: 383px;
+      font-size: 388px;
+      padding: 0;
+      margin: 70px 0 0;
+
     }
 
     .text {
       font: var(--font-title-description);
-      margin-top: -40px;
+      margin-top: -66px;
       margin-bottom: 40px;
       text-align: center;
     }
@@ -72,17 +76,23 @@
 
   @media screen and (max-width: 834px) {
     .not-found {
+      background-image: url(../../../public/images/notFound/bg-834.webp);
+      background-size: contain;
+      background-position: inherit;
       &__container {
        width: 89.2%;
+        margin-top: 230px;
       }
     }
   }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 640px) {
   .not-found {
     &__container {
+      width: 100%;
+
       .name {
-        font-size: 260px;
+        font-size: 280px;
       }
     }
     }
@@ -91,11 +101,9 @@
 @media screen and (max-width: 470px){
   .not-found {
     &__container {
-     width: 100%;
-      margin-top: 320px;
-
       .name {
         font-size: 200px;
+        margin: 0;
       }
 
       .text {
@@ -103,6 +111,14 @@
         margin-top: -48px;
         width: 80%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 400px){
+  .not-found {
+    &__container {
+      margin-top: 415px;
     }
   }
 }
