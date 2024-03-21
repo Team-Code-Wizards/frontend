@@ -39,10 +39,10 @@ const GuaranteeLazy = dynamic(() => import('../Guarantee/index'), {
 const InteractionLazy = dynamic(() => import('../Interaction/index'), {
 	ssr: false,
 });
-const TechStackLazy = dynamic(() => import('../TechStack'));
+const TechStackLazy = dynamic(() => import('../TechStack'), { ssr: false });
 const FaqLazy = dynamic(() => import('../Faq'), { ssr: false });
 const ContactsLazy = dynamic(() => import('../Contacts'), { ssr: false });
-const FooterLazy = dynamic(() => import('../Footer'));
+const FooterLazy = dynamic(() => import('../Footer'), { ssr: false });
 // const AboutUsLazy = dynamic(() => import('../AboutUs'), { ssr: false, });
 const ServicesLazy = dynamic(() => import('../Services'), { ssr: false });
 
