@@ -108,6 +108,7 @@
 		grid-area: 1 / 6 / 3 / 7;
 		padding: 10px;
 		background-color: var(--color-lilac);
+		object-fit: cover;
 
 		&__wrapper {
 			width: 100%;
@@ -252,7 +253,7 @@
 
 		&_flexibility {
 			@media screen and (max-width: 1338px) {
-				background-position: left 8% bottom 35.5%, left 13.5% bottom 15.5%;	
+				background-position: left 8% bottom 35.5%, left 13.5% bottom 15.5%;
 			}
 		}
 
@@ -266,7 +267,7 @@
 				}
 			}
 		}
-		
+
 		&_attraction {
 			&__column {
 				width: 257px;
@@ -731,7 +732,7 @@
 				padding-top: 1px;
 			}
 		}
-		
+
 		&_presence {
 			padding: 19% 5% 5% 4.5%;
 			align-items: normal;
