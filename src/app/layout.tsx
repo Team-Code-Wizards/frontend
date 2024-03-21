@@ -19,9 +19,6 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	//const isProductionXYZtableDown = process.env.PROD === 'true';
-	//console.log('test')
-	//console.log(isProductionXYZtableDown)
-	//console.log(typeof isProductionXYZtableDown)
 	//const reverseisProductionXYZtableDown = !isProductionXYZtableDown
 	return (
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }} className="html">

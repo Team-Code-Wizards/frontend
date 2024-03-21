@@ -56,14 +56,15 @@
     font-family: var(--rg-font);
     font-weight: 600;
     font-size: var(--text-lg);
-    line-height: 122%;
+    line-height: 120%;
     letter-spacing: 0.23px;
     margin-bottom: 5px;
   }
 
   &__description {
-    width: 78%;
+    width: 71%;
     margin-bottom: 20px;
+    line-height: 130%;
   }
 
   &__link-list {
@@ -102,7 +103,7 @@
 
     &-img {
       border-radius: 10px;
-      object-fit: cover;
+      object-fit: contain;
       height: 100%;
     }
   }
@@ -115,8 +116,9 @@
       padding: 126px 1px 80px 0;
     }
     &__main {
-      grid-template-columns: 0.85fr 1fr;
-      grid-template-rows: 0.1fr 0.5fr 0.1fr 0.3fr;
+      grid-template-columns:none;
+      //grid-template-columns: 0.85fr 1fr;
+      //grid-template-rows: 0.1fr 0.5fr 0.1fr 0.3fr;
       column-gap: 20px;
     }
 
@@ -126,8 +128,12 @@
       margin-bottom: 33px;
     }
 
+    &__title {
+      width: 78%;
+    }
+
     &__description {
-      width: 100%;
+      width: 79%;
     }
 
     &__content {
@@ -153,12 +159,16 @@
 
 @media screen and (max-width: 1050px) {
   .promo {
-    &__main {
-      grid-template-columns: none;
-    }
-
     &__container {
       width: 89%;
+    }
+
+    &__title {
+      width: 82%;
+    }
+
+    &__description {
+      width: 91%;
     }
 
     &__preview {
@@ -194,32 +204,29 @@
       margin-bottom: 36px;
     }
 
-    &__content {
-      padding-top: 21px;
-    }
-
     &__link-list {
-      margin-bottom: 64px;
+      margin-bottom: 35px;
     }
-
     &__preview {
       grid-area: 2 / 2 / 4 / 3;
       padding-top: 3px;
 
       &-img {
-        object-fit: cover;
+        object-fit: contain;
         max-width: 317px;
         max-height: 213px;
       }
     }
 
     &__title {
-      font: var(--font-button);
+      font: var(--font-button-rg);
+      margin-top: 0;
       margin-bottom: 11px;
+      font-size: 32px;
     }
 
     &__description {
-      width: 91%;
+      width: 100%;
     }
   }
 }
@@ -234,6 +241,9 @@
 
 @media screen and (max-width: 724px) {
   .promo {
+    &__title {
+      width: 90%;
+    }
     &__advantages-wrapper {
       margin-right: auto;
     }
@@ -268,6 +278,7 @@
 
     &__title {
       line-height: 120%;
+      width: 100%;
     }
 
     &__description {
@@ -321,12 +332,25 @@
   }
 }
 
+@media screen and (max-width: 635px) {
+  .promo {
+    &__title {
+      font-size: 28px;
+    }
+  }
+}
+
 @media screen and (max-width: 560px) {
   .promo {
     &__preview {
       &-img {
         height: 350px;
       }
+    }
+
+    &__title {
+      padding-left: 50px;
+      width: 87%;
     }
   }
 }
@@ -337,6 +361,12 @@
       &-img {
         height: 300px;
       }
+    }
+    &__title {
+      font-size: 32px;
+      padding-left: 0;
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 }
@@ -353,6 +383,10 @@
       &-img {
         height: 210px;
       }
+    }
+
+    &__title {
+      margin-bottom: 5px;
     }
 
     &__link {

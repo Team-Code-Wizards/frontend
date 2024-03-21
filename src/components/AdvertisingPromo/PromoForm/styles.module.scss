@@ -57,6 +57,10 @@
     height: 30px;
   }
 
+  //&__input-container {
+  //  display: flex;
+  //}
+
   &__input-box {
     position: relative;
     display: flex;
@@ -128,13 +132,31 @@
   box-shadow: 0px 2px 6.5px 0px rgba(13, 9, 9, 0.15);
 }
 
+//@media screen and (max-width: 1280px) and (min-width: 1050px) {
+//  .promo-form {
+  //  &__input-container {
+    //  display: flex;
+      //flex-direction: row;
+      //justify-content: space-between;
+    //}
+  //}
+//}
+
 @media screen and (max-width: 1280px) {
   .promo-form {
     flex-wrap: wrap;
     grid-area: 4 / 1 / 5 / 2;
+    width: 83%;
+    padding: 20px;
 
     &__input-box {
       row-gap: 5px;
+      width: 33%;
+    }
+
+    &__input {
+      padding: 20px 10px;
+      height: 52px;
     }
 
     &__button {
@@ -145,10 +167,19 @@
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .promo-form {
+     width: 90%;
+    }
+}
+
 @media screen and (max-width: 835px) {
   .promo-form {
     grid-area: 4 / 1 / 5 / 3;
-    padding: 15px 15px 19px 22px;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
 
     &__button {
       width: auto;
@@ -165,6 +196,7 @@
     grid-area: 3 / 1 / 4 / 2;
     margin-bottom: 39px;
     padding: 15px 19px 19px;
+    flex-wrap: wrap;
 
     &__input-box {
       width: 100%;
