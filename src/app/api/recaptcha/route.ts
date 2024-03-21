@@ -27,7 +27,6 @@ export async function POST(req: Request) {
 			success: res.data.success,
 		});
 	} catch (e) {
-		//console.log('e:', e);
 		if (e instanceof Error) {
 			return NextResponse.json({ error: true });
 		}

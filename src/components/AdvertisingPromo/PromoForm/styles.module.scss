@@ -57,10 +57,6 @@
     height: 30px;
   }
 
-  //&__input-container {
-  //  display: flex;
-  //}
-
   &__input-box {
     position: relative;
     display: flex;
@@ -129,18 +125,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 2px 6.5px 0px rgba(13, 9, 9, 0.15);
+  box-shadow: 0 2px 6.5px 0 rgba(13, 9, 9, 0.15);
 }
-
-//@media screen and (max-width: 1280px) and (min-width: 1050px) {
-//  .promo-form {
-  //  &__input-container {
-    //  display: flex;
-      //flex-direction: row;
-      //justify-content: space-between;
-    //}
-  //}
-//}
 
 @media screen and (max-width: 1280px) {
   .promo-form {
