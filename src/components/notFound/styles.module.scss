@@ -111,7 +111,7 @@
 @media screen and (max-width: 830px) {
   .not-found {
         &__container {
-
+          margin-bottom: 10px;
       .name {
         margin-top: 47vw;
       }
@@ -132,7 +132,6 @@
 
       .name {
         line-height: 265px;
-        //margin-top: 350px;
         font-size:56vw;
       }
 
