@@ -97,7 +97,7 @@
 
         .name {
           line-height: 285px;
-          margin-top: 450px;
+          margin-top: 48vw;
           margin-bottom: 50px;
         }
 
@@ -107,6 +107,17 @@
       }
     }
   }
+
+@media screen and (max-width: 830px) {
+  .not-found {
+        &__container {
+
+      .name {
+        margin-top: 47vw;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 640px) {
   .not-found {
@@ -121,7 +132,7 @@
 
       .name {
         line-height: 265px;
-        margin-top: 350px;
+        //margin-top: 350px;
         font-size:56vw;
       }
 
