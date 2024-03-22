@@ -169,7 +169,7 @@
 	.contacts {
 	  width: 92%;
 	  max-width: 768px;
-    padding: 65px 40px 72px;
+    padding: 80px 40px 72px;
   }
 
 	.link-group {
@@ -270,4 +270,10 @@
 		flex-direction: column;
 	  gap: 19px;
   }
+}
+
+@media screen and (max-width: 395px) {
+	.contacts {
+		padding-top: 110px;
+	}
 }
