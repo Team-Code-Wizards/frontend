@@ -82,7 +82,7 @@
 @media screen and (max-width: 1280px) {
   .about-us {
     max-width: var(--width-1280-1024);
-    padding-top: 12px;
+    padding-top: 80px;
     &__h2-title {
       margin-bottom: 16px;
     }
@@ -112,7 +112,6 @@
 
 @media screen and (min-width: 834px) and (max-width: 1084px) {
   .about-us {
-    padding-top: 122px;
     max-width: var(--width-1024-768);
     &__h3-title {
       width: 57%;
@@ -136,7 +135,6 @@
 
 @media screen and (max-width: 833px) {
   .about-us {
-    padding-top: 80px;
     max-width: var(--width-768-280);
     &__h2-title {
       font-size: 40px;
@@ -185,6 +183,12 @@
     &__image {
       height: 353px;
     }
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .about-us {
+    padding-top: 120px;
   }
 }
 
