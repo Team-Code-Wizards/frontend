@@ -1,6 +1,6 @@
 .guarantee {
 	max-width: var(--max-width);
-	padding: 143px 80px 74px;
+	padding: 75px 80px 74px;
 	background-image: url('/images/guarantee/background.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -33,7 +33,7 @@
 	}
 
 	&__title {
-		margin: 0 0 7px 0;
+		margin: 0;
 		font: var(--font-block-title);
 		color: var(--color-text);
 	}
@@ -45,7 +45,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		column-gap: 20px;
-		row-gap: 23px;
+		row-gap: 20px;
 	}
 
 	&__pagination {
@@ -63,7 +63,7 @@
 @media screen and (max-width: 1280px) {
 	.guarantee {
 		width: 100%;
-		padding: 149px 80px 77px;
+		padding: 75px 80px 77px;
 
 		&__container {
 			max-width: 1024px;
@@ -73,7 +73,7 @@
 
 @media screen and (max-width: 934px) {
 	.guarantee {
-		padding: 150px 0 76px;
+		padding: 80px 0 76px;
 		background-image: url('/images/guarantee/background-tablet.webp');
 
 		@media screen and (min-width: 701px) and (max-width: 833px) {
@@ -94,7 +94,7 @@
 	.guarantee {
 		background-image: url('/images/guarantee/background-mobile.webp');
 		background-size: 100% 100%;
-		padding: 105px 0 58px;
+		padding: 85px 0 58px;
 
 		&__swiper-slide {
 			display: block;
@@ -115,5 +115,11 @@
 			width: 155px !important;
 			margin: 0 auto !important;
 		}
+	}
+}
+
+@media screen and (max-width: 395px) {
+	.guarantee {
+		padding-top: 105px;
 	}
 }
