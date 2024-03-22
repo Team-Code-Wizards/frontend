@@ -1,7 +1,6 @@
-'use client';
+import Image from 'next/image';
 
-import Image, { StaticImageData } from 'next/image';
-
+import keySitePageImage from '&/images/advertisingPromo/keySite.webp';
 import PromoApproachIcon from '&/images/icons/PromoApproachIcon';
 import PromoDesgnIcon from '&/images/icons/PromoDesignIcon';
 import PromoQualitycon from '&/images/icons/PromoQualityIcon';
@@ -13,13 +12,14 @@ import socialUrl from '@/constants/SocialURL/index';
 import PromoForm from './PromoForm';
 import styles from './styles.module.scss';
 
-interface IPromoState {
-	[key: string]: {
-		h1: string;
-		promoImage: StaticImageData;
-	};
-}
-export default function AdvertisingPromo({ promoConfig }: IPromoState) {
+// interface IPromoState {
+// 	[key: string]: {
+// 		h1: string;
+// 		promoImage: StaticImageData;
+// 	};
+// }
+
+export default function AdvertisingPromo() {
 	return (
 		<header id="promo" className={styles['promo']}>
 			<div className={styles['promo__container']}>
@@ -45,7 +45,9 @@ export default function AdvertisingPromo({ promoConfig }: IPromoState) {
 						</div>
 					</div>
 					<div className={styles['promo__content']}>
-						<h1 className={styles['promo__title']}>{promoConfig.h1}</h1>
+						<h1 className={styles['promo__title']}>
+							Сайт с нуля под ключ быстро и качественно!
+						</h1>
 						<p className={styles['promo__description']}>
 							Мы не просто создаем сайты.
 							<br /> Мы строим цифровые пространства, где каждая строчка кода –
@@ -88,7 +90,7 @@ export default function AdvertisingPromo({ promoConfig }: IPromoState) {
 					<div className={styles['promo__preview']}>
 						<Image
 							priority={true}
-							src={promoConfig.promoImage}
+							src={keySitePageImage}
 							alt="Превью сайта"
 							className={styles['promo__preview-img']}
 						/>
