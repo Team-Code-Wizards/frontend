@@ -101,38 +101,54 @@
 	}
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 396px) {
 	.card {
 		&__bg {
-			max-height: 300px;
-			max-width: 85%;
-			margin-left: 26px;
+			margin-left: 10px;
 		}
 
 		&__tag {
-			left: 40px;
+			left: 18px;
 			top: 10px;
 		}
 
 		&__link {
 			bottom: 2%;
-			right: 8%;
+			right: 2%;
 		}
 
 		&__title {
-			margin-left: 30px;
+			margin-left: 20px;
 		}
 	}
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 390px) {
 	.card {
 		&__bg {
-			margin-left: 25px;
+			max-height: 300px;
+			max-width: 95%;
 		}
 
 		&__link {
-			right: 8%;
+			right: 4%;
+		}
+	}
+}
+
+@media screen and (max-width: 374px) {
+	.card {
+		&__bg {
+			max-width: 92%;
+			margin-left: 20px;
+		}
+
+		&__link {
+			right: 4%;
+		}
+
+		&__tag {
+			left: 35px;
 		}
 
 		&__title {
@@ -144,39 +160,47 @@
 @media screen and (max-width: 360px) {
 	.card {
 		&__bg {
-			margin-left: 15px;
+			max-width: 90%;
 		}
-
-		&__link {
-			right: 11%;
-		}
-
 		&__title {
-			margin-left: 15px;
-		}
-
-		&__tag {
-			left: 25px;
+			margin-left: 30px;
 		}
 	}
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 356px) {
 	.card {
 		&__bg {
-			margin-left: 5px;
-		}
-
-		&__link {
-			right: 14%;
+			margin-left: 30px;
 		}
 
 		&__title {
-			margin-left: 5px;
+			margin-left: 40px;
 		}
 
 		&__tag {
-			left: 13px;
+			left: 45px;
+		}
+	}
+}
+
+@media screen and (max-width: 346px) {
+	.card {
+		&__bg {
+			margin-left: 40px;
+			max-width: 88%;
+		}
+
+		&__link {
+			right: 2%;
+		}
+
+		&__title {
+			margin-left: 50px;
+		}
+
+		&__tag {
+			left: 50px;
 		}
 	}
 }
@@ -184,31 +208,28 @@
 @media screen and (max-width: 335px) {
 	.card {
 		&__bg {
-			margin-left: 1px;
+			margin-left: 52px;
+			max-width: 85%;
 		}
 
 		&__link {
-			right: 15%;
+			right: 2%;
+		}
+
+		&__tag {
+			left: 60px;
 		}
 
 		&__title {
-			margin-left: 30px;
+			margin-left: 58px;
 		}
 	}
 }
 
-@media screen and (max-width: 322px) {
+@media screen and (max-width: 328px) {
 	.card {
 		&__bg {
 			max-width: 84%;
-		}
-
-		&__link {
-			right: 17%;
-		}
-
-		&__title {
-			margin-left: 30px;
 		}
 	}
 }

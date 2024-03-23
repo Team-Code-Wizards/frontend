@@ -121,5 +121,9 @@
 @media screen and (max-width: 395px) {
 	.guarantee {
 		padding-top: 105px;
+
+		&__container {
+			width: 95%;
+		}
 	}
 }
