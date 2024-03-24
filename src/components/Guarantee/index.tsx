@@ -43,11 +43,14 @@ function Guarantee() {
 					modules={[Pagination]}
 					className={styles['guarantee__list']}
 				>
-					{dataCard.map((item) =>
+					{dataCard.map((item, index) =>
 						width < 701 ? (
 							<SwiperSlide
 								className={styles['guarantee__card']}
-								style={{ width: 'fit-content' }}
+								style={{
+									width: 'fit-content',
+									marginLeft: index === 6 ? '0' : '20px',
+								}}
 								key={item.title}
 							>
 								<GuaranteeCard key={item.id} item={item} />
