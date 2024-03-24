@@ -157,7 +157,7 @@
 @media screen and (max-width: 395px) {
   .portfolio {
     &__container {
-      padding: 120px 0 60px 10px;
+      padding: 120px 0 60px 0;
     }
 
     &__title {
@@ -173,12 +173,54 @@
   }
 }
 
+@media screen and (max-width: 374px) {
+  .portfolio {
+    &__container {
+   margin-left: -10px;
+    }
+  }
+}
+
+@media screen and (max-width: 364px) {
+  .portfolio {
+    &__container {
+      margin-left: -20px;
+      padding-left: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: 356px) {
+  .portfolio {
+    &__container {
+      margin-left: -25px;
+    }
+    &__title {
+      width: 78%;
+    }
+  }
+}
 
 @media screen and (max-width: 351px) {
   .portfolio {
+    &__container {
+      margin-left: -30px;
+    }
 
     &__title {
-      margin-left: 5px;
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (max-width: 346px) {
+  .portfolio {
+    &__container {
+      margin-left: -40px;
+    }
+
+    &__title {
+      width: 70%;
     }
   }
 }
@@ -186,22 +228,18 @@
 @media screen and (max-width: 335px) {
   .portfolio {
     &__container {
-      padding: 120px 0 60px 0;
+      margin-left: -50px;
     }
     &__card-box {
       margin-left: 1px;
     }
-
-    &__title {
-      margin-left: 30px;
-    }
   }
 }
 
-@media screen and (max-width: 322px) {
+@media screen and (max-width: 328px) {
   .portfolio {
-      &__title {
-        margin-left: 30px;
+    &__container {
+      margin-left: -56px;
     }
   }
 }
