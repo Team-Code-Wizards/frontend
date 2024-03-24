@@ -261,9 +261,8 @@
 			&__wrapper {
 				width: 100%;
 				margin: auto;
-				@media screen and (min-width: 1339px) {
-					height: 90%;
-				}
+				height: 93%;
+
 			}
 		}
 
@@ -274,6 +273,38 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1339px) {
+	.choice-card {
+		&_planet {
+			&__wrapper {
+				height: 90%;
+
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1338px) {
+	.choice-card {
+		&_planet {
+			&__wrapper {
+				height: 85%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1290px) {
+	.choice-card {
+		&_planet {
+			&__wrapper {
+				height: 80%;
+			}
+		}
+	}
+}
+
 
 @media screen and (max-width: 1280px) {
 	.choice-card {
