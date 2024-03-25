@@ -57,6 +57,7 @@
 		color: var(--color-text);
 		font: var(--font-title-description);
 		letter-spacing: -0.48px;
+		-webkit-letter-spacing: -0.48px;
 	}
 
 	&__description {
