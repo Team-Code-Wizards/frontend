@@ -101,20 +101,28 @@
 	}
 }
 
+@media screen and (max-width: 400px) {
+	.card {
+		&__bg {
+			margin-left: 0;
+		}
+	}
+}
+
 @media screen and (max-width: 396px) {
 	.card {
 		&__bg {
-			margin-left: 10px;
+			max-width: 95%;
 		}
 
 		&__tag {
-			left: 18px;
-			top: 10px;
+			left: 15px;
+			top: 5px;
 		}
 
 		&__link {
 			bottom: 2%;
-			right: 2%;
+			right: 7%;
 		}
 
 		&__title {
@@ -126,33 +134,21 @@
 @media screen and (max-width: 390px) {
 	.card {
 		&__bg {
-			max-height: 300px;
-			max-width: 95%;
-		}
-
-		&__link {
-			right: 4%;
-		}
-	}
-}
-
-@media screen and (max-width: 374px) {
-	.card {
-		&__bg {
-			max-width: 92%;
-			margin-left: 20px;
-		}
-
-		&__link {
-			right: 4%;
-		}
-
-		&__tag {
-			left: 35px;
+			min-height: 300px;
+			max-width: 85%;
 		}
 
 		&__title {
-			margin-left: 25px;
+			margin-left: 0;
+		}
+
+		&__tag {
+			left: 10px;
+		}
+
+		&__link {
+			bottom: 4%;
+			right: 15%;
 		}
 	}
 }
@@ -160,76 +156,38 @@
 @media screen and (max-width: 360px) {
 	.card {
 		&__bg {
-			max-width: 90%;
-		}
-		&__title {
-			margin-left: 30px;
-		}
-	}
-}
-
-@media screen and (max-width: 356px) {
-	.card {
-		&__bg {
-			margin-left: 30px;
-		}
-
-		&__title {
-			margin-left: 40px;
-		}
-
-		&__tag {
-			left: 45px;
-		}
-	}
-}
-
-@media screen and (max-width: 346px) {
-	.card {
-		&__bg {
-			margin-left: 40px;
-			max-width: 88%;
+			min-height: unset;
+			height: auto;
 		}
 
 		&__link {
-			right: 2%;
-		}
-
-		&__title {
-			margin-left: 50px;
-		}
-
-		&__tag {
-			left: 50px;
+			bottom: 2%;
 		}
 	}
 }
 
 @media screen and (max-width: 335px) {
 	.card {
-		&__bg {
-			margin-left: 52px;
-			max-width: 85%;
-		}
 
 		&__link {
-			right: 2%;
+			right: 14%;
 		}
 
 		&__tag {
-			left: 60px;
+			left: 15px;
 		}
 
 		&__title {
-			margin-left: 58px;
+			margin-left: 0;
 		}
 	}
 }
 
 @media screen and (max-width: 328px) {
 	.card {
-		&__bg {
-			max-width: 84%;
+		&__title {
+			//margin-left:30px;
 		}
+
 	}
 }
