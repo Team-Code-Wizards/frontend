@@ -58,7 +58,7 @@
 		font: var(--font-title-description);
 		letter-spacing: -0.024em;
 		font-weight: 600;
-		-webkit-text-stroke: 0.01px transparent; 
+		-webkit-text-stroke: 0.01px transparent;
 	}
 
 	&__description {
@@ -126,8 +126,9 @@
 		grid-area: 1 / 6 / 3 / 7;
 		padding: 10px;
 		background-color: var(--color-lilac);
-		-o-object-fit: cover;
-		   object-fit: cover;
+		width: 234px;
+		height: 234px;
+
 
 		&__wrapper {
 			width: 100%;
@@ -289,8 +290,7 @@
 			&__wrapper {
 				width: 100%;
 				margin: auto;
-				height: 93%;
-
+				height: 95%;
 			}
 		}
 
@@ -761,7 +761,7 @@
 		&_flexibility {
 			background-position: left 3% bottom 45%, left 12% bottom 20%;
 
-			
+
 			@media screen and (max-width: 627px) {
 				background-position: left 3% bottom 30%, left 12% bottom 14%;
 			}
