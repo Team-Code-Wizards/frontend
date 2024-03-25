@@ -58,6 +58,7 @@
 		font: var(--font-title-description);
 		letter-spacing: -0.024em;
 		font-weight: 600;
+		-webkit-text-stroke: 0.01px transparent; 
 	}
 
 	&__description {
