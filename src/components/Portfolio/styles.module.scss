@@ -154,14 +154,14 @@
   }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 396px) {
   .portfolio {
     &__container {
       padding: 120px 0 60px 0;
     }
 
     &__title {
-      width: 85%;
+      width: 83%;
       margin-bottom: 32px;
       font-size: 40px;
     }
@@ -169,77 +169,17 @@
     &__card-box {
       max-height: 330px;
       margin-bottom: 20px;
+      width: 100%;
+      margin-left: 10px;
     }
   }
 }
 
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 390px) {
   .portfolio {
-    &__container {
-   margin-left: -10px;
-    }
-  }
-}
-
-@media screen and (max-width: 364px) {
-  .portfolio {
-    &__container {
-      margin-left: -20px;
-      padding-left: 3px;
-    }
-  }
-}
-
-@media screen and (max-width: 356px) {
-  .portfolio {
-    &__container {
-      margin-left: -25px;
-    }
-    &__title {
-      width: 78%;
-    }
-  }
-}
-
-@media screen and (max-width: 351px) {
-  .portfolio {
-    &__container {
-      margin-left: -30px;
-    }
-
-    &__title {
-      width: 75%;
-    }
-  }
-}
-
-@media screen and (max-width: 346px) {
-  .portfolio {
-    &__container {
-      margin-left: -40px;
-    }
-
-    &__title {
-      width: 70%;
-    }
-  }
-}
-
-@media screen and (max-width: 335px) {
-  .portfolio {
-    &__container {
-      margin-left: -50px;
-    }
     &__card-box {
-      margin-left: 1px;
+      margin-left: 35px;
     }
   }
 }
 
-@media screen and (max-width: 328px) {
-  .portfolio {
-    &__container {
-      margin-left: -56px;
-    }
-  }
-}
