@@ -42,14 +42,28 @@ function Guarantee() {
 					rewind
 					modules={[Pagination]}
 					className={styles['guarantee__list']}
+					breakpoints={{
+						480: {
+							slidesPerView: 1.3,
+						},
+						405: {
+							slidesPerView: 1.2,
+						},
+						390: {
+							slidesPerView: 1,
+						},
+						0: {
+							slidesPerView: 1,
+						},
+					}}
 				>
-					{dataCard.map((item, index) =>
+					{dataCard.map((item) =>
 						width < 701 ? (
 							<SwiperSlide
 								className={styles['guarantee__card']}
 								style={{
 									width: 'fit-content',
-									marginLeft: index === 6 ? '0' : '20px',
+									//marginLeft: index === 6 ? '0' : '20px',
 								}}
 								key={item.title}
 							>
