@@ -126,8 +126,6 @@
 		grid-area: 1 / 6 / 3 / 7;
 		padding: 10px;
 		background-color: var(--color-lilac);
-		width: 234px;
-		height: 234px;
 
 
 		&__wrapper {
@@ -291,6 +289,7 @@
 				width: 100%;
 				margin: auto;
 				height: 95%;
+				object-fit: contain;
 			}
 		}
 
