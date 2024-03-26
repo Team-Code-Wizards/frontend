@@ -136,7 +136,7 @@
 	.card {
 		&__bg {
 			min-height: 300px;
-			max-width: 85%;
+			width: 100%;
 		}
 
 		&__title {
@@ -145,11 +145,12 @@
 
 		&__tag {
 			left: 10px;
+			top: 15px;
 		}
 
 		&__link {
-			bottom: 4%;
-			right: 15%;
+			bottom: 2%;
+			right: 5%;
 		}
 	}
 }
@@ -171,11 +172,11 @@
 	.card {
 
 		&__link {
-			right: 14%;
+			right: 4%;
 		}
 
 		&__tag {
-			left: 15px;
+			left: 10px;
 		}
 
 		&__title {

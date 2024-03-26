@@ -178,8 +178,17 @@
 @media screen and (max-width: 390px) {
   .portfolio {
     &__card-box {
+      min-height: 335px;
+      width: 84%;
       margin-left: 35px;
-      width: 89%;
+    }
+
+    &__title {
+      margin-bottom: 28px;
+    }
+
+    &__card-box_item {
+      width: 100%;
     }
   }
 }
