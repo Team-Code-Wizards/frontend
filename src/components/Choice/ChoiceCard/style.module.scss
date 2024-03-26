@@ -136,6 +136,7 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: top 50% left 50%;
+			object-fit: contain;
 		}
 	}
 
@@ -266,6 +267,17 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1413px) {
+	.choice-card {
+		&_planet {
+			&__wrapper {
+				height: 98%;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1395px) {
 	.choice-card {
 		&_design {
@@ -296,6 +308,17 @@
 		&_attraction {
 			&__column {
 				width: 257px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1380px) {
+	.choice-card {
+		&_planet {
+			&__wrapper {
+				height: 93%;
+
 			}
 		}
 	}
