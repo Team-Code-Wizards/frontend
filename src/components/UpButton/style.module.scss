@@ -7,7 +7,7 @@
     display: flex;
     opacity: 1;
     position: fixed;
-    right: 45px;
+    right: 7%;
     bottom: 110px;
     cursor: pointer;
     z-index: 999;
@@ -38,26 +38,26 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .up-btn {
-    &_inview {
-      right: 30px;
-    }
-  }
-}
+// @media screen and (max-width: 1000px) {
+//   .up-btn {
+//     &_inview {
+//       right: 30px;
+//     }
+//   }
+// }
 
-@media screen and (max-width: 900px) {
-  .up-btn {
-    &_inview {
-      right: 20px;
-    }
-  }
-}
+// @media screen and (max-width: 900px) {
+//   .up-btn {
+//     &_inview {
+//       right: 20px;
+//     }
+//   }
+// }
 
-@media screen and (max-width: 560px) {
-  .up-btn {
-    &_inview {
-      right: 10px;
-    }
-  }
-}
+// @media screen and (max-width: 560px) {
+//   .up-btn {
+//     &_inview {
+//       right: 10px;
+//     }
+//   }
+// }
