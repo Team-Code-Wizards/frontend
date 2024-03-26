@@ -155,11 +155,23 @@
 	}
 }
 
+@media screen and (max-width: 364px) {
+	.card {
+		&__tag {
+			top: 23px;
+		}
+	}
+}
+
 @media screen and (max-width: 360px) {
 	.card {
 		&__bg {
 			min-height: unset;
 			height: auto;
+		}
+
+		&__tag {
+			top: 10px;
 		}
 
 		&__link {
