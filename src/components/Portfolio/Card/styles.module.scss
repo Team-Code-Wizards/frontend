@@ -113,6 +113,7 @@
 	.card {
 		&__bg {
 			max-width: 95%;
+			object-fit: contain;
 		}
 
 		&__tag {
@@ -136,7 +137,6 @@
 		&__bg {
 			min-height: 300px;
 			max-width: 85%;
-			object-fit: contain;
 		}
 
 		&__title {
