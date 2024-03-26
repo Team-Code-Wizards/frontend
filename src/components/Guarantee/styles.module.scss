@@ -136,15 +136,21 @@
 	}
 }
 
-@media screen and (max-width: 355px) {
+@media screen and (max-width: 360px) {
 	.guarantee {
+		&__container {
+			width: 95%;
+		}
+	}
+}
 
+@media screen and (max-width: 345px) {
+	.guarantee {
 		&__container {
 			width: 98%;
 		}
 	}
 }
-
 
 
 

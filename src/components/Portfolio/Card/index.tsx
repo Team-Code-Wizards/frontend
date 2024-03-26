@@ -26,10 +26,6 @@ export default function PortfolioCard({
 								srcSet={`/images/portfolio/image-${number}-834px.webp`}
 								media="(max-width: 835px)"
 							/>
-							{/*<source*/}
-							{/*	srcSet={`/images/portfolio/image-${number}-1281px.webp`}*/}
-							{/*	media="(max-width: 1281px)"*/}
-							{/*/>*/}
 							<Image
 								src={image}
 								alt="portfolioIcon"
