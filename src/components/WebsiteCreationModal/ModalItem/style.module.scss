@@ -24,6 +24,13 @@
     }
   }
 
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   &__input-container {
     max-width: 100%;
     position: relative;
@@ -38,6 +45,8 @@
       line-height: var(--line-height-big);
       letter-spacing: var(--font-description-letter);
       width: 100%;
+      white-space: normal;
+      word-wrap: break-word;
 
       &::-webkit-contacts-auto-fill-button {
         visibility: hidden;
@@ -78,13 +87,14 @@
   position: relative;
   display: inline-block;
   width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding-right: 30px;
   width: 100%;
   cursor: pointer;
   font: var(--font-description-main);
@@ -93,6 +103,8 @@
 .option {
   color: var(--color-dark-purple);
   background-color: var(--color-gray-bg);
+  white-space: normal;
+  word-wrap: break-word;
 
   &:focus {
     outline: 2px solid var(--color-lilac);
@@ -120,6 +132,26 @@
 
     &:last-of-type {
       margin-bottom: 8px;
+    }
+  }
+}
+
+/* Landscape */
+@media only screen and (max-height: 786px) and (min-width: 1194px) and (orientation: landscape) {
+  .modal-item {
+    flex-direction: row;
+    gap: 20px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__left,
+    &__right {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+      gap: 10px;
     }
   }
 }

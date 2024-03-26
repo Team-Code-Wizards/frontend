@@ -10,7 +10,6 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-
 }
 
 @font-face {
@@ -20,7 +19,6 @@
     url("../fonts/Involve-Medium.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
-
 }
 
 :root {
@@ -51,21 +49,19 @@
   // === Titles ===
   --font-block-title: 600 var(--text-xl) / var(--line-height) var(--rg-font),
     sans-serif;
-  --font-title-description: 600 var(--text-base) / var(--line-height)
-      var(--involve-font),
+  --font-title-description: 600 var(--text-base) / var(--line-height) var(--involve-font),
     sans-serif;
 
   // === Descriptions ===
   --font-button: 600 var(--text-base) var(--involve-font), sans-serif;
   --font-button-rg: 600 var(--text-base) var(--rg-font), sans-serif;
-  --font-description-main: 500 var(--text-sm) / var(--line-height-big)
-      var(--involve-font),
+  --font-description-main: 500 var(--text-sm) / var(--line-height-big) var(--involve-font),
     sans-serif;
   --font-stage-btn: 700 var(--text-xs) var(--involve-font), sans-serif;
   --font-stage-btn-sm: 700 var(--text-xxs) var(--involve-font), sans-serif;
 
   // Colors
-  --color-bg-black: #000000;
+  --color-bg-black: #070606;
   --color-gray-bg: #f2f2f2;
   --color-bg-white: #ffffff;
   --color-bg-ivory: #ffffff1a;
@@ -84,30 +80,34 @@
   --color-input: #1b1c3380;
   --color-input-active: #e1e1e1;
   --color-text-input-active: #1b1c33;
+  --color-button-hover: #a4adff;
+  --color-button-active: #b7bdf9;
+  --color-button-disabled: #e1e4ff;
 
-  --color-purple-gradient: linear-gradient(
-    93deg,
-    #362a64 18.25%,
-    #51259b 93.44%
-  );
+  --color-purple-gradient: linear-gradient(93deg,
+      #362a64 18.25%,
+      #51259b 93.44%);
 
-  --color-gradient-button: linear-gradient(
-    93deg,
-    rgba(167, 138, 213, 1) 11%,
-    rgba(211, 166, 238, 1) 23%,
-    rgba(63, 28, 120, 1) 39%,
-    rgba(110, 37, 155, 1) 61%,
-    rgba(81, 37, 155, 1) 81%,
-    rgba(54, 42, 100, 1) 92%
-  );
+  --color-gradient-button: linear-gradient(93deg,
+      rgba(167, 138, 213, 1) 11%,
+      rgba(211, 166, 238, 1) 23%,
+      rgba(63, 28, 120, 1) 39%,
+      rgba(110, 37, 155, 1) 61%,
+      rgba(81, 37, 155, 1) 81%,
+      rgba(54, 42, 100, 1) 92%);
 
   // == Gap ==
   --grid-gap: 20px;
 }
 
+.html {
+  scrollbar-gutter: stable both-edges;
+}
+
 .body {
   font-family: var(--involve-font);
   background-color: var(--color-bg-black);
+  min-width: 320px;
 }
 
 * {
@@ -115,4 +115,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }

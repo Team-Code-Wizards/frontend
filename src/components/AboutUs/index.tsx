@@ -1,8 +1,64 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+import UpButton from '@/components/UpButton';
+
 import styles from './styles.module.scss';
 
 export default function AboutUs() {
+	const [width, setWidth] = useState(1440);
+	const [showButton, setShowButton] = useState(true);
+	const [timer, setTimer] = useState<number | undefined>(undefined);
+
+	useEffect(() => {
+		setWidth(window.innerWidth);
+		const handleResizeWindow = () => setWidth(window.innerWidth);
+		window.addEventListener('resize', handleResizeWindow);
+		return () => {
+			window.removeEventListener('resize', handleResizeWindow);
+		};
+	}, []);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setShowButton(true);
+			if (timer !== undefined) {
+				clearTimeout(timer);
+			}
+			const newTimer = setTimeout(() => setShowButton(false), 3000);
+			setTimer(newTimer as unknown as number);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			if (timer !== undefined) {
+				clearTimeout(timer);
+			}
+		};
+	}, [timer]);
+
+	let threshold = 0.8;
+
+	if (width < 835) {
+		threshold = 0.7;
+	} else if (width < 601) {
+		threshold = 0.6;
+	} else if (width < 400) {
+		threshold = 0.5;
+	}
+
+	const { ref, inView } = useInView({
+		/* Optional options */
+		threshold: threshold,
+		triggerOnce: true,
+	});
+
 	return (
-		<section id="about-us" className={styles['about-us']}>
+		<section id="about-us" className={styles['about-us']} ref={ref}>
 			<h2 className={styles['about-us__h2-title']}>О нас</h2>
 			<h3 className={styles['about-us__h3-title']}>
 				Мы – коллектив творческих умов, готовых воплощать ваши идеи в цифровую
@@ -33,6 +89,7 @@ export default function AboutUs() {
 					</div>
 				</div>
 			</div>
+			<UpButton inView={inView} showButton={showButton} />
 		</section>
 	);
 }

@@ -5,6 +5,7 @@
 
 	&__bg {
 		width: 100%;
+		height: 330px;
 	}
 
 	&__tag,
@@ -70,33 +71,124 @@
 	}
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 840px) {
 	.card {
 		&__link {
-			bottom: 1.5%;
-			right: 2%;
-			@media screen and (max-width: 833px) {
-				bottom: 2.5%;
+				bottom: 1%;
+				right: 0;
 			}
+	}
+}
+
+@media screen and (max-width: 715px) {
+	.card {
+		&__bg {
+			max-width: 100%;
+		}
+
+		&__link {
+			bottom: 1%;
+			right: 1%;
 		}
 	}
 }
 
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 565px) {
 	.card {
-		&__container {
-			min-height: 335px;
+		&__link {
+			right: 1%;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.card {
+		&__bg {
+			margin-left: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 396px) {
+	.card {
+		&__bg {
+			max-width: 95%;
+			object-fit: contain;
 		}
 
-		&__bg {
-			max-height: 300px;
-			margin-bottom: 11px;
+		&__tag {
+			left: 15px;
+			top: 5px;
 		}
 
 		&__link {
-			bottom: 7%;
-			right: 0;
+			bottom: 2%;
+			right: 7%;
 		}
+
+		&__title {
+			margin-left: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 390px) {
+	.card {
+		&__bg {
+			min-height: 300px;
+			max-width: 85%;
+		}
+
+		&__title {
+			margin-left: 0;
+		}
+
+		&__tag {
+			left: 10px;
+		}
+
+		&__link {
+			bottom: 4%;
+			right: 15%;
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.card {
+		&__bg {
+			min-height: unset;
+			height: auto;
+		}
+
+		&__link {
+			bottom: 2%;
+		}
+	}
+}
+
+@media screen and (max-width: 335px) {
+	.card {
+
+		&__link {
+			right: 14%;
+		}
+
+		&__tag {
+			left: 15px;
+		}
+
+		&__title {
+			margin-left: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 328px) {
+	.card {
+		&__title {
+			//margin-left:30px;
+		}
+
 	}
 }

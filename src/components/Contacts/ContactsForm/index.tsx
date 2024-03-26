@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
@@ -8,6 +10,7 @@ import ClearInputIcon from '&/images/icons/ClearInputIcon';
 import DeleteIcon from '&/images/icons/DeleteIcon';
 import { useInfoMsg } from '@/components/InfoMsgContext';
 import { contactsSchema } from '@/constants/Contacts/contactsSchema';
+import useCaptchaHandler from '@/service/captchaHandler';
 import useSubmitter from '@/service/submitter';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -17,6 +20,8 @@ export default function ContactsForm() {
 	const [fileData, setFileData] = useState('');
 	const { showFailedInfoMsg } = useInfoMsg();
 	const submitter = useSubmitter();
+	const captchaHandler = useCaptchaHandler();
+
 	const { register, resetField, handleSubmit, watch, reset, formState } =
 		useForm({
 			defaultValues: {
@@ -57,7 +62,7 @@ export default function ContactsForm() {
 		if (file) readFile();
 	}, [file]);
 
-	const { errors, dirtyFields, isValid, isDirty } = formState;
+	const { errors, dirtyFields, isValid } = formState;
 	const onSubmit: SubmitHandler<FieldValues> = async (data) => {
 		if (file) {
 			data.attachments = {
@@ -66,12 +71,23 @@ export default function ContactsForm() {
 			};
 		}
 
-		await submitter(data)
+		await (
+			await captchaHandler
+		)()
+			.then((res) => {
+				if (res) {
+					submitter(data);
+				} else {
+					throw new Error('you are possibly robot');
+				}
+			})
 			.then(() => {
 				reset();
 				setFileData('');
 			})
-			.catch(() => showFailedInfoMsg());
+			.catch(() => {
+				showFailedInfoMsg();
+			});
 	};
 
 	return (
@@ -84,6 +100,7 @@ export default function ContactsForm() {
 				<span className={styles['input-box']}>
 					<input
 						{...register('name')}
+						autoComplete="name"
 						type="text"
 						className={`${styles['contacts-form-input']} ${
 							errors.name && styles['contacts-form-input_error']
@@ -110,6 +127,7 @@ export default function ContactsForm() {
 				<span className={styles['input-box']}>
 					<input
 						{...register('tel')}
+						autoComplete="tel"
 						type="tel"
 						className={`${styles['contacts-form-input']} ${
 							errors.tel && styles['contacts-form-input_error']
@@ -139,6 +157,7 @@ export default function ContactsForm() {
 					<input
 						{...register('mail')}
 						type="email"
+						autoComplete="email"
 						className={`${styles['contacts-form-input']} ${
 							errors.mail && styles['contacts-form-input_error']
 						} ${
@@ -191,11 +210,14 @@ export default function ContactsForm() {
 				</label>
 				{file && (
 					<span className={styles['contacts-form-file-name']}>
-						<Image src={AttachmentIcon} alt="" />
-						{file.name}
+						<Image src={AttachmentIcon} alt="file" />
+						<span className={styles['contacts-form-file-name_text']}>
+							{file.name}
+						</span>
 						<button
 							className={styles['contacts-form-file-name__button']}
 							onClick={() => resetField('attachments')}
+							aria-label="Delete"
 						>
 							<DeleteIcon />
 						</button>
@@ -204,10 +226,9 @@ export default function ContactsForm() {
 
 				<span className={styles['form__notice']}>*В формате Документ Word</span>
 				<button
-					className={`${styles['form__button']} ${
-						!isValid && isDirty && styles['form__button_disabled']
-					}`}
 					type="submit"
+					className={styles['form__button']}
+					disabled={!isValid}
 				>
 					Отправить
 				</button>

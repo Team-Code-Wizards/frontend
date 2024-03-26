@@ -44,8 +44,10 @@
       background-position: 10%;
     }
 
-    &_disabled {
-      background: linear-gradient(93.14deg, #caccd7 18.25%, #d6dae7 93.44%);
+    &:disabled {
+      background-image: none;
+      background-color: #caccd7;
+      cursor: auto;
     }
   }
 }
@@ -125,7 +127,22 @@
   gap: 10px;
   border: 1px solid #ffffff50;
   border-radius: 100px;
-  background-color: #ffffff30;
+  background-color: #ffffff20;
+  max-width: min(100%, 295px);
+
+  &_text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    background: #ffffff30;
+  }
+
+  &:active {
+    background: #ffffff50;
+  }
 
   &__button {
     all: unset;

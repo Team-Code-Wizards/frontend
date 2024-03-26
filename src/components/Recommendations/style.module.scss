@@ -17,7 +17,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 42px;	
+		gap: 42px;
 	}
 
 	&__header {
@@ -88,12 +88,6 @@
 	display: none;
 }
 
-@media screen and (max-width: 1280px) and (max-width: 1439px) {
-	.recommendations {
-		padding: 75px 0;
-	}
-}
-
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
 	.recommendations {
 		&__container {
@@ -113,8 +107,6 @@
 
 @media screen and (max-width: 835px) {
 	.recommendations {
-		padding: 91px 0;
-
 		&__container {
 			width: 92%;
 			padding-bottom: 52px;
@@ -173,5 +165,11 @@
 		margin-top: auto;
 		display: inline-flex;
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	.recommendations {
+		padding-bottom: 36px;
 	}
 }

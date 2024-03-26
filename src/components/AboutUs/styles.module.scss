@@ -82,7 +82,8 @@
 @media screen and (max-width: 1280px) {
   .about-us {
     max-width: var(--width-1280-1024);
-    padding-top: 12px;
+    padding-top: 80px;
+
     &__h2-title {
       margin-bottom: 16px;
     }
@@ -94,6 +95,7 @@
 
     &__image {
       height: 472px;
+
     }
 
     &__goals {
@@ -112,14 +114,15 @@
 
 @media screen and (min-width: 834px) and (max-width: 1084px) {
   .about-us {
-    padding-top: 122px;
     max-width: var(--width-1024-768);
+
     &__h3-title {
       width: 57%;
     }
 
     &__image {
       height: 472px;
+      background-position: 47%;
     }
 
     &__goals {
@@ -137,6 +140,7 @@
 @media screen and (max-width: 833px) {
   .about-us {
     max-width: var(--width-768-280);
+
     &__h2-title {
       font-size: 40px;
       margin-bottom: 8px;
@@ -175,7 +179,45 @@
 
 @media screen and (max-width: 580px) {
   .about-us {
-    padding-top: 80px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: 579px) {
+  .about-us {
+    &__image {
+      height: 297px;
+      background-position: 50%;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 341px) and (max-width: 460px) {
+  .about-us {
+    &__image {
+      height: 297px;
+      background-position: 47%;
+      background-size: 169%;
+    }
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .about-us {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .about-us {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    &__image {
+      height: 300px;
+      height: 212px;
+      background-size: 155%;
+    }
   }
 }
