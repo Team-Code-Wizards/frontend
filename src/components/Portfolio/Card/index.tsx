@@ -10,6 +10,7 @@ export default function PortfolioCard({
 	image,
 	link,
 	adaptive,
+	number,
 }: IPortfolioCard) {
 	return (
 		<>
@@ -18,16 +19,12 @@ export default function PortfolioCard({
 					{adaptive ? (
 						<picture>
 							<source
-								srcSet="/images/portfolio/image-41-390px.webp"
+								srcSet={`/images/portfolio/image-${number}-390px.webp`}
 								media="(max-width: 390px)"
 							/>
 							<source
-								srcSet="/images/portfolio/image-41-834px.webp"
+								srcSet={`/images/portfolio/image-${number}-834px.webp`}
 								media="(max-width: 835px)"
-							/>
-							<source
-								srcSet="/images/portfolio/image-41-1280px.webp"
-								media="(max-width: 1281px)"
 							/>
 							<Image
 								src={image}

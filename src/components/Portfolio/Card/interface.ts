@@ -7,4 +7,5 @@ export default interface IPortfolioCard {
 	image: string | StaticImport;
 	link: string;
 	adaptive?: boolean;
+	number?: number;
 }

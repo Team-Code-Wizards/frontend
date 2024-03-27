@@ -87,7 +87,7 @@
 		&__list {
 			row-gap: 21px;
 
-			@media screen and (max-width: 368px) {
+			@media screen and (max-width: 425px) {
 				padding-top: 5px;
 			}
 		}
@@ -131,16 +131,26 @@
 		padding-top: 105px;
 
 		&__container {
+			width: 91%;
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.guarantee {
+		&__container {
 			width: 95%;
 		}
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 345px) {
 	.guarantee {
-
 		&__container {
-			width: 100%;
+			width: 98%;
 		}
 	}
 }
+
+
+

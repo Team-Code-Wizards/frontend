@@ -40,13 +40,17 @@
       border: none;
       font: var(--font-description-main);
       border-radius: 10px;
-      padding: 18px 31px 18px 10px;
+      padding: 18px 10px;
       background-color: var(--color-gray-bg);
       line-height: var(--line-height-big);
       letter-spacing: var(--font-description-letter);
       width: 100%;
       white-space: normal;
       word-wrap: break-word;
+
+      &::-webkit-contacts-auto-fill-button {
+        visibility: hidden;
+      }
 
       &:focus-visible {
         outline: none;
