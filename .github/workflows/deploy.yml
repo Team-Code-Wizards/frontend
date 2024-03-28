@@ -17,6 +17,8 @@ jobs:
         run: |
           if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
               echo "TAG=latest" >> "$GITHUB_ENV"
+          elif [[ $GITHUB_REF == 'refs/heads/belyash' ]]; then
+              echo "TAG=test" >> "$GITHUB_ENV"
           else
               echo "TAG=beta" >> "$GITHUB_ENV"
           fi
