@@ -45,9 +45,7 @@ export default function AdvertisingPromo() {
 						</div>
 					</div>
 					<div className={styles['promo__content']}>
-						<h1 className={styles['promo__title']}>
-							Сайт с нуля под ключ быстро и качественно!
-						</h1>
+						<h1 className={styles['promo__title']}>ТЕСТ ПЛОЩАДКА</h1>
 						<p className={styles['promo__description']}>
 							Мы не просто создаем сайты.
 							<br /> Мы строим цифровые пространства, где каждая строчка кода –

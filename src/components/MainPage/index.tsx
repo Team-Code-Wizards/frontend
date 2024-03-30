@@ -5,7 +5,8 @@
 // import StageCreate from '../StageCreate';
 // import TechStack from '../TechStack';
 // import Choice from '../Сhoice';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+
 import dynamic from 'next/dynamic';
 
 import AdvertisingPromo from '@/components/AdvertisingPromo';
@@ -51,10 +52,10 @@ const FooterLazy = dynamic(() => import('../Footer'), { ssr: false });
 // const ServicesLazy = dynamic(() => import('../Services'), { ssr: false });
 
 export default function MainPage() {
-	// const [isLoadMore, setIsLoadMore] = useState(false);
-	// useEffect(() => {
-	// 	setIsLoadMore(true);
-	// }, []);
+	const [isLoadMore, setIsLoadMore] = useState(false);
+	useEffect(() => {
+		setIsLoadMore(true);
+	}, []);
 
 	return (
 		<main className={styles.main}>
@@ -66,18 +67,26 @@ export default function MainPage() {
 					<Services />
 					<Porfolio />
 				</ComponentsContainer>
-				<StageCreateLazy />
-				<RecommendationsLazy />
-				<ChoiceLazy />
-				<GuaranteeLazy />
-				<InteractionLazy />
-				<TechStackLazy />
+				{isLoadMore && (
+					<>
+						<StageCreateLazy />
+						<RecommendationsLazy />
+						<ChoiceLazy />
+						<GuaranteeLazy />
+						<InteractionLazy />
+						<TechStackLazy />
+					</>
+				)}
 				<ComponentsContainer>
-					<FaqLazy />
-					<ContactsLazy />
-					<FooterLazy />
+					{isLoadMore && (
+						<>
+							<FaqLazy />
+							<ContactsLazy />
+							<FooterLazy />
+						</>
+					)}
 				</ComponentsContainer>
-				<PopupLazy />
+				{isLoadMore && <PopupLazy />}
 			</InfoMsgProvider>
 		</main>
 	);
