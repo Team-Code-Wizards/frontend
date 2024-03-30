@@ -19,8 +19,8 @@ export default function RootLayout({
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }} className="html">
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
-				{/* <GoogleCaptchaWrapper> */}
 				<YandexMetrica />
+				{/* <GoogleCaptchaWrapper> */}
 				{/* <GoogleAnalytics gaId="GTM-NMKTG44L" /> */}
 				{children}
 				{/* </GoogleCaptchaWrapper> */}
