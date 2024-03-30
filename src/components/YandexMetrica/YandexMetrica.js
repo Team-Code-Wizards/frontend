@@ -30,7 +30,7 @@ const YandexMetrikaCounter = () => {
 				'ym'
 			);
 
-			ym(96308291, 'init', {
+			ym(96891676, 'init', {
 				clickmap: true,
 				trackLinks: true,
 				accurateTrackBounce: true,

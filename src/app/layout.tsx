@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 
-import GoogleCaptchaWrapper from '@/app/GoogleCaptchaWrapper';
 import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 import './globals.scss';
 
@@ -21,11 +19,11 @@ export default function RootLayout({
 		<html lang="ru" style={{ scrollBehavior: 'smooth' }} className="html">
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 			<body className="body">
-				<GoogleCaptchaWrapper>
-					<YandexMetrica />
-					<GoogleAnalytics gaId="GTM-NMKTG44L" />
-					{children}
-				</GoogleCaptchaWrapper>
+				{/* <GoogleCaptchaWrapper> */}
+				<YandexMetrica />
+				{/* <GoogleAnalytics gaId="GTM-NMKTG44L" /> */}
+				{children}
+				{/* </GoogleCaptchaWrapper> */}
 			</body>
 		</html>
 	);
