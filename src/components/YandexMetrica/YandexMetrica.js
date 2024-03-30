@@ -43,7 +43,7 @@ const YandexMetrikaCounter = () => {
 		<noscript>
 			<div>
 				<img
-					src="https://mc.yandex.ru/watch/96308291"
+					src="https://mc.yandex.ru/watch/96891676"
 					style={{ position: 'absolute', left: '-9999px' }}
 					alt=""
 				/>
