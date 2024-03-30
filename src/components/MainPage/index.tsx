@@ -47,7 +47,7 @@ export default function MainPage() {
 	// const [isLoadMore, setIsLoadMore] = useState(false);
 	// useEffect(() => {
 	// 	setIsLoadMore(true);
-	// }, []);
+	// }, [])
 
 	return (
 		<main className={styles.main}>
