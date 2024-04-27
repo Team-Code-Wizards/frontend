@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import GoogleCaptchaWrapper from '@/app/GoogleCaptchaWrapper';
+import TopMailRuCounter from '@/components/VKMetrica/VKMetrica';
 import YandexMetrica from '@/components/YandexMetrica/YandexMetrica';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
@@ -23,6 +24,7 @@ export default function RootLayout({
 			<body className="body">
 				<GoogleCaptchaWrapper>
 					<YandexMetrica />
+					<TopMailRuCounter />
 					<GoogleAnalytics gaId="GTM-NMKTG44L" />
 					{children}
 				</GoogleCaptchaWrapper>
