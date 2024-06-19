@@ -2,7 +2,6 @@ import IPortfolioCard from '@/components/Portfolio/Card/interface';
 
 import image41 from '../../../public/images/portfolio/image-41.webp';
 import image42 from '../../../public/images/portfolio/image-42.webp';
-import image43 from '../../../public/images/portfolio/image-43.webp';
 import image44 from '../../../public/images/portfolio/image-44.webp';
 import image45 from '../../../public/images/portfolio/image-45.webp';
 import image46 from '../../../public/images/portfolio/image-46.webp';
@@ -25,15 +24,6 @@ export const portfolioCards: IPortfolioCard[] = [
 		link: 'https://smartremont.com/',
 		adaptive: true,
 		number: 42,
-	},
-	{
-		id: 'c371d067-221f-4fc3-90f6-a05d957c90f7',
-		tag: 'Корпоративный сайт',
-		title: 'Рент-зона',
-		image: image43,
-		link: 'https://rent-zona.ru/',
-		adaptive: true,
-		number: 43,
 	},
 	{
 		id: 'e34c37dd-b80a-4f9c-a43b-0f3b71db0126',
